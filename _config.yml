@@ -1,7 +1,7 @@
 # Site
 title: Frootlab
 description: Smart Analytics
-url: https://frootlab.org
+url: https://www.frootlab.org
 logo: frootlab.png
 locale: en_US
 
@@ -12,7 +12,7 @@ background:
   default-post: images/unsplash-gallery-image-3.jpg   # this image will be shown when post's front matter doesn't specify any image
 
 # Jekyll
-#permalink:          /:title/
+permalink:          /:title/
 markdown:           kramdown
 remote_theme:       taylantatli/Halve
 highlighter:        rouge
