@@ -8,7 +8,7 @@ future: true
 
 # Left Block Images
 background:
-  homepage: images/home.png
+  homepage: images/back/home.webp
   post-list: images/unsplash-image-10.jpg             # this image will be shown on post list page
   default-post: images/unsplash-gallery-image-3.jpg   # this image will be shown when post's front matter doesn't specify any image
 

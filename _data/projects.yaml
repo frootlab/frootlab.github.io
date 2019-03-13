@@ -1,19 +1,19 @@
 - title: Nemoa
   url: https://github.com/frootlab/nemoa
-  image: https://bit.ly/2O1lT0v
+  image: https://frootlab.org/images/back/robot.webp
   completed: true
 
 - title: Pandora
   url: https://github.com/frootlab/pandora
-  image: https://bit.ly/2F7mniE
+  image: https://frootlab.org/images/back/garden.webp
   completed: true
 
 - title: Motley
   url: https://github.com/frootlab/motley
-  image: https://bit.ly/2UzvZrN
+  image: https://frootlab.org/images/back/painting.webp
   completed: true
 
 - title: flib
   url: https://github.com/frootlab/flib
-  image: http://taylantatli.me/Halve/images/halve-home-image.png
+  image: https://frootlab.org/images/back/library.webp
   completed: true
