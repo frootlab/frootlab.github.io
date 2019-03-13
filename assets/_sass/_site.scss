@@ -86,14 +86,14 @@ canvas {
     }
   }
   &:hover {
-    border-color: $green;
+    border-color: $dark-grey;
     &:before {
-      border-color: $green;
+      border-color: $dark-grey;
     }
     span {
-      border-color: $green;
+      border-color: $dark-grey;
       &:before {
-        border-color: $green;
+        border-color: $dark-grey;
       }
     }
   }
@@ -131,10 +131,10 @@ canvas {
     background: $white;
   }
   &:hover {
-    border-color: $green;
+    border-color: $dark-grey;
     &:before,
     &:after {
-      border-color: $green;
+      border-color: $dark-grey;
     }
   }
 }
@@ -354,7 +354,7 @@ canvas {
         left: 0;
         right: 0;
         bottom: 0;
-        background: $green;
+        background: $dark-grey;
         -webkit-transform: scaleY(0);
         transform: scaleY(0);
         -webkit-transform-origin: 50% 100%;
@@ -421,7 +421,7 @@ canvas {
       -ms-transform: none;
       -o-transform: none;
       transform: none;
-      background: $green;
+      background: $dark-grey;
       left: 0;
       width: 200px;
     }
@@ -495,7 +495,7 @@ canvas {
       color: darken($white, 40);
     }
     .date {
-      color: #399f62;
+      color: #008200;
       float: right;
       display: inline-block;
       font-size: 15px;
@@ -506,7 +506,7 @@ canvas {
       display: inline-block;
       max-width: 75%;
       &:hover span {
-        border-bottom: 1px dotted $green;
+        border-bottom: 1px dotted $dark-grey;
       }
     }
   }
@@ -564,8 +564,8 @@ canvas {
     display: block;
   }
   a:not(.btn):not(.pagination_pager) {
-    color: #399f62;
-    border-bottom: 1px dotted $green;
+    color: #008200;
+    border-bottom: 1px dotted $dark-grey;
   }
   ul,
   ol {
@@ -602,7 +602,7 @@ canvas {
     font-size: 15px;
   }
   .section-line {
-    color: $green;
+    color: $dark-grey;
     position: relative;
     display: -webkit-box;
     display: -moz-box;
@@ -624,7 +624,7 @@ canvas {
       margin-left: 10px;
     }
     a {
-      color: $green;
+      color: $dark-grey;
       &:hover {
         color: #4dbe7a;
       }
@@ -856,7 +856,7 @@ canvas {
       border-radius: 0 4px 4px 0;
     }
     &:hover {
-      background-color: $green;
+      background-color: $dark-grey;
       color: $white !important;
     }
     &.disabled {

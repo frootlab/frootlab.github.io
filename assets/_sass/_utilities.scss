@@ -64,10 +64,10 @@
     }
   }
   &_success{
-    background-color: lighten($green, 10%);
+    background-color: lighten($dark-grey, 10%);
     &:hover {
-      background-color: darken($green, 5%);
-      border-color: darken($green, 5%);
+      background-color: darken($dark-grey, 5%);
+      border-color: darken($dark-grey, 5%);
     }
   }
   &_danger {
@@ -155,7 +155,7 @@ a.btn {
     @include notice($yellow);
   }
   &_success {
-    @include notice($green);
+    @include notice($dark-grey);
   }
   &_danger {
     @include notice($red);
