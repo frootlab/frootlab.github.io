@@ -21,4 +21,4 @@ counteracts this circumstance with the universal data interface
 by raising the abstraction level of programming to a scaffold level,
 based on [currently best fitting algorithms](/tags#CBF), rather then concrete algorithms.
 This allows the creation of applications, that are not only kept upd-to-date,
-bet indeed get better, with their connected algorithm catalogs.
+but indeed get better, with their connected algorithm catalogs.
