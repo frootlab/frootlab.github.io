@@ -17,6 +17,6 @@ this circumstance with a fairly universal data interface
 catalog [Motley](https://github.com/frootlab/motley). On their basis
 [Nemoa](https://github.com/frootlab/nemoa) even goes further, by abstracting
 programming to [currently best fitting algorithms](/tags#CBF), rather then
-explicitly coded. In this way the our Smart Analytics framework allows low
-maintenance applications, that due to their connected catalogs get better
-with age, like old wine.
+explicitly coded. In this way the Smart Analytics framework allows low
+maintenance applications, that due to their connected catalogs even get better
+with age - like wine.
