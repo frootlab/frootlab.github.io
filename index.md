@@ -4,21 +4,19 @@ layout: home
 
 # About
 
+The ongoing trend towards increasingly complex statistical models challenges
+enterprises and scientific workgroups as well. To remain competitive it becomes
+more important to venture collaborations. Good preconditions have already been
+created by the de facto standard [TensorFlow®](https://www.tensorflow.org).
+Beyond this common ground, the data back-ends and algorithms, however,
+appear in wild heterogeneity.
 
-The ongoing trend towards deep structured and increasingly complex statistical models,
-is a serious challenge for enterprises and scientific workgroups.
-In particular, as the expertise by far is highly specialised,
-it is becoming more important to venture collaborations.
-For this purpose, good conditions have already been created by the de facto standard
-[TensorFlow®](https://www.tensorflow.org). Besides this common language, however,
-the data backends and the algorithms, still appear in multifarious diversity.
-
-The [Frootlab](/tags#Frootlab) [Smart Analytics](/tags#Smart%20Analytics) framework
-counteracts this circumstance with the universal data interface
-[Pandora](https://github.com/frootlab/pandora) and the algorithm catalog
-[Motley](https://github.com/frootlab/motley). At this basis
-[Nemoa](https://github.com/frootlab/nemoa) even goes a large step beyond,
-by raising the abstraction level of programming to a scaffold level,
-based on [currently best fitting algorithms](/tags#CBF), rather then concrete algorithms.
-This allows the creation of applications, that are not only kept upd-to-date,
-but indeed get better, with their connected algorithm catalogs.
+[Frootlab](/tags#Frootlab) [Smart Analytics](/tags#Smart%20Analytics) addresses
+this circumstance with a fairly universal data interface
+[Pandora](https://github.com/frootlab/pandora) and an auto-evaluating algorithm
+catalog [Motley](https://github.com/frootlab/motley). On their basis
+[Nemoa](https://github.com/frootlab/nemoa) even goes further, by abstracting
+programming to [currently best fitting algorithms](/tags#CBF), rather then
+explicitly coded. In this way the our Smart Analytics framework allows low
+maintenance applications, that due to their connected catalogs get better
+with age, like old wine.
