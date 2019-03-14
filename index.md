@@ -12,7 +12,7 @@ Beyond this common ground, the data back-ends and algorithms, however,
 appear in wild heterogeneity.
 
 [Frootlab](/tags#Frootlab) [Smart Analytics](/tags#Smart%20Analytics) addresses
-this circumstance with a fairly universal data interface
+this issue with a fairly universal data interface
 [Pandora](https://github.com/frootlab/pandora) and an auto-evaluating algorithm
 catalog [Motley](https://github.com/frootlab/motley). On their basis
 [Nemoa](https://github.com/frootlab/nemoa) even goes further, by abstracting
