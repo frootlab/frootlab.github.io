@@ -9,8 +9,8 @@ future: true
 # Left Block Images
 background:
   homepage: images/back/home.webp
-  post-list: images/back/painting.webp
-  default-post: images/back/painting.webp
+  post-list: images/back/news.webp
+  default-post: images/back/news.webp
 
 # Jekyll
 #permalink:          /:title/
