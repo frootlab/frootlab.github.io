@@ -14,9 +14,7 @@
   {% endif %}
   {% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
 
-  {% comment %} ############################################### {% endcomment %}
   {% comment %} Twitter Cards {% endcomment %}
-  {% comment %} ############################################### {% endcomment %}
   {% if page.image %}{% capture image %}{{ page.image }}{% endcapture %}{% unless image contains 'http://' or image contains 'https://' %}{% capture image %}{{ site.url }}/{{ image }}{% endcapture %}{% endunless %}
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="{{ image }}">
@@ -27,9 +25,7 @@
   {% if site.twitter %}<meta name="twitter:site" content="@{{ site.twitter }}">
   <meta name="twitter:creator" content="@{{ site.twitter }}">{% endif %}
 
-  {% comment %} ############################################### {% endcomment %}
   {% comment %} Open Graph {% endcomment %}
-  {% comment %} ############################################### {% endcomment %}
   <meta property="og:locale" content="{{ site.locale }}">
   <meta property="og:type" content="article">
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
@@ -40,32 +36,25 @@
   {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
   <link rel="canonical" href="{{ canonical }}">
 
-  {% comment %} ############################################### {% endcomment %}
   {% comment %} Handheld {% endcomment %}
-  {% comment %} ############################################### {% endcomment %}
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  {% comment %} ############################################### {% endcomment %}
   {% comment %} Feed {% endcomment %}
-  {% comment %} ############################################### {% endcomment %}
   {% feed_meta %}
 
-  {% comment %} ############################################### {% endcomment %}
   {% comment %} Favicons {% endcomment %}
-  {% comment %} ############################################### {% endcomment %}
   <link rel="shortcut icon" type="image/png" href="{{ site.url }}/favicon.png" />
   <link rel="shortcut icon" href="{{ site.url }}/favicon.ico" />
 
-  {% comment %} ############################################### {% endcomment %}
-  {% comment %} Scripts {% endcomment %}
-  {% comment %} ############################################### {% endcomment %}
+  {% comment %} SEO {% endcomment %}
+  {% seo %}
+
+  {% comment %} Java Script {% endcomment %}
   {% include scripts.html %}
 
-  {% comment %} ############################################### {% endcomment %}
   {% comment %} CSS {% endcomment %}
-  {% comment %} ############################################### {% endcomment %}
   <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/main.css">
 
   <!-- Left Block Image for Posts -->

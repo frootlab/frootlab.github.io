@@ -246,6 +246,7 @@ DEPENDENCIES
   jekyll
   jekyll-feed
   jekyll-gist
+  jekyll-seo-tag
   jekyll-sitemap
 
 BUNDLED WITH

@@ -42,7 +42,7 @@ layout: compress
       <div class="share-buttons">
         {% include share.html %}
       </div>
-      <a href="https://www.frootlab.org/posts.html" title="posts" class="posts-menu-icon"></a>
+      <a href="{{ site.url }}/posts" title="posts" class="posts-menu-icon"></a>
       <a title="projects" class="projects-menu-icon">
         <span></span>
       </a>
@@ -54,7 +54,7 @@ layout: compress
         {% include page-pagination.html %}
       </div>
     </div>
-    {% include scripts.html %}
     {% include overlay.html %}
+    <script src="{{ site.url }}/assets/js/main.min.js"></script>
 </body>
 </html>
