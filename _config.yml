@@ -28,7 +28,7 @@ sass:
   style:            compressed
 
 # Google Analytics
-#google-analytics: UA-XXXXX-Y
+google-analytics: UA-136312456-1
 
 # Social Links
 email:              contact@frootlab.org
