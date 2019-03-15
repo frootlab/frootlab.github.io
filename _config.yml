@@ -2,7 +2,7 @@
 title: Frootlab
 description: Smart Analytics
 url: https://www.frootlab.org
-logo: frootlab.png
+logo: logo.png
 locale: en_US
 future: true
 
@@ -31,9 +31,9 @@ sass:
 google-analytics: UA-136312456-1
 
 # Social Links
-email:              contact@frootlab.org
+#email:              contact@frootlab.org
 #google.plus:        username
-#twitter:            username
+twitter:            frootlab
 #facebook:           username
 github:             frootlab
 #stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
