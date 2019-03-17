@@ -3,6 +3,9 @@
   {% if cur_title == "About" %}
     {% assign cur_title = site.title %}
   {% endif %}
+  {% if cur_title == "Posts" %}
+    {% assign cur_title = site.title | append: " Blog" %}
+  {% endif %}
 {% else %}
   {% assign cur_title = site.title %}
 {% endif %}
