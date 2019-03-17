@@ -1,9 +1,12 @@
-# Site
-title: Frootlab
-description: Smart Analytics
+# Site Variables
+title: Frootlab Smart Analytics
+description: Frootlab Smart Analytics Homepage and Corporate Blog
 url: https://www.frootlab.org
+relation: https://frootlab.github.io
 logo: logo.png
 locale: en_US
+copyright: © 2019 Frootlab
+keywords: Frootlab, Smart Analytics, Statistics, Machine Learning, Big Data
 future: true
 
 # Left Block Images
@@ -61,6 +64,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-gist
+  - jekyll-last-modified-at
 
 # Exclude list
 include: [_pages]
