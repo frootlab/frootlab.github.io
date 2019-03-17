@@ -2,7 +2,7 @@
 layout: home
 ---
 
-# About
+## About
 
 The ongoing trend towards increasingly complex statistical models challenges
 enterprises and scientific workgroups as well. To remain competitive it becomes
