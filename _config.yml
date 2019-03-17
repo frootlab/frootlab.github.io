@@ -5,6 +5,7 @@ url: https://www.frootlab.org
 relation: https://frootlab.github.io
 logo: logo.png
 locale: en_US
+language: en
 copyright: © 2019 Frootlab
 keywords: Frootlab, Smart Analytics, Statistics, Machine Learning, Big Data
 future: true
