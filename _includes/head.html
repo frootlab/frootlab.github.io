@@ -1,29 +1,32 @@
-{% if page.title And page.title != "About" %}
-{% assign cur_title = page.title | markdownify | strip_html | strip_newlines | escape_once %}
+{% if page.title %}
+  {% assign cur_title = page.title | markdownify | strip_html | strip_newlines | escape_once %}
+  {% if cur_title != "About" %}
+    {% assign cur_title = site.title %}
+  {% endif %}
 {% else %}
-{% assign cur_title = site.title %}
+  {% assign cur_title = site.title %}
 {% endif %}
 
 {% if page.excerpt %}
-{% assign cur_description = page.excerpt | markdownify | strip_html | strip_newlines | escape_once %}
+  {% assign cur_description = page.excerpt | markdownify | strip_html | strip_newlines | escape_once %}
 {% else %}
-{% assign cur_description = site.description %}
+  {% assign cur_description = site.description %}
 {% endif %}
 
 {% if page.tags %}
-{% assign cur_keywords = page.tags | join: ', ' %}
+  {% assign cur_keywords = page.tags | join: ', ' %}
 {% else %}
-{% assign cur_keywords = site.keywords %}
+  {% assign cur_keywords = site.keywords %}
 {% endif %}
 
 {% if page.image %}
-{% capture image %}{{ page.image }}{% endcapture %}
-{% unless image contains 'http://' or image contains 'https://' %}
-{% capture image %}{{ site.url }}/{{ image }}{% endcapture %}
-{% endunless %}
-{% assign cur_image = image %}
+  {% capture image %}{{ page.image }}{% endcapture %}
+  {% unless image contains 'http://' or image contains 'https://' %}
+    {% capture image %}{{ site.url }}/{{ image }}{% endcapture %}
+  {% endunless %}
+  {% assign cur_image = image %}
 {% else %}
-{% assign cur_image = site.logo %}
+  {% assign cur_image = site.logo %}
 {% endif %}
 
 <head>
