@@ -1,6 +1,6 @@
 {% if page.title %}
   {% assign cur_title = page.title | markdownify | strip_html | strip_newlines | escape_once %}
-  {% if cur_title != "About" %}
+  {% if cur_title == "About" %}
     {% assign cur_title = site.title %}
   {% endif %}
 {% else %}
