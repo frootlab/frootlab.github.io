@@ -35,36 +35,24 @@ google-analytics: UA-136312456-1
 
 # Social Links
 #email:              contact@frootlab.org
-#google.plus:        username
 twitter:            frootlab
 #facebook:           username
 github:             frootlab
-#stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
 #linkedin:          username
 #xing:              username
-#instagram:          username
-#lastfm:            username
-#tumblr:            username
-#pinterest:         username
 #foursquare:        username
 #steam:              username
 #dribbble:          username
-#youtube:           username
-#soundcloud:        username
 #weibo:             username
-#flickr:            username
 #codepen:           username
 #keybase:           username
 xmpp:               fishroot@wiuwiu.de
-#hackernews:        username
-#behance:           username
 
 # Gems
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-gist
-  - jekyll-last-modified-at
 
 # Exclude list
 include: [_pages]
