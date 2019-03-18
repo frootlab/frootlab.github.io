@@ -1,15 +1,15 @@
 - title: Nemoa
-  url: https://github.com/frootlab/nemoa
+  url: /nemoa
   image: /images/back/robot.webp
   completed: true
 
 - title: Pandora
-  url: https://github.com/frootlab/pandora
+  url: /pandora
   image: /images/back/garden.webp
   completed: true
 
 - title: Motley
-  url: https://github.com/frootlab/motley
+  url: /motley
   image: /images/back/painting.webp
   completed: true
 

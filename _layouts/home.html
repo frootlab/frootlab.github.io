@@ -2,20 +2,36 @@
 layout: compress
 ---
 
-<!DOCTYPE html>
-<html lang="{{ site.language }}">
-{% include head.html %}
+{% include header.html %}
+
+{% if page.project %}
+  {% assign cur_title = page.project %}
+  {% assign cur_subtitle = page.about %}
+  {% assign cur_background = page.background %}
+  {% assign cur_logo = site.url | append: "/images/" | append: page.project | append: ".png" %}
+  {% assign cur_logo_link = site.url | append: "/" | append: page.project %}
+  {% assign cur_logo_alt = "Frootlab " | append: page.project | capitalize | append: " Logo" %}
+{% else %}
+  {% assign cur_title = "Frootlab" %}
+  {% assign cur_subtitle = "Smart Analytics" %}
+  {% assign cur_background = site.url | append: "/" | append: site.background.homepage%}
+  {% assign cur_logo = site.url | append: "/images/" | append: site.logo %}
+  {% assign cur_logo_link = site.url  %}
+  {% assign cur_logo_alt = "Frootlab Logo" %}
+{% endif %}
 
 <body id="homepage">
 
-  <div class="block-left">
+  <div class="block-left" style="
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(20, 22, 26, 0.6)),
+    url({{ cur_background }}) no-repeat; background-size: cover;">
     <div class="content">
       <div class="main-info">
-        <a href="{{ site.url }}" class="logo">
-          <img src="{{ site.url }}/images/{{ site.logo }}" alt="Logo">
+        <a href="{{ cur_logo_link }}" class="logo">
+          <img src="{{ cur_logo }}" alt="{{ cur_logo_alt }}">
         </a>
-        <h2>Frootlab</h2>
-        <h3>Smart Analytics</h3>
+        <h2>{{ cur_title }}</h2>
+        <h3>{{ cur_subtitle }}</h3>
         {% include social-links.html %}
       </div>
     </div>
@@ -38,4 +54,4 @@ layout: compress
   <script src="{{ site.url }}/assets/js/main.min.js"></script>
 </body>
 
-</html>
+{% include footer.html %}
