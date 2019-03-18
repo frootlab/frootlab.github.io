@@ -6,25 +6,27 @@ layout: compress
 
 <body id="posts" class="inner-post-page">
     <div class="block-left">
+      <ul class="breadcrumb">
+        <li><a href="{{ site.url }}">Frootlab</a></li>
+        <li><a href="/posts">Posts</a></li>
+        <li>{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</li>
+      </ul>
       <div class="content">
-        <a href="{{ site.url }}" class="logo">
-          <img src="{{ site.url }}/images/{{ site.logo }}">
-        </a>
-
         <div class="post-title-section"
           style='background-color: rgba(0, 0, 0, 0.7);
             padding: 20px 10px 10px 10px;
             border: 1px solid rgba(255, 255, 255, 0.05);
             border-radius: 5px;
             box-shadow: 10px 10px 47px -13px rgba(0,0,0,0.75);'>
-          <h1 class="section-title" style='
+          <h2 class="section-title" style='
             color: rgba(255, 255, 255, 0.9); margin: 0;
             font-size: 3.5em;
             padding-bottom: 10px;
             margin-bottom: 0px;'>
             {{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}
-          </h1>
+          </h2>
           <div style="margin-top: 55px; padding-bottom: 10px;">
+            <p style="color: rgba(255, 255, 255, 0.9);">Tags:</p>
             <ul class="tags">
               {% for tag in page.tags %}
                 <li><a href="{{ site.url }}/tags#{{ tag }}">{{ tag }}</a></li>

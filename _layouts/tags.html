@@ -9,29 +9,14 @@ layout: compress
     <div class="block-left">
       <ul class="breadcrumb">
         <li><a href="{{ site.url }}">Frootlab</a></li>
-        <li>404</li>
+        <li>Tag Archive</li>
       </ul>
       <div class="content">
-        <div class="post-title-section"
-          style='background-color: rgba(0, 0, 0, 0.7);
-            padding: 20px 10px 10px 10px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 5px;
-            box-shadow: 10px 10px 47px -13px rgba(0,0,0,0.75);'>
-          <h1 class="section-title" style='
-            color: rgba(255, 255, 255, 0.9); margin: 0;
-            font-size: 3.5em;
-            padding-bottom: 10px;
-            margin-bottom: 0px;'>
-            {{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}
-          </h1>
-        </div>
       </div>
     </div>
 
     <div class="block-right">
       <div class="share-buttons">
-        {% include share.html %}
       </div>
       <a href="{{ site.url }}/posts" title="posts" class="posts-menu-icon"></a>
       <a title="projects" class="projects-menu-icon">
@@ -41,7 +26,6 @@ layout: compress
         <div class="date-highlight">{% if page.date %}{{ page.date | date: '%d %b %Y' }}{% else %}&#x2756;{% endif %}</div>
         {{ content }}
         <br>
-        {% include share.html %}
         {% include page-pagination.html %}
       </div>
     </div>

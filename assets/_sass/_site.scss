@@ -273,6 +273,38 @@
   }
 }
 
+/* Style the list */
+.block-left > ul.breadcrumb {
+  position: absolute;
+  z-index: 2;
+  padding: 10px 16px;
+  list-style: none;
+}
+
+/* Display list items side by side */
+.block-left > ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+  color: rgb(213, 211, 206);
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+.block-left > ul.breadcrumb li+li:before {
+  padding: 8px;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+.block-left > ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+.block-left > ul.breadcrumb li a:hover {
+  color: #01447e;
+}
+
 .logo {
   max-width: 150px;
   display: inline-block;

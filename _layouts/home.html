@@ -25,6 +25,12 @@ layout: compress
   <div class="block-left" style="
     background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(20, 22, 26, 0.6)),
     url({{ cur_background }}) no-repeat; background-size: cover;">
+    {% if page.project %}
+    <ul class="breadcrumb">
+      <li><a href="{{ site.url }}">Frootlab</a></li>
+      <li>{{ page.project | capitalize }}</li>
+    </ul>
+    {% endif %}
     <div class="content">
       <div class="main-info">
         <a href="{{ cur_logo_link }}" class="logo">

@@ -5,16 +5,30 @@ layout: compress
 {% include header.html %}
 
 <body id="posts">
-
   <div class="block-left">
+    <ul class="breadcrumb">
+      <li><a href="{{ site.url }}">Frootlab</a></li>
+      <li>Posts</li>
+    </ul>
     <div class="content">
-      <div class="logo">
-        <a href="{{ site.url }}">
-          <img src="{{ site.url }}/images/{{ site.logo | replace: '.', '-small.' }}">
-        </a>
+      <div class="post-title-section"
+        style='background-color: rgba(0, 0, 0, 0.7);
+          padding: 20px 10px 10px 10px;
+          border: 1px solid rgba(255, 255, 255, 0.05);
+          border-radius: 5px;
+          box-shadow: 10px 10px 47px -13px rgba(0,0,0,0.75);'>
+        <div style="margin-top: 15px; padding-bottom: 10px;">
+          <p style="color: rgba(255, 255, 255, 0.9);">Tags:</p>
+          {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+          {% assign tags_list = site_tags | split:',' | sort %}
+          <ul class="tags">
+            {% for item in (0..site.tags.size) %}{% unless forloop.last %}
+            {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
+            <li><a href="tags#{{ this_word }}" class="tag"><span class="term">{{ this_word }}</span> (<span class="count">{{ site.tags[this_word].size }}</span>)</a></li>
+            {% endunless %}{% endfor %}
+          </ul>
+        </div>
       </div>
-      <h1 class="section-title" style="color: rgba(255, 255, 255, 0.9);">{{ page.title}}<em>/</em>
-      </h1>
     </div>
   </div>
 
