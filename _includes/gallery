@@ -1,4 +1,4 @@
-{% assign images = include.images | split:" " %}
+{% assign images = include.images | split: " " %}
 {% assign caption = include.caption %}
 {% assign cols = include.cols %}
 

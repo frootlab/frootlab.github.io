@@ -8,14 +8,14 @@ layout: compress
   {% assign cur_title = page.project %}
   {% assign cur_subtitle = page.about %}
   {% assign cur_background = page.background %}
-  {% assign cur_logo = site.url | append: "/images/" | append: page.project | append: ".png" %}
+  {% assign cur_logo = site.url | append: "/images/logos/" | append: page.project | append: ".png" %}
   {% assign cur_logo_link = site.url | append: "/" | append: page.project %}
   {% assign cur_logo_alt = "Frootlab " | append: page.project | capitalize | append: " Logo" %}
 {% else %}
   {% assign cur_title = "Frootlab" %}
   {% assign cur_subtitle = "Smart Analytics" %}
   {% assign cur_background = site.url | append: "/" | append: site.background.homepage%}
-  {% assign cur_logo = site.url | append: "/images/" | append: site.logo %}
+  {% assign cur_logo = site.url | append: "/images/logos/" | append: site.logo %}
   {% assign cur_logo_link = site.url  %}
   {% assign cur_logo_alt = "Frootlab Logo" %}
 {% endif %}
