@@ -23,6 +23,6 @@ data-analysis](https://en.wikipedia.org/wiki/Structured_data_analysis_(statistic
 
 Nemoa is [open source](https://github.com/frootlab/pandora), based on the
 [Python](https://www.python.org/) programming language and actively developed as
-part of the [Liquid Code](https://github.com/orgs/frootlab/projects) framework
+part of the [Liquid Coding](https://github.com/orgs/frootlab/projects) framework
 at [Frootlab](https://www.frootlab.org). More information is provided at
 [GitHub](https://github.com/frootlab/nemoa).

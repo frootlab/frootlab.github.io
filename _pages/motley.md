@@ -23,6 +23,6 @@ deployment of algorithms.
 
 Motley is [open source](https://github.com/frootlab/motley), based on the
 [Python](https://www.python.org/) programming language and actively developed as
-part of the [Liquid Code](https://github.com/orgs/frootlab/projects) framework
+part of the [Liquid Coding](https://github.com/orgs/frootlab/projects) framework
 at [Frootlab](https://www.frootlab.org). More information is provided at
 [GitHub](https://github.com/frootlab/motley).
