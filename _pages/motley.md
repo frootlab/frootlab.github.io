@@ -3,6 +3,7 @@ layout: home
 project: motley
 about: Smart Algorithm Repository
 background: images/back/painting.webp
+permalink: /motley.html
 ---
 
 # About

@@ -3,6 +3,7 @@ layout: home
 project: pandora
 about: Unified Data Interface
 background: images/back/garden.webp
+permalink: /pandora.html
 ---
 
 # About
