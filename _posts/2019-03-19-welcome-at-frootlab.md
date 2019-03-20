@@ -2,12 +2,11 @@
 layout: post
 title: "Welcome at Frootlab"
 author: "Patrick Michl"
-image: "/images/back/robot.webp"
+image: "https://www.frootlab.org/images/back/robot.webp"
 categories:
   - Corporate
 tags:
   - Frootlab
-
 ---
 
 **We are a young developers team with strong expertise in data science and

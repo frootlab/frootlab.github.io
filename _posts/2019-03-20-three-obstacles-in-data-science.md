@@ -2,7 +2,7 @@
 layout: post
 title: "Three obstacles in data science and our vision"
 author: "Patrick Michl"
-image: "/images/posts/agile.webp"
+image: "https://www.frootlab.org/images/posts/agile.webp"
 categories:
   - Corporate
 tags:
@@ -10,7 +10,6 @@ tags:
   - Nemoa
   - Pandora
   - Motley
-
 ---
 
 **For the current development- and exploration process in data science three
