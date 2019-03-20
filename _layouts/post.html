@@ -9,7 +9,7 @@ layout: compress
       <ul class="breadcrumb">
         <li><a href="{{ site.url }}">Frootlab</a></li>
         <li><a href="/posts">Posts</a></li>
-        <li>{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</li>
+        <li>{{ page.title | markdownify | remove: "<p>" | remove: "</p>" | truncatewords: 2 }}</li>
       </ul>
       <div class="content">
         <div class="post-title-section"
