@@ -1,4 +1,6 @@
-{% if page.title %}
+{% if page.name %}
+  {% assign cur_title = page.name %}
+{% elsif page.title %}
   {% assign cur_title = page.title | markdownify | strip_html | strip_newlines | escape_once %}
   {% if cur_title == "About" and page.project != nil %}
     {% assign cur_title = page.project | capitalize | prepend: " " | prepend: site.title %}

@@ -15,16 +15,22 @@ layout: compress
         <div class="post-title-section"
           style='background-color: rgba(0, 0, 0, 0.7);
             padding: 20px 10px 10px 10px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.03);
             border-radius: 5px;
-            box-shadow: 10px 10px 47px -13px rgba(0,0,0,0.75);'>
+            box-shadow: 10px 10px 47px -13px rgba(0, 0, 0, 0.9);'>
           <h2 class="section-title" style='
             color: rgba(255, 255, 255, 0.9); margin: 0;
-            font-size: 3.5em;
+            font-size: 3em;
             padding-bottom: 10px;
             margin-bottom: 0px;'>
             {{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}
           </h2>
+          {% assign author = site.authors | where: 'name', page.author | first %}
+          {% if author %}
+          <p style="color: rgba(255, 255, 255, 0.9);">
+            by <a href="{{ author.url }}" style="color: #0275d8;">{{ author.name }}</a>
+          </p>
+          {% endif %}
           <div style="margin-top: 55px; padding-bottom: 10px;">
             <p style="color: rgba(255, 255, 255, 0.9);">Tags:</p>
             <ul class="tags">

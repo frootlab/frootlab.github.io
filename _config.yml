@@ -17,6 +17,11 @@ background:
   post-list: images/back/painting.webp
   default-post: images/back/painting.webp
 
+# Collections
+collections:
+  authors:
+    output: true
+
 # Jekyll
 #permalink:          /:title/
 markdown:           kramdown
@@ -42,8 +47,6 @@ twitter:            frootlab
 github:             frootlab
 #linkedin:          username
 #xing:              username
-#foursquare:        username
-#steam:              username
 #dribbble:          username
 #weibo:             username
 #codepen:           username

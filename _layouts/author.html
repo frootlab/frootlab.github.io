@@ -1,0 +1,69 @@
+---
+layout: compress
+---
+
+{% include header.html %}
+
+<body id="posts">
+  <div class="block-left">
+    <ul class="breadcrumb">
+      <li><a href="{{ site.url }}">Frootlab</a></li>
+      <li>Authors</li>
+      <li>{{ page.name }}</li>
+    </ul>
+    <div class="content">
+      <div class="post-title-section"
+        style='background-color: rgba(0, 0, 0, 0.7);
+          padding: 10px 10px 10px 10px;
+          border: 1px solid rgba(255, 255, 255, 0.05);
+          border-radius: 5px;
+          box-shadow: 10px 10px 47px -13px rgba(0,0,0,0.75);'>
+      <div class="main-info">
+        <a href="{{ cur_logo_link }}" class="logo">
+          <img src="{{ cur_logo }}" alt="{{ cur_logo_alt }}">
+        </a>
+        <a href="{{ cur_logo_link }}" class="logo">
+          <img src="{{ cur_logo }}" alt="{{ cur_logo_alt }}">
+        </a>
+        <h2>{{ page.name }}</h2>
+        <h3>{{ page.position }}</h3>
+        {% include author-social-links.html %}
+      </div>
+      <h3 style="color: rgba(255, 255, 255, 0.9); margin: 20px 0px 10px 0px;">About me</h3>
+      <div style="padding: 15px;">
+      <span style="color: rgba(255, 255, 255, 0.7);">
+        {{ page.content | markdownify }}
+      </span>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="block-right">
+    <a href="posts.html" title="posts" class="posts-menu-icon"></a>
+    <a title="projects" class="projects-menu-icon">
+      <span></span>
+    </a>
+    <div class="content">
+      <h2>Articles</h2>
+      <ul class="posts-list">
+        {% assign filtered_posts = site.posts | where: 'author', page.name %}
+        {% for post in filtered_posts %}
+        <li>
+          <h3>
+            <a href="{{ site.url }}{{ post.url }}" class="post-title">
+              <span>{{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}</span>
+            </a>
+            <span class="date">{{ post.date | date: '%d %b %Y' }}</span>
+          </h3>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% include overlay.html %}
+
+  <script src="{{ site.url }}/assets/js/main.min.js"></script>
+</body>
+
+{% include footer.html %}
