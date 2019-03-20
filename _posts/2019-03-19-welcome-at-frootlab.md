@@ -19,7 +19,7 @@ beyond scientific and industrial progress. In order to realize our vision, we
 therefore used our personal experiences to identify today's foremost challenges
 in data science and started to develop comprehensive [solutions]({% post_url
 2019-03-20-three-obstacles-in-data-science %}), based on an entirely new
-[programming paradigm](/tags#CAMP)). According to our fundamental convictions we
+[programming paradigm](/tags#CAMP). According to our fundamental convictions we
 release our products as [free](https://en.wikipedia.org/wiki/Free_software) and
 [open-source](https://en.wikipedia.org/wiki/Open-source_software) software, to
 provide universal access to research and education. Since the application of our

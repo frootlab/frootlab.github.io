@@ -4,8 +4,16 @@ layout: compress
 
 {% include header.html %}
 
+{% if page.background %}
+  {% assign cur_background = page.background %}
+{% else %}
+  {% assign cur_background = site.url | append: "/" | append: site.background.default-author %}
+{% endif %}
+
 <body id="posts">
-  <div class="block-left">
+  <div class="block-left" style="
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(20, 22, 26, 0.6)),
+    url({{ cur_background }}) no-repeat; background-size: cover;">
     <ul class="breadcrumb">
       <li><a href="{{ site.url }}">Frootlab</a></li>
       <li>Authors</li>
@@ -14,27 +22,21 @@ layout: compress
     <div class="content">
       <div class="post-title-section"
         style='background-color: rgba(0, 0, 0, 0.7);
-          padding: 10px 10px 10px 10px;
+          padding: 30px 10px 10px 10px;
           border: 1px solid rgba(255, 255, 255, 0.05);
           border-radius: 5px;
           box-shadow: 10px 10px 47px -13px rgba(0,0,0,0.75);'>
-      <div class="main-info">
-        <a href="{{ cur_logo_link }}" class="logo">
-          <img src="{{ cur_logo }}" alt="{{ cur_logo_alt }}">
-        </a>
-        <a href="{{ cur_logo_link }}" class="logo">
-          <img src="{{ cur_logo }}" alt="{{ cur_logo_alt }}">
-        </a>
-        <h2>{{ page.name }}</h2>
-        <h3>{{ page.position }}</h3>
-        {% include author-social-links.html %}
-      </div>
-      <h3 style="color: rgba(255, 255, 255, 0.9); margin: 20px 0px 10px 0px;">About me</h3>
-      <div style="padding: 15px;">
-      <span class="left-text">
-        {{ page.content | markdownify }}
-      </span>
-      </div>
+        <div class="main-info">
+          <h2>{{ page.name }}</h2>
+          <h3>{{ page.position }}</h3>
+          {% include author-social-links.html %}
+        </div>
+        <h3 style="color: rgba(255, 255, 255, 0.9); margin: 20px 0px 10px 0px;">About me</h3>
+        <div style="padding: 15px;">
+          <span class="left-text">
+            {{ page.content | markdownify }}
+          </span>
+        </div>
       </div>
     </div>
   </div>
