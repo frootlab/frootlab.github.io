@@ -296,13 +296,27 @@
 
 /* Add a color to all links inside the list */
 .block-left > ul.breadcrumb li a {
-  color: #0275d8;
+  color: $link-blue;
   text-decoration: none;
 }
 
 /* Add a color on mouse-over */
 .block-left > ul.breadcrumb li a:hover {
-  color: #01447e;
+  color: $link-hover;
+}
+
+.left-text {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.left-text a {
+  color: $link-blue;
+}
+
+.left-text a:hover,
+.left-text a:active,
+.left-text a:focus {
+  color: $link-hover;
 }
 
 .logo {

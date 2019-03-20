@@ -1,11 +1,11 @@
 ---
 layout: author
-short_name: pmichl
+short_name: fishroot
 name: Patrick Michl
-position:
+position: Owner
 github: fishroot
 xmpp: fishroot@wiuwiu.de
-xing: Patrick_Michl
+xing: Patrick_Michl6
 image: https://www.frootlab.org/images/back/robot.webp
 ---
 
