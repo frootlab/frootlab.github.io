@@ -8,7 +8,9 @@ logo: frootlab.png
 locale: en_US
 language: en
 copyright: © 2019 Frootlab
-keywords: Frootlab, Smart Analytics, Statistics, Machine Learning, Big Data
+keywords:
+  Frootlab, Smart Analytics, Cloud-Assisted Meta Programming, CAMP,
+  Liquid Coding, Nemoa, Pandora, Motley, flib, Machine Learning
 future: true
 
 # Left Block Images
