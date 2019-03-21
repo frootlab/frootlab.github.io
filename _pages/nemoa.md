@@ -22,6 +22,16 @@ modeling](https://en.wikipedia.org/wiki/Graphical_model), [machine
 learning](https://en.wikipedia.org/wiki/Machine_learning) and [structured
 data-analysis](https://en.wikipedia.org/wiki/Structured_data_analysis_(statistics))).
 
+According to our [convictions](/corporate/2019/03/19/welcome-at-frootlab.html),
+Nemoa is [free](https://en.wikipedia.org/wiki/Free_software) & [open
+source](https://en.wikipedia.org/wiki/Open-source_software), based on the
+[Python](https://www.python.org/) programming language and actively developed as
+part of our [Liquid Coding](https://github.com/orgs/frootlab/projects) framework.
+For more information please visit [GitHub](https://github.com/frootlab/nemoa).
+
+
+
+
 Nemoa is [open source](https://github.com/frootlab/pandora), based on the
 [Python](https://www.python.org/) programming language and actively developed as
 part of the [Liquid Coding](https://github.com/orgs/frootlab/projects) framework
