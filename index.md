@@ -1,5 +1,16 @@
 ---
 layout: home
+#email:              contact@frootlab.org
+twitter:            frootlab
+#facebook:           username
+github:             frootlab
+#linkedin:          username
+#xing:              username
+#dribbble:          username
+#weibo:             username
+#codepen:           username
+#keybase:           username
+xmpp:               fishroot@wiuwiu.de
 ---
 
 # About
