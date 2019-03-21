@@ -4,6 +4,7 @@ project: pandora
 about: Unified Data Interface
 background: images/back/garden.webp
 permalink: /pandora.html
+github: frootlab/pandora
 ---
 
 # About
