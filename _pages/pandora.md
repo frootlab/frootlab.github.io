@@ -19,6 +19,8 @@ $ pip install pandb
 
 ### License
 [General Public License v3](https://www.gnu.org/licenses/gpl.html)
+{: .light}
 
 ### Development Status
 2 - Pre-Alpha
+{: .light}

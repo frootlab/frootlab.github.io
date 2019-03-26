@@ -6,10 +6,9 @@ image: "https://www.frootlab.org/images/posts/agile.webp"
 categories:
   - Corporate
 tags:
-  - Data Science
+  - Motley
   - Nemoa
   - Pandora
-  - Motley
 ---
 
 **For the current development- and exploration process in data science three
@@ -60,7 +59,7 @@ over the original algorithm. But also if the original algorithm is provided
 online, it can take tremendous efforts to properly identify it's scope and adapt
 it to the underlying prerequisites - only to decide about it's suitability!
 
-We want to automate this process with [Motley](/pandora.html). Motley is a smart
+We want to automate this process with [Motley](/motley.html). Motley is a smart
 algorithm repository server, that enforces unified data interfaces for different
 algorithm categories. This allows Motley not only to automatically evaluate and
 compare the hosted algorithms with respect to given metrics but thereupon also
