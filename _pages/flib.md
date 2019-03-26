@@ -9,7 +9,8 @@ github: frootlab/flib
 
 The *Frootlab Shared Library* (flib) is a multi-purpose
 [Python](https://www.python.org/) library. The comprised modules are packaged
-into categories, of which the most important are **flib.base** and **flib.io**.
+into categories, of which the most important are `flib.base` and `flib.io`.
+{: .light}
 
 ### Base Modules
 
@@ -40,12 +41,11 @@ into categories, of which the most important are **flib.base** and **flib.io**.
 [Extended RAW-File IO](http://docs.frootlab.org/projects/flib/en/latest/api/flib.io.raw.html){: .btn}
 [Extended ZIP-Archive IO](http://docs.frootlab.org/projects/flib/en/latest/api/flib.io.zip.html){: .btn}
 
-
 ### Installation
 ```shell
 $ pip install flib
 ```
-
+ 
 ### Documentation
 [Online Documentation](http://docs.frootlab.org/projects/flib){: .btn .btn_green}
 [.pdf](https://readthedocs.org/projects/flib/downloads/pdf/latest/){: .btn}
@@ -54,7 +54,9 @@ $ pip install flib
 
 ### License
 [General Public License v3](https://www.gnu.org/licenses/gpl.html)
+{: .light}
 
 ### Development Status
 The comprised modules are in different development stages, which can be
 requested by the respective authors.
+{: .light}

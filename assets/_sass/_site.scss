@@ -331,6 +331,17 @@
   text-shadow: none;
 }
 
+/* Light Weight Text */
+p.light {
+  color: darken($white, 60);
+  b,
+  strong,
+  code {
+    color: $dark-grey !important;
+    background: none;
+  }
+}
+
 .main-info,
 .about-info {
   text-align: center;

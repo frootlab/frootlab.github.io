@@ -4,8 +4,6 @@ layout: compress
 
 {% include header.html %}
 
-{% assign cur_title = "Frootlab" %}
-{% assign cur_subtitle = "Smart Analytics" %}
 {% assign cur_background = site.url | append: "/" | append: site.background.homepage%}
 {% assign logo = site.url | append: "/images/logos/" | append: site.logo %}
 {% assign logo_link = site.url  %}
@@ -21,8 +19,8 @@ layout: compress
         <a href="{{ logo_link }}" class="logo">
           <img src="{{ logo }}" alt="{{ logo_alt }}">
         </a>
-        <h2>{{ cur_title }}</h2>
-        <h3>{{ cur_subtitle }}</h3>
+        <h2>{{ site.title }}</h2>
+        <h3>{{ site.subtitle }}</h3>
         {% include page-social-links.html %}
       </div>
     </div>

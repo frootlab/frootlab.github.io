@@ -1,10 +1,10 @@
 {% if page.short_name %}
   {% assign cur_title = page.name %}
+{% elsif page.project %}
+  {% assign cur_title = page.project | capitalize | prepend: " " | prepend: site.title %}
 {% elsif page.title %}
   {% assign cur_title = page.title | markdownify | strip_html | strip_newlines | escape_once %}
-  {% if cur_title == "About" and page.project != nil %}
-    {% assign cur_title = page.project | capitalize | prepend: " " | prepend: site.title %}
-  {% elsif cur_title == "About" %}
+  {% if cur_title == "About" %}
     {% assign cur_title = site.title | append: " " | append: site.subtitle %}
   {% elsif cur_title == "Posts" %}
     {% assign cur_title = site.title | append: " Blog" %}
