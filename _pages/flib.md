@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: project
 project: flib
 about: Frootlab Shared Library
 background: images/back/library.webp

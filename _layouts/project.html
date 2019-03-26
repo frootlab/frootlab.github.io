@@ -4,25 +4,26 @@ layout: compress
 
 {% include header.html %}
 
-{% assign cur_title = "Frootlab" %}
-{% assign cur_subtitle = "Smart Analytics" %}
-{% assign cur_background = site.url | append: "/" | append: site.background.homepage%}
-{% assign logo = site.url | append: "/images/logos/" | append: site.logo %}
-{% assign logo_link = site.url  %}
-{% assign logo_alt = "Frootlab Logo" %}
+{% assign logo = site.url | append: "/images/logos/" | append: page.project | append: ".png" %}
+{% assign logo_link = site.url | append: "/" | append: page.project %}
+{% assign logo_alt = "Frootlab " | append: page.project | capitalize | append: " Logo" %}
 
 <body id="homepage">
 
   <div class="block-left" style="
     background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(20, 22, 26, 0.6)),
-    url({{ cur_background }}) no-repeat; background-size: cover;">
+    url({{ page.background }}) no-repeat; background-size: cover;">
+    <ul class="breadcrumb">
+      <li><a href="{{ site.url }}">Frootlab</a></li>
+      <li>{{ page.project | capitalize }}</li>
+    </ul>
     <div class="content">
       <div class="main-info">
         <a href="{{ logo_link }}" class="logo">
           <img src="{{ logo }}" alt="{{ logo_alt }}">
         </a>
-        <h2>{{ cur_title }}</h2>
-        <h3>{{ cur_subtitle }}</h3>
+        <h2>{{ page.project }}</h2>
+        <h3>{{ page.about }}</h3>
         {% include page-social-links.html %}
       </div>
     </div>

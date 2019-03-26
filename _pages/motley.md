@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: project
 project: motley
 about: Smart Algorithm Repository
 background: images/back/painting.webp
