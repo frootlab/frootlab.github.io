@@ -13,9 +13,9 @@ $ pip install pandb
 ```
 
 ### Documentation
-[Online Documentation](http://docs.frootlab.org/projects/pandora){: .btn .btn_green} [PDF](https://readthedocs.org/projects/pandora/downloads/pdf/latest/){: .btn}
-[EPUB](https://readthedocs.org/projects/pandora/downloads/epub/latest/){: .btn}
-[ZIP](https://readthedocs.org/projects/pandora/downloads/htmlzip/latest/){: .btn}
+[Online Documentation](http://docs.frootlab.org/projects/pandora){: .btn .btn_green} [.pdf](https://readthedocs.org/projects/pandora/downloads/pdf/latest/){: .btn}
+[.epub](https://readthedocs.org/projects/pandora/downloads/epub/latest/){: .btn}
+[.zip](https://readthedocs.org/projects/pandora/downloads/htmlzip/latest/){: .btn}
 
 ### License
 [General Public License v3](https://www.gnu.org/licenses/gpl.html)
