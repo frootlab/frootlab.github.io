@@ -63,8 +63,9 @@
       border-color: darken($yellow, 5%);
     }
   }
-  &_success{
-    background-color: lighten($dark-grey, 10%);
+  &_green{
+    background-color: lighten($green, 10%);;
+    color: $white !important;
     &:hover {
       background-color: darken($dark-grey, 5%);
       border-color: darken($dark-grey, 5%);
@@ -109,11 +110,11 @@ a.btn {
 
 // notice
 @mixin notice($notice-color) {
-  margin: 2em 0 !important;  // override
+  margin: 0 !important;  // override
   padding: 1em;
   font-size: 0.9em !important;
   text-indent: initial; // override
-  background-color: mix(#fff, $notice-color, 90%);
+  background-color: mix(#fff, $notice-color, 50%);
   border-radius: 2px;
   box-shadow: 0 1px 1px rgba($notice-color, 0.25);
   h4 {
@@ -154,10 +155,14 @@ a.btn {
   &_warning {
     @include notice($yellow);
   }
-  &_success {
-    @include notice($dark-grey);
+  &_green {
+    @include notice($green);
   }
   &_danger {
+    @include notice($red);
+  }
+  &_red {
+    color: white !important;
     @include notice($red);
   }
 }

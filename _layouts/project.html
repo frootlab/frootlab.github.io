@@ -7,6 +7,7 @@ layout: compress
 {% assign logo = site.url | append: "/images/logos/" | append: page.project | append: ".png" %}
 {% assign logo_link = site.url | append: "/" | append: page.project %}
 {% assign logo_alt = "Frootlab " | append: page.project | capitalize | append: " Logo" %}
+{% assign project = page.project | capitalize %}
 
 <body id="project">
 
@@ -31,15 +32,19 @@ layout: compress
 
   <div class="block-right">
     <a href="{{ site.url }}/posts" title="posts" class="posts-menu-icon"></a>
-    <span class="posts-link">POSTS</span>
     <a title="projects" class="projects-menu-icon">
       <span></span>
     </a>
-    <span class="projects-link">PROJECTS</span>
     <div class="content">
-      <div class="about-info">
-        {{ content }}
+      <h3>About</h3>
+      <div>
+        {% for post in site.posts %}
+        {% if post.tags contains project %}
+        <a class="btn" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        {% endif %}
+        {% endfor %}
       </div>
+      {{ content }}
     </div>
   </div>
   {% include overlay.html %}
