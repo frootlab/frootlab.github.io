@@ -14,7 +14,7 @@ challenges for enterprises and scientific workgroups as well. In order to remain
 competitive it becomes more important to continuously adapt new technologies,
 such that traditional development cycles need to be revised.
 
-We step into this breach by allowing the development of software, that adepts
+We step into this breach by supporting the development of software, that adepts
 itself to new technologies! To this end we provide a
 [free](https://en.wikipedia.org/wiki/Free_software) & [open
 source](https://en.wikipedia.org/wiki/Open-source_software) framework which live
