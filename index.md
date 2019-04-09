@@ -9,18 +9,19 @@ xmpp: fishroot@wiuwiu.de
 
 # About
 
-The ongoing trend towards increasingly complex statistical models challenges
-enterprises and scientific workgroups as well. To remain competitive it becomes
-more important to venture collaborations. Good preconditions have already been
-created by the de facto standard [TensorFlow®](https://www.tensorflow.org).
-Beyond this common ground, the data back-ends and algorithms, however, appear in
-wild heterogeneity.
+The ongoing trend towards increasingly complex statistical models provides new
+challenges for enterprises and scientific workgroups as well. In order to remain
+competitive it becomes more important to continuously adapt new technologies,
+such that traditional development cycles need to be revised.
 
-[Frootlab](/tags#Frootlab) [Smart Analytics](/tags#Smart%20Analytics) addresses
-this issue with a fairly universal data interface [Pandora](pandora.html) and an
-auto-evaluating algorithm repository [Motley](motley.html). On their basis
-[Nemoa](nemoa.html) even goes further, by abstracting programming to [currently
-best fitting](/tags#CBF) algorithms rather then explicit. In this way our Smart
-Analytics framework allows low maintenance enterprise analytics applications,
-that together with their connected repositories even get better with age - like
-wine.
+We step into this breach by allowing the development of software, that adepts
+itself to new technologies! To this end we provide a
+[free](https://en.wikipedia.org/wiki/Free_software) & [open
+source](https://en.wikipedia.org/wiki/Open-source_software) framework which live
+integrates machine intelligence and collaborative data science.
+
+The essential components of this framework comprise: The universal data
+interface [Pandora](pandora.html), the smart algorithm repository
+[Motley](motley.html) and the data analysis templating system
+[Nemoa](nemoa.html), which abstracts explicit algorithms to [currently best
+fitting](/tags#CBF).
