@@ -9,11 +9,12 @@ xmpp: fishroot@wiuwiu.de
 
 # About
 
-The artificial intelligence revolution provides new challenges for enterprises,
-scientific workgroups and governments as well. In order to remain competitive it
-becomes more important to continuously adapt new technologies into existing
-software. We want to step into this breach by supporting the development of
-smart software, which adepts itself to new technologies!
+The artificial intelligence revolution provides new challenges for developers in
+the data analysis segment. This concerns enterprises, scientific workgroups and
+governments as well, as it becomes more important to continuously adapt new
+technologies into existing applications to remain competitive. We want to step
+into this breach by supporting the development of smart software, which adepts
+itself to new technologies!
 
 To that end we provide a [free](https://www.fsf.org/about/what-is-free-software)
 & [open source](https://opensource.org/docs/definition.php) data analysis
