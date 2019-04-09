@@ -9,19 +9,17 @@ xmpp: fishroot@wiuwiu.de
 
 # About
 
-The ongoing trend towards increasingly complex statistical models provides new
-challenges for enterprises and scientific workgroups as well. In order to remain
-competitive it becomes more important to continuously adapt new technologies,
-such that traditional development cycles need to be revised.
+The artificial intelligence revolution provides new challenges for enterprises,
+scientific workgroups and governments as well. In order to remain competitive it
+becomes more important to continuously adapt new technologies into existing
+software. We want to step into this breach by supporting the development of
+smart software, which adepts itself to new technologies!
 
-We step into this breach by supporting the development of software, that adepts
-itself to new technologies! To this end we provide a
-[free](https://en.wikipedia.org/wiki/Free_software) & [open
-source](https://en.wikipedia.org/wiki/Open-source_software) framework which live
-integrates machine intelligence and collaborative data science.
-
-The essential components of this framework comprise: The universal data
-interface [Pandora](pandora.html), the smart algorithm repository
-[Motley](motley.html) and the data analysis templating system
-[Nemoa](nemoa.html), which abstracts explicit algorithms to [currently best
-fitting](/tags#CBF).
+To that end we provide a [free](https://www.fsf.org/about/what-is-free-software)
+& [open source](https://opensource.org/docs/definition.php) data analysis
+framework, which incorporates machine intelligence and collaborative data
+science into the whole software life cycle of data analysis applications. The
+essential components of this framework comprise: The universal data interface
+[Pandora](pandora.html), the smart algorithm repository [Motley](motley.html)
+and the data analysis template system [Nemoa](nemoa.html), which abstracts
+explicit algorithms to currently best fitting.
