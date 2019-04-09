@@ -1,10 +1,10 @@
 ---
 layout: home
-#email: contact@frootlab.org
 twitter: frootlab
 github: frootlab
-#keybase: username
-xmpp: fishroot@wiuwiu.de
+keybase: frootlab
+#email: contact@frootlab.org
+#xmpp: fishroot@wiuwiu.de
 ---
 
 # About

@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/frootlab
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.frootlab.org
+  * I am frootlab (https://keybase.io/frootlab) on keybase.
+  * I have a public key with fingerprint 1E66 CF89 FA9E E9E2 DD6B  5F2C D259 52B2 900B 05F4
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101897a6308f40de7bbff30247ea6693390304b829c60b403b4eb4750b9ef1452190a",
+      "fingerprint": "1e66cf89fa9ee9e2dd6b5f2cd25952b2900b05f4",
+      "host": "keybase.io",
+      "key_id": "d25952b2900b05f4",
+      "kid": "0101897a6308f40de7bbff30247ea6693390304b829c60b403b4eb4750b9ef1452190a",
+      "uid": "991a5076e061790589b7141f63150719",
+      "username": "frootlab"
+    },
+    "service": {
+      "hostname": "www.frootlab.org",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1554817616,
+  "expire_in": 157680000,
+  "prev": "5fca7921d5026b8c5635ef50e2b78705482238470ab6ddf96c4c14e108fe0aab",
+  "seqno": 4,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.0
+Comment: https://keybase.io/crypto
+
+yMIvAnicrZJZaNRAGMd3e6hdtFq80GrFiC9S6kySmWQWRUW8sOB9QXHNJJNt2HWz
+ZtOutrYK+uBVn6qI0uKFSj2oWqSC1vvAqyrVUsGiloVa1Ip4Yb0mRd98dF6G+eb3
+/8//+5jrA9J9AX9a8eK26ejdev/dK/tKfEUnDs4vF6htrBOC5UKE9W4sarCEG4pY
+hhAUAARQJYqGJaCaMjCYQqlpSkCUFaZhTCSJAAnIVBWJjgGVgURlRmUFAUqYCWUk
+QgI0IV8wrViYOXHHirncFjKMdVMlpkYYI0w0DEyRKeqGiAgSqUgAoACZMhcW2wlP
+wcNRLcEKLJvX+CHUG+8f/H/OXdJrRwjUEFAwAxgqBCCVUAXK0MQS5GVIPDDBnJi2
+mnHadGzbjWpUqMgXeLXU0pk3WK+TP0QymSz4SxXYTpjr447t2rod5bfFrhtPBD21
+uy7eizMa+mMUolbM4LPkilLmJCw7JgQhJ3XX8pwhQrIKFQxxvsDWxi2HhSyPQApW
+AV/eO6yUWyJT1xQiQgMBEVNVR1hCzESAiVRRFcBdRFFSZQVoFBuGSbAu61BmkI+T
+AY335rW2JmYLQZnH1MLcMmGFY5pb4jCh4urlogyfP+Drk5nm/TFfIGvQ35/X86Hv
+z/EladuCY9ngSqElr/bA+0t7814e+rj7aWX3zbcv+h+s/rwqPuL22tqcnLJY7fOW
+r892zlvaPqrw7IWGAf7nS18seZZq/55YOKlqYsWCG+eadkzunzG2sKG7a0ZuF5rW
+uSdtyIiTxweljryu2Vp8tCe9qtVa2drWMfF8+7vlF6cee9r0OLNoP50byB4od5VF
+U9kdDydUJ90v/e7fqx46bKTw7VF96sLhzZ1rbs755P+RNeOV5Mvd9Gb7ruoV2Yu+
+VH2KRIcvnJd7cubqvdKYuub4k1vjwnppzca695WnQWf9qU09x9Hp7mu3ms8+2DKl
+8XPOsjO/rmfVz+o7+ldtXaTP+qbNdzY0tlyeLfwGMz9HbA==
+=yLL0
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/frootlab
+
+==================================================================
