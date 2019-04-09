@@ -11,9 +11,9 @@ xmpp: fishroot@wiuwiu.de
 
 The artificial intelligence revolution provides new challenges for developers in
 the data analysis segment. This concerns enterprises, scientific workgroups and
-governmental agencies as well, as it becomes more important to continuously
-adapt new technologies into existing applications to remain competitive. We want
-to step into this breach by supporting the development of smart software, which
+government agencies as well, as it becomes more important to continuously adapt
+new technologies into existing applications, to remain competitive. We want to
+step into this breach by supporting the development of smart software, which
 adepts itself to new technologies!
 
 To that end we provide a [free](https://www.fsf.org/about/what-is-free-software)
