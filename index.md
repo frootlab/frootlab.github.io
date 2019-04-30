@@ -3,8 +3,6 @@ layout: home
 twitter: frootlab
 github: frootlab
 keybase: frootlab
-#email: contact@frootlab.org
-#xmpp: fishroot@wiuwiu.de
 ---
 
 # About
@@ -16,8 +14,8 @@ rapidly adapt new technologies into existing applications. We want to step into
 this breach by supporting the development of smart software, which adepts itself
 to new technologies!
 
-To that end we provide a [free](https://www.fsf.org/about/what-is-free-software)
-& [open source](https://opensource.org/docs/definition.php) data analysis
+To that end we provide a [free and open
+source](https://www.gnu.org/philosophy/floss-and-foss.en.html) data analysis
 framework, which on the basis of [TensorFlow®](https://www.tensorflow.org/)
 incorporates machine intelligence and collaborative data science into the whole
 software life cycle. The essential components of the framework comprise: The

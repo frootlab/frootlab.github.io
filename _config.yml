@@ -16,8 +16,8 @@ future: true
 # Left Block Images
 background:
   homepage: images/back/home.webp
-  post-list: images/back/painting.webp
-  default-post: images/back/painting.webp
+  post-list: images/back/robot.webp
+  default-post: images/back/robot.webp
   default-author: images/back/robot.webp
 
 # Collections
