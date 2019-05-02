@@ -88,7 +88,7 @@ discriminative network by increasing it's error rate.
 
 Due to this approach GANs by the way solved a further problem of DBMs: Since the
 likelihood gradient of DBMs usually is not tractable it has to be estimated,
-ether by a Markov chain or variational inference. GANs, however, do not require
+either by a Markov chain or variational inference. GANs, however, do not require
 such estimations. The results are impressive! In particular, the photorelistic
 images and videos received much attention with artificial
 [faces](https://thispersondoesnotexist.com/) and
@@ -101,8 +101,8 @@ images and videos received much attention with artificial
 The zoo of deep models grows exponentially! Currently we find ourselves
 surrounded by many promising approaches, but there is a reason why the two
 approaches mentioned above - DBMs and GANs - are of paramount importance: They
-are of fundamental character as they respectively represent feuding schools in
-statistics: The Bayesians and the Frequentists.
+have a fundamental and pure character of feuding schools in statistics: The
+Bayesians and the Frequentists.
 
 At this point one could draw parallels to Romeo & Juliet, which raises the idea
 to put them together and see what happens. Lo and behold, some people already
@@ -113,20 +113,23 @@ is not by chance, as both approaches show distinctive strengths, in structure
 and representation. So I'll take the bet: The next big thing in deep learning is
 the fusion of GANs and DBMs.
 
-But let's extend this vision into future challenges. There is one thing that
+But let's extend the projection further into the future. There is one thing that
 only received very little attention in deep learning so far: Undirected
-graphical model like DBMs have the capability to capture dependency structures,
+graphical models like DBMs have the capability to capture dependency structures,
 and not only the boring linear ones, but indeed any sufficiently smooth! This
 property, however, has not yet been exploited at all! Why? Simply spoken, there
 is a large gap in the literature, as it affects statistics as well as
-differential geometry and topology! Nevertheless, I am deeply convinced that the
-prospect of deep structural inference is a good reason, to take this efforts and
-to develop a completely new branch of statistics which is concerned with
-structure preserving morphisms and structural inference[^4].
+differential geometry and topology! Nevertheless, I am convinced that the odds
+of deep structural inference satisfy to take the efforts to develop a completely
+new branch of statistics[^4].
+
+Usually I try not to get mawkish, but the prospects about the AI Revolution can
+be overwhelming. There are multifarious opportunities to make a contribution
+that really matters.
 
 ### Footnotes
 
 [^1]: Due to the bipartite graph structure of RBMs, repeated Gibbs sampling is rapidly mixing, which allows an efficient approximation of the log-likelihood gradient. 👍
-[^2]: The observables of course (!) are required to trace out a sufficiently Lipschitz-continous trajectory!
-[^3]: If you stack bipartite graphs, what do you get? Yes: A bipartite graph (and maybe a headache)
-[^4]: As an enthusiast, I already started this journey and You are very welcome to read my articles &#091;[1](https://drive.google.com/open?id=1nkNFPLXrAigD3MsETqt5hN9VI94nLvN0), [2](https://drive.google.com/open?id=16gl2GCT5taeH9oo86SHkFKZdeTyRRwTs), [3](https://drive.google.com/open?id=1jssUKKcUFw4LfDiWqjneMKRvVFUmZffP)&#093;, but be warned: You could get mad (or bored)!
+[^2]: The observables of course are required to trace out a sufficiently Lipschitz-continous trajectory.
+[^3]: If you stack bipartite graphs together, what do you get? Yes: A bipartite graph (and maybe a headache)
+[^4]: As an enthusiast I already started the journey into this new branch of statistics. You are very welcome to read my articles &#091;[1](https://drive.google.com/open?id=1RnRLM7WlSw63zuftRassTI18ohMjr0vE), [2](https://drive.google.com/open?id=1nkNFPLXrAigD3MsETqt5hN9VI94nLvN0), [3](https://drive.google.com/open?id=16gl2GCT5taeH9oo86SHkFKZdeTyRRwTs), [4](https://drive.google.com/open?id=1jssUKKcUFw4LfDiWqjneMKRvVFUmZffP)&#093;, but be warned: You could get mad (or bored)!
