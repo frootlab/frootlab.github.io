@@ -18,7 +18,7 @@ denominator. This is not only because science fiction didn't prepare us for our
 first real encounters with AI, but also due to the many and varied accessions,
 ranging from hopes to fears.**
 
-The AI Revolution is nothing more and nothing less then a rite de passage. But
+The AI Revolution is nothing more and nothing less then a rite of passage. But
 to know, where this journey takes us, requires to know where it started. After
 about one decade of deep learning it's time to take stock of progress and review
 some of the most important milestones and remaining challenges.
