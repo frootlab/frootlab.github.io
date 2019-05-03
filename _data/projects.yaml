@@ -1,11 +1,11 @@
-- title: Nemoa
-  url: /nemoa.html
-  image: /images/back/robot.webp
-  completed: true
-
 - title: Pandora
   url: /pandora.html
   image: /images/back/garden.webp
+  completed: true
+
+- title: Nemoa
+  url: /nemoa.html
+  image: /images/back/robot.webp
   completed: true
 
 - title: Motley
