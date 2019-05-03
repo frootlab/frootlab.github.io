@@ -39,6 +39,7 @@
 
 .projects-menu-icon {
   position: absolute;
+  z-index: 1;
   top: 30px;
   right: 30px;
   width: 15px;
@@ -95,6 +96,7 @@
 
 .posts-menu-icon {
   position: absolute;
+  z-index: 1;
   top: 30px;
   right: 90px;
   width: 20px;

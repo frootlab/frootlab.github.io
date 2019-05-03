@@ -82,9 +82,11 @@ provided a fairly straight solution: Every model get's it's own parameter space!
 
 The article "[Generative Adversarial Nets](https://arxiv.org/pdf/1406.2661.pdf)"
 (Goodfellow et al. 2014) proposes a model, where one ANN is trained to generate
-the sample distribution, while another is trained to discriminate the generated
-samples from the training data. Thereby the generative network tries to fool the
-discriminative network by increasing it's error rate.
+the sample distribution, while another is trained to discriminate the
+artificially generated samples from truly observed data. Thereby the generative
+network tries to fool the discriminative network by increasing it's proportion
+of misclassifications, while the latter tries to decrease it, which is a
+zero-sum game.
 
 Due to this approach GANs by the way solved a further problem of DBMs: Since the
 likelihood gradient of DBMs usually is not tractable it has to be estimated,
@@ -123,13 +125,14 @@ differential geometry and topology! Nevertheless, I am convinced that the odds
 of deep structural inference satisfy to take the efforts to develop a completely
 new branch of statistics[^4].
 
-Usually I try not to get mawkish, but the prospects about the AI Revolution can
-be overwhelming. There are multifarious opportunities to make a contribution
-that really matters.
+Usually I try not to get mawkish, but the prospects about the AI Revolution
+somehow can be overwhelming. And no matter, how important the above aspects will
+turn out, after all they will still only represent a tiny chapter within the
+long succession of incredible advances, that awaits us.
 
 ### Footnotes
 
-[^1]: Due to the bipartite graph structure of RBMs, repeated Gibbs sampling is rapidly mixing, which allows an efficient approximation of the log-likelihood gradient. 👍
-[^2]: The observables of course are required to trace out a sufficiently Lipschitz-continous trajectory.
-[^3]: If you stack bipartite graphs together, what do you get? Yes: A bipartite graph (and maybe a headache)
-[^4]: As an enthusiast I already started the journey into this new branch of statistics. You are very welcome to read my articles &#091;[1](https://drive.google.com/open?id=1RnRLM7WlSw63zuftRassTI18ohMjr0vE), [2](https://drive.google.com/open?id=1nkNFPLXrAigD3MsETqt5hN9VI94nLvN0), [3](https://drive.google.com/open?id=16gl2GCT5taeH9oo86SHkFKZdeTyRRwTs), [4](https://drive.google.com/open?id=1jssUKKcUFw4LfDiWqjneMKRvVFUmZffP)&#093;, but be warned: You could get mad (or bored)!
+[^1]: Due to the bipartite graph structure of RBMs, repeated Gibbs sampling is rapidly mixing, which allows an efficient approximation of the log-likelihood gradient.
+[^2]: The observables are required to trace out sufficiently smooth and Lipschitz-continous trajectories.
+[^3]: If you stack bipartite graphs together, you still get a bipartite graph. Of course, it's a little more complicated, but under the hood that's the reason, why DBMs can efficiently be trained.
+[^4]: I started the journey, to merge statistics with differential geometry and topology and would be glad, if I could inspire you with my ideas: &#091;[1](https://drive.google.com/open?id=1RnRLM7WlSw63zuftRassTI18ohMjr0vE), [2](https://drive.google.com/open?id=1nkNFPLXrAigD3MsETqt5hN9VI94nLvN0), [3](https://drive.google.com/open?id=16gl2GCT5taeH9oo86SHkFKZdeTyRRwTs), [4](https://drive.google.com/open?id=1jssUKKcUFw4LfDiWqjneMKRvVFUmZffP)&#093;, but be warned: You could get mad (or bored)!
