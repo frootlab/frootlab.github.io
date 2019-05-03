@@ -128,7 +128,7 @@ new branch of statistics[^4].
 Usually I try not to get mawkish, but the prospects about the AI Revolution
 somehow can be overwhelming. And no matter, how important the above aspects will
 turn out, after all they will still only represent a tiny chapter within the
-long succession of incredible advances, that awaits us.
+long succession of incredible advances, that await us.
 
 ### Footnotes
 
