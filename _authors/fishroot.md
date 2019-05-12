@@ -8,10 +8,13 @@ github: fishroot
 xing: Patrick_Michl6
 ---
 
-Before everything else I'm a hopeless enthusiast! As a mathematician my special
-vice is the fusion of statistics, differential geometry and topology to
-[structural statistics](/tags#structural statistics). As a developer I totally
-fell in love with [Cloud-Assisted Meta Programming](/tags#CAMP). My way of
-thinking is strongly influenced by my former mentors [Willy
+Above all, I'm a hopeless enthusiast! As a mathematician my special vice is the
+connection of statistics and differential geometry to [a new branch of
+statistics](/tags#structural statistics) that serves as a foundation for
+structured data analysis, like deep learning. As a developer I'm propelled by
+[<i class="fa fa-tag" aria-hidden="true"></i> AutoML](/tags#AutoML) and [<i
+class="fa fa-tag" aria-hidden="true"></i> Cloud-Assisted Meta
+Programming](/tags#CAMP). My attitude and interests are firmly shaped by my
+highly appreciated former mentors [Willy
 Jäger](https://de.wikipedia.org/wiki/Willi_J%C3%A4ger) and [Karlheinz
 Meier](https://de.wikipedia.org/wiki/Karlheinz_Meier).
