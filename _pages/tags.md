@@ -8,18 +8,20 @@ permalink: /tags.html
 {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign tags_list = site_tags | split:',' | sort %}
 
-<ul class="entry-meta">
-  {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-  {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
-  <li><a href="#{{ this_word }}" class="tag"><span class="term">{{ this_word }}</span> <span class="count">{{ site.tags[this_word].size }}</span></a></li>
-  {% endunless %}{% endfor %}
-</ul>
 {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-{% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
-   <h2 id="{{ this_word }}" class="tag-heading">{{ this_word }}</h2>
-   <ul>
-    {% for post in site.tags[this_word] %}{% if post.title != null %}
-    <li class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-    {% endif %}{% endfor %}
-  </ul>
+{% capture label %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
+ <h2 id="{{ label }}" class="tag-heading">
+   <span style="color: #008200;"> {{ label }}</span>
+ </h2>
+ <ul class="posts-list" style="margin-top: 30px; margin-bottom: 50p;">
+   {% for post in site.tags[label] %}{% if post.title != null %}
+   <li style="border: 0px; padding: 0px;">
+     <a href="{{ site.url }}{{ post.url }}" class="post-title"
+       style="margin-top:9px;" title="{{ post.title }}">
+       <span>{{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}</span>
+     </a>
+     <span class="date">{{ post.date | date: '%d %b %Y' }}</span>
+   </li>
+   {% endif %}{% endfor %}
+ </ul>
 {% endunless %}{% endfor %}

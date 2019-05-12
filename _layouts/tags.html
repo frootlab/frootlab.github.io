@@ -6,31 +6,55 @@ layout: compress
 
 <body id="posts" class="inner-post-page">
 
-    <div class="block-left">
-      <ul class="breadcrumb">
-        <li><a href="{{ site.url }}">Frootlab</a></li>
-        <li>Tag Archive</li>
-      </ul>
-      <div class="content">
+  <div class="block-left">
+    <ul class="breadcrumb">
+      <li><a href="{{ site.url }}">Frootlab</a></li>
+      <li>Tags</li>
+    </ul>
+    <div class="content">
+      <div class="post-title-section"
+        style='background-color: rgba(0, 0, 0, 0.7);
+          padding: 20px 10px 10px 10px;
+          border: 1px solid rgba(255, 255, 255, 0.05);
+          border-radius: 5px;
+          box-shadow: 10px 10px 47px -13px rgba(0,0,0,0.75);'>
+        <div style="margin-top: 15px; padding-bottom: 10px;">
+          <p style="color: rgba(255, 255, 255, 0.9);">Tags:</p>
+          {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+          {% assign tags_list = site_tags | split:',' | sort %}
+          <ul class="tags">
+            {% for item in (0..site.tags.size) %}{% unless forloop.last %}
+            {% capture label %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
+            <li style="float: left; margin-bottom: 2px; margin-right: 2px;
+              background: rgba(0,0,0,.5);">
+              <a href="tags#{{ label }}" class="tag">
+                <i class="fa fa-tag" aria-hidden="true"></i>
+                <span class="term">{{ label }}</span> (<span class="count">{{ site.tags[label].size }}</span>)
+              </a>
+            </li>
+            {% endunless %}{% endfor %}
+          </ul>
+        </div>
       </div>
     </div>
+  </div>
 
-    <div class="block-right">
-      <div class="share-buttons">
-      </div>
-      <a href="{{ site.url }}/posts" title="posts" class="posts-menu-icon"></a>
-      <a title="projects" class="projects-menu-icon">
-        <span></span>
-      </a>
-      <div class="inner-post content">
-        <div class="date-highlight">{% if page.date %}{{ page.date | date: '%d %b %Y' }}{% else %}&#x2756;{% endif %}</div>
-        {{ content }}
-        <br>
-        {% include page-pagination.html %}
-      </div>
+  <div class="block-right">
+    <div class="share-buttons">
     </div>
-    {% include overlay.html %}
-    <script src="{{ site.url }}/assets/js/main.min.js"></script>
+    <a href="{{ site.url }}/posts" title="posts" class="posts-menu-icon"></a>
+    <a title="projects" class="projects-menu-icon">
+      <span></span>
+    </a>
+    <div class="content">
+      <div class="date-highlight">{% if page.date %}{{ page.date | date: '%d %b %Y' }}{% else %}&#x2756;{% endif %}</div>
+      {{ content }}
+      <br>
+      {% include page-pagination.html %}
+    </div>
+  </div>
+  {% include overlay.html %}
+  <script src="{{ site.url }}/assets/js/main.min.js"></script>
 </body>
 
 {% include footer.html %}

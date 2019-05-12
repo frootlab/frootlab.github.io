@@ -27,7 +27,7 @@ layout: compress
           border-radius: 5px;
           box-shadow: 10px 10px 47px -13px rgba(0,0,0,0.75);'>
         <div class="main-info">
-          <h2>{{ page.name }}</h2>
+          <h1>{{ page.name }}</h1>
           <h3>{{ page.position }}</h3>
           {% include page-social-links.html %}
         </div>
@@ -53,7 +53,8 @@ layout: compress
         {% for post in filtered_posts %}
         <li>
           <h3>
-            <a href="{{ site.url }}{{ post.url }}" class="post-title">
+            <a href="{{ site.url }}{{ post.url }}" class="post-title"
+              style="margin-top:6px;">
               <span>{{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}</span>
             </a>
             <span class="date">{{ post.date | date: '%d %b %Y' }}</span>
