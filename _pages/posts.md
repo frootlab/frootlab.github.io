@@ -17,11 +17,11 @@ permalink: /posts.html
     {% assign btnclass = 'btn' %}
   {% endif %}
   <li>
+      <span class="date">{{ post.date | date: '%d %b %Y' }}</span>
       <a class="{{ btnclass }}" href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
         <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;
         {{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}
       </a>
-      <span class="date">{{ post.date | date: '%d %b %Y' }}</span>
   </li>
   {% endfor %}
 </ul>
