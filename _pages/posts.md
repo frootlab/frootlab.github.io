@@ -8,7 +8,7 @@ permalink: /posts.html
 <h2>Posts</h2>
 <ul class="posts-list-tight">
   {% for post in site.posts %}
-  {% assign this_category = post.category | downcase %}
+  {% assign this_category = post.categories | first | downcase %}
   {% if this_category == 'corporate' %}
     {% assign btnclass = 'btn btn_green' %}
   {% elsif this_category == 'science' %}
@@ -18,6 +18,7 @@ permalink: /posts.html
   {% endif %}
   <li>
       <a class="{{ btnclass }}" href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
+        <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;
         {{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}
       </a>
       <span class="date">{{ post.date | date: '%d %b %Y' }}</span>

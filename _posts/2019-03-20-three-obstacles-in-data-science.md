@@ -5,7 +5,6 @@ author: "Patrick Michl"
 license: "CC BY 4.0"
 license-url: "https://creativecommons.org/licenses/by/4.0/"
 image: "https://www.frootlab.org/images/posts/agile.webp"
-category: Corporate
 categories:
   - Corporate
 tags:

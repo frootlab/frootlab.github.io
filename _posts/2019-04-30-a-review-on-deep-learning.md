@@ -5,13 +5,11 @@ author: "Patrick Michl"
 license: "CC BY 4.0"
 license-url: "https://creativecommons.org/licenses/by/4.0/"
 image: "https://www.frootlab.org/images/back/robot.webp"
-category: Science
 categories:
   - Science
 tags:
-  - AI Revolution
   - Deep Learning
-  - Structural Statistics
+  - Statistics
 ---
 
 **When talking about the "AI Revolution" it's difficult to narrow down a common

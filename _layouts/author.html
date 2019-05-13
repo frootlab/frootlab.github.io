@@ -20,22 +20,15 @@ layout: compress
       <li>{{ page.name }}</li>
     </ul>
     <div class="content">
-      <div class="post-title-section"
-        style='background-color: rgba(0, 0, 0, 0.7);
-          padding: 30px 10px 10px 10px;
-          border: 1px solid rgba(255, 255, 255, 0.05);
-          border-radius: 5px;
-          box-shadow: 10px 10px 47px -13px rgba(0,0,0,0.75);'>
+      <div class="post-title-section">
         <div class="main-info">
           <h1>{{ page.name }}</h1>
           <h3>{{ page.position }}</h3>
           {% include page-social-links.html %}
         </div>
-        <h3 style="color: rgba(255, 255, 255, 0.9); margin: 20px 0px 10px 0px;">About me</h3>
-        <div style="padding: 15px;">
-          <span class="left-text">
-            {{ page.content | markdownify }}
-          </span>
+        <h3>About</h3>
+        <div class="left-text">
+          {{ page.content | markdownify }}
         </div>
       </div>
     </div>
@@ -51,7 +44,7 @@ layout: compress
       <ul class="posts-list-tight">
         {% assign filtered_posts = site.posts | where: 'author', page.name %}
         {% for post in filtered_posts %}
-        {% assign this_category = post.category | downcase %}
+        {% assign this_category = post.categories | first | downcase %}
         {% if this_category == 'corporate' %}
           {% assign btnclass = 'btn btn_green' %}
         {% elsif this_category == 'science' %}
@@ -61,6 +54,7 @@ layout: compress
         {% endif %}
         <li>
             <a class="{{ btnclass }}" href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
+              <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;
               {{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}
             </a>
             <span class="date">{{ post.date | date: '%d %b %Y' }}</span>
