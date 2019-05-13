@@ -47,18 +47,23 @@ layout: compress
       <span></span>
     </a>
     <div class="content">
-      <h2>Articles</h2>
-      <ul class="posts-list">
+      <h2>Posts</h2>
+      <ul class="posts-list-tight">
         {% assign filtered_posts = site.posts | where: 'author', page.name %}
         {% for post in filtered_posts %}
+        {% assign this_category = post.category | downcase %}
+        {% if this_category == 'corporate' %}
+          {% assign btnclass = 'btn btn_green' %}
+        {% elsif this_category == 'science' %}
+          {% assign btnclass = 'btn btn_blue' %}
+        {% else %}
+          {% assign btnclass = 'btn' %}
+        {% endif %}
         <li>
-          <h3>
-            <a href="{{ site.url }}{{ post.url }}" class="post-title"
-              style="margin-top:6px;">
-              <span>{{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}</span>
+            <a class="{{ btnclass }}" href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
+              {{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}
             </a>
             <span class="date">{{ post.date | date: '%d %b %Y' }}</span>
-          </h3>
         </li>
         {% endfor %}
       </ul>

@@ -5,8 +5,7 @@ author: "Patrick Michl"
 license: "CC BY 4.0"
 license-url: "https://creativecommons.org/licenses/by/4.0/"
 image: "https://www.frootlab.org/images/back/robot.webp"
-categories:
-  - Corporate
+category: Corporate
 tags:
   - AutoML
   - CAMP
@@ -35,7 +34,7 @@ The AI revolution was acompanied by an increasing demand of data scientists. The
 
 In the data science community statistics and software development are not only highly appreciated but indeed regarded as the primary must-have competences. Nevertheless, if you look beyond the horizon and focus on specific real-world problems, you will realise that the specialists knowledge is getting more important, the closer you get. So in order to close this gap, a further movement in data science evolved, that emphasizes user-friendly interfaces and visual programming. Tools like [KXEN (now SAP)](https://www.sap.com/germany/products/predictive-analytics.html) and [RapidMiner](https://rapidminer.com/) aim to open the area to non-programmers by obviating the code aspect and providing a user-friendly GUI.
 
-This approach is awesome, since it purifies the workflow from any technical issues and therfore accelerates the whole development process. Compared to Python and R, however, the scope of application and adaptability is very limited. So once again we have a situation of competing concepts with distinctive strengts and once again the decisive step is their fusion! 
+This approach is awesome, since it purifies the workflow from any technical issues and therfore accelerates the whole development process. Compared to Python and R, however, the scope of application and adaptability is very limited. So once again we have a situation of competing concepts with distinctive strengts and once again the decisive step is their fusion!
 
 automating the end-to-end process of applying machine learning to real-world problems
 

@@ -4,12 +4,12 @@ layout: compress
 
 {% include header.html %}
 
-<body id="posts" class="inner-post-page">
+<body id="posts">
 
   <div class="block-left">
     <ul class="breadcrumb">
       <li><a href="{{ site.url }}">Frootlab</a></li>
-      <li>Tags</li>
+      <li>{{ page.title }}</li>
     </ul>
     <div class="content">
       <div class="post-title-section"
@@ -29,7 +29,7 @@ layout: compress
               background: rgba(0,0,0,.5);">
               <a href="tags#{{ label }}" class="tag">
                 <i class="fa fa-tag" aria-hidden="true"></i>
-                <span class="term">{{ label }}</span> (<span class="count">{{ site.tags[label].size }}</span>)
+                <span class="term">{{ label }}</span>
               </a>
             </li>
             {% endunless %}{% endfor %}
@@ -40,17 +40,12 @@ layout: compress
   </div>
 
   <div class="block-right">
-    <div class="share-buttons">
-    </div>
     <a href="{{ site.url }}/posts" title="posts" class="posts-menu-icon"></a>
     <a title="projects" class="projects-menu-icon">
       <span></span>
     </a>
     <div class="content">
-      <div class="date-highlight">{% if page.date %}{{ page.date | date: '%d %b %Y' }}{% else %}&#x2756;{% endif %}</div>
       {{ content }}
-      <br>
-      {% include page-pagination.html %}
     </div>
   </div>
   {% include overlay.html %}

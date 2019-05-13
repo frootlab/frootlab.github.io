@@ -541,16 +541,9 @@ p.light {
   }
 }
 
-.posts-list {
-  margin: 50px 0;
+.posts-list, .posts-list-tight {
   > li {
-    margin-bottom: 23px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid darken($white, 8.2353);
     list-style: none;
-    &:last-child {
-      border: none;
-    }
     h2 {
       font-size: 30px;
       margin-bottom: 15px;
@@ -559,7 +552,6 @@ p.light {
       color: darken($white, 40);
     }
     .date {
-      color: #008200;
       float: right;
       display: inline-block;
       font-size: 15px;
@@ -567,6 +559,7 @@ p.light {
       text-transform: uppercase;
     }
     .post-title {
+      color: #008200;
       display: inline-block;
       max-width: 75%;
     }
@@ -574,6 +567,25 @@ p.light {
   .tags li > a {
     color: lighten($black, 28%);
   }
+}
+
+.posts-list {
+  margin: 50px 0;
+  > li {
+    margin-bottom: 23px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid darken($white, 8.2353);
+    &:last-child {
+      border: none;
+    }
+  }
+}
+
+.posts-list-tight {
+   margin: 30px 0 50px 0;
+   > li {
+     margin-bottom: 10px;
+   }
 }
 
 .tags {
