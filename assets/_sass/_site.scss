@@ -544,6 +544,7 @@ p.light {
 .posts-list, .posts-list-tight {
   > li {
     list-style: none;
+    border-radius: 2px;
     h2 {
       font-size: 30px;
       margin-bottom: 15px;
@@ -552,10 +553,13 @@ p.light {
       color: darken($white, 40);
     }
     .date {
+      color: black;
+      border-radius: 2px;
       float: right;
       display: inline-block;
-      font-size: 15px;
-      padding-top: 10px;
+      font-size: 0.8em;
+      font-weight: 400;
+      padding: 0.5em 0.75em;
       text-transform: uppercase;
     }
     .post-title {
@@ -563,6 +567,12 @@ p.light {
       display: inline-block;
       max-width: 75%;
     }
+  }
+  > li:nth-child( odd ) {
+    background-color: #eee;
+  }
+  > li:nth-child( even ) {
+    background-color: #ddd;
   }
   .tags li > a {
     color: lighten($black, 28%);
@@ -584,7 +594,7 @@ p.light {
 .posts-list-tight {
    margin: 30px 0 50px 0;
    > li {
-     margin-bottom: 10px;
+     border-bottom: 1px solid #fff;
    }
 }
 

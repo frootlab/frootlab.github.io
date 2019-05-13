@@ -42,19 +42,13 @@ layout: compress
         </p>
         {% endif %}
         <div style="margin-top: 55px; padding-bottom: 10px;">
-          <p style="color: rgba(255, 255, 255, 0.9);">Tags:</p>
-          <ul class="tags">
-            {% for tag in page.tags %}
-              <li style="float: left; margin-bottom: 2px; margin-right: 2px;
-                background: rgba(0,0,0,.5);">
-                <a href="{{ site.url }}/tags#{{ tag }}">
-                  <i class="fa fa-tag" aria-hidden="true"></i> {{ tag }}
-                </a>
-              </li>
-              {% unless forloop.last %}
-              {% endunless %}
-            {% endfor %}
-          </ul>
+          <h3 style="color: rgba(255, 255, 255, 0.9);">Tags</h3>
+          {% for label in page.tags %}
+          <a class="btn btn_black" href="{{site.url}}/tags#{{ label }}">
+            <i class="fa fa-tag" aria-hidden="true"></i>
+            {{ label }}
+          </a>
+          {% endfor %}
         </div>
       </div>
     </div>

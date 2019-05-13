@@ -64,7 +64,7 @@
     }
   }
   &_green{
-    background-color: lighten($green, 10%);;
+    background-color: lighten($green, 10%);
     color: $white !important;
     &:hover {
       background-color: darken($dark-grey, 5%);
@@ -72,10 +72,19 @@
     }
   }
   &_blue{
-    background-color: lighten($blue, 10%);;
+    background-color: lighten($blue, 10%);
     color: $white !important;
     &:hover {
       background-color: darken($dark-grey, 5%);
+      border-color: darken($dark-grey, 5%);
+    }
+  }
+  &_black{
+    background-color: darken($dark-grey, 5%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: $white !important;
+    &:hover {
+      background-color: lighten($dark-grey, 5%);
       border-color: darken($dark-grey, 5%);
     }
   }
