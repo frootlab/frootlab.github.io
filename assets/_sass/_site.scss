@@ -319,8 +319,6 @@
   color: $link-hover;
 }
 
-
-
 .logo {
   max-width: 150px;
   display: inline-block;
@@ -378,56 +376,27 @@ p.light {
     padding-top: 25px;
   }
   ul {
-    font-size: 1em;
+    font-size: 0.9em;
     margin-top: 30px;
     overflow: hidden;
     li {
       display: inline-block;
-      background: #585b63;
-      margin-right: 10px;
+      background: rgba(20, 20, 20, 0.5);
+      border: 1px solid transparent;
+      border-radius: 5px;
       vertical-align: middle;
-      -webkit-transform: translateZ(0);
-      transform: translateZ(0);
-      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-      -moz-osx-font-smoothing: grayscale;
-      position: relative;
-      -webkit-transition-property: color;
-      transition-property: color;
-      -webkit-transition-duration: 0.3s;
-      transition-duration: 0.3s;
-      &:before {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: $dark-grey;
-        -webkit-transform: scaleY(0);
-        transform: scaleY(0);
-        -webkit-transform-origin: 50% 100%;
-        transform-origin: 50% 100%;
-        -webkit-transition-property: transform;
-        transition-property: transform;
-        -webkit-transition-duration: 0.3s;
-        transition-duration: 0.3s;
-        -webkit-transition-timing-function: ease-out;
-        transition-timing-function: ease-out;
-      }
+      transition: all 0.2s ease-in-out;
       &:hover {
-        &:before {
-          -webkit-transform: scaleY(1);
-          transform: scaleY(1);
-        }
+        background-color: $green;
+        border: 1px solid lighten($green, 5%);
       }
       &:nth-child(odd) {
-        background: $overlay-color;
-      }
-      &:last-child {
-        margin-right: 0;
+        background: rgba(80, 80, 80, 0.5);
+        border: 1px solid transparent;
+        &:hover {
+          background-color: $blue;
+          border: 1px solid lighten($blue, 5%);
+        }
       }
       a {
         display: inline-block;
@@ -675,9 +644,8 @@ p.light {
   bottom: 1.5em;
   left: 1.5em;
   right: 1.5em;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 5px;
   box-shadow: 10px 10px 47px -13px rgba(0,0,0,0.75);
   h1,

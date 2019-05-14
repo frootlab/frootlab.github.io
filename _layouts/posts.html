@@ -6,7 +6,10 @@ layout: compress
 
 <body id="posts">
 
-  <div class="block-left">
+  <div class="block-left" style="
+        background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(20, 22, 26, 0.4)),
+        url({{ site.url }}/{{ site.background.post-list }}) no-repeat;
+        background-size: cover;">
     <ul class="breadcrumb">
       <li><a href="{{ site.url }}">Frootlab</a></li>
       <li>{{ page.title }}</li>
@@ -24,7 +27,9 @@ layout: compress
         {% else %}
           {% assign btnclass = 'btn btn_black' %}
         {% endif %}
-        <a class="{{ btnclass }}" href="{{site.url}}/categories#{{ name }}">{{ name }}</a>
+        <a class="{{ btnclass }}" href="{{site.url}}/categories#{{ name }}">
+          {{ name }}
+        </a>
         {% endfor %}
 
         <h3>Tags</h3>
