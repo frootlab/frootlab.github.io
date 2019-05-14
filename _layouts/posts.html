@@ -8,10 +8,7 @@ layout: compress
 
   <div class="block-left" style="
     background: linear-gradient(
-      rgba(0, 0, 0, 0.9) 0%,
-      rgba(0, 0, 0, 0.9) 2.5em,
-      rgba(0, 0, 0, 0.8) 2.5em,
-      rgba(20, 22, 26, 0.5) 40%,
+      rgba(0, 0, 0, 0.3) 0%,
       rgba(20, 22, 26, 0.1) 100%),
     url({{ site.url }}/{{ site.background.post-list }}) no-repeat;
     background-size: cover;">
@@ -21,32 +18,37 @@ layout: compress
     </ul>
     <div class="content">
       <div class="post-title-section">
-        <h3>Categories</h3>
-        {% for category in site.categories %}
-        {% assign name = category | first %}
-        {% assign catid = name | downcase %}
-        {% if catid == 'corporate' %}
-          {% assign btnclass = 'btn btn_green' %}
-        {% elsif catid == 'science' %}
-          {% assign btnclass = 'btn btn_blue' %}
-        {% else %}
-          {% assign btnclass = 'btn btn_black' %}
-        {% endif %}
-        <a class="{{ btnclass }}" href="{{site.url}}/categories#{{ name }}">
-          {{ name }}
-        </a>
-        {% endfor %}
-
-        <h3>Tags</h3>
-        {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-        {% assign tags_list = site_tags | split:',' | sort %}
-        {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-        {% capture label %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
-        <a class="btn btn_black" href="{{site.url}}/tags#{{ label }}">
-          <i class="fas fa-tag" aria-hidden="true"></i>
-          {{ label }}
-        </a>
-        {% endunless %}{% endfor %}
+        <div class="columns">
+          <div class="column" style="flex: 30%;">
+            <h3>Categories</h3>
+            {% for category in site.categories %}
+            {% assign name = category | first %}
+            {% assign catid = name | downcase %}
+            {% if catid == 'corporate' %}
+              {% assign btnclass = 'btn btn_green' %}
+            {% elsif catid == 'science' %}
+              {% assign btnclass = 'btn btn_blue' %}
+            {% else %}
+              {% assign btnclass = 'btn btn_black' %}
+            {% endif %}
+            <a class="{{ btnclass }}" href="{{site.url}}/categories#{{ name }}">
+              {{ name }}
+            </a>
+            {% endfor %}
+          </div>
+          <div class="column" style="flex: 70%;">
+            <h3>Tags</h3>
+            {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+            {% assign tags_list = site_tags | split:',' | sort %}
+            {% for item in (0..site.tags.size) %}{% unless forloop.last %}
+            {% capture label %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
+            <a class="btn btn_black" href="{{site.url}}/tags#{{ label }}">
+              <i class="fas fa-tag" aria-hidden="true"></i>
+              {{ label }}
+            </a>
+            {% endunless %}{% endfor %}
+          </div>
+        </div>
       </div>
     </div>
   </div>

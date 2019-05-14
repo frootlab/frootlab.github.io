@@ -5,7 +5,7 @@ github: frootlab
 keybase: frootlab
 ---
 
-# About
+## About
 
 The AI-Revolution provides new challenges for developers in the data analysis
 segment. This concerns enterprises, scientific workgroups and government

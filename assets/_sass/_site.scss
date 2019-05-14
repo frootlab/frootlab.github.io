@@ -1,5 +1,6 @@
 .block-left {
   float: left;
+  box-shadow: 5px 5px 13px -6px rgba(0, 0, 0, 0.6);
   .content {
     z-index: 1;
     position: relative;
@@ -289,6 +290,8 @@
 
 /* Style the list */
 .block-left > ul.breadcrumb {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
   position: absolute;
   z-index: 2;
   padding: 10px 16px;
@@ -298,8 +301,8 @@
 /* Display list items side by side */
 .block-left > ul.breadcrumb li {
   display: inline;
-  font-size: 1em;
-  color: rgb(213, 211, 206);
+  font-size: 1.1em;
+  color: darken($white, 10%);
 }
 
 /* Add a slash symbol (/) before/behind each list item */
@@ -317,6 +320,21 @@
 /* Add a color on mouse-over */
 .block-left > ul.breadcrumb li a:hover {
   color: $link-hover;
+}
+
+/* Create columns in post title sections */
+.columns {
+  box-sizing: border-box;
+  display: flex;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .column {
+    flex: 50%;
+    padding: 1.1em;
+  }
 }
 
 .logo {
@@ -401,6 +419,9 @@ p.light {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
+  }
+
+  h1.underline {
     &:after {
       content: "";
       width: 100px;
@@ -416,6 +437,7 @@ p.light {
       transform: translatex(-50%);
     }
   }
+
   h3 {
     font-size: 21px;
     line-height: 30px;
@@ -627,34 +649,26 @@ p.light {
 }
 
 .post-title-section {
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(0, 0, 0, 0.85);
   position: absolute;
-  bottom: 1.5em;
-  left: 1.5em;
-  right: 1.5em;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 10px 10px 47px -13px rgba(0,0,0,0.75);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0px;
   h1,
   h2,
   h3 {
-    color: rgba(255, 255, 255, 0.9);
+    padding-top: 0;
+    margin-top: 0;
   }
-  .left-text {
-    color: rgba(255, 255, 255, 0.8);
-    padding: 0.5em 0.75em;
-    font-size: 0.9em;
-    font-weight: 400;
-    background-color: black;
-    border-radius: 5px;
-    a {
-      color: $link-blue;
-    }
-    a:hover,
-    a:active,
-    a:focus {
-      color: $link-hover;
-    }
+  a {
+    color: $link-blue;
+  }
+  a:hover,
+  a:active,
+  a:focus {
+    color: $link-hover;
   }
   .section-title {
     position: relative;
@@ -778,6 +792,7 @@ p.light {
 @media screen and (max-width: 960px) {
   .block-left,
   .block-right {
+    box-shadow: none;
     float: none;
     width: 100%;
   }

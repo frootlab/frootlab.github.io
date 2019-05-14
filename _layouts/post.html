@@ -8,11 +8,9 @@ layout: compress
 
   <div class="block-left" style="
     background: linear-gradient(
-      rgba(0, 0, 0, 0.9) 0%,
-      rgba(0, 0, 0, 0.9) 2.5em,
-      rgba(0, 0, 0, 0.8) 2.5em,
-      rgba(20, 22, 26, 0.5) 40%,
-      rgba(20, 22, 26, 0.1) 100%),
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.0) 50%,
+      rgba(0, 0, 0, 0.5) 100%),
     url({{ site.url }}/{{ page.image }}) no-repeat;
     background-size: cover;">
     <ul class="breadcrumb">
@@ -21,37 +19,46 @@ layout: compress
       <li>{{ page.title | markdownify | remove: "<p>" | remove: "</p>" | truncatewords: 2 }}</li>
     </ul>
     <div class="content">
+      <div class="main-info">
+      <h1>
+        <span style="
+          box-shadow: 0 0 0 .1em rgba(0, 0, 0, 0.7);
+          line-height: 1.8;
+          background-color: rgba(0, 0, 0, 0.7);">
+        {{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}
+        </span>
+      </h1>
+      </div>
+
       <div class="post-title-section">
-        <h2 class="section-title" style='
-          margin: 0;
-          font-size: 2.5em;
-          padding-bottom: 10px;
-          margin-bottom: 0px;'>
-          {{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}
-        </h2>
-        {% assign author = site.authors | where: 'name', page.author | first %}
-        {% if author %}
-        <p style="color: rgba(255, 255, 255, 0.9);">
-          by <a href="{{ author.url }}" style="color: #0275d8;">{{ author.name }}</a>
-        </p>
-        {% endif %}
-        {% if page.license %}
-        <p style="color: rgba(255, 255, 255, 0.9);">
-          {% if page.license-url %}
-          licensed with <a href="{{ page.license-url }}" style="color: #0275d8;">{{ page.license }}</a>
-          {% else %}
-          licensed with page.license
-          {% endif %}
-        </p>
-        {% endif %}
-        <div style="margin-top: 55px; padding-bottom: 10px;">
-          <h3 style="color: rgba(255, 255, 255, 0.9);">Tags</h3>
-          {% for label in page.tags %}
-          <a class="btn btn_black" href="{{site.url}}/tags#{{ label }}">
-            <i class="fas fa-tag" aria-hidden="true"></i>
-            {{ label }}
-          </a>
-          {% endfor %}
+        <div class="columns" style="text-align: center;">
+          <div class="column" style="padding-bottom: 0px;">
+            {% assign author = site.authors | where: 'name', page.author | first %}
+            {% if author %}
+            <h3>by <a href="{{ author.url }}" style="color: #0275d8;">{{ author.name }}</a></h3>
+            {% else %}
+            <h3>Author: Anonymous</h3>
+            {% endif %}
+            {% if page.license %}
+            {% if page.license-url %}
+            <h3>License: <a href="{{ page.license-url }}" style="color: #0275d8;">{{ page.license }}</a></h3>
+            {% else %}
+            <h3>License: {{ page.license }}</h3>
+            {% endif %}
+            {% else %}
+            <h3>License: Unknown></h3>
+            {% endif %}
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column" style="text-align: center;">
+            {% for label in page.tags %}
+            <a class="btn btn_black" href="{{site.url}}/tags#{{ label }}">
+              <i class="fas fa-tag" aria-hidden="true"></i>
+              {{ label }}
+            </a>
+            {% endfor %}
+          </div>
         </div>
       </div>
     </div>
