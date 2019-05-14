@@ -10,9 +10,7 @@ permalink: /tags.html
 
 {% for item in (0..site.tags.size) %}{% unless forloop.last %}
 {% capture label %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
-<h2 id="{{ label }}" class="tag-heading">
-  {{ label }}
-</h2>
+<h2 id="{{ label }}" class="tag-heading">{{ label }}</h2>
 <ul class="posts-list-tight">
   {% for post in site.tags[label] %}{% if post.title != null %}
   {% assign this_category = post.categories | first | downcase %}
@@ -26,7 +24,7 @@ permalink: /tags.html
   <li>
     <span class="date">{{ post.date | date: '%d %b %Y' }}</span>
     <a href="{{ site.url }}{{ post.url }}" class="{{ btnclass }}" title="{{ post.title }}">
-      <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;
+      <i class="fas fa-envelope" aria-hidden="true"></i>&nbsp;
       {{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}
     </a>
   </li>

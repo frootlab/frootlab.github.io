@@ -33,7 +33,7 @@ layout: compress
         {% for item in (0..site.tags.size) %}{% unless forloop.last %}
         {% capture label %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
         <a class="btn btn_black" href="{{site.url}}/tags#{{ label }}">
-          <i class="fa fa-tag" aria-hidden="true"></i>
+          <i class="fas fa-tag" aria-hidden="true"></i>
           {{ label }}
         </a>
         {% endunless %}{% endfor %}
