@@ -298,7 +298,7 @@
 /* Display list items side by side */
 .block-left > ul.breadcrumb li {
   display: inline;
-  font-size: 18px;
+  font-size: 1em;
   color: rgb(213, 211, 206);
 }
 
@@ -345,29 +345,15 @@ p.light {
 .main-info,
 .about-info {
   text-align: center;
-  max-width: 400px;
+  max-width: 26em;
   width: 100%;
   margin: 0 auto;
   h1,
   h2,
   h3 {
-    font-size: 30px;
+    font-size: 2em;
     position: relative;
     margin-top: 0;
-    &:after {
-      content: "";
-      width: 100px;
-      height: 2px;
-      background: #585b63;
-      bottom: -20px;
-      position: absolute;
-      left: 50%;
-      -webkit-transform: translatex(-50%);
-      -moz-transform: translatex(-50%);
-      -ms-transform: translatex(-50%);
-      -o-transform: translatex(-50%);
-      transform: translatex(-50%);
-    }
   }
   p {
     font-size: 21px;
@@ -415,6 +401,20 @@ p.light {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
+    &:after {
+      content: "";
+      width: 100px;
+      height: 2px;
+      background: #585b63;
+      bottom: -20px;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translatex(-50%);
+      -moz-transform: translatex(-50%);
+      -ms-transform: translatex(-50%);
+      -o-transform: translatex(-50%);
+      transform: translatex(-50%);
+    }
   }
   h3 {
     font-size: 21px;
@@ -433,23 +433,10 @@ p.light {
   h2,
   h3 {
     font-size: 35px;
-    color: lighten($black, 27.8431);
-    &:after {
-      position: absolute;
-      left: auto;
-      top: auto;
-      -webkit-transform: none;
-      -moz-transform: none;
-      -ms-transform: none;
-      -o-transform: none;
-      transform: none;
-      background: $dark-grey;
-      left: 0;
-      width: 200px;
-    }
+    color: $black;
   }
   p {
-    color: darken($white, 40);
+    color: lighten($black, 45);
     font-size: 16px;
     margin: 10px 0;
     padding-top: 0;

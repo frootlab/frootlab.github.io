@@ -12,8 +12,12 @@ layout: compress
 <body id="homepage">
 
   <div class="block-left" style="
-    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(20, 22, 26, 0.6)),
-    url({{ cur_background }}) no-repeat; background-size: cover;">
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.8) 70%,
+      rgba(0, 0, 0, 0.0) 100%),
+    url({{ cur_background }}) no-repeat;
+    background-size: cover;">
     <div class="content">
       <div class="main-info">
         <a href="{{ logo_link }}" class="logo">
