@@ -322,7 +322,6 @@
 
 /* Create columns in post title sections */
 .columns {
-  box-sizing: border-box;
   display: flex;
   &:after {
     content: "";
@@ -345,6 +344,7 @@
   .post-preview {
     page-break-inside: avoid;
     break-inside: avoid;
+    padding-bottom: 10px;
   }
   .post-preview-header {
     font-size: 0.8em;
@@ -355,8 +355,7 @@
     border-radius: 5px 5px 8px 8px;
     height: 150px;
     box-shadow: 3px 3px 8px -5px rgba(0, 0, 0, 0.6);
-    margin-top: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     position: relative;
     transition: all 0.3s ease-in-out;
   }
@@ -387,15 +386,15 @@
 .ribbon-box {
   margin: 10px auto;
   position: relative;
-  z-index: 90;
+  z-index: 1;
 }
 .ribbon-wrapper {
   width: 85px;
   height: 88px;
   overflow: hidden;
   position: absolute;
-  top: -2px;
-  left: -2px;
+  top: 0;
+  left: 0;
   .ribbon,
   .blue-ribbon,
   .green-ribbon,
