@@ -13,17 +13,19 @@ layout: compress
 <body id="posts">
   <div class="block-left" style="
     background: linear-gradient(
-      rgba(0, 0, 0, 0.9) 0%,
-      rgba(0, 0, 0, 0.8) 60%,
+      rgba(0, 0, 0, 0.45) 0%,
+      rgba(0, 0, 0, 0.45) 60%,
       rgba(0, 0, 0, 0.0) 100%),
     url({{ cur_background }}) no-repeat;
     background-size: cover;">
-    <ul class="breadcrumb">
-      <li><a href="{{ site.url }}">Frootlab</a></li>
-      <li>Authors</li>
-      <li>{{ page.name }}</li>
-    </ul>
     <div class="content">
+      <div id="cssmenu">
+          <ul>
+              <li class="active"><a href="#">{{ page.name }}</a></li>
+              <li><a href="#">Authors</a></li>
+              <li><a href="{{ site.url }}" title="Frootlab Homepage">Frootlab</a></li>
+          </ul>
+      </div>
       <div class="main-info">
         <h1 class="underline">{{ page.name }}</h1>
         <h3>{{ page.position }}</h3>

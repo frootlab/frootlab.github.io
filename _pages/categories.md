@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: Categories
+title: Blog
 description: "An archive of all posts sorted by category"
 permalink: /categories.html
 ---

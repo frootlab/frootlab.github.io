@@ -9,16 +9,17 @@ layout: compress
   <div class="block-left" style="
     background: linear-gradient(
       rgba(0, 0, 0, 0.5) 0%,
-      rgba(0, 0, 0, 0.0) 50%,
-      rgba(0, 0, 0, 0.5) 100%),
-    url({{ site.url }}/{{ page.image }}) no-repeat;
+      rgba(0, 0, 0, 0.0) 100%),
+      url({{ site.url }}/{{ page.image }}) no-repeat;
     background-size: cover;">
-    <ul class="breadcrumb">
-      <li><a href="{{ site.url }}">Frootlab</a></li>
-      <li><a href="/posts">Posts</a></li>
-      <li>{{ page.title | markdownify | remove: "<p>" | remove: "</p>" | truncatewords: 2 }}</li>
-    </ul>
     <div class="content">
+      <div id="cssmenu">
+          <ul>
+              <li class="active"><a href="#">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" | remove: ":" | truncatewords: 3 }}</a></li>
+              <li><a href="{{ site.url }}/posts">Blog</a></li>
+              <li><a href="{{ site.url }}" title="Frootlab Homepage">Frootlab</a></li>
+          </ul>
+      </div>
       <div class="main-info">
       <h1>
         <span style="

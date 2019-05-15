@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: Tags
+title: Blog
 description: "An archive of all posts sorted by tag"
 permalink: /tags.html
 ---

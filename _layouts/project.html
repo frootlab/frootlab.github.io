@@ -18,11 +18,14 @@ layout: compress
       rgba(0, 0, 0, 0.0) 100%),
     url({{ page.background }}) no-repeat;
     background-size: cover;">
-    <ul class="breadcrumb">
-      <li><a href="{{ site.url }}">Frootlab</a></li>
-      <li>{{ page.project | capitalize }}</li>
-    </ul>
     <div class="content">
+      <div id="cssmenu">
+          <ul>
+              <li class="active"><a href="#">{{ page.project | capitalize }}</a></li>
+              <li><a href="#">Projects</a></li>
+              <li><a href="{{ site.url }}" title="Frootlab Homepage">Frootlab</a></li>
+          </ul>
+      </div>
       <div class="main-info">
         <a href="{{ logo_link }}" class="logo">
           <img src="{{ logo }}" alt="{{ logo_alt }}">

@@ -9,7 +9,8 @@ categories:
   - Science
 tags:
   - Deep Learning
-  - Statistics
+  - Machine learning
+  - AI
 ---
 
 **When talking about the "AI Revolution" it's difficult to narrow down a common

@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: Posts
+title: Blog
 description: "An archive of all posts sorted by date"
 permalink: /posts.html
 ---
