@@ -6,11 +6,10 @@ license: "CC BY 4.0"
 license-url: "https://creativecommons.org/licenses/by/4.0/"
 image: /images/back/robot.webp
 categories:
-  - Corporate
+  - Technology
 tags:
   - AutoML
   - CAMP
-  - Nemoa
 ---
 
 **The prospects about the AI Revolution can be overwhelming. But although the

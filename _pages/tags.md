@@ -31,11 +31,13 @@ permalink: /tags.html
 
 {% assign catid = post.categories | first | downcase %}
 {% if catid == 'corporate' %}
-  {% assign ribbon = 'green-ribbon' %}
-{% elsif catid == 'science' %}
   {% assign ribbon = 'blue-ribbon' %}
+{% elsif catid == 'science' %}
+  {% assign ribbon = 'green-ribbon' %}
+{% elsif catid == 'technology' %}
+  {% assign ribbon = 'red-ribbon' %}
 {% else %}
-  {% assign ribbon = 'orange-ribbon' %}
+  {% assign ribbon = 'grey-ribbon' %}
 {% endif %}
 
 <div class="post-preview">

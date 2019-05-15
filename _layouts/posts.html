@@ -27,9 +27,11 @@ layout: compress
             {% assign name = category | first %}
             {% assign catid = name | downcase %}
             {% if catid == 'corporate' %}
-              {% assign btnclass = 'btn btn_green' %}
-            {% elsif catid == 'science' %}
               {% assign btnclass = 'btn btn_blue' %}
+            {% elsif catid == 'science' %}
+              {% assign btnclass = 'btn btn_green' %}
+            {% elsif catid == 'technology' %}
+              {% assign btnclass = 'btn btn_red' %}
             {% else %}
               {% assign btnclass = 'btn btn_black' %}
             {% endif %}

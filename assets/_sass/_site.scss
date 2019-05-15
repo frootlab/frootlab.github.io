@@ -496,7 +496,8 @@
   .ribbon,
   .blue-ribbon,
   .green-ribbon,
-  .orange-ribbon {
+  .red-ribbon,
+  .grey_ribbon {
     font: bold 0.7em sans-serif;
     color: #333;
     text-align: center;
@@ -515,8 +516,12 @@
     background-color: $green;
     color: white;
   }
-  .orange-ribbon {
-    background-color: #ebb134;
+  .red-ribbon {
+    background-color: $red;
+    color: white;
+  }
+  .grey-ribbon {
+    background-color: $dark-grey;
     color: white;
   }
 }
