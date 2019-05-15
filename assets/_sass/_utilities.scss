@@ -65,27 +65,28 @@
     }
   }
   &_green{
-    background-color: lighten($green, 10%);
+    background-color: $green;
+    font: bold;
     color: $white !important;
     &:hover {
-      background-color: darken($dark-grey, 5%);
-      border-color: darken($dark-grey, 5%);
+      background-color: lighten($green, 10%);
+      border-color: lighten($green, 15%);
     }
   }
   &_blue{
-    background-color: lighten($blue, 10%);
+    background-color: $blue;
     color: $white !important;
     &:hover {
-      background-color: darken($dark-grey, 5%);
-      border-color: darken($dark-grey, 5%);
+      background-color: lighten($blue, 10%);
+      border-color: lighten($blue, 15%);
     }
   }
   &_black{
-    background-color: lighten($dark-grey, 5%);
+    background-color: $dark-grey;
     color: $white !important;
     &:hover {
-      background-color: darken($dark-grey, 5%);
-      border-color: darken($dark-grey, 5%);
+      background-color: lighten($dark-grey, 10%);
+      border-color: lighten($dark-grey, 15%);
     }
   }
   &_danger {

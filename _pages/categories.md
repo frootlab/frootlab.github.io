@@ -8,23 +8,55 @@ permalink: /categories.html
 {% for category in site.categories %}
 {% assign name = category | first %}
 <h2 id="{{ name }}" class="tag-heading">{{ name }}</h2>
-{% assign catid = name | downcase %}
-{% if catid == 'corporate' %}
-  {% assign btnclass = 'btn btn_green' %}
-{% elsif catid == 'science' %}
-  {% assign btnclass = 'btn btn_blue' %}
+
+<div class="posts-preview">
+
+{% for i in (0..1) %}
+{% assign j = 1 | minus: i  %}
+{% for post in category.last %}
+{% assign mod = forloop.index | modulo: 2 %}
+{% if mod == j %}
+
+{% if post.preview %}
+{% assign preview = post.preview %}
+{% elsif post.image %}
+{% assign preview = post.image %}
 {% else %}
-  {% assign btnclass = 'btn' %}
+{% assign preview = post.image %}
 {% endif %}
-<ul class="posts-list-tight">
-  {% for post in category.last %}
-  <li>
-    <span class="date">{{ post.date | date: '%d %b %Y' }}</span>
-    <a href="{{ site.url }}{{ post.url }}" class="{{ btnclass }}" title="{{ post.title }}">
-      <i class="fas fa-envelope" aria-hidden="true"></i>&nbsp;
+
+{% assign catid = post.categories | first | downcase %}
+{% if catid == 'corporate' %}
+  {% assign ribbon = 'green-ribbon' %}
+{% elsif catid == 'science' %}
+  {% assign ribbon = 'blue-ribbon' %}
+{% else %}
+  {% assign ribbon = 'orange-ribbon' %}
+{% endif %}
+
+<div class="post-preview">
+<a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
+<span class="post-preview-header">{{ post.date | date: '%d %b %Y' }}</span>
+<div class="post-preview-content" style="
+  background: url({{ site.url }}/{{ preview }}) no-repeat;
+  background-position: 0 -30px;
+  background-size: cover; ">
+  <div class="ribbon-box">
+    <div class="ribbon-wrapper">
+        <div class="{{ ribbon }}">{{ catid }}</div>
+    </div>
+  </div>
+  <div class="post-preview-text">
       {{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}
-    </a>
-  </li>
-  {% endfor %}
-</ul>
+  </div>
+</div>
+</a>
+</div>
+
+{% endif %}
+{% endfor %}
+{% endfor %}
+
+</div>
+
 {% endfor %}

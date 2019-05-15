@@ -8,15 +8,13 @@
 }
 
 .tag-heading {
-
+  text-align: center;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #ddd;
   &:target {
     font-weight: 600;
+    border-bottom: 1px solid #333;
   }
-
-  &:target::before {
-    content: "> ";
-  }
-
 }
 
 .block-right {
@@ -334,6 +332,95 @@
   .column {
     flex: 50%;
     padding: 1.1em;
+  }
+}
+
+/* Create Post Preview */
+.posts-preview {
+  column-count: 2;
+  column-gap: 20px;
+  column-rule-style: none;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  .post-preview {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .post-preview-header {
+    font-size: 0.8em;
+    text-transform: uppercase;
+  }
+  .post-preview-content {
+    box-sizing: border-box;
+    border-radius: 5px 5px 8px 8px;
+    height: 150px;
+    box-shadow: 3px 3px 8px -5px rgba(0, 0, 0, 0.6);
+    margin-top: 5px;
+    margin-bottom: 20px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+  .post-preview-text {
+    padding: 0.5em;
+    font-size: 0.9em;
+    text-align: center;
+    background-color: rgb(230, 230, 230);
+    border-top: 1px solid rgb(240, 240, 240);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  a:hover {
+    .post-preview-content {
+      background-blend-mode: saturation;
+    }
+    .post-preview-text{
+      background-color: rgb(245, 245, 245);
+    }
+  }
+}
+
+/* Ribbons */
+
+.ribbon-box {
+  margin: 10px auto;
+  position: relative;
+  z-index: 90;
+}
+.ribbon-wrapper {
+  width: 85px;
+  height: 88px;
+  overflow: hidden;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  .ribbon,
+  .blue-ribbon,
+  .green-ribbon,
+  .orange-ribbon {
+    font: bold 0.7em sans-serif;
+    color: #333;
+    text-align: center;
+    transform: rotate(-45deg);
+    position: relative;
+    padding: 7px 0;
+    top: 15px;
+    left: -30px;
+    width: 120px;
+  }
+  .blue-ribbon {
+    background-color: $blue;
+    color: white;
+  }
+  .green-ribbon {
+    background-color: $green;
+    color: white;
+  }
+  .orange-ribbon {
+    background-color: #ebb134;
+    color: white;
   }
 }
 
