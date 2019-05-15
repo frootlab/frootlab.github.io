@@ -1,0 +1,52 @@
+---
+layout: compress
+---
+
+{% include header.html %}
+
+<body id="projects">
+
+  <div class="block-left" style="
+    width: 100%;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.0) 100%),
+      url({{ site.url }}/{{ site.background.post-list }}) no-repeat;
+    background-size: cover;">
+    <div class="content">
+      <div id="cssmenu">
+          <ul>
+              <li class="active"><a href="{{ site.url }}/projects">Projects</a></li>
+              <li><a href="{{ site.url }}" title="Frootlab Homepage">Frootlab</a></li>
+          </ul>
+      </div>
+      <div style="position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      overflow-y: auto;
+      display: block;">
+        <ul class="projects-menu" style="width: 100%;">
+          {% for item in site.data.projects %}
+            {% capture image %}{{ item.image }}{% endcapture %}
+            {% unless image contains 'http://' or image contains 'https://' %}
+            {% capture image %}{{ site.url }}/{{ image }}{% endcapture %}
+            {% endunless %}
+            <li style="background:url({{ image }}) center center no-repeat;">
+              <a href="{{ item.url }}" {% unless item.completed %}class="inactive"{% endunless %}>
+                <span>{{ item.title }}</span>
+              </a>
+              </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  {% include overlay.html %}
+  <script src="{{ site.url }}/assets/js/main.min.js"></script>
+</body>
+
+{% include footer.html %}
