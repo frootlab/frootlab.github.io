@@ -6,6 +6,10 @@ layout: compress
 
 <body id="projects">
 
+  {% include sidenav.html %}
+
+  <div id="main">
+
   <div class="block-left" style="
     width: 100%;
     background: linear-gradient(
@@ -14,20 +18,26 @@ layout: compress
       url({{ site.url }}/{{ site.background.post-list }}) no-repeat;
     background-size: cover;">
     <div class="content">
-      <div id="cssmenu">
+      <div id="breadcrumb">
           <ul>
               <li class="active"><a href="{{ site.url }}/projects">Projects</a></li>
-              <li><a href="{{ site.url }}" title="Frootlab Homepage">Frootlab</a></li>
+              <li><a href="#" onclick="openNav();" title="Menu"><i class="fas fa-bars"></i></a></li>
           </ul>
       </div>
+      <div id="sidebar" class="sidebar-content">
+        <a href="{{ site.url }}">Home</a>
+        <a href="{{ site.url }}/projects">Projects</a>
+        <a href="{{ site.url }}/posts">Blog</a>
+      </div>
+
       <div style="position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: -1;
-      overflow-y: auto;
-      display: block;">
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        overflow-y: auto;
+        display: block;">
         <ul class="projects-menu" style="width: 100%;">
           {% for item in site.data.projects %}
             {% capture image %}{{ item.image }}{% endcapture %}
@@ -47,6 +57,9 @@ layout: compress
   </div>
   {% include overlay.html %}
   <script src="{{ site.url }}/assets/js/main.min.js"></script>
+
+</div>
+
 </body>
 
 {% include footer.html %}

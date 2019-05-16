@@ -11,6 +11,10 @@ layout: compress
 
 <body id="homepage">
 
+{% include sidenav.html %}
+
+<div id="main">
+
   <div class="block-left" style="
     background: linear-gradient(
       rgba(0, 0, 0, 0.9) 0%,
@@ -19,6 +23,11 @@ layout: compress
     url({{ cur_background }}) no-repeat;
     background-size: cover;">
     <div class="content">
+      <div id="breadcrumb">
+          <ul>
+              <li><a href="#" onclick="openNav();" title="Menu"><i class="fas fa-bars"></i></a></li>
+          </ul>
+      </div>
       <div class="main-info">
         <a href="{{ logo_link }}" class="logo">
           <img src="{{ logo }}" alt="{{ logo_alt }}">
@@ -31,12 +40,6 @@ layout: compress
   </div>
 
   <div class="block-right">
-    <a href="{{ site.url }}/posts" title="posts" class="posts-menu-icon"></a>
-    <span class="posts-link">POSTS</span>
-    <a title="projects" class="projects-menu-icon">
-      <span></span>
-    </a>
-    <span class="projects-link">PROJECTS</span>
     <div class="content">
       <div class="about-info">
         {{ content }}
@@ -45,6 +48,7 @@ layout: compress
   </div>
   {% include overlay.html %}
   <script src="{{ site.url }}/assets/js/main.min.js"></script>
+  </div>
 </body>
 
 {% include footer.html %}

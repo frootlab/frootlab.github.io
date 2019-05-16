@@ -286,11 +286,123 @@
   }
 }
 
+/* Dropdown Menu */
+/* Dropdown Button */
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 5; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 100%;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Dropdown Content (Hidden by Default) */
+.sidebar-content {
+  position: absolute;
+  top: 2.4em;
+  left: 0;
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  min-width: 110px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.sidebar-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.sidebar-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .sidebar-content container when the user clicks on the dropdown button) */
+.show {display:block;}
 
 /* Fancy Breadcrumb */
-
-/* Menu container */
-#cssmenu {
+#breadcrumb {
     float: left;
     display: inline-block; /* The menu will have width as needed, not 100% */
     position: absolute;
@@ -304,26 +416,25 @@
 }
 
 /* Icons */
-#cssmenu i {
-    transform: scale(1.4);
+#breadcrumb i {
+  transform: scale(1.4);
 }
 
-/* Menu */
-#cssmenu ul {
+/* Breadcrumb Elements */
+#breadcrumb ul {
     display: flex; /* A key part of our menu, displays items side by side, and allows reversing them */
     flex-direction: row-reverse; /* Reverse the items */
-    /* Reset styles, overwrite browser defaults */
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-#cssmenu ul li {
+#breadcrumb ul li {
     margin: 0;
 }
 
 /* Menu items */
-#cssmenu ul li a {
+#breadcrumb ul li a {
     display: inline-block;
     font-family: sans-serif;
     font-size: 0.9em;
@@ -339,83 +450,24 @@
 }
 
 /* Hover event */
-#cssmenu ul li:hover a {
+#breadcrumb ul li:hover a {
     background-color: lighten($blue, 10%);
 }
 
 /* Remove the shadow for first item, last in the right side when it gets reversed */
-#cssmenu ul li:first-child a {
+#breadcrumb ul li:first-child a {
     box-shadow: none;
 }
 
 /* Active item is a bit different */
-#cssmenu ul li.active a {
+#breadcrumb ul li.active a {
     color: white;
     background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Remove the shadow for the active's next item, to match the design more accurately */
-#cssmenu ul li.active + li a {
+#breadcrumb ul li.active + li a {
     box-shadow: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Style the list */
-.block-left > ul.breadcrumb {
-  background-color: rgba(0, 0, 0, 0.7);
-  width: 100%;
-  position: absolute;
-  z-index: 2;
-  padding: 10px 16px;
-  list-style: none;
-}
-
-/* Display list items side by side */
-.block-left > ul.breadcrumb li {
-  display: inline;
-  font-size: 1.1em;
-  color: darken($white, 10%);
-}
-
-/* Add a slash symbol (/) before/behind each list item */
-.block-left > ul.breadcrumb li+li:before {
-  padding: 8px;
-  content: "/\00a0";
-}
-
-/* Add a color to all links inside the list */
-.block-left > ul.breadcrumb li a {
-  color: $link-blue;
-  text-decoration: none;
-}
-
-/* Add a color on mouse-over */
-.block-left > ul.breadcrumb li a:hover {
-  color: $link-hover;
 }
 
 /* Create columns in post title sections */

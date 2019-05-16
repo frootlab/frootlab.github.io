@@ -11,6 +11,10 @@ layout: compress
 {% endif %}
 
 <body id="posts">
+
+{% include sidenav.html %}
+
+<div id="main">
   <div class="block-left" style="
     background: linear-gradient(
       rgba(0, 0, 0, 0.45) 0%,
@@ -19,12 +23,17 @@ layout: compress
     url({{ cur_background }}) no-repeat;
     background-size: cover;">
     <div class="content">
-      <div id="cssmenu">
+      <div id="breadcrumb">
           <ul>
               <li class="active"><a href="#">{{ page.name }}</a></li>
               <li><a href="#">Authors</a></li>
-              <li><a href="{{ site.url }}" title="Frootlab Homepage">Frootlab</a></li>
+              <li><a href="#" onclick="openNav();" title="Menu"><i class="fas fa-bars"></i></a></li>
           </ul>
+      </div>
+      <div id="sidebar" class="sidebar-content">
+        <a href="{{ site.url }}">Home</a>
+        <a href="{{ site.url }}/projects">Projects</a>
+        <a href="{{ site.url }}/posts">Blog</a>
       </div>
       <div class="main-info">
         <h1 class="underline">{{ page.name }}</h1>
@@ -40,12 +49,7 @@ layout: compress
   </div>
 
   <div class="block-right">
-    <a href="{{ site.url }}/posts" title="posts" class="posts-menu-icon"></a>
-    <a title="projects" class="projects-menu-icon">
-      <span></span>
-    </a>
     <div class="content">
-
       {% assign posts = site.posts | where: 'author', page.name %}
       <h2>Posts</h2>
       <div class="posts-preview">
@@ -105,6 +109,7 @@ layout: compress
   {% include overlay.html %}
 
   <script src="{{ site.url }}/assets/js/main.min.js"></script>
+</div>
 </body>
 
 {% include footer.html %}
