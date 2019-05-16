@@ -86,8 +86,7 @@
       border-color: lighten($red, 15%);
     }
   }
-
-  &_black{
+  &_grey{
     background-color: $dark-grey;
     color: $white !important;
     &:hover {

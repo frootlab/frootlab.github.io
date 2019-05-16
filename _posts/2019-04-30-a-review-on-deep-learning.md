@@ -25,7 +25,7 @@ some of the most important milestones and remaining challenges.
 
 [![AI Revolution](/images/posts/AI-Revolution.png)](/images/posts/AI-Revolution.png)
 
-### Big-Bang!
+## Big-Bang!
 
 The advent of deep learning can be traced back to Geoffrey Hinton's  daredevil
 science article "[Reducing the dimensionality of data with neural
@@ -45,7 +45,7 @@ almost anything[^2] can be predicted with appropriate data! Data scientists
 usually do not have the reputation of being exuberant, but some tears of joy
 must have been shed with this discovery!
 
-### The Bayesian: DBM
+## The Bayesian: DBM
 
 Although Hinton's article definitively paved the way for deep ANNs, it did not
 yield an explanation for the use of pre-training, nor did it provide a
@@ -68,7 +68,7 @@ inflation of a manifold that clings to the data in terms of a total least
 squares regression. Without pre-training, however, the ANNs only perform an
 ordinary least squares regression, which heavily impairs their generalizability.
 
-### The Frequentist: GAN
+## The Frequentist: GAN
 
 > "Adversarial training is the coolest thing since sliced bread." — Yann LeCun
 
@@ -96,7 +96,7 @@ images and videos received much attention with artificial
 [faces](https://thispersondoesnotexist.com/) and
 [deepfakes](https://en.wikipedia.org/wiki/Deepfake).
 
-### What will come next?
+## What will come next?
 
 > "Now what belongs together will grow together" — Willy Brandt
 
@@ -130,7 +130,7 @@ somehow can be overwhelming. And no matter, how important the above aspects will
 turn out, after all they will still only represent a tiny chapter within the
 long succession of incredible advances, that await us.
 
-### Footnotes
+## Footnotes
 
 [^1]: Due to the bipartite graph structure of RBMs, repeated Gibbs sampling is rapidly mixing, which allows an efficient approximation of the log-likelihood gradient.
 [^2]: The observables are required to trace out sufficiently smooth and Lipschitz-continous trajectories.

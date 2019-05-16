@@ -507,13 +507,18 @@
     position: relative;
     transition: all 0.2s ease-in-out;
     border-radius: 2px 2px 4px 4px;
+    box-shadow: 8px 8px 12px -10px rgba(0, 0, 0, 0.6);
   }
-  .post-preview-text {
+  .post-preview-text,
+  .green-post-preview-text,
+  .blue-post-preview-text,
+  .red-post-preview-text,
+  .grey-post-preview-text {
     padding: 0.5em;
-    font-family: Verdana,sans-serif;
+    font-family: Verdana, sans-serif;
     font-size: 0.8em;
     font-weight: 400;
-    color: $btn-text-grey;
+    color: white;
     line-height: 1.5;
     text-align: center;
     background-color: $light-grey;
@@ -522,8 +527,25 @@
     bottom: 0;
     width: 100%;
     transition: all 0.2s ease-in-out;
-    border: 1px solid transparent;
+    border-top: 1px solid transparent;
   }
+
+  .green-post-preview-text {
+    background-color: transparentize(black, 0.2);
+  }
+
+  .blue-post-preview-text {
+    background-color: transparentize(black, 0.2);
+  }
+
+  .red-post-preview-text {
+    background-color: transparentize(black, 0.2);
+  }
+
+  .grey-post-preview-text {
+    background-color: transparentize(black, 0.2);
+  }
+
   a:hover {
     .post-preview-content {
       box-shadow: 8px 8px 12px -10px rgba(0, 0, 0, 0.6);
@@ -531,7 +553,6 @@
     .post-preview-text{
       background-color: mix($light-grey, $blue, 80%);
       color: darken($btn-text-grey, 20%);
-      border-color: darken(mix($light-grey, $blue, 80%), 8%);
     }
   }
 }
@@ -787,7 +808,7 @@ p.light {
       text-transform: uppercase;
     }
     .post-title {
-      color: #008200;
+      color: $dark-grey;
       display: inline-block;
       max-width: 75%;
     }
@@ -842,6 +863,8 @@ p.light {
 }
 
 .inner-post {
+  font-family: 'Merriweather', serif;
+
   h1 {
     font-size: 70px;
     line-height: 70px;
@@ -859,13 +882,14 @@ p.light {
   h4,
   h5,
   h6 {
-    font-weight: bold;
-    color: rgba($overlay-color, 0.7);
+    font-family: 'Merriweather', serif;
+    color: $dark-grey;
+    margin-top: 1.5em;
   }
   p {
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.6;
-    color: #6c6c6c;
+    color: $dark-grey;
     margin-bottom: 1.3em;
   }
   small {
@@ -875,7 +899,7 @@ p.light {
     display: block;
   }
   a:not(.btn):not(.pagination_pager) {
-    color: #008200;
+    color: $blue;
   }
   ul,
   ol {

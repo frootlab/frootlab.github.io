@@ -36,15 +36,15 @@ layout: compress
             {% assign name = category | first %}
             {% assign catid = name | downcase %}
             {% if catid == 'corporate' %}
-              {% assign btnclass = 'btn btn_blue' %}
+              {% assign color = 'blue' %}
             {% elsif catid == 'science' %}
-              {% assign btnclass = 'btn btn_green' %}
+              {% assign color = 'green' %}
             {% elsif catid == 'technology' %}
-              {% assign btnclass = 'btn btn_red' %}
+              {% assign color = 'red' %}
             {% else %}
-              {% assign btnclass = 'btn btn_black' %}
+              {% assign color = 'grey' %}
             {% endif %}
-            <a class="{{ btnclass }}" href="{{site.url}}/categories#{{ name }}">
+            <a class="btn btn_{{ color }}" href="{{site.url}}/categories#{{ name }}">
               {{ name }}
             </a>
             {% endfor %}
@@ -55,7 +55,7 @@ layout: compress
             {% assign tags_list = site_tags | split:',' | sort %}
             {% for item in (0..site.tags.size) %}{% unless forloop.last %}
             {% capture label %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
-            <a class="btn btn_black" href="{{site.url}}/tags#{{ label }}">
+            <a class="btn btn_grey" href="{{site.url}}/tags#{{ label }}">
               <i class="fas fa-tag" aria-hidden="true"></i>
               {{ label }}
             </a>

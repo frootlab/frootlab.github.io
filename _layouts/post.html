@@ -9,7 +9,6 @@ layout: compress
   {% include sidenav.html %}
 
   <div id="main">
-
   <div class="block-left" style="
     background: linear-gradient(
       rgba(0, 0, 0, 0.5) 0%,
@@ -70,7 +69,7 @@ layout: compress
         <div class="columns">
           <div class="column" style="text-align: center;">
             {% for label in page.tags %}
-            <a class="btn btn_black" href="{{site.url}}/tags#{{ label }}">
+            <a class="btn btn_grey" href="{{site.url}}/tags#{{ label }}">
               <i class="fas fa-tag" aria-hidden="true"></i>
               {{ label }}
             </a>
@@ -91,7 +90,6 @@ layout: compress
       </div>
       {{ content }}
       <br>
-      {% include share.html %}
       {% include page-pagination.html %}
     </div>
   </div>

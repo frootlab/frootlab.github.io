@@ -23,13 +23,13 @@ permalink: /blog.html
 
   {% assign catid = post.categories | first | downcase %}
   {% if catid == 'corporate' %}
-    {% assign ribbon = 'blue-ribbon' %}
+    {% assign color = 'blue' %}
   {% elsif catid == 'science' %}
-    {% assign ribbon = 'green-ribbon' %}
+    {% assign color = 'green' %}
   {% elsif catid == 'technology' %}
-    {% assign ribbon = 'red-ribbon' %}
+    {% assign color = 'red' %}
   {% else %}
-    {% assign ribbon = 'grey-ribbon' %}
+    {% assign color = 'grey' %}
   {% endif %}
 
   <div class="post-preview">
@@ -41,10 +41,10 @@ permalink: /blog.html
     background-size: cover; ">
     <div class="ribbon-box">
       <div class="ribbon-wrapper">
-          <div class="{{ ribbon }}">{{ catid }}</div>
+          <div class="{{ color }}-ribbon">{{ catid }}</div>
       </div>
     </div>
-    <div class="post-preview-text">
+    <div class="{{ color }}-post-preview-text">
         {{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}
     </div>
   </div>
