@@ -4,7 +4,7 @@ title: "Three obstacles in data science and our vision"
 author: "Patrick Michl"
 license: "CC BY 4.0"
 license-url: "https://creativecommons.org/licenses/by/4.0/"
-image: images/posts/agile.webp
+image: images/back/agile.webp
 categories:
   - Corporate
 tags:
@@ -29,7 +29,7 @@ So the question arises "What are today's foremost technical obstacles in data
 science?". In the following I present our personally experienced proposal to
 this question and our vision: The *Liquid Coding* framework.
 
-### \#1: The Plug Jumble
+## \#1: The Plug Jumble
 
 Data scientists require statistical samples to work with, but not data-backends.
 The integration of the data-backends within the analysis pipeline, often turns
@@ -51,7 +51,7 @@ SQL](https://www.microsoft.com/sql-server), [MySQL](https://www.mysql.com),
 [Postgesql](https://www.postgresql.org/), ...) as well as laboratory measurement
 devices and flat files, that appear in the wild.
 
-### \#2: Paper Bottlenecks
+## \#2: Paper Bottlenecks
 
 The development- and exploration process in data science heavily depends on the
 ability to adapt current cutting-edge approaches. This ability, however,
@@ -69,7 +69,7 @@ to determine, which algorithm of a given category and data domain is the
 currently best fitting ([CBF](/tags#CBF)) algorithm with respect to the required
 metric.
 
-### \#3: Dead Horses
+## \#3: Dead Horses
 
 Due to the rapid scientific advances, data science and analytical applications
 like in no other domain suffer of short code lifespans. Of course:
@@ -89,7 +89,7 @@ CBF algorithms join the game. And finally to easily integrate the application
 into any existing operational data landscapes also Pandora joins the team. So
 these three together constitute our *Liquid Coding* framework.
 
-### An Outlook
+## An Outlook
 
 If you are a data scientist imagine the following situation: The new
 postgraduate in your workgroup just released a gradient descent that outperforms
