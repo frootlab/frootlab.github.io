@@ -502,31 +502,36 @@
   }
   .post-preview-content {
     box-sizing: border-box;
-    border-radius: 5px 5px 8px 8px;
     height: 150px;
-    box-shadow: 3px 3px 8px -5px rgba(0, 0, 0, 0.6);
     margin-bottom: 10px;
     position: relative;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    border-radius: 2px 2px 4px 4px;
   }
   .post-preview-text {
     padding: 0.5em;
-    font-size: 0.9em;
+    font-family: Verdana,sans-serif;
+    font-size: 0.8em;
+    font-weight: 400;
+    color: $btn-text-grey;
+    line-height: 1.5;
     text-align: center;
-    background-color: rgb(230, 230, 230);
-    border-top: 1px solid rgb(240, 240, 240);
+    background-color: $light-grey;
+    border-radius: 0 0 2px 2px;
     position: absolute;
     bottom: 0;
     width: 100%;
-    border-radius: 0 0 5px 5px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    border: 1px solid darken($light-grey, 8%);
   }
   a:hover {
     .post-preview-content {
-      background-blend-mode: saturation;
+      box-shadow: 8px 8px 12px -10px rgba(0, 0, 0, 0.6);
     }
     .post-preview-text{
-      background-color: rgb(245, 245, 245);
+      background-color: mix($light-grey, $blue, 80%);
+      color: darken($btn-text-grey, 20%);
+      border-color: darken(mix($light-grey, $blue, 80%), 8%);
     }
   }
 }
