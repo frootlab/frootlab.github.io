@@ -2,7 +2,7 @@
 layout: author
 short_name: fishroot
 name: Patrick Michl
-position: "Member / Owner"
+position: Centerpiece
 background: /images/authors/fishroot.webp
 medium: fishroot
 mastodon: mastodon.social/@fishroot

@@ -5,8 +5,10 @@
 {% elsif page.title %}
   {% assign cur_title = page.title | markdownify | strip_html | strip_newlines | escape_once %}
   {% if cur_title == "About" %}
-    {% assign cur_title = site.title | append: " " | append: site.subtitle %}
-  {% elsif cur_title == "Posts" %}
+    {% assign cur_title = "About " | append: site.title %}
+  {% elsif cur_title == "Projects" %}
+    {% assign cur_title = site.title | append: " Projects" %}
+  {% elsif cur_title == "Blog" %}
     {% assign cur_title = site.title | append: " Blog" %}
   {% endif %}
 {% else %}

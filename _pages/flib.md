@@ -5,15 +5,23 @@ about: Frootlab Shared Library
 background: images/back/library.webp
 permalink: /flib.html
 github: frootlab/flib
+status: "depends on module"
+license: "General Public License v3"
+license-url: "https://www.gnu.org/licenses/gpl.html"
 ---
 
-The *Frootlab Shared Library* (flib) is a multi-purpose
-[Python](https://www.python.org/) library. The comprised modules are packaged
-into categories, of which the most important are `flib.base` and `flib.io`.
-{: .light}
+## Installation
+```shell
+$ pip install flib
+```
 
-### Base Modules
+## Documentation
+[Online Documentation](http://docs.frootlab.org/projects/flib){: .btn .btn_green}
+[.pdf](https://readthedocs.org/projects/flib/downloads/pdf/latest/){: .btn}
+[.epub](https://readthedocs.org/projects/flib/downloads/epub/latest/){: .btn}
+[.zip](https://readthedocs.org/projects/flib/downloads/htmlzip/latest/){: .btn}
 
+## Generic Modules
 [Design Patterns](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.abc.html){: .btn}
 [Attributes and Attribute Groups](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.attrib.html){: .btn}
 [Binary Object Functions](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.binaryhtml){: .btn}
@@ -40,23 +48,3 @@ into categories, of which the most important are `flib.base` and `flib.io`.
 [Extended Plain-Text-File IO](http://docs.frootlab.org/projects/flib/en/latest/api/flib.io.plain.html){: .btn}
 [Extended RAW-File IO](http://docs.frootlab.org/projects/flib/en/latest/api/flib.io.raw.html){: .btn}
 [Extended ZIP-Archive IO](http://docs.frootlab.org/projects/flib/en/latest/api/flib.io.zip.html){: .btn}
-
-### Installation
-```shell
-$ pip install flib
-```
- 
-### Documentation
-[Online Documentation](http://docs.frootlab.org/projects/flib){: .btn .btn_green}
-[.pdf](https://readthedocs.org/projects/flib/downloads/pdf/latest/){: .btn}
-[.epub](https://readthedocs.org/projects/flib/downloads/epub/latest/){: .btn}
-[.zip](https://readthedocs.org/projects/flib/downloads/htmlzip/latest/){: .btn}
-
-### License
-[General Public License v3](https://www.gnu.org/licenses/gpl.html)
-{: .light}
-
-### Development Status
-The comprised modules are in different development stages, which can be
-requested by the respective authors.
-{: .light}

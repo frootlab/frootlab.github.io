@@ -2,10 +2,10 @@
 layout: posts
 title: Blog
 description: "An archive of all posts sorted by date"
-permalink: /posts.html
+permalink: /blog.html
 ---
 
-<div class="posts-preview">
+<div class="posts-preview" style="margin: 0;">
 
   {% for i in (0..1) %}
   {% assign j = 1 | minus: i  %}

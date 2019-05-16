@@ -30,11 +30,6 @@ layout: compress
               <li><a href="#" onclick="openNav();" title="Menu"><i class="fas fa-bars"></i></a></li>
           </ul>
       </div>
-      <div id="sidebar" class="sidebar-content">
-        <a href="{{ site.url }}">Home</a>
-        <a href="{{ site.url }}/projects">Projects</a>
-        <a href="{{ site.url }}/posts">Blog</a>
-      </div>
       <div class="main-info">
         <a href="{{ logo_link }}" class="logo">
           <img src="{{ logo }}" alt="{{ logo_alt }}">
@@ -43,20 +38,81 @@ layout: compress
         <h3>{{ page.about }}</h3>
         {% include page-social-links.html %}
       </div>
+      <div class="post-title-section">
+        <div class="columns">
+          <div class="column" style="flex: 50%;">
+            <h3>License</h3>
+            <a class="btn btn_green" href="{{ page.license-url }}" title="{{ page.license }}">
+              {{ page.license }}
+            </a>
+          </div>
+          <div class="column" style="flex: 50%; text-align: right;">
+            <h3>Development Stage</h3>
+            {{ page.status }}
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
   <div class="block-right">
     <div class="content">
-      <h3>About</h3>
-      <div>
+      {{ content }}
+      <h2>About</h2>
+      <div class="posts-preview" style="margin: 0;">
+
+        {% for i in (0..1) %}
+        {% assign j = 1 | minus: i  %}
         {% for post in site.posts %}
         {% if post.tags contains project %}
-        <a class="btn" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        {% assign mod = forloop.index | modulo: 2 %}
+        {% if mod == j %}
+
+        {% if post.preview %}
+        {% assign preview = post.preview %}
+        {% elsif post.image %}
+        {% assign preview = post.image %}
+        {% else %}
+        {% assign preview = post.image %}
+        {% endif %}
+
+        {% assign catid = post.categories | first | downcase %}
+        {% if catid == 'corporate' %}
+          {% assign ribbon = 'blue-ribbon' %}
+        {% elsif catid == 'science' %}
+          {% assign ribbon = 'green-ribbon' %}
+        {% elsif catid == 'technology' %}
+          {% assign ribbon = 'red-ribbon' %}
+        {% else %}
+          {% assign ribbon = 'grey-ribbon' %}
+        {% endif %}
+
+        <div class="post-preview">
+        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
+        <span class="post-preview-header">{{ post.date | date: '%d %b %Y' }}</span>
+        <div class="post-preview-content" style="
+          background: url({{ site.url }}/{{ preview }}) no-repeat;
+          background-position: 0 -30px;
+          background-size: cover; ">
+          <div class="ribbon-box">
+            <div class="ribbon-wrapper">
+                <div class="{{ ribbon }}">{{ catid }}</div>
+            </div>
+          </div>
+          <div class="post-preview-text">
+              {{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}
+          </div>
+        </div>
+        </a>
+        </div>
+
+        {% endif %}
         {% endif %}
         {% endfor %}
+        {% endfor %}
+
       </div>
-      {{ content }}
     </div>
   </div>
   {% include overlay.html %}

@@ -5,9 +5,12 @@ about: Data Analysis Templating System
 background: images/back/robot.webp
 permalink: /nemoa.html
 github: frootlab/nemoa
+status: "3 - Alpha"
+license: "General Public License v3"
+license-url: "https://www.gnu.org/licenses/gpl.html"
 ---
 
-# About
+## About
 
 *Nemoa* is a machine learning- and data analysis framework, that implements the
 [Cloud-Assisted Meta Programming (CAMP)](/tags#CAMP) paradigm.

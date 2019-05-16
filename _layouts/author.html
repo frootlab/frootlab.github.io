@@ -26,14 +26,14 @@ layout: compress
       <div id="breadcrumb">
           <ul>
               <li class="active"><a href="#">{{ page.name }}</a></li>
-              <li><a href="#">Authors</a></li>
+              <li><a href="#">Staff</a></li>
               <li><a href="#" onclick="openNav();" title="Menu"><i class="fas fa-bars"></i></a></li>
           </ul>
       </div>
       <div id="sidebar" class="sidebar-content">
         <a href="{{ site.url }}">Home</a>
         <a href="{{ site.url }}/projects">Projects</a>
-        <a href="{{ site.url }}/posts">Blog</a>
+        <a href="{{ site.url }}/blog">Blog</a>
       </div>
       <div class="main-info">
         <h1 class="underline">{{ page.name }}</h1>
@@ -51,7 +51,7 @@ layout: compress
   <div class="block-right">
     <div class="content">
       {% assign posts = site.posts | where: 'author', page.name %}
-      <h2>Posts</h2>
+      <h2 style="margin-top:0;">Posts</h2>
       <div class="posts-preview">
 
         {% for i in (0..1) %}
