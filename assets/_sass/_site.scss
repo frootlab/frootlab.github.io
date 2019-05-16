@@ -522,7 +522,7 @@
     bottom: 0;
     width: 100%;
     transition: all 0.2s ease-in-out;
-    border: 1px solid darken($light-grey, 8%);
+    border: 1px solid transparent;
   }
   a:hover {
     .post-preview-content {
