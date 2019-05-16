@@ -5,6 +5,7 @@ about: Frootlab Shared Library
 background: images/back/library.webp
 permalink: /flib.html
 github: frootlab/flib
+pypi: project/flib
 status: "depends on module"
 license: "General Public License v3"
 license-url: "https://www.gnu.org/licenses/gpl.html"

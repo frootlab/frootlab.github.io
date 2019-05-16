@@ -5,6 +5,7 @@ about: Data Analysis Templating System
 background: images/back/robot.webp
 permalink: /nemoa.html
 github: frootlab/nemoa
+pypi: project/nemoa
 status: "3 - Alpha"
 license: "General Public License v3"
 license-url: "https://www.gnu.org/licenses/gpl.html"
