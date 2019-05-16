@@ -8,12 +8,20 @@
 }
 
 .tag-heading {
-  text-align: center;
+  text-align: right;
   padding-bottom: 0.5em;
-  border-bottom: 1px solid #ddd;
+  font-weight: 600;
+  &:after {
+    content: "";
+    display: block;
+    margin-left: -60px;
+    margin-top: 10px;
+    margin-right: -60px;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+  }
   &:target {
     font-weight: 600;
-    border-bottom: 1px solid #333;
   }
 }
 
@@ -289,30 +297,6 @@
   }
 }
 
-/* Dropdown Menu */
-/* Dropdown Button */
-.dropbtn {
-  background-color: #3498DB;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-/* Dropdown button on hover & focus */
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #2980B9;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-
-
 /* The side navigation menu */
 .sidenav {
   height: 100%; /* 100% Full-height */
@@ -365,17 +349,6 @@
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
-
-
-
-
-
-
-
-
-
-
-
 
 /* Dropdown Content (Hidden by Default) */
 .sidebar-content {
@@ -464,6 +437,7 @@
 
 /* Active item is a bit different */
 #breadcrumb ul li.active a {
+    cursor: default;
     color: white;
     background-color: rgba(0, 0, 0, 0.8);
 }
@@ -1072,6 +1046,9 @@ p.light {
     box-shadow: none;
     float: none;
     width: 100%;
+  }
+  .block-right {
+    background: none;
   }
   html {
     overflow: auto;
