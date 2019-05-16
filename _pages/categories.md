@@ -41,7 +41,6 @@ permalink: /categories.html
 <span class="post-preview-header">{{ post.date | date: '%d %b %Y' }}</span>
 <div class="post-preview-content" style="
   background: url({{ site.url }}/{{ preview }}) no-repeat;
-  background-position: 0 -30px;
   background-size: cover; ">
   <div class="ribbon-box">
     <div class="ribbon-wrapper">
