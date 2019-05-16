@@ -4,7 +4,8 @@ title: "Welcome at Frootlab"
 author: "Patrick Michl"
 license: "CC BY 4.0"
 license-url: "https://creativecommons.org/licenses/by/4.0/"
-image: images/back/robot.webp
+image: images/back/splash.webp
+preview: images/posts/preview/splash.webp
 categories:
   - Corporate
 tags:
@@ -21,9 +22,11 @@ beyond scientific and industrial progress. In order to realize our vision, we
 therefore used our personal experiences to identify today's foremost challenges
 in data science and started to develop comprehensive [solutions]({% post_url
 2019-03-20-three-obstacles-in-data-science %}), based on an entirely new
-[programming paradigm](/tags#CAMP). According to our fundamental convictions we
-release our products as [free and open-source
-software](https://en.wikipedia.org/wiki/Free_and_open-source_software), to
+[programming paradigm](/tags#CAMP).
+
+According to our fundamental convictions we release our products as [free and
+open-source
+software](https://en.wikipedia.org/wiki/Free_and_open-source_software) to
 provide universal access to research and education. Since the application of our
 products in industrial environments requires stable development and compliance
 with industrial standards, it is important to us to maintain the developmental

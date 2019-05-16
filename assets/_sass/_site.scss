@@ -8,18 +8,9 @@
 }
 
 .tag-heading {
-  text-align: right;
+  text-align: left;
   padding-bottom: 0.5em;
   font-weight: 600;
-  &:after {
-    content: "";
-    display: block;
-    margin-left: -60px;
-    margin-top: 10px;
-    margin-right: -60px;
-    border-top: 1px solid #aaa;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
-  }
   &:target {
     font-weight: 600;
   }

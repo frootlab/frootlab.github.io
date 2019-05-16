@@ -5,6 +5,7 @@ author: "Patrick Michl"
 license: "CC BY 4.0"
 license-url: "https://creativecommons.org/licenses/by/4.0/"
 image: images/back/robot.webp
+preview: images/posts/preview/robot.webp
 categories:
   - Science
 tags:

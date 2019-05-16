@@ -81,16 +81,11 @@ layout: compress
   </div>
 
   <div class="block-right">
-    <div class="share-buttons">
-      {% include share.html %}
-    </div>
     <div class="inner-post content">
-      <div class="date-highlight">
-        {% if page.date %}{{ page.date | date: '%d %b %Y' }}{% else %}&#x2756;{% endif %}
-      </div>
+      <div class="date-highlight" style="margin-top: 0px; font-size: 0.9em; ">{{ page.date | date: '%d. %B, %Y' }}</div>
       {{ content }}
       <br>
-      {% include page-pagination.html %}
+      {% include share.html %}
     </div>
   </div>
 
