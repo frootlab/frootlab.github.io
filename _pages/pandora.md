@@ -1,5 +1,6 @@
 ---
 layout: project
+navid: projects
 project: pandora
 about: Universal Data Interface
 background: images/back/garden.webp

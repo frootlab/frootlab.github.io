@@ -1,5 +1,6 @@
 ---
 layout: posts
+navid: blog
 title: Blog
 description: "An archive of all posts sorted by tag"
 permalink: /tags.html
@@ -13,7 +14,10 @@ permalink: /tags.html
 {% capture label %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
 
 <div id="{{ label }}" class="post-group">
-<h2 class="post-group-title">{{ label }}</h2>
+<h2 class="post-group-title">
+  <i class="fas fa-tag" style="transform: scale(0.9); vertical-align: bottom;"></i>
+  <span style="padding-left: 0.2em;">{{ label }}</span>
+</h2>
 <div class="post-group-content">
 
 {% for i in (0..1) %}

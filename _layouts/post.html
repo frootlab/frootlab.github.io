@@ -23,11 +23,6 @@ layout: compress
               <li><a href="#" onclick="openNav();" title="Menu"><i class="fas fa-bars"></i></a></li>
           </ul>
       </div>
-      <div id="sidebar" class="sidebar-content">
-        <a href="{{ site.url }}">Home</a>
-        <a href="{{ site.url }}/projects">Projects</a>
-        <a href="{{ site.url }}/blog">Blog</a>
-      </div>
       <div class="main-info">
       <h1>
         <span style="
@@ -70,7 +65,6 @@ layout: compress
           <div class="column" style="text-align: center;">
             {% for label in page.tags %}
             <a class="btn btn_grey" href="{{site.url}}/tags#{{ label }}">
-              <i class="fas fa-tag" aria-hidden="true"></i>
               {{ label }}
             </a>
             {% endfor %}

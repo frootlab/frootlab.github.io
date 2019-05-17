@@ -10,7 +10,7 @@ categories:
   - Science
 tags:
   - Deep Learning
-  - Machine learning
+  - Machine Learning
   - AI
 ---
 

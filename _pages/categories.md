@@ -3,13 +3,17 @@ layout: posts
 title: Blog
 description: "An archive of all posts sorted by category"
 permalink: /categories.html
+navid: blog
 ---
 
 {% for category in site.categories %}
 {% assign name = category | first %}
 
 <div id="{{ name }}" class="post-group">
-<h2 class="post-group-title">{{ name }}</h2>
+<h2 class="post-group-title">
+  <i class="fas fa-asterisk" style="transform: scale(0.9); vertical-align: bottom;"></i>
+  <span style="padding-left: 0.2em;">{{ name }}</span>
+</h2>
 <div class="post-group-content">
 
 {% for i in (0..1) %}

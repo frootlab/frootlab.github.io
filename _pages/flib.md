@@ -1,5 +1,6 @@
 ---
 layout: project
+navid: projects
 project: flib
 about: Frootlab Shared Library
 background: images/back/library.webp

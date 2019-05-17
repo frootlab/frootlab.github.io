@@ -3,6 +3,7 @@ layout: posts
 title: Blog
 description: "An archive of all posts sorted by date"
 permalink: /blog.html
+navid: blog
 ---
 
 <h2 class="post-group-title">Latest Posts</h2>
