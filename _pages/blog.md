@@ -5,11 +5,12 @@ description: "An archive of all posts sorted by date"
 permalink: /blog.html
 ---
 
-<div class="posts-preview" style="margin: 0;">
+<h2 class="post-group-title">Latest Posts</h2>
+<div class="post-group-content">
 
   {% for i in (0..1) %}
   {% assign j = 1 | minus: i  %}
-  {% for post in site.posts %}
+  {% for post in site.posts limit:4 %}
   {% assign mod = forloop.index | modulo: 2 %}
   {% if mod == j %}
 

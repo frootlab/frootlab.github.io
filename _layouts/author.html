@@ -51,8 +51,8 @@ layout: compress
   <div class="block-right" style="background: #e2e1e0;">
     <div class="content">
       {% assign posts = site.posts | where: 'author', page.name %}
-      <h2 style="margin-top:0;">Posts</h2>
-      <div class="posts-preview">
+      <h2 class="post-group-title">Posts</h2>
+      <div class="post-group-content">
 
         {% for i in (0..1) %}
         {% assign j = 1 | minus: i  %}

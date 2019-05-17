@@ -9,9 +9,8 @@ locale: en_US
 language: en
 copyright: © 2019 Frootlab
 keywords:
-  Frootlab, Smart Analytics, Machine Learning, AI,
-  Cloud-Assisted Meta Programming, CAMP, Liquid Coding, Nemoa, Pandora, Motley,
-  flib
+  Frootlab, Smart Analytics, Machine Learning, AutoML, AI, Liquid ML, Nemoa,
+  Pandora, Motley, flib, Cloud-Assisted Meta Programming, CAMP
 future: true
 
 # Left Block Images

@@ -7,9 +7,10 @@ permalink: /categories.html
 
 {% for category in site.categories %}
 {% assign name = category | first %}
-<h2 id="{{ name }}" class="tag-heading">{{ name }}</h2>
 
-<div class="posts-preview">
+<div id="{{ name }}" class="post-group">
+<h2 class="post-group-title">{{ name }}</h2>
+<div class="post-group-content">
 
 {% for i in (0..1) %}
 {% assign j = 1 | minus: i  %}
@@ -58,6 +59,7 @@ permalink: /categories.html
 {% endfor %}
 {% endfor %}
 
+</div>
 </div>
 
 {% endfor %}

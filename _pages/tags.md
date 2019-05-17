@@ -12,8 +12,9 @@ permalink: /tags.html
 {% unless forloop.last %}
 {% capture label %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
 
-<h2 id="{{ label }}" class="tag-heading">{{ label }}</h2>
-<div class="posts-preview">
+<div id="{{ label }}" class="post-group">
+<h2 class="post-group-title">{{ label }}</h2>
+<div class="post-group-content">
 
 {% for i in (0..1) %}
 {% assign j = 1 | minus: i  %}
@@ -62,6 +63,7 @@ permalink: /tags.html
 {% endfor %}
 {% endfor %}
 
+</div>
 </div>
 
 {% endunless %}{% endfor %}
