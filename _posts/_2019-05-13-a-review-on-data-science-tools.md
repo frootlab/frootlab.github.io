@@ -1,5 +1,6 @@
 ---
 layout: post
+navid: blog
 title: 'A short review on data science tools'
 author: "Patrick Michl"
 license: "CC BY 4.0"

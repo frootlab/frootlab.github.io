@@ -43,7 +43,11 @@ layout: compress
     </div>
   </div>
 
-  <div class="block-right" style="background: #e2e1e0;">
+  <div class="block-right" style="background: linear-gradient(
+      to top right,
+      #e2e1e0,
+      #e2e1e0 50%,
+      #f2f1f0 100%);">
     <div class="content">
       {% assign posts = site.posts | where: 'author', page.name %}
       <h2 class="post-group-title">Posts</h2>

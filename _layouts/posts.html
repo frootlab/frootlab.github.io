@@ -22,7 +22,7 @@ layout: compress
       <div id="breadcrumb">
           <ul>
               <li class="active"><a href="{{ site.url }}/blog">Blog</a></li>
-              <li><a href="#" onclick="openNav();" title="Menu"><i class="fas fa-bars"></i></a></li>
+              <li><a onclick="openNav();" title="Menu"><i class="fas fa-bars"></i></a></li>
           </ul>
       </div>
       <div class="post-title-section">
@@ -59,7 +59,12 @@ layout: compress
     <a id="scroll" href="{{ site.url }}/#content" class="scroll-down"></a>
   </div>
 
-  <div class="block-right" style="background: #e2e1e0;" >
+  <div class="block-right"
+    style="background: linear-gradient(
+        to top right,
+        #e2e1e0,
+        #e2e1e0 50%,
+        #f2f1f0 100%);">
     <div id="conent" class="content" style="padding-top: 2em;">
       {{ content }}
     </div>

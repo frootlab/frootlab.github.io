@@ -1,5 +1,6 @@
 ---
 layout: post
+navid: blog
 title: "Welcome at Frootlab"
 author: "Patrick Michl"
 license: "CC BY 4.0"

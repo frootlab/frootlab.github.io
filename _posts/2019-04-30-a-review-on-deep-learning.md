@@ -1,5 +1,6 @@
 ---
 layout: post
+navid: blog
 title: 'The AI Revolution: Deep Learning and what´s next?'
 author: "Patrick Michl"
 license: "CC BY 4.0"

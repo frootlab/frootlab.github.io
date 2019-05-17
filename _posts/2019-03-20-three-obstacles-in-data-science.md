@@ -1,5 +1,6 @@
 ---
 layout: post
+navid: blog
 title: "Three obstacles in data science and one vision"
 author: "Patrick Michl"
 license: "CC BY 4.0"
