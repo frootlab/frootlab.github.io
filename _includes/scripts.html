@@ -23,7 +23,12 @@
     }, 500);
     document.getElementById("Overlay").style.backgroundColor = "rgba(0,0,0,0)";
     document.getElementById("mySidenav").style.width = "0";
+  }
 
-
+  /* On Scroll hide the Scroll Arrow */
+  window.onscroll = function() {
+    if (window.pageYOffset > 10) {
+      document.getElementById("scroll").style.display = "none";
+    }
   }
 </script>

@@ -36,11 +36,12 @@ layout: compress
         <h3>{{ site.subtitle }}</h3>
         {% include page-social-links.html %}
       </div>
+      <a id="scroll" href="{{ site.url }}/#content" class="scroll-down"></a>
     </div>
   </div>
 
   <div class="block-right">
-    <div class="content">
+    <div class="content" id="content">
       <div class="about-info">
         {{ content }}
       </div>
