@@ -39,7 +39,7 @@
 /* Active Navigation Entry */
 .sidenav a.active {
   background-color: $dark-grey;
-  color: #f1f1f1;
+  color: #e0e0e0;
   cursor: default;
   pointer-events: none;
 }
@@ -124,13 +124,13 @@
     background-color: $dark-grey;
     background: linear-gradient(
       $dark-grey 0%,
-      darken($dark-grey, 5%) 95%,
+      darken($dark-grey, 3%) 95%,
       lighten($dark-grey, 5%) 100%);
     &:hover {
       background-color: lighten($dark-grey, 10%);
       background: linear-gradient(
         lighten($dark-grey, 10%) 0%,
-        lighten($dark-grey, 5%) 95%,
+        lighten($dark-grey, 7%) 95%,
         lighten($dark-grey, 15%) 100%);
     }
 }
