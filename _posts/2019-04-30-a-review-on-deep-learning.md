@@ -72,7 +72,9 @@ ordinary least squares regression, which heavily impairs their generalizability.
 
 ## The Frequentist: GAN
 
-> "Adversarial training is the coolest thing since sliced bread." — Yann LeCun
+> Adversarial training is the coolest thing since sliced bread
+>
+> Yann LeCun
 
 A further obscurity in Hinton's article was the succession of an undirected
 graphical model, followed by a directed - and indeed that's the daredevil part!
@@ -100,7 +102,9 @@ images and videos received much attention with artificial
 
 ## What will come next?
 
-> "Now what belongs together will grow together" — Willy Brandt
+> Now what belongs together will grow together
+>
+> Willy Brandt
 
 The zoo of deep models grows exponentially! Currently we find ourselves
 surrounded by many promising approaches, but there is a reason why the two

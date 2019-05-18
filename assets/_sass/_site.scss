@@ -340,6 +340,9 @@
   }
 }
 
+
+
+
 .card-image {
   height: 50%;
   border-radius: 2px 2px 0px 0px;
@@ -659,6 +662,62 @@ p.light {
       &:first-child {
         margin-top: 20px;
       }
+    }
+  }
+  blockquote {
+    border: 0;
+    padding: 0 1em 0 1em;
+    margin: 0;
+    > p {
+      display: inline;
+      &:first-of-type {
+        quotes: '\201C' '\201D' '\2018' '\2019';
+        font-size: 1.2em;
+        &::before {
+          content: open-quote;
+          margin-right: 0.1rem;
+        }
+        &::after {
+          content: close-quote;
+          margin-left: 0.1rem;
+        }
+      }
+      &:last-of-type {
+        font-size: 0.8em;
+        display: block;
+        margin-top: 0.5em;
+        width: 100%;
+        text-align: right;
+        quotes: '\201C' '\201D' '\2018' '\2019';
+        font-style: normal;
+        &::before {
+          content: "\000A" "\2014" " ";
+          margin-left: 0.1rem;
+          font-style: normal;
+        }
+      }
+
+      // In case of a quote without a source.
+      &:only-of-type {
+        font-style: italic;
+        font-size: 15px;
+        quotes: '\201C' '\201D' '\2018' '\2019';
+        text-align: left;
+        &::before {
+         content: open-quote;
+         margin-right: 0.1rem;
+        }
+        &::after {
+          content: close-quote;
+          margin-left: 0.1rem;
+        }
+      }
+    }
+  }
+  .footnotes {
+    font-size: 0.9em;
+    p {
+      font-size: 0.9em;
     }
   }
 }
