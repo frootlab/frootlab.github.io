@@ -16,10 +16,11 @@ supporting the development of smart software, which adepts itself to new
 technologies!
 
 To that end we provide a [free and open
-source](https://www.gnu.org/philosophy/floss-and-foss.en.html) data analysis
-framework, which on the basis of [TensorFlow®](https://www.tensorflow.org/)
-incorporates machine intelligence and collaborative data science into the whole
-software life cycle. The essential components of the framework comprise: The
-universal data interface [Pandora](pandora.html), the smart algorithm repository
-[Motley](motley.html) and the data analysis template system [Nemoa](nemoa.html),
-which abstracts explicit algorithms to currently best fitting.
+source](https://en.wikipedia.org/wiki/Free_and_open-source_software) data
+analysis framework, which on the basis of
+[TensorFlow®](https://www.tensorflow.org/) incorporates machine intelligence and
+collaborative data science into the whole software life cycle. The essential
+components of the framework comprise: The universal data interface
+[Pandora](pandora.html), the smart algorithm repository [Motley](motley.html)
+and the data analysis template system [Nemoa](nemoa.html), which abstracts
+explicit algorithms to currently best fitting.

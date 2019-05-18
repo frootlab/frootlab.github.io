@@ -124,13 +124,13 @@
     background-color: $dark-grey;
     background: linear-gradient(
       $dark-grey 0%,
-      $dark-grey 95%,
+      darken($dark-grey, 5%) 95%,
       lighten($dark-grey, 5%) 100%);
     &:hover {
       background-color: lighten($dark-grey, 10%);
       background: linear-gradient(
         lighten($dark-grey, 10%) 0%,
-        lighten($dark-grey, 10%) 95%,
+        lighten($dark-grey, 5%) 95%,
         lighten($dark-grey, 15%) 100%);
     }
 }
@@ -154,10 +154,8 @@
     color: white;
     background-color: rgba(0, 0, 0, 0.8);
     background: linear-gradient(
-      darken(rgba(0, 0, 0, 0.8), 5%) 0%,
-      rgba(0, 0, 0, 0.8) 5%,
-      rgba(0, 0, 0, 0.8) 95%,
-      lighten(rgba(0, 0, 0, 0.8), 5%) 100%);
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.8) 100%);
 }
 
 /* Remove the shadow for the active's next item, to match the design more accurately */
