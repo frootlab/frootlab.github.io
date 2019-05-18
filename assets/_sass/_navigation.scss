@@ -85,8 +85,8 @@
   font-family: Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1em;
-  border-radius: 2px; /* Little curvature in the borders */
   overflow: hidden; /* Hide everything that overflows, like shadows */
+  transition: 0.2s;
 }
 
 /* Icons */
@@ -117,24 +117,29 @@
     padding: 12px 30px 12px 45px; /* Adjusting padding to get the proper space */
     margin-left: -20px; /* Pull the items to the left, so the rounded right side will get over them */
     color: white;
-    background-color: $dark-grey;
     text-decoration: none;
     text-transform: uppercase;
     border-radius: 0 100px 100px 0; /* Get the right side rounded */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Apply the shadow */
+    background-color: $dark-grey;
+    background: linear-gradient(
+      $dark-grey 0%,
+      $dark-grey 95%,
+      lighten($dark-grey, 5%) 100%);
+    &:hover {
+      background-color: lighten($dark-grey, 10%);
+      background: linear-gradient(
+        lighten($dark-grey, 10%) 0%,
+        lighten($dark-grey, 10%) 95%,
+        lighten($dark-grey, 15%) 100%);
+    }
 }
 
 /* Menu Icon */
-
 #breadcrumb ul li.menu-button a {
     padding: 12px 30px 12px 30px;
     margin-left: 0px;
-    border-radius: 0 100px 100px 0; /* Get the right side rounded */
-}
-
-/* Hover event */
-#breadcrumb ul li:hover a {
-    background-color: lighten($blue, 10%);
+    border-radius: 0px 100px 100px 0px; /* Get the right side rounded */
 }
 
 /* Remove the shadow for first item, last in the right side when it gets reversed */
@@ -148,6 +153,11 @@
     cursor: default;
     color: white;
     background-color: rgba(0, 0, 0, 0.8);
+    background: linear-gradient(
+      darken(rgba(0, 0, 0, 0.8), 5%) 0%,
+      rgba(0, 0, 0, 0.8) 5%,
+      rgba(0, 0, 0, 0.8) 95%,
+      lighten(rgba(0, 0, 0, 0.8), 5%) 100%);
 }
 
 /* Remove the shadow for the active's next item, to match the design more accurately */

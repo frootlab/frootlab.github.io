@@ -43,7 +43,7 @@ permalink: /tags.html
 {% endif %}
 
 <div class="cell">
-  <span class="post-preview-header">{{ post.date | date: '%d %b %Y' }}</span>
+  <span class="card-label">{{ post.date | date: '%d %b %Y' }}</span>
   <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
   <div class="card">
     <div class="ribbon-box">
