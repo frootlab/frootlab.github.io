@@ -27,7 +27,7 @@ layout: compress
           <ul>
               <li class="active"><a href="#">{{ page.project | capitalize }}</a></li>
               <li><a href="{{ site.url }}/projects">Projects</a></li>
-              <li><a onclick="openNav();" title="Menu"><i class="fas fa-bars"></i></a></li>
+              <li class="menu-button"><a onclick="openNav();" title="Menu"><i class="fas fa-bars"></i></a></li>
           </ul>
       </div>
       <div class="main-info">
@@ -60,59 +60,56 @@ layout: compress
   <div class="block-right">
     <div id="content" class="content">
       {{ content }}
-      <h2>About</h2>
-      <div class="post-group-content" style="margin: 0;">
+      <h2 class="section-title">About</h2>
 
-        {% for i in (0..1) %}
-        {% assign j = 1 | minus: i  %}
-        {% for post in site.posts %}
-        {% if post.tags contains project %}
-        {% assign mod = forloop.index | modulo: 2 %}
-        {% if mod == j %}
+      <div class="grid">
 
-        {% if post.preview %}
+      {% for post in site.posts %}
+      {% if post.tags contains project %}
+
+      {% if post.preview %}
         {% assign preview = post.preview %}
-        {% elsif post.image %}
+      {% elsif post.image %}
         {% assign preview = post.image %}
-        {% else %}
+      {% else %}
         {% assign preview = post.image %}
-        {% endif %}
+      {% endif %}
 
-        {% assign catid = post.categories | first | downcase %}
-        {% if catid == 'corporate' %}
-          {% assign color = 'blue' %}
-        {% elsif catid == 'science' %}
-          {% assign color = 'green' %}
-        {% elsif catid == 'technology' %}
-          {% assign color = 'red' %}
-        {% else %}
-          {% assign color = 'grey' %}
-        {% endif %}
+      {% assign catid = post.categories | first | downcase %}
+      {% if catid == 'corporate' %}
+        {% assign color = 'blue' %}
+      {% elsif catid == 'science' %}
+        {% assign color = 'green' %}
+      {% elsif catid == 'technology' %}
+        {% assign color = 'red' %}
+      {% else %}
+        {% assign color = 'grey' %}
+      {% endif %}
 
-        <div class="post-preview">
-        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
+      <div class="cell">
         <span class="post-preview-header">{{ post.date | date: '%d %b %Y' }}</span>
-        <div class="post-preview-content" style="
-          background: url({{ site.url }}/{{ preview }}) no-repeat;
-          background-size: cover; ">
+        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
+        <div class="card">
           <div class="ribbon-box">
             <div class="ribbon-wrapper">
                 <div class="{{ color }}-ribbon">{{ catid }}</div>
             </div>
           </div>
-          <div class="{{ color }}-post-preview-text">
+          <div class="card-image" style="
+            background: url({{ site.url }}/{{ preview }}) no-repeat;
+            background-size: cover;"></div>
+          <div class="card-text card-text-{{ color }}">
               {{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}
           </div>
         </div>
         </a>
-        </div>
+      </div>
 
-        {% endif %}
-        {% endif %}
-        {% endfor %}
-        {% endfor %}
+      {% endif %}
+      {% endfor %}
 
       </div>
+
     </div>
   </div>
 

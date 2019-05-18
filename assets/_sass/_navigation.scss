@@ -124,6 +124,14 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Apply the shadow */
 }
 
+/* Menu Icon */
+
+#breadcrumb ul li.menu-button a {
+    padding: 12px 30px 12px 30px;
+    margin-left: 0px;
+    border-radius: 0 100px 100px 0; /* Get the right side rounded */
+}
+
 /* Hover event */
 #breadcrumb ul li:hover a {
     background-color: lighten($blue, 10%);
