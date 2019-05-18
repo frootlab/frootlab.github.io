@@ -41,14 +41,13 @@ layout: compress
       <div class="post-title-section">
         <div class="columns">
           <div class="column" style="flex: 50%;">
-            <h3>License</h3>
-            <a class="btn btn_green" href="{{ page.license-url }}" title="{{ page.license }}">
+            <i class="fas fa-balance-scale"></i>
+            <a href="{{ page.license-url }}" title="{{ page.license }}" style="margin-left: 0.5em;">
               {{ page.license }}
             </a>
           </div>
           <div class="column" style="flex: 50%; text-align: right;">
-            <h3>Development Stage</h3>
-            {{ page.status }}
+            Stage: {{ page.status }}
           </div>
         </div>
       </div>
@@ -60,7 +59,7 @@ layout: compress
   <div class="block-right">
     <div id="content" class="content">
       {{ content }}
-      <h2 class="section-title">About</h2>
+      <h2>About</h2>
 
       <div class="grid">
 
