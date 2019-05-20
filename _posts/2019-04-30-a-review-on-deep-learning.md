@@ -136,8 +136,6 @@ somehow can be overwhelming. And no matter, how important the above aspects will
 turn out, after all they will still only represent a tiny chapter within the
 long succession of incredible advances, that await us.
 
-## Footnotes
-
 [^1]: Due to the bipartite graph structure of RBMs, repeated Gibbs sampling is rapidly mixing, which allows an efficient approximation of the log-likelihood gradient.
 [^2]: The observables are required to trace out sufficiently smooth and Lipschitz-continous trajectories.
 [^3]: If you stack bipartite graphs together, you still get a bipartite graph. Of course, it's a little more complicated, but under the hood that's the reason, why DBMs can efficiently be trained.
