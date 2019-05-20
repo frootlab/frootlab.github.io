@@ -105,10 +105,12 @@
   padding: 0 1em 0 1em;
   margin: 0;
   > p {
-    display: inline;
+    display: block;
+    text-align: center;
     &:first-of-type {
       quotes: '\201C' '\201D' '\2018' '\2019';
-      font-size: 1.2em;
+      font-size: 1.15em;
+      margin-right: 1em;
       &::before {
         content: open-quote;
         margin-right: 0.1rem;
