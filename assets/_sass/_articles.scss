@@ -186,7 +186,6 @@
 @media print {
   .inner-post {
     column-count: 2;
-    column-gap: 1.5em;
     margin-top: 2em;
     p {
       font-size: 0.9em;
@@ -194,10 +193,9 @@
       line-height: 1.3;
       margin-bottom: 1em;
     }
-    .separator {
-      &:first-of-type {
-        margin: 0 0 1em 0;
-      }
+    .separator-left,
+    .separator-right {
+      margin: 0 0 1em 0;
       &:before {
         content: '';
         flex: 0;
