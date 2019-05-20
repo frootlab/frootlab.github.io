@@ -1,13 +1,18 @@
 {% if page.share != false %}
 <div class="share-article">
   <div class="separator">Print / Share Article</div>
-  <a onclick="window.print();return false;" class="btn btn_grey" title="Print this Article">
+  {% if page.pdf %}
+  <a href="{{ site.url }}/{{ page.pdf }}" class="btn" title="Save as PDF" target="_blank" rel="noopener">
+    <i class="fas fa-file-pdf"></i><span> Download</span>
+  </a>
+  {% endif %}
+  <a onclick="window.print();return false;" class="btn" title="Print this Article" target="_blank" rel="noopener">
     <i class="fas fa-print"></i><span> Print</span>
   </a>
-  <a href="https://twitter.com/intent/tweet?text={{ site.url }}{{ page.url }}" class="btn btn_twitter" title="Share on Twitter">
+  <a href="https://twitter.com/intent/tweet?text={{ site.url }}{{ page.url }}" class="btn" title="Share on Twitter" target="_blank" rel="noopener">
     <i class="fab fa-twitter"></i><span> Twitter</span>
   </a>
-  <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" class="btn btn_facebook" title="Share on Facebook">
+  <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" class="btn" title="Share on Facebook" target="_blank" rel="noopener">
     <i class="fab fa-facebook"></i><span> Facebook</span>
   </a>
 </div>

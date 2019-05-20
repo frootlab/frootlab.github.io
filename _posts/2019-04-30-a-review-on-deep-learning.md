@@ -7,6 +7,7 @@ license: "CC BY 4.0"
 license-url: "https://creativecommons.org/licenses/by/4.0/"
 image: images/back/robot.webp
 preview: images/posts/preview/robot.webp
+pdf: files/posts/2019-04-30-a-review-on-deep-learning.pdf
 categories:
   - Science
 tags:
