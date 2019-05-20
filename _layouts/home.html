@@ -15,13 +15,13 @@ layout: compress
 
 <div id="main">
 
-  <div class="block-left" style="
-    background: linear-gradient(
-      rgba(0, 0, 0, 0.9) 0%,
-      rgba(0, 0, 0, 0.8) 70%,
-      rgba(0, 0, 0, 0.0) 100%),
-    url({{ cur_background }}) no-repeat;
-    background-size: cover;">
+<div class="block-left" style="
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.8) 70%,
+    rgba(0, 0, 0, 0.0) 100%),
+  url({{ cur_background }}) no-repeat;
+  background-size: cover;">
     <div class="content">
       <div id="breadcrumb">
           <ul>
@@ -36,7 +36,7 @@ layout: compress
         <h3>{{ site.subtitle }}</h3>
         {% include page-social-links.html %}
       </div>
-      <a id="scroll" href="{{ site.url }}/#content" class="scroll-down"></a>
+      <a id="scroll" href="{{ site.url }}{{ page.url }}#content" class="scroll-down"></a>
     </div>
   </div>
 
