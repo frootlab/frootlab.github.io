@@ -146,6 +146,12 @@
   }
 }
 
+/* Share Article */
+.inner-post .share-article {
+  width: 100%;
+  text-align: center;
+}
+
 /* Small Screen Adjustments */
 
 @media screen and (max-width: 640px) {
@@ -181,7 +187,10 @@
         margin: 0;
       }
     }
-   .related-articles {
+    .share-article {
+      display: none;
+    }
+    .related-articles {
       display: none;
     }
   }
