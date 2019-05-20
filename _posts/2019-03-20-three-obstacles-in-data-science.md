@@ -5,8 +5,9 @@ title: "Three obstacles in data science and one vision"
 author: "Patrick Michl"
 license: "CC BY 4.0"
 license-url: "https://creativecommons.org/licenses/by/4.0/"
-image: images/back/agile.webp
-preview: images/posts/preview/agile.webp
+image: images/back/doors.webp
+preview: images/posts/preview/doors.webp
+pdf: files/posts/2019-03-20-three-obstacles-in-data-science.pdf
 categories:
   - Corporate
 tags:
@@ -72,11 +73,13 @@ to determine, which algorithm of a given category and data domain is the
 currently best fitting ([CBF](/tags#CBF)) algorithm with respect to the required
 metric.
 
-## \#3: Dead Horses
+## \#3: Riding Dead Horses
 
 Due to the rapid scientific advances, data science and analytical applications
 like in no other domain suffer of short code lifespans. Of course:
 > When you're riding a dead horse, the best strategy is to get off!
+>
+> Wisdom of the Dakota Indians
 
 So the question arises, how to keep the code alive. This issue can only be
 addressed by letting the code be dynamic!
