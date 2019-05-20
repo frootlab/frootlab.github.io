@@ -162,3 +162,12 @@
 #breadcrumb ul li.active + li a {
     box-shadow: none;
 }
+
+/* Print Adjustments */
+@media print {
+  .sidenav,
+  .sideoverlay,
+  #breadcrumb {
+    display: none;
+  }
+}

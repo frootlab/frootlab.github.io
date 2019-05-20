@@ -25,11 +25,8 @@ layout: compress
       </div>
       <div class="main-info">
       <h1>
-        <span style="
-          box-shadow: 0 0 0 .1em rgba(0, 0, 0, 0.7);
-          line-height: 1.8;
-          background-color: rgba(0, 0, 0, 0.7);">
-        {{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}
+        <span class="post-title">
+          {{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}
         </span>
       </h1>
       </div>
@@ -38,9 +35,11 @@ layout: compress
         <div style="text-align: center; padding: 1.1em; ">
           {% assign author = site.authors | where: 'name', page.author | first %}
           {% if author %}
-          <h3>by <a href="{{ author.url }}" style="color: #0275d8;">{{ author.name }}</a></h3>
+          <h3 class="post-author">
+            by <a href="{{ author.url }}" style="color: #0275d8;">{{ author.name }}</a>
+          </h3>
           {% else %}
-          <h3>Author: Anonymous</h3>
+          <h3 class="post-author">Author: Anonymous</h3>
           {% endif %}
           {% if page.license %}
           {% if page.license contains 'CC BY' %}
@@ -66,12 +65,11 @@ layout: compress
 
   <div class="block-right">
     <div class="inner-post content" id="content">
-      <div class="separator" style="margin-top: 0px; font-size: 0.9em; ">{{ page.date | date: '%d. %B, %Y' }}</div>
+      <div class="separator">{{ page.date | date: '%d. %B, %Y' }}</div>
       {{ content }}
       <br>
       {% include share.html %}
       {% include related-articles.html %}
-      </div>
     </div>
   </div>
 

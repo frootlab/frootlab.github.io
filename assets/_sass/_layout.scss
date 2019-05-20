@@ -1,0 +1,222 @@
+.block-left {
+  height: 100%;
+  float: left;
+  z-index: 1; // let drop shadow stay on top
+  box-shadow: 5px 0px 13px -6px rgba(0, 0, 0, 0.6);
+  .content {
+    z-index: 1;
+    position: relative;
+  }
+}
+
+.block-right {
+  float: right;
+  height: 100%;
+  overflow-y: auto;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.0) 0%,
+    rgba(0, 0, 0, 0.08) 100%);
+}
+
+.block-left,
+.block-right {
+  width: 50%;
+  position: relative;
+  display: table;
+  > div {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .content {
+    height: 100%;
+  }
+}
+
+.content {
+  padding: 60px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.main-info,
+.about-info {
+  text-align: center;
+  max-width: 26em;
+  width: 100%;
+  margin: 0 auto;
+  h1,
+  h2,
+  h3 {
+    font-size: 2em;
+    position: relative;
+    margin-top: 0;
+  }
+  p {
+    font-size: 21px;
+    line-height: 30px;
+    margin: 10px 0;
+    padding-top: 25px;
+  }
+  ul {
+    font-size: 0.9em;
+    margin-top: 30px;
+    overflow: hidden;
+    li {
+      display: inline-block;
+      background: rgba(20, 20, 20, 0.5);
+      border: 1px solid transparent;
+      border-radius: 5px;
+      vertical-align: middle;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        background-color: $green;
+        border: 1px solid lighten($green, 5%);
+      }
+      &:nth-child(odd) {
+        background: rgba(80, 80, 80, 0.5);
+        border: 1px solid transparent;
+        &:hover {
+          background-color: $blue;
+          border: 1px solid lighten($blue, 5%);
+        }
+      }
+      a {
+        display: inline-block;
+        font-size: 1.3em;
+        padding: 0.3em 0.35em;
+        color: $white;
+      }
+    }
+  }
+}
+
+.main-info {
+  color: $white;
+  h1,
+  h2 {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .post-title {
+    box-shadow: 0 0 0 .1em rgba(0, 0, 0, 0.7);
+    line-height: 1.8;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  h1.underline {
+    &:after {
+      content: "";
+      width: 100px;
+      height: 2px;
+      background: #585b63;
+      bottom: -20px;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translatex(-50%);
+      -moz-transform: translatex(-50%);
+      -ms-transform: translatex(-50%);
+      -o-transform: translatex(-50%);
+      transform: translatex(-50%);
+    }
+  }
+
+  h3 {
+    font-size: 21px;
+    line-height: 30px;
+    margin: 10px 0;
+    padding-top: 25px;
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.about-info {
+  text-align: left;
+  h1,
+  h2,
+  h3 {
+    font-size: 35px;
+    color: $black;
+  }
+  p {
+    color: lighten($black, 45);
+    font-size: 16px;
+    margin: 10px 0;
+    padding-top: 0;
+    line-height: 24px;
+    &:first-of-type {
+      padding-top: 35px;
+    }
+  }
+}
+
+/* Adjustments for small screens */
+@media screen and (max-width: 960px) {
+  html {
+    overflow: auto;
+    background-color: white;
+    margin: 0;
+  }
+  .block-left,
+  .block-right {
+    box-shadow: none;
+    float: none;
+    width: 100%;
+    height: auto;
+  }
+  .block-right {
+    height: auto;
+    min-height: 100% !important;
+    overflow-y: inherit;
+    background: none;
+  }
+}
+
+/* Adjustments for print */
+@media print {
+  @page {
+    margin: 2.54cm 2.54cm;
+  }
+  html {
+    overflow: auto;
+  }
+  body {
+    margin: 0;
+  }
+  .block-left,
+  .block-right {
+    position: static;
+    box-shadow: none;
+    float: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    overflow-y: inherit;
+    background: none !important;
+    .content {
+      padding: 0;
+      position: static;
+      width: 100%;
+    }
+  }
+  .main-info,
+  .about-info {
+    color: $dark-grey;
+    display: block;
+    position: static;
+    width: 100%;
+    .post-title {
+      font-family: 'Merriweather', serif;
+      font-size: 1em;
+      color: $dark-grey;
+      margin-bottom: 1em;
+      box-shadow: none;
+      line-height: 1.2;
+      background-color: none;
+    }
+  }
+}

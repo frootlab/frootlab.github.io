@@ -56,3 +56,20 @@
   .banderole {
   }
 }
+
+@media print {
+  .banderole,
+  .banderole-angle {
+    position: static;
+    height: auto;
+    background: none !important;
+    h3:not(.post-author) {
+      display: none;
+    }
+    h3.post-author {
+      font-family: 'Merriweather', serif;
+      font-size: 0.9em;
+      color: $dark-grey;
+    }
+  }
+}
