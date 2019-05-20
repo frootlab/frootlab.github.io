@@ -8,7 +8,7 @@ permalink: /motley.html
 github: frootlab/motley
 pypi: project/motley
 status: "1 - Planning"
-license: "General Public License v3"
+license: GPLv3
 license-url: "https://www.gnu.org/licenses/gpl.html"
 ---
 

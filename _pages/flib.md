@@ -8,7 +8,7 @@ permalink: /flib.html
 github: frootlab/flib
 pypi: project/flib
 status: "depends on module"
-license: "General Public License v3"
+license: GPLv3
 license-url: "https://www.gnu.org/licenses/gpl.html"
 ---
 

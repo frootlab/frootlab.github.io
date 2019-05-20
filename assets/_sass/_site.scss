@@ -32,11 +32,6 @@
   }
 }
 
-.inactive {
-  pointer-events: none;
-  pointer: default;
-}
-
 .content {
   padding: 60px;
   max-width: 600px;
@@ -303,86 +298,9 @@
 
 
 
-/* Grid Layout */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  padding: 0;
-  margin: 0;
-  grid-gap: 1em;
-}
 
-/* Cells in grid */
-.cell {
-  display: block;
-  margin: 0;
-  padding: 0;
-}
 
-.card-label {
-  font-size: 0.8em;
-  text-transform: uppercase;
-}
 
-/* Cards */
-.card {
-  box-sizing: border-box;
-  height: 250px;
-  max-width: 250px;
-  position: relative;
-  border-radius: 2px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.2s;
-  transition: box-shadow 0.3s cubic-bezier(.25, .8, .25, 1);
-  &:hover {
-    box-shadow:
-      0 3px 6px rgba(0,0,0,0.16),
-      0 3px 6px rgba(0,0,0,0.23);
-    &:active {
-      transform: scale(0.98);
-      box-shadow:
-        0 2px 4px rgba(0,0,0,0.23),
-        0 2px 4px rgba(0,0,0,0.46);
-    }
-    .card-text-blue {
-      border-bottom: 5px solid lighten($blue, 10%);
-    }
-    .card-text-green {
-      border-bottom: 5px solid lighten($green, 10%);
-    }
-    .card-text-red {
-      border-bottom: 5px solid lighten($red, 10%);
-    }
-    .card-text-grey {
-      border-bottom: 5px solid lighten($dark-grey, 10%);
-    }
-  }
-}
-
-.card-image {
-  height: 50%;
-  border-radius: 2px 2px 0px 0px;
-}
-
-/* Card text */
-.card-text {
-  padding: 0.5em 0.4em 0.7em 0.4em;
-  font-family: Verdana, sans-serif;
-  font-size: 0.9em;
-  font-weight: 400;
-  color: $dark-grey;
-  line-height: 1.5;
-  text-align: center;
-  vertical-align: middle;
-  border-radius: 0 0 2px 2px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  min-height: 50%;
-  transition: all 0.2s ease-in-out;
-  border-top: 1px solid transparent;
-  background-color: white;
-}
 
 /* Create Post Preview */
 .section-content {
@@ -393,52 +311,15 @@
   margin-bottom: 15px;
 }
 
-/* Ribbons */
 
-.ribbon-box {
-  margin: 10px auto;
-  position: relative;
-  z-index: 1;
-}
-.ribbon-wrapper {
-  width: 85px;
-  height: 88px;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  .ribbon,
-  .blue-ribbon,
-  .green-ribbon,
-  .red-ribbon,
-  .grey_ribbon {
-    font: bold 0.7em sans-serif;
-    color: #333;
-    text-align: center;
-    transform: rotate(-45deg);
-    position: relative;
-    padding: 7px 0;
-    top: 15px;
-    left: -30px;
-    width: 120px;
-  }
-  .blue-ribbon {
-    background-color: $blue;
-    color: white;
-  }
-  .green-ribbon {
-    background-color: $green;
-    color: white;
-  }
-  .red-ribbon {
-    background-color: $red;
-    color: white;
-  }
-  .grey-ribbon {
-    background-color: $dark-grey;
-    color: white;
-  }
-}
+
+
+
+
+
+
+
+
 
 .logo {
   max-width: 150px;
@@ -630,231 +511,21 @@ p.light {
   width: 2em;
 }
 
-.inner-post {
-  font-family: 'Merriweather', serif;
-
-  h1 {
-    font-size: 70px;
-    line-height: 70px;
-    margin-bottom: 50px;
-  }
-  h2 {
-    font-size: 30px;
-    line-height: 30px;
-    margin-top: 20px;
-    margin-bottom: 30px;
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: 'Merriweather', serif;
-    color: $dark-grey;
-    margin-top: 1.5em;
-  }
-  p {
-    font-size: 15px;
-    line-height: 1.6;
-    color: $dark-grey;
-    margin-bottom: 1.3em;
-  }
-  small {
-    color: darken($white, 40);
-    font-size: 16px;
-    margin-bottom: 10px;
-    display: block;
-  }
-  a:not(.btn):not(.pagination_pager) {
-    color: $blue;
-  }
-  ul,
-  ol {
-    padding-left: 30px;
-    > li {
-      position: relative;
-      margin-bottom: 20px;
-      &:first-child {
-        margin-top: 20px;
-      }
-    }
-  }
-  blockquote {
-    border: 0;
-    padding: 0 1em 0 1em;
-    margin: 0;
-    > p {
-      display: inline;
-      &:first-of-type {
-        quotes: '\201C' '\201D' '\2018' '\2019';
-        font-size: 1.2em;
-        &::before {
-          content: open-quote;
-          margin-right: 0.1rem;
-        }
-        &::after {
-          content: close-quote;
-          margin-left: 0.1rem;
-        }
-      }
-      &:last-of-type {
-        font-size: 0.8em;
-        display: block;
-        margin-top: 0.5em;
-        width: 100%;
-        text-align: right;
-        quotes: '\201C' '\201D' '\2018' '\2019';
-        font-style: normal;
-        &::before {
-          content: "\000A" "\2014" " ";
-          margin-left: 0.1rem;
-          font-style: normal;
-        }
-      }
-
-      // In case of a quote without a source.
-      &:only-of-type {
-        font-style: italic;
-        font-size: 15px;
-        quotes: '\201C' '\201D' '\2018' '\2019';
-        text-align: left;
-        &::before {
-         content: open-quote;
-         margin-right: 0.1rem;
-        }
-        &::after {
-          content: close-quote;
-          margin-left: 0.1rem;
-        }
-      }
-    }
-  }
-  .footnotes {
-    font-size: 0.9em;
-    p {
-      font-size: 0.9em;
-    }
-  }
-}
 
 .demo {
   margin-bottom: 50px;
 }
 
-.post-title-section {
-  color: rgba(255, 255, 255, 0.9);
-  background-color: rgba(0, 0, 0, 0.85);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 0px;
-  h1,
-  h2,
-  h3 {
-    padding-top: 0;
-    margin-top: 0;
-  }
-  a {
-    color: $link-blue;
-  }
-  a:hover,
-  a:active,
-  a:focus {
-    color: $link-hover;
-  }
-  .tags > li {
-    background: none;
-    border: 1px solid rgba($white, 0.4);
-    color: $white;
-    font-size: 15px;
-  }
-  .section-line {
-    color: $dark-grey;
-    position: relative;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    font-size: 25px;
-    margin-bottom: 20px;
-    &:after {
-      content: '';
-      -webkit-box-flex: 1;
-      -moz-box-flex: 1;
-      -webkit-flex: 1;
-      -ms-flex: 1;
-      flex: 1;
-      height: 3px;
-      background: rgba($white, 0.4);
-      margin-left: 10px;
-    }
-    a {
-      color: $dark-grey;
-      &:hover {
-        color: #4dbe7a;
-      }
-    }
-    em {
-      display: inline-block;
-      margin: 0 10px;
-    }
-    &.reverse {
-      margin-top: 40px;
-      &:before {
-        content: '';
-        -webkit-box-flex: 1;
-        -moz-box-flex: 1;
-        -webkit-flex: 1;
-        -ms-flex: 1;
-        flex: 1;
-        height: 3px;
-        background: rgba($white, 0.4);
-        margin-right: 10px;
-      }
-      &:after {
-        display: none;
-      }
-    }
-  }
-}
 
-.date-highlight {
-  text-align: center;
-  margin: 50px 0;
-  color: darken($white, 40);
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  align-items: center;
-  &:before {
-    content: '';
-    -webkit-box-flex: 1;
-    -moz-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    height: 2px;
-    background: #eaeaea;
-    margin-right: 10px;
-  }
-  &:after {
-    content: '';
-    -webkit-box-flex: 1;
-    -moz-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    height: 2px;
-    background: #eaeaea;
-    margin-left: 10px;
-  }
-}
+
+
+
+
+
+
+
+
+
 
 .footer-line {
   float: right;
@@ -929,14 +600,7 @@ p.light {
       margin-bottom: 10px;
     }
   }
-  .date-highlight {
-    margin: 80px 0 40px;
-  }
-  .post-title-section {
-    .section-line {
-      display: none;
-    }
-  }
+
   .projects-menu li {
     width: 100% !important;
     height: 50% !important;

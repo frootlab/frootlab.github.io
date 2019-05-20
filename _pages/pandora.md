@@ -8,7 +8,7 @@ permalink: /pandora.html
 github: frootlab/pandora
 pypi: project/pandb
 status: "2 - Pre-Alpha"
-license: "General Public License v3"
+license: GPLv3
 license-url: "https://www.gnu.org/licenses/gpl.html"
 ---
 

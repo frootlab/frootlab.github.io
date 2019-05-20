@@ -8,7 +8,7 @@ permalink: /nemoa.html
 github: frootlab/nemoa
 pypi: project/nemoa
 status: "3 - Alpha"
-license: "General Public License v3"
+license: GPLv3
 license-url: "https://www.gnu.org/licenses/gpl.html"
 ---
 

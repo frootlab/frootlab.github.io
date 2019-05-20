@@ -1,0 +1,47 @@
+/* Ribbons */
+
+.ribbon-box {
+  margin: 10px auto;
+  position: relative;
+  z-index: 1;
+}
+
+.ribbon-wrapper {
+  width: 85px;
+  height: 88px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  .ribbon,
+  .blue-ribbon,
+  .green-ribbon,
+  .red-ribbon,
+  .grey_ribbon {
+    font: bold 0.7em sans-serif;
+    color: #333;
+    text-align: center;
+    transform: rotate(-45deg);
+    position: relative;
+    padding: 7px 0;
+    top: 15px;
+    left: -30px;
+    width: 120px;
+  }
+  .blue-ribbon {
+    background-color: $blue;
+    color: white;
+  }
+  .green-ribbon {
+    background-color: $green;
+    color: white;
+  }
+  .red-ribbon {
+    background-color: $red;
+    color: white;
+  }
+  .grey-ribbon {
+    background-color: $dark-grey;
+    color: white;
+  }
+}
