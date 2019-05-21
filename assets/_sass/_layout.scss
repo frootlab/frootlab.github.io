@@ -62,21 +62,25 @@
     overflow: hidden;
     li {
       display: inline-block;
-      background: rgba(20, 20, 20, 0.5);
+      // background-color: $green;
+      // border: 1px solid lighten($green, 5%);
+      background-color: rgba(20, 20, 20, 0.5);
       border: 1px solid transparent;
       border-radius: 5px;
       vertical-align: middle;
       transition: all 0.2s ease-in-out;
       &:hover {
         background-color: $green;
-        border: 1px solid lighten($green, 5%);
+        border-color: lighten($green, 10%);
       }
       &:nth-child(odd) {
-        background: rgba(80, 80, 80, 0.5);
-        border: 1px solid transparent;
+        // background-color: $blue;
+        // border: 1px solid lighten($blue, 5%);
+        background-color: rgba(80, 80, 80, 0.5);
+        border-color: transparent;
         &:hover {
           background-color: $blue;
-          border: 1px solid lighten($blue, 5%);
+          border-color: lighten($blue, 10%);
         }
       }
       a {
