@@ -2,14 +2,20 @@
 layout: compress
 ---
 
-{% include header.html %}
+{% include html-header.html %}
 
 <body id="projects">
 
-  {% include sidenav.html %}
+{% include page-header.html %}
 
-  <div id="main">
+<div id="breadcrumb">
+  <ul>
+    <li class="active"><a href="{{ site.url }}/projects">Projects</a></li>
+    <li class="menu-button"><a onclick="openNav();" title="Menu"><i class="fas fa-bars"></i></a></li>
+  </ul>
+</div>
 
+<div id="main">
   <div class="block-left" style="
     width: 100%;
     background: linear-gradient(
@@ -17,43 +23,36 @@ layout: compress
       rgba(0, 0, 0, 0.0) 100%),
       url({{ site.url }}/{{ site.background.post-list }}) no-repeat;
     background-size: cover;">
-    <div class="content">
-      <div id="breadcrumb">
-          <ul>
-              <li class="active"><a href="{{ site.url }}/projects">Projects</a></li>
-              <li class="menu-button"><a onclick="openNav();" title="Menu"><i class="fas fa-bars"></i></a></li>
+    <div class="overflow-box">
+      <div class="content">
+        <div style="position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          z-index: -1;
+          overflow-y: auto;
+          display: block;">
+          <ul class="projects-menu" style="width: 100%;">
+            {% for item in site.data.projects %}
+              {% capture image %}{{ item.image }}{% endcapture %}
+              {% unless image contains 'http://' or image contains 'https://' %}
+              {% capture image %}{{ site.url }}/{{ image }}{% endcapture %}
+              {% endunless %}
+              <li style="background:url({{ image }}) center center no-repeat;">
+                <a href="{{ item.url }}">
+                  <span>{{ item.title }}</span>
+                </a>
+                </li>
+            {% endfor %}
           </ul>
+        </div>
       </div>
-      <div style="position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: -1;
-        overflow-y: auto;
-        display: block;">
-        <ul class="projects-menu" style="width: 100%;">
-          {% for item in site.data.projects %}
-            {% capture image %}{{ item.image }}{% endcapture %}
-            {% unless image contains 'http://' or image contains 'https://' %}
-            {% capture image %}{{ site.url }}/{{ image }}{% endcapture %}
-            {% endunless %}
-            <li style="background:url({{ image }}) center center no-repeat;">
-              <a href="{{ item.url }}">
-                <span>{{ item.title }}</span>
-              </a>
-              </li>
-          {% endfor %}
-        </ul>
-      </div>
-
+      {% include page-footer.html %}
     </div>
   </div>
-
-  <script src="{{ site.url }}/assets/js/main.min.js"></script>
-
 </div>
 
 </body>
 
-{% include footer.html %}
+{% include html-footer.html %}

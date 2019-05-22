@@ -2,13 +2,21 @@
 layout: compress
 ---
 
-{% include header.html %}
+{% include html-header.html %}
 
 <body id="posts" class="inner-post-page">
 
-  {% include sidenav.html %}
+{% include page-header.html %}
 
-  <div id="main">
+<div id="breadcrumb">
+  <ul>
+    <li class="active"><a href="#">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" | remove: ":" | truncatewords: 3 }}</a></li>
+    <li><a href="{{ site.url }}/blog">Blog</a></li>
+    <li class="menu-button"><a onclick="openNav();" title="Menu"><i class="fas fa-bars"></i></a></li>
+  </ul>
+</div>
+
+<div id="main">
   <div class="block-left" style="
     background: linear-gradient(
       rgba(0, 0, 0, 0.5) 0%,
@@ -16,13 +24,6 @@ layout: compress
       url({{ site.url }}/{{ page.image }}) no-repeat;
     background-size: cover;">
     <div class="content">
-      <div id="breadcrumb">
-          <ul>
-              <li class="active"><a href="#">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" | remove: ":" | truncatewords: 3 }}</a></li>
-              <li><a href="{{ site.url }}/blog">Blog</a></li>
-              <li class="menu-button"><a onclick="openNav();" title="Menu"><i class="fas fa-bars"></i></a></li>
-          </ul>
-      </div>
       <div class="main-info">
       <h1>
         <span class="post-title">
@@ -30,7 +31,6 @@ layout: compress
         </span>
       </h1>
       </div>
-
       <div class="banderole-angle">
         <div style="text-align: center; padding: 1.1em; ">
           {% assign author = site.authors | where: 'name', page.author | first %}
@@ -62,18 +62,18 @@ layout: compress
     </div>
     <a id="scroll" href="{{ site.url }}{{ page.url }}#content" class="scroll-down"></a>
   </div>
-
   <div class="block-right">
-    <div class="inner-post content" id="content">
-      <div class="separator-left">{{ page.date | date: '%d. %B, %Y' }}</div>
-      {{ content }}
-      {% include share-article.html %}
-      {% include related-articles.html %}
+    <div class="overflow-box">
+      <div class="inner-post content" id="content">
+        <div class="separator-left">{{ page.date | date: '%d. %B, %Y' }}</div>
+        {{ content }}
+        {% include share-article.html %}
+        {% include related-articles.html %}
+      </div>
+      {% include page-footer.html %}
     </div>
   </div>
+</div>
 
-  <script src="{{ site.url }}/assets/js/main.min.js"></script>
-  </div>
 </body>
-
-{% include footer.html %}
+{% include html-footer.html %}

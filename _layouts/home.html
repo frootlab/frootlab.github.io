@@ -2,7 +2,7 @@
 layout: compress
 ---
 
-{% include header.html %}
+{% include html-header.html %}
 
 {% assign cur_background = site.url | append: "/" | append: site.background.homepage%}
 {% assign logo = site.url | append: "/images/logos/" | append: site.logo %}
@@ -11,23 +11,23 @@ layout: compress
 
 <body id="homepage">
 
-{% include sidenav.html %}
+{% include page-header.html %}
+
+<div id="breadcrumb">
+  <ul>
+    <li class="menu-button"><a onclick="openNav();" title="Menu"><i class="fas fa-bars"></i></a></li>
+  </ul>
+</div>
 
 <div id="main">
-
-<div class="block-left" style="
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.9) 0%,
-    rgba(0, 0, 0, 0.8) 70%,
-    rgba(0, 0, 0, 0.0) 100%),
-  url({{ cur_background }}) no-repeat;
-  background-size: cover;">
+  <div class="block-left" style="
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.8) 70%,
+      rgba(0, 0, 0, 0.0) 100%),
+    url({{ cur_background }}) no-repeat;
+    background-size: cover;">
     <div class="content">
-      <div id="breadcrumb">
-          <ul>
-              <li class="menu-button"><a onclick="openNav();" title="Menu"><i class="fas fa-bars"></i></a></li>
-          </ul>
-      </div>
       <div class="main-info">
         <a href="{{ logo_link }}" class="logo">
           <img src="{{ logo }}" alt="{{ logo_alt }}">
@@ -41,15 +41,15 @@ layout: compress
   </div>
 
   <div class="block-right">
-    <div class="content" id="content">
-      <div class="about-info">
-        {{ content }}
+    <div class="overflow-box">
+      <div class="content" id="content" style="display: flex; align-items : center;">
+        <div class="about-info">
+          {{ content }}
+        </div>
       </div>
+      {% include page-footer.html %}
     </div>
   </div>
-
-  <script src="{{ site.url }}/assets/js/main.min.js"></script>
-  </div>
+</div>
 </body>
-
-{% include footer.html %}
+{% include html-footer.html %}

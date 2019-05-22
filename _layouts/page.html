@@ -2,46 +2,44 @@
 layout: compress
 ---
 
-{% include header.html %}
+{% include html-header.html %}
 
 <body id="posts" class="inner-post-page">
 
-  {% include sidenav.html %}
+{% include page-header.html %}
 
-  <div id="main">
+<div id="breadcrumb">
+  <ul>
+    <li class="active"><a href="#">404</a></li>
+    <li class="menu-button"><a onclick="openNav();" title="Menu"><i class="fas fa-bars"></i></a></li>
+  </ul>
+</div>
 
-    <div class="block-left">
-      <div class="content">
-        <div id="breadcrumb">
-            <ul>
-                <li class="active"><a href="#">404</a></li>
-                <li class="menu-button"><a onclick="openNav();" title="Menu"><i class="fas fa-bars"></i></a></li>
-            </ul>
-        </div>
-        <div class="banderole">
-          <h1 class="section-title" style='
-            margin: 0;
-            font-size: 3.5em;
-            padding-bottom: 10px;
-            margin-bottom: 0px;'>
-            {{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}
-          </h1>
-        </div>
+<div id="main">
+  <div class="block-left">
+    <div class="content">
+      <div class="banderole">
+        <h1 class="section-title" style='
+          margin: 0;
+          font-size: 3.5em;
+          padding-bottom: 10px;
+          margin-bottom: 0px;'>
+          {{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}
+        </h1>
       </div>
     </div>
-
-    <div class="block-right">
+  </div>
+  <div class="block-right">
+    <div class="overflow-box">
       <div class="inner-post content">
         <div class="date-highlight">{% if page.date %}{{ page.date | date: '%d %b %Y' }}{% else %}&#x2756;{% endif %}</div>
         {{ content }}
         <br>
         {% include page-pagination.html %}
       </div>
+      {% include page-footer.html %}
     </div>
-
-    <script src="{{ site.url }}/assets/js/main.min.js"></script>
-
-    </div>
+  </div>
+</div>
 </body>
-
-{% include footer.html %}
+{% include html-footer.html %}

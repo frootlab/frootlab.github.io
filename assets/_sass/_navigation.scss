@@ -30,7 +30,7 @@
 .sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 1.5em;
   color: #818181;
   display: block;
   transition: 0.3s;
@@ -73,8 +73,7 @@
   .sidenav a {font-size: 18px;}
 }
 
-
-/* Fancy Breadcrumb */
+/* Breadcrumb */
 #breadcrumb {
   float: left;
   display: inline-block; /* The menu will have width as needed, not 100% */
@@ -109,30 +108,30 @@
 
 /* Menu items */
 #breadcrumb ul li a {
-    cursor: pointer;
-    display: inline-block;
-    font-family: sans-serif;
-    font-size: 0.9em;
-    font-weight: 600;
-    padding: 12px 30px 12px 45px; /* Adjusting padding to get the proper space */
-    margin-left: -20px; /* Pull the items to the left, so the rounded right side will get over them */
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    border-radius: 0 100px 100px 0; /* Get the right side rounded */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Apply the shadow */
-    background-color: $dark-grey;
+  cursor: pointer;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  font-weight: 600;
+  padding: 12px 30px 12px 45px; /* Adjusting padding to get the proper space */
+  margin-left: -20px; /* Pull the items to the left, so the rounded right side will get over them */
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0 100px 100px 0; /* Get the right side rounded */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Apply the shadow */
+  background-color: $dark-grey;
+  background: linear-gradient(
+    $dark-grey 0%,
+    darken($dark-grey, 3%) 95%,
+    lighten($dark-grey, 5%) 100%);
+  &:hover {
+    background-color: lighten($dark-grey, 10%);
     background: linear-gradient(
-      $dark-grey 0%,
-      darken($dark-grey, 3%) 95%,
-      lighten($dark-grey, 5%) 100%);
-    &:hover {
-      background-color: lighten($dark-grey, 10%);
-      background: linear-gradient(
-        lighten($dark-grey, 10%) 0%,
-        lighten($dark-grey, 7%) 95%,
-        lighten($dark-grey, 15%) 100%);
-    }
+      lighten($dark-grey, 10%) 0%,
+      lighten($dark-grey, 7%) 95%,
+      lighten($dark-grey, 15%) 100%);
+  }
 }
 
 /* Menu Icon */
