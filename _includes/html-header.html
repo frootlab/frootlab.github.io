@@ -1,32 +1,21 @@
-{% if page.short_name %}
-  {% assign cur_title = page.name %}
-{% elsif page.project %}
-  {% assign cur_title = page.project | capitalize | prepend: " " | prepend: site.title %}
-{% elsif page.title %}
-  {% assign cur_title = page.title | markdownify | strip_html | strip_newlines | escape_once %}
-  {% if cur_title == "About" %}
-    {% assign cur_title = "About " | append: site.title %}
-  {% elsif cur_title == "Projects" %}
-    {% assign cur_title = site.title | append: " Projects" %}
-  {% elsif cur_title == "Blog" %}
-    {% assign cur_title = site.title | append: " Blog" %}
+{% if page.short_name %}{% assign cur_title = page.name %}
+{% elsif page.project %}{% assign cur_title = page.project | capitalize | prepend: " " | prepend: site.title %}
+{% elsif page.title %}{% assign cur_title = page.title | markdownify | strip_html | strip_newlines | escape_once %}
+  {% if cur_title == "About" %}{% assign cur_title = "About " | append: site.title %}
+  {% elsif cur_title == "Projects" %}{% assign cur_title = site.title | append: " Projects" %}
+  {% elsif cur_title == "Blog" %}{% assign cur_title = site.title | append: " Blog" %}
   {% endif %}
-{% else %}
-  {% assign cur_title = site.title | append: " " | append: site.subtitle %}
+{% else %}{% assign cur_title = site.title | append: " " | append: site.subtitle %}
 {% endif %}
 
 {% assign cur_canonical = page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url | replace:'http:','https:' %}
 
-{% if page.excerpt %}
-  {% assign cur_description = page.excerpt | markdownify | strip_html | strip_newlines | escape_once %}
-{% else %}
-  {% assign cur_description = site.description %}
+{% if page.excerpt %}{% assign cur_description = page.excerpt | markdownify | strip_html | strip_newlines | escape_once %}
+{% else %}{% assign cur_description = site.description %}
 {% endif %}
 
-{% if page.tags %}
-  {% assign cur_keywords = page.tags | join: ', ' %}
-{% else %}
-  {% assign cur_keywords = site.keywords %}
+{% if page.tags %}{% assign cur_keywords = page.tags | join: ', ' %}
+{% else %}{% assign cur_keywords = site.keywords %}
 {% endif %}
 
 {% if page.image %}

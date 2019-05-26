@@ -1,17 +1,6 @@
 .inner-post {
   font-family: 'Merriweather', serif;
 
-  h1 {
-    font-size: 70px;
-    line-height: 70px;
-    margin-bottom: 50px;
-  }
-  h2 {
-    font-size: 30px;
-    line-height: 30px;
-    margin-top: 20px;
-    margin-bottom: 30px;
-  }
   h1,
   h2,
   h3,
@@ -20,23 +9,62 @@
   h6 {
     font-family: 'Merriweather', serif;
     color: $dark-grey;
-    margin-top: 1.5em;
+    margin: 2rem 0 1rem;
+
+    i {
+      transform: scale(0.7);
+    }
   }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.3em;
+  }
+
+  h4 {
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  h5 {
+    font-size: 0.9em;
+    font-weight: bold;
+  }
+
+  h6 {
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+
   p {
-    font-size: 15px;
+    font-size: 0.9em;
     line-height: 1.6;
     color: $dark-grey;
-    margin-bottom: 1.3em;
+    margin: 0 0 1rem;
   }
+
+  a.bookmark {
+    float: right;
+  }
+
   small {
     color: darken($white, 40);
     font-size: 16px;
     margin-bottom: 10px;
     display: block;
   }
+
   a:not(.btn):not(.pagination_pager) {
     color: $blue;
   }
+
   ul,
   ol {
     padding-left: 30px;
@@ -195,15 +223,22 @@
   .inner-post {
     column-count: 2;
     margin-top: 2em;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 2rem 0 0.5rem;
+    }
     p {
-      font-size: 0.9em;
       text-align: justify;
       line-height: 1.3;
-      margin-bottom: 1em;
+      margin-bottom: 0.5rem;
     }
     .separator-left,
     .separator-right {
-      margin: 0 0 1em 0;
+      margin: 0 0 1rem 0;
       &:before {
         content: '';
         flex: 0;

@@ -1,6 +1,12 @@
-<div class="footer">
-  <a href="{{ site.url }}/legal/privacy" title="Privacy Statement" class="{{ state_privacy }}">Privacy Policy</a>
-  <a href="{{ site.url }}/legal/imprint" title="Imprint" class="{{ state_imprint }}">Imprint</a>
+{% if page.navid == 'contact' %}{% assign state_contact = 'active' %}{% endif %}
+{% if page.navid == 'privacy' %}{% assign state_privacy = 'active' %}{% endif %}
+{% if page.navid == 'imprint' %}{% assign state_imprint = 'active' %}{% endif %}
+{% if page.navid == 'copyright' %}{% assign state_copyright = 'active' %}{% endif %}
+
+<div id="footer">
+  <a href="{{ site.url }}/contact" title="contact" class="{{ state_contact }}">Contact</a>
+  <a href="{{ site.url }}/legal/privacy" title="Privacy Policy" class="{{ state_privacy }}">Privacy Policy</a>
+  <a href="{{ site.url }}/legal/notice" title="Imprint" class="{{ state_imprint }}">Legal Notice</a>
   <a href="{{ site.url }}/legal/copyright" title="Terms of Use" class="{{ state_copyright }}">© 2019 Frootlab. All Rights Reserved</a>
 </div>
 

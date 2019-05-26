@@ -1,19 +1,18 @@
 ---
 layout: default
 navid: imprint
-title: Imprint
-image: images/back/privacy.webp
-permalink: /legal/imprint.html
+title: Legal Notice
+image: images/back/dose-juice-1184429-unsplash.webp
+permalink: /legal/notice.html
 ---
 
-## Imprint
-
+## Legal Notice
 Responsibility according to Sec. 5 German Telemedia Act (TMG):
 
 Patrick Michl <br>
-Frootlab Smart Analytics
+Frootlab
 
-### Postal address
+### Postal Address
 Patrick Michl <br>
 Floringasse 5 <br>
 69117 Heidelberg  <br>

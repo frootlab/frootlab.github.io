@@ -2,7 +2,7 @@
 layout: default
 navid: copyright
 title: Copyright
-image: images/back/privacy.webp
+image: images/back/dose-juice-1184429-unsplash.webp
 permalink: /legal/copyright.html
 ---
 

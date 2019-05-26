@@ -60,7 +60,7 @@
   margin: 0 auto;
 }
 
-.footer {
+#footer {
   width: 100%;
   padding-right: 1em;
   text-align: right;
@@ -75,8 +75,8 @@
   }
 }
 
-.footer,
-.footer a {
+#footer,
+#footer a {
   font-family: Verdana, sans-serif;
   font-size: 0.85em;
   font-weight: 400;
@@ -275,7 +275,7 @@
       background-color: none;
     }
   }
-  .footer {
+  #footer {
     display: none;
   }
 }
