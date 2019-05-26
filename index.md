@@ -1,7 +1,7 @@
 ---
 layout: home
 navid: home
-image: images/back/home.webp
+image: images/back/dose-juice-1184429-unsplash.webp
 ---
 
 ## About

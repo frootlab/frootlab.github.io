@@ -2,14 +2,17 @@
 layout: compress
 ---
 
-{% include html-header.html %}
-
 {% assign cur_background = site.url | append: "/" | append: page.image %}
 {% assign logo = site.url | append: "/images/logos/" | append: site.logo %}
 {% assign logo_link = site.url  %}
 {% assign logo_alt = "Frootlab Logo" %}
 
-<body id="homepage">
+{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tags_list = site_tags | split:',' | sort %}
+
+{% include html-header.html %}
+
+<body id="posts" class="inner-post-page">
 
 {% include page-header.html %}
 
@@ -22,19 +25,24 @@ layout: compress
 <div id="main">
   <div class="block-left" style="
     background: linear-gradient(
-      rgba(0, 0, 0, 0.9) 0%,
-      rgba(0, 0, 0, 0.8) 70%,
+      rgba(0, 0, 0, 0.5) 0%,
       rgba(0, 0, 0, 0.0) 100%),
-    url({{ cur_background }}) no-repeat;
+      url({{ site.url }}/{{ page.image }}) no-repeat;
     background-size: cover;">
     <div class="content">
       <div class="main-info">
         <a href="{{ logo_link }}" class="logo">
           <img src="{{ logo }}" alt="{{ logo_alt }}">
         </a>
-        <h1 class="underline">{{ site.title }}</h1>
-        <h3>{{ site.subtitle }}</h3>
-        {% include page-social-links.html %}
+        <h1><span class="post-title">{{ site.title }}<br>{{ site.subtitle }}</span></h1>
+      </div>
+      <div class="banderole-angle">
+        <div style="text-align: center; padding: 1.1em; ">
+          {% for item in (0..site.tags.size) %}{% unless forloop.last %}
+          {% capture label %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
+          <a class="btn btn_grey" href="{{site.url}}/tags#{{ label }}">{{ label }}</a>
+          {% endunless %}{% endfor %}
+        </div>
       </div>
       <a id="scroll" href="{{ site.url }}{{ page.url }}#content" class="scroll-down"></a>
     </div>
