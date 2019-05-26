@@ -1,0 +1,11 @@
+.info-box {
+  border-left: 6px solid #2196F3;
+  background-color: rgba(0, 0, 0, 0.04);
+  p {
+    padding: 1rem !important;
+    &:before {
+      content: "Note: ";
+      font-weight: bold;
+    }
+  }
+}

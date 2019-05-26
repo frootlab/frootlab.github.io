@@ -15,9 +15,14 @@ permalink: /contact.html
   <i class="fab fa-github"></i>
 </a>
 
-If you find us elsewhere, you
-should check the identity on [keybase](https://keybase.io/frootlab).
+<div class="info-box">
+<p>
+  If you find us elsewhere, you should check the authenticity on <a
+  href="https://keybase.io/frootlab" target="_blank" rel="noopener
+  noreferrer">Keybase</a>.
+</p>
+</div>
 
 ## Email
-You may ether contact us via [contact@frootlab.org](mailto:contact@frootlab.org)
+You may either contact us via [contact@frootlab.org](mailto:contact@frootlab.org)
 or by using our [contact form]({{ site.url }}/contact/form).

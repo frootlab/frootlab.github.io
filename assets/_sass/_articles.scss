@@ -44,10 +44,14 @@
   }
 
   p {
-    font-size: 0.9em;
+    font-size: 1em;
     line-height: 1.6;
     color: $dark-grey;
     margin: 0 0 1rem;
+  }
+
+  a:not(.btn):not(.pagination_pager) {
+    color: $blue;
   }
 
   a.bookmark {
@@ -61,19 +65,19 @@
     display: block;
   }
 
-  a:not(.btn):not(.pagination_pager) {
-    color: $blue;
-  }
-
   ul,
   ol {
-    padding-left: 30px;
+    padding: 0;
+    margin: 0;
+    padding-left: 1.5rem;
     > li {
       position: relative;
-      margin-bottom: 20px;
-      padding-left: 0.5em;
+      padding: 0 0 0.5rem 0.5rem;
       &:first-child {
-        margin-top: 20px;
+        padding-top: 0.5rem;
+      }
+      &:last-child {
+        padding-bottom: 0.5rem;
       }
     }
   }

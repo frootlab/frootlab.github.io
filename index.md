@@ -1,9 +1,7 @@
 ---
 layout: home
 navid: home
-twitter: frootlab
-github: frootlab
-keybase: frootlab
+image: images/back/home.webp
 ---
 
 ## About
