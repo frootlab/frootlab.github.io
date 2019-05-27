@@ -7,9 +7,10 @@ background: images/back/painting.webp
 permalink: /motley.html
 github: frootlab/motley
 pypi: project/motley
-status: "1 - Planning"
-license: GPLv3
-license-url: "https://www.gnu.org/licenses/gpl.html"
+stage: Planning
+stage-url:
+license: GPL-3.0
+license-url: https://www.gnu.org/licenses/gpl.html
 ---
 
 ## Installation

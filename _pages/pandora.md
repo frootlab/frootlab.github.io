@@ -7,9 +7,10 @@ background: images/back/garden.webp
 permalink: /pandora.html
 github: frootlab/pandora
 pypi: project/pandb
-status: "2 - Pre-Alpha"
-license: GPLv3
-license-url: "https://www.gnu.org/licenses/gpl.html"
+stage: Pre-Alpha
+stage-url:
+license: GPL-3.0
+license-url: https://www.gnu.org/licenses/gpl.html
 ---
 
 ## Installation

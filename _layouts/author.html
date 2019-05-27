@@ -29,11 +29,10 @@ layout: compress
       <div class="main-info">
         <h1><span class="post-title">{{ page.name }}</span></h1>
         <h2><span class="post-subtitle">{{ page.position }}</span></h2>
-        {% include page-social-links.html %}
       </div>
       <div class="banderole-angle">
-        <div style="padding: 1em 2em;">
-          {{ page.content | markdownify }}
+        <div style="text-align: center;">
+          {% include page-social-links.html %}
         </div>
       </div>
     </div>
@@ -42,10 +41,14 @@ layout: compress
 
   <div class="block-right">
     <div class="overflow-box">
-      <div class="content">
-        {% assign posts = site.posts | where: 'author', page.name %}
-        <h2 class="section-title">Posts</h2>
+      <div class="content" style="padding: 3em 5em 7em;">
+        <h2 class="section-title" style="padding-bottom: 0.3em;">About</h2>
+        <div class="grey-box" style="margin-bottom: 3em;">
+          {{ page.content | markdownify }}
+        </div>
+        <h2 class="section-title" style="padding-bottom: 0.3em;">Posts</h2>
         <div class="grid">
+        {% assign posts = site.posts | where: 'author', page.name %}
         {% for post in posts %}
         {% if post.preview %}{% assign preview = post.preview %}
         {% elsif post.image %}{% assign preview = post.image %}
@@ -80,12 +83,10 @@ layout: compress
         <div class="cell"></div>
         </div>
       </div>
+      {% include page-footer.html %}
     </div>
-    {% include page-footer.html %}
   </div>
 </div>
-
-{% include page-footer.html %}
 
 </body>
 {% include html-footer.html %}

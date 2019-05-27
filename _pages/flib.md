@@ -7,9 +7,10 @@ background: images/back/library.webp
 permalink: /flib.html
 github: frootlab/flib
 pypi: project/flib
-status: "depends on module"
-license: GPLv3
-license-url: "https://www.gnu.org/licenses/gpl.html"
+stage: Various
+stage-url:
+license: GPL-3.0
+license-url: https://www.gnu.org/licenses/gpl.html
 ---
 
 ## Installation

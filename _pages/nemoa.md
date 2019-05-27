@@ -7,8 +7,9 @@ background: images/back/robot.webp
 permalink: /nemoa.html
 github: frootlab/nemoa
 pypi: project/nemoa
-status: "3 - Alpha"
-license: GPLv3
+stage: Alpha
+stage-url:
+license: GPL-3.0
 license-url: "https://www.gnu.org/licenses/gpl.html"
 ---
 

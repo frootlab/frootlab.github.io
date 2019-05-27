@@ -50,6 +50,7 @@
 
 #posts .block-right {
   display: block;
+
   .content {
     height: auto;
     min-height: 100% !important;
@@ -76,6 +77,8 @@
   text-align: right;
   margin-top: -2em;
   height: 2em;
+  z-index: 5;
+
   a {
     display: inline-block;
     padding-left: 1em;
@@ -125,51 +128,78 @@
     margin: 10px 0;
     padding-top: 25px;
   }
+}
 
-  ul {
-    font-size: 0.9em;
-    margin-top: 30px;
-    overflow: hidden;
+ul.social-links {
+  font-size: 1em;
+  overflow: hidden;
+  padding: 1em 1em 1.5em;
 
-    li {
-      display: inline-block;
-      background-color: rgba(20, 20, 20, 0.5);
-      border: 1px solid transparent;
-      border-radius: 5px;
-      vertical-align: middle;
-      transition: all 0.2s ease-in-out;
+  li {
+    display: inline-block;
+    // background-color: rgba(20, 20, 20, 0.5);
+    border: 1px solid transparent;
+    border-radius: 5px;
+    vertical-align: middle;
+    transition: all 0.2s ease-in-out;
+    padding: 0.3em 0.5em;
 
-      a {
-        display: inline-block;
-        font-size: 1.3em;
-        padding: 0.3em 0.35em;
-        color: $white;
+    a {
+      // display: inline-block;
+      font-size: 1em;
+      color: white;
+
+      &:active,
+      &:hover,
+      &:visited {
+        color: white;
       }
+
+      i {
+        vertical-align: middle;
+        font-size: 1.2em;
+      }
+
+      span {
+        // display: none;
+        padding-left: 0.4em;
+      }
+    }
+
+    &:hover {
+      background-color: $green;
+      border-color: lighten($green, 10%);
+    }
+
+    &:nth-child(odd) {
+      // background-color: rgba(80, 80, 80, 0.5);
+      border-color: transparent;
 
       &:hover {
-        background-color: $green;
-        border-color: lighten($green, 10%);
-      }
-
-      &:nth-child(odd) {
-        // background-color: $blue;
-        // border: 1px solid lighten($blue, 5%);
-        background-color: rgba(80, 80, 80, 0.5);
-        border-color: transparent;
-
-        &:hover {
-          background-color: $blue;
-          border-color: lighten($blue, 10%);
-        }
+        background-color: $blue;
+        border-color: lighten($blue, 10%);
       }
     }
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 .main-info {
   color: white;
 
   h1 {
+    font-size: 2em;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -191,9 +221,8 @@
   }
 
   h2 {
-    // font-weight: bold;
-    //text-transform: uppercase;
-    // letter-spacing: 1px;
+    font-size: 1.5em;
+    text-transform: uppercase;
   }
 
   h3 {
@@ -209,11 +238,19 @@
 
   span.post-title,
   span.post-subtitle {
-    box-shadow: 0 0 0 .12em rgba(0, 0, 0, 0.7);
-    line-height: 1.8;
+    padding: 0.13em 0;
     background-color: rgba(0, 0, 0, 0.7);
-    padding: 0 0.2rem;
+    box-shadow: 1rem 0 0 rgba(0, 0, 0, 0.7), -1rem 0 0 rgba(0, 0, 0, 0.7);
   }
+
+  span.post-title {
+    line-height: 1.8;
+  }
+
+  span.post-subtitle {
+    line-height: 1.6;
+  }
+
 }
 
 .about-info {

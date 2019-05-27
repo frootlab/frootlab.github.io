@@ -27,26 +27,15 @@ layout: compress
       linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)),
       url({{ page.background }});">
     <div class="content">
-      <div class="main-info">
+      <div class="main-info" style="padding-bottom: 100px;">
         <a href="{{ logo_link }}" class="logo">
           <img src="{{ logo }}" alt="{{ logo_alt }}">
         </a>
         <h1><span class="post-title">{{ page.project }}</span></h1>
         <h2><span class="post-subtitle">{{ page.about }}</span></h2>
-        {% include page-social-links.html %}
       </div>
-      <div class="banderole-angle">
-        <div class="columns">
-          <div class="column" style="flex: 50%;">
-            <i class="fas fa-balance-scale"></i>
-            <a href="{{ page.license-url }}" title="{{ page.license }}" style="margin-left: 0.5em;">
-              {{ page.license }}
-            </a>
-          </div>
-          <div class="column" style="flex: 50%; text-align: right;">
-            Stage: {{ page.status }}
-          </div>
-        </div>
+      <div class="banderole-angle" style="text-align: center;">
+        {% include page-social-links.html %}
       </div>
     </div>
     <a id="scroll" href="{{ site.url }}{{ page.url }}#content" class="scroll-down"></a>
@@ -55,7 +44,7 @@ layout: compress
     <div class="overflow-box">
       <div id="content" class="content">
         {{ content }}
-        <h2>Articles</h2>
+        <h2>Related Posts</h2>
         <div class="grid">
           {% for post in site.posts %}
           {% if post.tags contains project %}
