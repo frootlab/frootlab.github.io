@@ -2,12 +2,16 @@
 layout: compress
 ---
 
+{% if page.short-title %}{% assign short-title = page.short-title %}
+{% else %}{% assign short-title = page.title | markdownify | remove: "<p>" | remove: "</p>" | remove: ":" | truncatewords: 3 %}
+{% endif %}
+
 {% include html-header.html %}
 {% include page-header.html %}
 
 <div id="breadcrumb">
   <ul>
-    <li class="active"><a href="#">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" | remove: ":" | truncatewords: 3 }}</a></li>
+    <li class="active"><a>{{ short-title }}</a></li>
     <li><a href="{{ site.url }}/blog">Blog</a></li>
     <li class="menu-button"><a onclick="openNav();" title="Menu"><i class="fas fa-bars"></i></a></li>
   </ul>
@@ -31,7 +35,7 @@ layout: compress
           {% assign author = site.authors | where: 'name', page.author | first %}
           {% if author %}
           <h3 class="post-author">
-            by <a href="{{ author.url }}" style="color: #0275d8;">{{ author.name }}</a>
+            by <a href="{{ author.url }}">{{ author.name }}</a>
           </h3>
           {% else %}
           <h3 class="post-author">Author: Anonymous</h3>

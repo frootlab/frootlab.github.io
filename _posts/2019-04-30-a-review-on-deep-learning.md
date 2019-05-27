@@ -1,9 +1,10 @@
 ---
 layout: post
 navid: blog
-title: 'The AI Revolution: Deep Learning and what´s next?'
-author: "Patrick Michl"
-license: "CC BY 4.0"
+title: "The AI Revolution: Deep Learning and what´s next?"
+short-title: Deep Learning
+author: Patrick Michl
+license: CC BY 4.0
 license-url: "https://creativecommons.org/licenses/by/4.0/"
 image: images/back/robot.webp
 preview: images/posts/preview/robot.webp
