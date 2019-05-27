@@ -56,7 +56,6 @@ layout: compress
       <div id="content" class="content">
         {{ content }}
         <h2>Articles</h2>
-        <div class="grey-box">
         <div class="grid">
           {% for post in site.posts %}
           {% if post.tags contains project %}
@@ -93,7 +92,6 @@ layout: compress
           {% endfor %}
           <div class="cell"></div>
           <div class="cell"></div>
-        </div>
         </div>
       </div>
     </div>
