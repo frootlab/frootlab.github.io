@@ -2,7 +2,7 @@
 layout: project
 navid: projects
 project: nemoa
-about: Data Analysis Templating System
+about: Automated Machine Learning
 background: images/back/robot.webp
 permalink: /nemoa.html
 github: frootlab/nemoa

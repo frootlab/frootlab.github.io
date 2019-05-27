@@ -63,6 +63,9 @@ permalink: /tags.html
 
 {% endfor %}
 
+<div class="cell"></div>
+<div class="cell"></div>
+
 </div>
 </div>
 

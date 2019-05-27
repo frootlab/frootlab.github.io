@@ -59,6 +59,10 @@ navid: blog
 </div>
 
 {% endfor %}
+
+<div class="cell"></div>
+<div class="cell"></div>
+
 </div>
 </div>
 {% endfor %}

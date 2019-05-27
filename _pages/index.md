@@ -2,6 +2,7 @@
 layout: home
 navid: home
 image: images/back/dose-juice-1184429-unsplash.webp
+permalink: /index.html
 ---
 
 ## About

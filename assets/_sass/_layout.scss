@@ -8,6 +8,7 @@
   height: 100%;
   position: relative;
   display: table;
+
   .content {
     height: 100%;
   }
@@ -17,10 +18,15 @@
   float: left;
   z-index: 1;
   box-shadow: 5px 0px 13px -6px rgba(0, 0, 0, 0.6);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
   > div {
     display: table-cell;
     vertical-align: middle;
   }
+
   .content {
     position: relative;
     z-index: 1;
@@ -30,9 +36,13 @@
 .block-right {
   float: right;
   z-index: 0;
+
   background: linear-gradient(
-    rgba(0, 0, 0, 0.0) 0%,
-    rgba(0, 0, 0, 0.08) 100%);
+    white 0%,
+    white 25%,
+    #f5f5f5 90%,
+    #e8e8e8 100%);
+
   .content {
     padding-bottom: 6em;
   }
@@ -89,86 +99,101 @@
   max-width: 26em;
   width: 100%;
   margin: 0 auto;
+
   h1,
   h2,
   h3 {
-    font-size: 2em;
     position: relative;
     margin-top: 0;
   }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.3em;
+  }
+
   p {
     font-size: 21px;
     line-height: 30px;
     margin: 10px 0;
     padding-top: 25px;
   }
+
   ul {
     font-size: 0.9em;
     margin-top: 30px;
     overflow: hidden;
+
     li {
       display: inline-block;
-      // background-color: $green;
-      // border: 1px solid lighten($green, 5%);
       background-color: rgba(20, 20, 20, 0.5);
       border: 1px solid transparent;
       border-radius: 5px;
       vertical-align: middle;
       transition: all 0.2s ease-in-out;
-      &:hover {
-        background-color: $green;
-        border-color: lighten($green, 10%);
-      }
-      &:nth-child(odd) {
-        // background-color: $blue;
-        // border: 1px solid lighten($blue, 5%);
-        background-color: rgba(80, 80, 80, 0.5);
-        border-color: transparent;
-        &:hover {
-          background-color: $blue;
-          border-color: lighten($blue, 10%);
-        }
-      }
+
       a {
         display: inline-block;
         font-size: 1.3em;
         padding: 0.3em 0.35em;
         color: $white;
       }
+
+      &:hover {
+        background-color: $green;
+        border-color: lighten($green, 10%);
+      }
+
+      &:nth-child(odd) {
+        // background-color: $blue;
+        // border: 1px solid lighten($blue, 5%);
+        background-color: rgba(80, 80, 80, 0.5);
+        border-color: transparent;
+
+        &:hover {
+          background-color: $blue;
+          border-color: lighten($blue, 10%);
+        }
+      }
     }
   }
 }
 
 .main-info {
-  color: $white;
-  h1,
-  h2 {
+  color: white;
+
+  h1 {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
   }
 
-  .post-title {
-    box-shadow: 0 0 0 .1em rgba(0, 0, 0, 0.7);
-    line-height: 1.8;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-
   h1.underline {
+    margin-bottom: 20px;
+
     &:after {
       content: "";
-      width: 100px;
-      height: 2px;
-      background: #585b63;
-      bottom: -20px;
+      width: 80%;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.9);
+      bottom: -10px;
       position: absolute;
       left: 50%;
-      -webkit-transform: translatex(-50%);
-      -moz-transform: translatex(-50%);
-      -ms-transform: translatex(-50%);
-      -o-transform: translatex(-50%);
       transform: translatex(-50%);
     }
+  }
+
+  h2 {
+    // font-weight: bold;
+    //text-transform: uppercase;
+    // letter-spacing: 1px;
   }
 
   h3 {
@@ -176,9 +201,18 @@
     line-height: 30px;
     margin: 10px 0;
     padding-top: 25px;
+
     &:after {
       display: none;
     }
+  }
+
+  span.post-title,
+  span.post-subtitle {
+    box-shadow: 0 0 0 .12em rgba(0, 0, 0, 0.7);
+    line-height: 1.8;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0 0.2rem;
   }
 }
 
@@ -196,6 +230,7 @@
     margin: 10px 0;
     padding-top: 0;
     line-height: 24px;
+
     &:first-of-type {
       padding-top: 35px;
     }
@@ -209,6 +244,7 @@
     background-color: white;
     margin: 0;
   }
+
   .block-left,
   .block-right {
     box-shadow: none;
@@ -236,12 +272,15 @@
   @page {
     margin: 2.54cm 2.54cm;
   }
+
   html {
     overflow: auto;
   }
+
   body {
     margin: 0;
   }
+
   .block-left,
   .block-right {
     position: static;
@@ -259,6 +298,7 @@
       width: 100%;
     }
   }
+
   .main-info,
   .about-info {
     color: $dark-grey;
@@ -275,6 +315,7 @@
       background-color: none;
     }
   }
+
   #footer {
     display: none;
   }

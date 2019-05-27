@@ -2,7 +2,7 @@
 layout: project
 navid: projects
 project: pandora
-about: Universal Data Interface
+about: High Performance Data Proxy
 background: images/back/garden.webp
 permalink: /pandora.html
 github: frootlab/pandora

@@ -22,3 +22,4 @@ $ pip install motley
 [.pdf](https://readthedocs.org/projects/motley/downloads/pdf/latest/){: .btn}
 [.epub](https://readthedocs.org/projects/motley/downloads/epub/latest/){: .btn}
 [.zip](https://readthedocs.org/projects/motley/downloads/htmlzip/latest/){: .btn}
+{: info-box}
