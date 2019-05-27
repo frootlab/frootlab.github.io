@@ -3,9 +3,6 @@ layout: compress
 ---
 
 {% include html-header.html %}
-
-<body id="posts" class="inner-post-page">
-
 {% include page-header.html %}
 
 <div id="breadcrumb">
@@ -22,9 +19,9 @@ layout: compress
       linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)),
       url({{ site.url }}/{{ page.image }});">
     <div class="content">
-      <div class="main-info">
+      <div class="title-page">
         <h1>
-          <span class="post-title">
+          <span class="title">
             {{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}
           </span>
         </h1>
@@ -73,5 +70,4 @@ layout: compress
   </div>
 </div>
 
-</body>
 {% include html-footer.html %}

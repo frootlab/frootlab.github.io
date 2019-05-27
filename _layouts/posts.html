@@ -6,9 +6,6 @@ layout: compress
 {% assign tags_list = site_tags | split:',' | sort %}
 
 {% include html-header.html %}
-
-<body id="posts">
-
 {% include page-header.html %}
 
 <div id="breadcrumb">
@@ -49,14 +46,12 @@ layout: compress
   </div>
   <div class="block-right">
     <div class="overflow-box">
-      <div id="content" class="content" style="padding-top: 2em;">
+      <div id="content" class="content">
         {{ content }}
       </div>
       {% include page-footer.html %}
     </div>
   </div>
 </div>
-
-</body>
 
 {% include html-footer.html %}

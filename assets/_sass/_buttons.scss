@@ -6,7 +6,7 @@
   font-family: Verdana,sans-serif;
   font-size: 0.85em;
   font-weight: 400;
-  color: $btn-text-grey;
+  color: $dark-grey;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -19,7 +19,7 @@
   &:hover {
     background-color: mix($light-grey, $blue, 80%);
     box-shadow: 0px 0px 0px 1px rgba($light-grey, 0.5);
-    color: darken($btn-text-grey, 20%);
+    color: darken($dark-grey, 20%);
   }
   &:active {
     transform: scale(0.97);
@@ -74,18 +74,18 @@
   }
 
   &_grey{
-    background-color: $dark-grey;
+    background-color: $darker-grey;
     background: linear-gradient(
-      $dark-grey 0%,
-      darken($dark-grey, 3%) 95%,
-      lighten($dark-grey, 5%) 100%);
+      $darker-grey 0%,
+      darken($darker-grey, 3%) 95%,
+      lighten($darker-grey, 5%) 100%);
     color: $white !important;
     &:hover {
-      background-color: lighten($dark-grey, 10%);
+      background-color: lighten($darker-grey, 10%);
       background: linear-gradient(
-        lighten($dark-grey, 10%) 0%,
-        lighten($dark-grey, 7%) 95%,
-        lighten($dark-grey, 15%) 100%);
+        lighten($darker-grey, 10%) 0%,
+        lighten($darker-grey, 7%) 95%,
+        lighten($darker-grey, 15%) 100%);
     }
   }
 }

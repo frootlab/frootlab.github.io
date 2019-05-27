@@ -11,9 +11,6 @@ layout: compress
 {% assign tags_list = site_tags | split:',' | sort %}
 
 {% include html-header.html %}
-
-<body id="posts" class="inner-post-page">
-
 {% include page-header.html %}
 
 <div id="breadcrumb">
@@ -28,12 +25,12 @@ layout: compress
       linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)),
       url({{ site.url }}/{{ page.image }});">
     <div class="content">
-      <div class="main-info" style="padding-bottom: 100px;">
+      <div class="title-page" style="padding-bottom: 100px;">
         <a href="{{ logo_link }}" class="logo">
           <img src="{{ logo }}" alt="{{ logo_alt }}">
         </a>
-        <h1><span class="post-title">{{ site.title }}</span></h1>
-        <h2><span class="post-subtitle">{{ site.subtitle }}</span></h2>
+        <h1><span class="title">{{ site.title }}</span></h1>
+        <h2><span class="subtitle">{{ site.subtitle }}</span></h2>
       </div>
       <div class="banderole-angle">
         <div style="text-align: center; padding: 1.1em; ">
@@ -48,8 +45,8 @@ layout: compress
 
   <div class="block-right">
     <div class="overflow-box">
-      <div class="content" id="content" style="display: flex; align-items : center;">
-        <div class="about-info">
+      <div class="content" id="content" style="display: flex; align-items: center;">
+        <div class="about-info" style="max-width: 26em;">
           {{ content }}
         </div>
       </div>
@@ -57,5 +54,5 @@ layout: compress
     </div>
   </div>
 </div>
-</body>
+
 {% include html-footer.html %}

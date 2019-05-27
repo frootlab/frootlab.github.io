@@ -27,12 +27,12 @@ body {
 
 body {
   font-family: $base-font;
-  color: $overlay-color;
+  color: $darker-grey;
   background: $white;
 }
 
 a {
-  color: $overlay-color;
+  color: $darker-grey;
   outline: none;
   text-decoration: none
 }
@@ -41,7 +41,7 @@ a:hover,
 a:active,
 a:focus,
 a:visited {
-  color: $overlay-color;
+  color: $darker-grey;
 }
 
 table {

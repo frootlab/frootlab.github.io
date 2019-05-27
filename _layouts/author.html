@@ -2,14 +2,11 @@
 layout: compress
 ---
 
-{% include html-header.html %}
-
-{% if page.background %}{% assign cur_background = page.background %}
-{% else %}{% assign cur_background = site.url | append: "/" | append: site.background.default-author %}
+{% if page.background %}{% assign bgurl = page.background %}
+{% else %}{% assign bgurl = site.url | append: "/" | append: site.background.default-author %}
 {% endif %}
 
-<body id="posts">
-
+{% include html-header.html %}
 {% include page-header.html %}
 
 <div id="breadcrumb">
@@ -24,11 +21,11 @@ layout: compress
   <div class="block-left" style="
     background-image:
       linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)),
-      url({{ cur_background }});">
+      url({{ bgurl }});">
     <div class="content">
-      <div class="main-info">
-        <h1><span class="post-title">{{ page.name }}</span></h1>
-        <h2><span class="post-subtitle">{{ page.position }}</span></h2>
+      <div class="title-page">
+        <h1><span class="title">{{ page.name }}</span></h1>
+        <h2><span class="subtitle">{{ page.position }}</span></h2>
       </div>
       <div class="banderole-angle">
         <div style="text-align: center;">
@@ -41,46 +38,48 @@ layout: compress
 
   <div class="block-right">
     <div class="overflow-box">
-      <div class="content" style="padding: 3em 5em 7em;">
-        <h2 class="section-title" style="padding-bottom: 0.3em;">About</h2>
-        <div class="grey-box" style="margin-bottom: 3em;">
-          {{ page.content | markdownify }}
-        </div>
-        <h2 class="section-title" style="padding-bottom: 0.3em;">Posts</h2>
-        <div class="grid">
-        {% assign posts = site.posts | where: 'author', page.name %}
-        {% for post in posts %}
-        {% if post.preview %}{% assign preview = post.preview %}
-        {% elsif post.image %}{% assign preview = post.image %}
-        {% else %}{% assign preview = post.image %}
-        {% endif %}
-        {% assign catid = post.categories | first | downcase %}
-        {% if catid == 'corporate' %}{% assign color = 'blue' %}
-        {% elsif catid == 'science' %}{% assign color = 'green' %}
-        {% elsif catid == 'technology' %}{% assign color = 'red' %}
-        {% else %}{% assign color = 'grey' %}
-        {% endif %}
-        <div class="cell">
-          <span class="card-label">{{ post.date | date: '%d %b %Y' }}</span>
-          <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
-            <div class="card">
-              <div class="ribbon-box">
-                <div class="ribbon-wrapper">
-                    <div class="{{ color }}-ribbon">{{ catid }}</div>
+      <div class="content">
+        <div class="about-info">
+          <h2>About</h2>
+          <div class="grey-box">
+            {{ page.content | markdownify }}
+          </div>
+          <h2>Posts</h2>
+          <div class="grid">
+          {% assign posts = site.posts | where: 'author', page.name %}
+          {% for post in posts %}
+          {% if post.preview %}{% assign preview = post.preview %}
+          {% elsif post.image %}{% assign preview = post.image %}
+          {% else %}{% assign preview = post.image %}
+          {% endif %}
+          {% assign catid = post.categories | first | downcase %}
+          {% if catid == 'corporate' %}{% assign color = 'blue' %}
+          {% elsif catid == 'science' %}{% assign color = 'green' %}
+          {% elsif catid == 'technology' %}{% assign color = 'red' %}
+          {% else %}{% assign color = 'grey' %}
+          {% endif %}
+          <div class="cell">
+            <span class="card-label">{{ post.date | date: '%d %b %Y' }}</span>
+            <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
+              <div class="card">
+                <div class="ribbon-box">
+                  <div class="ribbon-wrapper">
+                      <div class="{{ color }}-ribbon">{{ catid }}</div>
+                  </div>
+                </div>
+                <div class="card-image" style="
+                  background: url({{ site.url }}/{{ preview }}) no-repeat;
+                  background-size: cover;"></div>
+                <div class="card-text card-text-{{ color }}">
+                    {{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}
                 </div>
               </div>
-              <div class="card-image" style="
-                background: url({{ site.url }}/{{ preview }}) no-repeat;
-                background-size: cover;"></div>
-              <div class="card-text card-text-{{ color }}">
-                  {{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}
-              </div>
-            </div>
-          </a>
-        </div>
-        {% endfor %}
-        <div class="cell"></div>
-        <div class="cell"></div>
+            </a>
+          </div>
+          {% endfor %}
+          <div class="cell"></div>
+          <div class="cell"></div>
+          </div>
         </div>
       </div>
       {% include page-footer.html %}
@@ -88,5 +87,4 @@ layout: compress
   </div>
 </div>
 
-</body>
 {% include html-footer.html %}
