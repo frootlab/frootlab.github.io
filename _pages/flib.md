@@ -1,9 +1,9 @@
 ---
 layout: project
 navid: projects
-project: flib
-about: Frootlab Shared Library
-background: images/back/library.webp
+title: flib
+subtitle: Frootlab Shared Library
+image: images/back/library.webp
 permalink: /flib.html
 github: frootlab/flib
 pypi: project/flib

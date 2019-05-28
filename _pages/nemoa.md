@@ -1,9 +1,10 @@
 ---
 layout: project
 navid: projects
-project: nemoa
-about: Automated Machine Learning
-background: images/back/robot.webp
+title: Nemoa
+subtitle: Automated Machine Learning
+image: images/back/robot.webp
+logo: images/logos/nemoa.png
 permalink: /nemoa.html
 github: frootlab/nemoa
 pypi: project/nemoa

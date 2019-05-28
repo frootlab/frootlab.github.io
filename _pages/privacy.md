@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 navid: privacy
 title: Privacy Policy
 image: images/back/dose-juice-1184429-unsplash.webp

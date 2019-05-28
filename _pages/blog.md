@@ -1,7 +1,9 @@
 ---
-layout: posts
+layout: blog
 navid: blog
 title: Blog
+short-title: Blog
+image: images/back/hal-gatewood-613602-unsplash.webp
 description: "An archive of all posts sorted by date"
 permalink: /blog.html
 ---
@@ -11,23 +13,16 @@ permalink: /blog.html
 
 {% for post in site.posts limit:4 %}
 
-{% if post.preview %}
-  {% assign preview = post.preview %}
-{% elsif post.image %}
-  {% assign preview = post.image %}
-{% else %}
-  {% assign preview = post.image %}
+{% if post.preview %}{% assign preview = post.preview %}
+{% elsif post.image %}{% assign preview = post.image %}
+{% else %}{% assign preview = post.image %}
 {% endif %}
 
 {% assign catid = post.categories | first | downcase %}
-{% if catid == 'corporate' %}
-  {% assign color = 'blue' %}
-{% elsif catid == 'science' %}
-  {% assign color = 'green' %}
-{% elsif catid == 'technology' %}
-  {% assign color = 'red' %}
-{% else %}
-  {% assign color = 'grey' %}
+{% if catid == 'corporate' %}{% assign color = 'blue' %}
+{% elsif catid == 'science' %}{% assign color = 'green' %}
+{% elsif catid == 'technology' %}{% assign color = 'red' %}
+{% else %}{% assign color = 'grey' %}
 {% endif %}
 
 <div class="cell">

@@ -1,9 +1,10 @@
 ---
 layout: project
 navid: projects
-project: pandora
-about: High Performance Data Proxy
-background: images/back/garden.webp
+title: Pandora
+subtitle: High Performance Data Proxy
+image: images/back/garden.webp
+logo: images/logos/pandora.png
 permalink: /pandora.html
 github: frootlab/pandora
 pypi: project/pandb

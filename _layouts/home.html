@@ -2,16 +2,7 @@
 layout: compress
 ---
 
-{% assign cur_background = site.url | append: "/" | append: page.image %}
-{% assign logo = site.url | append: "/images/logos/" | append: site.logo %}
-{% assign logo_link = site.url  %}
-{% assign logo_alt = "Frootlab Logo" %}
-
-{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-{% assign tags_list = site_tags | split:',' | sort %}
-
-{% include html-header.html %}
-{% include page-header.html %}
+{% include site-header.html %}
 
 <div id="breadcrumb">
   <ul>
@@ -20,39 +11,24 @@ layout: compress
 </div>
 
 <div id="main">
-  <div class="block-left" style="
-    background-image:
-      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)),
-      url({{ site.url }}/{{ page.image }});">
-    <div class="content">
-      <div class="title-page" style="padding-bottom: 100px;">
-        <a href="{{ logo_link }}" class="logo">
-          <img src="{{ logo }}" alt="{{ logo_alt }}">
-        </a>
-        <h1><span class="title">{{ site.title }}</span></h1>
-        <h2><span class="subtitle">{{ site.subtitle }}</span></h2>
-      </div>
-      <div class="banderole-angle">
-        <div style="text-align: center; padding: 1.1em; ">
-          {% for project in site.data.projects %}
-          <a class="btn btn_grey" href="{{ site.url }}{{ project.url }}">{{ project.title }}</a>
-          {% endfor %}
-        </div>
-      </div>
-      <a id="scroll" href="{{ site.url }}{{ page.url }}#content" class="scroll-down"></a>
+  {% include title-page-header.html %}
+  <div class="banderole">
+    <div style="text-align: center; padding: 1.1em; ">
+      {% capture site_tags %}
+      {% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+      {% endcapture %}
+      {% assign tags_list = site_tags | split:',' | sort %}
+      {% for project in site.data.projects %}
+      <a class="btn btn_grey" href="{{ site.url }}{{ project.url }}">{{ project.title }}</a>
+      {% endfor %}
     </div>
   </div>
+  {% include title-page-trailer.html %}
 
-  <div class="block-right">
-    <div class="overflow-box">
-      <div class="content" id="content" style="display: flex; align-items: center;">
-        <div class="about-info" style="max-width: 26em;">
-          {{ content }}
-        </div>
-      </div>
-      {% include page-footer.html %}
-    </div>
-  </div>
+  {% include form-header.html %}
+  {{ content }}
+  {% include form-trailer.html %}
 </div>
 
-{% include html-footer.html %}
+{% include site-trailer.html %}

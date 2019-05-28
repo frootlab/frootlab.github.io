@@ -1,10 +1,10 @@
 {% if page.short_name %}{% assign cur_title = page.name %}
 {% elsif page.project %}{% assign cur_title = page.project | capitalize | prepend: " " | prepend: site.title %}
 {% elsif page.title %}{% assign cur_title = page.title | markdownify | strip_html | strip_newlines | escape_once %}
-  {% if cur_title == "About" %}{% assign cur_title = "About " | append: site.title %}
-  {% elsif cur_title == "Projects" %}{% assign cur_title = site.title | append: " Projects" %}
-  {% elsif cur_title == "Blog" %}{% assign cur_title = site.title | append: " Blog" %}
-  {% endif %}
+{% if cur_title == "About" %}{% assign cur_title = "About " | append: site.title %}
+{% elsif cur_title == "Projects" %}{% assign cur_title = site.title | append: " Projects" %}
+{% elsif cur_title == "Blog" %}{% assign cur_title = site.title | append: " Blog" %}
+{% endif %}
 {% else %}{% assign cur_title = site.title | append: " " | append: site.subtitle %}
 {% endif %}
 
@@ -19,13 +19,12 @@
 {% endif %}
 
 {% if page.image %}
-  {% capture image %}{{ page.image }}{% endcapture %}
-  {% unless image contains 'http://' or image contains 'https://' %}
-    {% capture image %}{{ site.url }}/{{ image }}{% endcapture %}
-  {% endunless %}
-  {% assign cur_image = image %}
-{% else %}
-  {% assign cur_image = site.logo %}
+{% capture image %}{{ page.image }}{% endcapture %}
+{% unless image contains 'http://' or image contains 'https://' %}
+{% capture image %}{{ site.url }}/{{ image }}{% endcapture %}
+{% endunless %}
+{% assign cur_image = image %}
+{% else %}{% assign cur_image = site.logo %}
 {% endif %}
 
 <!DOCTYPE html>
@@ -101,17 +100,19 @@
   {% capture image %}{{ page.image }}{% endcapture %}
   {% unless image contains 'http://' or image contains 'https://' %}{% capture image %}{{ site.url }}/{{ image }}{% endcapture %}{% endunless %}
   <style type="text/css">
-    #posts.inner-post-page .block-left {background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(20, 22, 26, 0.6)), url({{ image }}) no-repeat;background-size: cover;}
+    #posts.inner-post-page .left-page {background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(20, 22, 26, 0.6)), url({{ image }}) no-repeat;background-size: cover;}
   </style>
   {% else %}
   <style type="text/css">
-    #posts.inner-post-page .block-left {background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(20, 22, 26, 0.6)), url({{ site.url }}/{{ site.background.default-post }}) no-repeat; background-size: cover;}
+    #posts.inner-post-page .left-page {background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(20, 22, 26, 0.6)), url({{ site.url }}/{{ site.background.default-post }}) no-repeat; background-size: cover;}
   </style>
   {% endif %}
   <style type="text/css">
-    #posts .block-left {background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(20, 22, 26, 0.6)), url({{ site.url }}/{{ site.background.post-list }}) no-repeat; background-size: cover;}
-    .block-left {background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(20, 22, 26, 0.6)), url({{ site.url }}/{{ site.background.homepage }}) no-repeat; background-size: cover;}
+    #posts .left-page {background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(20, 22, 26, 0.6)), url({{ site.url }}/{{ site.background.post-list }}) no-repeat; background-size: cover;}
+    .left-page {background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(20, 22, 26, 0.6)), url({{ site.url }}/{{ site.background.homepage }}) no-repeat; background-size: cover;}
   </style>
 </head>
 
 <body>
+
+{% include site-navigation.html %}

@@ -1,0 +1,334 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+
+.form {
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  text-align: left;
+
+  h1,
+  h2,
+  h3,
+  p,
+  .panel,
+  .flat-panel,
+  .info {
+    box-sizing: border-box;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: $darker-grey;
+  }
+
+  h1,
+  h2 {
+    font-size: 2.2em;
+    padding: 1em 0 0.3em;
+
+    &:first-of-type {
+      padding-top: 0;
+    }
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  p {
+    color: $dark-grey;
+    font-size: 1em;
+    margin: 1em 0;
+    padding-top: 0;
+    line-height: 1.6;
+  }
+
+  .panel,
+  .flat-panel {
+    background: rgba(0, 0, 0, 0.04);
+    padding: 2rem !important;
+    margin: 0;
+    position: relative;
+    color: $darker-grey;
+
+    p {
+      color: $darker-grey;
+      font-size: 1em;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .panel {
+    box-shadow:
+      0 3px 6px rgba(0, 0, 0, 0.16),
+      0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  .info {
+    border-left: 6px solid #2196F3;
+    padding: 1px 2rem !important;
+    color: $darker-grey;
+
+    p {
+      color: $darker-grey;
+
+      &:before {
+        content: "Note: ";
+        font-weight: bold;
+      }
+    }
+  }
+
+
+
+}
+
+.form .grey-box {
+  background: rgba(0, 0, 0, 0.04);
+  padding: 2em;
+  padding: 1.5rem 1rem !important;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  color: $darker-grey;
+
+  p {
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    color: $darker-grey;
+  }
+}
+
+
+.contact-form-container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.contact-form-container * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 30px;
+  color: #555;
+}
+
+#contact-form fieldset {
+  border: none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="tel"],
+#contact-form input[type="url"],
+#contact-form textarea,
+#contact-form button[type="submit"] {
+  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+
+#contact-form h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+#contact-form h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="tel"],
+#contact-form input[type="url"],
+#contact-form textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#contact-form input[type="text"]:hover,
+#contact-form input[type="email"]:hover,
+#contact-form input[type="tel"]:hover,
+#contact-form input[type="url"]:hover,
+#contact-form textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#contact-form textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact-form button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #4CAF50;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contact-form button[type="submit"]:hover {
+  background: #43A047;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact-form button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.copyright {
+  text-align: center;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+:-moz-placeholder {
+  color: #888;
+}
+
+::-moz-placeholder {
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  color: #888;
+}
+
+/* Grid Layout for cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  padding: 0;
+  margin: 0;
+  grid-gap: 1em;
+}
+
+/* Cells in grid */
+.cell {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* Card Labels */
+.card-label {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* Cards */
+.card {
+  box-sizing: border-box;
+  height: 250px;
+  max-width: 400px;
+  position: relative;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.2s;
+  transition: box-shadow 0.3s cubic-bezier(.25, .8, .25, 1);
+  &:hover {
+    box-shadow:
+      0 3px 6px rgba(0,0,0,0.16),
+      0 3px 6px rgba(0,0,0,0.23);
+    &:active {
+      transform: scale(0.98);
+      box-shadow:
+        0 2px 4px rgba(0,0,0,0.23),
+        0 2px 4px rgba(0,0,0,0.46);
+    }
+    .card-text-blue {
+      border-bottom: 5px solid lighten($blue, 10%);
+    }
+    .card-text-green {
+      border-bottom: 5px solid lighten($green, 10%);
+    }
+    .card-text-red {
+      border-bottom: 5px solid lighten($red, 10%);
+    }
+    .card-text-grey {
+      border-bottom: 5px solid lighten($darker-grey, 10%);
+    }
+  }
+}
+
+.card-image {
+  height: 50%;
+  border-radius: 2px 2px 0px 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Card text */
+.card-text {
+  padding: 0.5em 0.4em 0.7em 0.4em;
+  font-family: Verdana, sans-serif;
+  font-size: 0.9em;
+  font-weight: 400;
+  color: $darker-grey;
+  line-height: 1.5;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 0 0 2px 2px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 50%;
+  transition: all 0.2s ease-in-out;
+  border-top: 1px solid transparent;
+  background-color: white;
+}
+
+/* Adjustments for print */
+@media print {
+  .form {
+    color: $darker-grey;
+    display: block;
+    position: static;
+    width: 100%;
+    .title {
+      font-family: 'Merriweather', serif;
+      font-size: 1em;
+      color: $darker-grey;
+      margin-bottom: 1em;
+      box-shadow: none;
+      line-height: 1.2;
+      background-color: none;
+    }
+  }
+}

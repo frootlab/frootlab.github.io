@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: form
 navid: copyright
 title: Copyright
 image: images/back/dose-juice-1184429-unsplash.webp

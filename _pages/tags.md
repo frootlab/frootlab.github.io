@@ -1,7 +1,9 @@
 ---
-layout: posts
+layout: blog
 navid: blog
 title: Blog
+short-title: Blog
+image: images/back/hal-gatewood-613602-unsplash.webp
 description: "An archive of all posts sorted by tag"
 permalink: /tags.html
 ---

@@ -18,7 +18,7 @@ background:
   homepage: images/back/home.webp
   post-list: images/back/sketch.webp
   default-post: images/back/robot.webp
-  default-author: images/back/robot.webp
+  default: images/back/robot.webp
 
 # Collections
 collections:

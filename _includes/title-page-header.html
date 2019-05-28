@@ -1,0 +1,33 @@
+{% assign title = page.title | markdownify | remove: "<p>" | remove: "</p>" %}
+
+{% if page.image %}
+{% if page.image contains 'http://' or page.image contains 'https://' %}
+{% assign image = page.image %}
+{% else %}{% assign image = site.url | append: "/" | append: page.image %}
+{% endif %}
+{% else %}{% assign image = site.url | append: "/" | append: site.background.default %}
+{% endif %}
+
+{% if page.logo %}
+{% if page.logo contains 'http://' or page.logo contains 'https://' %}
+{% assign logo = page.logo %}
+{% else %}{% assign logo = site.url | append: "/" | append: page.logo %}
+{% endif %}
+{% if page.logo-alt %}{% assign logo-alt = page.logo-alt %}
+{% else %}{% assign logo-alt = title | append: " Logo" %}
+{% endif %}
+{% endif %}
+
+<div class="left-page" style="
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)), url({{ image }});">
+  <div class="content">
+    <div class="title-page">
+      {% if logo %}
+      <div class="logo"><img src="{{ logo }}" alt="{{ logo-alt }}"></div>
+      {% endif %}
+      <h1><span class="title">{{ title }}</span></h1>
+      {% if page.subtitle %}
+      <h2><span class="subtitle">{{ page.subtitle }}</span></h2>
+      {% endif %}
+    </div>
