@@ -5,7 +5,8 @@ title: Blog
 short-title: Blog
 image: images/back/hal-gatewood-613602-unsplash.webp
 description: "An archive of all posts sorted by tag"
-permalink: /tags.html
+permalink: /blog/tags.html
+redirect_from: /tags.html
 ---
 
 {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
@@ -45,7 +46,7 @@ permalink: /tags.html
 {% endif %}
 
 <div class="cell">
-  <span class="card-label">{{ post.date | date: '%d %b %Y' }}</span>
+  <span class="label">{{ post.date | date: '%d %b %Y' }}</span>
   <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
   <div class="card">
     <div class="ribbon-box">

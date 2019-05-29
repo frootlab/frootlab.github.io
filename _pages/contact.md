@@ -5,26 +5,15 @@ title: Connect with us
 short-title: Contact
 image: images/back/dose-juice-1184429-unsplash.webp
 permalink: /contact.html
+twitter: frootlab
+github: frootlab
+keybase: frootlab
 ---
 
-## Social Media
-<div class="panel">
-<a class="btn" title="Twitter" style="font-size: 2em; margin: 0;" href="http://twitter.com/frootlab" target="_blank" rel="noopener noreferrer">
-  <i class="fab fa-twitter"></i>
-</a>
-<a class="btn" title="GitHub" style="font-size: 2em; margin: 0;" href="http://github.com/frootlab" target="_blank" rel="noopener noreferrer">
-  <i class="fab fa-github"></i>
-</a>
-<a class="btn" title="Keybase" style="font-size: 2em; margin: 0;" href="https://keybase.io/frootlab" target="_blank" rel="noopener noreferrer">
-  <i class="fab fa-keybase"></i>
-</a>
+## Communities
+<div class="panel thin">
+{% include user-social-links.html %}
 </div>
-<!-- <br>
-<div class="info">
-<p>
-If You find us elsewhere, you should check the authenticity at <a title="Keybase" href="https://keybase.io/frootlab" target="_blank" rel="noopener noreferrer">Keybase</a>
-</p>
-</div> -->
 
 ## Email
 <div class="contact-form-container">  

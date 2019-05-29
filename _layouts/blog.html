@@ -26,13 +26,13 @@ layout: compress
       {% elsif catid == 'technology' %}{% assign color = 'red' %}
       {% else %}{% assign color = 'grey' %}
       {% endif %}
-      <a class="btn btn_{{ color }}" href="{{site.url}}/categories#{{ name }}">
+      <a class="btn btn_{{ color }}" href="{{site.url}}/blog/categories#{{ name }}">
         {{ name }}
       </a>
       {% endfor %}
       {% for item in (0..site.tags.size) %}{% unless forloop.last %}
       {% capture label %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
-      <a class="btn btn_grey" href="{{site.url}}/tags#{{ label }}">{{ label }}</a>
+      <a class="btn btn_grey" href="{{site.url}}/blog/tags#{{ label }}">{{ label }}</a>
       {% endunless %}{% endfor %}
     </div>
   </div>

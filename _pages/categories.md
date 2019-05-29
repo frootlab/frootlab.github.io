@@ -4,7 +4,8 @@ title: Blog
 short-title: Blog
 image: images/back/hal-gatewood-613602-unsplash.webp
 description: "An archive of all posts sorted by category"
-permalink: /categories.html
+permalink: /blog/categories.html
+redirect_from: /categories.html
 navid: blog
 ---
 
@@ -42,7 +43,7 @@ navid: blog
 {% endif %}
 
 <div class="cell">
-  <span class="card-label">{{ post.date | date: '%d %b %Y' }}</span>
+  <span class="label">{{ post.date | date: '%d %b %Y' }}</span>
   <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
   <div class="card">
     <div class="ribbon-box">

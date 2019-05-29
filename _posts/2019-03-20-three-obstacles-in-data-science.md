@@ -71,8 +71,8 @@ algorithm repository server, that enforces unified data interfaces for different
 algorithm categories. This allows Motley not only to automatically evaluate and
 compare the hosted algorithms with respect to given metrics but thereupon also
 to determine, which algorithm of a given category and data domain is the
-currently best fitting ([CBF](/tags#CBF)) algorithm with respect to the required
-metric.
+currently best fitting ([CBF](/blog/tags#CBF)) algorithm with respect to the
+required metric.
 
 ## \#3: Riding Dead Horses
 

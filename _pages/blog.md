@@ -5,7 +5,8 @@ title: Blog
 short-title: Blog
 image: images/back/hal-gatewood-613602-unsplash.webp
 description: "An archive of all posts sorted by date"
-permalink: /blog.html
+permalink: /blog/index.html
+redirect_from: /blog.html
 ---
 
 <h2 class="section-title">Latest Posts</h2>
@@ -26,7 +27,7 @@ permalink: /blog.html
 {% endif %}
 
 <div class="cell">
-  <span class="card-label">{{ post.date | date: '%d %b %Y' }}</span>
+  <span class="label">{{ post.date | date: '%d %b %Y' }}</span>
   <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
   <div class="card">
     <div class="ribbon-box">

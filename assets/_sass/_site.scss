@@ -36,6 +36,7 @@ h4.enum:before {
   border-radius: 3px;
   cursor: pointer;
   z-index: 3;
+
   &:before {
     content: '';
     position: absolute;
@@ -46,6 +47,7 @@ h4.enum:before {
     border: 2px solid $gray;
     border-radius: 3px;
   }
+
   span {
     position: absolute;
     top: 15px;
@@ -54,6 +56,7 @@ h4.enum:before {
     height: 15px;
     border: 2px solid $gray;
     border-radius: 3px;
+
     &:before {
       content: '';
       position: absolute;
@@ -65,18 +68,23 @@ h4.enum:before {
       border-radius: 3px;
     }
   }
+
   &:hover {
     border-color: $darker-grey;
+
     &:before {
       border-color: $darker-grey;
     }
+
     span {
       border-color: $darker-grey;
+
       &:before {
         border-color: $darker-grey;
       }
     }
   }
+
   &.active {
     position: fixed;
   }
@@ -91,6 +99,7 @@ h4.enum:before {
   height: 25px;
   border: 2px solid $gray;
   background: $white;
+
   &:before {
     content: '';
     width: 20px;
@@ -101,6 +110,7 @@ h4.enum:before {
     top: 2px;
     background: $white;
   }
+
   &:after {
     content: '';
     width: 20px;
@@ -111,8 +121,10 @@ h4.enum:before {
     top: 6px;
     background: $white;
   }
+
   &:hover {
     border-color: $darker-grey;
+
     &:before,
     &:after {
       border-color: $darker-grey;
@@ -146,6 +158,7 @@ h4.enum:before {
   z-index: 2;
   display: none;
   overflow-y: auto;
+
   &.show {
     display: block;
   }
@@ -157,24 +170,29 @@ h4.enum:before {
 
 .projects-menu {
   font-size: 0;
-  height: 100%;
+  height: 80%;
+  width: 100%;
+
   > li {
     display: inline-block;
-    width: calc(100%/3);
+    width: calc(100% / 3);
     height: 50%;
     position: relative;
     vertical-align: top;
     float: left;
     background-size: cover !important;
-    &:nth-child(8n+1),
-    &:nth-child(8n+2) {
+
+    &:nth-child(8n + 1),
+    &:nth-child(8n + 2) {
       width: 50%;
       height: 70%;
     }
-    &:nth-child(8n+6) {
-      width: calc(100%/3 + 100%/3);
+
+    &:nth-child(8n + 6) {
+      width: calc(200% / 3);
       height: 100%;
     }
+
     a {
       border: 30px solid transparent;
       background: rgba(0, 0, 0, 0.3);
@@ -184,11 +202,13 @@ h4.enum:before {
       bottom: 0;
       left: 0;
       transition: background 0.2s linear;
+
       &:hover:after,
       &:hover:before {
         transform: scale(1);
         transition: all 1s;
       }
+
       span {
         position: absolute;
         top: 50%;
@@ -199,15 +219,18 @@ h4.enum:before {
         padding-right: 10px;
         white-space: nowrap;
         text-align: center;
+
         strong {
           color: rgba($white, 0.7);
         }
+
         em {
           font-size: 20px;
           line-height: 33px;
           color: darken($white, 40%);
         }
       }
+
       &:after {
         content: "";
         position: absolute;
@@ -220,6 +243,7 @@ h4.enum:before {
         transform: scale(0, 1);
         transition: all 0.5s;
       }
+
       &:before {
         content: "";
         border-right: 1px solid rgba($white, 0.3);
@@ -335,11 +359,16 @@ p.light {
 
 /* Adjustments for smaller screens */
 @media screen and (max-width: 960px) {
+  .projects-menu {
+    height: 100%;
+  }
+
   .projects-menu li {
     width: 50% !important;
     height: 50% !important;
     float: left;
   }
+
   .share-buttons span {
     display: none;
   }
@@ -364,11 +393,12 @@ p.light {
       }
     }
   }
-  .inner-post {
+  .article {
     h2 {
       font-size: 20px;
       margin-bottom: 20px;
     }
+
     p,
     li {
       font-size: 16px;
@@ -383,6 +413,7 @@ p.light {
     width: 100% !important;
     height: 50% !important;
   }
+
   .content {
     padding: 20px
   }

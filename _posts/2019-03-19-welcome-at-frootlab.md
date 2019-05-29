@@ -25,7 +25,7 @@ beyond scientific and industrial progress. In order to realize our vision, we
 therefore used our personal experiences to identify today's foremost challenges
 in data science and started to develop comprehensive [solutions]({% post_url
 2019-03-20-three-obstacles-in-data-science %}), based on an entirely new
-[programming paradigm](/tags#CAMP).
+[programming paradigm](/blog/tags#CAMP).
 
 According to our fundamental convictions we release our products as [free and
 open-source

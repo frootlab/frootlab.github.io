@@ -11,7 +11,7 @@
 {% if page.logo %}
 {% if page.logo contains 'http://' or page.logo contains 'https://' %}
 {% assign logo = page.logo %}
-{% else %}{% assign logo = site.url | append: "/" | append: page.logo %}
+{% else %}{% assign logo = site.url | append: page.logo %}
 {% endif %}
 {% if page.logo-alt %}{% assign logo-alt = page.logo-alt %}
 {% else %}{% assign logo-alt = title | append: " Logo" %}
@@ -24,7 +24,7 @@
   <div class="content">
     <div class="title-page">
       {% if logo %}
-      <div class="logo"><img src="{{ logo }}" alt="{{ logo-alt }}"></div>
+      <div class="logo"><img src="{{ logo }}" alt="{{ logo-alt }}" style="width: 150px;"></div>
       {% endif %}
       <h1><span class="title">{{ title }}</span></h1>
       {% if page.subtitle %}

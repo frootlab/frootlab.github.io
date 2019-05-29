@@ -2,7 +2,7 @@
 layout: home
 navid: home
 image: images/back/dose-juice-1184429-unsplash.webp
-logo: images/logos/frootlab.png
+logo: /images/svg/frootlab-dark.svg
 logo-alt: Frootlab Logo
 title: Frootlab
 form-style: "max-width: 26em;"

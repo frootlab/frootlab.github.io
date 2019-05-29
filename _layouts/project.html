@@ -15,51 +15,86 @@ layout: compress
 <div id="main">
   {% include title-page-header.html %}
   <div class="banderole" style="text-align: center;">
-    {% include page-social-links.html %}
+    <div style="text-align: center; padding: 1.1em; ">
+      {% capture site_tags %}
+      {% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+      {% endcapture %}
+      {% assign tags_list = site_tags | split:',' | sort %}
+      {% for project in site.data.projects %}
+      <a class="btn btn_grey" href="{{ site.url }}{{ project.url }}">{{ project.title }}</a>
+      {% endfor %}
+    </div>
   </div>
   {% include title-page-trailer.html %}
 
   {% include form-header.html %}
-  {{ content }}
-  <h2>Related Posts</h2>
-  <div class="grid">
-    {% assign name = page.title | capitalize %}
-    {% for post in site.posts %}
-    {% if post.tags contains name %}
-
-    {% if post.preview %}{% assign preview = post.preview %}
-    {% elsif post.image %}{% assign preview = post.image %}
-    {% else %}{% assign preview = post.image %}
-    {% endif %}
-
-    {% assign catid = post.categories | first | downcase %}
-    {% if catid == 'corporate' %}{% assign color = 'blue' %}
-    {% elsif catid == 'science' %}{% assign color = 'green' %}
-    {% elsif catid == 'technology' %}{% assign color = 'red' %}
-    {% else %}{% assign color = 'grey' %}
-    {% endif %}
-    <div class="cell">
-      <span class="card-label">{{ post.date | date: '%d %b %Y' }}</span>
-      <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
-        <div class="card">
-          <div class="ribbon-box">
-            <div class="ribbon-wrapper">
-                <div class="{{ color }}-ribbon">{{ catid }}</div>
-            </div>
-          </div>
-          <div class="card-image" style="
-            background-image: url({{ site.url }}/{{ preview }});"></div>
-          <div class="card-text card-text-{{ color }}">
-            {{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}
-          </div>
-        </div>
-      </a>
+  <div style="border-bottom: 1px solid rgba(0, 0, 0, 0.1); margin-bottom: 3rem; padding-bottom: 3rem;">
+    {% if page.form-logo %}
+    <div style="display: flex; align-items: center;">
+    <img src="{{ site.url }}{{ page.form-logo }}" style="width: 7rem; margin: 0 0.5rem 0 -0.5rem;">
+    <h2 style="font-size: 3em; display: inline-block; padding: 0; margin: 0;">{{ page.title }}</h2>
     </div>
+    <div style="clear: both;"></div>
+    {% else %}
+    <h2>{{ page.title }}</h2>
     {% endif %}
-    {% endfor %}
-    <div class="cell"></div>
-    <div class="cell"></div>
   </div>
+
+  <div style="margin-bottom: 3rem;">
+    <h3>Quickstart</h3>
+    <div class="language-shell highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code><span class="nv">$ </span>pip install {{ page.pypi }}</code></pre>
+      </div>
+    </div>
+    <div class="panel flat thin">
+      <div style="display: inline-block; width: auto; margin-right: 1rem;">
+        <div class="label" style="text-align: center; padding-bottom: 0.5rem;">Documentation</div>
+        {% include documentation-links.html %}
+      </div>
+      <div style="display: inline-block; width: auto; margin-right: 1rem;">
+        <div class="label" style="text-align: center; padding-bottom: 0.5rem;">Source Code</div>
+        {% include project-social-links.html %}
+      </div>
+      <div style="display: inline-block; width: auto;">
+        <div class="label" style="text-align: center; padding-bottom: 0.5rem;">License</div>
+        {% include license-links.html %}
+      </div>
+    </div>
+  </div>
+
+<div style="margin-bottom: 3rem;">
+  <h3>Latest News</h3>
+  {% assign name = page.title | capitalize %}
+  {% for post in site.posts %}
+  {% if post.tags contains name %}
+
+  {% if post.preview %}{% assign preview = post.preview %}
+  {% elsif post.image %}{% assign preview = post.image %}
+  {% else %}{% assign preview = post.image %}
+  {% endif %}
+
+  {% assign catid = post.categories | first | downcase %}
+  {% if catid == 'corporate' %}{% assign color = 'blue' %}
+  {% elsif catid == 'science' %}{% assign color = 'green' %}
+  {% elsif catid == 'technology' %}{% assign color = 'red' %}
+  {% else %}{% assign color = 'grey' %}
+  {% endif %}
+  <p>
+    <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
+      <b>{{ post.date | date: '%d. %B %Y' }}</b>: {{ post.title }}
+    </a>
+  </p>
+  {% endif %}
+  {% endfor %}
+</div>
+
+
+  {{ content }}
+
+
+
   {% include form-trailer.html %}
 </div>
 
