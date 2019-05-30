@@ -3,8 +3,9 @@ layout: project
 navid: projects
 title: flib
 subtitle: Frootlab Shared Library
-image: images/back/library.webp
-permalink: /flib.html
+image: images/webp/library.webp
+permalink: /projects/flib.html
+redirect_from: /flib.html
 github: frootlab/flib
 pypi: flib
 readthedocs: flib

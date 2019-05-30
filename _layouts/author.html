@@ -2,7 +2,7 @@
 layout: compress
 ---
 
-{% include site-header.html %}
+{% include site/header.html %}
 
 <div id="breadcrumb">
   <ul>
@@ -14,15 +14,15 @@ layout: compress
 
 <div id="main">
 
-  {% include title-page-header.html %}
+  {% include front/header.html %}
   <div class="banderole">
     <div style="text-align: center;">
-      {% include user-social-links.html %}
+      {% include links/social.html %}
     </div>
   </div>
-  {% include title-page-trailer.html %}
+  {% include front/trailer.html %}
 
-  {% include form-header.html %}
+  {% include form/header.html %}
   <h2>About</h2>
   <div class="panel flat thin">
     {{ page.content | markdownify }}
@@ -63,8 +63,8 @@ layout: compress
     <div class="cell"></div>
     <div class="cell"></div>
   </div>
-  {% include form-trailer.html %}
+  {% include form/trailer.html %}
 
 </div>
 
-{% include site-trailer.html %}
+{% include site/trailer.html %}

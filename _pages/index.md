@@ -1,7 +1,7 @@
 ---
 layout: home
 navid: home
-image: images/back/dose-juice-1184429-unsplash.webp
+image: images/webp/dose-juice-1184429-unsplash.webp
 logo: /images/svg/frootlab-dark.svg
 logo-alt: Frootlab Logo
 title: Frootlab

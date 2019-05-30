@@ -3,7 +3,7 @@ layout: blog
 navid: blog
 title: Blog
 short-title: Blog
-image: images/back/hal-gatewood-613602-unsplash.webp
+image: images/webp/hal-gatewood-613602-unsplash.webp
 description: "An archive of all posts sorted by tag"
 permalink: /blog/tags.html
 redirect_from: /tags.html

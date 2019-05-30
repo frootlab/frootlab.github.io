@@ -2,7 +2,7 @@
 layout: form
 navid: imprint
 title: Legal Notice
-image: images/back/dose-juice-1184429-unsplash.webp
+image: images/webp/dose-juice-1184429-unsplash.webp
 permalink: /legal/notice.html
 ---
 

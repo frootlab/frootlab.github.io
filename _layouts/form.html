@@ -2,7 +2,7 @@
 layout: compress
 ---
 
-{% include site-header.html %}
+{% include site/header.html %}
 
 {% assign title = page.title | markdownify | remove: "<p>" | remove: "</p>" %}
 {% if page.short-title %}{% assign short-title = page.short-title %}
@@ -17,12 +17,12 @@ layout: compress
 </div>
 
 <div id="main">
-  {% include title-page-header.html %}
-  {% include title-page-trailer.html %}
+  {% include front/header.html %}
+  {% include front/trailer.html %}
 
-  {% include form-header.html %}
+  {% include form/header.html %}
   {{ content }}
-  {% include form-trailer.html %}
+  {% include form/trailer.html %}
 </div>
 
-{% include site-trailer.html %}
+{% include site/trailer.html %}

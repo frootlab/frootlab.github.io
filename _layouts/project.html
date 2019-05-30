@@ -2,7 +2,7 @@
 layout: compress
 ---
 
-{% include site-header.html %}
+{% include site/header.html %}
 
 <div id="breadcrumb">
   <ul>
@@ -13,7 +13,7 @@ layout: compress
 </div>
 
 <div id="main">
-  {% include title-page-header.html %}
+  {% include front/header.html %}
   <div class="banderole" style="text-align: center;">
     <div style="text-align: center; padding: 1.1em; ">
       {% capture site_tags %}
@@ -26,9 +26,9 @@ layout: compress
       {% endfor %}
     </div>
   </div>
-  {% include title-page-trailer.html %}
+  {% include front/trailer.html %}
 
-  {% include form-header.html %}
+  {% include form/header.html %}
   <div style="border-bottom: 1px solid rgba(0, 0, 0, 0.1); margin-bottom: 3rem; padding-bottom: 3rem;">
     {% if page.form-logo %}
     <div style="display: flex; align-items: center;">
@@ -51,15 +51,15 @@ layout: compress
     <div class="panel flat thin">
       <div style="display: inline-block; width: auto; margin-right: 1rem;">
         <div class="label" style="text-align: center; padding-bottom: 0.5rem;">Documentation</div>
-        {% include documentation-links.html %}
+        {% include links/docs.html %}
       </div>
       <div style="display: inline-block; width: auto; margin-right: 1rem;">
         <div class="label" style="text-align: center; padding-bottom: 0.5rem;">Source Code</div>
-        {% include project-social-links.html %}
+        {% include links/project.html %}
       </div>
       <div style="display: inline-block; width: auto;">
         <div class="label" style="text-align: center; padding-bottom: 0.5rem;">License</div>
-        {% include license-links.html %}
+        {% include links/license.html %}
       </div>
     </div>
   </div>
@@ -83,7 +83,7 @@ layout: compress
   {% endif %}
   <p>
     <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
-      <b>{{ post.date | date: '%d. %B %Y' }}</b>: {{ post.title }}
+      <b>{{ post.date | date: '%d. %B, %Y' }}</b>: {{ post.title }}
     </a>
   </p>
   {% endif %}
@@ -95,7 +95,7 @@ layout: compress
 
 
 
-  {% include form-trailer.html %}
+  {% include form/trailer.html %}
 </div>
 
-{% include site-trailer.html %}
+{% include site/trailer.html %}

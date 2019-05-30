@@ -2,7 +2,7 @@
 layout: compress
 ---
 
-{% include site-header.html %}
+{% include site/header.html %}
 
 <div id="breadcrumb">
   <ul>
@@ -12,8 +12,8 @@ layout: compress
 </div>
 
 <div id="main">
-  {% include title-page-header.html %}
-  {% include title-page-trailer.html %}
+  {% include front/header.html %}
+  {% include front/trailer.html %}
 
   <div class="right-page">
     <div class="overflow-box">
@@ -21,9 +21,9 @@ layout: compress
         <div class="date-highlight">{% if page.date %}{{ page.date | date: '%d %b %Y' }}{% else %}&#x2756;{% endif %}</div>
         {{ content }}
       </div>
-      {% include site-footer.html %}
+      {% include site/footer.html %}
     </div>
   </div>
 </div>
 
-{% include site-trailer.html %}
+{% include site/trailer.html %}

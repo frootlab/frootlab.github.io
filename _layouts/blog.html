@@ -5,7 +5,7 @@ layout: compress
 {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign tags_list = site_tags | split:',' | sort %}
 
-{% include site-header.html %}
+{% include site/header.html %}
 
 <div id="breadcrumb">
   <ul>
@@ -15,7 +15,7 @@ layout: compress
 </div>
 
 <div id="main">
-  {% include title-page-header.html %}
+  {% include front/header.html %}
   <div class="banderole">
     <div style="text-align: center; padding: 1.1em 2em; ">
       {% for category in site.categories %}
@@ -36,11 +36,11 @@ layout: compress
       {% endunless %}{% endfor %}
     </div>
   </div>
-  {% include title-page-trailer.html %}
+  {% include front/trailer.html %}
 
-  {% include form-header.html %}
+  {% include form/header.html %}
   {{ content }}
-  {% include form-trailer.html %}
+  {% include form/trailer.html %}
 </div>
 
-{% include site-trailer.html %}
+{% include site/trailer.html %}

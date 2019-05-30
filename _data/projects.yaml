@@ -1,19 +1,19 @@
 - title: Pandora
-  url: /pandora.html
-  image: /images/back/garden.webp
+  url: /projects/pandora.html
+  image: /images/webp/garden.webp
   completed: true
 
 - title: Nemoa
-  url: /nemoa.html
-  image: /images/back/robot.webp
+  url: /projects/nemoa.html
+  image: /images/webp/robot.webp
   completed: true
 
 - title: Motley
-  url: /motley.html
-  image: /images/back/painting.webp
+  url: /projects/motley.html
+  image: /images/webp/painting.webp
   completed: true
 
 - title: flib
-  url: /flib.html
-  image: /images/back/library.webp
+  url: /projects/flib.html
+  image: /images/webp/library.webp
   completed: true

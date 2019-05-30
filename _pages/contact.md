@@ -3,16 +3,17 @@ layout: form
 navid: contact
 title: Connect with us
 short-title: Contact
-image: images/back/dose-juice-1184429-unsplash.webp
+image: images/webp/dose-juice-1184429-unsplash.webp
 permalink: /contact.html
 twitter: frootlab
 github: frootlab
 keybase: frootlab
+rss:
 ---
 
-## Communities
+## Community
 <div class="panel thin">
-{% include user-social-links.html %}
+{% include links/social.html %}
 </div>
 
 ## Email

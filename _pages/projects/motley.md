@@ -3,9 +3,10 @@ layout: project
 navid: projects
 title: Motley
 subtitle: Smart Algorithm Repository
-image: images/back/painting.webp
+image: images/webp/painting.webp
 form-logo: /images/svg/motley.svg
-permalink: /motley.html
+permalink: /projects/motley.html
+redirect_from: /motley.html
 github: frootlab/motley
 pypi: motley
 readthedocs: motley

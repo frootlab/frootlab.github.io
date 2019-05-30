@@ -2,7 +2,7 @@
 layout: compress
 ---
 
-{% include site-header.html %}
+{% include site/header.html %}
 
 <div id="breadcrumb">
   <ul>
@@ -12,7 +12,7 @@ layout: compress
 </div>
 
 <div id="main">
-  {% include single-page-header.html %}
+  {% include single/header.html %}
   <ul class="projects-menu">
     {% for item in site.data.projects %}
       {% capture image %}{{ item.image }}{% endcapture %}
@@ -38,7 +38,7 @@ layout: compress
     display: block;">
 
   </div> -->
-  {% include single-page-trailer.html %}
+  {% include single/trailer.html %}
 </div>
 
-{% include site-trailer.html %}
+{% include site/trailer.html %}

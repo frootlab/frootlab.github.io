@@ -15,10 +15,10 @@ future: true
 
 # Left Block Images
 background:
-  homepage: images/back/home.webp
-  post-list: images/back/sketch.webp
-  default-post: images/back/robot.webp
-  default: images/back/robot.webp
+  homepage: images/webp/home.webp
+  post-list: images/webp/sketch.webp
+  default-post: images/webp/robot.webp
+  default: images/webp/robot.webp
 
 # Collections
 collections:
@@ -26,7 +26,6 @@ collections:
     output: true
 
 # Jekyll
-#permalink:          /:title/
 markdown:           kramdown
 remote_theme:       taylantatli/Halve
 highlighter:        rouge

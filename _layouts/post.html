@@ -8,7 +8,7 @@ layout: compress
 {% endif %}
 {% assign author = site.authors | where: 'title', page.author | first %}
 
-{% include site-header.html %}
+{% include site/header.html %}
 
 <div id="breadcrumb">
   <ul>
@@ -19,7 +19,7 @@ layout: compress
 </div>
 
 <div id="main">
-  {% include title-page-header.html %}
+  {% include front/header.html %}
   <div class="banderole">
     <div style="text-align: center; padding: 1.1em; ">
       {% if author %}
@@ -45,14 +45,14 @@ layout: compress
       {% endif %}
     </div>
   </div>
-  {% include title-page-trailer.html %}
+  {% include front/trailer.html %}
 
-  {% include article-header.html %}
+  {% include article/header.html %}
   <div class="separator-left">{{ page.date | date: '%d. %B, %Y' }}</div>
   {{ content }}
-  {% include article-share.html %}
-  {% include article-related.html %}
-  {% include article-trailer.html %}
+  {% include article/share.html %}
+  {% include article/related.html %}
+  {% include article/trailer.html %}
 </div>
 
-{% include site-trailer.html %}
+{% include site/trailer.html %}

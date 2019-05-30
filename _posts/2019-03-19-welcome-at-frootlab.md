@@ -6,7 +6,7 @@ short-title: Welcome
 author: Patrick Michl
 license: "CC BY 4.0"
 license-url: "https://creativecommons.org/licenses/by/4.0/"
-image: images/back/splash.webp
+image: images/webp/splash.webp
 preview: images/posts/preview/splash.webp
 pdf: files/posts/2019-03-19-welcome-at-frootlab.pdf
 categories:

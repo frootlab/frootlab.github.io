@@ -3,9 +3,10 @@ layout: project
 navid: projects
 title: Nemoa
 subtitle: Automated Machine Learning
-image: images/back/robot.webp
+image: images/webp/robot.webp
 form-logo: /images/svg/nemoa.svg
-permalink: /nemoa.html
+permalink: /projects/nemoa.html
+redirect_from: /nemoa.html
 github: frootlab/nemoa
 pypi: nemoa
 readthedocs: nemoa
