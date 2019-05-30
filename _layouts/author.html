@@ -4,67 +4,55 @@ layout: compress
 
 {% include site/header.html %}
 
-<div id="breadcrumb">
-  <ul>
-    <li class="active"><a>{{ page.title }}</a></li>
-    <li><a>Staff</a></li>
-    <li class="menu-button"><a onclick="openNav();" title="Menu"><i class="fas fa-bars"></i></a></li>
-  </ul>
+{% include front/header.html %}
+<div class="banderole">
+  <div style="text-align: center;">
+    {% include links/social.html %}
+  </div>
 </div>
+{% include front/trailer.html %}
 
-<div id="main">
-
-  {% include front/header.html %}
-  <div class="banderole">
-    <div style="text-align: center;">
-      {% include links/social.html %}
-    </div>
-  </div>
-  {% include front/trailer.html %}
-
-  {% include form/header.html %}
-  <h2>About</h2>
-  <div class="panel flat thin">
-    {{ page.content | markdownify }}
-  </div>
-  <h2>Posts</h2>
-  <div class="grid">
-    {% assign posts = site.posts | where: 'author', page.title %}
-    {% for post in posts %}
-    {% if post.preview %}{% assign preview = post.preview %}
-    {% elsif post.image %}{% assign preview = post.image %}
-    {% else %}{% assign preview = post.image %}
-    {% endif %}
-    {% assign catid = post.categories | first | downcase %}
-    {% if catid == 'corporate' %}{% assign color = 'blue' %}
-    {% elsif catid == 'science' %}{% assign color = 'green' %}
-    {% elsif catid == 'technology' %}{% assign color = 'red' %}
-    {% else %}{% assign color = 'grey' %}
-    {% endif %}
-    <div class="cell">
-      <span class="label">{{ post.date | date: '%d %b %Y' }}</span>
-      <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
-        <div class="card">
-          <div class="ribbon-box">
-            <div class="ribbon-wrapper">
-                <div class="{{ color }}-ribbon">{{ catid }}</div>
-            </div>
-          </div>
-          <div class="card-image" style="
-            background: url({{ site.url }}/{{ preview }}) no-repeat;
-            background-size: cover;"></div>
-          <div class="card-text card-text-{{ color }}">
-              {{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}
+{% include form/header.html %}
+<h2>About</h2>
+<div class="panel flat thin">
+  {{ page.content | markdownify }}
+</div>
+<h2>Posts</h2>
+<div class="grid">
+  {% assign posts = site.posts | where: 'author', page.title %}
+  {% for post in posts %}
+  {% if post.preview %}{% assign preview = post.preview %}
+  {% elsif post.image %}{% assign preview = post.image %}
+  {% else %}{% assign preview = post.image %}
+  {% endif %}
+  {% assign catid = post.categories | first | downcase %}
+  {% if catid == 'corporate' %}{% assign color = 'blue' %}
+  {% elsif catid == 'science' %}{% assign color = 'green' %}
+  {% elsif catid == 'technology' %}{% assign color = 'red' %}
+  {% else %}{% assign color = 'grey' %}
+  {% endif %}
+  <div class="cell">
+    <span class="label">{{ post.date | date: '%d %b %Y' }}</span>
+    <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
+      <div class="card">
+        <div class="ribbon-box">
+          <div class="ribbon-wrapper">
+              <div class="{{ color }}-ribbon">{{ catid }}</div>
           </div>
         </div>
-      </a>
-    </div>
-    {% endfor %}
-    <div class="cell"></div>
-    <div class="cell"></div>
+        <div class="card-image" style="
+          background: url({{ site.url }}/{{ preview }}) no-repeat;
+          background-size: cover;"></div>
+        <div class="card-text card-text-{{ color }}">
+            {{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}
+        </div>
+      </div>
+    </a>
   </div>
-  {% include form/trailer.html %}
-
+  {% endfor %}
+  <div class="cell"></div>
+  <div class="cell"></div>
 </div>
+{% include form/trailer.html %}
 
 {% include site/trailer.html %}

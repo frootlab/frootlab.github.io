@@ -4,25 +4,11 @@ layout: compress
 
 {% include site/header.html %}
 
-{% assign title = page.title | markdownify | remove: "<p>" | remove: "</p>" %}
-{% if page.short-title %}{% assign short-title = page.short-title %}
-{% else %}{% assign short-title = title | remove: ":" | truncatewords: 3 %}
-{% endif %}
+{% include front/header.html %}
+{% include front/trailer.html %}
 
-<div id="breadcrumb">
-  <ul>
-    <li class="active"><a>{{ short-title }}</a></li>
-    <li class="menu-button"><a onclick="openNav();" title="Menu"><i class="fas fa-bars"></i></a></li>
-  </ul>
-</div>
-
-<div id="main">
-  {% include front/header.html %}
-  {% include front/trailer.html %}
-
-  {% include form/header.html %}
-  {{ content }}
-  {% include form/trailer.html %}
-</div>
+{% include form/header.html %}
+{{ content }}
+{% include form/trailer.html %}
 
 {% include site/trailer.html %}

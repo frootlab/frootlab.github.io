@@ -4,41 +4,20 @@ layout: compress
 
 {% include site/header.html %}
 
-<div id="breadcrumb">
-  <ul>
-    <li class="active"><a href="{{ site.url }}/projects">Projects</a></li>
-    <li class="menu-button"><a onclick="openNav();" title="Menu"><i class="fas fa-bars"></i></a></li>
-  </ul>
-</div>
-
-<div id="main">
-  {% include single/header.html %}
-  <ul class="projects-menu">
-    {% for item in site.data.projects %}
-      {% capture image %}{{ item.image }}{% endcapture %}
-      {% unless image contains 'http://' or image contains 'https://' %}
-      {% capture image %}{{ site.url }}/{{ image }}{% endcapture %}
-      {% endunless %}
-      <li style="background:url({{ image }}) center center no-repeat;">
-        <a href="{{ item.url }}">
-          <span>{{ item.title }}</span>
-        </a>
-        </li>
-    {% endfor %}
-  </ul>
-
-<!--
-  <div style="position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    overflow-y: auto;
-    display: block;">
-
-  </div> -->
-  {% include single/trailer.html %}
-</div>
+{% include single/header.html %}
+<ul class="projects-menu">
+  {% for item in site.data.projects %}
+    {% capture image %}{{ item.image }}{% endcapture %}
+    {% unless image contains 'http://' or image contains 'https://' %}
+    {% capture image %}{{ site.url }}/{{ image }}{% endcapture %}
+    {% endunless %}
+    <li style="background:url({{ image }}) center center no-repeat;">
+      <a href="{{ item.url }}">
+        <span>{{ item.title }}</span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
+{% include single/trailer.html %}
 
 {% include site/trailer.html %}

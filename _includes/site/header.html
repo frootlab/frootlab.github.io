@@ -9,7 +9,6 @@
 {% endif %}
 
 {% assign cur_canonical = page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url | replace:'http:','https:' %}
-
 {% if page.excerpt %}{% assign cur_description = page.excerpt | markdownify | strip_html | strip_newlines | escape_once %}
 {% else %}{% assign cur_description = site.description %}
 {% endif %}
@@ -116,3 +115,6 @@
 <body>
 
 {% include site/navigation.html %}
+{% include site/breadcrumbs.html %}
+
+<div id="main">

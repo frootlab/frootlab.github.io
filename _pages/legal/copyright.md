@@ -4,6 +4,7 @@ navid: copyright
 title: Copyright
 image: images/webp/dose-juice-1184429-unsplash.webp
 permalink: /legal/copyright.html
+redirect_from: /copyright.html
 ---
 
 ## Terms of Use

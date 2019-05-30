@@ -2,8 +2,10 @@
 layout: article
 navid: privacy
 title: Privacy Policy
+short-title: Privacy
 image: images/webp/dose-juice-1184429-unsplash.webp
 permalink: /legal/privacy.html
+redirect_from: /privacy.html
 ---
 
 ## Table of contents
@@ -12,16 +14,16 @@ permalink: /legal/privacy.html
     1. [How is data collected on this website?](#data-collection)
     1. [How is the collected data used for?](#data-usage)
     1. [What are your rights on your personal data?](#your-rights)
-2. [Details on data collecting services](#details)
+1. [Details on data collecting services](#details)
     1. [Server log files](#server-log-files)
     1. [Contact form](#contact-form)
     1. [Newsletter](#newsletter)
     1. [Google Analytics](#google-analytics)
     1. [Google Webfonts](#google-webfont)
     1. [Font Awesome](#font-awesome)
-3. [Data security](#data-security)
+1. [Data security](#data-security)
     1. [SSL and TLS encryption](#ssl-and-tls-encryption)
-4. [Remarks on this privacy policy](#remarks)
+1. [Remarks on this privacy policy](#remarks)
     1. [Revision](#revision)
     1. [Questions?](#questions)
 

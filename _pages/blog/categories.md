@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Blog
-short-title: Blog
+short-title: Category
 image: images/webp/hal-gatewood-613602-unsplash.webp
 description: "An archive of all posts sorted by category"
 permalink: /blog/categories.html

@@ -1,0 +1,28 @@
+{% if page.crumbs %}
+{% assign crumbs = page.crumbs | split: '/' | offset: 1 %}
+{% else %}
+{% assign crumbs = page.url | remove: '/index.html' | split: '/' | offset: 1 %}
+{% endif %}
+{% assign rcrumbs = crumbs | reverse %}
+{% assign total = crumbs | size %}
+
+{% assign title = page.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% if page.short-title %}{% assign short-title = page.short-title %}
+{% else %}{% assign short-title = title | remove: ":" | truncatewords: 3 %}
+{% endif %}
+
+<div id="breadcrumb">
+  <ul>
+    {% for crumb in rcrumbs %}
+    {% if crumb != '' %}
+      {% if forloop.index == 1 %}
+      <li class="active"><a>{{ short-title }}</a></li>
+      {% else %}
+      {% assign crumb_limit = total | minus: forloop.index | plus: 1 %}
+      <li><a href="{{ site.url }}{% for i in crumbs limit: crumb_limit %}{{ i | append: '/' }}{% endfor %}">{{ crumb }}</a></li>
+      {% endif %}
+    {% endif %}
+    {% endfor %}
+    <li class="menu-button"><a onclick="openNav();" title="Menu"><i class="fas fa-bars"></i></a></li>
+  </ul>
+</div>

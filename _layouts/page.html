@@ -4,25 +4,16 @@ layout: compress
 
 {% include site/header.html %}
 
-<div id="breadcrumb">
-  <ul>
-    <li class="active"><a href="#">404</a></li>
-    <li class="menu-button"><a onclick="openNav();" title="Menu"><i class="fas fa-bars"></i></a></li>
-  </ul>
-</div>
+{% include front/header.html %}
+{% include front/trailer.html %}
 
-<div id="main">
-  {% include front/header.html %}
-  {% include front/trailer.html %}
-
-  <div class="right-page">
-    <div class="overflow-box">
-      <div class="article content">
-        <div class="date-highlight">{% if page.date %}{{ page.date | date: '%d %b %Y' }}{% else %}&#x2756;{% endif %}</div>
-        {{ content }}
-      </div>
-      {% include site/footer.html %}
+<div class="right-page">
+  <div class="overflow-box">
+    <div class="article content">
+      <div class="date-highlight">{% if page.date %}{{ page.date | date: '%d %b %Y' }}{% else %}&#x2756;{% endif %}</div>
+      {{ content }}
     </div>
+    {% include site/footer.html %}
   </div>
 </div>
 
