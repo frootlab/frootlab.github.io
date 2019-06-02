@@ -3,7 +3,7 @@ layout: form
 navid: contact
 title: Connect with us
 short-title: Contact
-image: images/webp/dose-juice-1184429-unsplash.webp
+image-cloudinary: unsplash-1184429
 permalink: /contact.html
 twitter: frootlab
 github: frootlab

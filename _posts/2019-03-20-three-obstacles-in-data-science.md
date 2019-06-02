@@ -7,8 +7,7 @@ crumbs: /blog/Three obstacles
 author: Patrick Michl
 license: "CC BY 4.0"
 license-url: "https://creativecommons.org/licenses/by/4.0/"
-image: images/webp/doors.webp
-preview: images/posts/preview/doors.webp
+image-cloudinary: pexels-67843
 pdf: files/posts/2019-03-20-three-obstacles-in-data-science.pdf
 categories:
   - Corporate

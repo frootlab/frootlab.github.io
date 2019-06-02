@@ -3,7 +3,7 @@ layout: project
 navid: projects
 title: flib
 subtitle: Frootlab Shared Library
-image: images/webp/library.webp
+image-cloudinary: pexels-1166657
 permalink: /projects/flib.html
 redirect_from: /flib.html
 github: frootlab/flib

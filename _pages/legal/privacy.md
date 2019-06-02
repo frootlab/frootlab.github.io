@@ -3,7 +3,7 @@ layout: article
 navid: privacy
 title: Privacy Policy
 short-title: Privacy
-image: images/webp/dose-juice-1184429-unsplash.webp
+image-cloudinary: unsplash-1184429
 permalink: /legal/privacy.html
 redirect_from: /privacy.html
 ---

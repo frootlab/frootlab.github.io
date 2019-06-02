@@ -5,7 +5,7 @@ title: 'A short review on data science tools'
 author: "Patrick Michl"
 license: "CC BY 4.0"
 license-url: "https://creativecommons.org/licenses/by/4.0/"
-image: /images/webp/robot.webp
+image-cloudinary: pexels-323645
 categories:
   - Technology
 tags:

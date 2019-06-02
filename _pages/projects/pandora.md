@@ -3,7 +3,7 @@ layout: project
 navid: projects
 title: Pandora
 subtitle: High Performance Data Proxy
-image: images/webp/garden.webp
+image-cloudinary: pexels-366691
 form-logo: /images/svg/pandora.svg
 permalink: /projects/pandora.html
 redirect_from: /pandora.html

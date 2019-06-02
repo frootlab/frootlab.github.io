@@ -3,7 +3,7 @@ layout: blog
 navid: blog
 title: Blog
 short-title: Blog
-image: images/webp/hal-gatewood-613602-unsplash.webp
+image-cloudinary: unsplash-613602
 description: "An archive of all posts sorted by date"
 permalink: /blog/index.html
 redirect_from: /blog.html
@@ -14,9 +14,14 @@ redirect_from: /blog.html
 
 {% for post in site.posts limit:4 %}
 
-{% if post.preview %}{% assign preview = post.preview %}
-{% elsif post.image %}{% assign preview = post.image %}
-{% else %}{% assign preview = post.image %}
+{% if post.image-cloudinary %}
+  {% assign preview = "https://res.cloudinary.com/frootlab/image/upload/c_thumb,w_300,g_face/" | append: post.image-cloudinary | append: ".webp" %}
+{% elsif post.preview %}
+  {% assign preview = site.url | append: post.preview %}
+{% elsif post.image %}
+  {% assign preview = site.url | append: post.image %}
+{% else %}
+  {% assign preview = site.url | append: post.image %}
 {% endif %}
 
 {% assign catid = post.categories | first | downcase %}
@@ -36,7 +41,7 @@ redirect_from: /blog.html
       </div>
     </div>
     <div class="card-image" style="
-      background: url({{ site.url }}/{{ preview }}) no-repeat;
+      background: url({{ preview }}) no-repeat;
       background-size: cover;"></div>
     <div class="card-text card-text-{{ color }}">
         {{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}

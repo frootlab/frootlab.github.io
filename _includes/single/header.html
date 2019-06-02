@@ -1,6 +1,17 @@
+{% if page.image-cloudinary %}
+  {% assign image = "https://res.cloudinary.com/frootlab/image/upload/c_scale,q_auto:good,w_1000/" | append: page.image-cloudinary | append: ".webp" %}
+{% elsif page.image %}
+  {% if page.image contains 'http://' or page.image contains 'https://' %}
+    {% assign image = page.image %}
+  {% else %}
+    {% assign image = site.url | append: "/" | append: page.image %}
+  {% endif %}
+{% else %}
+  {% assign image = site.url | append: "/" | append: site.background.default %}
+{% endif %}
+
 <div class="single-page" style="
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)),
-    url({{ site.url }}/{{ site.background.post-list }});">
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)), url({{ image }});">
   <div class="overflow-box">
     <div class="content">

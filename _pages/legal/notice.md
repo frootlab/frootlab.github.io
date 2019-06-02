@@ -3,7 +3,7 @@ layout: form
 navid: imprint
 title: Legal Notice
 short-title: Notice
-image: images/webp/dose-juice-1184429-unsplash.webp
+image-cloudinary: unsplash-1184429
 permalink: /legal/notice.html
 redirect_from: /imprint.html
 ---

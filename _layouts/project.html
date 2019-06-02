@@ -61,11 +61,6 @@ layout: compress
   {% for post in site.posts %}
   {% if post.tags contains name %}
 
-  {% if post.preview %}{% assign preview = post.preview %}
-  {% elsif post.image %}{% assign preview = post.image %}
-  {% else %}{% assign preview = post.image %}
-  {% endif %}
-
   {% assign catid = post.categories | first | downcase %}
   {% if catid == 'corporate' %}{% assign color = 'blue' %}
   {% elsif catid == 'science' %}{% assign color = 'green' %}
