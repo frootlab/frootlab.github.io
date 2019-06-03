@@ -1,13 +1,14 @@
 ---
 layout: author
-short_name: fishroot
+short_name: Patrick Michl
 title: Patrick Michl
 subtitle: Member / Founder
-image: /images/authors/fishroot.webp
+image: /images/authors/patrick.webp
 medium: fishroot
 mastodon: mastodon.social/@fishroot
 github: fishroot
 xing: Patrick_Michl6
+redirect_from: /authors/fishroot.html
 ---
 
 I'm a passionate mathematician, obsessive software developer and convinced

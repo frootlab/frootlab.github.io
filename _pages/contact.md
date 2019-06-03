@@ -3,12 +3,11 @@ layout: form
 navid: contact
 title: Connect with us
 short-title: Contact
-image-cloudinary: unsplash-1184429
+cloudinary: unsplash/1184429
 permalink: /contact.html
 twitter: frootlab
 github: frootlab
 keybase: frootlab
-rss:
 ---
 
 ## Community

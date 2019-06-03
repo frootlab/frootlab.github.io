@@ -25,70 +25,70 @@ h4.enum:before {
   content: counter(h2) "." counter(h3) "." counter(h4) ". "
 }
 
-.projects-menu-icon {
-  position: absolute;
-  z-index: 1;
-  top: 30px;
-  right: 30px;
-  width: 15px;
-  height: 15px;
-  border: 2px solid $gray;
-  border-radius: 3px;
-  cursor: pointer;
-  z-index: 3;
-
-  &:before {
-    content: '';
-    position: absolute;
-    left: -19px;
-    top: -2px;
-    width: 15px;
-    height: 15px;
-    border: 2px solid $gray;
-    border-radius: 3px;
-  }
-
-  span {
-    position: absolute;
-    top: 15px;
-    right: -2px;
-    width: 15px;
-    height: 15px;
-    border: 2px solid $gray;
-    border-radius: 3px;
-
-    &:before {
-      content: '';
-      position: absolute;
-      left: -19px;
-      top: -2px;
-      width: 15px;
-      height: 15px;
-      border: 2px solid $gray;
-      border-radius: 3px;
-    }
-  }
-
-  &:hover {
-    border-color: $darker-grey;
-
-    &:before {
-      border-color: $darker-grey;
-    }
-
-    span {
-      border-color: $darker-grey;
-
-      &:before {
-        border-color: $darker-grey;
-      }
-    }
-  }
-
-  &.active {
-    position: fixed;
-  }
-}
+// .projects-menu-icon {
+//   position: absolute;
+//   z-index: 1;
+//   top: 30px;
+//   right: 30px;
+//   width: 15px;
+//   height: 15px;
+//   border: 2px solid $gray;
+//   border-radius: 3px;
+//   cursor: pointer;
+//   z-index: 3;
+//
+//   &:before {
+//     content: '';
+//     position: absolute;
+//     left: -19px;
+//     top: -2px;
+//     width: 15px;
+//     height: 15px;
+//     border: 2px solid $gray;
+//     border-radius: 3px;
+//   }
+//
+//   span {
+//     position: absolute;
+//     top: 15px;
+//     right: -2px;
+//     width: 15px;
+//     height: 15px;
+//     border: 2px solid $gray;
+//     border-radius: 3px;
+//
+//     &:before {
+//       content: '';
+//       position: absolute;
+//       left: -19px;
+//       top: -2px;
+//       width: 15px;
+//       height: 15px;
+//       border: 2px solid $gray;
+//       border-radius: 3px;
+//     }
+//   }
+//
+//   &:hover {
+//     border-color: $darker-grey;
+//
+//     &:before {
+//       border-color: $darker-grey;
+//     }
+//
+//     span {
+//       border-color: $darker-grey;
+//
+//       &:before {
+//         border-color: $darker-grey;
+//       }
+//     }
+//   }
+//
+//   &.active {
+//     position: fixed;
+//   }
+// }
 
 .posts-menu-icon {
   position: absolute;
@@ -164,10 +164,6 @@ h4.enum:before {
   }
 }
 
-.projects-menu-container {
-
-}
-
 .projects-menu {
   font-size: 0;
   height: 80%;
@@ -195,7 +191,7 @@ h4.enum:before {
 
     a {
       border: 30px solid transparent;
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.4);
       position: absolute;
       top: 0;
       right: 0;

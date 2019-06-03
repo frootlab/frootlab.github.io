@@ -15,10 +15,7 @@ future: true
 
 # Left Block Images
 background:
-  homepage: images/webp/home.webp
-  post-list: images/webp/sketch.webp
-  default-post: images/webp/robot.webp
-  default: images/webp/robot.webp
+  default: images/default.webp
 
 # Collections
 collections:

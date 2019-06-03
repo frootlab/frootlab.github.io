@@ -3,7 +3,7 @@ layout: blog
 navid: blog
 title: Blog
 short-title: Blog
-image-cloudinary: unsplash-613602
+cloudinary: unsplash/613602
 description: "An archive of all posts sorted by date"
 permalink: /blog/index.html
 redirect_from: /blog.html
@@ -12,10 +12,10 @@ redirect_from: /blog.html
 <h2 class="section-title">Latest Posts</h2>
 <div class="grid">
 
-{% for post in site.posts limit:4 %}
+{% for post in site.posts limit:10 %}
 
-{% if post.image-cloudinary %}
-  {% assign preview = "https://res.cloudinary.com/frootlab/image/upload/c_thumb,w_300,g_face/" | append: post.image-cloudinary | append: ".webp" %}
+{% if post.cloudinary %}
+  {% assign preview = "https://res.cloudinary.com/frootlab/image/upload/c_thumb,w_300,g_face/" | append: post.cloudinary | append: ".webp" %}
 {% elsif post.preview %}
   {% assign preview = site.url | append: post.preview %}
 {% elsif post.image %}

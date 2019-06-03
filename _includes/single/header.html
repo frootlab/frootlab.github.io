@@ -1,5 +1,14 @@
-{% if page.image-cloudinary %}
-  {% assign image = "https://res.cloudinary.com/frootlab/image/upload/c_scale,q_auto:good,w_1000/" | append: page.image-cloudinary | append: ".webp" %}
+{% if page.cloudinary %}
+  {% if page.cloudinary-transform %}
+    {% assign transform = page.cloudinary-transform %}
+  {% else %}
+    {% assign transform = "c_scale,q_auto:good,w_1000" %}
+  {% endif %}
+  {% assign image = "https://res.cloudinary.com/frootlab/image/upload/"
+    | append: transform
+    | append: "/"
+    | append: page.cloudinary
+    | append: ".webp" %}
 {% elsif page.image %}
   {% if page.image contains 'http://' or page.image contains 'https://' %}
     {% assign image = page.image %}

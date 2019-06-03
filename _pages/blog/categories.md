@@ -2,7 +2,7 @@
 layout: blog
 title: Blog
 short-title: Category
-image-cloudinary: unsplash-613602
+cloudinary: unsplash/613602
 description: "An archive of all posts sorted by category"
 permalink: /blog/categories.html
 redirect_from: /categories.html
@@ -23,8 +23,8 @@ navid: blog
 
 {% for post in category.last %}
 
-{% if post.image-cloudinary %}
-  {% assign preview = "https://res.cloudinary.com/frootlab/image/upload/c_thumb,w_300,g_face/" | append: post.image-cloudinary | append: ".webp" %}
+{% if post.cloudinary %}
+  {% assign preview = "https://res.cloudinary.com/frootlab/image/upload/c_thumb,w_300,g_face/" | append: post.cloudinary | append: ".webp" %}
 {% elsif post.preview %}
   {% assign preview = site.url | append: post.preview %}
 {% elsif post.image %}

@@ -3,7 +3,7 @@ layout: project
 navid: projects
 title: Motley
 subtitle: Smart Algorithm Repository
-image-cloudinary: pexels-990824
+cloudinary: pexels/990824
 form-logo: /images/svg/motley.svg
 permalink: /projects/motley.html
 redirect_from: /motley.html

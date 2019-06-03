@@ -1,7 +1,7 @@
 ---
 layout: home
 navid: home
-image-cloudinary: unsplash-1184429
+cloudinary: unsplash/1184429
 logo: /images/svg/frootlab-dark.svg
 logo-alt: Frootlab Logo
 title: Frootlab

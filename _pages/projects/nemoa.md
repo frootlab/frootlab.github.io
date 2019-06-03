@@ -3,7 +3,7 @@ layout: project
 navid: projects
 title: Nemoa
 subtitle: Automated Machine Learning
-image-cloudinary: pexels-101764
+cloudinary: pexels/101764
 form-logo: /images/svg/nemoa.svg
 permalink: /projects/nemoa.html
 redirect_from: /nemoa.html

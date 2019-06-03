@@ -3,7 +3,7 @@ layout: form
 navid: imprint
 title: Legal Notice
 short-title: Notice
-image-cloudinary: unsplash-1184429
+cloudinary: unsplash/1184429
 permalink: /legal/notice.html
 redirect_from: /imprint.html
 ---

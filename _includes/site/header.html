@@ -95,26 +95,10 @@
 
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/main.css">
-  {% if page.image %}
-  {% capture image %}{{ page.image }}{% endcapture %}
-  {% unless image contains 'http://' or image contains 'https://' %}{% capture image %}{{ site.url }}/{{ image }}{% endcapture %}{% endunless %}
-  <style type="text/css">
-    #posts.article-page .left-page {background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(20, 22, 26, 0.6)), url({{ image }}) no-repeat;background-size: cover;}
-  </style>
-  {% else %}
-  <style type="text/css">
-    #posts.article-page .left-page {background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(20, 22, 26, 0.6)), url({{ site.url }}/{{ site.background.default-post }}) no-repeat; background-size: cover;}
-  </style>
-  {% endif %}
-  <style type="text/css">
-    #posts .left-page {background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(20, 22, 26, 0.6)), url({{ site.url }}/{{ site.background.post-list }}) no-repeat; background-size: cover;}
-    .left-page {background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(20, 22, 26, 0.6)), url({{ site.url }}/{{ site.background.homepage }}) no-repeat; background-size: cover;}
-  </style>
+
 </head>
 
 <body>
-
 {% include site/navigation.html %}
 {% include site/breadcrumbs.html %}
-
 <div id="main">
