@@ -7,14 +7,9 @@ layout: compress
 {% include front/header.html %}
 <div class="banderole">
   <div style="text-align: center; padding: 1.1em; ">
-    {% capture site_tags %}
-    {% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-    {% endcapture %}
-    {% assign tags_list = site_tags | split:',' | sort %}
-    {% for project in site.data.projects %}
-    <a class="btn btn_grey" href="{{ site.url }}{{ project.url }}">{{ project.title }}</a>
-    {% endfor %}
+    <a class="btn btn_grey" href="{{ site.url }}/projects">Projects</a>
+    <a class="btn btn_grey" href="{{ site.url }}/blog">Blog</a>
+    <a class="btn btn_grey" href="{{ site.url }}/corporate/2019/03/19/welcome-at-frootlab.html">About</a>
   </div>
 </div>
 {% include front/trailer.html %}
