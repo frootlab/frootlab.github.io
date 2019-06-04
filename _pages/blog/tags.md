@@ -3,7 +3,7 @@ layout: blog
 navid: blog
 title: Blog
 short-title: Tag
-cloudinary: unsplash/613602
+cloudinary: paper/collage
 description: "An archive of all posts sorted by tag"
 permalink: /blog/tags.html
 redirect_from: /tags.html

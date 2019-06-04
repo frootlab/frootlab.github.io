@@ -1,8 +1,8 @@
 ---
 layout: home
 navid: home
-cloudinary: unsplash/1184429
-logo: /images/svg/frootlab-dark.svg
+cloudinary: unsplash/710800
+logo: /images/svg/frootlab.svg
 logo-alt: Frootlab Logo
 title: Frootlab
 form-style: "max-width: 26em;"

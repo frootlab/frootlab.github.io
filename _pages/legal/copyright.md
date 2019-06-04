@@ -2,7 +2,8 @@
 layout: form
 navid: copyright
 title: Copyright
-cloudinary: unsplash/1184429
+cloudinary: unsplash/710800
+crumbs: /Copyright
 permalink: /legal/copyright.html
 redirect_from: /copyright.html
 ---
