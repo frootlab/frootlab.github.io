@@ -37,17 +37,17 @@ layout: compress
       <pre class="highlight"><code><span class="nv">$ </span>pip install {{ page.pypi }}</code></pre>
     </div>
   </div>
-  <div class="panel flat thin" style="display: flex;">
+  <div class="panel thin" style="display: flex;">
     <div style="flex: 48%; text-align: center;">
-      <div class="label" style="padding-bottom: 0.5rem; margin: 0 0.5rem 2px; border-bottom: 1px solid rgba(0, 0, 0, 0.15);">Documentation</div>
+      <div class="label" style="padding-bottom: 0.5rem; margin: 0 0.5rem;">Documentation</div>
       {% include links/docs.html %}
     </div>
     <div style="flex: 32%; text-align: center;">
-      <div class="label" style="padding-bottom: 0.5rem; margin: 0 0.5rem 2px; border-bottom: 1px solid rgba(0, 0, 0, 0.15);">Source Code</div>
+      <div class="label" style="padding-bottom: 0.5rem; margin: 0 0.5rem;">Source Code</div>
       {% include links/project.html %}
     </div>
     <div style="flex: 20%; text-align: center;">
-      <div class="label" style="padding-bottom: 0.5rem; margin: 0 0.5rem 2px; border-bottom: 1px solid rgba(0, 0, 0, 0.15);">License</div>
+      <div class="label" style="padding-bottom: 0.5rem; margin: 0 0.5rem;">License</div>
       {% include links/license.html %}
     </div>
   </div>
@@ -66,9 +66,8 @@ layout: compress
   {% else %}{% assign color = 'grey' %}
   {% endif %}
   <p>
-    <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
-      <b>{{ post.date | date: '%d. %B, %Y' }}</b>: {{ post.title }}
-    </a>
+    {{ post.date | date: '%d. %B, %y' }}:
+    <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
   </p>
   {% endif %}
   {% endfor %}

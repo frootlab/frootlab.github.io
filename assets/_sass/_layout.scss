@@ -2,7 +2,7 @@
   clear: both;
 }
 
-.left-page,
+.front,
 .right-page {
   width: 50%;
   height: 100%;
@@ -29,7 +29,7 @@
   }
 }
 
-.left-page {
+.front {
   float: left;
   z-index: 1;
   box-shadow: 5px 0px 13px -6px rgba(0, 0, 0, 0.6);
@@ -152,14 +152,14 @@
     margin: 0;
   }
 
-  .left-page,
+  .front,
   .right-page {
     box-shadow: none;
     float: none;
     width: 100%;
   }
 
-  .left-page {
+  .front {
     height: 100%;
   }
 
@@ -197,7 +197,7 @@
     margin: 0;
   }
 
-  .left-page,
+  .front,
   .right-page {
     position: static;
     box-shadow: none;

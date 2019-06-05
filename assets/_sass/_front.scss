@@ -1,0 +1,9 @@
+/* Icons */
+.front ul.icons {
+  > li a {
+    color: rgba(255, 255, 255, 0.9);
+    &:hover {
+      color: $link-blue;
+    }
+  }
+}

@@ -40,7 +40,7 @@ of algorithms.
 
 ### License
 According to our [convictions](/corporate/2019/03/19/welcome-at-frootlab.html)
-Motley is [free and open source
+Motley is [free and open-source
 software](https://en.wikipedia.org/wiki/Free_and_open-source_software). It is
 released under the [General Public License
 3.0](https://www.gnu.org/licenses/gpl-3.0.html) and can be downloaded from

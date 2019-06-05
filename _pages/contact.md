@@ -11,7 +11,7 @@ keybase: frootlab
 ---
 
 ## Community
-<div class="panel thin">
+<div class="panel">
 {% include links/social.html %}
 </div>
 

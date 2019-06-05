@@ -2,6 +2,7 @@
 layout: author
 short_name: Patrick Michl
 title: Patrick Michl
+short-title: Patrick
 subtitle: Member / Founder
 image: /images/authors/patrick.webp
 medium: fishroot
