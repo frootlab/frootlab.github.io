@@ -1,4 +1,4 @@
-<ul class="icon-links">
+<ul class="icons">
   {% if page.email %}<li><a href="mailto:{{ page.email }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i><span>Email</span></a></li>{% endif %}
   {% if page.medium %}<li><a href="https://medium.com/@{{ page.medium }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-medium"></i><span>Medium</span></a></li>{% endif %}
   {% if page.mastodon %}<li><a href="https://{{ page.mastodon }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-mastodon"></i><span>Mastodon<span></a></li>{% endif %}
@@ -10,8 +10,8 @@
   {% if page.xing %}<li><a href="http://www.xing.com/profile/{{ page.xing }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-xing"></i><span>Xing</span></a></li>{% endif %}
   {% if page.instagram %}<li><a href="http://instagram.com/{{ page.instagram }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i><span>Instagram</span></a></li>{% endif %}
   {% if page.tumblr %}<li><a href="http://{{ page.tumblr }}.tumblr.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-tumblr"></i><span>Tumblr</span></a></li>{% endif %}
-  {% if page.github %}<li><a href="http://github.com/{{ page.github }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i><span>GitHub</span></a></li>{% endif %}
-  {% if page.pypi %}<li><a href="http://pypi.org/project/{{ page.pypi }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-python"></i><span>PyPi</span></a></li>{% endif %}
+  {% if page.github %}<li><a href="http://github.com/{{ page.github }}" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i><span>GitHub</span></a></li>{% endif %}
+  {% if page.pypi %}<li><a href="http://pypi.org/project/{{ page.pypi }}" title="PyPi" target="_blank" rel="noopener noreferrer"><i class="fab fa-python"></i><span>PyPi</span></a></li>{% endif %}
   {% if page.stackoverflow %}<li><a href="http://stackoverflow.com/users/{{ page.stackoverflow }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-stack-overflow"></i><span>Stackoverflow</span></a></li>{% endif %}
   {% if page.lastfm %}<li><a href="http://lastfm.com/user/{{ page.lastfm }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-lastfm"></i><span>LastFM</span></a></li>{% endif %}
   {% if page.dribbble %}<li><a href="http://dribbble.com/{{ page.dribbble }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-dribbble"></i<span>Dribbble</span>></a></li>{% endif %}

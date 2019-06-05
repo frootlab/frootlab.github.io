@@ -6,32 +6,29 @@ layout: compress
 
 {% include front/header.html %}
 <div class="banderole">
-  <div style="text-align: center; padding: 1.1em 2em; ">
-    {% capture site_tags %}
-    {% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}
-    {% endcapture %}
-    {% assign tags_list = site_tags | split:',' | sort %}
-    {% for category in site.categories %}
-    {% assign name = category | first %}
-    {% assign catid = name | downcase %}
-    {% if catid == 'corporate' %}{% assign color = 'blue' %}
-    {% elsif catid == 'science' %}{% assign color = 'green' %}
-    {% elsif catid == 'technology' %}{% assign color = 'red' %}
-    {% else %}{% assign color = 'grey' %}
-    {% endif %}
-    <a class="btn btn_{{ color }}" href="{{site.url}}/blog/categories#{{ name }}">
-      {{ name }}
-    </a>
-    {% endfor %}
+  {% capture site_tags %}
+  {% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}
+  {% endcapture %}
+  {% assign tags_list = site_tags | split:',' | sort %}
+  {% for category in site.categories %}
+  {% assign name = category | first %}
+  {% assign catid = name | downcase %}
+  {% if catid == 'corporate' %}{% assign color = 'blue' %}
+  {% elsif catid == 'science' %}{% assign color = 'green' %}
+  {% elsif catid == 'technology' %}{% assign color = 'red' %}
+  {% else %}{% assign color = 'grey' %}
+  {% endif %}
+  <a class="btn btn_{{ color }}" href="{{site.url}}/blog/categories#{{ name }}">
+    {{ name }}
+  </a>
+  {% endfor %}
 
-    {% for item in (0..site.tags.size) %}
-    {% unless forloop.last %}
-    {% capture label %}{{ tags_list[item] | strip_newlines | strip }}{% endcapture %}
-    <a class="btn btn_grey" href="{{site.url}}/blog/tags#{{ label }}">{{ label }}</a>
-    {% endunless %}
-    {% endfor %}
-
-  </div>
+  {% for item in (0..site.tags.size) %}
+  {% unless forloop.last %}
+  {% capture label %}{{ tags_list[item] | strip_newlines | strip }}{% endcapture %}
+  <a class="btn btn_grey" href="{{site.url}}/blog/tags#{{ label }}">{{ label }}</a>
+  {% endunless %}
+  {% endfor %}
 </div>
 {% include front/trailer.html %}
 

@@ -1,38 +1,41 @@
 .banderole {
+  background: linear-gradient(177deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 2.7vw,
+    rgba(0, 0, 0, 0.85) 2.8vw,
+    rgba(0, 0, 0, 0.85) 100%);
+
+  padding: calc(3vw + 1rem) 1rem 1rem 1rem;
+  text-align: center;
   color: rgba(255, 255, 255, 0.9);
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
+
   h1,
   h2,
   h3 {
     padding-top: 0;
     margin-top: 0;
   }
+
   a {
     color: $link-blue;
   }
+
   a:hover,
   a:active,
   a:focus {
     color: $link-hover;
   }
+
   .tags > li {
     background: none;
     border: 1px solid rgba($white, 0.4);
     color: $white;
     font-size: 15px;
   }
-}
-
-.banderole {
-  background: linear-gradient(177deg,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0) 2.7vw,
-    rgba(0, 0, 0, 0.85) 2.8vw,
-    rgba(0, 0, 0, 0.85) 100%);
-  padding: 3vw 0 0 0;
 }
 
 @media screen and (max-width: 960px) {
@@ -42,7 +45,7 @@
       rgba(0, 0, 0, 0) 5.1vw,
       rgba(0, 0, 0, 0.85) 5.2vw,
       rgba(0, 0, 0, 0.85) 100%);
-    padding: 5vw 0 0 0;
+    padding: calc(5vw + 1rem) 1rem 1rem 1rem;
   }
 }
 
