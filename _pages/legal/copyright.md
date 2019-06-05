@@ -3,6 +3,7 @@ layout: form
 navid: copyright
 title: Copyright
 cloudinary: unsplash/710800
+image-orientation: portrait
 crumbs: /Copyright
 permalink: /legal/copyright.html
 redirect_from: /copyright.html

@@ -4,6 +4,7 @@ navid: imprint
 title: Legal Notice
 crumbs: /Legal Notice
 cloudinary: unsplash/710800
+image-orientation: portrait
 permalink: /legal/notice.html
 redirect_from: /imprint.html
 ---

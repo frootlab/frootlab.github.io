@@ -4,6 +4,7 @@ navid: blog
 title: Blog
 short-title: Tag
 cloudinary: pixabay/3357642
+image-orientation: landscape
 description: "An archive of all posts sorted by tag"
 permalink: /blog/tags.html
 redirect_from: /tags.html

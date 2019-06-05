@@ -4,6 +4,7 @@ navid: contact
 title: Contact
 short-title: Contact
 cloudinary: unsplash/710800
+image-orientation: portrait
 permalink: /contact.html
 twitter: frootlab
 github: frootlab

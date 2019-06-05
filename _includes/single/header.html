@@ -1,8 +1,12 @@
 {% if page.cloudinary %}
-  {% if page.cloudinary-transform %}
-    {% assign transform = page.cloudinary-transform %}
+  {% if page.image-format == "svg" %}
+    {% assign transform = "b_rgb:f5f5f5,bo_20px_solid_rgb:f5f5f5,c_pad,h_900,q_auto:best,w_700" %}
+  {% elsif page.image-orientation == "portrait" %}
+    {% assign transform = "c_scale,q_auto:good,w_960" %}
+  {% elsif page.image-orientation == "landscape" %}
+    {% assign transform = "c_scale,q_auto:good,w_1920" %}
   {% else %}
-    {% assign transform = "c_scale,q_auto:good,w_1000" %}
+    {% assign transform = "c_scale,q_auto:good,w_960" %}
   {% endif %}
   {% assign image = "https://res.cloudinary.com/frootlab/image/upload/"
     | append: transform
@@ -18,9 +22,12 @@
 {% else %}
   {% assign image = site.url | append: "/" | append: site.background.default %}
 {% endif %}
+{% if page.image-format == "svg" %}
+  {% assign background = "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.0) 20%), url(" | append: image | append: ")" %}
+{% else %}
+  {% assign background = "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.0) 20%), url(" | append: image | append: ")" %}
+{% endif %}
 
-<div class="single-page" style="
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)), url({{ image }});">
+<div class="single-page" style="background-image: {{ background }};">
   <div class="overflow-box">
     <div class="content">

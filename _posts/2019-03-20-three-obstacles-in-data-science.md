@@ -8,6 +8,7 @@ author: Patrick Michl
 license: "CC BY 4.0"
 license-url: "https://creativecommons.org/licenses/by/4.0/"
 cloudinary: pexels/67843
+image-orientation: landscape
 pdf: files/posts/2019-03-20-three-obstacles-in-data-science.pdf
 categories:
   - Corporate

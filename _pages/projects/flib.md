@@ -4,6 +4,7 @@ navid: projects
 title: flib
 subtitle: Frootlab Shared Library
 cloudinary: unsplash/602632
+image-orientation: landscape
 permalink: /projects/flib.html
 redirect_from: /flib.html
 github: frootlab/flib

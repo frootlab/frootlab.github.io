@@ -4,6 +4,7 @@ navid: projects
 title: Motley
 subtitle: Smart Algorithm Repository
 cloudinary: pexels/990824
+image-orientation: landscape
 form-logo: /images/svg/motley.svg
 permalink: /projects/motley.html
 redirect_from: /motley.html

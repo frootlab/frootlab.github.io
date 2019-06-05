@@ -11,11 +11,11 @@ layout: compress
 {% include front/trailer.html %}
 
 {% include form/header.html %}
-<h2>About</h2>
+<h3>About</h3>
 <div class="panel flat thin">
   {{ page.content | markdownify }}
 </div>
-<h2>Posts</h2>
+<h3>Posts</h3>
 <div class="grid">
   {% assign posts = site.posts | where: 'author', page.title %}
   {% for post in posts %}

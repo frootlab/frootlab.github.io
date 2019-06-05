@@ -4,6 +4,7 @@ navid: projects
 title: Pandora
 subtitle: High Performance Data Proxy
 cloudinary: pexels/366691
+image-orientation: landscape
 form-logo: /images/svg/pandora.svg
 permalink: /projects/pandora.html
 redirect_from: /pandora.html

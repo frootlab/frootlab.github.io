@@ -2,6 +2,7 @@
 layout: home
 navid: home
 cloudinary: unsplash/710800
+image-orientation: portrait
 logo: /images/svg/frootlab.svg
 logo-alt: Frootlab Logo
 title: Frootlab

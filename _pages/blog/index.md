@@ -4,6 +4,7 @@ navid: blog
 title: Blog
 short-title: Blog
 cloudinary: pixabay/3357642
+image-orientation: landscape
 description: "An archive of all posts sorted by date"
 permalink: /blog/index.html
 redirect_from: /blog.html
