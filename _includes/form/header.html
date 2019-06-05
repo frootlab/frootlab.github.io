@@ -1,6 +1,12 @@
+{% if include.content-class %}
+  {% assign content-class = include.content-class %}
+{% else %}
+  {% assign content-class = "form" %}
+{% endif %}
+
 <div class="right-page">
   <div class="overflow-box">
-    <div class="content form">
+    <div class="content {{ content-class }}">
       {% if page.form-style %}
       <div class="group" style="{{ page.form-style }}">
       {% else %}

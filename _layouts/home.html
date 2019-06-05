@@ -1,8 +1,6 @@
 ---
-layout: compress
+layout: base
 ---
-
-{% include site/header.html %}
 
 {% include front/header.html %}
 <div class="banderole">
@@ -12,8 +10,6 @@ layout: compress
 </div>
 {% include front/trailer.html %}
 
-{% include form/header.html %}
+{% include form/header.html content-class="centered form" %}
 {{ content }}
 {% include form/trailer.html %}
-
-{% include site/trailer.html %}

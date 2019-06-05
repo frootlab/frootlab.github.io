@@ -1,12 +1,16 @@
-{% if page.navid == 'home' %}{% assign state_home = 'active' %}{% endif %}
-{% if page.navid == 'projects' %}{% assign state_projects = 'active' %}{% endif %}
-{% if page.navid == 'blog' %}{% assign state_blog = 'active' %}{% endif %}
+<div id="sideoverlay"></div>
 
-<div id="Overlay" class="sideoverlay"></div>
+<nav id="sidenav">
+  <a href="javascript:void(0);" class="closebtn" onclick="closeNav()">&times;</a>
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="{{ site.url }}" title="About Frootlab" class="{{ state_home }}">Home</a>
-  <a href="{{ site.url }}/projects" title="Projects" class="{{ state_projects }}">Projects</a>
-  <a href="{{ site.url }}/blog" title="Blog" class="{{ state_blog }}">Blog</a>
-</div>
+  {% for item in site.data.navigation %}
+  {% if page.navid == item.navid %}
+    {% assign class = 'class="active"' %}
+  {% else %}
+    {% assign class = '' %}
+  {% endif %}
+  <a href="{{ site.url }}{{ item.link }}" title="{{ item. alt }}" {{ class }}>
+    {{ item.name }}
+  </a>
+  {% endfor %}
+</nav>

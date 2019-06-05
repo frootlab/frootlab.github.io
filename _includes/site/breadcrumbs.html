@@ -1,14 +1,16 @@
 {% if page.crumbs %}
-{% assign crumbs = page.crumbs | split: '/' | offset: 1 %}
+  {% assign crumbs = page.crumbs | split: '/' | offset: 1 %}
 {% else %}
-{% assign crumbs = page.url | remove: '/index.html' | split: '/' | offset: 1 %}
+  {% assign crumbs = page.url | remove: '/index.html' | split: '/' | offset: 1 %}
 {% endif %}
 {% assign rcrumbs = crumbs | reverse %}
 {% assign total = crumbs | size %}
 
 {% assign title = page.title | markdownify | remove: "<p>" | remove: "</p>" %}
-{% if page.short-title %}{% assign short-title = page.short-title %}
-{% else %}{% assign short-title = title | remove: ":" | truncatewords: 3 %}
+{% if page.short-title %}
+  {% assign short-title = page.short-title %}
+{% else %}
+  {% assign short-title = title | remove: ":" | truncatewords: 3 %}
 {% endif %}
 
 <div id="breadcrumb">

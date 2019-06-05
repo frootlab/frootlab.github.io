@@ -1,5 +1,5 @@
 /* Overlay to greyout page when opening side navigation */
-.sideoverlay {
+#sideoverlay {
   height: 100%; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
@@ -12,7 +12,7 @@
 }
 
 /* The side navigation menu */
-.sidenav {
+#sidenav {
   height: 100%; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
@@ -27,7 +27,7 @@
 }
 
 /* The navigation menu links */
-.sidenav a {
+#sidenav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 1.5em;
@@ -37,7 +37,7 @@
 }
 
 /* Active Navigation Entry */
-.sidenav a.active {
+#sidenav a.active {
   background-color: $darker-grey;
   color: #e0e0e0;
   cursor: default;
@@ -45,12 +45,12 @@
 }
 
 /* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
+#sidenav a:hover {
   color: #f1f1f1;
 }
 
 /* Position and style the close button (top right corner) */
-.sidenav .closebtn {
+#sidenav .closebtn {
   position: absolute;
   top: 0;
   right: 25px;
@@ -58,7 +58,8 @@
   margin-left: 50px;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+/* Style page content - use this if you want to push the page content to the
+right when you open the side navigation */
 #main {
   transition: margin-left .5s;
   padding: 0;
@@ -67,10 +68,11 @@
   height: 100%;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+/* On smaller screens, where height is less than 450px, change the style of the
+sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  #sidenav {padding-top: 15px;}
+  #sidenav a {font-size: 18px;}
 }
 
 /* Breadcrumb */
@@ -164,8 +166,8 @@
 
 /* Print Adjustments */
 @media print {
-  .sidenav,
-  .sideoverlay,
+  #sidenav,
+  #sideoverlay,
   #breadcrumb {
     display: none;
   }

@@ -1,0 +1,12 @@
+- name: Home
+  navid: home
+  alt: About Frootlab
+  link: /
+- name: Projects
+  navid: projects
+  alt: Projects
+  link: /projects
+- name: Blog
+  navid: blog
+  alt: Blog
+  link: /blog

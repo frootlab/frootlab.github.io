@@ -6,8 +6,6 @@
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-weight: 100;
   text-align: left;
-  display: flex !important;
-  align-items: center;
 
   h1,
   h2,
@@ -104,6 +102,11 @@
       }
     }
   }
+}
+
+.centered {
+  display: flex !important;
+  align-items: center;
 }
 
 /* Icons */
