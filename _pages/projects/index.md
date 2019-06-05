@@ -5,6 +5,7 @@ title: Projects
 description: "Gallery of active Projects"
 permalink: /projects/index.html
 redirect_from: /projects.html
+cloudinary: pixabay/1732847
 cloudinary: pexels/323645
 ---
 

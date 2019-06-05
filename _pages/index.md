@@ -19,8 +19,8 @@ new technologies into existing applications. We want to step into this breach by
 supporting the development of smart software, which adepts itself to new
 technologies!
 
-To that end we provide a [free and open
-source](https://en.wikipedia.org/wiki/Free_and_open-source_software) data
+To that end we provide a [free and
+open-source](https://en.wikipedia.org/wiki/Free_and_open-source_software) data
 analysis framework, which on the basis of
 [TensorFlow®](https://www.tensorflow.org/) incorporates machine intelligence and
 collaborative data science into the whole software life cycle. The essential

@@ -3,7 +3,7 @@ layout: blog
 navid: blog
 title: Blog
 short-title: Blog
-cloudinary: paper/collage
+cloudinary: pixabay/3357642
 description: "An archive of all posts sorted by date"
 permalink: /blog/index.html
 redirect_from: /blog.html

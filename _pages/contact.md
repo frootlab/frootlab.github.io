@@ -10,12 +10,12 @@ github: frootlab
 keybase: frootlab
 ---
 
-## Community
+### Community
 <div class="panel">
 {% include links/social.html %}
 </div>
 
-## Email
+### Email
 <div class="contact-form-container">  
   <form id="contact-form" class="panel" action="mailto:contact@frootlab.org" enctype="text/plain" method="post">
     <fieldset>

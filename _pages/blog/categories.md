@@ -2,7 +2,7 @@
 layout: blog
 title: Blog
 short-title: Category
-cloudinary: paper/collage
+cloudinary: pixabay/3357642
 description: "An archive of all posts sorted by category"
 permalink: /blog/categories.html
 redirect_from: /categories.html
