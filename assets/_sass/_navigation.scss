@@ -154,9 +154,7 @@ sidenav (less padding and a smaller font size) */
     cursor: default;
     color: white;
     background-color: rgba(0, 0, 0, 0.8);
-    background: linear-gradient(
-      rgba(0, 0, 0, 0.8) 0%,
-      rgba(0, 0, 0, 0.8) 100%);
+    background: rgba(0, 0, 0, 0.8);
 }
 
 /* Remove the shadow for the active's next item, to match the design more accurately */

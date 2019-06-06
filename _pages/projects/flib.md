@@ -26,33 +26,35 @@ components [Pandora](/pandora), [Nemoa](/nemoa) and [Motley](/motley). The
 majority of the provided modules, however, are kept generic to facilitate their
 application beyond Frootlab projects as well.
 
-### Generic Modules
-[Design Patterns](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.abc.html){: .btn}
-[Attributes and Attribute Groups](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.attrib.html){: .btn}
-[Binary Object Functions](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.binaryhtml){: .btn}
-[Callable Object Functions](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.call.html){: .btn}
-[Algorithms Organization](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.catalog.html){: .btn}
-[Type- and Value Checking](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.check.html){: .btn}
-[Environmental Integration](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.env.html){: .btn}
-[Literal Representation](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.literal.html){: .btn}
-[Mapping Object Functions](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.mapping.html){: .btn}
-[Functional Programming](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.operator.html){: .btn}
-[Object-Oriented Programming](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.otree.html){: .btn}
-[Multi-purpose Parser](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.parser.html){: .btn}
-[Phonetic Algorithms](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.phonetic.html){: .btn}
-[PackageTree Information](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.pkg.html){: .btn}
-[CallStack Information](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.stack.html){: .btn}
-[Structural Types](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.stype.html){: .btn}
-[Extended Unit-Testing](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.test.html){: .btn}
-[Multi-Threading](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.thread.html){: .btn}
+**Generic Modules**
 
-### IO Modules
-[IO Design Patterns](http://docs.frootlab.org/projects/flib/en/latest/api/flib.io.abc.html){: .btn}
-[Extended CSV-File IO](http://docs.frootlab.org/projects/flib/en/latest/api/flib.io.csv.html){: .btn}
-[Extended INI-File IO](http://docs.frootlab.org/projects/flib/en/latest/api/flib.io.ini.html){: .btn}
-[Extended Plain-Text-File IO](http://docs.frootlab.org/projects/flib/en/latest/api/flib.io.plain.html){: .btn}
-[Extended RAW-File IO](http://docs.frootlab.org/projects/flib/en/latest/api/flib.io.raw.html){: .btn}
-[Extended ZIP-Archive IO](http://docs.frootlab.org/projects/flib/en/latest/api/flib.io.zip.html){: .btn}
+[Design Patterns](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.abc.html),
+[Attributes and Attribute Groups](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.attrib.html),
+[Binary Object Functions](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.binaryhtml),
+[Callable Object Functions](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.call.html),
+[Algorithms Organization](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.catalog.html),
+[Type- and Value Checking](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.check.html),
+[Environmental Integration](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.env.html),
+[Literal Representation](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.literal.html),
+[Mapping Object Functions](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.mapping.html),
+[Functional Programming](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.operator.html),
+[Object-Oriented Programming](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.otree.html),
+[Multi-purpose Parser](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.parser.html),
+[Phonetic Algorithms](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.phonetic.html),
+[PackageTree Information](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.pkg.html),
+[CallStack Information](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.stack.html),
+[Structural Types](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.stype.html),
+[Extended Unit-Testing](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.test.html),
+[Multi-Threading](http://docs.frootlab.org/projects/flib/en/latest/api/flib.base.thread.html)
+
+**IO Modules**
+
+[IO Design Patterns](http://docs.frootlab.org/projects/flib/en/latest/api/flib.io.abc.html),
+[Extended CSV-File IO](http://docs.frootlab.org/projects/flib/en/latest/api/flib.io.csv.html),
+[Extended INI-File IO](http://docs.frootlab.org/projects/flib/en/latest/api/flib.io.ini.html),
+[Extended Plain-Text-File IO](http://docs.frootlab.org/projects/flib/en/latest/api/flib.io.plain.html),
+[Extended RAW-File IO](http://docs.frootlab.org/projects/flib/en/latest/api/flib.io.raw.html),
+[Extended ZIP-Archive IO](http://docs.frootlab.org/projects/flib/en/latest/api/flib.io.zip.html),
 
 ### License
 According to our [convictions](/corporate/2019/03/19/welcome-at-frootlab.html)

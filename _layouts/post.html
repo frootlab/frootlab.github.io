@@ -9,12 +9,12 @@ layout: base
   {% if author %}
   <h3 class="post-author">by <a href="{{ author.url }}">{{ author.title }}</a></h3>
   {% else %}
-  <h3 class="post-author">Author: Anonymous</h3>
+  <h3 class="post-author">Anonymous</h3>
   {% endif %}
   {% if page.license %}
   {% if page.license contains 'CC BY' %}
-  <h3 style="font-size: 2em;">
-    <a href="{{ page.license-url }}" style="color: rgba(255, 255, 255, 0.8);">
+  <h3 style="font-size: 2.8em; margin-top: 1rem;">
+    <a href="{{ page.license-url }}" style="letter-spacing: -2px;">
       <i class="fab fa-creative-commons"></i>
       <i class="fab fa-creative-commons-by"></i>
     </a>
