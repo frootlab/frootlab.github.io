@@ -1,7 +1,7 @@
 ---
 layout: post
 navid: blog
-title: "AI Revolution:<br> Deep Learning and what´s next?"
+title: "AI Revolution: Deep Learning and what´s next?"
 short-title: Deep Learning
 crumbs: /blog/Deep Learning
 author: "Patrick Michl"
