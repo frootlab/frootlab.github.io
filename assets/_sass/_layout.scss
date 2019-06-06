@@ -104,46 +104,6 @@
   }
 }
 
-.title-page {
-  color: white;
-  text-align: center;
-  max-width: 26em;
-  width: 100%;
-  margin: 0 auto;
-
-  h1 {
-    font-size: 2em;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 0.7em 0 0.2em;
-  }
-
-  h2 {
-    font-size: 1.5em;
-    font-weight: normal;
-    text-transform: uppercase;
-    letter-spacing: 0;
-    margin: 0;
-  }
-
-  span.title,
-  span.subtitle {
-    padding: 0.13em 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    box-shadow: 1rem 0 0 rgba(0, 0, 0, 0.7), -1rem 0 0 rgba(0, 0, 0, 0.7);
-  }
-
-  span.title {
-    line-height: 1.8;
-  }
-
-  span.subtitle {
-    line-height: 1.8;
-  }
-
-}
-
 /* Adjustments for smaller screens */
 @media screen and (max-width: 960px) {
   html {
@@ -212,22 +172,6 @@
       padding: 0;
       position: static;
       width: 100%;
-    }
-  }
-
-  .title-page {
-    color: $darker-grey;
-    display: block;
-    position: static;
-    width: 100%;
-    .title {
-      font-family: 'Merriweather', serif;
-      font-size: 1em;
-      color: $darker-grey;
-      margin-bottom: 1em;
-      box-shadow: none;
-      line-height: 1.2;
-      background-color: none;
     }
   }
 

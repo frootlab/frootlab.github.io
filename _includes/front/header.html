@@ -24,30 +24,37 @@
 {% else %}
   {% assign image = site.url | append: "/" | append: site.background.default %}
 {% endif %}
-{% if page.image-format == "svg" %}
-  {% assign background = "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.0) 20%), url(" | append: image | append: ")" %}
-{% else %}
-  {% assign background = "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.0) 20%), url(" | append: image | append: ")" %}
-{% endif %}
 
 {% if page.logo %}
   {% if page.logo contains 'http://' or page.logo contains 'https://' %}
     {% assign logo = page.logo %}
-  {% else %}{% assign logo = site.url | append: page.logo %}
+  {% else %}
+    {% assign logo = site.url | append: page.logo %}
   {% endif %}
-  {% if page.logo-alt %}{% assign logo-alt = page.logo-alt %}
-  {% else %}{% assign logo-alt = title | append: " Logo" %}
+  {% if page.logo-alt %}
+    {% assign logo-alt = page.logo-alt %}
+  {% else %}
+    {% assign logo-alt = title | append: " Logo" %}
   {% endif %}
 {% endif %}
 
-<div class="front" style="background-image: {{ background }};">
+{% if page.title-layout %}
+  {% assign title-class = page.title-layout %}
+{% else %}
+  {% assign title-class = "boxed" %}
+{% endif %}
+
+
+<div class="front" style="background-image:
+  linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.0) 20%),
+  url({{ image }});">
   <div class="content">
     <div class="title-page">
       {% if logo %}
-      <div class="logo"><img src="{{ logo }}" alt="{{ logo-alt }}" style="width: 150px;"></div>
+      <div class="logo"><img src="{{ logo }}" alt="{{ logo-alt }}"></div>
       {% endif %}
-      <h1><span class="title">{{ title }}</span></h1>
+      <h1><span class="title {{ title-class }}">{{ title }}</span></h1>
       {% if page.subtitle %}
-      <h2><span class="subtitle">{{ page.subtitle }}</span></h2>
+      <h2><span class="subtitle {{ title-class }}">{{ page.subtitle }}</span></h2>
       {% endif %}
     </div>
