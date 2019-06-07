@@ -29,50 +29,6 @@ h4.enum:before {
   content: counter(h2) "." counter(h3) "." counter(h4) ". "
 }
 
-/*
-  Icons
-*/
-
-ul.icons {
-  list-style-type: none;
-  padding: 0;
-
-  > li {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-
-    a {
-      font-size: 2em;
-      padding: 0.35em 0.5em;
-      margin: 0;
-      display: inline-block;
-      vertical-align: middle;
-      cursor: pointer;
-      transition:
-        all 0.2s ease-in-out,
-        transform 50ms ease;
-      user-select: none;
-
-      &:active {
-        transform: scale(0.97);
-      }
-
-      span {
-        padding-left: 0.5rem;
-        display: none;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 640px) {
-  ul.icons > li a {
-    font-size: 1.8em;
-    padding: 0.2em 0.3em;
-  }
-}
-
 .overlay {
   position: fixed;
   background: $darker-grey;

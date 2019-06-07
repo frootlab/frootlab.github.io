@@ -1,3 +1,143 @@
+/*
+  Icons
+*/
+
+ul.icons {
+  list-style-type: none;
+  padding: 0;
+
+  > li {
+    margin: 0;
+    padding: 0 !important;
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: .5rem;
+    }
+
+    a {
+      font-size: 1.6rem;
+      padding: 0;
+      margin: 0;
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer;
+      transition:
+        all 0.2s ease-in-out,
+        transform 50ms ease;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 50%;
+      border: none;
+
+      &:active {
+        transform: scale(0.97);
+      }
+
+      span {
+        padding-left: 0.5rem;
+        display: none;
+      }
+    }
+
+    a.pdf {
+      background-color: #ee151f !important;
+      color: white !important;
+
+      &:hover {
+        background-color: lighten(#ee151f, 10%) !important;
+      }
+    }
+
+    a.facebook {
+      background-color: #3b5998 !important;
+      color: white !important;
+
+      &:hover {
+        background-color: lighten(#3b5998, 10%) !important;
+      }
+    }
+
+    a.twitter {
+      background-color: #1da1f2 !important;
+      color: white !important;
+
+      &:hover {
+        background-color: lighten(#1da1f2, 10%) !important;
+      }
+    }
+
+    a.print {
+      background-color: #5a5a5a !important;
+      color: white !important;
+
+      &:hover {
+        background-color: lighten(#5a5a5a, 10%) !important;
+      }
+    }
+
+    a.xing {
+      background-color: #007575 !important;
+      color: white !important;
+
+      &:hover {
+        background-color: lighten(#007575, 10%) !important;
+      }
+    }
+
+    a.github {
+      background-color: #24292e !important;
+      color: white !important;
+
+      &:hover {
+        background-color: lighten(#24292e, 10%) !important;
+      }
+
+    }
+
+    a.medium {
+      background-color: black !important;
+      color: white !important;
+
+      &:hover {
+        background-color: lighten(black, 10%) !important;
+      }
+    }
+
+    a.mastodon {
+      background-color: #3088d4 !important;
+      color: white !important;
+
+      &:hover {
+        background-color: lighten(#3088d4, 10%) !important;
+      }
+    }
+
+    a.keybase {
+      background-color: #33a0ff !important;
+      color: white !important;
+
+      &:hover {
+        background-color: lighten(#33a0ff, 10%) !important;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 640px) {
+  ul.icons > li a {
+    font-size: 1.8em;
+    padding: 0.2em 0.3em;
+  }
+}
+
+
+
 // Buttons
 .btn {
   display: inline-block;

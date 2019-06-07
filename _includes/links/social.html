@@ -1,16 +1,16 @@
 <ul class="icons">
   {% if page.email %}<li><a href="mailto:{{ page.email }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i><span>Email</span></a></li>{% endif %}
-  {% if page.medium %}<li><a href="https://medium.com/@{{ page.medium }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-medium"></i><span>Medium</span></a></li>{% endif %}
-  {% if page.mastodon %}<li><a href="https://{{ page.mastodon }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-mastodon"></i><span>Mastodon<span></a></li>{% endif %}
+  {% if page.medium %}<li><a class="medium" href="https://medium.com/@{{ page.medium }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-medium"></i><span>Medium</span></a></li>{% endif %}
+  {% if page.mastodon %}<li><a class="mastodon" href="https://{{ page.mastodon }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-mastodon"></i><span>Mastodon<span></a></li>{% endif %}
   {% if page.dev %}<li><a href="https://dev.to/{{ page.dev }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-dev"></i><span>Dev</span></a></li>{% endif %}
   {% if page.behance %}<li><a href="https://www.behance.net/{{ page.behance }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-behance"></i><span>Behance</span></a></li>{% endif %}
-  {% if page.twitter %}<li><a href="http://twitter.com/{{ page.twitter }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i><span>Twitter</span></a></li>{% endif %}
-  {% if page.facebook %}<li><a href="http://facebook.com/{{ page.facebook }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i><span>Facebook</span></a></li>{% endif %}
+  {% if page.twitter %}<li><a class="twitter" href="http://twitter.com/{{ page.twitter }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i><span>Twitter</span></a></li>{% endif %}
+  {% if page.facebook %}<li><a class="facebook" href="http://facebook.com/{{ page.facebook }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i><span>Facebook</span></a></li>{% endif %}
   {% if page.linkedin %}<li><a href="http://linkedin.com/in/{{ page.linkedin }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a></li>{% endif %}
-  {% if page.xing %}<li><a href="http://www.xing.com/profile/{{ page.xing }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-xing"></i><span>Xing</span></a></li>{% endif %}
+  {% if page.xing %}<li><a class="xing" href="http://www.xing.com/profile/{{ page.xing }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-xing"></i><span>Xing</span></a></li>{% endif %}
   {% if page.instagram %}<li><a href="http://instagram.com/{{ page.instagram }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i><span>Instagram</span></a></li>{% endif %}
   {% if page.tumblr %}<li><a href="http://{{ page.tumblr }}.tumblr.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-tumblr"></i><span>Tumblr</span></a></li>{% endif %}
-  {% if page.github %}<li><a href="http://github.com/{{ page.github }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i><span>GitHub</span></a></li>{% endif %}
+  {% if page.github %}<li><a class="github" href="http://github.com/{{ page.github }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i><span>GitHub</span></a></li>{% endif %}
   {% if page.pypi %}<li><a href="http://pypi.org/user/{{ page.pypi }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-python"></i><span>PyPi</span></a></li>{% endif %}
   {% if page.stackoverflow %}<li><a href="http://stackoverflow.com/users/{{ page.stackoverflow }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-stack-overflow"></i><span>Stackoverflow</span></a></li>{% endif %}
   {% if page.lastfm %}<li><a href="http://lastfm.com/user/{{ page.lastfm }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-lastfm"></i><span>LastFM</span></a></li>{% endif %}
@@ -23,7 +23,7 @@
   {% if page.weibo %}<li><a href="http://www.weibo.com/{{ page.weibo }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-weibo"></i><span>Weibo</span></a></li>{% endif %}
   {% if page.flickr %}<li><a href="http://www.flickr.com/{{ page.flickr }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-flickr"></i><span>Flickr</span></a></li>{% endif %}
   {% if page.codepen %}<li><a href="http://codepen.io/{{ page.codepen }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-codepen"></i><span>CodePen</span></a></li>{% endif %}
-  {% if page.keybase %}<li><a href="https://keybase.io/{{ page.keybase }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-keybase"></i><span>Keybase</span></a></li>{% endif %}
+  {% if page.keybase %}<li><a class="keybase" href="https://keybase.io/{{ page.keybase }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-keybase"></i><span>Keybase</span></a></li>{% endif %}
   {% if page.xmpp %}<li><a href="xmpp:{{ page.xmpp }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-lightbulb"></i><span>LightBulb</span></a></li>{% endif %}
   {% if page.hackernews %}<li><a href="https://news.ycombinator.com/user?id={{ page.hackernews }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-hacker-news"></i><span>HackerNews</span></a></li>{% endif %}
 </ul>
