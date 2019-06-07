@@ -49,6 +49,17 @@ plugins:
 whitelist:
   - jekyll-redirect-from
 
+# HTML Compression
+# see: https://github.com/penibelst/jekyll-compress-html
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: []
+
 # Exclude list
 include: [_pages]
 exclude: [README.md, Gemfile, Gemfile.lock, _site, src, vendor, CNAME, LICENSE, Rakefile, .sass-cache, .DS_Store]

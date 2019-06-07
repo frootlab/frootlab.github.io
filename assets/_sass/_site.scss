@@ -73,65 +73,6 @@ ul.icons {
   }
 }
 
-//
-// .posts-menu-icon {
-//   position: absolute;
-//   z-index: 1;
-//   top: 30px;
-//   right: 90px;
-//   width: 20px;
-//   height: 25px;
-//   border: 2px solid $gray;
-//   background: $white;
-//
-//   &:before {
-//     content: '';
-//     width: 20px;
-//     height: 25px;
-//     position: absolute;
-//     right: 2px;
-//     border: 2px solid $gray;
-//     top: 2px;
-//     background: $white;
-//   }
-//
-//   &:after {
-//     content: '';
-//     width: 20px;
-//     height: 25px;
-//     border: 2px solid $gray;
-//     position: absolute;
-//     right: 6px;
-//     top: 6px;
-//     background: $white;
-//   }
-//
-//   &:hover {
-//     border-color: $darker-grey;
-//
-//     &:before,
-//     &:after {
-//       border-color: $darker-grey;
-//     }
-//   }
-// }
-
-.posts-link,
-.projects-link {
-  position: absolute;
-  top: 73px;
-  font-size: 12px;
-  color: darken($white, 40);
-}
-
-.posts-link {
-  right: 90px;
-}
-
-.projects-link {
-  right: 20px;
-}
-
 .overlay {
   position: fixed;
   background: $darker-grey;
@@ -175,7 +116,7 @@ ul.icons {
 
     a {
       border: 30px solid transparent;
-      background: rgba(0, 0, 0, 0.4);
+      background: $black-t40;
       position: absolute;
       top: 0;
       right: 0;

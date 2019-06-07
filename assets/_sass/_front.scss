@@ -1,9 +1,10 @@
 /* Icons */
 .front ul.icons {
   > li a {
-    color: rgba(255, 255, 255, 0.9);
+    color: $white-t90;
+
     &:hover {
-      color: $link-blue;
+      color: $blue-l10;
     }
   }
 }
@@ -52,10 +53,10 @@
   // Dark Backdrop
   span.boxed {
     color: white;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: $black-t70;
     box-shadow:
-      1rem 0 0 rgba(0, 0, 0, 0.7),
-      -1rem 0 0 rgba(0, 0, 0, 0.7);
+      1rem 0 0 $black-t70,
+      -1rem 0 0 $black-t70;
   }
 
   // Inset text shadow

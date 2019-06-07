@@ -289,14 +289,16 @@ button {
     padding: 0;
     width: 90px;
     height: 110px;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
     &:active {
       margin-top: -54px;
     }
+
     &:hover,
     &:focus {
       opacity: 1;
     }
+
     &:before,
     &:after {
       content: '';
@@ -488,7 +490,7 @@ button {
           }
         }
         .mfp-bottom-bar {
-          background: rgba(0,0,0,0.6);
+          background: $black-t60;
           bottom: 0;
           margin: 0;
           top: auto;
@@ -509,7 +511,7 @@ button {
           width: 35px;
           height: 35px;
           line-height: 35px;
-          background: rgba(0, 0, 0, 0.6);
+          background: $black-t60;
           position: fixed;
           text-align: center;
           padding: 0;
@@ -540,4 +542,3 @@ button {
     padding-right: $mfp-popup-padding-left-mobile;
   }
 }
-

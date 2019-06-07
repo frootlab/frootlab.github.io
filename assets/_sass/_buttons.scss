@@ -1,40 +1,42 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
-
 // Buttons
 .btn {
   display: inline-block;
   padding: 0.4rem 0.75rem 0.5rem;
-  margin-bottom: 0.5em;
-  font-family: Verdana,sans-serif;
+  margin-bottom: 0.25rem;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-size: 0.85em;
-  font-weight: 100;
+  font-weight: 300;
   letter-spacing: 0.5px;
-  color: $dark-grey;
+  color: $white-t90 !important;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
   cursor: pointer;
   border-radius: 2px;
-  transition:
-    all 0.2s ease-in-out,
-    transform 50ms ease;
   user-select: none;
+  background: linear-gradient(
+    $darker-grey 0%,
+    darken($darker-grey, 3%) 95%,
+    lighten($darker-grey, 5%) 100%);
+  transition:
+    all 0.2s ease,
+    transform 0ms ease;
+
+  &:hover {
+    color: white !important;
+  }
 
   &:active {
     transform: scale(0.97);
   }
 
   &_green {
-    background-color: $green;
     background: linear-gradient(
       $green 0%,
       darken($green, 3%) 95%,
       lighten($green, 5%) 100%);
-    color: $white !important;
 
     &:hover {
-      background-color: lighten($green, 10%);
       background: linear-gradient(
         lighten($green, 10%) 0%,
         lighten($green, 7%) 95%,
@@ -43,15 +45,12 @@
   }
 
   &_blue{
-    background-color: $blue;
     background: linear-gradient(
       $blue 0%,
       darken($blue, 3%) 95%,
       lighten($blue, 5%) 100%);
-    color: $white !important;
 
     &:hover {
-      background-color: lighten($blue, 10%);
       background: linear-gradient(
         lighten($blue, 10%) 0%,
         lighten($blue, 7%) 95%,
@@ -60,15 +59,12 @@
   }
 
   &_red {
-    background-color: $red;
     background: linear-gradient(
       $red 0%,
       darken($red, 3%) 95%,
       lighten($red, 5%) 100%);
-    color: $white !important;
 
     &:hover {
-      background-color: lighten($red, 10%);
       background: linear-gradient(
         lighten($red, 10%) 0%,
         lighten($red, 7%) 95%,
@@ -77,15 +73,12 @@
   }
 
   &_grey {
-    background-color: $darker-grey;
     background: linear-gradient(
       $darker-grey 0%,
       darken($darker-grey, 3%) 95%,
       lighten($darker-grey, 5%) 100%);
-    color: $white !important;
 
     &:hover {
-      background-color: lighten($darker-grey, 10%);
       background: linear-gradient(
         lighten($darker-grey, 10%) 0%,
         lighten($darker-grey, 7%) 95%,

@@ -1,7 +1,7 @@
 .banderole {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   text-align: center;
-  color: rgba(255, 255, 255, 0.9);
+  color: $white-t90;
   padding: calc(3vw + 1rem) 1rem 1rem 1rem;
   position: absolute;
   bottom: 0;
@@ -9,33 +9,33 @@
   right: 0;
   background: linear-gradient(177deg,
     transparent 2.7vw,
-    rgba(0, 0, 0, 0.8) calc(2.7vw + 1px),
-    rgba(0, 0, 0, 0.8) 100%);
+    $black-t80 calc(2.7vw + 1px),
+    $black-t80 100%);
 
   h1,
   h2,
   h3 {
     font-family: "Roboto", Helvetica, Arial, sans-serif;
-    font-weight: 100;
+    font-weight: 300;
     font-size: 1.2em;
     padding-top: 0;
     margin-top: 0;
   }
 
   a {
-    color: rgba(255, 255, 255, 0.9);
+    color: $white-t90;
   }
 
   a:hover,
   a:active,
   a:focus {
-    color: $light-blue;
+    color: $blue-l10;
   }
 
   .tags > li {
     background: none;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid $white-t40;
+    color: $white-t90;
     font-size: 15px;
   }
 }
@@ -43,10 +43,10 @@
 @media screen and (max-width: 960px) {
   .banderole {
     background: linear-gradient(177deg,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0) 5.1vw,
-      rgba(0, 0, 0, 0.85) 5.2vw,
-      rgba(0, 0, 0, 0.85) 100%);
+      $black-t0 0%,
+      $black-t0 5.1vw,
+      $black-t80 5.2vw,
+      $black-t80 100%);
     padding: calc(5vw + 1rem) 1rem 1rem 1rem;
   }
 }

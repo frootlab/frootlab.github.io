@@ -1,16 +1,3 @@
-@mixin clearfix {
-  *zoom: 1;
-  &:before,
-  &:after {
-    display: table;
-    content: "";
-    line-height: 0;
-  }
-  &:after {
-    clear: both;
-  }
-}
-
 html {
   line-height: 1;
   overflow: hidden;
@@ -32,7 +19,7 @@ body {
 }
 
 a {
-  color: $darker-grey;
+  color: $blue-l10;
   outline: none;
   text-decoration: none
 }
@@ -41,7 +28,7 @@ a:hover,
 a:active,
 a:focus,
 a:visited {
-  color: $darker-grey;
+  color: $blue-l10;
 }
 
 table {
@@ -138,7 +125,7 @@ figure {
   align-items: flex-start;
   flex-wrap: wrap;
   margin: 2em 0;
-  @include clearfix();
+
   figcaption {
     margin-bottom: 0.5em;
     color: lighten($black, 50%);
@@ -146,13 +133,16 @@ figure {
     width: 100%;
     text-align: center;
   }
+
   img {
     margin-bottom: 10px;
   }
+
   > a {
     display: block;
     border: none !important;
   }
+
   &.half {
     @media only screen and (min-width: $small) {
       > a, > img {
@@ -166,6 +156,7 @@ figure {
       }
     }
   }
+
   &.third {
     @media only screen and (min-width: $small) {
       > a, > img {
@@ -204,6 +195,7 @@ blockquote {
   padding-right: 1em;
   font-style: italic;
   border-left: 0.25em solid $gray;
+
   cite {
     font-style: italic;
     font-size: 0.85em;

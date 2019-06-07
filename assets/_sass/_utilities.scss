@@ -1,3 +1,16 @@
+@mixin clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
 // circle
 .circle {
   border-radius: 50%;
@@ -65,18 +78,19 @@
 
 .notice {
   @include notice(darken($white, 30%));
+
   &_info {
     @include notice($aqua);
   }
-  &_warning {
-    @include notice($yellow);
-  }
+
   &_green {
     @include notice($green);
   }
+
   &_danger {
     @include notice($red);
   }
+
   &_red {
     color: white !important;
     @include notice($red);

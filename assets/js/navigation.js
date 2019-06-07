@@ -2,7 +2,7 @@
 // content to 250px and add a black background color to body
 function openNav() {
   document.getElementById("sideoverlay").style.width = "100%";
-  document.getElementById("sideoverlay").style.backgroundColor = "rgba(0, 0, 0, 0.4)";
+  document.getElementById("sideoverlay").style.backgroundColor = "#00000066";
   document.getElementById("sidenav").style.width = "250px";
 }
 
@@ -14,6 +14,6 @@ function closeNav() {
       document.getElementById("sideoverlay").style.width = "0";
     }, 500);
 
-  document.getElementById("sideoverlay").style.backgroundColor = "rgba(0, 0, 0, 0)";
+  document.getElementById("sideoverlay").style.backgroundColor = "#00000000";
   document.getElementById("sidenav").style.width = "0";
 }

@@ -43,11 +43,9 @@ layout: base
               <div class="{{ color }}-ribbon">{{ catid }}</div>
           </div>
         </div>
-        <div class="card-image" style="
-          background: url({{ preview }}) no-repeat;
-          background-size: cover;"></div>
+        <div class="card-image" style="background-image: url({{ preview }});"></div>
         <div class="card-text card-text-{{ color }}">
-            {{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}
+          {{ post.title | markdownify | remove: "<p>" | remove: "</p>" | remove: "<br>" }}
         </div>
       </div>
     </a>
