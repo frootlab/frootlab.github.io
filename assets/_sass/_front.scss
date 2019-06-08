@@ -1,5 +1,5 @@
 /* Icons */
-.front ul.icons {
+#front ul.icons {
   > li a {
     color: $white-t90;
 
@@ -9,7 +9,7 @@
   }
 }
 
-.front .title-page {
+.title-page {
   color: white;
   text-align: center;
   max-width: 26em;
@@ -47,7 +47,6 @@
     line-height: 1.8;
   }
 
-
   /* Title Styles */
 
   // Dark Backdrop
@@ -78,15 +77,21 @@
 
 /* Adjustments for print */
 @media print {
-  .front .title-page {
+  #front .title-page {
     color: $darker-grey;
     display: block;
     position: static;
     width: 100%;
 
+    h1 {
+      font-size: 2em;
+    }
+
+    h2 {
+      font-size: 1.5em;
+    }
+
     .title {
-      font-family: 'Merriweather', serif;
-      font-size: 1em;
       color: $darker-grey;
       margin-bottom: 1em;
       line-height: 1.2;

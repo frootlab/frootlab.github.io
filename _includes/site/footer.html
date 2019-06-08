@@ -3,9 +3,9 @@
 {% if page.navid == 'imprint' %}{% assign state_imprint = 'active' %}{% endif %}
 {% if page.navid == 'copyright' %}{% assign state_copyright = 'active' %}{% endif %}
 
-<div id="footer">
-  <a href="{{ site.url }}/contact" title="contact" class="{{ state_contact }}">Contact</a>
+<footer id="footer">
+  <a href="{{ site.url }}/contact" title="Contact" class="{{ state_contact }}">Contact</a>
   <a href="{{ site.url }}/legal/privacy" title="Privacy Policy" class="{{ state_privacy }}">Privacy Policy</a>
-  <a href="{{ site.url }}/legal/notice" title="Imprint" class="{{ state_imprint }}">Legal Notice</a>
+  <a href="{{ site.url }}/legal/notice" title="Legal Notice" class="{{ state_imprint }}">Legal Notice</a>
   <a href="{{ site.url }}/legal/copyright" title="Terms of Use" class="{{ state_copyright }}">{{ site.copyright }}</a>
-</div>
+</footer>

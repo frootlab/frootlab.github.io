@@ -66,9 +66,16 @@
     }
 
     h3.post-author {
-      font-family: 'Merriweather', serif;
       font-size: 0.9em;
       color: $darker-grey;
+
+      a {
+        color: $darker-grey;
+      }
+    }
+
+    a.btn {
+      display: none;
     }
   }
 }
