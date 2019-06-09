@@ -2,10 +2,12 @@
 layout: compress
 ---
 
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="{{ site.language }}">
 
 <head>
+  <meta charset="UTF-8">
+
   <!-- Meta -->
   {% include site/meta.html %}
 
@@ -16,22 +18,22 @@ layout: compress
 
   <!-- JS -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google-analytics }}"></script>
-  <script src="{{ site.url }}/assets/js/google-analytics.js"></script>
-  <script src="{{ site.url }}/assets/js/navigation.js"></script>
-  <script src="{{ site.url }}/assets/js/scrollarrow.js"></script>
-  <script src="{{ site.url }}/assets/js/stylefix.js"></script>
+  <script src="/assets/js/google-analytics.js"></script>
+  <script src="/assets/js/navigation.js"></script>
+  <script src="/assets/js/scrollarrow.js"></script>
+  <script src="/assets/js/stylefix.js"></script>
 
   <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
 </head>
 
 <body>
   {% include site/navigation.html %}
   {% include site/breadcrumbs.html %}
 
-  <div id="main">
-    {{ content }}
-  </div>
+  <main>
+  {{ content }}
+  </main>
 </body>
 
 </html>

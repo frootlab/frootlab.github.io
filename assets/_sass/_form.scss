@@ -130,9 +130,7 @@
 .label {
   font-size: 0.8em;
   text-transform: uppercase;
-  color: $black-t70;
 }
-
 
 .form .grey-box {
   background: $black-t5;
@@ -237,8 +235,6 @@
 
 #contact-form button[type="submit"]:hover {
   background: #43A047;
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
 }
 
@@ -280,16 +276,15 @@
   position: relative;
   border-radius: 2px;
   box-shadow: 0 1px 3px $black-t15, 0 1px 2px $black-t25;
-  transition: all 0.2s ease;
+  transition:
+    all 0.2s ease,
+    transform 50ms ease;
+
+  &:active {
+    transform: scale(0.98);
+  }
 
   &:hover {
-    box-shadow: 0 3px 6px $black-t15, 0 3px 6px $black-t25;
-
-    &:active {
-      transform: scale(0.98);
-      box-shadow: 0 2px 4px $black-t25, 0 2px 4px $black-t40;
-    }
-
     .card-text-blue {
       border-bottom: 6px solid $blue-l10;
     }
@@ -318,13 +313,9 @@
 /* Card text */
 .card-text {
   padding: 0.5em 0.4em 0.7em 0.4em;
-  font-family: Verdana, sans-serif;
   font-size: 0.9em;
-  font-weight: 400;
   color: $darker-grey;
-  line-height: 1.5;
-  text-align: center;
-  vertical-align: middle;
+  line-height: 1.4;
   border-radius: 0 0 2px 2px;
   position: absolute;
   bottom: 0;
@@ -342,8 +333,9 @@
     display: block;
     position: static;
     width: 100%;
+    max-width: 100%;
+
     .title {
-      font-family: 'Merriweather', serif;
       font-size: 1em;
       color: $darker-grey;
       margin-bottom: 1em;
