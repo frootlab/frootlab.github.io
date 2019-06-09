@@ -1,6 +1,3 @@
-#main {
-  clear: both;
-}
 
 #front,
 .right-page {
@@ -45,7 +42,7 @@
   .content {
     position: relative;
     z-index: 1;
-    padding: 0;
+    padding: 1rem;
   }
 }
 
@@ -169,6 +166,7 @@
     height: auto;
     overflow-y: inherit;
     background: none !important;
+
     .content {
       padding: 0;
       position: static;

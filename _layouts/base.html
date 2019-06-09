@@ -14,8 +14,12 @@ layout: compress
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700&display=swap" rel="stylesheet">
 
-  <!-- Scripts -->
-  {% include site/scripts.html %}
+  <!-- JS -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google-analytics }}"></script>
+  <script src="{{ site.url }}/assets/js/google-analytics.js"></script>
+  <script src="{{ site.url }}/assets/js/navigation.js"></script>
+  <script src="{{ site.url }}/assets/js/scrollarrow.js"></script>
+  <script src="{{ site.url }}/assets/js/stylefix.js"></script>
 
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/main.css">
@@ -28,8 +32,6 @@ layout: compress
   <div id="main">
     {{ content }}
   </div>
-
-  <!-- <script src="{{ site.url }}/assets/js/main.min.js"></script> -->
 </body>
 
 </html>
