@@ -24,7 +24,6 @@ collections:
 
 # Jekyll
 markdown:           kramdown
-remote_theme:       taylantatli/Halve
 highlighter:        rouge
 kramdown:
   auto_ids:         true
@@ -33,7 +32,7 @@ kramdown:
   toc_levels:       1..6
   enable_coderay:   false
 sass:
-  sass_dir:         assets/_sass
+  sass_dir:         _sass
   style:            compressed
 
 # Google Analytics

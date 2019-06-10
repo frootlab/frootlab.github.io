@@ -1,4 +1,4 @@
-// Add event listener, to erxecute scripts, when the DOM is ready,
+// Add event listener, to execute scripts, when the DOM is ready,
 // i.e. when the document has been parsed
 document.addEventListener("DOMContentLoaded", function() {
 
