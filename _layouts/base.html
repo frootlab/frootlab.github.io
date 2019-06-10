@@ -20,18 +20,14 @@ layout: compress
 
   <!-- JS -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google-analytics }}"></script>
-  <script src="/js/google-analytics.js"></script>
-  <script src="/js/navigation.js"></script>
-  <script src="/js/scrollarrow.js"></script>
-  <script src="/js/stylefix.js"></script>
+  <script src="/js/main.js"></script>
 
   <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
   {% include site/navigation.html %}
-  {% include site/breadcrumbs.html %}
 
   <main>
   {{ content }}

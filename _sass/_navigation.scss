@@ -1,28 +1,28 @@
 /* Overlay to greyout page when opening side navigation */
-#sideoverlay {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 9; /* Stay on top */
-  top: 0; /* Stay at the top */
+#overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 9;
+  top: 0;
   left: 0;
-  background: transparent; /* transparent */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  transition: background-color 0.5s; /* 0.5 second transition effect */
+  background: transparent;
+  overflow-x: hidden;
+  transition: background-color 0.5s;
 }
 
 /* The side navigation menu */
 #sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 10; /* Stay on top */
-  top: 0; /* Stay at the top */
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 10;
+  top: 0;
   left: 0;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
   box-shadow: 3px 0 15px 0 $black-t50;
 }
 
@@ -61,7 +61,7 @@
 /* Style page content - use this if you want to push the page content to the
 right when you open the side navigation */
 main {
-  transition: margin-left .5s;
+  transition: margin-left 0.5s;
   padding: 0;
   margin: 0;
   position: relative;
@@ -76,10 +76,10 @@ sidenav (less padding and a smaller font size) */
   #sidenav a {font-size: 18px;}
 }
 
-/* Breadcrumb */
-#breadcrumb {
+/* Breadcrumbs */
+#crumbs {
   float: left;
-  display: inline-block; /* The menu will have width as needed, not 100% */
+  display: inline-block;
   position: absolute;
   z-index: 3;
   top: 0;
@@ -87,47 +87,48 @@ sidenav (less padding and a smaller font size) */
   font-family: Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1em;
-  overflow: hidden; /* Hide everything that overflows, like shadows */
+  overflow: hidden;
   transition: 0.2s;
 }
 
 /* Icons */
-#breadcrumb i {
+#crumbs i {
   transform: scale(1.4);
 }
 
 /* Breadcrumb Elements */
-#breadcrumb ul {
-    display: flex; /* A key part of our menu, displays items side by side, and allows reversing them */
-    flex-direction: row-reverse; /* Reverse the items */
+#crumbs ul {
+    display: flex;
+    flex-direction: row-reverse;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-#breadcrumb ul li {
+#crumbs ul li {
     margin: 0;
 }
 
 /* Menu items */
-#breadcrumb ul li a {
+#crumbs ul li a {
   cursor: pointer;
   display: inline-block;
   font-family: sans-serif;
   font-size: 0.9em;
   font-weight: 600;
-  padding: 12px 30px 12px 45px; /* Adjusting padding to get the proper space */
-  margin-left: -20px; /* Pull the items to the left, so the rounded right side will get over them */
+  padding: 12px 30px 12px 45px;
+  margin-left: -20px;
   color: white;
   text-decoration: none;
   text-transform: uppercase;
-  border-radius: 0 100px 100px 0; /* Get the right side rounded */
-  box-shadow: 0 0 20px $black-t40; /* Apply the shadow */
+  border-radius: 0 100px 100px 0;
+  box-shadow: 0 0 20px $black-t40;
   background-color: $darker-grey;
   background: linear-gradient(
     $darker-grey 0%,
     darken($darker-grey, 3%) 95%,
     lighten($darker-grey, 5%) 100%);
+
   &:hover {
     background-color: lighten($darker-grey, 10%);
     background: linear-gradient(
@@ -138,19 +139,19 @@ sidenav (less padding and a smaller font size) */
 }
 
 /* Menu Icon */
-#breadcrumb ul li.menu-button a {
+#crumbs ul li.menu-button a {
     padding: 12px 30px 12px 30px;
     margin-left: 0px;
-    border-radius: 0px 100px 100px 0px; /* Get the right side rounded */
+    border-radius: 0px 100px 100px 0px;
 }
 
 /* Remove the shadow for first item, last in the right side when it gets reversed */
-#breadcrumb ul li:first-child a {
+#crumbs ul li:first-child a {
     box-shadow: none;
 }
 
 /* Active item is a bit different */
-#breadcrumb ul li.active a {
+#crumbs ul li.active a {
     pointer-events: none;
     cursor: default;
     color: white;
@@ -159,15 +160,15 @@ sidenav (less padding and a smaller font size) */
 }
 
 /* Remove the shadow for the active's next item, to match the design more accurately */
-#breadcrumb ul li.active + li a {
+#crumbs ul li.active + li a {
     box-shadow: none;
 }
 
 /* Print Adjustments */
 @media print {
   #sidenav,
-  #sideoverlay,
-  #breadcrumb {
+  #overlay,
+  #crumbs {
     display: none;
   }
 }
