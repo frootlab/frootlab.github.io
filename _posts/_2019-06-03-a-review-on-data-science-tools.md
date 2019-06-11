@@ -15,7 +15,7 @@ tags:
 
 **The prospects about the AI Revolution can be overwhelming. But although the
 tension is palpable, an important stage of development still is missing:
-Intelligent tools.**
+Learning applications.**
 
 [![Data Science Tools](/images/posts/data-science-tools.png)](/images/posts/data-science-tools.png)
 

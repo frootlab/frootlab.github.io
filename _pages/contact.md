@@ -13,27 +13,28 @@ keybase: frootlab
 
 ## Email
 <div class="contact-form-container">  
-  <form id="contact-form" class="panel" action="mailto:contact@frootlab.org" enctype="text/plain" method="post">
+  <form id="contact-form" class="panel" method="POST"
+    action="https://formspree.io/contact@frootlab.org">
     <fieldset>
-      <input placeholder="Name (required)" type="text" tabindex="1" required autofocus>
+      <input type="text" name="name" placeholder="Name (required)" tabindex="1" required autofocus>
     </fieldset>
     <fieldset>
-      <input placeholder="Email (required)" type="email" tabindex="2" required>
+      <input type="email" name="email" placeholder="Email (required)" tabindex="2" required>
     </fieldset>
     <fieldset>
-      <input placeholder="Phone Number (optional)" type="tel" tabindex="3" required>
+      <input type="tel" name="tel" placeholder="Phone Number" tabindex="3" >
     </fieldset>
     <fieldset>
-      <input placeholder="Web Site (optional)" type="url" tabindex="4" required>
+      <input type="url" name="url" placeholder="Web Site" tabindex="4">
     </fieldset>
     <fieldset>
-      <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
+      <textarea name="message" placeholder="Type your message here...." tabindex="5" required></textarea>
     </fieldset>
     <fieldset>
-      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+      <button type="submit" value="Send" id="contact-submit" data-submit="...Sending">Submit</button>
     </fieldset>
   </form>
 </div>
 
-## Communities
+## Community
 {% include links/social.html %}

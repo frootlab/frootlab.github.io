@@ -64,7 +64,7 @@ provides a gradient based update rule for the simultaneous effective[^3]
 training of stacked RBMs and therefore avoids losses, caused by their stacking.
 Thereby the stacked RBMs - the DBM - is trained to generate a latent
 representation of the training data, by preserving it's dependency structure.
-This stategy endows it with high generalizability.
+This strategy endows it with high generalizability.
 
 Apart of these improvements, however, DBMs provide an important hint about the
 very nature of pre-training: DBMs generate the sample distribution of the
@@ -99,15 +99,11 @@ Due to this approach GANs by the way solved a further problem of DBMs: Since the
 likelihood gradient of DBMs usually is not tractable it has to be estimated,
 either by a Markov chain or variational inference. GANs, however, do not require
 such estimations. The results are impressive! In particular, the photorelistic
-images and videos received much attention with artificial
+images and videos received much attention with artificially generated
 [faces](https://thispersondoesnotexist.com/) and
-[deepfakes](https://en.wikipedia.org/wiki/Deepfake).
+[lip sync](https://www.youtube.com/watch?v=cQ54GDm1eL0).
 
 ## What will come next?
-
-> Now what belongs together will grow together
->
-> Willy Brandt
 
 The zoo of deep models grows exponentially! Currently we find ourselves
 surrounded by many promising approaches, but there is a reason why the two
@@ -140,6 +136,6 @@ turn out, after all they will still only represent a tiny chapter within the
 long succession of incredible advances, that await us.
 
 [^1]: Due to the bipartite graph structure of RBMs, repeated Gibbs sampling is rapidly mixing, which allows an efficient approximation of the log-likelihood gradient.
-[^2]: The observables are required to trace out sufficiently smooth and Lipschitz-continous trajectories.
+[^2]: The observables are required to trace out sufficiently smooth and Lipschitz-continuous trajectories.
 [^3]: If you stack bipartite graphs together, you still get a bipartite graph. Of course, it's a little more complicated, but under the hood that's the reason, why DBMs can efficiently be trained.
 [^4]: I started the journey, to merge statistics with differential geometry and topology and would be glad, if I could inspire you with my ideas: &#091;[1](https://drive.google.com/open?id=1RnRLM7WlSw63zuftRassTI18ohMjr0vE), [2](https://drive.google.com/open?id=1nkNFPLXrAigD3MsETqt5hN9VI94nLvN0), [3](https://drive.google.com/open?id=16gl2GCT5taeH9oo86SHkFKZdeTyRRwTs), [4](https://drive.google.com/open?id=1jssUKKcUFw4LfDiWqjneMKRvVFUmZffP)&#093;, but be warned: You could get mad (or bored)!

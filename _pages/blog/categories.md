@@ -46,7 +46,6 @@ navid: blog
 {% endif %}
 
 <div class="cell">
-  <span class="label">{{ post.date | date: '%d %b %Y' }}</span>
   <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
   <div class="card">
     <div class="ribbon-box">
@@ -58,7 +57,8 @@ navid: blog
       background: url({{ preview }}) no-repeat;
       background-size: cover;"></div>
     <div class="card-text card-text-{{ color }}">
-        {{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}
+      <span class="label">{{ post.date | date: '%d. %B, %Y' }}</span><br>
+      {{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}
     </div>
   </div>
   </a>
