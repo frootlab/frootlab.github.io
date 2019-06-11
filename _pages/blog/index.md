@@ -15,6 +15,8 @@ redirect_from: /blog.html
 
 {% for post in site.posts limit:10 %}
 
+{% assign readtime = post.content | number_of_words | divided_by: 180 | plus: 0.5 | round %}
+
 {% if post.cloudinary %}
   {% assign preview = "https://res.cloudinary.com/frootlab/image/upload/c_thumb,w_300,g_face/" | append: post.cloudinary | append: ".webp" %}
 {% elsif post.preview %}
@@ -45,7 +47,7 @@ redirect_from: /blog.html
       background: url({{ preview }}) no-repeat;
       background-size: cover;"></div>
     <div class="card-text card-text-{{ color }}">
-      <span class="label">{{ post.date | date: '%d. %B, %Y' }}</span><br>
+      <div class="label">{{ post.date | date: '%d %b %Y' }} &nbsp;&bull;&nbsp; {{ readtime }} min</div>
       {{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}
     </div>
   </div>

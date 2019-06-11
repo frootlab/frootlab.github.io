@@ -14,15 +14,12 @@ navid: blog
 {% assign name = category | first %}
 
 <div id="{{ name }}" class="section">
-
-<h2 class="section-title">
-  <i class="fas fa-asterisk" style="transform: scale(0.9); vertical-align: bottom;"></i>
-  <span style="padding-left: 0.2em;">{{ name }}</span>
-</h2>
-
+<h2 class="section-title">{{ name }}</h2>
 <div class="grid">
 
 {% for post in category.last %}
+
+{% assign readtime = post.content | number_of_words | divided_by: 180 | plus: 0.5 | round %}
 
 {% if post.cloudinary %}
   {% assign preview = "https://res.cloudinary.com/frootlab/image/upload/c_thumb,w_300,g_face/" | append: post.cloudinary | append: ".webp" %}
@@ -57,7 +54,7 @@ navid: blog
       background: url({{ preview }}) no-repeat;
       background-size: cover;"></div>
     <div class="card-text card-text-{{ color }}">
-      <span class="label">{{ post.date | date: '%d. %B, %Y' }}</span><br>
+      <div class="label">{{ post.date | date: '%d %b %Y' }} &nbsp;&bull;&nbsp; {{ readtime }} min</div>
       {{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}
     </div>
   </div>

@@ -18,14 +18,12 @@ redirect_from: /tags.html
 {% capture title %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
 
 <div id="{{ title }}" class="section">
-<h2 class="section-title">
-  <i class="fas fa-tag" style="transform: scale(0.9); vertical-align: bottom;"></i>
-  <span style="padding-left: 0.2em;">{{ title }}</span>
-</h2>
-
+<h2 class="section-title">{{ title }}</h2>
 <div class="grid">
 
 {% for post in site.tags[title] %}
+
+{% assign readtime = post.content | number_of_words | divided_by: 180 | plus: 0.5 | round %}
 
 {% if post.cloudinary %}
   {% assign preview = "https://res.cloudinary.com/frootlab/image/upload/c_thumb,w_300,g_face/" | append: post.cloudinary | append: ".webp" %}
@@ -60,7 +58,7 @@ redirect_from: /tags.html
       background: url({{ preview }}) no-repeat;
       background-size: cover;"></div>
     <div class="card-text card-text-{{ color }}">
-      <span class="label">{{ post.date | date: '%d. %B, %Y' }}</span><br>
+      <div class="label">{{ post.date | date: '%d %b %Y' }} &nbsp;&bull;&nbsp; {{ readtime }} min</div>
       {{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}
     </div>
   </div>
