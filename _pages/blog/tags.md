@@ -5,6 +5,7 @@ title: Blog
 short-title: Tag
 cloudinary: pixabay/3357642
 image-orientation: landscape
+sections: true
 description: "An archive of all posts sorted by tag"
 permalink: /blog/tags.html
 redirect_from: /tags.html
@@ -17,8 +18,11 @@ redirect_from: /tags.html
 {% unless forloop.last %}
 {% capture title %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
 
-<div id="{{ title }}" class="section">
+<div id="{{ title }}" class="hidden">
+<section class="white">
 <h2 class="section-title">{{ title }}</h2>
+</section>
+<section class="grey">
 <div class="grid">
 
 {% for post in site.tags[title] %}
@@ -70,6 +74,7 @@ redirect_from: /tags.html
 <div class="cell"></div>
 
 </div>
+</section>
 </div>
 
 {% endunless %}{% endfor %}

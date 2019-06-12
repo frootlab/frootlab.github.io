@@ -1,4 +1,5 @@
 article {
+  padding: 3rem 5rem 7rem;
   font-family: 'Merriweather', serif;
 
   h1,
@@ -52,6 +53,13 @@ article {
 
   a.bookmark {
     float: right;
+    display: inline-block;
+
+    i {
+      vertical-align: middle;
+      font-size: 0.9rem;
+      transform: none;
+    }
   }
 
   small {
@@ -228,8 +236,12 @@ article .share-article {
 /* Small Screen Adjustments */
 
 @media screen and (max-width: 640px) {
-  article .separator {
-    margin: 80px 0 40px;
+  article {
+    padding: 3rem 1rem 7rem;
+
+    .separator {
+      margin: 80px 0 40px;
+    }
   }
 }
 

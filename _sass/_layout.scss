@@ -49,15 +49,15 @@
 .right-page {
   float: right;
   z-index: 0;
-  background-image: linear-gradient(
-    white 0%,
-    white 25%,
-    #f5f5f5 90%,
-    #e8e8e8 100%);
+  // background-image: linear-gradient(
+  //   white 0%,
+  //   white 25%,
+  //   #f5f5f5 90%,
+  //   #e8e8e8 100%);
 
   .content {
     display: block;
-    padding: 3em 5em 7em;
+    // padding: 3em 5em 7em;
     height: auto;
     min-height: 100% !important;
     display: block;
@@ -73,7 +73,7 @@
 
 .content {
   display: static;
-  padding: 4rem 3rem 3rem 3rem;
+  // padding: 4rem 3rem 3rem 3rem;
   margin: 0 auto;
 }
 
@@ -88,10 +88,10 @@
 #footer {
   font-family: 'Roboto Condensed', sans-serif;
   width: 100%;
-  padding-right: 1em;
+  padding-right: 1rem;
   text-align: right;
-  margin-top: -2em;
-  height: 2em;
+  margin-top: -1.8rem;
+  height: 1.8rem;
   z-index: 5;
 
   a {
@@ -130,15 +130,6 @@
 
   .overflow-box {
     overflow-y: inherit;
-  }
-}
-
-/* Adjustments for small screens */
-@media screen and (max-width: 640px) {
-  .right-page {
-    .content {
-      padding: 3rem 1rem 7rem;
-    }
   }
 }
 

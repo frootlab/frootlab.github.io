@@ -133,8 +133,9 @@ h4.enum:before {
 }
 
 /* Post groups aggregate posts */
-.section {
+.hidden {
   display: none;
+
   &:target {
     display: block;
   }
@@ -145,15 +146,6 @@ h4.enum:before {
   font-size: 2.2em;
   padding-bottom: 0.3em;
   color: lighten($darker-grey, 10%);
-}
-
-/* Create Post Preview */
-.section-content {
-  column-count: 2;
-  column-gap: 20px;
-  column-rule-style: none;
-  margin-top: 25px;
-  margin-bottom: 15px;
 }
 
 /* Light Weight Text */
@@ -261,9 +253,5 @@ p.light {
   .projects-menu li {
     width: 100% !important;
     height: 50% !important;
-  }
-
-  .content {
-    padding: 20px
   }
 }

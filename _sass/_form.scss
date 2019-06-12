@@ -4,18 +4,42 @@
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-weight: 300;
   text-align: left;
-  background-color: rgb(250, 250, 250);
+  background-color: #fafafa;
 
   h1,
   h2,
   h3,
   p,
+  section,
   .panel,
-  .info,
-  .group {
+  .info {
     box-sizing: border-box;
     font-family: "Roboto", Helvetica, Arial, sans-serif;
     font-weight: 300;
+  }
+
+  section {
+    padding: 1rem 5rem;
+    width: 100%;
+    margin: 0;
+
+    &:first-of-type {
+      padding-top: 3rem;
+      margin-top: auto;
+    }
+
+    &:last-of-type {
+      padding-bottom: 7rem;
+      margin-bottom: auto;
+    }
+  }
+
+  section.white {
+    background-color: white;
+  }
+
+  section.grey {
+    background-color: #fafafa;
   }
 
   h1,
@@ -55,11 +79,6 @@
   strong {
     color: $darker-grey;
     font-weight: 400;
-  }
-
-  .group {
-    width: 100%;
-    margin: 0 auto;
   }
 
   .panel {
@@ -341,6 +360,22 @@
   }
 }
 
+/* Small Screen Adjustments */
+
+@media screen and (max-width: 640px) {
+  .form section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    &:first-of-type {
+      padding-top: 3rem;
+    }
+
+    &:last-of-type {
+      padding-bottom: 7rem;
+    }
+  }
+}
 
 /* Adjustments for print */
 @media print {

@@ -4,6 +4,7 @@ title: Blog
 short-title: Category
 cloudinary: pixabay/3357642
 image-orientation: landscape
+sections: true
 description: "An archive of all posts sorted by category"
 permalink: /blog/categories.html
 redirect_from: /categories.html
@@ -13,8 +14,11 @@ navid: blog
 {% for category in site.categories %}
 {% assign name = category | first %}
 
-<div id="{{ name }}" class="section">
+<div id="{{ name }}" class="hidden">
+<section class="white">
 <h2 class="section-title">{{ name }}</h2>
+</section>
+<section>
 <div class="grid">
 
 {% for post in category.last %}
@@ -66,5 +70,7 @@ navid: blog
 <div class="cell"></div>
 
 </div>
+</section>
 </div>
+
 {% endfor %}

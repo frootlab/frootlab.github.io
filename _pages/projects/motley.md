@@ -5,6 +5,7 @@ title: Motley
 subtitle: Smart Algorithm Repository
 cloudinary: pexels/990824
 image-orientation: landscape
+sections: true
 form-logo: /images/svg/motley.svg
 permalink: /projects/motley.html
 redirect_from: /motley.html

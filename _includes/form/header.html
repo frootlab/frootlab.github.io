@@ -6,9 +6,15 @@
 
 <div class="right-page">
   <div class="overflow-box">
+    {% if page.backdrop %}
+    <div class="content {{ content-class }}" style="background: {{ page.backdrop }};">
+    {% else %}
     <div class="content {{ content-class }}">
+    {% endif %}
+      {% unless page.sections %}
       {% if page.form-style %}
-      <div class="group" style="{{ page.form-style }}">
+      <section style="{{ page.form-style }}">
       {% else %}
-      <div class="group">
+      <section>
       {% endif %}
+      {% endunless %}

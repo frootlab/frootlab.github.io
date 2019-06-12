@@ -16,7 +16,7 @@ layout: base
 {% include front/trailer.html %}
 
 {% include form/header.html %}
-<div style="border-bottom: 1px solid #0000001A; margin-bottom: 3rem; padding-bottom: 3rem;">
+<section>
   {% if page.form-logo %}
   <div style="display: flex; align-items: center;">
   <img src="{{ site.url }}{{ page.form-logo }}" style="width: 7rem; margin: 0 0.5rem 0 -0.5rem;">
@@ -26,16 +26,38 @@ layout: base
   {% else %}
   <h2>{{ page.title }}</h2>
   {% endif %}
-</div>
+</section>
 
-<div style="margin-bottom: 3rem;">
-  <h3>Quickstart</h3>
-  <div class="language-shell highlighter-rouge">
-    <div class="highlight">
-      <pre class="highlight"><code><span class="nv">$ </span>pip install {{ page.pypi }}</code></pre>
-    </div>
+<section>
+<h3>Quickstart</h3>
+<div class="language-shell highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight"><code><span class="nv">$ </span>pip install {{ page.pypi }}</code></pre>
   </div>
-  <div class="panel thin" style="display: flex;">
+</div>
+<h3>Latest News</h3>
+{% assign name = page.title | capitalize %}
+{% for post in site.posts %}
+{% if post.tags contains name %}
+
+{% assign catid = post.categories | first | downcase %}
+{% if catid == 'corporate' %}{% assign color = 'blue' %}
+{% elsif catid == 'science' %}{% assign color = 'green' %}
+{% elsif catid == 'technology' %}{% assign color = 'red' %}
+{% else %}{% assign color = 'grey' %}
+{% endif %}
+<p>
+  {{ post.date | date: '%d. %B, %y' }}:
+  <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+</p>
+{% endif %}
+{% endfor %}
+
+{{ content }}
+</section>
+
+<section class="grey" style="">
+  <div style="display: flex;">
     <div style="flex: 48%; text-align: center;">
       <div class="label" style="padding-bottom: 0.5rem; margin: 0 0.5rem;">Documentation</div>
       {% include links/docs.html %}
@@ -49,26 +71,5 @@ layout: base
       {% include links/license.html %}
     </div>
   </div>
-</div>
-
-<div style="margin-bottom: 3rem;">
-  <h3>Latest News</h3>
-  {% assign name = page.title | capitalize %}
-  {% for post in site.posts %}
-  {% if post.tags contains name %}
-
-  {% assign catid = post.categories | first | downcase %}
-  {% if catid == 'corporate' %}{% assign color = 'blue' %}
-  {% elsif catid == 'science' %}{% assign color = 'green' %}
-  {% elsif catid == 'technology' %}{% assign color = 'red' %}
-  {% else %}{% assign color = 'grey' %}
-  {% endif %}
-  <p>
-    {{ post.date | date: '%d. %B, %y' }}:
-    <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-  </p>
-  {% endif %}
-  {% endfor %}
-</div>
-{{ content }}
+</section>
 {% include form/trailer.html %}

@@ -5,12 +5,17 @@ title: Blog
 short-title: Blog
 cloudinary: pixabay/3357642
 image-orientation: landscape
+sections: true
 description: "An archive of all posts sorted by date"
 permalink: /blog/index.html
 redirect_from: /blog.html
 ---
 
+<section class="white">
 <h2 class="section-title">Latest Posts</h2>
+</section>
+
+<section class="grey">
 <div class="grid">
 
 {% for post in site.posts limit:10 %}
@@ -58,3 +63,4 @@ redirect_from: /blog.html
 {% endfor %}
 
 </div>
+</section>

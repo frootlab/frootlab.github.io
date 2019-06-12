@@ -5,6 +5,7 @@ title: Pandora
 subtitle: High Performance Data Proxy
 cloudinary: pexels/366691
 image-orientation: landscape
+sections: true
 form-logo: /images/svg/pandora.svg
 permalink: /projects/pandora.html
 redirect_from: /pandora.html
