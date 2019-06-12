@@ -54,12 +54,11 @@ redirect_from: /tags.html
           <div class="{{ color }}-ribbon">{{ catid }}</div>
       </div>
     </div>
-    <div class="card-image" style="
-      background: url({{ preview }}) no-repeat;
-      background-size: cover;"></div>
-    <div class="card-text card-text-{{ color }}">
+    <div class="card-image" style="background-image: url({{ preview }});"></div>
+    <div class="card-content">
       <div class="label">{{ post.date | date: '%d %b %Y' }} &nbsp;&bull;&nbsp; {{ readtime }} min</div>
-      {{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}
+      <div class="card-title">{{ post.title | markdownify | strip_html }}</div>
+      <div class="card-text">{{ post.excerpt | strip_html | truncatewords:20}}</div>
     </div>
   </div>
   </a>

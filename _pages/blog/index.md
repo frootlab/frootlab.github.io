@@ -34,8 +34,10 @@ redirect_from: /blog.html
 {% else %}{% assign color = 'grey' %}
 {% endif %}
 
-<div class="cell">
+{% assign offset = post.title | number_of_words | times: 2 %}
+{% assign cutoff = 35 | minus: offset %}
 
+<div class="cell">
   <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
   <div class="card">
     <div class="ribbon-box">
@@ -43,12 +45,11 @@ redirect_from: /blog.html
           <div class="{{ color }}-ribbon">{{ catid }}</div>
       </div>
     </div>
-    <div class="card-image" style="
-      background: url({{ preview }}) no-repeat;
-      background-size: cover;"></div>
-    <div class="card-text card-text-{{ color }}">
+    <div class="card-image" style="background-image: url({{ preview }});"></div>
+    <div class="card-content">
       <div class="label">{{ post.date | date: '%d %b %Y' }} &nbsp;&bull;&nbsp; {{ readtime }} min</div>
-      {{ post.title | markdownify | remove: "<p>" | remove: "</p>" }}
+      <div class="card-title">{{ post.title | markdownify | strip_html }}</div>
+      <div class="card-text">{{ post.excerpt | strip_html | truncatewords: cutoff}}</div>
     </div>
   </div>
   </a>

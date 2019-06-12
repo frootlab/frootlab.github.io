@@ -44,7 +44,7 @@ layout: base
           </div>
         </div>
         <div class="card-image" style="background-image: url({{ preview }});"></div>
-        <div class="card-text card-text-{{ color }}">
+        <div class="card-content card-content-{{ color }}">
           {{ post.title | markdownify | remove: "<p>" | remove: "</p>" | remove: "<br>" }}
         </div>
       </div>

@@ -13,13 +13,14 @@
   position: absolute;
   top: 0;
   left: 0;
+
   .ribbon,
   .blue-ribbon,
   .green-ribbon,
   .red-ribbon,
   .grey_ribbon {
     font: bold 0.7em sans-serif;
-    color: #333;
+    color: white;
     text-align: center;
     transform: rotate(-45deg);
     position: relative;
@@ -28,20 +29,20 @@
     left: -30px;
     width: 120px;
   }
+
   .blue-ribbon {
-    background-color: $blue;
-    color: white;
+    background-color: lighten($blue, 10%);
   }
+
   .green-ribbon {
-    background-color: $green;
-    color: white;
+    background-color: lighten($green, 10%);
   }
+
   .red-ribbon {
-    background-color: $red;
-    color: white;
+    background-color: lighten($red, 10%);
   }
+
   .grey-ribbon {
-    background-color: $darker-grey;
-    color: white;
+    background-color: lighten($darker-grey, 10%);
   }
 }

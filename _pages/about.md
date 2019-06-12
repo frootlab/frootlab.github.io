@@ -31,10 +31,10 @@ comprehensive solution, which on the basis of
 [TensorFlow](https://www.tensorflow.org/) incorporates machine intelligence and
 collaborative data science into the whole software life cycle. The key
 components of the framework comprise a [high performance database
-proxy](pandora.html), which supports a wide variety of different data sources,
-[an auto-evaluating algorithm repository](motley.html) and an [AutoML templating
-system](nemoa.html), which uses the other components to abstract explicit
-algorithms to currently best fitting.
+proxy](/pandora.html), which supports a wide variety of different data sources,
+[an auto-evaluating algorithm repository](/motley.html) and an [AutoML
+templating system](/nemoa.html), which uses the other components to abstract
+explicit algorithms to currently best fitting.
 
 Our fundamental conviction is, that research and education should be provided
 with universal access. Accordingly we release all components of this framework
