@@ -3,6 +3,8 @@ layout: home
 navid: home
 cloudinary: pixabay/2462431-dark
 image-orientation: landscape
+cloudinary: pixabay/3357642
+image-orientation: landscape
 backdrop: white
 logo: /images/svg/frootlab.svg
 logo-alt: Frootlab Logo
