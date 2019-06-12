@@ -5,6 +5,7 @@ title: Pandora
 subtitle: High Performance Data Proxy
 cloudinary: pexels/366691
 image-orientation: landscape
+backdrop: white
 sections: true
 form-logo: /images/svg/pandora.svg
 permalink: /projects/pandora.html
@@ -18,7 +19,6 @@ license: GPL-3.0
 license-url: https://www.gnu.org/licenses/gpl.html
 ---
 
-### About
 **Pandora** is a universal database proxy and SQL-Database engine, that
 implements high-performance and security requirements for large-scale enterprise
 analytical applications. Pandora is based on the
@@ -43,7 +43,8 @@ storage manager and real-time encryption. This allows the data analysis
 application to integrate a variety of different data sources, by using a unified
 data interface (and SQL dialect).
 
-### License
+**License**
+
 According to our [convictions](/corporate/2019/03/19/welcome-at-frootlab.html)
 Pandora is [free and open-source
 software](https://en.wikipedia.org/wiki/Free_and_open-source_software). It is

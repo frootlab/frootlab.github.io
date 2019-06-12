@@ -11,11 +11,8 @@ permalink: /blog/index.html
 redirect_from: /blog.html
 ---
 
-<section class="white">
-<h2 class="section-title">Latest Posts</h2>
-</section>
-
-<section class="grey">
+<section class="white"><h2>Latest Posts</h2></section>
+<section>
 <div class="grid">
 
 {% for post in site.posts limit:10 %}

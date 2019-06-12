@@ -6,6 +6,7 @@ subtitle: Frootlab Shared Library
 cloudinary: unsplash/602632
 sections: true
 image-orientation: landscape
+backdrop: white
 permalink: /projects/flib.html
 redirect_from: /flib.html
 github: frootlab/flib
@@ -17,7 +18,6 @@ license: GPL-3.0
 license-url: https://www.gnu.org/licenses/gpl.html
 ---
 
-### About
 The **frootlab shared library** (flib) is a multi-purpose
 [Python](https://www.python.org/) library, which primarily aims to support
 [Frootlab](https://www.frootlab.org) projects by serving as a common base
@@ -57,7 +57,8 @@ application beyond Frootlab projects as well.
 [Extended RAW-File IO](http://docs.frootlab.org/projects/flib/en/latest/api/flib.io.raw.html),
 [Extended ZIP-Archive IO](http://docs.frootlab.org/projects/flib/en/latest/api/flib.io.zip.html),
 
-### License
+**License**
+
 According to our [convictions](/corporate/2019/03/19/welcome-at-frootlab.html)
 the frootlab shared library is [free and open-source
 software](https://en.wikipedia.org/wiki/Free_and_open-source_software). It is

@@ -42,6 +42,10 @@
     background-color: #fafafa;
   }
 
+  section.dark-grey {
+    background: $blue-gray;
+  }
+
   h1,
   h2,
   h3 {
@@ -82,7 +86,7 @@
   }
 
   .panel {
-    background: $blue-gray;
+    background: #fafafa;
     padding: 2rem;
     margin: 0;
     position: relative;

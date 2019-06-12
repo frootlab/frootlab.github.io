@@ -15,9 +15,7 @@ navid: blog
 {% assign name = category | first %}
 
 <div id="{{ name }}" class="hidden">
-<section class="white">
-<h2 class="section-title">{{ name }}</h2>
-</section>
+<section class="white"><h2>{{ name }}</h2></section>
 <section>
 <div class="grid">
 

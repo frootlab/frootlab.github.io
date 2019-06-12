@@ -16,7 +16,7 @@ layout: base
 {% include front/trailer.html %}
 
 {% include form/header.html %}
-<section>
+<section class="white">
   {% if page.form-logo %}
   <div style="display: flex; align-items: center;">
   <img src="{{ site.url }}{{ page.form-logo }}" style="width: 7rem; margin: 0 0.5rem 0 -0.5rem;">
@@ -28,14 +28,23 @@ layout: base
   {% endif %}
 </section>
 
-<section>
-<h3>Quickstart</h3>
+<section class="dark-grey"><h3>Quickstart</h3></section>
+<section class="white">
+<p><strong>Installation using PIP</strong></p>
 <div class="language-shell highlighter-rouge">
   <div class="highlight">
     <pre class="highlight"><code><span class="nv">$ </span>pip install {{ page.pypi }}</code></pre>
   </div>
 </div>
-<h3>Latest News</h3>
+</section>
+
+<section class="dark-grey"><h3>About</h3></section>
+<section class="white">
+{{ content }}
+</section>
+
+<section class="dark-grey"><h3>Latest News</h3></section>
+<section class="white">
 {% assign name = page.title | capitalize %}
 {% for post in site.posts %}
 {% if post.tags contains name %}
@@ -52,24 +61,26 @@ layout: base
 </p>
 {% endif %}
 {% endfor %}
-
-{{ content }}
 </section>
 
-<section class="grey" style="">
+<section class="dark-grey"><h3>Links</h3></section>
+<section class="white">
   <div style="display: flex;">
     <div style="flex: 48%; text-align: center;">
-      <div class="label" style="padding-bottom: 0.5rem; margin: 0 0.5rem;">Documentation</div>
+      <div class="label" style="padding-bottom: 0.5rem; margin: 0 0.5rem; color: #999; ">Documentation</div>
       {% include links/docs.html %}
     </div>
     <div style="flex: 32%; text-align: center;">
-      <div class="label" style="padding-bottom: 0.5rem; margin: 0 0.5rem;">Source</div>
+      <div class="label" style="padding-bottom: 0.5rem; margin: 0 0.5rem; color: #999;">Source Code</div>
       {% include links/project.html %}
     </div>
     <div style="flex: 20%; text-align: center;">
-      <div class="label" style="padding-bottom: 0.5rem; margin: 0 0.5rem;">License</div>
+      <div class="label" style="padding-bottom: 0.5rem; margin: 0 0.5rem; color: #999; ">License</div>
       {% include links/license.html %}
     </div>
   </div>
 </section>
+
+<section></section>
+
 {% include form/trailer.html %}

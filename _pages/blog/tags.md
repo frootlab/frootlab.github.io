@@ -19,10 +19,8 @@ redirect_from: /tags.html
 {% capture title %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
 
 <div id="{{ title }}" class="hidden">
-<section class="white">
-<h2 class="section-title">{{ title }}</h2>
-</section>
-<section class="grey">
+<section class="white"><h2>{{ title }}</h2></section>
+<section>
 <div class="grid">
 
 {% for post in site.tags[title] %}

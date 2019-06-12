@@ -5,6 +5,7 @@ title: Nemoa
 subtitle: Automated Machine Learning
 cloudinary: pexels/101764
 image-orientation: landscape
+backdrop: white
 sections: true
 form-logo: /images/svg/nemoa.svg
 permalink: /projects/nemoa.html
@@ -18,7 +19,6 @@ license: GPL-3.0
 license-url: "https://www.gnu.org/licenses/gpl.html"
 ---
 
-### About
 **Nemoa** is a machine learning- and data analysis framework, that utilizes
 cloud assisted metaprogramming for automated code optimization. Nemoa is based
 on the [Python](https://www.python.org/) programming language and actively
@@ -35,7 +35,8 @@ modeling](https://en.wikipedia.org/wiki/Graphical_model), [machine
 learning](https://en.wikipedia.org/wiki/Machine_learning) and [structured
 data-analysis](https://en.wikipedia.org/wiki/Structured_data_analysis_(statistics))).
 
-### License
+**License**
+
 According to our [convictions](/corporate/2019/03/19/welcome-at-frootlab.html)
 Nemoa is [free and open-source
 software](https://en.wikipedia.org/wiki/Free_and_open-source_software). It is

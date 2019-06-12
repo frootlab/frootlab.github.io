@@ -5,6 +5,7 @@ title: Motley
 subtitle: Smart Algorithm Repository
 cloudinary: pexels/990824
 image-orientation: landscape
+backdrop: white
 sections: true
 form-logo: /images/svg/motley.svg
 permalink: /projects/motley.html
@@ -18,7 +19,6 @@ license: GPL-3.0
 license-url: https://www.gnu.org/licenses/gpl.html
 ---
 
-### About
 **Motley** is a planed catalog server for algorithm storage and evaluation and
 based on [GIT](https://git-scm.com/). Motley aims to serve as an algorithm
 catalog to allow the usage of abstract **currently best fitting** (CBF)
@@ -40,7 +40,8 @@ costs. Also motley supports scientific applications, by facilitating a local
 (workgroup, lab, institution) or global publication, application and evaluation
 of algorithms.
 
-### License
+**License**
+
 According to our [convictions](/corporate/2019/03/19/welcome-at-frootlab.html)
 Motley is [free and open-source
 software](https://en.wikipedia.org/wiki/Free_and_open-source_software). It is
