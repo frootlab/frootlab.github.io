@@ -6,18 +6,22 @@ short-title: Contact
 cloudinary: unsplash/710800
 image-orientation: portrait
 sections: true
-backdrop: white
 permalink: /contact.html
 twitter: frootlab
 github: frootlab
 keybase: frootlab
 ---
 
-<section class="white"><h2>Contact</h2></section>
+<section class="dark-grey"><h3>Community</h3></section>
+<section class="grey">
+<div style="padding: 1rem;">
+{% include links/social.html %}
+</div>
+</section>
 <section class="dark-grey"><h3>Email</h3></section>
-<section class="white">
-<div class="contact-form-container" style="padding: 3rem 0;">  
-  <form id="contact-form" class="panel" method="POST"
+<section class="grey">
+<div class="contact-form-container" style="padding: 1rem 0;">  
+  <form id="contact-form" method="POST"
     action="https://formspree.io/contact@frootlab.org">
     <fieldset>
       <input type="text" name="name" placeholder="Name (required)" tabindex="1" required autofocus>
@@ -39,8 +43,4 @@ keybase: frootlab
     </fieldset>
   </form>
 </div>
-</section>
-<section class="dark-grey"><h3>Community</h3></section>
-<section class="white">
-{% include links/social.html %}
 </section>
