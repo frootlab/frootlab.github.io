@@ -5,6 +5,7 @@ title: Patrick Michl
 short-title: Patrick
 subtitle: Member / Founder
 image: /images/authors/patrick.webp
+sections: true
 medium: fishroot
 mastodon: mastodon.social/@fishroot
 github: fishroot

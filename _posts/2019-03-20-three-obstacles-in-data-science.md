@@ -5,7 +5,7 @@ title: Three obstacles in data science and one vision
 short-title: Three obstacles
 crumbs: /blog/Three obstacles
 author: Patrick Michl
-license: "CC BY 4.0"
+license: CC BY 4.0
 license-url: "https://creativecommons.org/licenses/by/4.0/"
 cloudinary: pexels/67843
 image-orientation: landscape

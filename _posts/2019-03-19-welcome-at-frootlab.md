@@ -5,7 +5,7 @@ title: Welcome at Frootlab
 short-title: Welcome
 crumbs: /blog/Welcome
 author: Patrick Michl
-license: "CC BY 4.0"
+license: CC BY 4.0
 license-url: "https://creativecommons.org/licenses/by/4.0/"
 cloudinary: unsplash/710800
 image-orientation: portrait

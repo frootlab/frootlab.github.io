@@ -9,14 +9,19 @@ layout: base
 {% include front/trailer.html %}
 
 {% include form/header.html %}
-<h3>About</h3>
-<div class="panel flat thin">
+<section class="dark-grey"><h3>About</h3></section>
+<section class="white">
   {{ page.content | markdownify }}
-</div>
-<h3>Posts</h3>
-<div class="grid">
+</section>
+<section class="dark-grey"><h3>Posts</h3></section>
+<section class="grey">
+<div class="grid" style="padding: 1rem 0;">
   {% assign posts = site.posts | where: 'author', page.title %}
   {% for post in posts %}
+
+  {% assign readtime = post.content | number_of_words | divided_by: 180 | plus: 0.5 | round %}
+  {% assign offset = post.title | number_of_words | times: 2 %}
+  {% assign cutoff = 35 | minus: offset %}
 
   {% if post.cloudinary %}
     {% assign preview = "https://res.cloudinary.com/frootlab/image/upload/c_thumb,w_300,g_face/" | append: post.cloudinary | append: ".webp" %}
@@ -35,7 +40,6 @@ layout: base
   {% else %}{% assign color = 'grey' %}
   {% endif %}
   <div class="cell">
-    <span class="label">{{ post.date | date: '%d %b %Y' }}</span>
     <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
       <div class="card">
         <div class="ribbon-box">
@@ -44,8 +48,10 @@ layout: base
           </div>
         </div>
         <div class="card-image" style="background-image: url({{ preview }});"></div>
-        <div class="card-content card-content-{{ color }}">
-          {{ post.title | markdownify | remove: "<p>" | remove: "</p>" | remove: "<br>" }}
+        <div class="card-content">
+          <div class="label">{{ post.date | date: '%d %b %Y' }} &nbsp;&bull;&nbsp; {{ readtime }} min</div>
+          <div class="card-title">{{ post.title | markdownify | strip_html }}</div>
+          <div class="card-text">{{ post.excerpt | strip_html | truncatewords: cutoff}}</div>
         </div>
       </div>
     </a>
@@ -54,4 +60,5 @@ layout: base
   <div class="cell"></div>
   <div class="cell"></div>
 </div>
+</section>
 {% include form/trailer.html %}

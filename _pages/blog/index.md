@@ -11,13 +11,15 @@ permalink: /blog/index.html
 redirect_from: /blog.html
 ---
 
-<section class="white"><h2>Latest Posts</h2></section>
-<section>
-<div class="grid">
+<section class="dark-grey"><h3>Latest Posts</h3></section>
+<section class="grey">
+<div class="grid" style="padding: 1rem 0;">
 
-{% for post in site.posts limit:10 %}
+{% for post in site.posts limit:9 %}
 
 {% assign readtime = post.content | number_of_words | divided_by: 180 | plus: 0.5 | round %}
+{% assign offset = post.title | number_of_words | times: 2 %}
+{% assign cutoff = 35 | minus: offset %}
 
 {% if post.cloudinary %}
   {% assign preview = "https://res.cloudinary.com/frootlab/image/upload/c_thumb,w_300,g_face/" | append: post.cloudinary | append: ".webp" %}
@@ -35,9 +37,6 @@ redirect_from: /blog.html
 {% elsif catid == 'technology' %}{% assign color = 'red' %}
 {% else %}{% assign color = 'grey' %}
 {% endif %}
-
-{% assign offset = post.title | number_of_words | times: 2 %}
-{% assign cutoff = 35 | minus: offset %}
 
 <div class="cell">
   <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
