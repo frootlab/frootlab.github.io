@@ -27,28 +27,29 @@ links:
   <h3>Next generation AutoML and Data-Warehousing</h3>
 </section>
 <section class="white">
-<div style="display: flex; justify-content: space-around; padding-top: 16pt;">
-    <div style="flex: 33%; margin: 0 24pt; padding: 16pt 0; text-align: center;">
-      <img style="height: 180px;" src="https://res.cloudinary.com/frootlab/image/upload/undraw/undraw_server_status_5pbv">
-      <p><strong><a href="/projects/pandora">Pandora</a></strong></p>
-      <p>
-        Equip your existing data applications with a universal data plug
-      </p>
-    </div>
-    <div style="flex: 33%; margin: 0 24pt; padding: 16pt 0; text-align: center;">
-      <img style="height: 180px;" src="https://res.cloudinary.com/frootlab/image/upload/undraw/professor.svg">
-      <p><strong><a href="/projects/nemoa">Nemoa</a></strong></p>
-      <p>
-        Use rapid prototyping for your enterprise analytical applications
-      </p>
-    </div>
-    <div style="flex: 33%; margin: 0 24pt; padding: 16pt 0; text-align: center;">
-      <img style="height: 180px;" src="https://res.cloudinary.com/frootlab/image/upload/undraw/undraw_Data_points_ubvs.svg">
-      <p><strong><a href="/projects/motley">Motley</a></strong></p>
-      <p>
-        Discover a new approach for collaborative data science
-      </p>
-    </div>
+
+<div class="grid">
+  <div class="cell" style="text-align: center; padding: 1rem;">
+    <img style="height: 180px;" src="https://res.cloudinary.com/frootlab/image/upload/undraw/undraw_server_status_5pbv">
+    <p><strong><a href="/projects/pandora">Pandora</a></strong></p>
+    <p>
+      Equip your existing data applications with a universal data plug
+    </p>
+  </div>
+  <div class="cell" style="text-align: center; padding: 1rem;">
+    <img style="height: 180px;" src="https://res.cloudinary.com/frootlab/image/upload/undraw/professor.svg">
+    <p><strong><a href="/projects/nemoa">Nemoa</a></strong></p>
+    <p>
+      Use rapid prototyping for your enterprise analytical applications
+    </p>
+  </div>
+  <div class="cell" style="text-align: center; padding: 1rem;">
+    <img style="height: 180px;" src="https://res.cloudinary.com/frootlab/image/upload/undraw/undraw_Data_points_ubvs.svg">
+    <p><strong><a href="/projects/motley">Motley</a></strong></p>
+    <p>
+      Discover a new approach for collaborative data science
+    </p>
+  </div>
 </div>
 </section>
 <section class="grey">
