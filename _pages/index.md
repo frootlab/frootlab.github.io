@@ -1,13 +1,9 @@
 ---
 layout: form
 navid: home
-cloudinary: pixabay/2462431-dark
-image-orientation: landscape
-cloudinary: pixabay/3357642
+cloudinary: pixabay/3357642-edit
 image-orientation: landscape
 sections: true
-logo: /images/svg/Frootlab-Logo-v2.3-3d.svg
-logo-alt: Frootlab Logo
 title: Frootlab
 subtitle: Smart Analytics
 title-layout: inset

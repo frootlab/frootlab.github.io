@@ -1,8 +1,9 @@
 ---
 layout: blog
 title: Blog
+title-layout: inset
 short-title: Category
-cloudinary: pixabay/3357642
+cloudinary: pixabay/3357642-edit
 image-orientation: landscape
 sections: true
 description: "An archive of all posts sorted by category"

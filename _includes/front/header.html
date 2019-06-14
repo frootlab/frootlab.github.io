@@ -43,6 +43,9 @@
 {% else %}
   {% assign title-class = "boxed" %}
 {% endif %}
+{% if page.title-animate %}
+  {% assign title-class = title-class | append: ' showup' %}
+{% endif %}
 
 <div id="front" style="background-image: linear-gradient(#0000004D, #00000000 20%), url({{ image }});">
   <div class="content">

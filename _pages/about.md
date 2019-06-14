@@ -1,7 +1,7 @@
 ---
 layout: home
 navid: about
-cloudinary: pixabay/3357642
+cloudinary: pixabay/3357642-edit
 image-orientation: landscape
 title-layout: inset
 backdrop: white
@@ -9,8 +9,6 @@ title: Frootlab
 subtitle: Smart Analytics
 short-title: About
 permalink: /about.html
-logo: /images/svg/Frootlab-Logo-v2.3-3d.svg
-logo-alt: Frootlab Logo
 ---
 
 ## About
