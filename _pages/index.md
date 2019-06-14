@@ -1,47 +1,117 @@
 ---
-layout: home
+layout: form
 navid: home
 cloudinary: pixabay/2462431-dark
 image-orientation: landscape
 cloudinary: pixabay/3357642
 image-orientation: landscape
-backdrop: white
-logo: /images/svg/frootlab.svg
-logo-alt: Frootlab Logo
+sections: true
 title: Frootlab
 subtitle: Smart Analytics
+logo: /images/svg/Frootlab-Logo-v2.3-3d.svg
+logo-alt: Frootlab Logo
 title-layout: inset
 permalink: /index.html
+links:
+  - pandora:
+    url: /projects/pandora
+    name: Pandora
+    title: Pandora Database Proxy
+  - nemoa:
+    url: /projects/nemoa
+    name: Nemoa
+    title: Nemoa AutoML
+  - motley:
+    url: /projects/motley
+    name: Motley
+    title: Motley Algorithm Repository
 ---
 
-## About
+<section class="dark-grey">
+  <h3>Next generation AutoML and Data-Warehousing</h3>
+</section>
+<section class="white">
+<div style="display: flex; justify-content: space-around; padding-top: 16pt;">
+    <div style="flex: 33%; margin: 0 24pt; padding: 16pt 0; text-align: center;">
+      <img style="height: 180px;" src="https://res.cloudinary.com/frootlab/image/upload/undraw/undraw_server_status_5pbv">
+      <p><strong><a href="/projects/pandora">Pandora</a></strong></p>
+      <p>
+        Equip your existing data applications with a universal data plug
+      </p>
+    </div>
+    <div style="flex: 33%; margin: 0 24pt; padding: 16pt 0; text-align: center;">
+      <img style="height: 180px;" src="https://res.cloudinary.com/frootlab/image/upload/undraw/professor.svg">
+      <p><strong><a href="/projects/nemoa">Nemoa</a></strong></p>
+      <p>
+        Use rapid prototyping for your enterprise analytical applications
+      </p>
+    </div>
+    <div style="flex: 33%; margin: 0 24pt; padding: 16pt 0; text-align: center;">
+      <img style="height: 180px;" src="https://res.cloudinary.com/frootlab/image/upload/undraw/undraw_Data_points_ubvs.svg">
+      <p><strong><a href="/projects/motley">Motley</a></strong></p>
+      <p>
+        Discover a new approach for collaborative data science
+      </p>
+    </div>
+</div>
+</section>
+<section class="grey">
+<a href="/projects"><img src="/images/svg/plus.svg" style="width: 2rem;"></a>
+</section>
 
-**The AI-Revolution provides new challenges for developers in the data analysis
-segment. This concerns enterprises, scientific workgroups and government
-agencies as well, as it becomes increasingly demanding to adapt new technologies
-into existing applications and therefore to stay competitive.**
+<section class="dark-grey"><h3>Pure and applied Data Science</h3></section>
+<section class="grey">
 
-We are a young developers team with strong expertise in data science and
-networking technologies, which has been formed in mid 2018. Our mission is to
-step into this breach by providing a revolutionary collaborative AutoML
-framework, which allows smart applications, that keep themselves up-to-date and
-adept new technologies.
 
-Therefore we [identified the foremost challenges]({% post_url
-2019-03-20-three-obstacles-in-data-science %}) and started to develop a
-comprehensive solution, which on the basis of
-[TensorFlow](https://www.tensorflow.org/) incorporates machine intelligence and
-collaborative data science into the whole software life cycle. The key
-components of the framework comprise a [high performance database
-proxy](/pandora.html), which supports a wide variety of different data sources,
-[an auto-evaluating algorithm repository](/motley.html) and an [AutoML
-templating system](/nemoa.html), which uses the other components to abstract
-explicit algorithms to currently best fitting.
+<div class="grid" style="padding: 1rem 0;">
 
-Our fundamental conviction is, that research and education should be provided
-with universal access. Accordingly we release all components of this framework
-as [free and open-source
-software](https://en.wikipedia.org/wiki/Free_and_open-source_software). Since
-the application in industrial environments, however, requires stable development
-and compliance with industrial standards, we release them as a single vendor,
-rather then community-driven.
+{% for post in site.posts limit:3 %}
+
+{% assign readtime = post.content | number_of_words | divided_by: 180 | plus: 0.5 | round %}
+{% assign offset = post.title | number_of_words | times: 2 %}
+{% assign cutoff = 35 | minus: offset %}
+
+{% if post.cloudinary %}
+  {% assign preview = "https://res.cloudinary.com/frootlab/image/upload/c_thumb,w_300,g_face/" | append: post.cloudinary | append: ".webp" %}
+{% elsif post.preview %}
+  {% assign preview = site.url | append: post.preview %}
+{% elsif post.image %}
+  {% assign preview = site.url | append: post.image %}
+{% else %}
+  {% assign preview = site.url | append: post.image %}
+{% endif %}
+
+{% assign catid = post.categories | first | downcase %}
+{% if catid == 'corporate' %}{% assign color = 'blue' %}
+{% elsif catid == 'science' %}{% assign color = 'green' %}
+{% elsif catid == 'technology' %}{% assign color = 'red' %}
+{% else %}{% assign color = 'grey' %}
+{% endif %}
+
+<div class="cell">
+  <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
+  <div class="card">
+    <div class="ribbon-box">
+      <div class="ribbon-wrapper">
+          <div class="{{ color }}-ribbon">{{ catid }}</div>
+      </div>
+    </div>
+    <div class="card-image" style="background-image: url({{ preview }});"></div>
+    <div class="card-content">
+      <div class="label">{{ post.date | date: '%d %b %Y' }} &nbsp;&bull;&nbsp; {{ readtime }} min</div>
+      <div class="card-title">{{ post.title | markdownify | strip_html }}</div>
+      <div class="card-text">{{ post.excerpt | strip_html | truncatewords: cutoff}}</div>
+    </div>
+  </div>
+  </a>
+</div>
+
+{% endfor %}
+
+</div>
+
+</section>
+<section class="grey">
+<a href="/blog"><img src="/images/svg/plus.svg" style="width: 2rem;"></a>
+</section>
+<section></section>

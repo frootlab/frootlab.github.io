@@ -10,3 +10,7 @@
   navid: blog
   alt: Blog
   link: /blog
+- name: About
+  navid: about
+  alt: About
+  link: /about
