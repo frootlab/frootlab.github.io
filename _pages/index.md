@@ -9,18 +9,18 @@ subtitle: Smart Analytics
 title-layout: inset
 permalink: /index.html
 links:
-  - pandora:
-    url: /projects/pandora
-    name: Pandora
-    title: Pandora Database Proxy
-  - nemoa:
-    url: /projects/nemoa
-    name: Nemoa
-    title: Nemoa AutoML
-  - motley:
-    url: /projects/motley
-    name: Motley
-    title: Motley Algorithm Repository
+  - projects:
+    url: /projects
+    name: Projects
+    title: Projects at Frootlab
+  - blog:
+    url: /blog
+    name: Blog
+    title: Frootlab Blog
+  - about:
+    url: /about
+    name: About
+    title: About Us
 ---
 
 <section class="dark-grey">
