@@ -9,6 +9,8 @@ title: Frootlab
 subtitle: Smart Analytics
 short-title: About
 permalink: /about.html
+logo: /images/svg/Frootlab-Logo-v2.3-3d.svg
+logo-alt: Frootlab Logo
 ---
 
 ## About

@@ -17,6 +17,7 @@ stage: Pre-Alpha
 stage-url:
 license: GPL-3.0
 license-url: https://www.gnu.org/licenses/gpl.html
+version: 0.1.8
 ---
 
 **Pandora** is a universal database proxy and SQL-Database engine, that

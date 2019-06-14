@@ -17,6 +17,7 @@ stage: Planning
 stage-url:
 license: GPL-3.0
 license-url: https://www.gnu.org/licenses/gpl.html
+version: 0.0.1
 ---
 
 **Motley** is a planed catalog server for algorithm storage and evaluation and

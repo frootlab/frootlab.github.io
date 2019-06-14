@@ -6,10 +6,10 @@ image-orientation: landscape
 cloudinary: pixabay/3357642
 image-orientation: landscape
 sections: true
-title: Frootlab
-subtitle: Smart Analytics
 logo: /images/svg/Frootlab-Logo-v2.3-3d.svg
 logo-alt: Frootlab Logo
+title: Frootlab
+subtitle: Smart Analytics
 title-layout: inset
 permalink: /index.html
 links:

@@ -17,6 +17,7 @@ stage: Alpha
 stage-url:
 license: GPL-3.0
 license-url: "https://www.gnu.org/licenses/gpl.html"
+version: 0.5.581
 ---
 
 **Nemoa** is a machine learning- and data analysis framework, that utilizes
