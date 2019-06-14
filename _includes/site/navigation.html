@@ -6,6 +6,12 @@
 {% assign rcrumbs = crumbs | reverse %}
 {% assign total = crumbs | size %}
 
+{% if total > 1 %}
+  {% assign menu-class = "menu-button" %}
+{% else %}
+  {% assign menu-class = "menu-button-active" %}
+{% endif %}
+
 {% assign title = page.title | markdownify | remove: "<p>" | remove: "</p>" %}
 {% if page.short-title %}
   {% assign short-title = page.short-title %}
@@ -36,6 +42,6 @@
     {% endif %}
     {% endif %}
     {% endfor %}
-    <li class="menu-button"><a onclick="openNav();" title="Menu"><i class="fas fa-bars"></i></a></li>
+    <li class="{{ menu-class }}"><a onclick="openNav();" title="Menu"><i class="fas fa-bars"></i></a></li>
   </ul>
 </nav>

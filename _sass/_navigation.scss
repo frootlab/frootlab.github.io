@@ -140,28 +140,37 @@ sidenav (less padding and a smaller font size) */
 
 /* Menu Icon */
 #crumbs ul li.menu-button a {
-    padding: 12px 30px 12px 30px;
-    margin-left: 0px;
-    border-radius: 0px 100px 100px 0px;
+  padding: 12px 30px 12px 30px;
+  margin-left: 0px;
+  border-radius: 0px 100px 100px 0px;
+}
+
+#crumbs ul li.menu-button-active a {
+  padding: 12px 30px 12px 30px;
+  margin-left: 0px;
+  border-radius: 0px 100px 100px 0px;
+  color: white;
+  background-color: $black-t80;
+  background: $black-t80;
 }
 
 /* Remove the shadow for first item, last in the right side when it gets reversed */
 #crumbs ul li:first-child a {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 /* Active item is a bit different */
 #crumbs ul li.active a {
-    pointer-events: none;
-    cursor: default;
-    color: white;
-    background-color: $black-t80;
-    background: $black-t80;
+  pointer-events: none;
+  cursor: default;
+  color: white;
+  background-color: $black-t80;
+  background: $black-t80;
 }
 
 /* Remove the shadow for the active's next item, to match the design more accurately */
 #crumbs ul li.active + li a {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 /* Print Adjustments */
