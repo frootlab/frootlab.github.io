@@ -1,0 +1,7 @@
+{% capture tags %}
+  {% for tag in site.tags %}{{ tag[0] }},{% endfor %}
+{% endcapture %}
+{% assign tags = tags | strip | split: ',' | compact | sort %}
+{% for tag in tags %}
+<a class="btn btn_grey" href="/blog/tags#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
+{% endfor %}

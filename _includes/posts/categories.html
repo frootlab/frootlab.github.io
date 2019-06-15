@@ -1,0 +1,19 @@
+{% capture cats %}
+  {% for cat in site.categories %}{{ cat[0] }},{% endfor %}
+{% endcapture %}
+{% assign cats = cats | strip | split: ',' | compact | sort %}
+
+{% for cat in cats %}
+  {% assign catid = cat | downcase %}
+  {% case catid %}
+    {% when 'corporate' %}
+      {% assign color = 'blue' %}
+    {% when 'science'' %}
+      {% assign color = 'green' %}
+    {% when 'technology' %}
+      {% assign color = 'red' %}
+    {% else %}
+      {% assign color = 'grey' %}
+  {% endcase %}
+<a class="btn btn_{{ color }}" href="/blog/categories#{{ cat }}" title="{{ cat }}">{{ cat }}</a>
+{% endfor %}

@@ -54,7 +54,8 @@ Filter Posts (by category, tag, author, year and limit)
     {% assign color = 'green' %}
   {% when 'technology' %}
     {% assign color = 'red' %}
-  {% else %}{% assign color = 'grey' %}
+  {% else %}
+    {% assign color = 'grey' %}
 {% endcase %}
 
 <div class="cell">
