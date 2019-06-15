@@ -58,9 +58,8 @@ links:
 
 <section class="dark-grey"><h3>Pure and applied Data Science</h3></section>
 <section class="grey">
-  {% include site/post-preview.html %}
+  {% include posts/preview.html limit=3 %}
 </section>
-
 <section class="grey">
   <a href="/blog"><img src="/images/svg/plus.svg" style="width: 2rem;"></a>
 </section>

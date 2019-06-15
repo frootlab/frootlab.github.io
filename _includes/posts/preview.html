@@ -1,6 +1,36 @@
+{% assign posts = site.posts %}
+
+{% comment %}
+================================================================================
+Filter Posts (by category, tag, author, year and limit)
+================================================================================
+{% endcomment %}
+
+{% if include.category %}
+  {% assign posts = posts | where: "categories", include.category %}
+{% endif %}
+
+{% if include.tag %}
+  {% assign posts = posts | where: "tags", include.tag %}
+{% endif %}
+
+{% if include.author %}
+  {% assign posts = posts | where: "tags", include.tag %}
+{% endif %}
+
+{% if include.year %}
+  {% assign groups = posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+  {% assign groups = groups | where: "name", include.year %}
+  {% assign posts = groups[0].items %}
+{% endif %}
+
+{% if include.limit %}
+  {% assign posts = posts | limit: include.limit %}
+{% endif %}
+
 <div class="grid" style="padding: 1rem 0;">
 
-{% for post in site.posts limit:3 %}
+{% for post in posts %}
 
 {% assign readtime = post.content | number_of_words | divided_by: 180 | plus: 0.5 | round %}
 {% assign offset = post.title | number_of_words | times: 2 %}
@@ -17,11 +47,15 @@
 {% endif %}
 
 {% assign catid = post.categories | first | downcase %}
-{% if catid == 'corporate' %}{% assign color = 'blue' %}
-{% elsif catid == 'science' %}{% assign color = 'green' %}
-{% elsif catid == 'technology' %}{% assign color = 'red' %}
-{% else %}{% assign color = 'grey' %}
-{% endif %}
+{% case catid %}
+  {% when 'corporate' %}
+    {% assign color = 'blue' %}
+  {% when 'science'' %}
+    {% assign color = 'green' %}
+  {% when 'technology' %}
+    {% assign color = 'red' %}
+  {% else %}{% assign color = 'grey' %}
+{% endcase %}
 
 <div class="cell">
   <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
@@ -42,5 +76,8 @@
 </div>
 
 {% endfor %}
+
+<div class="cell"></div>
+<div class="cell"></div>
 
 </div>
