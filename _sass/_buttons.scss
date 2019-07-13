@@ -197,11 +197,11 @@ a.github {
 }
 
 a.medium {
-  background-color: black !important;
+  background-color: $black-l15 !important;
   color: white !important;
 
   &:hover {
-    background-color: lighten(black, 15%) !important;
+    background-color: lighten($black-l15, 15%) !important;
   }
 }
 
@@ -220,5 +220,14 @@ a.keybase {
 
   &:hover {
     background-color: lighten(#33a0ff, 15%) !important;
+  }
+}
+
+a.xmpp {
+  background-color: #439639 !important;
+  color: white !important;
+
+  &:hover {
+    background-color: lighten(#439639, 15%) !important;
   }
 }

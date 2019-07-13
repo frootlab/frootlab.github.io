@@ -6,10 +6,10 @@ short-title: Patrick
 subtitle: Member / Founder
 image: /images/authors/patrick.webp
 sections: true
-medium: fishroot
 mastodon: mastodon.social/@fishroot
 github: fishroot
 xing: Patrick_Michl6
+xmpp: patrick.michl@wiuwiu.de
 redirect_from: /authors/fishroot.html
 ---
 

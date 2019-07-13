@@ -1,6 +1,6 @@
 <ul class="icons">
   {% if page.email %}<li><a href="mailto:{{ page.email }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i><span>Email</span></a></li>{% endif %}
-  {% if page.medium %}<li><a class="medium" href="https://medium.com/@{{ page.medium }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-medium"></i><span>Medium</span></a></li>{% endif %}
+  {% if page.xmpp %}<li><a class="xmpp" href="xmpp:{{ page.xmpp }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-comments"></i><span>XMPP</span></a></li>{% endif %}
   {% if page.mastodon %}<li><a class="mastodon" href="https://{{ page.mastodon }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-mastodon"></i><span>Mastodon<span></a></li>{% endif %}
   {% if page.dev %}<li><a href="https://dev.to/{{ page.dev }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-dev"></i><span>Dev</span></a></li>{% endif %}
   {% if page.behance %}<li><a href="https://www.behance.net/{{ page.behance }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-behance"></i><span>Behance</span></a></li>{% endif %}
@@ -20,10 +20,10 @@
   {% if page.steam %}<li><a href="http://steamcommunity.com/id/{{ page.steam }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-steam"></i><span>Steam</span></a></li>{% endif %}
   {% if page.youtube %}<li><a href="https://youtube.com/user/{{ page.youtube }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i><span>Youtube</span></a></li>{% endif %}
   {% if page.soundcloud %}<li><a href="http://soundcloud.com/{{ page.soundcloud }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-soundcloud"></i><span>Soundcloud</span></a></li>{% endif %}
+  {% if page.medium %}<li><a class="medium" href="https://medium.com/@{{ page.medium }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-medium"></i><span>Medium</span></a></li>{% endif %}
   {% if page.weibo %}<li><a href="http://www.weibo.com/{{ page.weibo }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-weibo"></i><span>Weibo</span></a></li>{% endif %}
   {% if page.flickr %}<li><a href="http://www.flickr.com/{{ page.flickr }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-flickr"></i><span>Flickr</span></a></li>{% endif %}
   {% if page.codepen %}<li><a href="http://codepen.io/{{ page.codepen }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-codepen"></i><span>CodePen</span></a></li>{% endif %}
   {% if page.keybase %}<li><a class="keybase" href="https://keybase.io/{{ page.keybase }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-keybase"></i><span>Keybase</span></a></li>{% endif %}
-  {% if page.xmpp %}<li><a href="xmpp:{{ page.xmpp }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-lightbulb"></i><span>LightBulb</span></a></li>{% endif %}
   {% if page.hackernews %}<li><a href="https://news.ycombinator.com/user?id={{ page.hackernews }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-hacker-news"></i><span>HackerNews</span></a></li>{% endif %}
 </ul>

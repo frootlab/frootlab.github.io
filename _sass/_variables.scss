@@ -17,6 +17,9 @@ $black-t10: #0000001A; // 10% black
 $black-t5:  #0000000D; // 5% black
 $black-t0:  #00000000; // Transparent black
 
+$black-l10: lighten(black, 10%);
+$black-l15: lighten(black, 15%);
+
 $red:       #A00000;
 $red-l10:   lighten($red, 10%);
 $green:     #008200;
