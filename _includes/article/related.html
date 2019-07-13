@@ -1,12 +1,12 @@
 {% assign count = 0 %}
 {% for post in site.posts %}
-{% for tag in post.tags %}
-{% if post.url != page.url %}
-{% if page.tags contains tag %}
-{% assign count = count | plus: 1 %}
-{% endif %}
-{% endif %}
-{% endfor %}
+  {% for tag in post.tags %}
+    {% if post.url != page.url %}
+      {% if page.tags contains tag %}
+        {% assign count = count | plus: 1 %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
 {% endfor %}
 
 {% if count > 0 %}
@@ -14,34 +14,35 @@
 <div class="related-articles">
 <div class="separator separator-left">Related Articles</div>
 <ul>
-{% assign maxRelated = 4 %}
-{% assign minCommonTags =  1 %}
-{% assign maxRelatedCounter = 0 %}
+{% assign maxRel = 5 %}
+{% assign minTags =  1 %}
+{% assign maxRelCounter = 0 %}
 
-  {% for post in site.posts %}
+{% for post in site.posts %}
 
-    {% assign sameTagCount = 0 %}
-    {% assign commonTags = '' %}
+  {% assign sameTagCount = 0 %}
+  {% assign commonTags = '' %}
 
-    {% for tag in post.tags %}
-      {% if post.url != page.url %}
-        {% if page.tags contains tag %}
-          {% assign sameTagCount = sameTagCount | plus: 1 %}
-          {% capture tagmarkup %} <span class="label label-default">{{ tag }}</span> {% endcapture %}
-          {% assign commonTags = commonTags | append: tagmarkup %}
-        {% endif %}
+  {% for tag in post.tags %}
+    {% if post.url != page.url %}
+      {% if page.tags contains tag %}
+        {% assign sameTagCount = sameTagCount | plus: 1 %}
+        {% capture tagmarkup %} <span class="label label-default">{{ tag }}</span> {% endcapture %}
+        {% assign commonTags = commonTags | append: tagmarkup %}
       {% endif %}
-    {% endfor %}
+    {% endif %}
+  {% endfor %}
 
-    {% if sameTagCount >= minCommonTags %}
-    <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-    {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
-    {% if maxRelatedCounter >= maxRelated %}
+  {% if sameTagCount >= minTags %}
+  <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+    {% assign maxRelCounter = maxRelCounter | plus: 1 %}
+    {% if maxRelCounter >= maxRel %}
       {% break %}
     {% endif %}
-    {% endif %}
+  {% endif %}
 
-  {% endfor %}
+{% endfor %}
+
 </ul>
 </div>
 {% endif %}

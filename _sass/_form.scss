@@ -46,6 +46,15 @@
     background: $blue-gray;
   }
 
+  section.ocean {
+    background: $ocean;
+
+    * {
+      color: white;
+    }
+
+  }
+
   h1,
   h2,
   h3 {

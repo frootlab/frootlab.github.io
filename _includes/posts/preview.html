@@ -25,12 +25,14 @@ Filter Posts (by category, tag, author, year and limit)
 {% endif %}
 
 {% if include.limit %}
-  {% assign posts = posts | limit: include.limit %}
+  {% assign bound = include.limit %}
+{% else %}
+  {% assign bound = 9999 %}
 {% endif %}
 
 <div class="grid" style="padding: 1rem 0;">
 
-{% for post in posts %}
+{% for post in posts limit: bound %}
 
 {% assign readtime = post.content | number_of_words | divided_by: 180 | plus: 0.5 | round %}
 {% assign offset = post.title | number_of_words | times: 2 %}

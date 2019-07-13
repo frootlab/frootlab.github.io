@@ -17,7 +17,7 @@ stage: Pre-Alpha
 stage-url:
 license: GPL-3.0
 license-url: https://www.gnu.org/licenses/gpl.html
-version: 0.1.8
+version: 0.1.10
 ---
 
 **Pandora** is a universal database proxy and SQL-Database engine, that
@@ -43,12 +43,3 @@ featuring a DB-API 2.0 interface with full SQL:2016 support, a vertical data
 storage manager and real-time encryption. This allows the data analysis
 application to integrate a variety of different data sources, by using a unified
 data interface (and SQL dialect).
-
-**License**
-
-According to our [convictions](/corporate/2019/03/19/welcome-at-frootlab.html)
-Pandora is [free and open-source
-software](https://en.wikipedia.org/wiki/Free_and_open-source_software). It is
-released under the [General Public License
-3.0](https://www.gnu.org/licenses/gpl-3.0.html) and can be downloaded from
-[GitHub](https://github.com/frootlab/pandora).

@@ -16,6 +16,7 @@ stage: Various
 stage-url:
 license: GPL-3.0
 license-url: https://www.gnu.org/licenses/gpl.html
+version: 0.9.2
 ---
 
 The **frootlab shared library** (flib) is a multi-purpose
@@ -56,12 +57,3 @@ application beyond Frootlab projects as well.
 [Extended Plain-Text-File IO](http://docs.frootlab.org/projects/flib/en/latest/api/flib.io.plain.html),
 [Extended RAW-File IO](http://docs.frootlab.org/projects/flib/en/latest/api/flib.io.raw.html),
 [Extended ZIP-Archive IO](http://docs.frootlab.org/projects/flib/en/latest/api/flib.io.zip.html),
-
-**License**
-
-According to our [convictions](/corporate/2019/03/19/welcome-at-frootlab.html)
-the frootlab shared library is [free and open-source
-software](https://en.wikipedia.org/wiki/Free_and_open-source_software). It is
-released under the [General Public License
-3.0](https://www.gnu.org/licenses/gpl-3.0.html) and can be downloaded from
-[GitHub](https://github.com/frootlab/flib).

@@ -17,7 +17,7 @@ stage: Alpha
 stage-url:
 license: GPL-3.0
 license-url: "https://www.gnu.org/licenses/gpl.html"
-version: 0.5.581
+version: 0.5.582
 ---
 
 **Nemoa** is a machine learning- and data analysis framework, that utilizes
@@ -35,12 +35,3 @@ capabilities by community driven algorithms (e.g. for [probabilistic graphical
 modeling](https://en.wikipedia.org/wiki/Graphical_model), [machine
 learning](https://en.wikipedia.org/wiki/Machine_learning) and [structured
 data-analysis](https://en.wikipedia.org/wiki/Structured_data_analysis_(statistics))).
-
-**License**
-
-According to our [convictions](/corporate/2019/03/19/welcome-at-frootlab.html)
-Nemoa is [free and open-source
-software](https://en.wikipedia.org/wiki/Free_and_open-source_software). It is
-released under the [General Public License
-3.0](https://www.gnu.org/licenses/gpl-3.0.html) and can be downloaded from
-[GitHub](https://github.com/frootlab/nemoa).

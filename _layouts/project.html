@@ -16,8 +16,8 @@ layout: base
 {% include front/trailer.html %}
 
 {% include form/header.html %}
-<section class="grey" style="background-color: #043846; color: white; ">
-  <h3 style="color: white"><strong style="color: white;">{{ page.title }}</strong> v{{ page.version }}</h3>
+<section class="ocean">
+  <h3><strong>{{ page.title }}</strong> v{{ page.version }}</h3>
 </section>
 
 <section class="dark-grey"><h3>Quickstart</h3></section>
@@ -33,6 +33,16 @@ layout: base
 <section class="dark-grey"><h3>About</h3></section>
 <section class="white">
 {{ content }}
+</section>
+
+<section class="dark-grey"><h3>License</h3></section>
+<section class="white">
+<p>
+According to <a href="/about">our convictions</a> {{ page.title }} is
+<a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">free and open-source software</a>.
+It is released under the <a href="{{ page.licence-url }}">{{ page.license }}</a>
+and can be downloaded from <a href="https://github.com/{{ page.github }}">GitHub</a>.
+</p>
 </section>
 
 <section class="dark-grey"><h3>Latest News</h3></section>

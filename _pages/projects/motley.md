@@ -40,12 +40,3 @@ projects, that are automatically kept up-to-date by a minimum of maintenance
 costs. Also motley supports scientific applications, by facilitating a local
 (workgroup, lab, institution) or global publication, application and evaluation
 of algorithms.
-
-**License**
-
-According to our [convictions](/corporate/2019/03/19/welcome-at-frootlab.html)
-Motley is [free and open-source
-software](https://en.wikipedia.org/wiki/Free_and_open-source_software). It is
-released under the [General Public License
-3.0](https://www.gnu.org/licenses/gpl-3.0.html) and can be downloaded from
-[GitHub](https://github.com/frootlab/motley).

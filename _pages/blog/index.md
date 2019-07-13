@@ -19,5 +19,5 @@ redirect_from: /blog.html
   {% include posts/preview.html limit=6 %}
 </section>
 <section class="grey">
-  <a href="/blog/archive"><img src="/images/svg/plus.svg" style="width: 2rem;"></a>
+  <a href="/blog/archive" title="Blog Archive"><img src="/images/svg/plus-ocean.svg" alt="plus" style="width: 2rem;"></a>
 </section>
