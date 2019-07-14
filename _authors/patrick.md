@@ -1,10 +1,21 @@
 ---
 layout: author
-short_name: Patrick Michl
 title: Patrick Michl
 short-title: Patrick
 subtitle: Member / Founder
-image: /images/authors/patrick.webp
+image:
+  url: /images/authors/patrick.webp
+social:
+  - name: email
+    user: patrick.michl@frootlab.org
+  - name: xmpp
+    user: patrick.michl@wiuwiu.de
+  - name: github
+    user: fishroot
+  - name: mastodon
+    user: mastodon.social/@fishroot
+  - name: xing
+    user: Patrick_Michl6
 sections: true
 mastodon: mastodon.social/@fishroot
 github: fishroot

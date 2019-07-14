@@ -1,0 +1,81 @@
+// Social Buttons
+
+ul.icons {
+  list-style-type: none;
+  padding: 0;
+
+  > li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+
+    a {
+      font-size: 1.35rem;
+      margin: 0;
+      padding: 0;
+      vertical-align: middle;
+      cursor: pointer;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      border: none;
+      transition:
+        all 0.2s ease-in-out,
+        transform 50ms ease;
+
+      &:active {
+        transform: scale(0.97);
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+ul.white {
+  > li {
+    a {
+      color: white !important;
+    }
+  }
+}
+
+@mixin icon($name, $color) {
+  a.#{$name} {
+    background: #{$color};
+    &:hover {
+      background: lighten($color, 15%);
+    }
+  }
+}
+
+@include icon(pdf, #EE151F);
+@include icon(email, #B32D00);
+@include icon(facebook, #3B5998);
+@include icon(twitter, #1DA1F2);
+@include icon(print, #5A5A5A);
+@include icon(xing, #007575);
+@include icon(github, #24292E);
+@include icon(medium, #111111);
+@include icon(mastodon, #3088D4);
+@include icon(keybase, #33A0FF);
+@include icon(xmpp, #439639);
+@include icon(pypi, #0073b7);
+
+@media screen and (max-width: 640px) {
+  ul.icons > li a {
+    font-size: 1.125rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}

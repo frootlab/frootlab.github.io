@@ -1,23 +1,25 @@
-{% if page.cloudinary %}
-  {% if page.image-format == "svg" %}
-    {% assign transform = "b_rgb:f5f5f5,bo_20px_solid_rgb:f5f5f5,c_pad,h_900,q_auto:best,w_700" %}
-  {% elsif page.image-orientation == "portrait" %}
-    {% assign transform = "c_scale,q_auto:good,w_960" %}
-  {% elsif page.image-orientation == "landscape" %}
-    {% assign transform = "c_scale,q_auto:good,w_1920" %}
-  {% else %}
-    {% assign transform = "c_scale,q_auto:good,w_960" %}
-  {% endif %}
-  {% assign image = "https://res.cloudinary.com/frootlab/image/upload/"
-    | append: transform
-    | append: "/"
-    | append: page.cloudinary
-    | append: ".webp" %}
-{% elsif page.image %}
-  {% if page.image contains 'http://' or page.image contains 'https://' %}
-    {% assign image = page.image %}
-  {% else %}
-    {% assign image = site.url | append: "/" | append: page.image %}
+{% if page.image %}
+  {% if page.image.cloudinary %}
+    {% if page.image.format == "svg" %}
+      {% assign transform = "b_rgb:f5f5f5,bo_20px_solid_rgb:f5f5f5,c_pad,h_900,q_auto:best,w_700" %}
+    {% elsif page.image.orientation == "portrait" %}
+      {% assign transform = "c_scale,q_auto:good,w_960" %}
+    {% elsif page.image.orientation == "landscape" %}
+      {% assign transform = "c_scale,q_auto:good,w_1920" %}
+    {% else %}
+      {% assign transform = "c_scale,q_auto:good,w_960" %}
+    {% endif %}
+    {% assign image = "https://res.cloudinary.com/frootlab/image/upload/"
+      | append: transform
+      | append: "/"
+      | append: page.image.cloudinary
+      | append: ".webp" %}
+  {% elsif page.image.url %}
+    {% if page.image.url contains 'http://' or page.image.url contains 'https://' %}
+      {% assign image = page.image.url %}
+    {% else %}
+      {% assign image = site.url | append: "/" | append: page.image.url %}
+    {% endif %}
   {% endif %}
 {% else %}
   {% assign image = site.url | append: "/" | append: site.background.default %}

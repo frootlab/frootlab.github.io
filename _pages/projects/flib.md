@@ -3,14 +3,19 @@ layout: project
 navid: projects
 title: flib
 subtitle: Frootlab Shared Library
-cloudinary: unsplash/602632
+image:
+  cloudinary: unsplash/602632
+  orientation: landscape
 sections: true
-image-orientation: landscape
 backdrop: white
 permalink: /projects/flib.html
 redirect_from: /flib.html
-github: frootlab/flib
-pypi: flib
+social:
+  - name: github
+    user: frootlab/flib
+  - name: pypi
+    user: flib
+    type: project
 readthedocs: flib
 stage: Various
 stage-url:

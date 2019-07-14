@@ -6,8 +6,9 @@ sections: true
 description: "Gallery of active Projects"
 permalink: /projects/index.html
 redirect_from: /projects.html
-cloudinary: pixabay/3357642
-image-orientation: landscape
+image:
+  cloudinary: pixabay/3357642
+  orientation: landscape
 ---
 
 <ul class="projects-menu">

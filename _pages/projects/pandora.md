@@ -3,15 +3,20 @@ layout: project
 navid: projects
 title: Pandora
 subtitle: High Performance Data Proxy
-cloudinary: pexels/366691
-image-orientation: landscape
+image:
+  cloudinary: pexels/366691
+  orientation: landscape
 backdrop: white
 sections: true
 form-logo: /images/svg/pandora.svg
 permalink: /projects/pandora.html
 redirect_from: /pandora.html
-github: frootlab/pandora
-pypi: pandb
+social:
+  - name: github
+    user: frootlab/pandora
+  - name: pypi
+    user: pandb
+    type: project
 readthedocs: pandora
 stage: Pre-Alpha
 stage-url:

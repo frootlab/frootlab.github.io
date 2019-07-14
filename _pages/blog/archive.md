@@ -4,8 +4,9 @@ navid: blog
 title: Blog
 title-layout: inset
 short-title: Archive
-cloudinary: pixabay/3357642-edit
-image-orientation: landscape
+image:
+  cloudinary: pixabay/3357642-edit
+  orientation: landscape
 sections: true
 description: "An archive of all posts sorted by date"
 permalink: /blog/archive.html

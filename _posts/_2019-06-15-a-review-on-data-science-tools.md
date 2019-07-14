@@ -1,11 +1,15 @@
 ---
 layout: post
 navid: blog
-title: A short review on data science tools
+title: A short review on data analysis tools
 author: Patrick Michl
 license: CC BY 4.0
 license-url: "https://creativecommons.org/licenses/by/4.0/"
-cloudinary: pexels/323645
+image:
+  cloudinary: pexels/323645
+crumbs:
+  - Blog
+  - Data Analysis Tools
 categories:
   - Technology
 tags:
@@ -13,11 +17,11 @@ tags:
   - CAMP
 ---
 
-**The prospects about the AI Revolution can be overwhelming. But although the
-tension is palpable, an important stage of development still is missing:
+**The prospects about the AI Revolution can be overwhelming! But - although the
+tension is palpable - an important stage of development still is missing:
 Learning applications.**
 
-[![Data Science Tools](/images/posts/data-science-tools.png)](/images/posts/data-science-tools.png)
+[![Data Analysis Tools](/images/posts/data-analysis-tools.png)](/images/posts/data-analysis-tools.png)
 
 Whereas the scientific aspects of the AI Revolution are clearly entangled with
 [current advances in deep learning]({% post_url

@@ -3,19 +3,24 @@ layout: form
 navid: contact
 title: Contact
 short-title: Contact
-cloudinary: unsplash/710800
-image-orientation: portrait
+image:
+  cloudinary: unsplash/710800
+  orientation: portrait
 sections: true
 permalink: /contact.html
-twitter: frootlab
-github: frootlab
-keybase: frootlab
+social:
+  - name: twitter
+    user: frootlab
+  - name: github
+    user: frootlab
+  - name: keybase
+    user: frootlab
 ---
 
 <section class="dark-grey"><h3>Community</h3></section>
 <section class="grey">
 <div style="padding: 1rem;">
-{% include links/social.html %}
+{% include links/social.html class="white" %}
 </div>
 </section>
 <section class="dark-grey"><h3>Email</h3></section>

@@ -3,8 +3,9 @@ layout: blog
 title: Blog
 title-layout: inset
 short-title: Category
-cloudinary: pixabay/3357642-edit
-image-orientation: landscape
+image:
+  cloudinary: pixabay/3357642-edit
+  orientation: landscape
 sections: true
 description: "An archive of all posts sorted by category"
 permalink: /blog/categories.html

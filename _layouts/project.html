@@ -52,10 +52,14 @@ and can be downloaded from <a href="https://github.com/{{ page.github }}">GitHub
 {% if post.tags contains name %}
 
 {% assign catid = post.categories | first | downcase %}
-{% if catid == 'corporate' %}{% assign color = 'blue' %}
-{% elsif catid == 'science' %}{% assign color = 'green' %}
-{% elsif catid == 'technology' %}{% assign color = 'red' %}
-{% else %}{% assign color = 'grey' %}
+{% if catid == 'corporate' %}
+  {% assign color = 'blue' %}
+{% elsif catid == 'science' %}
+  {% assign color = 'green' %}
+{% elsif catid == 'technology' %}
+  {% assign color = 'red' %}
+{% else %}
+  {% assign color = 'grey' %}
 {% endif %}
 <p>
   {{ post.date | date: '%d. %B, %y' }}:
@@ -74,7 +78,7 @@ and can be downloaded from <a href="https://github.com/{{ page.github }}">GitHub
     </div>
     <div style="flex: 32%; text-align: center;">
       <div class="label" style="padding-bottom: 0.5rem; margin: 0 0.5rem; color: #999;">Source Code</div>
-      {% include links/project.html %}
+      {% include links/social.html class="white" %}
     </div>
     <div style="flex: 20%; text-align: center;">
       <div class="label" style="padding-bottom: 0.5rem; margin: 0 0.5rem; color: #999; ">License</div>

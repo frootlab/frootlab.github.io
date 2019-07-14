@@ -1,29 +1,141 @@
-<ul class="icons">
-  {% if page.email %}<li><a href="mailto:{{ page.email }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i><span>Email</span></a></li>{% endif %}
-  {% if page.xmpp %}<li><a class="xmpp" href="xmpp:{{ page.xmpp }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-comments"></i><span>XMPP</span></a></li>{% endif %}
-  {% if page.mastodon %}<li><a class="mastodon" href="https://{{ page.mastodon }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-mastodon"></i><span>Mastodon<span></a></li>{% endif %}
-  {% if page.dev %}<li><a href="https://dev.to/{{ page.dev }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-dev"></i><span>Dev</span></a></li>{% endif %}
-  {% if page.behance %}<li><a href="https://www.behance.net/{{ page.behance }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-behance"></i><span>Behance</span></a></li>{% endif %}
-  {% if page.twitter %}<li><a class="twitter" href="http://twitter.com/{{ page.twitter }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i><span>Twitter</span></a></li>{% endif %}
-  {% if page.facebook %}<li><a class="facebook" href="http://facebook.com/{{ page.facebook }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i><span>Facebook</span></a></li>{% endif %}
-  {% if page.linkedin %}<li><a href="http://linkedin.com/in/{{ page.linkedin }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a></li>{% endif %}
-  {% if page.xing %}<li><a class="xing" href="http://www.xing.com/profile/{{ page.xing }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-xing"></i><span>Xing</span></a></li>{% endif %}
-  {% if page.instagram %}<li><a href="http://instagram.com/{{ page.instagram }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i><span>Instagram</span></a></li>{% endif %}
-  {% if page.tumblr %}<li><a href="http://{{ page.tumblr }}.tumblr.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-tumblr"></i><span>Tumblr</span></a></li>{% endif %}
-  {% if page.github %}<li><a class="github" href="http://github.com/{{ page.github }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i><span>GitHub</span></a></li>{% endif %}
-  {% if page.pypi %}<li><a href="http://pypi.org/user/{{ page.pypi }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-python"></i><span>PyPi</span></a></li>{% endif %}
-  {% if page.stackoverflow %}<li><a href="http://stackoverflow.com/users/{{ page.stackoverflow }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-stack-overflow"></i><span>Stackoverflow</span></a></li>{% endif %}
-  {% if page.lastfm %}<li><a href="http://lastfm.com/user/{{ page.lastfm }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-lastfm"></i><span>LastFM</span></a></li>{% endif %}
-  {% if page.dribbble %}<li><a href="http://dribbble.com/{{ page.dribbble }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-dribbble"></i<span>Dribbble</span>></a></li>{% endif %}
-  {% if page.pinterest %}<li><a href="http://www.pinterest.com/{{ page.pinterest }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-pinterest"></i><span>Pinterest</span></a></li>{% endif %}
-  {% if page.foursquare %}<li><a href="http://foursquare.com/{{ page.foursquare }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-foursquare"></i><span>Foursquare</span></a></li>{% endif %}
-  {% if page.steam %}<li><a href="http://steamcommunity.com/id/{{ page.steam }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-steam"></i><span>Steam</span></a></li>{% endif %}
-  {% if page.youtube %}<li><a href="https://youtube.com/user/{{ page.youtube }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i><span>Youtube</span></a></li>{% endif %}
-  {% if page.soundcloud %}<li><a href="http://soundcloud.com/{{ page.soundcloud }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-soundcloud"></i><span>Soundcloud</span></a></li>{% endif %}
-  {% if page.medium %}<li><a class="medium" href="https://medium.com/@{{ page.medium }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-medium"></i><span>Medium</span></a></li>{% endif %}
-  {% if page.weibo %}<li><a href="http://www.weibo.com/{{ page.weibo }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-weibo"></i><span>Weibo</span></a></li>{% endif %}
-  {% if page.flickr %}<li><a href="http://www.flickr.com/{{ page.flickr }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-flickr"></i><span>Flickr</span></a></li>{% endif %}
-  {% if page.codepen %}<li><a href="http://codepen.io/{{ page.codepen }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-codepen"></i><span>CodePen</span></a></li>{% endif %}
-  {% if page.keybase %}<li><a class="keybase" href="https://keybase.io/{{ page.keybase }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-keybase"></i><span>Keybase</span></a></li>{% endif %}
-  {% if page.hackernews %}<li><a href="https://news.ycombinator.com/user?id={{ page.hackernews }}" target="_blank" rel="noopener noreferrer"><i class="fab fa-hacker-news"></i><span>HackerNews</span></a></li>{% endif %}
+{% if page.social %}
+{% if include.class %}
+  {% assign class = "icons " | append: include.class %}
+{% else %}
+  {% assign class = "icons" %}
+{% endif %}
+<ul class="{{ class }}">
+  {% for item in page.social %}
+  {% case item.name | downcase %}
+  {% when "email" %}
+    {% assign uri = "mailto:" | append: item.user %}
+    {% assign title = "EMail" %}
+    {% assign icon = "fas fa-envelope" %}
+  {% when "xmpp" %}
+    {% assign uri = "xmpp:" | append: item.user %}
+    {% assign title = "XMPP" %}
+    {% assign icon = "fas fa-comments" %}
+  {% when "mastodon" %}
+    {% assign uri = "https://" | append: item.user %}
+    {% assign title = "Mastodon" %}
+    {% assign icon = "fab fa-mastodon" %}
+  {% when "dev" %}
+    {% assign uri = "https://dev.to/" | append: item.user %}
+    {% assign title = "Dev.to" %}
+    {% assign icon = "fab fa-dev" %}
+  {% when "behance" %}
+    {% assign uri = "https://www.behance.net/" | append: item.user %}
+    {% assign title = "Behance" %}
+    {% assign icon = "fab fa-behance" %}
+  {% when "twitter" %}
+    {% assign uri = "https://twitter.com/" | append: item.user %}
+    {% assign title = "Twitter" %}
+    {% assign icon = "fab fa-twitter" %}
+  {% when "facebook" %}
+    {% assign uri = "https://facebook.com/" | append: item.user %}
+    {% assign title = "Facebook" %}
+    {% assign icon = "fab fa-facebook-f" %}
+  {% when "linkedin" %}
+    {% assign uri = "https://linkedin.com/in/" | append: item.user %}
+    {% assign title = "LinkedIn" %}
+    {% assign icon = "fab fa-linkedin" %}
+  {% when "xing" %}
+    {% assign uri = "https://www.xing.com/profile/" | append: item.user %}
+    {% assign title = "Xing" %}
+    {% assign icon = "fab fa-xing" %}
+  {% when "instagram" %}
+    {% assign uri = "https://instagram.com/" | append: item.user %}
+    {% assign title = "Instagram" %}
+    {% assign icon = "fab fa-instagram" %}
+  {% when "github" %}
+    {% assign uri = "https://github.com/" | append: item.user %}
+    {% assign title = "GitHub" %}
+    {% assign icon = "fab fa-github" %}
+  {% when "tumblr" %}
+    {% assign uri = "https://" | append: item.user | append: ".tumblr.com" %}
+    {% assign title = "Tumblr" %}
+    {% assign icon = "fab fa-tumblr" %}
+  {% when "pypi" %}
+    {% case item.type | downcase %}
+      {% when "user" %}
+        {% assign uri = "https://pypi.org/user/" | append: item.user %}
+      {% when "project" %}
+        {% assign uri = "https://pypi.org/project/" | append: item.user %}
+      {% else %}
+        {% assign uri = "https://pypi.org/user/" | append: item.user %}
+    {% endcase %}
+    {% assign title = "PyPi" %}
+    {% assign icon = "fab fa-python" %}
+  {% when "keybase" %}
+    {% assign uri = "https://keybase.io/" | append: item.user %}
+    {% assign title = "Keybase" %}
+    {% assign icon = "fab fa-keybase" %}
+  {% when "medium" %}
+    {% assign uri = "https://medium.com/@" | append: item.user %}
+    {% assign title = "Medium" %}
+    {% assign icon = "fab fa-medium" %}
+  {% when "stackoverflow" %}
+    {% assign uri = "https://stackoverflow.com/users/" | append: item.user %}
+    {% assign title = "Stackoverflow" %}
+    {% assign icon = "fab fa-stack-overflow" %}
+  {% when "lastfm" %}
+    {% assign uri = "https://lastfm.com/user/" | append: item.user %}
+    {% assign title = "LastFM" %}
+    {% assign icon = "fab fa-lastfm" %}
+  {% when "dribbble" %}
+    {% assign uri = "https://dribbble.com/" | append: item.user %}
+    {% assign title = "Dribbble" %}
+    {% assign icon = "fab fa-dribbble" %}
+  {% when "pinterest" %}
+    {% assign uri = "https://www.pinterest.com/" | append: item.user %}
+    {% assign title = "Pinterest" %}
+    {% assign icon = "fab fa-pinterest" %}
+  {% when "foursquare" %}
+    {% assign uri = "https://foursquare.com/" | append: item.user %}
+    {% assign title = "Foursquare" %}
+    {% assign icon = "fab fa-foursquare" %}
+  {% when "steam" %}
+    {% assign uri = "https://steamcommunity.com/id/" | append: item.user %}
+    {% assign title = "Steam" %}
+    {% assign icon = "fab fa-steam" %}
+  {% when "youtube" %}
+    {% assign uri = "https://youtube.com/user/" | append: item.user %}
+    {% assign title = "Youtube" %}
+    {% assign icon = "fab fa-youtube" %}
+  {% when "soundcloud" %}
+    {% assign uri = "https://soundcloud.com/" | append: item.user %}
+    {% assign title = "Soundcloud" %}
+    {% assign icon = "fab fa-soundcloud" %}
+  {% when "weibo" %}
+    {% assign uri = "https://www.weibo.com/" | append: item.user %}
+    {% assign title = "Weibo" %}
+    {% assign icon = "fab fa-weibo" %}
+  {% when "flickr" %}
+    {% assign uri = "https://www.flickr.com/" | append: item.user %}
+    {% assign title = "Flickr" %}
+    {% assign icon = "fab fa-flickr" %}
+  {% when "codepen" %}
+    {% assign uri = "https://codepen.io/" | append: item.user %}
+    {% assign title = "CodePen" %}
+    {% assign icon = "fab fa-codepen" %}
+  {% when "hackernews" %}
+    {% assign uri = "https://news.ycombinator.com/user?id=" | append: item.user %}
+    {% assign title = "HackerNews" %}
+    {% assign icon = "fab fa-hacker-news" %}
+  {% else %}
+    {% assign uri = nil %}
+    {% assign title = nil %}
+    {% assign icon = nil %}
+  {% endcase %}
+
+  {% if uri %}
+  <li>
+    <a href="{{ uri }}" title="{{ title }}" class="{{ item.name }}"
+      target="_blank" rel="noopener noreferrer">
+      <i class="{{ icon }}"></i><span>{{ title }}</span>
+    </a>
+  </li>
+  {% endif %}
+  {% endfor %}
 </ul>
+{% endif %}

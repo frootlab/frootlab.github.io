@@ -3,15 +3,20 @@ layout: project
 navid: projects
 title: Nemoa
 subtitle: Automated Machine Learning
-cloudinary: pexels/101764
-image-orientation: landscape
+image:
+  cloudinary: pexels/101764
+  orientation: landscape
 backdrop: white
 sections: true
 form-logo: /images/svg/nemoa.svg
 permalink: /projects/nemoa.html
 redirect_from: /nemoa.html
-github: frootlab/nemoa
-pypi: nemoa
+social:
+  - name: github
+    user: frootlab/nemoa
+  - name: pypi
+    user: nemoa
+    type: project
 readthedocs: nemoa
 stage: Alpha
 stage-url:

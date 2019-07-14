@@ -1,11 +1,11 @@
 {% if page.crumbs %}
-  {% assign crumbs = page.crumbs | split: '/' | offset: 1 %}
+  {% assign crumbs = page.crumbs | offset: 1 %}
 {% else %}
   {% assign crumbs = page.url | remove: '/index.html' | split: '/' | offset: 1 %}
 {% endif %}
 {% assign rcrumbs = crumbs | reverse %}
-{% assign total = crumbs | size %}
 
+{% assign total = crumbs | size %}
 {% if total > 1 %}
   {% assign menu-class = "menu-button" %}
 {% else %}
@@ -15,6 +15,8 @@
 {% assign title = page.title | markdownify | remove: "<p>" | remove: "</p>" %}
 {% if page.short-title %}
   {% assign short-title = page.short-title %}
+{% elsif page.crumbs %}
+  {% assign short-title = page.crumbs | last %}
 {% else %}
   {% assign short-title = title | remove: ":" | truncatewords: 3 %}
 {% endif %}
@@ -38,7 +40,7 @@
     <li class="active"><a>{{ short-title }}</a></li>
     {% else %}
     {% assign crumb_limit = total | minus: forloop.index | plus: 1 %}
-    <li><a href="{{ site.url }}{% for i in crumbs limit: crumb_limit %}{{ i | append: '/' }}{% endfor %}">{{ crumb }}</a></li>
+    <li><a href="{{ site.url }}/{% for i in crumbs limit: crumb_limit %}{{ i | append: '/' }}{% endfor %}">{{ crumb }}</a></li>
     {% endif %}
     {% endif %}
     {% endfor %}

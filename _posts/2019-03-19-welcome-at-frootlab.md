@@ -2,14 +2,16 @@
 layout: post
 navid: blog
 title: Welcome at Frootlab
-short-title: Welcome
-crumbs: /blog/Welcome
 author: Patrick Michl
 license: CC BY 4.0
 license-url: "https://creativecommons.org/licenses/by/4.0/"
-cloudinary: unsplash/710800
-image-orientation: portrait
+image:
+  cloudinary: unsplash/710800
+  orientation: portrait
 pdf: files/posts/2019-03-19-welcome-at-frootlab.pdf
+crumbs:
+  - Blog
+  - Welcome
 categories:
   - Corporate
 tags:

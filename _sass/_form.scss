@@ -146,19 +146,6 @@
   align-items: center;
 }
 
-/* Icons */
-.form ul.icons {
-
-  > li a {
-    color: $dark-grey;
-
-    &:hover {
-      color: $darker-grey;
-      background-color: white;
-    }
-  }
-}
-
 /* Labels */
 .label {
   font-family: 'Roboto Condensed', sans-serif;

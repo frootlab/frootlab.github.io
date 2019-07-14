@@ -3,15 +3,20 @@ layout: project
 navid: projects
 title: Motley
 subtitle: Smart Algorithm Repository
-cloudinary: pexels/990824
-image-orientation: landscape
+image:
+  cloudinary: pexels/990824
+  orientation: landscape
 backdrop: white
 sections: true
 form-logo: /images/svg/motley.svg
 permalink: /projects/motley.html
 redirect_from: /motley.html
-github: frootlab/motley
-pypi: motley
+social:
+  - name: github
+    user: frootlab/motley
+  - name: pypi
+    user: motley
+    type: project
 readthedocs: motley
 stage: Planning
 stage-url:

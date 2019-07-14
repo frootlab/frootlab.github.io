@@ -2,13 +2,15 @@
 layout: form
 navid: imprint
 title: Legal Notice
-crumbs: /Legal Notice
-cloudinary: unsplash/710800
-image-orientation: portrait
+image:
+  cloudinary: unsplash/710800
+  orientation: portrait
 backdrop: white
 sections: true
 permalink: /legal/notice.html
 redirect_from: /imprint.html
+crumbs:
+  - Legal Notice
 ---
 
 <section class="dark-grey"><h3>Legal Notice</h3></section>

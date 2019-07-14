@@ -3,11 +3,13 @@ layout: article
 navid: privacy
 title: Privacy Policy
 short-title: Privacy
-crumbs: /Privacy
-cloudinary: unsplash/710800
-image-orientation: portrait
+image:
+  cloudinary: unsplash/710800
+  orientation: portrait
 permalink: /legal/privacy.html
 redirect_from: /privacy.html
+crumbs:
+  - Privacy
 ---
 
 ## Table of contents

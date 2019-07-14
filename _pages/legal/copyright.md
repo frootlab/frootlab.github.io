@@ -2,13 +2,15 @@
 layout: form
 navid: copyright
 title: Copyright
-cloudinary: unsplash/710800
-image-orientation: portrait
+image:
+  cloudinary: unsplash/710800
+  orientation: portrait
 backdrop: white
 sections: true
-crumbs: /Copyright
 permalink: /legal/copyright.html
 redirect_from: /copyright.html
+crumbs:
+  - Copyright
 ---
 
 <section class="dark-grey"><h3>Terms of Use</h3></section>

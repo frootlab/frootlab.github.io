@@ -1,8 +1,4 @@
-{% if page.short_name %}
-  {% assign cur_title = page.name %}
-{% elsif page.project %}
-  {% assign cur_title = page.project | capitalize | prepend: " " | prepend: site.title %}
-{% elsif page.title %}
+{% if page.title %}
   {% assign cur_title = page.title | markdownify | strip_html | strip_newlines | escape_once %}
   {% if cur_title == "About" %}{% assign cur_title = "About " | append: site.title %}
     {% elsif cur_title == "Projects" %}{% assign cur_title = site.title | append: " Projects" %}
@@ -25,8 +21,8 @@
   {% assign cur_keywords = site.keywords %}
 {% endif %}
 
-{% if page.image %}
-  {% capture image %}{{ page.image }}{% endcapture %}
+{% if page.image.url %}
+  {% capture image %}{{ page.image.url }}{% endcapture %}
   {% unless image contains 'http://' or image contains 'https://' %}
     {% capture image %}{{ site.url }}/{{ image }}{% endcapture %}
   {% endunless %}
@@ -45,11 +41,13 @@
 <link rel="icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
 <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<!-- WebApp Settings -->
+<link rel="manifest" href="/site.webmanifest">
 <meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#043846">
 
 <!-- Dublin Core -->
 <meta name="dc.language" content="{{ site.language }}">

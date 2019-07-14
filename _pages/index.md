@@ -1,25 +1,23 @@
 ---
 layout: form
 navid: home
-cloudinary: pixabay/3357642-edit
-image-orientation: landscape
 sections: true
 title: Frootlab
 subtitle: Smart Analytics
 title-layout: inset
 permalink: /index.html
+image:
+  cloudinary: pixabay/3357642-edit
+  orientation: landscape
 links:
-  - projects:
+  - name: Projects
     url: /projects
-    name: Projects
     title: Projects at Frootlab
-  - blog:
+  - name: Blog
     url: /blog
-    name: Blog
     title: Frootlab Blog
-  - about:
+  - name: About
     url: /about
-    name: About
     title: About Us
 ---
 
