@@ -3,9 +3,14 @@ layout: project
 navid: projects
 title: Pandora
 subtitle: High Performance Data Proxy
+slogan: Equip your existing data applications with a universal data plug
+featured: true
+popularity: 3
 image:
   cloudinary: pexels/366691
   orientation: landscape
+illustration:
+  cloudinary: undraw/undraw_server_status_ocean
 backdrop: white
 sections: true
 form-logo: /images/svg/pandora.svg
@@ -19,7 +24,6 @@ social:
     type: project
 readthedocs: pandora
 stage: Pre-Alpha
-stage-url:
 license: GPL-3.0
 license-url: https://www.gnu.org/licenses/gpl.html
 version: 0.1.10

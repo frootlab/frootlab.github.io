@@ -22,6 +22,6 @@ redirect_from: /archive.html
   <h3>{{ year }}</h3>
 </section>
 <section class="grey">
-  {% include posts/preview.html year=year %}
+  {% include blog/preview.html year=year %}
 </section>
 {% endfor %}

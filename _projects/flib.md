@@ -3,9 +3,14 @@ layout: project
 navid: projects
 title: flib
 subtitle: Frootlab Shared Library
+slogan: You are welcome to use our multi-purpose shared library
+featured: false
+popularity: 0
 image:
   cloudinary: unsplash/602632
   orientation: landscape
+illustration:
+  cloudinary: undraw/code_typing
 sections: true
 backdrop: white
 permalink: /projects/flib.html
@@ -18,7 +23,6 @@ social:
     type: project
 readthedocs: flib
 stage: Various
-stage-url:
 license: GPL-3.0
 license-url: https://www.gnu.org/licenses/gpl.html
 version: 0.9.2

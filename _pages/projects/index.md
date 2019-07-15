@@ -1,22 +1,19 @@
 ---
-layout: page
+layout: form
 navid: projects
 title: Projects
+title-layout: inset
 sections: true
-description: "Gallery of active Projects"
+description: Gallery of Projects
 permalink: /projects/index.html
 redirect_from: /projects.html
 image:
-  cloudinary: pixabay/3357642
+  cloudinary: pixabay/3357642-edit
   orientation: landscape
 ---
 
-<ul class="projects-menu">
-  {% for item in site.projects %}
-    <li>
-      <a href="{{ item.url }}" title="{{ item.title }}">
-        <span>{{ item.title }}</span>
-      </a>
-    </li>
-  {% endfor %}
-</ul>
+<section class="dark-grey"><h3>Featured Projects</h3></section>
+<section class="white">{% include projects/preview.html display="cards" featured=true %}</section>
+
+<section class="dark-grey"><h3>Further Projects</h3></section>
+<section class="white">{% include projects/preview.html display="cards" featured=false %}</section>

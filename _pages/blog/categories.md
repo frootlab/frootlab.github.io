@@ -20,7 +20,7 @@ navid: blog
     <h3>{{ name }}</h3>
   </section>
   <section class="grey">
-    {% include posts/preview.html category=name%}
+    {% include blog/preview.html category=name%}
   </section>
 </div>
 {% endfor %}

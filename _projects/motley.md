@@ -3,9 +3,14 @@ layout: project
 navid: projects
 title: Motley
 subtitle: Smart Algorithm Repository
+slogan: Discover a new approach for collaborative data science
+featured: true
+popularity: 1
 image:
   cloudinary: pexels/990824
   orientation: landscape
+illustration:
+  cloudinary: undraw/undraw_data_points_ocean
 backdrop: white
 sections: true
 form-logo: /images/svg/motley.svg
@@ -19,7 +24,6 @@ social:
     type: project
 readthedocs: motley
 stage: Planning
-stage-url:
 license: GPL-3.0
 license-url: https://www.gnu.org/licenses/gpl.html
 version: 0.0.1

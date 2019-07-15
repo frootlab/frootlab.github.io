@@ -20,7 +20,7 @@ redirect_from: /tags.html
     <h3>{{ name }}</h3>
   </section>
   <section class="grey">
-    {% include posts/preview.html tag=name%}
+    {% include blog/preview.html tag=name%}
   </section>
 </div>
 {% endfor %}

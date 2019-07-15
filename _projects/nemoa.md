@@ -3,9 +3,14 @@ layout: project
 navid: projects
 title: Nemoa
 subtitle: Automated Machine Learning
+slogan: Use rapid prototyping for your enterprise analytical applications
+featured: true
+popularity: 2
 image:
   cloudinary: pexels/101764
   orientation: landscape
+illustration:
+  cloudinary: undraw/undraw_professor_ocean
 backdrop: white
 sections: true
 form-logo: /images/svg/nemoa.svg
@@ -19,7 +24,6 @@ social:
     type: project
 readthedocs: nemoa
 stage: Alpha
-stage-url:
 license: GPL-3.0
 license-url: "https://www.gnu.org/licenses/gpl.html"
 version: 0.5.582

@@ -1,0 +1,74 @@
+{% assign items = site.projects %}
+
+{% comment %}
+================================================================================
+Filter Projects (by featured and limit)
+================================================================================
+{% endcomment %}
+
+{% if include.featured or include.featured == false %}
+  {% assign items = items | where: "featured", include.featured %}
+{% endif %}
+
+{% if include.limit %}
+  {% assign bound = include.limit %}
+{% else %}
+  {% assign bound = 9999 %}
+{% endif %}
+
+{% comment %}
+================================================================================
+Sort Projects (by name or popularity)
+================================================================================
+{% endcomment %}
+
+{% case include.sort %}
+  {% when 'name' %}
+    {% assign items = items %}
+  {% else %}
+    {% assign items = items | sort:"popularity" | reverse %}
+{% endcase %}
+
+{% comment %}
+================================================================================
+List / display Posts
+================================================================================
+{% endcomment %}
+
+{% case include.display | downcase %}
+{% when 'list' %}
+{% assign count = items | size %}
+{% if count > 0 %}
+<ul>
+{% for item in items limit: bound %}
+<li>
+  <a href="{{ site.url }}{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
+</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+{% else %}
+<div class="grid">
+
+{% for item in items limit: bound %}
+
+{% if item.illustration.cloudinary %}
+  {% assign preview = "https://res.cloudinary.com/frootlab/image/upload/" | append: item.illustration.cloudinary | append: ".svg" %}
+{% endif %}
+
+<div class="cell" style="text-align: center; padding: 1rem;">
+  <a href="{{ site.url }}{{ item.url }}" title="{{ item.title }}">
+    <img style="height: 180px;" src="{{ preview }}">
+  </a>
+  <p><strong><a href="{{ site.url }}{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a></strong></p>
+  <p>{{ item.slogan }}</p>
+</div>
+
+{% endfor %}
+
+<div class="cell"></div>
+<div class="cell"></div>
+
+</div>
+{% endcase %}

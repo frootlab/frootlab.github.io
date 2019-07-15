@@ -46,7 +46,7 @@ and can be downloaded from <a href="https://github.com/{{ page.github }}">GitHub
 
 {% capture posts-html %}
 {% assign tag = page.title | capitalize %}
-{% include posts/preview.html tag=tag display="list" %}
+{% include blog/preview.html tag=tag display="list" %}
 {% endcapture %}
 {% assign posts-html = posts-html | strip %}
 {% if posts-html != "" %}
