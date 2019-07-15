@@ -30,6 +30,27 @@ Filter Posts (by category, tag, author, year and limit)
   {% assign bound = 9999 %}
 {% endif %}
 
+{% comment %}
+================================================================================
+List / display Posts
+================================================================================
+{% endcomment %}
+
+{% case include.display | downcase %}
+{% when 'list' %}
+{% assign count = posts | size %}
+{% if count > 0 %}
+<ul>
+{% for post in posts limit: bound %}
+<li>
+  {{ post.date | date: '%d. %B, %y' }}:
+  <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+{% else %}
 <div class="grid" style="padding: 1rem 0;">
 
 {% for post in posts limit: bound %}
@@ -52,7 +73,7 @@ Filter Posts (by category, tag, author, year and limit)
 {% case catid %}
   {% when 'corporate' %}
     {% assign color = 'blue' %}
-  {% when 'science'' %}
+  {% when 'science' %}
     {% assign color = 'green' %}
   {% when 'technology' %}
     {% assign color = 'red' %}
@@ -84,3 +105,4 @@ Filter Posts (by category, tag, author, year and limit)
 <div class="cell"></div>
 
 </div>
+{% endcase %}

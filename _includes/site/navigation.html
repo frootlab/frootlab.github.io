@@ -3,7 +3,6 @@
 {% else %}
   {% assign crumbs = page.url | remove: '/index.html' | split: '/' | offset: 1 %}
 {% endif %}
-{% assign rcrumbs = crumbs | reverse %}
 
 {% assign total = crumbs | size %}
 {% if total > 1 %}
@@ -34,13 +33,14 @@
 </nav>
 <nav id="crumbs">
   <ul>
+    {% assign rcrumbs = crumbs | reverse %}
     {% for crumb in rcrumbs %}
     {% if crumb != '' %}
     {% if forloop.index == 1 %}
     <li class="active"><a>{{ short-title }}</a></li>
     {% else %}
     {% assign crumb_limit = total | minus: forloop.index | plus: 1 %}
-    <li><a href="{{ site.url }}/{% for i in crumbs limit: crumb_limit %}{{ i | append: '/' }}{% endfor %}">{{ crumb }}</a></li>
+    <li><a href="{{ site.url }}/{% for i in crumbs limit: crumb_limit %}{{ i | downcase | append: '/' }}{% endfor %}">{{ crumb }}</a></li>
     {% endif %}
     {% endif %}
     {% endfor %}

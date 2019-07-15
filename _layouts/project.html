@@ -4,11 +4,6 @@ layout: base
 
 {% include front/header.html %}
 <div class="banderole" style="text-align: center;">
-  {% capture site_tags %}
-  {% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}
-  {% endfor %}
-  {% endcapture %}
-  {% assign tags_list = site_tags | split:',' | sort %}
   {% for project in site.data.projects %}
   <a class="btn btn_grey" href="{{ site.url }}{{ project.url }}">{{ project.title }}</a>
   {% endfor %}
@@ -17,57 +12,47 @@ layout: base
 
 {% include form/header.html %}
 <section class="ocean">
-  <h3><strong>{{ page.title }}</strong> v{{ page.version }}</h3>
+  <h3><strong>{{ page.title }}</strong> <small>v{{ page.version }}</small></h3>
 </section>
 
+{% if page.social %}
+{% assign pkg = page.social | where:"name","pypi" | last | map:"user" %}
 <section class="dark-grey"><h3>Quickstart</h3></section>
 <section class="white">
 <p><strong>Installation using PIP</strong></p>
 <div class="language-shell highlighter-rouge">
   <div class="highlight">
-    <pre class="highlight"><code><span class="nv">$ </span>pip install {{ page.pypi }}</code></pre>
+    <pre class="highlight"><code><span class="nv">$ </span>pip install {{ pkg }}</code></pre>
   </div>
 </div>
 </section>
+{% endif %}
 
+{% if content %}
 <section class="dark-grey"><h3>About</h3></section>
-<section class="white">
-{{ content }}
-</section>
+<section class="white">{{ content }}</section>
+{% endif %}
 
+{% if page.license %}
 <section class="dark-grey"><h3>License</h3></section>
 <section class="white">
-<p>
-According to <a href="/about">our convictions</a> {{ page.title }} is
+<p>According to <a href="/about">our convictions</a> {{ page.title }} is
 <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">free and open-source software</a>.
 It is released under the <a href="{{ page.licence-url }}">{{ page.license }}</a>
 and can be downloaded from <a href="https://github.com/{{ page.github }}">GitHub</a>.
 </p>
 </section>
+{% endif %}
 
+{% capture posts-html %}
+  {% assign tag = page.title | capitalize %}
+  {% include posts/preview.html tag=tag display="list" %}
+{% endcapture %}
+{% assign posts-html = posts-html | strip %}
+{% if posts-html != "" %}
 <section class="dark-grey"><h3>Latest News</h3></section>
-<section class="white">
-{% assign name = page.title | capitalize %}
-{% for post in site.posts %}
-{% if post.tags contains name %}
-
-{% assign catid = post.categories | first | downcase %}
-{% if catid == 'corporate' %}
-  {% assign color = 'blue' %}
-{% elsif catid == 'science' %}
-  {% assign color = 'green' %}
-{% elsif catid == 'technology' %}
-  {% assign color = 'red' %}
-{% else %}
-  {% assign color = 'grey' %}
+<section class="white">{{ posts-html }}</section>
 {% endif %}
-<p>
-  {{ post.date | date: '%d. %B, %y' }}:
-  <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-</p>
-{% endif %}
-{% endfor %}
-</section>
 
 <section class="dark-grey"><h3>Links</h3></section>
 <section class="white">

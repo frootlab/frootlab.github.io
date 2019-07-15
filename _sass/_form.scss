@@ -4,7 +4,7 @@
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-weight: 300;
   text-align: left;
-  background-color: #fafafa;
+  background-color: #FAFAFA;
 
   h1,
   h2,
@@ -39,7 +39,7 @@
   }
 
   section.grey {
-    background-color: #fafafa;
+    background-color: #FAFAFA;
   }
 
   section.dark-grey {
@@ -52,7 +52,6 @@
     * {
       color: white;
     }
-
   }
 
   h1,
@@ -75,12 +74,17 @@
     font-size: 1.5em;
   }
 
-  p {
+  p,
+  ul {
     color: $dark-grey;
     font-size: 1em;
     margin: 1em 0;
     padding-top: 0;
     line-height: 1.6;
+  }
+
+  ul {
+    list-style-type: none;
   }
 
   a {
