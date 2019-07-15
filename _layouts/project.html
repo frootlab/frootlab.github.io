@@ -3,10 +3,13 @@ layout: base
 ---
 
 {% include front/header.html %}
-<div class="banderole" style="text-align: center;">
-  {% for item in site.projects %}
-  <a class="btn btn_grey" href="{{ site.url }}{{ item.url }}">{{ item.title }}</a>
-  {% endfor %}
+<div class="banderole">
+  <a class="btn btn_grey" href="{{ site.url }}{{ page.url }}#quickstart">Quickstart</a>
+  <a class="btn btn_grey" href="{{ site.url }}{{ page.url }}#about">About</a>
+  <a class="btn btn_grey" href="{{ site.url }}{{ page.url }}#license">License</a>
+  <a class="btn btn_grey" href="{{ site.url }}{{ page.url }}#posts">Posts</a>
+  <a class="btn btn_grey" href="{{ site.url }}{{ page.url }}#links">Links</a>
+
 </div>
 {% include front/trailer.html %}
 
@@ -17,7 +20,7 @@ layout: base
 
 {% if page.social %}
 {% assign pkg = page.social | where:"name","pypi" | last | map:"user" %}
-<section class="dark-grey"><h3>Quickstart</h3></section>
+<section class="dark-grey" id="quickstart"><h3>Quickstart</h3></section>
 <section class="white">
 <p><strong>Installation using PIP</strong></p>
 <div class="language-shell highlighter-rouge">
@@ -29,12 +32,12 @@ layout: base
 {% endif %}
 
 {% if content %}
-<section class="dark-grey"><h3>About</h3></section>
+<section class="dark-grey" id="about"><h3>About</h3></section>
 <section class="white">{{ content }}</section>
 {% endif %}
 
 {% if page.license %}
-<section class="dark-grey"><h3>License</h3></section>
+<section class="dark-grey" id="license"><h3>License</h3></section>
 <section class="white">
 <p>According to <a href="/about">our convictions</a> {{ page.title }} is
 <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">free and open-source software</a>.
@@ -50,11 +53,11 @@ and can be downloaded from <a href="https://github.com/{{ page.github }}">GitHub
 {% endcapture %}
 {% assign posts-html = posts-html | strip %}
 {% if posts-html != "" %}
-<section class="dark-grey"><h3>Posts</h3></section>
+<section class="dark-grey" id="posts"><h3>Posts</h3></section>
 <section class="white">{{ posts-html }}</section>
 {% endif %}
 
-<section class="dark-grey"><h3>Links</h3></section>
+<section class="dark-grey" id="links"><h3>Links</h3></section>
 <section class="white">
   <div style="display: flex;">
     <div style="flex: 48%; text-align: center;">

@@ -10,6 +10,19 @@ redirect_from: /projects.html
 image:
   cloudinary: pixabay/3357642-edit
   orientation: landscape
+links:
+  - name: Pandora
+    url: /pandora
+    title: Pandora
+  - name: Nemoa
+    url: /nemoa
+    title: Nemoa
+  - name: Motley
+    url: /motley
+    title: Motley
+  - name: flib
+    url: /flib
+    title: flib
 ---
 
 <section class="dark-grey"><h3>Featured Projects</h3></section>
