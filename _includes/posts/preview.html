@@ -54,7 +54,6 @@ List / display Posts
 <div class="grid" style="padding: 1rem 0;">
 
 {% for post in posts limit: bound %}
-
 {% assign readtime = post.content | number_of_words | divided_by: 180 | plus: 0.5 | round %}
 {% assign offset = post.title | number_of_words | times: 2 %}
 {% assign cutoff = 35 | minus: offset %}

@@ -45,12 +45,12 @@ and can be downloaded from <a href="https://github.com/{{ page.github }}">GitHub
 {% endif %}
 
 {% capture posts-html %}
-  {% assign tag = page.title | capitalize %}
-  {% include posts/preview.html tag=tag display="list" %}
+{% assign tag = page.title | capitalize %}
+{% include posts/preview.html tag=tag display="list" %}
 {% endcapture %}
 {% assign posts-html = posts-html | strip %}
 {% if posts-html != "" %}
-<section class="dark-grey"><h3>Latest News</h3></section>
+<section class="dark-grey"><h3>Posts</h3></section>
 <section class="white">{{ posts-html }}</section>
 {% endif %}
 

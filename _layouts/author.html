@@ -3,22 +3,15 @@ layout: base
 ---
 
 {% include front/header.html %}
-<div class="banderole">
-  {% include links/social.html %}
-</div>
+<div class="banderole">{% include links/social.html %}</div>
 {% include front/trailer.html %}
 
 {% include form/header.html %}
-<section class="dark-grey">
-  <h3>About</h3>
-</section>
-<section class="white">
-  {{ page.content | markdownify }}
-</section>
-<section class="dark-grey">
-  <h3>Posts</h3>
-</section>
+<section class="dark-grey"><h3>About</h3></section>
+<section class="white">{{ content }}</section>
+
+<section class="dark-grey"><h3>Posts</h3></section>
 <section class="grey">
-  {% include posts/preview.html author=page.title %}
+  {% include posts/preview.html author=page.title class="white" %}
 </section>
 {% include form/trailer.html %}

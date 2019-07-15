@@ -1,0 +1,42 @@
+{% case include.display | downcase %}
+  {% when 'center' %}
+    {% assign scale = "c_scale,q_auto:good,w_960" %}
+    {% assign pcrop = "" %}
+    {% assign lcrop = "c_crop,w_0.5,h_1.0" %}
+  {% when 'both' %}
+    {% assign scale = "c_scale,q_auto:good,w_1920" %}
+    {% assign pcrop = "c_crop,w_1.0,h_0.5" %}
+    {% assign lcrop = "" %}
+{% endcase %}
+
+{% if page.image %}
+  {% if page.image.cloudinary %}
+    {% if page.image.format == "svg" %}
+      {% assign transform = "b_rgb:f5f5f5,bo_20px_solid_rgb:f5f5f5,c_pad,h_900,q_auto:best,w_700" %}
+    {% elsif page.image.orientation == "portrait" %}
+      {% assign transform = pcrop | append: '/' | append: scale %}
+    {% elsif page.image.orientation == "landscape" %}
+      {% assign transform = lcrop | append: '/' | append: scale %}
+    {% else %}
+      {% assign transform = "c_scale,q_auto:good,w_960" %}
+    {% endif %}
+    {% assign url = "https://res.cloudinary.com/frootlab/image/upload/"
+      | append: transform
+      | append: "/"
+      | append: page.image.cloudinary
+      | append: ".webp" %}
+  {% elsif page.image.url %}
+    {% if page.image.url contains 'http://' or page.image.url contains 'https://' %}
+      {% assign url = page.image.url %}
+    {% else %}
+      {% assign url = site.url | append: "/" | append: page.image.url %}
+    {% endif %}
+  {% endif %}
+{% else %}
+  {% assign url = site.url | append: "/" | append: site.background.default %}
+{% endif %}
+
+{% assign url = url | strip %}
+{% if url != "" %}
+linear-gradient(#0000004D, #00000000 20%), url({{ url }})
+{% endif %}
