@@ -9,8 +9,8 @@ layout: base
   {% endfor %}
   {% endcapture %}
   {% assign tags_list = site_tags | split:',' | sort %}
-  {% for project in site.data.projects %}
-  <a class="btn btn_grey" href="{{ site.url }}{{ project.url }}">{{ project.title }}</a>
+  {% for item in site.projects %}
+  <a class="btn btn_grey" href="{{ site.url }}{{ item.url }}">{{ item.title }}</a>
   {% endfor %}
 </div>
 {% include front/trailer.html %}

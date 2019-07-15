@@ -21,6 +21,8 @@ background:
 collections:
   authors:
     output: true
+  projects:
+    output: true
 
 # Jekyll
 markdown:           kramdown

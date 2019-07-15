@@ -4,8 +4,8 @@ layout: base
 
 {% include front/header.html %}
 <div class="banderole" style="text-align: center;">
-  {% for project in site.data.projects %}
-  <a class="btn btn_grey" href="{{ site.url }}{{ project.url }}">{{ project.title }}</a>
+  {% for item in site.projects %}
+  <a class="btn btn_grey" href="{{ site.url }}{{ item.url }}">{{ item.title }}</a>
   {% endfor %}
 </div>
 {% include front/trailer.html %}

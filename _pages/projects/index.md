@@ -12,7 +12,7 @@ image:
 ---
 
 <ul class="projects-menu">
-  {% for item in site.data.projects %}
+  {% for item in site.projects %}
     <li>
       <a href="{{ item.url }}" title="{{ item.title }}">
         <span>{{ item.title }}</span>
