@@ -1,18 +1,16 @@
 html {
-  line-height: 1;
+  height: 100%;
   overflow: hidden;
+  background-color: $blue-gray;
+
   &.no-scroll {
     overflow: hidden;
   }
 }
 
-html,
 body {
   height: 100%;
   line-height: 1.2;
-}
-
-body {
   font-family: $base-font;
   color: $darker-grey;
   background: $white;
@@ -74,16 +72,16 @@ menu,
 nav,
 section,
 summary {
-  display: block
+  display: block;
 }
 
 *,
 *:after,
 *:before {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
-// h tags
+// Headers
 h1,
 h2,
 h3,
@@ -118,7 +116,7 @@ h6 {
   font-size: 0.8em;
 }
 
-// figures and images
+// Figures and images
 figure {
   display: flex;
   justify-content: space-between;
@@ -188,7 +186,7 @@ img {
   margin: 0 auto;
 }
 
-// blockquotes
+// Blockquotes and cites
 blockquote {
   margin: 2em 1em 2em 0;
   padding-left: 1em;
@@ -211,7 +209,7 @@ cite {
   font-size: 0.85em;
 }
 
-// definition lists
+// Definition lists
 dt {
   border: 1px solid darken($white, 7%);
   padding: 0.5em;
