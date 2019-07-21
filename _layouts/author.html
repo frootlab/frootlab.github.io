@@ -3,15 +3,21 @@ layout: base
 ---
 
 {% include front/header.html %}
-<div class="banderole">{% include links/social.html %}</div>
+<div class="banderole">
+  <a class="btn btn_grey" href="#about">About</a>
+  <a class="btn btn_grey" href="#posts">Posts</a>
+  <a class="btn btn_grey" href="#contact">Contact</a>
+</div>
 {% include front/trailer.html %}
 
 {% include form/header.html %}
-<section class="dark-grey"><h3>About</h3></section>
+<section class="dark-grey" id="about"><h3>About</h3></section>
 <section class="white">{{ content }}</section>
 
-<section class="dark-grey"><h3>Posts</h3></section>
-<section class="grey">
-  {% include blog/preview.html author=page.title class="white" %}
-</section>
+<section class="dark-grey" id="posts"><h3>Posts</h3></section>
+<section class="grey">{% include blog/preview.html author=page.title class="white" %}</section>
+
+<section class="dark-grey" id="contact"><h3>Contact</h3></section>
+<section class="grey"><div style="padding:1rem 0rem;">{% include links/social.html class="white" %}</div></section>
+
 {% include form/trailer.html %}
