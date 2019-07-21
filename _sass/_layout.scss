@@ -101,6 +101,7 @@
 @media screen and (max-width: 960px) {
   html {
     overflow: auto;
+    scroll-behavior: smooth;
     background-color: white;
     margin: 0;
   }

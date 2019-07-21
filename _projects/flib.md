@@ -10,7 +10,7 @@ image:
   cloudinary: unsplash/602632
   orientation: landscape
 illustration:
-  cloudinary: undraw/code_typing
+  cloudinary: undraw/undraw_code_typing_7jnv
 sections: true
 backdrop: white
 permalink: /projects/flib.html

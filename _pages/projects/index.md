@@ -12,21 +12,21 @@ image:
   orientation: landscape
 links:
   - name: Pandora
-    url: /pandora
+    url: "#pandora"
     title: Pandora
   - name: Nemoa
-    url: /nemoa
+    url: "#nemoa"
     title: Nemoa
   - name: Motley
-    url: /motley
+    url: "#motley"
     title: Motley
   - name: flib
-    url: /flib
+    url: "#flib"
     title: flib
 ---
 
 <section class="dark-grey"><h3>Featured Projects</h3></section>
-<section class="white">{% include projects/preview.html display="cards" featured=true %}</section>
+<section class="white">{% include projects/preview.html display="cards" featured=true bookmarks=true %}</section>
 
 <section class="dark-grey"><h3>Further Projects</h3></section>
-<section class="white">{% include projects/preview.html display="cards" featured=false %}</section>
+<section class="white">{% include projects/preview.html display="cards" featured=false bookmarks=true %}</section>

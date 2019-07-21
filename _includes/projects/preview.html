@@ -57,7 +57,12 @@ List / display Posts
   {% assign preview = "https://res.cloudinary.com/frootlab/image/upload/" | append: item.illustration.cloudinary | append: ".svg" %}
 {% endif %}
 
+{% if include.bookmarks %}
+<div class="cell" style="text-align: center; padding: 1rem;" id="{{ item.title | downcase }}">
+{% else %}
 <div class="cell" style="text-align: center; padding: 1rem;">
+{% endif %}
+
   <a href="{{ site.url }}{{ item.url }}" title="{{ item.title }}">
     <img style="height: 180px;" src="{{ preview }}">
   </a>
