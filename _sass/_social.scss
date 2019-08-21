@@ -72,6 +72,7 @@ ul.white {
 @include icon(keybase, #33A0FF);
 @include icon(xmpp, #439639);
 @include icon(pypi, #0073b7);
+@include icon(linkedin, #0073b1);
 
 @media screen and (max-width: 640px) {
   ul.icons > li a {
