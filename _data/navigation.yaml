@@ -6,6 +6,10 @@
   navid: projects
   alt: Projects
   link: /projects
+- name: News
+  navid: news
+  alt: News
+  link: /news
 - name: Blog
   navid: blog
   alt: Blog

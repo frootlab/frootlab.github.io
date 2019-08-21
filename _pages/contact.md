@@ -11,6 +11,8 @@ permalink: /contact.html
 social:
   - name: twitter
     user: frootlab
+  - name: mastodon
+    user: frootlab@mastodon.social
   - name: github
     user: frootlab
   - name: keybase
