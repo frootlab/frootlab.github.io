@@ -16,6 +16,8 @@ social:
     user: mastodon.social/@fishroot
   - name: xing
     user: Patrick_Michl6
+  - name: linkedin
+    user: patrick-michl
 sections: true
 mastodon: mastodon.social/@fishroot
 github: fishroot

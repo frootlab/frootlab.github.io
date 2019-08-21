@@ -12,17 +12,24 @@ social:
   - name: twitter
     user: frootlab
   - name: mastodon
-    user: frootlab@mastodon.social
+    user: mastodon.social/@frootlab
   - name: github
     user: frootlab
   - name: keybase
     user: frootlab
+links:
+  - name: Social
+    url: "#social"
+    title: Social Media
+  - name: Email
+    url: "#email"
+    title: Email
 ---
 
-<section class="dark-grey"><h3>Community</h3></section>
+<section class="dark-grey" id="social"><h3>Social</h3></section>
 <section class="grey"><div style="padding:1rem 0;">{% include links/social.html class="white" %}</div></section>
 
-<section class="dark-grey"><h3>Email</h3></section>
+<section class="dark-grey" id="email"><h3>Email</h3></section>
 <section class="grey">
 <div class="contact-form-container" style="padding: 1rem 0;">  
   <form id="contact-form" method="POST"
