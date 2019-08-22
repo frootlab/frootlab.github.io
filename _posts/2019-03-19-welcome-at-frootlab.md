@@ -3,6 +3,7 @@ layout: post
 navid: blog
 title: Welcome at Frootlab
 author: Patrick Michl
+category: corporate
 license: CC BY 4.0
 license-url: "https://creativecommons.org/licenses/by/4.0/"
 image:
@@ -12,8 +13,6 @@ pdf: files/posts/2019-03-19-welcome-at-frootlab.pdf
 crumbs:
   - Blog
   - Welcome
-categories:
-  - Corporate
 tags:
   - Frootlab
 ---

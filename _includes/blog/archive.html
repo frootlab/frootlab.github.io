@@ -1,0 +1,37 @@
+{% comment %}
+================================================================================
+Filter Posts by Type
+================================================================================
+{% endcomment %}
+
+{% assign posts = site.posts %}
+
+{% if include.type %}
+  {% assign bag = site.data.categories | where: "type", "microblog" %}
+  {% assign list = bag | join: '|' %}
+  {% assign posts = posts | where_exp: "post", "list contains post.category" %}
+{% endif %}
+
+{% comment %}
+================================================================================
+Group Posts by Year
+================================================================================
+{% endcomment %}
+
+{% assign groups = posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+{% assign years = groups | map: "name" | sort | reverse %}
+
+{% comment %}
+================================================================================
+Display Posts
+================================================================================
+{% endcomment %}
+
+{% for year in years %}
+<section class="dark-grey">
+  <h3>{{ year }}</h3>
+</section>
+<section class="grey">
+  {% include blog/preview.html year=year type=include.type display=include.display %}
+</section>
+{% endfor %}

@@ -6,14 +6,14 @@
   navid: projects
   alt: Projects
   link: /projects
-- name: News
-  navid: news
-  alt: News
-  link: /news
 - name: Blog
   navid: blog
   alt: Blog
   link: /blog
+- name: Microblog
+  navid: microblog
+  alt: Microblog
+  link: /microblog
 - name: About
   navid: about
   alt: About

@@ -1,0 +1,9 @@
+- name: Corporate
+  id: corporate
+  type: blog
+- name: Science
+  id: science
+  type: blog
+- name: News
+  id: news
+  type: microblog

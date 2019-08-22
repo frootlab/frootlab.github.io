@@ -1,18 +1,18 @@
 ---
 layout: blog
-navid: blog
-title: Blog
+navid: microblog
+title: Microblog
 title-layout: inset
 short-title: Tag
 image:
   cloudinary: pixabay/3357642-edit
   orientation: landscape
 sections: true
-description: "An archive of all blog posts sorted by tag"
-permalink: /blog/tags.html
+description: "An archive of all microblog posts sorted by tag"
+permalink: /microblog/tags.html
 ---
 
-{% assign bag = site.data.categories | where: "type", "blog" | join: '|' %}
+{% assign bag = site.data.categories | where: "type", "microblog" | join: '|' %}
 
 {% capture tags %}
   {% for post in site.posts %}
@@ -39,7 +39,7 @@ permalink: /blog/tags.html
     <h3>{{ tag }}</h3>
   </section>
   <section class="grey">
-    {% include blog/preview.html tag=tag type="blog" %}
+    {% include blog/preview.html tag=tag type="microblog" display="list" %}
   </section>
 </div>
 {% endfor %}

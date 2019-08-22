@@ -3,6 +3,7 @@ layout: post
 navid: blog
 title: Three obstacles in data science and one vision
 author: Patrick Michl
+category: corporate
 license: CC BY 4.0
 license-url: "https://creativecommons.org/licenses/by/4.0/"
 image:
@@ -12,8 +13,6 @@ pdf: files/posts/2019-03-20-three-obstacles-in-data-science.pdf
 crumbs:
   - Blog
   - Three obstacles
-categories:
-  - Corporate
 tags:
   - Motley
   - Nemoa

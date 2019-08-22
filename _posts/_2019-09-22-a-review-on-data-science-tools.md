@@ -3,6 +3,7 @@ layout: post
 navid: blog
 title: A short review on data analysis tools
 author: Patrick Michl
+category: science
 license: CC BY 4.0
 license-url: "https://creativecommons.org/licenses/by/4.0/"
 image:
@@ -10,8 +11,6 @@ image:
 crumbs:
   - Blog
   - Data Analysis Tools
-categories:
-  - Technology
 tags:
   - AutoML
   - CAMP

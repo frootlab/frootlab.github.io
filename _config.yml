@@ -50,6 +50,13 @@ plugins:
 whitelist:
   - jekyll-redirect-from
 
+# Jekyll-Feed Settings
+feed:
+  categories:
+    - news
+    - corporate
+    - science
+
 # HTML Compression
 # see: https://github.com/penibelst/jekyll-compress-html
 compress_html:

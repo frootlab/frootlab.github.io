@@ -1,9 +1,27 @@
-{% capture cats %}
-  {% for cat in site.categories %}{{ cat[0] }},{% endfor %}
-{% endcapture %}
-{% assign cats = cats | strip | split: ',' | compact | sort %}
+{% comment %}
+================================================================================
+Catch all Cats in a Bag
+================================================================================
+{% endcomment %}
 
-{% for cat in cats %}
-  {% assign catid = cat | downcase %}
-<a class="btn btn_grey" href="/blog/categories#{{ cat }}" title="{{ cat }}">{{ cat }}</a>
+{% assign bag = site.data.categories %}
+
+{% comment %}
+================================================================================
+Filter Cats by Type
+================================================================================
+{% endcomment %}
+
+{% if include.type %}
+  {% assign bag = bag | where: "type", include.type %}
+{% endif %}
+
+{% comment %}
+================================================================================
+Show Cats
+================================================================================
+{% endcomment %}
+
+{% for cat in bag %}
+<a class="btn btn_grey" href="/blog/categories#{{ cat.id }}" title="{{ cat.name }}">{{ cat.name }}</a>
 {% endfor %}

@@ -33,8 +33,9 @@ links:
   <h3><b>Blog</b></h3>
   <p>Pure and applied Data Science</p>
 </section>
-<section class="grey">{% include blog/preview.html limit=3 %}</section>
+<section class="grey">{% include blog/preview.html limit=3 type="blog" %}</section>
 <section class="grey">
   <a href="/blog" title="Blog"><img src="/images/svg/plus-ocean.svg" alt="plus" style="width: 2rem;"></a>
 </section>
+
 <section></section>
