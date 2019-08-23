@@ -96,3 +96,5 @@ defaults:
       license: "CC BY 4.0"
       license-url: "https://creativecommons.org/licenses/by/4.0/"
       navid: "microblog"
+      image-meta:
+        cloudinary: pexels/323645
