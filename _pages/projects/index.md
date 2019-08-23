@@ -7,7 +7,7 @@ sections: true
 description: Gallery of Projects
 permalink: /projects/index.html
 redirect_from: /projects.html
-image:
+image-meta:
   cloudinary: pixabay/3357642-edit
   orientation: landscape
 links:

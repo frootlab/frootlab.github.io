@@ -4,7 +4,7 @@ navid: blog
 title: Blog
 title-layout: inset
 short-title: Archive
-image:
+image-meta:
   cloudinary: pixabay/3357642-edit
   orientation: landscape
 sections: true

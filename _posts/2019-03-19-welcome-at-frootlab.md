@@ -1,20 +1,15 @@
 ---
-layout: post
-navid: blog
 title: Welcome at Frootlab
 author: Patrick Michl
 category: corporate
-license: CC BY 4.0
-license-url: "https://creativecommons.org/licenses/by/4.0/"
-image:
+image-meta:
   cloudinary: unsplash/710800
   orientation: portrait
 pdf: files/posts/2019-03-19-welcome-at-frootlab.pdf
 crumbs:
   - Blog
   - Welcome
-tags:
-  - Frootlab
+tags: [Frootlab]
 ---
 
 **We are a young developers team with strong expertise in data science and

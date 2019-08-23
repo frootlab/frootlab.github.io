@@ -3,7 +3,7 @@ layout: form
 navid: contact
 title: Contact
 short-title: Contact
-image:
+image-meta:
   cloudinary: unsplash/710800
   orientation: portrait
 sections: true

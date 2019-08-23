@@ -23,6 +23,8 @@ collections:
     output: true
   projects:
     output: true
+  news:
+    output: true
 
 # Jekyll
 markdown:           kramdown
@@ -51,11 +53,13 @@ whitelist:
   - jekyll-redirect-from
 
 # Jekyll-Feed Settings
+# see: https://github.com/jekyll/jekyll-feed
 feed:
   categories:
-    - news
     - corporate
     - science
+  collections:
+    - news
 
 # HTML Compression
 # see: https://github.com/penibelst/jekyll-compress-html
@@ -71,3 +75,24 @@ compress_html:
 # Exclude list
 include: [_pages]
 exclude: [README.md, Gemfile, Gemfile.lock, _site, src, vendor, CNAME, LICENSE, Rakefile, .sass-cache, .DS_Store]
+
+# Front Matter Defaults
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      license: "CC BY 4.0"
+      license-url: "https://creativecommons.org/licenses/by/4.0/"
+      navid: "blog"
+  -
+    scope:
+      path: ""
+      type: "news"
+    values:
+      layout: "micropost"
+      license: "CC BY 4.0"
+      license-url: "https://creativecommons.org/licenses/by/4.0/"
+      navid: "microblog"

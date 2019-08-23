@@ -6,7 +6,7 @@ title: Frootlab
 subtitle: Smart Analytics
 title-layout: inset
 permalink: /index.html
-image:
+image-meta:
   cloudinary: pixabay/3357642-edit
   orientation: landscape
 links:

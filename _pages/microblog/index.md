@@ -4,7 +4,7 @@ navid: microblog
 title: Microblog
 title-layout: inset
 short-title: Microblog
-image:
+image-meta:
   cloudinary: pixabay/3357642-edit
   orientation: landscape
 sections: true

@@ -1,16 +1,23 @@
-{% assign posts = site.posts %}
-
 {% comment %}
 ================================================================================
-Filter Posts (by type, category, tag, author, year and limit)
+Get Posts of given Type
 ================================================================================
 {% endcomment %}
 
-{% if include.type %}
-  {% assign bag = site.data.categories | where: "type", include.type %}
-  {% assign list = bag | join: '|' %}
-  {% assign posts = posts | where_exp: "post", "list contains post.category" %}
-{% endif %}
+{% case include.type %}
+  {% when 'blog' %}
+    {% assign posts = site.posts %}
+  {% when 'microblog' %}
+    {% assign posts = site.news %}
+  {% else %}
+    {% assign posts = site.posts %}
+{% endcase %}
+
+{% comment %}
+================================================================================
+Filter Posts by Category, Tag, Author, Year and Limit
+================================================================================
+{% endcomment %}
 
 {% if include.category %}
   {% assign posts = posts | where: "category", include.category %}
@@ -38,76 +45,77 @@ Filter Posts (by type, category, tag, author, year and limit)
 
 {% comment %}
 ================================================================================
-List / display Posts
+Display Posts
 ================================================================================
 {% endcomment %}
 
 {% case include.display | downcase %}
-{% when 'list' %}
-{% assign count = posts | size %}
-{% if count > 0 %}
-<ul>
-{% for post in posts limit: bound %}
-<li>
-  {{ post.date | date: '%d. %B, %y' }}:
-  <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-</li>
-{% endfor %}
-</ul>
-{% endif %}
+  {% when 'list' %}
+    {% assign count = posts | size %}
+    {% if count > 0 %}
+      <ul>
+      {% for post in posts limit: bound %}
+        <li>
+          {{ post.date | date: '%d. %B, %y' }}:
+          <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+      </ul>
+    {% endif %}
 
-{% else %}
-<div class="grid" style="padding: 1rem 0;">
-
-{% for post in posts limit: bound %}
-{% assign readtime = post.content | number_of_words | divided_by: 180 | plus: 0.5 | round %}
-{% assign offset = post.title | number_of_words | times: 2 %}
-{% assign cutoff = 35 | minus: offset %}
-
-{% if post.image.cloudinary %}
-  {% assign preview = "https://res.cloudinary.com/frootlab/image/upload/c_thumb,w_300,g_face/" | append: post.image.cloudinary | append: ".webp" %}
-{% elsif post.preview %}
-  {% assign preview = site.url | append: post.preview %}
-{% elsif post.image.url %}
-  {% assign preview = site.url | append: post.image.url %}
-{% else %}
-  {% assign preview = site.url | append: "/" | append: site.background.default %}
-{% endif %}
-
-{% assign catid = post.categories | first | downcase %}
-{% case catid %}
-  {% when 'corporate' %}
-    {% assign color = 'blue' %}
-  {% when 'science' %}
-    {% assign color = 'green' %}
-  {% when 'technology' %}
-    {% assign color = 'red' %}
   {% else %}
-    {% assign color = 'grey' %}
-{% endcase %}
+    <div class="grid" style="padding: 1rem 0;">
 
-<div class="cell">
-  <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
-  <div class="card">
-    <div class="ribbon-box">
-      <div class="ribbon-wrapper">
-          <div class="{{ color }}-ribbon">{{ catid }}</div>
+    {% for post in posts limit: bound %}
+      {% assign readtime = post.content | number_of_words | divided_by: 180 | plus: 0.5 | round %}
+      {% assign offset = post.title | number_of_words | times: 2 %}
+      {% assign cutoff = 35 | minus: offset %}
+
+      {% if post.image-meta.cloudinary %}
+        {% assign preview = "https://res.cloudinary.com/frootlab/image/upload/c_thumb,w_300,g_face/" | append: post.image-meta.cloudinary | append: ".webp" %}
+      {% elsif post.preview %}
+        {% assign preview = site.url | append: post.preview %}
+      {% elsif post.image-meta.url %}
+        {% assign preview = site.url | append: post.image-meta.url %}
+      {% else %}
+        {% assign preview = site.url | append: "/" | append: site.background.default %}
+      {% endif %}
+
+      {% assign catid = post.categories | first | downcase %}
+
+      {% case catid %}
+        {% when 'corporate' %}
+          {% assign color = 'blue' %}
+        {% when 'science' %}
+          {% assign color = 'green' %}
+        {% when 'technology' %}
+          {% assign color = 'red' %}
+        {% else %}
+          {% assign color = 'grey' %}
+      {% endcase %}
+
+      <div class="cell">
+        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
+        <div class="card">
+          <div class="ribbon-box">
+            <div class="ribbon-wrapper">
+                <div class="{{ color }}-ribbon">{{ catid }}</div>
+            </div>
+          </div>
+          <div class="card-image" style="background-image: url({{ preview }});"></div>
+          <div class="card-content">
+            <div class="label">{{ post.date | date: '%d %b %Y' }} &nbsp;&bull;&nbsp; {{ readtime }} min</div>
+            <div class="card-title">{{ post.title | markdownify | strip_html }}</div>
+            <div class="card-text">{{ post.excerpt | strip_html | truncatewords: cutoff}}</div>
+          </div>
+        </div>
+        </a>
       </div>
-    </div>
-    <div class="card-image" style="background-image: url({{ preview }});"></div>
-    <div class="card-content">
-      <div class="label">{{ post.date | date: '%d %b %Y' }} &nbsp;&bull;&nbsp; {{ readtime }} min</div>
-      <div class="card-title">{{ post.title | markdownify | strip_html }}</div>
-      <div class="card-text">{{ post.excerpt | strip_html | truncatewords: cutoff}}</div>
-    </div>
+
+    {% endfor %}
+
+    <div class="cell"></div>
+    <div class="cell"></div>
+
   </div>
-  </a>
-</div>
-
-{% endfor %}
-
-<div class="cell"></div>
-<div class="cell"></div>
-
-</div>
 {% endcase %}

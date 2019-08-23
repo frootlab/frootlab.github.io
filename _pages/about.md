@@ -6,7 +6,7 @@ backdrop: white
 title: Frootlab
 subtitle: Smart Analytics
 short-title: About
-image:
+image-meta:
   cloudinary: pixabay/3357642-edit
   orientation: landscape
 permalink: /about.html

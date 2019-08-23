@@ -3,7 +3,7 @@ layout: article
 navid: privacy
 title: Privacy Policy
 short-title: Privacy
-image:
+image-meta:
   cloudinary: unsplash/710800
   orientation: portrait
 permalink: /legal/privacy.html

@@ -2,7 +2,7 @@
 layout: form
 navid: copyright
 title: Copyright
-image:
+image-meta:
   cloudinary: unsplash/710800
   orientation: portrait
 backdrop: white

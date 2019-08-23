@@ -1,22 +1,15 @@
 ---
-layout: post
-navid: blog
-author: Patrick Michl
 title: "AI Revolution: Deep Learning and what´s next?"
+author: Patrick Michl
 category: science
-license: CC BY 4.0
-license-url: "https://creativecommons.org/licenses/by/4.0/"
-image:
+image-meta:
   cloudinary: pexels/101764
   orientation: landscape
 pdf: files/posts/2019-04-30-a-review-on-deep-learning.pdf
 crumbs:
   - Blog
   - Deep Learning
-tags:
-  - Deep Learning
-  - Machine Learning
-  - AI
+tags: [Deep Learning, Machine Learning, AI]
 ---
 
 **When talking about the "AI Revolution" it's difficult to narrow down a common

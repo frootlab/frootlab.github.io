@@ -2,7 +2,7 @@
 layout: form
 navid: imprint
 title: Legal Notice
-image:
+image-meta:
   cloudinary: unsplash/710800
   orientation: portrait
 backdrop: white

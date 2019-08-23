@@ -17,8 +17,8 @@
   {% assign keywords = site.keywords %}
 {% endif %}
 
-{% if page.image.url %}
-  {% capture image %}{{ page.image.url }}{% endcapture %}
+{% if page.image-meta.url %}
+  {% capture image %}{{ page.image-meta.url }}{% endcapture %}
   {% unless image contains 'http://' or image contains 'https://' %}
     {% capture image %}{{ site.url }}/{{ image }}{% endcapture %}
   {% endunless %}
@@ -83,7 +83,7 @@
 <a rel="me" href="https://mastodon.social/@frootlab"></a>
 
 <!-- Twitter Cards -->
-{% if page.image %}
+{% if page.image-meta %}
 <meta name="twitter:card" content="summary_large_image">
 {% else %}
 <meta name="twitter:card" content="summary">

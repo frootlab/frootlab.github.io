@@ -1,29 +1,43 @@
 {% comment %}
 ================================================================================
-Filter Tags (by Category, Type)
+Get Posts of given Type
 ================================================================================
 {% endcomment %}
 
-{% assign bag = site.data.categories %}
-{% if include.type %}
-  {% assign bag = bag | where: "type", include.type %}
-{% endif %}
+{% case include.type %}
+  {% when 'blog' %}
+    {% assign posts = site.posts %}
+  {% when 'microblog' %}
+    {% assign posts = site.news %}
+  {% else %}
+    {% assign posts = site.posts %}
+{% endcase %}
+
+{% comment %}
+================================================================================
+Filter Posts by Category
+================================================================================
+{% endcomment %}
+
 {% if include.category %}
-  {% assign bag = bag | where: "id", include.category %}
+  {% assign posts = posts | where: "category", include.category %}
 {% endif %}
-{% assign bag = bag | join: '|' %}
+
+{% comment %}
+================================================================================
+Collect Tags from Posts
+================================================================================
+{% endcomment %}
 
 {% capture tags %}
-  {% for post in site.posts %}
-    {% if bag contains post.category %}
-      {% for tag in post.tags %}{{ tag }}|{% endfor %}
-    {% endif %}
+  {% for post in posts %}
+    {% for tag in post.tags %}{{ tag }}|{% endfor %}
   {% endfor %}
 {% endcapture %}
 
 {% comment %}
 ================================================================================
-Filter Tag Duplicates
+Filter Duplicates
 ================================================================================
 {% endcomment %}
 
@@ -35,7 +49,6 @@ Filter Tag Duplicates
     {% capture tags %}{{ tags }}|{{ token }}{% endcapture %}
   {% endunless %}
 {% endfor %}
-
 {% assign tags = tags | strip | split: '|' | compact | sort %}
 
 {% comment %}

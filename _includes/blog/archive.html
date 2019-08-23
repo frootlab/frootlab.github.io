@@ -1,16 +1,17 @@
 {% comment %}
 ================================================================================
-Filter Posts by Type
+Get Posts of given Type
 ================================================================================
 {% endcomment %}
 
-{% assign posts = site.posts %}
-
-{% if include.type %}
-  {% assign bag = site.data.categories | where: "type", "microblog" %}
-  {% assign list = bag | join: '|' %}
-  {% assign posts = posts | where_exp: "post", "list contains post.category" %}
-{% endif %}
+{% case include.type %}
+  {% when 'blog' %}
+    {% assign posts = site.posts %}
+  {% when 'microblog' %}
+    {% assign posts = site.news %}
+  {% else %}
+    {% assign posts = site.posts %}
+{% endcase %}
 
 {% comment %}
 ================================================================================
