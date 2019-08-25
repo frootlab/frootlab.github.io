@@ -12,4 +12,4 @@ description: "An archive of all posts sorted by date"
 permalink: /blog/archive.html
 ---
 
-{% include blog/archive.html type="blog" %}
+{% include blog/archive.html type="blog" layout="cards" %}

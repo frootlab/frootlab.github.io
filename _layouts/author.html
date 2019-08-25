@@ -15,7 +15,7 @@ layout: base
 <section class="white">{{ content }}</section>
 
 <section class="dark-grey" id="posts"><h3>Posts</h3></section>
-<section class="grey">{% include blog/preview.html author=page.title class="white" %}</section>
+<section class="grey">{% include blog/preview.html layout="cards" author=page.title class="white" %}</section>
 
 <section class="dark-grey" id="contact"><h3>Contact</h3></section>
 <section class="grey"><div style="padding:1rem 0rem;">{% include links/social.html class="white" %}</div></section>

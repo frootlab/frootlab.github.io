@@ -21,7 +21,7 @@ navid: blog
     <h3>{{ cat.name }}</h3>
   </section>
   <section class="grey">
-    {% include blog/preview.html category=cat.id %}
+    {% include blog/preview.html layout="cards" category=cat.id %}
   </section>
 </div>
 {% endfor %}

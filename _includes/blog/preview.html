@@ -8,7 +8,7 @@ Get Posts of given Type
   {% when 'blog' %}
     {% assign posts = site.posts %}
   {% when 'microblog' %}
-    {% assign posts = site.news %}
+    {% assign posts = site.news | reverse %}
   {% else %}
     {% assign posts = site.posts %}
 {% endcase %}
@@ -45,11 +45,11 @@ Filter Posts by Category, Tag, Author, Year and Limit
 
 {% comment %}
 ================================================================================
-Display Posts
+Display Posts by using List Layout
 ================================================================================
 {% endcomment %}
 
-{% case include.display | downcase %}
+{% case include.layout | downcase %}
   {% when 'list' %}
     {% assign count = posts | size %}
     {% if count > 0 %}
@@ -63,7 +63,38 @@ Display Posts
       </ul>
     {% endif %}
 
-  {% else %}
+{% comment %}
+================================================================================
+Display Posts by using Magazin Layout
+================================================================================
+{% endcomment %}
+
+  {% when 'magazine' %}
+    {% assign count = posts | size %}
+    {% if count > 0 %}
+      <ul>
+      {% for post in posts limit: bound %}
+        <li>
+          <small>
+            <a href="{{ post.url }}" title="Permalink to Micropost">
+              <time datetime="{{ post.date | date_to_xmlschema }}">
+                {{ post.date | date: "%a, %b %d, %Y at %I:%M%P" }}
+              </time>
+            </a>
+          </small>
+          {{ post.content }}
+        </li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+
+{% comment %}
+================================================================================
+Display Posts by using Card Layout
+================================================================================
+{% endcomment %}
+
+  {% when 'cards' %}
     <div class="grid" style="padding: 1rem 0;">
 
     {% for post in posts limit: bound %}
@@ -112,10 +143,13 @@ Display Posts
         </a>
       </div>
 
-    {% endfor %}
+      {% endfor %}
 
-    <div class="cell"></div>
-    <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
 
-  </div>
+    </div>
+  {% else %}
+    <b>The given layout '{{ include.layout }}' is not valid!</b>
+
 {% endcase %}

@@ -8,7 +8,7 @@ Get Posts of given Type
   {% when 'blog' %}
     {% assign posts = site.posts %}
   {% when 'microblog' %}
-    {% assign posts = site.news %}
+    {% assign posts = site.news | reverse %}
   {% else %}
     {% assign posts = site.posts %}
 {% endcase %}
@@ -24,7 +24,7 @@ Group Posts by Year
 
 {% comment %}
 ================================================================================
-Display Posts
+Display Post Preview using given Layout
 ================================================================================
 {% endcomment %}
 
@@ -33,6 +33,6 @@ Display Posts
   <h3>{{ year }}</h3>
 </section>
 <section class="grey">
-  {% include blog/preview.html year=year type=include.type display=include.display %}
+  {% include blog/preview.html year=year type=include.type layout=include.layout %}
 </section>
 {% endfor %}

@@ -25,6 +25,7 @@ collections:
     output: true
   news:
     output: true
+    permalink: /microblog/:year/:month/:slug/
 
 # Jekyll
 markdown:           kramdown

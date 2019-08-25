@@ -26,7 +26,10 @@ links:
     title: Email
 ---
 
-<section class="dark-grey" id="social"><h3>Social</h3></section>
+<section class="dark-grey" id="social">
+  <h3><b>Social Media</b></h3>
+  <p>Get engaged by connecting to us</p>
+</section>
 <section class="grey"><div style="padding:1rem 0;">{% include links/social.html class="white" %}</div></section>
 
 <section class="dark-grey" id="email"><h3>Email</h3></section>

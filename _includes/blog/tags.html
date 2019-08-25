@@ -8,7 +8,7 @@ Get Posts of given Type
   {% when 'blog' %}
     {% assign posts = site.posts %}
   {% when 'microblog' %}
-    {% assign posts = site.news %}
+    {% assign posts = site.news | reverse %}
   {% else %}
     {% assign posts = site.posts %}
 {% endcase %}

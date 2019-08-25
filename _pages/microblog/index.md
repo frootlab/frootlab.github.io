@@ -13,8 +13,11 @@ permalink: /microblog/index.html
 redirect_from: /microblog.html
 ---
 
-<section class="dark-grey"><h3>Latest Posts</h3></section>
-<section class="grey">{% include blog/preview.html limit=15 type="microblog" display="list" %}</section>
+<section class="dark-grey">
+  <h3><b>News</b></h3>
+  <p>This is our newsroom</p>
+</section>
+<section class="grey">{% include blog/preview.html limit=10 type="microblog" layout="magazine" %}</section>
 <section class="grey">
   <a href="/microblog/archive" title="News Archive"><img src="/images/svg/plus-ocean.svg" alt="plus" style="width: 2rem;"></a>
 </section>
