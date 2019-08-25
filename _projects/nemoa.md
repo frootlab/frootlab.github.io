@@ -6,7 +6,7 @@ subtitle: Automated Machine Learning
 slogan: Use rapid prototyping for your enterprise analytical applications
 featured: true
 popularity: 2
-image:
+image-meta:
   cloudinary: pexels/101764
   orientation: landscape
 illustration:

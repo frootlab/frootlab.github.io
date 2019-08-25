@@ -3,7 +3,7 @@ layout: author
 title: Patrick Michl
 short-title: Patrick
 subtitle: Member / Founder
-image:
+image-meta:
   url: /images/authors/patrick.webp
 social:
   - name: email

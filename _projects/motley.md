@@ -6,7 +6,7 @@ subtitle: Smart Algorithm Repository
 slogan: Discover a new approach for collaborative data science
 featured: true
 popularity: 1
-image:
+image-meta:
   cloudinary: pexels/990824
   orientation: landscape
 illustration:

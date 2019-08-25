@@ -6,7 +6,7 @@ subtitle: Frootlab Shared Library
 slogan: You are welcome to use our multi-purpose shared library
 featured: false
 popularity: 0
-image:
+image-meta:
   cloudinary: unsplash/602632
   orientation: landscape
 illustration:

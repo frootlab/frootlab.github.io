@@ -6,7 +6,7 @@ subtitle: High Performance Data Proxy
 slogan: Equip your existing data applications with a universal data plug
 featured: true
 popularity: 3
-image:
+image-meta:
   cloudinary: pexels/366691
   orientation: landscape
 illustration:
