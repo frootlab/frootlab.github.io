@@ -18,7 +18,7 @@ social:
   - name: keybase
     user: frootlab
 links:
-  - name: Social
+  - name: Social Media
     url: "#social"
     title: Social Media
   - name: Email
@@ -32,7 +32,10 @@ links:
 </section>
 <section class="grey"><div style="padding:1rem 0;">{% include links/social.html class="white" %}</div></section>
 
-<section class="dark-grey" id="email"><h3>Email</h3></section>
+<section class="dark-grey" id="email">
+  <h3><b>Email</b></h3>
+  <p>Feel free to write us</p>
+</section>
 <section class="grey">
 <div class="contact-form-container" style="padding: 1rem 0;">  
   <form id="contact-form" method="POST"

@@ -76,13 +76,27 @@ Display Posts by using Magazin Layout
       {% for post in posts limit: bound %}
         <li>
           <small>
+            <i class="far fa-user"></i>&nbsp;
+            {% assign author = site.authors | where: 'title', post.author | first %}
+            {% if author %}
+            <author>
+              <a href="{{ author.url }}">{{ author.title }}</a>
+            </author>
+            {% else %}
+            Anonymous
+            {% endif %}
+            &emsp;
             <a href="{{ post.url }}" title="Permalink to Micropost">
+              <i class="far fa-calendar-alt"></i>&nbsp;
               <time datetime="{{ post.date | date_to_xmlschema }}">
-                {{ post.date | date: "%a, %b %d, %Y at %I:%M%P" }}
+                {{ post.date | date: "%A, %d.%m.%Y at %I:%M%P" }}
               </time>
             </a>
           </small>
-          {{ post.content }}
+          <p>
+          {{ post.content | strip_html }}
+          </p>
+          <br>
         </li>
       {% endfor %}
       </ul>

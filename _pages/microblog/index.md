@@ -15,9 +15,13 @@ redirect_from: /microblog.html
 
 <section class="dark-grey">
   <h3><b>News</b></h3>
-  <p>This is our newsroom</p>
+  <p>Updates and announcements regarding our projects</p>
 </section>
-<section class="grey">{% include blog/preview.html limit=10 type="microblog" layout="magazine" %}</section>
 <section class="grey">
-  <a href="/microblog/archive" title="News Archive"><img src="/images/svg/plus-ocean.svg" alt="plus" style="width: 2rem;"></a>
+  {% include blog/preview.html limit=10 type="microblog" layout="magazine" %}
+</section>
+<section class="grey">
+  <a href="/microblog/archive" title="News Archive">
+    <img src="/images/svg/plus-ocean.svg" alt="plus" style="width: 2rem;">
+  </a>
 </section>
