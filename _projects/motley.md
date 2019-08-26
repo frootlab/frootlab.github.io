@@ -1,6 +1,4 @@
 ---
-layout: project
-navid: projects
 title: Motley
 subtitle: Smart Algorithm Repository
 slogan: Discover a new approach for collaborative data science
@@ -12,21 +10,18 @@ image-meta:
 illustration:
   cloudinary: undraw/undraw_data_points_ocean
 backdrop: white
-sections: true
 form-logo: /images/svg/motley.svg
 permalink: /projects/motley.html
 redirect_from: /motley.html
+readthedocs: motley
+stage: Planning
+version: 0.0.1
 social:
   - name: github
     user: frootlab/motley
   - name: pypi
     user: motley
     type: project
-readthedocs: motley
-stage: Planning
-license: GPL-3.0
-license-url: https://www.gnu.org/licenses/gpl.html
-version: 0.0.1
 ---
 
 **Motley** is a planed catalog server for algorithm storage and evaluation and

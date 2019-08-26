@@ -1,6 +1,4 @@
 ---
-layout: project
-navid: projects
 title: flib
 subtitle: Frootlab Shared Library
 slogan: You are welcome to use our multi-purpose shared library
@@ -11,21 +9,18 @@ image-meta:
   orientation: landscape
 illustration:
   cloudinary: undraw/undraw_code_typing_7jnv
-sections: true
 backdrop: white
 permalink: /projects/flib.html
 redirect_from: /flib.html
+readthedocs: flib
+stage: Various
+version: 0.9.2
 social:
   - name: github
     user: frootlab/flib
   - name: pypi
     user: flib
     type: project
-readthedocs: flib
-stage: Various
-license: GPL-3.0
-license-url: https://www.gnu.org/licenses/gpl.html
-version: 0.9.2
 ---
 
 The **frootlab shared library** (flib) is a multi-purpose

@@ -13,8 +13,38 @@ permalink: /blog/index.html
 redirect_from: /blog.html
 ---
 
-<section class="dark-grey"><h3>Latest Posts</h3></section>
-<section class="grey">{% include blog/preview.html layout="cards" limit=6 type="blog" %}</section>
+<section class="dark-grey">
+  <h3>
+    <ul class="small white icons" style="float: right; margin-top: -0.3em;">
+      {% include links/create.html name="rss" uid="/feed/corporate.xml" %}
+    </ul>
+    <b>Corporate</b>
+  </h3>
+  <p>Articles that describe our projects and ideas</p>
+</section>
 <section class="grey">
-  <a href="/blog/archive" title="Blog Archive"><img src="/images/svg/plus-ocean.svg" alt="plus" style="width: 2rem;"></a>
+  {% include blog/preview.html layout="cards" limit=3 type="blog" category="corporate" %}
+</section>
+<section class="grey">
+  <ul class="small centered white icons">
+    {% include links/create.html name="more" uid="/blog/archive" title="Blog Archive" %}
+  </ul>
+</section>
+
+<section class="dark-grey">
+  <h3>
+    <ul class="small white icons" style="float: right; margin-top: -0.3em;">
+      {% include links/create.html name="rss" uid="/feed/science.xml" %}
+    </ul>
+    <b>Science</b>
+  </h3>
+  <p>Articles about pure and applied data science</p>
+</section>
+<section class="grey">
+  {% include blog/preview.html layout="cards" limit=3 type="blog" category="science" %}
+</section>
+<section class="grey">
+  <ul class="small centered white icons">
+    {% include links/create.html name="more" uid="/blog/archive" title="Blog Archive" %}
+  </ul>
 </section>

@@ -1,6 +1,4 @@
 ---
-layout: project
-navid: projects
 title: Nemoa
 subtitle: Automated Machine Learning
 slogan: Use rapid prototyping for your enterprise analytical applications
@@ -12,21 +10,18 @@ image-meta:
 illustration:
   cloudinary: undraw/undraw_professor_ocean
 backdrop: white
-sections: true
 form-logo: /images/svg/nemoa.svg
 permalink: /projects/nemoa.html
 redirect_from: /nemoa.html
+readthedocs: nemoa
+stage: Alpha
+version: 0.5.582
 social:
   - name: github
     user: frootlab/nemoa
   - name: pypi
     user: nemoa
     type: project
-readthedocs: nemoa
-stage: Alpha
-license: GPL-3.0
-license-url: "https://www.gnu.org/licenses/gpl.html"
-version: 0.5.582
 ---
 
 **Nemoa** is a machine learning- and data analysis framework, that utilizes

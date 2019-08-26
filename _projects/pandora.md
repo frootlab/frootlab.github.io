@@ -1,6 +1,4 @@
 ---
-layout: project
-navid: projects
 title: Pandora
 subtitle: High Performance Data Proxy
 slogan: Equip your existing data applications with a universal data plug
@@ -12,21 +10,18 @@ image-meta:
 illustration:
   cloudinary: undraw/undraw_server_status_ocean
 backdrop: white
-sections: true
 form-logo: /images/svg/pandora.svg
 permalink: /projects/pandora.html
 redirect_from: /pandora.html
+readthedocs: pandora
+stage: Pre-Alpha
+version: 0.1.10
 social:
   - name: github
     user: frootlab/pandora
   - name: pypi
     user: pandb
     type: project
-readthedocs: pandora
-stage: Pre-Alpha
-license: GPL-3.0
-license-url: https://www.gnu.org/licenses/gpl.html
-version: 0.1.10
 ---
 
 **Pandora** is a universal database proxy and SQL-Database engine, that

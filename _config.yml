@@ -99,3 +99,21 @@ defaults:
       navid: "microblog"
       image-meta:
         cloudinary: pexels/323645
+  -
+    scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+      sections: true
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+      sections: true
+      layout: project
+      navid: projects
+      license: GPL-3.0
+      license-url: https://www.gnu.org/licenses/gpl.html

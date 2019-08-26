@@ -1,10 +1,10 @@
 ---
-layout: author
 title: Patrick Michl
 short-title: Patrick
 subtitle: Member / Founder
 image-meta:
   url: /images/authors/patrick.webp
+redirect_from: /authors/fishroot.html
 social:
   - name: email
     user: patrick.michl@frootlab.org
@@ -18,12 +18,6 @@ social:
     user: Patrick_Michl6
   - name: linkedin
     user: patrick-michl
-sections: true
-mastodon: mastodon.social/@fishroot
-github: fishroot
-xing: Patrick_Michl6
-xmpp: patrick.michl@wiuwiu.de
-redirect_from: /authors/fishroot.html
 ---
 
 I'm a passionate mathematician, obsessive software developer and convinced

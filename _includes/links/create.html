@@ -1,0 +1,173 @@
+{% comment %}
+================================================================================
+Assign default values
+================================================================================
+{% endcomment %}
+
+{% assign target = "blank" %}
+
+{% comment %}
+================================================================================
+Get link parameters
+================================================================================
+{% endcomment %}
+
+{% case include.name | downcase %}
+  {% when "email" %}
+    {% assign uri = "mailto:" | append: include.uid %}
+    {% assign title = "EMail" %}
+    {% assign icon = "fas fa-envelope" %}
+  {% when "xmpp" %}
+    {% assign uri = "xmpp:" | append: include.uid %}
+    {% assign title = "XMPP" %}
+    {% assign icon = "fas fa-comments" %}
+  {% when "mastodon" %}
+    {% assign uri = "https://" | append: include.uid %}
+    {% assign title = "Mastodon" %}
+    {% assign icon = "fab fa-mastodon" %}
+  {% when "dev" %}
+    {% assign uri = "https://dev.to/" | append: include.uid %}
+    {% assign title = "Dev.to" %}
+    {% assign icon = "fab fa-dev" %}
+  {% when "behance" %}
+    {% assign uri = "https://www.behance.net/" | append: include.uid %}
+    {% assign title = "Behance" %}
+    {% assign icon = "fab fa-behance" %}
+  {% when "twitter" %}
+    {% assign uri = "https://twitter.com/" | append: include.uid %}
+    {% assign title = "Twitter" %}
+    {% assign icon = "fab fa-twitter" %}
+  {% when "facebook" %}
+    {% assign uri = "https://facebook.com/" | append: include.uid %}
+    {% assign title = "Facebook" %}
+    {% assign icon = "fab fa-facebook-f" %}
+  {% when "linkedin" %}
+    {% assign uri = "https://linkedin.com/in/" | append: include.uid %}
+    {% assign title = "LinkedIn" %}
+    {% assign icon = "fab fa-linkedin-in" %}
+  {% when "xing" %}
+    {% assign uri = "https://www.xing.com/profile/" | append: include.uid %}
+    {% assign title = "Xing" %}
+    {% assign icon = "fab fa-xing" %}
+  {% when "instagram" %}
+    {% assign uri = "https://instagram.com/" | append: include.uid %}
+    {% assign title = "Instagram" %}
+    {% assign icon = "fab fa-instagram" %}
+  {% when "github" %}
+    {% assign uri = "https://github.com/" | append: include.uid %}
+    {% assign title = "GitHub" %}
+    {% assign icon = "fab fa-github" %}
+  {% when "tumblr" %}
+    {% assign uri = "https://" | append: include.uid | append: ".tumblr.com" %}
+    {% assign title = "Tumblr" %}
+    {% assign icon = "fab fa-tumblr" %}
+  {% when "pypi" %}
+    {% case include.type | downcase %}
+      {% when "user" %}
+        {% assign uri = "https://pypi.org/user/" | append: include.uid %}
+      {% when "project" %}
+        {% assign uri = "https://pypi.org/project/" | append: include.uid %}
+      {% else %}
+        {% assign uri = "https://pypi.org/user/" | append: include.uid %}
+    {% endcase %}
+    {% assign title = "PyPI" %}
+    {% assign icon = "fab fa-python" %}
+  {% when "keybase" %}
+    {% assign uri = "https://keybase.io/" | append: include.uid %}
+    {% assign title = "Keybase" %}
+    {% assign icon = "fab fa-keybase" %}
+  {% when "medium" %}
+    {% assign uri = "https://medium.com/@" | append: include.uid %}
+    {% assign title = "Medium" %}
+    {% assign icon = "fab fa-medium" %}
+  {% when "stackoverflow" %}
+    {% assign uri = "https://stackoverflow.com/users/" | append: include.uid %}
+    {% assign title = "Stackoverflow" %}
+    {% assign icon = "fab fa-stack-overflow" %}
+  {% when "lastfm" %}
+    {% assign uri = "https://lastfm.com/user/" | append: include.uid %}
+    {% assign title = "LastFM" %}
+    {% assign icon = "fab fa-lastfm" %}
+  {% when "dribbble" %}
+    {% assign uri = "https://dribbble.com/" | append: include.uid %}
+    {% assign title = "Dribbble" %}
+    {% assign icon = "fab fa-dribbble" %}
+  {% when "pinterest" %}
+    {% assign uri = "https://www.pinterest.com/" | append: include.uid %}
+    {% assign title = "Pinterest" %}
+    {% assign icon = "fab fa-pinterest" %}
+  {% when "foursquare" %}
+    {% assign uri = "https://foursquare.com/" | append: include.uid %}
+    {% assign title = "Foursquare" %}
+    {% assign icon = "fab fa-foursquare" %}
+  {% when "steam" %}
+    {% assign uri = "https://steamcommunity.com/id/" | append: include.uid %}
+    {% assign title = "Steam" %}
+    {% assign icon = "fab fa-steam" %}
+  {% when "youtube" %}
+    {% assign uri = "https://youtube.com/user/" | append: include.uid %}
+    {% assign title = "Youtube" %}
+    {% assign icon = "fab fa-youtube" %}
+  {% when "soundcloud" %}
+    {% assign uri = "https://soundcloud.com/" | append: include.uid %}
+    {% assign title = "Soundcloud" %}
+    {% assign icon = "fab fa-soundcloud" %}
+  {% when "weibo" %}
+    {% assign uri = "https://www.weibo.com/" | append: include.uid %}
+    {% assign title = "Weibo" %}
+    {% assign icon = "fab fa-weibo" %}
+  {% when "flickr" %}
+    {% assign uri = "https://www.flickr.com/" | append: include.uid %}
+    {% assign title = "Flickr" %}
+    {% assign icon = "fab fa-flickr" %}
+  {% when "codepen" %}
+    {% assign uri = "https://codepen.io/" | append: include.uid %}
+    {% assign title = "CodePen" %}
+    {% assign icon = "fab fa-codepen" %}
+  {% when "hackernews" %}
+    {% assign uri = "https://news.ycombinator.com/user?id=" | append: include.uid %}
+    {% assign title = "HackerNews" %}
+    {% assign icon = "fab fa-hacker-news" %}
+  {% when "rss" %}
+    {% assign uri = include.uid %}
+    {% assign title = "RSS" %}
+    {% assign icon = "fas fa-rss" %}
+  {% when "more" %}
+    {% assign uri = include.uid %}
+    {% assign title = "more" %}
+    {% assign icon = "fas fa-chevron-down" %}
+    {% assign target = "self" %}
+  {% else %}
+    {% assign uri = nil %}
+    {% assign title = nil %}
+    {% assign icon = nil %}
+{% endcase %}
+
+{% comment %}
+================================================================================
+Set custom parameters
+================================================================================
+{% endcomment %}
+
+{% if include.title %}
+  {% assign title = include.title %}
+{% endif %}
+
+{% if include.target %}
+  {% assign target = include.target %}
+{% endif %}
+
+{% comment %}
+================================================================================
+Display Link
+================================================================================
+{% endcomment %}
+
+{% if uri %}
+<li>
+  <a href="{{ uri }}" title="{{ title }}" class="{{ include.name }}"
+    target="_{{ target }}" rel="noopener noreferrer">
+    <i class="{{ icon }}"></i><span>{{ title }}</span>
+  </a>
+</li>
+{% endif %}

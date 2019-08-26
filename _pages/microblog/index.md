@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: form
 navid: microblog
 title: Microblog
 title-layout: inset
@@ -11,17 +11,28 @@ sections: true
 description: An archive of all mikro posts sorted by date
 permalink: /microblog/index.html
 redirect_from: /microblog.html
+links:
+  - name: News
+    url: "#news"
+    title: News about frootlab
 ---
 
-<section class="dark-grey">
-  <h3><b>News</b></h3>
-  <p>Updates and announcements regarding our projects</p>
+<section class="dark-grey" id="news">
+  <h3>
+    <ul class="small white icons" style="float: right; margin-top: -0.3em;">
+      {% include links/create.html name="rss" uid="/feed/science.xml" %}
+    </ul>
+    <b>News</b>
+  </h3>
+  <p>Updates and announcements regarding <a href="/projects">our projects</a></p>
 </section>
 <section class="grey">
   {% include blog/preview.html limit=10 type="microblog" layout="magazine" %}
 </section>
 <section class="grey">
-  <a href="/microblog/archive" title="News Archive">
-    <img src="/images/svg/plus-ocean.svg" alt="plus" style="width: 2rem;">
-  </a>
+  <ul class="small centered white icons">
+    {% include links/create.html name="more" uid="/microblog/archive" title="News Archive" %}
+  </ul>
 </section>
+
+<section></section>
