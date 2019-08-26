@@ -19,12 +19,12 @@ links:
 
 <section class="dark-grey" id="news">
   <h3>
-    <ul class="small white icons" style="float: right; margin-top: -0.3em;">
+    <ul class="tiny squared white icons" style="float: right; margin-top: -0.3em;">
       {% include links/create.html name="rss" uid="/feed/science.xml" %}
     </ul>
     <b>News</b>
   </h3>
-  <p>Updates and announcements regarding <a href="/projects">our projects</a></p>
+  <p>Updates and announcements about us and our projects</p>
 </section>
 <section class="grey">
   {% include blog/preview.html limit=10 type="microblog" layout="magazine" %}

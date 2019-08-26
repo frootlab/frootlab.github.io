@@ -48,6 +48,16 @@ ul.icons {
     height: 2rem;
   }
 
+  &.tiny > li a {
+    font-size: 1rem;
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  &.squared > li a {
+    border-radius: 20%;
+  }
+
   &.centered {
     width: 100%;
     display: flex;
@@ -57,6 +67,11 @@ ul.icons {
   &.white > li a {
     color: white !important;
   }
+
+  &.black > li a {
+    color: black !important;
+  }
+
 }
 
 @mixin icon($name, $color) {

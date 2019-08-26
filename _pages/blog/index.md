@@ -15,12 +15,12 @@ redirect_from: /blog.html
 
 <section class="dark-grey">
   <h3>
-    <ul class="small white icons" style="float: right; margin-top: -0.3em;">
+    <ul class="tiny squared white icons" style="float: right; margin-top: -0.3em;">
       {% include links/create.html name="rss" uid="/feed/corporate.xml" %}
     </ul>
     <b>Corporate</b>
   </h3>
-  <p>Articles that describe our projects and ideas</p>
+  <p>Articles about us and our projects</p>
 </section>
 <section class="grey">
   {% include blog/preview.html layout="cards" limit=3 type="blog" category="corporate" %}
@@ -33,7 +33,7 @@ redirect_from: /blog.html
 
 <section class="dark-grey">
   <h3>
-    <ul class="small white icons" style="float: right; margin-top: -0.3em;">
+    <ul class="tiny squared white icons" style="float: right; margin-top: -0.3em;">
       {% include links/create.html name="rss" uid="/feed/science.xml" %}
     </ul>
     <b>Science</b>
