@@ -22,9 +22,11 @@ redirect_from: /blog.html
   </h3>
   <p>Articles about us and our projects</p>
 </section>
+
 <section class="grey">
   {% include blog/preview.html layout="cards" limit=3 type="blog" category="corporate" %}
 </section>
+
 <section class="grey">
   <ul class="small centered white icons">
     {% include links/create.html name="more" uid="/blog/archive" title="Blog Archive" %}
@@ -40,9 +42,11 @@ redirect_from: /blog.html
   </h3>
   <p>Articles about pure and applied data science</p>
 </section>
+
 <section class="grey">
   {% include blog/preview.html layout="cards" limit=3 type="blog" category="science" %}
 </section>
+
 <section class="grey">
   <ul class="small centered white icons">
     {% include links/create.html name="more" uid="/blog/archive" title="Blog Archive" %}

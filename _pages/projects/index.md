@@ -25,8 +25,20 @@ links:
     title: flib
 ---
 
-<section class="dark-grey"><h3>Featured Projects</h3></section>
-<section class="white">{% include projects/preview.html display="cards" featured=true bookmarks=true %}</section>
+<section class="dark-grey">
+  <h3><b>Featured</b></h3>
+  <p>Projects that shape our mission</p>
+</section>
 
-<section class="dark-grey"><h3>Further Projects</h3></section>
-<section class="white">{% include projects/preview.html display="cards" featured=false bookmarks=true %}</section>
+<section class="grey">
+  {% include projects/preview.html display="cards" featured=true bookmarks=true %}
+</section>
+
+<section class="dark-grey">
+  <h3><b>Support</b></h3>
+  <p>Projects that support our primary projects</p>
+</section>
+
+<section class="grey">
+  {% include projects/preview.html display="cards" featured=false bookmarks=true %}
+</section>

@@ -24,9 +24,11 @@ links:
   <h3><b>Projects</b></h3>
   <p>Next generation AutoML and Data-Warehousing</p>
 </section>
-<section class="grey">
+
+<section>
   {% include projects/preview.html display="cards" featured=true limit=3 %}
 </section>
+
 <section class="grey">
   <ul class="small centered white icons">
     {% include links/create.html name="more" uid="/projects" title="Projects" %}
@@ -37,10 +39,9 @@ links:
   <h3><b>Blog</b></h3>
   <p>Pure and applied Data Science</p>
 </section>
-<section class="grey">
+
+<section>
   {% include blog/preview.html layout="cards" limit=3 type="blog" %}
-</section>
-<section class="grey">
   <ul class="small centered white icons">
     {% include links/create.html name="more" uid="/blog" title="Blog" %}
   </ul>

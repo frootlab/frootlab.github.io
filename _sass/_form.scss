@@ -44,10 +44,25 @@
 
   section.dark-grey {
     background: $blue-gray;
+
+    border-top: 0.5px solid #DfE5E9;
+    box-shadow:
+      inset 0 -1px 5px 0 rgba(0,0,0, .013),
+      inset 0 -2px 2px 0 rgba(0,0,0, .009),
+      inset 0 -3px 1px -2px rgba(0,0,0, .013);
+
   }
 
   section.ocean {
     background: $ocean;
+
+    * {
+      color: white;
+    }
+  }
+
+  section.stone {
+    background: #333C44;
 
     * {
       color: white;
