@@ -9,7 +9,6 @@ image-meta:
 sections: true
 description: "An archive of all blog posts sorted by category"
 permalink: /blog/categories.html
-redirect_from: /categories.html
 navid: blog
 ---
 
@@ -17,7 +16,7 @@ navid: blog
 
 {% for cat in bag %}
 <div id="{{ cat.id }}" class="hidden">
-  <section class="dark-grey">
+  <section class="title">
     <h3>{{ cat.name }}</h3>
   </section>
   <section class="grey">

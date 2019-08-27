@@ -4,35 +4,36 @@ navid: microblog
 title: Microblog
 title-layout: inset
 short-title: Microblog
+backdrop: white
 image-meta:
   cloudinary: pixabay/3357642-edit
   orientation: landscape
 sections: true
-description: An archive of all mikro posts sorted by date
+description: Newsfeed
 permalink: /microblog/index.html
-redirect_from: /microblog.html
+redirect_from: /news.html
 links:
   - name: News
     url: "#news"
-    title: News about frootlab
+    title: News about us and our projects
 ---
 
-<section class="dark-grey" id="news">
+<section class="title" id="news">
   <h3>
-    <ul class="tiny squared white icons" style="float: right; margin-top: -0.3em;">
-      {% include links/create.html name="rss" uid="/feed/science.xml" %}
+    <ul class="tiny squared icons" style="float: right; margin-top: -0.3em;">
+      {% include links/create.html name="feed" uid="/feed/news.xml" %}
     </ul>
     <b>News</b>
   </h3>
-  <p>Updates and announcements about us and our projects</p>
+  <p>Updates and announcements</p>
 </section>
-<section class="grey">
+
+<section>
   {% include blog/preview.html limit=10 type="microblog" layout="magazine" %}
 </section>
-<section class="grey">
-  <ul class="small centered white icons">
+
+<section>
+  <ul class="small centered squared seamless icons">
     {% include links/create.html name="more" uid="/microblog/archive" title="News Archive" %}
   </ul>
 </section>
-
-<section></section>

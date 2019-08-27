@@ -14,14 +14,17 @@ layout: base
 
 {% include form/header.html %}
 <section class="ocean">
-  <h3><strong>{{ page.title }}</strong> <small>v{{ page.version }}</small></h3>
+  <h3><b>{{ page.title }}</b> <small>v{{ page.version }}</small></h3>
 </section>
 
 {% if page.social %}
 {% assign pkg = page.social | where:"name","pypi" | last | map:"user" %}
-<section class="dark-grey" id="quickstart"><h3>Quickstart</h3></section>
+<section class="title" id="quickstart">
+  <h3>Quickstart</h3>
+</section>
+
 <section class="white">
-<p><strong>Installation using PIP</strong></p>
+<p><b>Installation using PIP</b></p>
 <div class="language-shell highlighter-rouge">
   <div class="highlight">
     <pre class="highlight"><code><span class="nv">$ </span>pip install {{ pkg }}</code></pre>
@@ -31,12 +34,14 @@ layout: base
 {% endif %}
 
 {% if content %}
-<section class="dark-grey" id="about"><h3>About</h3></section>
+<section class="title" id="about">
+  <h3>About</h3>
+</section>
 <section class="white">{{ content }}</section>
 {% endif %}
 
 {% if page.license %}
-<section class="dark-grey" id="license"><h3>License</h3></section>
+<section class="title" id="license"><h3>License</h3></section>
 <section class="white">
 <p>According to <a href="/about">our convictions</a> {{ page.title }} is
 <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">free and open-source software</a>.
@@ -52,24 +57,44 @@ and can be downloaded from <a href="https://github.com/{{ page.github }}">GitHub
 {% endcapture %}
 {% assign posts-html = posts-html | strip %}
 {% if posts-html != "" %}
-<section class="dark-grey" id="posts"><h3>Posts</h3></section>
+<section class="title" id="posts">
+  <h3>Posts</h3>
+</section>
 <section class="white">{{ posts-html }}</section>
 {% endif %}
 
-<section class="dark-grey" id="links"><h3>Links</h3></section>
+{% assign online = 'http://docs.frootlab.org/projects/' | append: page.readthedocs %}
+{% assign root = 'https://readthedocs.org/projects/' | append: page.readthedocs %}
+{% assign pdf = root | append: '/downloads/pdf/latest/' %}
+{% assign epub = root | append: '/downloads/epub/latest/' %}
+{% assign zip = root | append: '/downloads/zip/latest/' %}
+<section class="title" id="links">
+  <h3>Links</h3>
+</section>
 <section class="white">
   <div style="display: flex;">
     <div style="flex: 48%; text-align: center;">
       <div class="label" style="padding-bottom: 0.5rem; margin: 0 0.5rem; color: #999; ">Documentation</div>
-      {% include links/docs.html %}
+      <ul class="squared seamless icons">
+        {% include links/create.html name='link' uid=online title="Online Documentation" icon="fas fa-link" %}
+        {% include links/create.html name='link' uid=pdf title="PDF printable documentation" icon="fas fa-print" %}
+        {% include links/create.html name='link' uid=epub title="PDF ebook documentation" icon="fas fa-tablet" %}
+        {% include links/create.html name='link' uid=zip title="ZIP compressed online documentation" icon="fas fa-file-archive" %}
+      </ul>
     </div>
     <div style="flex: 32%; text-align: center;">
       <div class="label" style="padding-bottom: 0.5rem; margin: 0 0.5rem; color: #999;">Source Code</div>
-      {% include links/social.html class="white" %}
+      <ul class="squared seamless icons">
+        {% for item in page.social %}
+          {% include links/create.html name=item.name uid=item.user type=item.type %}
+        {% endfor %}
+      </ul>
     </div>
     <div style="flex: 20%; text-align: center;">
       <div class="label" style="padding-bottom: 0.5rem; margin: 0 0.5rem; color: #999; ">License</div>
-      {% include links/license.html %}
+      <ul class="squared seamless icons">
+        {% include links/create.html name='link' uid=page.license-url title=page.license icon="fas fa-balance-scale" %}
+      </ul>
     </div>
   </div>
 </section>

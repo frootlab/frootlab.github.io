@@ -42,6 +42,11 @@ ul.icons {
     }
   }
 
+  &.seamless > li a {
+    background: $blue-grey;
+    color: $darker-grey;
+  }
+
   &.small > li a {
     font-size: 1rem;
     width: 2rem;
@@ -56,6 +61,11 @@ ul.icons {
 
   &.squared > li a {
     border-radius: 20%;
+
+    box-shadow:
+      inset 0 -1px 5px 0 rgba(0,0,0,.013),
+      inset 0 -2px 2px 0 rgba(0,0,0,.009),
+      inset 0 -3px 1px -2px rgba(0,0,0,.013);
   }
 
   &.centered {
@@ -74,30 +84,33 @@ ul.icons {
 
 }
 
-@mixin icon($name, $color) {
-  a.#{$name} {
-    background: #{$color};
-    &:hover {
-      background: lighten($color, 15%);
-    }
+@mixin icon($name, $bgcolor, $textcolor) {
+  ul.icons:not(.seamless) > li a.#{$name} {
+    background: #{$bgcolor};
+    color: #{$textcolor};
+  }
+  ul.icons > li a.#{$name}:hover {
+    background: lighten($bgcolor, 15%);
+    color: #{$textcolor};
   }
 }
 
-@include icon(pdf, #EE151F);
-@include icon(email, #B32D00);
-@include icon(facebook, #3B5998);
-@include icon(twitter, #1DA1F2);
-@include icon(print, #5A5A5A);
-@include icon(xing, #007575);
-@include icon(github, #24292E);
-@include icon(medium, #111111);
-@include icon(mastodon, #3088D4);
-@include icon(keybase, #33A0FF);
-@include icon(xmpp, #439639);
-@include icon(pypi, #0073B7);
-@include icon(linkedin, #0073B1);
-@include icon(rss, #F4B459);
-@include icon(more, #134459);
+@include icon(pdf, #EE151F, white);
+@include icon(email, #B32D00, white);
+@include icon(facebook, #3B5998, white);
+@include icon(twitter, #1DA1F2, white);
+@include icon(print, #5A5A5A, white);
+@include icon(xing, #007575, white);
+@include icon(github, #24292E, white);
+@include icon(medium, #111111, white);
+@include icon(mastodon, #3088D4, white);
+@include icon(keybase, #33A0FF, white);
+@include icon(xmpp, #439639, white);
+@include icon(pypi, #0073B7, white);
+@include icon(linkedin, #0073B1, white);
+@include icon(feed, #F4B459, white);
+@include icon(link, #134459, white);
+@include icon(more, #134459, white);
 
 @media screen and (max-width: 640px) {
   ul.icons > li a {

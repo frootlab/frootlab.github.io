@@ -5,6 +5,7 @@ Assign default values
 {% endcomment %}
 
 {% assign target = "blank" %}
+{% assign class = include.name %}
 
 {% comment %}
 ================================================================================
@@ -128,7 +129,7 @@ Get link parameters
     {% assign uri = "https://news.ycombinator.com/user?id=" | append: include.uid %}
     {% assign title = "HackerNews" %}
     {% assign icon = "fab fa-hacker-news" %}
-  {% when "rss" %}
+  {% when "feed" %}
     {% assign uri = include.uid %}
     {% assign title = "RSS" %}
     {% assign icon = "fas fa-rss" %}
@@ -136,6 +137,11 @@ Get link parameters
     {% assign uri = include.uid %}
     {% assign title = "more" %}
     {% assign icon = "fas fa-chevron-down" %}
+    {% assign target = "self" %}
+  {% when "link" %}
+    {% assign uri = include.uid %}
+    {% assign title = include.title %}
+    {% assign icon = include.icon %}
     {% assign target = "self" %}
   {% else %}
     {% assign uri = nil %}
@@ -165,7 +171,7 @@ Display Link
 
 {% if uri %}
 <li>
-  <a href="{{ uri }}" title="{{ title }}" class="{{ include.name }}"
+  <a href="{{ uri }}" title="{{ title }}" class="{{ class }}"
     target="_{{ target }}" rel="noopener noreferrer">
     <i class="{{ icon }}"></i><span>{{ title }}</span>
   </a>

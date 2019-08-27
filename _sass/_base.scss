@@ -1,7 +1,7 @@
 html {
   height: 100%;
   overflow: hidden;
-  background-color: $blue-gray;
+  background-color: $blue-grey;
 
   &.no-scroll {
     overflow: hidden;
@@ -192,7 +192,7 @@ blockquote {
   padding-left: 1em;
   padding-right: 1em;
   font-style: italic;
-  border-left: 0.25em solid $gray;
+  border-left: 0.25em solid $grey;
 
   cite {
     font-style: italic;
