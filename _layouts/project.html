@@ -15,8 +15,7 @@ layout: base
 {% include front/header.html %}
 <div class="banderole">
   {% if pypi-pkg %}<a class="btn btn_grey" href="#quickstart">Quickstart</a>{% endif %}
-  {% if content %}<a class="btn btn_grey" href="#about">About</a>{% endif %}
-  {% if page.license %}<a class="btn btn_grey" href="#license">License</a>{% endif %}
+  <a class="btn btn_grey" href="#about">About</a>
   {% if has-posts %}<a class="btn btn_grey" href="#posts">Posts</a>{% endif %}
   <a class="btn btn_grey" href="#links">Links</a>
 </div>
@@ -44,27 +43,22 @@ layout: base
 </section>
 {% endif %}
 
-{% if content %}
 <section class="title" id="about">
   <h3>About</h3>
 </section>
 <section class="white">
   {{ content }}
-</section>
-{% endif %}
-
-{% if page.license %}
-<section class="title" id="license">
-  <h3>License</h3>
-</section>
-<section class="white">
-  <p>According to <a href="/about">our convictions</a> {{ page.title }} is
-  <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">free and open-source software</a>.
-  It is released under the <a href="{{ page.license-url }}" title="{{ page.license }}">{{ page.license }}</a>
-  and can be downloaded from <a href="https://github.com/{{ page.github }}">GitHub</a>.
+  {% if page.license %}
+  <p>
+    According to <a href="/about">our convictions</a> {{ page.title }} is
+    <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">free
+    and open-source software</a>. It is released under the
+    <a href="{{ page.license-url }}" title="{{ page.license }}">
+    {{ page.license }}</a> and can be downloaded from
+    <a href="https://github.com/{{ page.github }}">GitHub</a>.
   </p>
+  {% endif %}
 </section>
-{% endif %}
 
 {% if has-posts %}
 <section class="title" id="posts">

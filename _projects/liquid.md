@@ -1,9 +1,9 @@
 ---
 title: Liquid Code
-subtitle: Framework for smart software 
+subtitle: Framework for smart software
 slogan: Create smart data analysis applications
-featured: false
-popularity: 0
+featured: true
+popularity: 5
 image-meta:
   cloudinary: pexels/67843
   orientation: landscape
@@ -16,7 +16,7 @@ redirect_from: /liquid.html
 ---
 
 **Liquid Code** is a pioneering software framework for next generation data
-analysis applications, that interconnect collaborative data science with
+analysis applications, that interconnects collaborative data science with
 automated machine learning.
 
 Based on the **Cloud-Assisted Meta programming** (CAMP) paradigm, the framework
