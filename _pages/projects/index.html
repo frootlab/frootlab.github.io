@@ -25,20 +25,29 @@ links:
     title: flib
 ---
 
-<section class="title">
+<section class="title" id="Main">
   <h3><b>Main</b></h3>
   <p>Projects that shape our <a href="/about#Mission">Mission</a></p>
 </section>
 
 <section class="white">
-  {% include projects/preview.html display="cards" featured=true bookmarks=true %}
+  {% include projects/preview.html display="cards" category="main" bookmarks=true %}
+</section>
+
+<section class="title" id="Subprojects">
+  <h3><b>Subprojects</b></h3>
+  <p>Components of our main projects</p>
+</section>
+
+<section class="white">
+  {% include projects/preview.html display="cards" category="component" bookmarks=true %}
 </section>
 
 <section class="title">
   <h3><b>Auxiliary</b></h3>
-  <p>Projects that support our <a href="/about#Mission">Mission</a></p>
+  <p>Projects that support our main projects</p>
 </section>
 
 <section class="white">
-  {% include projects/preview.html display="cards" featured=false bookmarks=true %}
+  {% include projects/preview.html display="cards" category="auxiliary" bookmarks=true %}
 </section>

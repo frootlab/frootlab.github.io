@@ -3,6 +3,7 @@ title: Pandora
 subtitle: High Performance Data Proxy
 slogan: Equip your existing data applications with a universal data plug
 featured: true
+category: "component"
 popularity: 3
 image-meta:
   cloudinary: pexels/366691

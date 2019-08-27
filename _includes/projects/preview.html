@@ -2,12 +2,16 @@
 
 {% comment %}
 ================================================================================
-Filter Projects (by featured and limit)
+Filter Projects (by featured, category and limit)
 ================================================================================
 {% endcomment %}
 
 {% if include.featured or include.featured == false %}
   {% assign items = items | where: "featured", include.featured %}
+{% endif %}
+
+{% if include.category %}
+  {% assign items = items | where: "category", include.category %}
 {% endif %}
 
 {% if include.limit %}

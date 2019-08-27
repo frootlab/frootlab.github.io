@@ -1,16 +1,17 @@
 ---
-title: Motley
-subtitle: Smart Algorithm Repository
-slogan: Discover a new approach for collaborative data science
+title: "Motley"
+subtitle: "Smart Algorithm Repository"
+slogan: "Discover a new approach for collaborative data science"
 featured: true
+category: "component"
 popularity: 1
 image-meta:
-  cloudinary: pexels/990824
-  orientation: landscape
+  cloudinary: "pexels/990824"
+  orientation: "landscape"
 illustration:
-  cloudinary: undraw/undraw_data_points_ocean
-backdrop: white
-form-logo: /images/svg/motley.svg
+  cloudinary: "undraw/undraw_data_points_ocean"
+backdrop: "white"
+form-logo: "/images/svg/motley.svg"
 permalink: /projects/motley.html
 redirect_from: /motley.html
 readthedocs: motley

@@ -3,6 +3,7 @@ title: flib
 subtitle: Frootlab Shared Library
 slogan: You are welcome to use our multi-purpose shared library
 featured: false
+category: "auxiliary"
 popularity: 0
 image-meta:
   cloudinary: unsplash/602632
@@ -27,10 +28,10 @@ The **frootlab shared library** (flib) is a multi-purpose
 [Python](https://www.python.org/) library, which primarily aims to support
 [Frootlab](https://www.frootlab.org) projects by serving as a common base
 library. It was originally created in 2019 for the [Liquid
-ML](https://github.com/orgs/frootlab/projects) framework to separate the primary
-components [Pandora](/pandora), [Nemoa](/nemoa) and [Motley](/motley). The
-majority of the provided modules, however, are kept generic to facilitate their
-application beyond Frootlab projects as well.
+Code](https://github.com/orgs/frootlab/projects) framework to separate the
+project into three components: [Pandora](/pandora), [Nemoa](/nemoa) and
+[Motley](/motley). The majority of the provided modules, however, are kept
+generic to facilitate their application beyond Frootlab projects as well.
 
 **Generic Modules**
 

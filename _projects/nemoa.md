@@ -3,6 +3,7 @@ title: Nemoa
 subtitle: Automated Machine Learning
 slogan: Use rapid prototyping for your enterprise analytical applications
 featured: true
+category: "component"
 popularity: 2
 image-meta:
   cloudinary: pexels/101764

@@ -1,8 +1,9 @@
 ---
-title: Liquid Code
-subtitle: Framework for smart software
-slogan: Create smart data analysis applications
+title: "Liquid Code"
+subtitle: "Framework for smart software"
+slogan: "Create smart data analysis applications"
 featured: true
+category: "main"
 popularity: 5
 image-meta:
   cloudinary: pexels/67843
