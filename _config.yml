@@ -9,7 +9,7 @@ locale: en_US
 language: en
 copyright: © 2019 Frootlab
 keywords:
-  Frootlab, Smart Analytics, Machine Learning, AutoML, AI, Liquid ML, Nemoa,
+  Frootlab, Smart Analytics, Machine Learning, AutoML, AI, Liquid Code, Nemoa,
   Pandora, Motley, flib, Cloud-Assisted Meta Programming, CAMP
 future: true
 
@@ -85,6 +85,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      sections: false
       license: "CC BY 4.0"
       license-url: "https://creativecommons.org/licenses/by/4.0/"
       navid: "blog"
@@ -94,18 +95,12 @@ defaults:
       type: "news"
     values:
       layout: "micropost"
-      license: "CC BY 4.0"
-      license-url: "https://creativecommons.org/licenses/by/4.0/"
+      sections: false
+      license: "CC0 1.0"
+      license-url: "https://creativecommons.org/publicdomain/zero/1.0/"
       navid: "microblog"
       image-meta:
         cloudinary: pexels/323645
-  -
-    scope:
-      path: ""
-      type: "authors"
-    values:
-      layout: "author"
-      sections: true
   -
     scope:
       path: ""
@@ -113,7 +108,14 @@ defaults:
     values:
       layout: "project"
       sections: true
-      layout: project
-      navid: projects
-      license: GPL-3.0
-      license-url: https://www.gnu.org/licenses/gpl.html
+      layout: "project"
+      navid: "projects"
+      license: "GPL-3.0"
+      license-url: "https://www.gnu.org/licenses/gpl-3.0"
+  -
+    scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+      sections: true

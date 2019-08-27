@@ -2,34 +2,45 @@
 layout: base
 ---
 
+{% if page.social %}
+  {% assign pypi-pkg = page.social | where:"name", "pypi" | last | map:"user" %}
+{% endif %}
+
+{% capture posts-html %}
+  {% include blog/preview.html tag=page.title layout="list" %}
+{% endcapture %}
+{% assign posts-html = posts-html | strip %}
+{% assign has-posts = posts-html != "" %}
+
 {% include front/header.html %}
 <div class="banderole">
-  <a class="btn btn_grey" href="#quickstart">Quickstart</a>
-  <a class="btn btn_grey" href="#about">About</a>
-  <a class="btn btn_grey" href="#license">License</a>
-  <a class="btn btn_grey" href="#posts">Posts</a>
+  {% if pypi-pkg %}<a class="btn btn_grey" href="#quickstart">Quickstart</a>{% endif %}
+  {% if content %}<a class="btn btn_grey" href="#about">About</a>{% endif %}
+  {% if page.license %}<a class="btn btn_grey" href="#license">License</a>{% endif %}
+  {% if has-posts %}<a class="btn btn_grey" href="#posts">Posts</a>{% endif %}
   <a class="btn btn_grey" href="#links">Links</a>
 </div>
 {% include front/trailer.html %}
 
 {% include form/header.html %}
 <section class="ocean">
-  <h3><b>{{ page.title }}</b> <small>v{{ page.version }}</small></h3>
+  <h3>
+    <b>{{ page.title }}</b>
+    {% if page.version %}<small>v{{ page.version }}</small>{% endif %}
+  </h3>
 </section>
 
-{% if page.social %}
-{% assign pkg = page.social | where:"name","pypi" | last | map:"user" %}
+{% if pypi-pkg %}
 <section class="title" id="quickstart">
   <h3>Quickstart</h3>
 </section>
-
 <section class="white">
-<p><b>Installation using PIP</b></p>
-<div class="language-shell highlighter-rouge">
-  <div class="highlight">
-    <pre class="highlight"><code><span class="nv">$ </span>pip install {{ pkg }}</code></pre>
+  <p><b>Installation using PIP</b></p>
+  <div class="language-shell highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code><span class="nv">$ </span>pip install {{ pypi-pkg }}</code></pre>
+    </div>
   </div>
-</div>
 </section>
 {% endif %}
 
@@ -37,30 +48,31 @@ layout: base
 <section class="title" id="about">
   <h3>About</h3>
 </section>
-<section class="white">{{ content }}</section>
+<section class="white">
+  {{ content }}
+</section>
 {% endif %}
 
 {% if page.license %}
-<section class="title" id="license"><h3>License</h3></section>
+<section class="title" id="license">
+  <h3>License</h3>
+</section>
 <section class="white">
-<p>According to <a href="/about">our convictions</a> {{ page.title }} is
-<a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">free and open-source software</a>.
-It is released under the <a href="{{ page.licence-url }}">{{ page.license }}</a>
-and can be downloaded from <a href="https://github.com/{{ page.github }}">GitHub</a>.
-</p>
+  <p>According to <a href="/about">our convictions</a> {{ page.title }} is
+  <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">free and open-source software</a>.
+  It is released under the <a href="{{ page.license-url }}" title="{{ page.license }}">{{ page.license }}</a>
+  and can be downloaded from <a href="https://github.com/{{ page.github }}">GitHub</a>.
+  </p>
 </section>
 {% endif %}
 
-{% capture posts-html %}
-{% assign tag = page.title | capitalize %}
-{% include blog/preview.html tag=tag layout="list" %}
-{% endcapture %}
-{% assign posts-html = posts-html | strip %}
-{% if posts-html != "" %}
+{% if has-posts %}
 <section class="title" id="posts">
   <h3>Posts</h3>
 </section>
-<section class="white">{{ posts-html }}</section>
+<section class="white">
+  {{ posts-html }}
+</section>
 {% endif %}
 
 {% assign online = 'http://docs.frootlab.org/projects/' | append: page.readthedocs %}
@@ -88,12 +100,6 @@ and can be downloaded from <a href="https://github.com/{{ page.github }}">GitHub
         {% for item in page.social %}
           {% include links/create.html name=item.name uid=item.user type=item.type %}
         {% endfor %}
-      </ul>
-    </div>
-    <div style="flex: 20%; text-align: center;">
-      <div class="label" style="padding-bottom: 0.5rem; margin: 0 0.5rem; color: #999; ">License</div>
-      <ul class="squared seamless icons">
-        {% include links/create.html name='link' uid=page.license-url title=page.license icon="fas fa-balance-scale" %}
       </ul>
     </div>
   </div>

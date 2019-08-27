@@ -27,8 +27,8 @@ social:
 **Nemoa** is a machine learning- and data analysis framework, that utilizes
 cloud assisted metaprogramming for automated code optimization. Nemoa is based
 on the [Python](https://www.python.org/) programming language and actively
-developed as part of the [Liquid ML](https://github.com/orgs/frootlab/projects)
-framework.
+developed as part of the [Liquid
+Code](https://github.com/orgs/frootlab/projects) framework.
 
 The key goal of nemoa is to provide a long-term data analysis framework, which
 seemingly integrates into existing enterprise data environments and thereby

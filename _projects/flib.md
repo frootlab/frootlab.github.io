@@ -8,7 +8,7 @@ image-meta:
   cloudinary: unsplash/602632
   orientation: landscape
 illustration:
-  cloudinary: undraw/undraw_code_typing_7jnv
+  cloudinary: undraw/upload
 backdrop: white
 permalink: /projects/flib.html
 redirect_from: /flib.html

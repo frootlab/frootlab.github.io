@@ -28,7 +28,7 @@ social:
 implements high-performance and security requirements for large-scale enterprise
 analytical applications. Pandora is based on the
 [Python](https://www.python.org/) programming language and actively developed as
-part of the [Liquid ML](https://github.com/orgs/frootlab/projects) framework.
+part of the [Liquid Code](https://github.com/orgs/frootlab/projects) framework.
 
 The primary goal of Pandora is to separate data integration and data analysis
 into independent tasks, by providing a unified (universal) data interface for
