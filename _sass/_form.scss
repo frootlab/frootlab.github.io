@@ -4,7 +4,7 @@
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-weight: 300;
   text-align: left;
-  background-color: #FAFAFA;
+  background-color: lighten($blue-grey, 5%);
 
   h1,
   h2,
@@ -34,6 +34,14 @@
     }
   }
 
+  section.ocean {
+    background: darken($blue-grey, 75%);
+
+    * {
+      color: white;
+    }
+  }
+
   section.title {
     background:
       linear-gradient(-45deg, darken($blue-grey, 5%), $blue-grey 30%);
@@ -48,23 +56,7 @@
   }
 
   section.grey {
-    background: #FAFAFA;
-  }
-
-  section.ocean {
-    background: $ocean;
-
-    * {
-      color: white;
-    }
-  }
-
-  section.stone {
-    background: #333C44;
-
-    * {
-      color: white;
-    }
+    background: lighten($blue-grey, 5%);
   }
 
   h1,
@@ -112,7 +104,7 @@
   }
 
   .panel {
-    background: #fafafa;
+    background: lighten($blue-grey, 5%);
     padding: 2rem;
     margin: 0;
     position: relative;

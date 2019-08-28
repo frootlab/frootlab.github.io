@@ -108,6 +108,7 @@ defaults:
     values:
       layout: "project"
       sections: true
+      backdrop: "white"
       layout: "project"
       navid: "projects"
       license: "GPL-3.0"
