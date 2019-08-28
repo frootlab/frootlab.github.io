@@ -120,3 +120,4 @@ defaults:
     values:
       layout: "author"
       sections: true
+      backdrop: "white"
