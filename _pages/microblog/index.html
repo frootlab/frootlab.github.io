@@ -1,7 +1,8 @@
 ---
 layout: form
 navid: microblog
-title: Microblog
+surtitle: Micro
+title: Blog
 title-layout: inset
 short-title: Microblog
 backdrop: white
@@ -20,9 +21,6 @@ links:
 
 <section class="title" id="news">
   <h3>
-    <ul class="tiny squared icons" style="float: right; margin-top: -0.3em;">
-      {% include links/create.html name="feed" uid="/feed/news.xml" %}
-    </ul>
     <b>News</b>
   </h3>
   <p>Updates and announcements</p>
@@ -34,6 +32,6 @@ links:
 
 <section>
   <ul class="small centered squared seamless icons">
-    {% include links/create.html name="more" uid="/microblog/archive" title="News Archive" %}
+    {% include links/create.html name="more" uid="/microblog/news" title="more posts" %}
   </ul>
 </section>

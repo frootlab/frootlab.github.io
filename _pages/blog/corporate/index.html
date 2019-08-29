@@ -1,0 +1,25 @@
+---
+layout: blog
+navid: blog
+title: Blog
+title-layout: inset
+short-title: Corporate
+image-meta:
+  cloudinary: pixabay/3357642-edit
+  orientation: landscape
+sections: true
+description: "An archive of all corporate blog posts sorted by date"
+permalink: /blog/corporate/index.html
+---
+
+<section class="ocean">
+  <h3>
+    <ul class="tiny squared icons" style="float: right; margin-top: -0.3em;">
+      {% include links/create.html name="feed" uid="/feed/corporate.xml" %}
+    </ul>
+    <b>Corporate Blog</b>
+  </h3>
+  <p>Articles about us and our projects</p>
+</section>
+
+{% include blog/archive.html type="blog" category="corporate" layout="cards" %}

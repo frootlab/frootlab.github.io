@@ -33,6 +33,6 @@ Display Post Preview using given Layout
   <h3>{{ year }}</h3>
 </section>
 <section>
-  {% include blog/preview.html year=year type=include.type layout=include.layout %}
+  {% include blog/preview.html year=year type=include.type category=include.category layout=include.layout %}
 </section>
 {% endfor %}

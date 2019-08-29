@@ -19,6 +19,7 @@
 {% else %}
   {% assign title-class = "boxed" %}
 {% endif %}
+
 {% if page.title-animate %}
   {% assign title-class = title-class | append: ' showup' %}
 {% endif %}
@@ -28,6 +29,9 @@
     <div class="title-page">
       {% if logo %}
       <div class="logo"><img src="{{ logo }}" alt="{{ logo-alt }}"></div>
+      {% endif %}
+      {% if page.surtitle %}
+      <h2><span class="subtitle {{ title-class }}">{{ page.surtitle }}</span></h2>
       {% endif %}
       <h1><span class="title {{ title-class }}">{{ title }}</span></h1>
       {% if page.subtitle %}
