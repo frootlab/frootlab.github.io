@@ -10,7 +10,7 @@ image-meta:
   orientation: "landscape"
 illustration:
   cloudinary: "undraw/undraw_data_points_ocean"
-backdrop: "white"
+backdrop: white
 form-logo: "/images/svg/motley.svg"
 permalink: /projects/motley.html
 redirect_from: /motley.html

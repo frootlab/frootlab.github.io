@@ -29,8 +29,10 @@ layout: base
   </h3>
 </section>
 
+<hr>
+
 {% if pypi-pkg %}
-<section class="title" id="quickstart">
+<section class="subtitle" id="quickstart">
   <h3>Quickstart</h3>
 </section>
 <section>
@@ -43,7 +45,7 @@ layout: base
 </section>
 {% endif %}
 
-<section class="title" id="about">
+<section class="subtitle" id="about">
   <h3>About</h3>
 </section>
 <section>
@@ -61,12 +63,10 @@ layout: base
 </section>
 
 {% if has-posts %}
-<section class="title" id="posts">
+<section class="subtitle" id="posts">
   <h3>Posts</h3>
 </section>
-<section>
-  {{ posts-html }}
-</section>
+{{ posts-html }}
 {% endif %}
 
 {% assign online = 'http://docs.frootlab.org/projects/' | append: page.readthedocs %}
@@ -74,7 +74,7 @@ layout: base
 {% assign pdf = root | append: '/downloads/pdf/latest/' %}
 {% assign epub = root | append: '/downloads/epub/latest/' %}
 {% assign zip = root | append: '/downloads/zip/latest/' %}
-<section class="title" id="links">
+<section class="subtitle" id="links">
   <h3>Links</h3>
 </section>
 <section>

@@ -23,14 +23,14 @@ links:
   <h3>
     <b>News</b>
   </h3>
-  <p>
-    Updates and announcements
-  </p>
 </section>
 
-<section>
-  {% include blog/preview.html limit=10 type="microblog" layout="magazine" %}
+<hr>
+<section class="subtitle">
+  <p>Updates and announcements</p>
 </section>
+
+{% include blog/preview.html limit=10 type="microblog" layout="magazine" %}
 
 <section>
   <ul class="small centered squared grey icons">

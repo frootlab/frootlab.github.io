@@ -17,30 +17,29 @@ redirect_from: /blog.html
   <h3>
     <b>Corporate Blog</b>
   </h3>
+</section>
+<hr>
+<section class="subtitle">
   <p>Articles about us and our projects</p>
 </section>
-
-<section class="grey">
-  {% include blog/preview.html layout="cards" limit=3 type="blog" category="corporate" %}
-</section>
-
+<hr>
+{% include blog/preview.html layout="cards" limit=3 type="blog" category="corporate" %}
 <section class="grey">
   <ul class="small centered squared grey icons">
     {% include links/create.html name="more" uid="/blog/corporate" title="more posts" %}
   </ul>
 </section>
-
 <section class="title">
   <h3>
     <b>Science Blog</b>
   </h3>
+</section>
+<hr>
+<section class="subtitle">
   <p>Articles about pure and applied data science</p>
 </section>
-
-<section class="grey">
-  {% include blog/preview.html layout="cards" limit=3 type="blog" category="science" %}
-</section>
-
+<hr>
+{% include blog/preview.html layout="cards" limit=3 type="blog" category="science" %}
 <section class="grey">
   <ul class="small centered squared grey icons">
     {% include links/create.html name="more" uid="/blog/science" title="more posts" %}

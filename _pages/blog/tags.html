@@ -38,8 +38,6 @@ permalink: /blog/tags.html
   <section class="title">
     <h3>{{ tag }}</h3>
   </section>
-  <section class="grey">
-    {% include blog/preview.html layout="cards" tag=tag type="blog" %}
-  </section>
+  {% include blog/preview.html layout="cards" tag=tag type="blog" %}
 </div>
 {% endfor %}

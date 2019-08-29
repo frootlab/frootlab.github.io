@@ -53,6 +53,7 @@ Display Posts by using List Layout
   {% when 'list' %}
     {% assign count = posts | size %}
     {% if count > 0 %}
+      <section class="white">
       <ul>
       {% for post in posts limit: bound %}
         <li>
@@ -61,6 +62,7 @@ Display Posts by using List Layout
         </li>
       {% endfor %}
       </ul>
+      </section>
     {% endif %}
 
 {% comment %}
@@ -72,6 +74,7 @@ Display Posts by using Magazin Layout
   {% when 'magazine' %}
     {% assign count = posts | size %}
     {% if count > 0 %}
+      <section class="white">
       <ul>
       {% for post in posts limit: bound %}
         <li>
@@ -109,6 +112,7 @@ Display Posts by using Magazin Layout
         </li>
       {% endfor %}
       </ul>
+      </section>
     {% endif %}
 
 {% comment %}
@@ -118,6 +122,7 @@ Display Posts by using Card Layout
 {% endcomment %}
 
   {% when 'cards' %}
+    <section class="grey">
     <div class="grid" style="padding: 1rem 0;">
 
     {% for post in posts limit: bound %}
@@ -172,6 +177,7 @@ Display Posts by using Card Layout
       <div class="cell"></div>
 
     </div>
+    </section>
   {% else %}
     <b>The given layout '{{ include.layout }}' is not valid!</b>
 

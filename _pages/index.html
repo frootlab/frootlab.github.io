@@ -23,6 +23,11 @@ links:
 
 <section class="title" id="projects">
   <h3><b>Projects</b></h3>
+</section>
+
+<hr>
+
+<section class="subtitle">
   <p>Next generation AutoML and Data-Warehousing</p>
 </section>
 
@@ -38,14 +43,19 @@ links:
 
 <section class="title" id="blog">
   <h3><b>Blog</b></h3>
+</section>
+
+<hr>
+
+<section class="subtitle">
   <p>Pure and applied Data Science</p>
 </section>
 
-<section>
-  {% include blog/preview.html layout="cards" limit=3 type="blog" %}
-</section>
+<hr>
 
-<section>
+{% include blog/preview.html layout="cards" limit=3 type="blog" %}
+
+<section class="grey">
   <ul class="small centered squared grey icons">
     {% include links/create.html name="more" uid="/blog" title="Blog" %}
   </ul>
