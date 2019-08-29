@@ -14,6 +14,8 @@ tags: [AutoML, CAMP]
 tension is palpable - an important stage of development still is missing:
 Learning applications.**
 
+<!--more-->
+
 [![Data Analysis Tools](/images/posts/data-analysis-tools.png)](/images/posts/data-analysis-tools.png)
 
 Whereas the scientific aspects of the AI Revolution are clearly entangled with

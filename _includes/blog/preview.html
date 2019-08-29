@@ -93,9 +93,18 @@ Display Posts by using Magazin Layout
               </time>
             </a>
           </small>
+          {% case include.type %}
+          {% when 'microblog' %}
           <p>
-          {{ post.content | strip_html }}
+            {{ post.content }}
           </p>
+          {% else %}
+          <p>
+            <b>{{ post.title }}</b>:
+            {{ post.excerpt | strip_html }}
+            ...<a href="{{ post.url }}" title="Permalink to Micropost">[more]</a>
+          </p>
+          {% endcase %}
           <br>
         </li>
       {% endfor %}

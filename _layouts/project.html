@@ -7,7 +7,7 @@ layout: base
 {% endif %}
 
 {% capture posts-html %}
-  {% include blog/preview.html tag=page.title layout="list" %}
+  {% include blog/preview.html tag=page.title layout="magazine" %}
 {% endcapture %}
 {% assign posts-html = posts-html | strip %}
 {% assign has-posts = posts-html != "" %}

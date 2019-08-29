@@ -16,6 +16,8 @@ tags: [Motley, Nemoa, Pandora, Liquid Code]
 obstacles in particular appear as outstanding hurdles, when it comes up to
 realize projects - and even more, when it comes up to venture collaborations.**
 
+<!--more-->
+
 Some years ago - in the early 2010s - when Google's
 [TensorFlow](https://www.tensorflow.org/) still was only an idea and Geoffrey
 Hinton's daredevil [Science

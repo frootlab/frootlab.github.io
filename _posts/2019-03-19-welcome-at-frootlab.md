@@ -17,6 +17,8 @@ networking technologies. Our vision is to realize the full potential of
 artificial intelligence for scientific and industrial progress and always based
 on ethical principles.**
 
+<!--more-->
+
 For us communication and cooperation are the key factors and driving force
 beyond scientific and industrial progress. In order to realize our vision, we
 therefore used our personal experiences to identify today's foremost challenges

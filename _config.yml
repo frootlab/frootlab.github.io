@@ -17,6 +17,8 @@ future: true
 background:
   default: images/default.webp
 
+excerpt_separator: "<!--more-->"
+
 # Collections
 collections:
   authors:
