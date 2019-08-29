@@ -169,9 +169,12 @@ figure {
 hr {
   box-sizing: content-box;
   overflow: visible;
-  height: 1px;
-  background-color: #dedede;
+  height: 0;
+  background: transparent;
   border: 0;
+  border-bottom: 1px dashed rgba(0,0,0,.2);
+  margin: 0;
+  padding: 0;
 }
 
 /* Forms

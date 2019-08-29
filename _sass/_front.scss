@@ -91,7 +91,7 @@
 /* Adjustments for print */
 @media print {
   #front .title-page {
-    color: $darker-grey;
+    color: $ocean;
     display: block;
     position: static;
     width: 100%;
@@ -105,7 +105,7 @@
     }
 
     .title {
-      color: $darker-grey;
+      color: $ocean;
       margin-bottom: 1em;
       line-height: 1.2;
       background: none !important;

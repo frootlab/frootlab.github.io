@@ -1,7 +1,7 @@
 html {
   height: 100%;
   overflow: hidden;
-  background-color: $blue-grey;
+  background-color: $grey;
 
   &.no-scroll {
     overflow: hidden;
@@ -12,7 +12,7 @@ body {
   height: 100%;
   line-height: 1.2;
   font-family: $base-font;
-  color: $darker-grey;
+  color: $ocean;
   background: $white;
 }
 

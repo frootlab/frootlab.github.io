@@ -68,7 +68,7 @@ surfing behavior. This data does not allow us to identify you.
 {: .enum}
 
 The technical data collected on this website is processed for ensuring an
-unproblematic website connection, for ensuring a seamless use of our website,
+unproblematic website connection, for ensuring a grey use of our website,
 for the analysis of our system security and stability as well as for additional
 technical administrative purposes. This data is not connected with further data,
 such that we will not be able to draw conclusions about your person. The

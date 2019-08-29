@@ -81,7 +81,7 @@ layout: base
   <div style="display: flex;">
     <div style="flex: 48%; text-align: center;">
       <div class="label" style="padding-bottom: 0.5rem; margin: 0 0.5rem; color: #999; ">Documentation</div>
-      <ul class="squared seamless icons">
+      <ul class="squared grey icons">
         {% include links/create.html name='link' uid=online title="Online Documentation" icon="fas fa-link" %}
         {% include links/create.html name='link' uid=pdf title="PDF printable documentation" icon="fas fa-print" %}
         {% include links/create.html name='link' uid=epub title="PDF ebook documentation" icon="fas fa-tablet" %}
@@ -90,7 +90,7 @@ layout: base
     </div>
     <div style="flex: 32%; text-align: center;">
       <div class="label" style="padding-bottom: 0.5rem; margin: 0 0.5rem; color: #999;">Source Code</div>
-      <ul class="squared seamless icons">
+      <ul class="squared grey icons">
         {% for item in page.social %}
           {% include links/create.html name=item.name uid=item.user type=item.type %}
         {% endfor %}

@@ -16,9 +16,9 @@
   border-radius: 2px;
   user-select: none;
   background: linear-gradient(
-    $darker-grey 0%,
-    darken($darker-grey, 3%) 95%,
-    lighten($darker-grey, 5%) 100%);
+    $ocean 0%,
+    darken($ocean, 3%) 95%,
+    lighten($ocean, 5%) 100%);
   transition:
     all 0.2s ease,
     transform 0ms ease;
@@ -75,15 +75,15 @@
 
   &_grey {
     background: linear-gradient(
-      $darker-grey 0%,
-      darken($darker-grey, 3%) 95%,
-      lighten($darker-grey, 5%) 100%);
+      $ocean 0%,
+      darken($ocean, 3%) 95%,
+      lighten($ocean, 5%) 100%);
 
     &:hover {
       background: linear-gradient(
-        lighten($darker-grey, 10%) 0%,
-        lighten($darker-grey, 7%) 95%,
-        lighten($darker-grey, 15%) 100%);
+        lighten($ocean, 10%) 0%,
+        lighten($ocean, 7%) 95%,
+        lighten($ocean, 15%) 100%);
     }
   }
 }

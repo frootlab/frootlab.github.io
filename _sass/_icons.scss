@@ -42,9 +42,9 @@ ul.icons {
     }
   }
 
-  &.seamless > li a {
-    background: $blue-grey;
-    color: $darker-grey;
+  &.grey > li a {
+    background: $grey;
+    color: $ocean;
   }
 
   &.small > li a {
@@ -85,7 +85,7 @@ ul.icons {
 }
 
 @mixin icon($name, $bgcolor, $textcolor) {
-  ul.icons:not(.seamless) > li a.#{$name} {
+  ul.icons:not(.grey) > li a.#{$name} {
     background: #{$bgcolor};
     color: #{$textcolor};
   }

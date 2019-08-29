@@ -39,7 +39,7 @@
 
 /* Active Navigation Entry */
 #sidenav a.active {
-  background-color: $darker-grey;
+  background-color: $ocean;
   color: #e0e0e0;
   cursor: default;
   pointer-events: none;
@@ -124,18 +124,18 @@ sidenav (less padding and a smaller font size) */
   text-transform: uppercase;
   border-radius: 0 100px 100px 0;
   box-shadow: 0 0 20px $black-t40;
-  // background-color: $darker-grey;
+  // background-color: $ocean;
   background: linear-gradient(
-    $darker-grey 0%,
-    darken($darker-grey, 3%) 95%,
-    lighten($darker-grey, 5%) 100%);
+    $ocean 0%,
+    darken($ocean, 3%) 95%,
+    lighten($ocean, 5%) 100%);
 
   &:hover {
-    background-color: lighten($darker-grey, 10%);
+    background-color: lighten($ocean, 10%);
     background: linear-gradient(
-      lighten($darker-grey, 10%) 0%,
-      lighten($darker-grey, 7%) 95%,
-      lighten($darker-grey, 15%) 100%);
+      lighten($ocean, 10%) 0%,
+      lighten($ocean, 7%) 95%,
+      lighten($ocean, 15%) 100%);
   }
 }
 
