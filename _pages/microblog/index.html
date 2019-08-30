@@ -20,20 +20,17 @@ links:
 ---
 
 <section class="title" id="news">
-  <h3>
-    <b>News</b>
-  </h3>
+  <h3><b>News</b></h3>
 </section>
 
 <hr>
 <section class="subtitle">
-  <p>Updates and announcements</p>
+  <div class="subtext">
+    <ul class="tiny squared grey icons" style="float: right; margin-top: -0.3em;">
+      {% include links/create.html name="more" uid="/microblog/news" title="more posts" %}
+    </ul>
+    Updates and announcements
+  </div>
 </section>
 
 {% include blog/preview.html limit=10 type="microblog" layout="magazine" %}
-
-<section>
-  <ul class="small centered squared grey icons">
-    {% include links/create.html name="more" uid="/microblog/news" title="more posts" %}
-  </ul>
-</section>

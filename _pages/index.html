@@ -28,17 +28,16 @@ links:
 <hr>
 
 <section class="subtitle">
-  <p>Next generation AutoML and Data-Warehousing</p>
+  <div class="subtext">
+    <ul class="tiny squared grey icons" style="float: right; margin-top: -0.3em;">
+      {% include links/create.html name="more" uid="/projects" title="more projects" %}
+    </ul>
+    Next generation AutoML and Data-Warehousing
+  </div>
 </section>
 
 <section class="white">
   {% include projects/preview.html display="cards" featured=true limit=3 %}
-</section>
-
-<section class="white">
-  <ul class="small centered squared grey icons">
-    {% include links/create.html name="more" uid="/projects" title="Projects" %}
-  </ul>
 </section>
 
 <section class="title" id="blog">
@@ -48,15 +47,13 @@ links:
 <hr>
 
 <section class="subtitle">
-  <p>Pure and applied Data Science</p>
+  <div class="subtext">
+    <ul class="tiny squared grey icons" style="float: right; margin-top: -0.3em;">
+      {% include links/create.html name="more" uid="/blog" title="more posts" %}
+    </ul>
+    Pure and applied Data Science
+  </div>
 </section>
 
 <hr>
-
 {% include blog/preview.html layout="cards" limit=3 type="blog" %}
-
-<section class="grey">
-  <ul class="small centered squared grey icons">
-    {% include links/create.html name="more" uid="/blog" title="Blog" %}
-  </ul>
-</section>

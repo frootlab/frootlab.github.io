@@ -14,34 +14,35 @@ redirect_from: /blog.html
 ---
 
 <section class="title">
-  <h3>
-    <b>Corporate Blog</b>
-  </h3>
+  <h3><b>Corporate Blog</b></h3>
 </section>
+
 <hr>
 <section class="subtitle">
-  <p>Articles about us and our projects</p>
+  <div class="subtext">
+    <ul class="tiny squared grey icons" style="float: right; margin-top: -0.3em;">
+      {% include links/create.html name="more" uid="/blog/corporate" title="more posts" %}
+    </ul>
+    Articles about us and our projects
+  </div>
 </section>
+
 <hr>
 {% include blog/preview.html layout="cards" limit=3 type="blog" category="corporate" %}
-<section class="grey">
-  <ul class="small centered squared grey icons">
-    {% include links/create.html name="more" uid="/blog/corporate" title="more posts" %}
-  </ul>
-</section>
+
 <section class="title">
-  <h3>
-    <b>Science Blog</b>
-  </h3>
+  <h3><b>Science Blog</b></h3>
 </section>
+
 <hr>
 <section class="subtitle">
-  <p>Articles about pure and applied data science</p>
+  <div class="subtext">
+    <ul class="tiny squared grey icons" style="float: right; margin-top: -0.3em;">
+      {% include links/create.html name="more" uid="/blog/science" title="more posts" %}
+    </ul>
+    Articles about pure and applied data science
+  </div>
 </section>
+
 <hr>
 {% include blog/preview.html layout="cards" limit=3 type="blog" category="science" %}
-<section class="grey">
-  <ul class="small centered squared grey icons">
-    {% include links/create.html name="more" uid="/blog/science" title="more posts" %}
-  </ul>
-</section>
