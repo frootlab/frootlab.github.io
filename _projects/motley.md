@@ -31,6 +31,8 @@ catalog to allow the usage of abstract **currently best fitting** (CBF)
 algorithms, as required by the **Cloud-Assisted Meta Programming** (CAMP)
 paradigm.
 
+<img src="/images/svg/motley-ill.svg" style="max-width: 350px;" alt="Smart Algorithm Repository">
+
 Thereby Motley is required to host and deliver algorithms as well as to
 cyclically evaluate and index them with respect to their corresponding metrics,
 using [Nemoa](https://github.com/frootlab/nemoa). An example for such a metric

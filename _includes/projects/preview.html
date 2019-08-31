@@ -59,6 +59,8 @@ List / display Posts
 
 {% if item.illustration.cloudinary %}
   {% assign preview = "https://res.cloudinary.com/frootlab/image/upload/" | append: item.illustration.cloudinary | append: ".svg" %}
+{% elsif item.illustration.uri %}
+  {% assign preview = item.illustration.uri %}
 {% endif %}
 
 {% if include.bookmarks %}

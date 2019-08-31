@@ -9,7 +9,7 @@ image-meta:
   cloudinary: pexels/67843
   orientation: landscape
 illustration:
-  cloudinary: undraw/undraw_code_typing_7jnv
+  uri: /images/svg/liquid-ill.svg
 backdrop: white
 form-logo: /images/svg/pandora.svg
 permalink: /projects/liquid.html
@@ -19,6 +19,8 @@ redirect_from: /liquid.html
 **Liquid Code** is a pioneering software framework for next generation data
 analysis applications, that interconnects collaborative data science with
 automated machine learning.
+
+<img src="/images/svg/liquid-ill.svg" style="max-width: 350px;" alt="Automated Machine Learning">
 
 Based on the **Cloud-Assisted Meta programming** (CAMP) paradigm, the framework
 allows the usage of **Currently Best Fitting** (CBF) algorithms. Before code

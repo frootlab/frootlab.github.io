@@ -9,7 +9,7 @@ image-meta:
   cloudinary: pexels/101764
   orientation: landscape
 illustration:
-  cloudinary: undraw/undraw_professor_ocean
+  uri: /images/svg/nemoa-ill.svg
 backdrop: white
 form-logo: /images/svg/nemoa.svg
 permalink: /projects/nemoa.html
@@ -30,6 +30,8 @@ cloud assisted metaprogramming for automated code optimization. Nemoa is based
 on the [Python](https://www.python.org/) programming language and actively
 developed as part of the [Liquid
 Code](https://github.com/orgs/frootlab/projects) framework.
+
+<img src="/images/svg/nemoa-ill.svg" style="max-width: 350px;" alt="Automated Machine Learning">
 
 The key goal of nemoa is to provide a long-term data analysis framework, which
 seemingly integrates into existing enterprise data environments and thereby
