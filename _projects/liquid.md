@@ -8,8 +8,8 @@ popularity: 5
 image-meta:
   cloudinary: pexels/67843
   orientation: landscape
-illustration:
-  uri: /images/svg/liquid-ill.svg
+figure:
+  uri: /images/svg/liquid-figure.svg
 backdrop: white
 form-logo: /images/svg/pandora.svg
 permalink: /projects/liquid.html
@@ -20,7 +20,7 @@ redirect_from: /liquid.html
 analysis applications, that interconnects collaborative data science with
 automated machine learning.
 
-<img src="/images/svg/liquid-ill.svg" style="width: 90%; max-width: 350px;" alt="Automated Machine Learning">
+<img src="/images/svg/liquid-figure.svg" style="width: 90%; max-width: 350px;" alt="Automated Machine Learning">
 
 Based on the **Cloud-Assisted Meta programming** (CAMP) paradigm, the framework
 allows the usage of **Currently Best Fitting** (CBF) algorithms. Before code

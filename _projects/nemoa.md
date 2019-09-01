@@ -8,8 +8,8 @@ popularity: 2
 image-meta:
   cloudinary: pexels/101764
   orientation: landscape
-illustration:
-  uri: /images/svg/nemoa-ill.svg
+figure:
+  uri: /images/svg/nemoa-figure.svg
 backdrop: white
 form-logo: /images/svg/nemoa.svg
 permalink: /projects/nemoa.html
@@ -34,8 +34,8 @@ tasks.
 Nemoa is based on the [Python](https://www.python.org/) programming language and
 actively developed as part of the [Liquid Code](/liquid) framework.
 
-<a href="/images/svg/nemoa-ill.svg" title="High Performance Data Analysis">
-  <img src="/images/svg/nemoa-ill.svg" style="width: 90%; max-width: 350px;"
+<a href="/images/svg/nemoa-figure.svg" title="High Performance Data Analysis">
+  <img src="/images/svg/nemoa-figure.svg" style="width: 90%; max-width: 350px;"
     alt="High Performance Data Analysis">
 </a>
 

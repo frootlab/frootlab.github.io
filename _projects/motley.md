@@ -8,7 +8,7 @@ popularity: 1
 image-meta:
   cloudinary: "pexels/990824"
   orientation: "landscape"
-illustration:
+figure:
   cloudinary: "undraw/undraw_data_points_ocean"
 backdrop: white
 form-logo: "/images/svg/motley.svg"
@@ -31,8 +31,8 @@ catalog to allow the usage of abstract **currently best fitting** (CBF)
 algorithms, as required by the **Cloud-Assisted Meta Programming** (CAMP)
 paradigm.
 
-<a href="/images/svg/nemoa-ill.svg" title="Rapid Prototyping">
-  <img src="/images/svg/motley-ill.svg" style="width: 90%; max-width: 350px;"
+<a href="/images/svg/nemoa-figure.svg" title="Rapid Prototyping">
+  <img src="/images/svg/motley-figure.svg" style="width: 90%; max-width: 350px;"
     alt="Smart Algorithm Repository">
 </a>
 

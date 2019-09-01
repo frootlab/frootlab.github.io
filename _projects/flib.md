@@ -8,7 +8,7 @@ popularity: 0
 image-meta:
   cloudinary: unsplash/602632
   orientation: landscape
-illustration:
+figure:
   cloudinary: undraw/upload
 backdrop: white
 permalink: /projects/flib.html

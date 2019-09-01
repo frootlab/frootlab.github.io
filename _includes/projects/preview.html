@@ -57,10 +57,10 @@ List / display Posts
 
 {% for item in items limit: bound %}
 
-{% if item.illustration.cloudinary %}
-  {% assign preview = "https://res.cloudinary.com/frootlab/image/upload/" | append: item.illustration.cloudinary | append: ".svg" %}
-{% elsif item.illustration.uri %}
-  {% assign preview = item.illustration.uri %}
+{% if item.figure.cloudinary %}
+  {% assign preview = "https://res.cloudinary.com/frootlab/image/upload/" | append: item.figure.cloudinary | append: ".svg" %}
+{% elsif item.figure.uri %}
+  {% assign preview = item.figure.uri %}
 {% endif %}
 
 {% if include.bookmarks %}

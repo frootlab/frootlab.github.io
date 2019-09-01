@@ -8,8 +8,8 @@ popularity: 3
 image-meta:
   cloudinary: pexels/366691
   orientation: landscape
-illustration:
-  uri: /images/svg/pandora-ill.svg
+figure:
+  uri: /images/svg/pandora-figure.svg
 backdrop: white
 form-logo: /images/svg/pandora.svg
 permalink: /projects/pandora.html
@@ -31,8 +31,8 @@ applications. Pandora is based on the [Python](https://www.python.org/)
 programming language and actively developed as part of the [Liquid
 Code](/liquid) framework.
 
-<a href="/images/svg/pandora-ill.svg" title="Universal Data Proxy">
-  <img src="/images/svg/pandora-ill.svg" style="width: 90%; max-width: 350px;"
+<a href="/images/svg/pandora-figure.svg" title="Universal Data Proxy">
+  <img src="/images/svg/pandora-figure.svg" style="width: 90%; max-width: 350px;"
     alt="Universal Data Proxy">
 </a>
 

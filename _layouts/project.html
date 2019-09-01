@@ -31,20 +31,6 @@ layout: base
 
 <hr>
 
-{% if pypi-pkg %}
-<section class="subtitle" id="quickstart">
-  <h3>Quickstart</h3>
-</section>
-<section>
-  <p><b>Installation using PIP</b></p>
-  <div class="language-shell highlighter-rouge">
-    <div class="highlight">
-      <pre class="highlight"><code><span class="nv">$ </span>pip install {{ pypi-pkg }}</code></pre>
-    </div>
-  </div>
-</section>
-{% endif %}
-
 <section class="subtitle" id="about">
   <h3>About</h3>
 </section>
@@ -61,6 +47,20 @@ layout: base
   </p>
   {% endif %}
 </section>
+
+{% if pypi-pkg %}
+<section class="subtitle" id="quickstart">
+  <h3>Quickstart</h3>
+</section>
+<section>
+  <p><b>Installation using PIP</b></p>
+  <div class="language-shell highlighter-rouge">
+    <div class="highlight">
+      <pre class="highlight"><code><span class="nv">$ </span>pip install {{ pypi-pkg }}</code></pre>
+    </div>
+  </div>
+</section>
+{% endif %}
 
 {% if has-posts %}
 <section class="subtitle" id="posts">
