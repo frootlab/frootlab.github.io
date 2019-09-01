@@ -26,8 +26,7 @@ in data science and started to develop comprehensive [solutions]({% post_url
 2019-03-20-three-obstacles-in-data-science %}), based on an entirely new
 [programming paradigm](/blog/tags#CAMP).
 
-According to our fundamental convictions we release our products as [free and
-open-source
+According to our fundamental convictions we release our products as [free
 software](https://en.wikipedia.org/wiki/Free_and_open-source_software) to
 provide universal access to research and education. Since the application of our
 products in industrial environments requires stable development and compliance

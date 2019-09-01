@@ -1,6 +1,6 @@
 ---
 title: Nemoa
-subtitle: Automated Machine Learning
+subtitle: High Performance Data Analysis
 slogan: Use rapid prototyping for your enterprise analytical applications
 featured: true
 category: "component"
@@ -25,13 +25,19 @@ social:
     type: project
 ---
 
-**Nemoa** is a machine learning- and data analysis framework, that utilizes
-cloud assisted metaprogramming for automated code optimization. Nemoa is based
-on the [Python](https://www.python.org/) programming language and actively
-developed as part of the [Liquid
-Code](https://github.com/orgs/frootlab/projects) framework.
+**Nemoa** is a machine learning and data analysis framework with rapid
+prototyping and cloud assisted building and deployment. Thereby individual
+code blocks are automatically retrieved from collaborative algorithm
+repositories, that provide the currently best fitting solutions for individual
+tasks.
 
-<img src="/images/svg/nemoa-ill.svg" style="max-width: 350px;" alt="Automated Machine Learning">
+Nemoa is based on the [Python](https://www.python.org/) programming language and
+actively developed as part of the [Liquid Code](/liquid) framework.
+
+<a href="/images/svg/nemoa-ill.svg" title="High Performance Data Analysis">
+  <img src="/images/svg/nemoa-ill.svg" style="width: 90%; max-width: 350px;"
+    alt="High Performance Data Analysis">
+</a>
 
 The key goal of nemoa is to provide a long-term data analysis framework, which
 seemingly integrates into existing enterprise data environments and thereby

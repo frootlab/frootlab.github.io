@@ -1,7 +1,7 @@
 ---
 title: Pandora
 subtitle: High Performance Data Proxy
-slogan: Equip your existing data applications with a universal data plug
+slogan: Universal data proxy for high interoperability
 featured: true
 category: "component"
 popularity: 3
@@ -25,17 +25,20 @@ social:
     type: project
 ---
 
-**Pandora** is a universal database proxy and SQL-Database engine, that
-implements high-performance and security requirements for large-scale enterprise
-analytical applications. Pandora is based on the
-[Python](https://www.python.org/) programming language and actively developed as
-part of the [Liquid Code](https://github.com/orgs/frootlab/projects) framework.
+**Pandora** is a universal data proxy and SQL-Database engine, that implements
+high-performance and security requirements for large-scale enterprise analytical
+applications. Pandora is based on the [Python](https://www.python.org/)
+programming language and actively developed as part of the [Liquid
+Code](/liquid) framework.
 
-<img src="/images/svg/pandora-ill.svg" style="max-width: 400px;" alt="Universal Data Proxy">
+<a href="/images/svg/pandora-ill.svg" title="Universal Data Proxy">
+  <img src="/images/svg/pandora-ill.svg" style="width: 90%; max-width: 350px;"
+    alt="Universal Data Proxy">
+</a>
 
 The primary goal of Pandora is to separate data integration and data analysis
-into independent tasks, by providing a unified (universal) data interface for
-machine learning- and data analysis applications. To achieve this goal, Pandora
+into independent tasks, by providing a universal data interface for machine
+learning- and data analysis applications. To achieve this goal, Pandora
 implements the two fundamental layers of a data warehouse:
 
 The **integration layer** of Pandora utilizes
