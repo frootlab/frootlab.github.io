@@ -246,9 +246,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.24748737"
-     inkscape:cx="-1789.8282"
-     inkscape:cy="1220.4301"
+     inkscape:zoom="0.12374369"
+     inkscape:cx="-2779.6459"
+     inkscape:cy="2097.6547"
      inkscape:document-units="mm"
      inkscape:current-layer="g40458"
      showgrid="false"
@@ -2398,6 +2398,21 @@
          inkscape:export-filename="C:\Users\patri\Desktop\g47509-1.png"
          inkscape:export-xdpi="96"
          inkscape:export-ydpi="96" />
+      <path
+         style="fill:none;stroke:#4b6a7d;stroke-width:15.11811066;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="m -879.1226,641.2463 c 456.20746,-5.94463 455.23404,536.92 5.5155,537.6315 -78.02393,0.1236 -155.3121,0.096 -155.3121,0.096"
+         id="path11801-1-8-1"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="csc"
+         inkscape:export-filename="C:\Users\patri\Desktop\g47509-1.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <path
+         d="m -1013.562,1171.2877 c -3.5114,-17.287 -18.7876,-30.3122 -37.1249,-30.3122 h -19.2078 c -2.7311,0 -4.922,2.1909 -4.922,4.922 v 9.3938 h -29.7396 c -3.7215,0 -7.0228,2.701 -7.3829,6.3925 -0.4202,4.2318 2.9111,7.8032 7.0828,7.8032 h 30.0397 v 18.7275 h -29.7396 c -3.7215,0 -7.0228,2.7011 -7.3829,6.4226 -0.3902,4.2317 2.9111,7.8032 7.0828,7.8032 h 30.0397 v 9.4237 c 0,2.7311 2.1909,4.9221 4.922,4.9221 h 19.2078 c 18.3373,0 33.6135,-13.0253 37.1249,-30.3123 0,-15.1861 0,0 0,-15.1861 z"
+         id="path2"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cssscscsccscscssscc"
+         style="fill:#4b6a7d;fill-opacity:1;stroke-width:0.30012104" />
     </g>
   </g>
 </svg>

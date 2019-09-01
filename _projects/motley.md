@@ -9,7 +9,7 @@ image-meta:
   cloudinary: "pexels/990824"
   orientation: "landscape"
 figure:
-  cloudinary: "undraw/undraw_data_points_ocean"
+  uri: /images/svg/motley-figure.svg
 backdrop: white
 form-logo: "/images/svg/motley.svg"
 permalink: /projects/motley.html
@@ -31,7 +31,7 @@ catalog to allow the usage of abstract **currently best fitting** (CBF)
 algorithms, as required by the **Cloud-Assisted Meta Programming** (CAMP)
 paradigm.
 
-<a href="/images/svg/nemoa-figure.svg" title="Rapid Prototyping">
+<a href="/images/svg/motley-figure.svg" title="Smart Algorithm Repository">
   <img src="/images/svg/motley-figure.svg" style="width: 90%; max-width: 350px;"
     alt="Smart Algorithm Repository">
 </a>

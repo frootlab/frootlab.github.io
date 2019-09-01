@@ -1,7 +1,7 @@
 ---
 title: Nemoa
 subtitle: High Performance Data Analysis
-slogan: Use rapid prototyping for your enterprise analytical applications
+slogan: High Performance Data Analysis Processor
 featured: true
 category: "component"
 popularity: 2

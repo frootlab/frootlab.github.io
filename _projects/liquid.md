@@ -20,7 +20,11 @@ redirect_from: /liquid.html
 analysis applications, that interconnects collaborative data science with
 automated machine learning.
 
-<img src="/images/svg/liquid-figure.svg" style="width: 90%; max-width: 350px;" alt="Automated Machine Learning">
+<a href="/images/svg/liquid-figure.svg"
+  title="Automated Collaborative Data Science">
+  <img src="/images/svg/liquid-figure.svg" style="width: 90%; max-width: 350px;"
+    alt="Automated Collaborative Data Science">
+</a>
 
 Based on the **Cloud-Assisted Meta programming** (CAMP) paradigm, the framework
 allows the usage of **Currently Best Fitting** (CBF) algorithms. Before code
