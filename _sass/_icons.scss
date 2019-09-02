@@ -6,12 +6,16 @@ ul.icons {
   padding: 0;
 
   > li {
-    margin: 0;
-    padding: 0;
     display: inline-block;
+    margin: 0 0.25rem;
+    padding: 0;
 
-    &:not(:last-child) {
-      margin-right: 0.5rem;
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
     }
 
     a {
@@ -21,7 +25,6 @@ ul.icons {
       margin: 0;
       padding: 0;
       vertical-align: middle;
-      background: $grey;
       cursor: pointer;
       user-select: none;
       display: flex;
@@ -41,6 +44,10 @@ ul.icons {
         display: none;
       }
     }
+  }
+
+  &:not(.inherent) > li a {
+    background: $grey;
   }
 
   &.small > li a {
@@ -91,6 +98,8 @@ ul.icons {
 @include icon(xmpp, #439639, white);
 @include icon(pypi, #0073B7, white);
 @include icon(linkedin, #0073B1, white);
+@include icon(readthedocs, #8CA1AF, white);
+@include icon(docs, #00B500, white);
 @include icon(feed, #F7991C, white);
 @include icon(link, #134459, white);
 @include icon(more, #134459, white);

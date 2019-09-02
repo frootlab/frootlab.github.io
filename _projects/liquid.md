@@ -22,7 +22,7 @@ automated machine learning.
 
 <a href="/images/svg/liquid-figure.svg"
   title="Automated Collaborative Data Science">
-  <img src="/images/svg/liquid-figure.svg" style="width: 90%; max-width: 350px;"
+  <img src="/images/svg/liquid-figure.svg" style="width: 90%; max-width: 20rem;"
     alt="Automated Collaborative Data Science">
 </a>
 

@@ -129,10 +129,32 @@ Get link parameters
     {% assign uri = "https://news.ycombinator.com/user?id=" | append: include.uid %}
     {% assign title = "HackerNews" %}
     {% assign icon = "fab fa-hacker-news" %}
+  {% when "readthedocs" %}
+    {% assign uri = "https://readthedocs.org/projects/" | append: include.uid %}
+    {% assign title = "ReadTheDocs" %}
+    {% assign icon = "fab fa-python" %}
+    {% case include.type | downcase %}
+      {% when "pdf" %}
+        {% assign uri = uri | append: '/downloads/pdf/latest/' %}
+        {% assign icon = "fas fa-print"%}
+        {% assign title = "PDF" %}
+      {% when "epub" %}
+        {% assign uri = uri | append: '/downloads/epub/latest/' %}
+        {% assign icon = "fas fa-tablet"%}
+        {% assign title = "EPUB" %}
+      {% when "zip" %}
+        {% assign uri = uri | append: '/downloads/zip/latest/' %}
+        {% assign icon = "fas fa-file-archive"%}
+        {% assign title = "ZIP" %}
+    {% endcase %}
   {% when "feed" %}
     {% assign uri = include.uid %}
-    {% assign title = "web feed (Atom)" %}
+    {% assign title = "Web Feed (Atom)" %}
     {% assign icon = "fas fa-rss" %}
+  {% when "docs" %}
+    {% assign uri = "http://docs.frootlab.org/projects/" | append: include.uid %}
+    {% assign title = "Online Documentation" %}
+    {% assign icon = "fas fa-link" %}
   {% when "more" %}
     {% assign uri = include.uid %}
     {% assign title = "more" %}

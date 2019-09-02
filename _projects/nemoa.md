@@ -14,10 +14,21 @@ backdrop: white
 form-logo: /images/svg/nemoa.svg
 permalink: /projects/nemoa.html
 redirect_from: /nemoa.html
-readthedocs: nemoa
 stage: Alpha
 version: 0.5.582
-social:
+docs:
+  - name: docs
+    user: nemoa
+  - name: readthedocs
+    user: nemoa
+    type: pdf
+  - name: readthedocs
+    user: nemoa
+    type: epub
+  - name: readthedocs
+    user: nemoa
+    type: zip
+source:
   - name: github
     user: frootlab/nemoa
   - name: pypi
@@ -35,7 +46,7 @@ Nemoa is based on the [Python](https://www.python.org/) programming language and
 actively developed as part of the [Liquid Code](/liquid) framework.
 
 <a href="/images/svg/nemoa-figure.svg" title="High Performance Data Analysis">
-  <img src="/images/svg/nemoa-figure.svg" style="width: 90%; max-width: 350px;"
+  <img src="/images/svg/nemoa-figure.svg" style="width: 90%; max-width: 20rem;"
     alt="High Performance Data Analysis">
 </a>
 

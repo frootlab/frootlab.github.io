@@ -1,7 +1,7 @@
 ---
 title: flib
 subtitle: Frootlab Shared Library
-slogan: You are welcome to use our multi-purpose shared library
+slogan: Multi-purpose shared Python library
 featured: false
 category: "auxiliary"
 popularity: 0
@@ -13,10 +13,21 @@ figure:
 backdrop: white
 permalink: /projects/flib.html
 redirect_from: /flib.html
-readthedocs: flib
 stage: Various
 version: 0.9.2
-social:
+docs:
+  - name: docs
+    user: flib
+  - name: readthedocs
+    user: flib
+    type: pdf
+  - name: readthedocs
+    user: flib
+    type: epub
+  - name: readthedocs
+    user: flib
+    type: zip
+source:
   - name: github
     user: frootlab/flib
   - name: pypi

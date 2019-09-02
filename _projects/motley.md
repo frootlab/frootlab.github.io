@@ -14,10 +14,21 @@ backdrop: white
 form-logo: "/images/svg/motley.svg"
 permalink: /projects/motley.html
 redirect_from: /motley.html
-readthedocs: motley
 stage: Planning
 version: 0.0.1
-social:
+docs:
+  - name: docs
+    user: motley
+  - name: readthedocs
+    user: motley
+    type: pdf
+  - name: readthedocs
+    user: motley
+    type: epub
+  - name: readthedocs
+    user: motley
+    type: zip
+source:
   - name: github
     user: frootlab/motley
   - name: pypi
@@ -32,7 +43,7 @@ algorithms, as required by the **Cloud-Assisted Meta Programming** (CAMP)
 paradigm.
 
 <a href="/images/svg/motley-figure.svg" title="Smart Algorithm Repository">
-  <img src="/images/svg/motley-figure.svg" style="width: 90%; max-width: 350px;"
+  <img src="/images/svg/motley-figure.svg" style="width: 90%; max-width: 20rem;"
     alt="Smart Algorithm Repository">
 </a>
 

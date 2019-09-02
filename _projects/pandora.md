@@ -14,10 +14,21 @@ backdrop: white
 form-logo: /images/svg/pandora.svg
 permalink: /projects/pandora.html
 redirect_from: /pandora.html
-readthedocs: pandora
 stage: Pre-Alpha
 version: 0.1.10
-social:
+docs:
+  - name: docs
+    user: pandora
+  - name: readthedocs
+    user: pandora
+    type: pdf
+  - name: readthedocs
+    user: pandora
+    type: epub
+  - name: readthedocs
+    user: pandora
+    type: zip
+source:
   - name: github
     user: frootlab/pandora
   - name: pypi
@@ -32,7 +43,7 @@ programming language and actively developed as part of the [Liquid
 Code](/liquid) framework.
 
 <a href="/images/svg/pandora-figure.svg" title="Universal Data Proxy">
-  <img src="/images/svg/pandora-figure.svg" style="width: 90%; max-width: 350px;"
+  <img src="/images/svg/pandora-figure.svg" style="width: 90%; max-width: 20rem;"
     alt="Universal Data Proxy">
 </a>
 

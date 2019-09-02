@@ -2,8 +2,8 @@
 layout: base
 ---
 
-{% if page.social %}
-  {% assign pypi-pkg = page.social | where:"name", "pypi" | last | map:"user" %}
+{% if page.source %}
+  {% assign pypi-pkg = page.source | where: "name", "pypi" | last | map:"user" %}
 {% endif %}
 
 {% capture posts-html %}
@@ -12,12 +12,14 @@ layout: base
 {% assign posts-html = posts-html | strip %}
 {% assign has-posts = posts-html != "" %}
 
+{% assign has-links = page.docs or page.source %}
+
 {% include front/header.html %}
 <div class="banderole">
   <a class="btn btn_grey" href="#about">About</a>
   {% if pypi-pkg %}<a class="btn btn_grey" href="#quickstart">Quickstart</a>{% endif %}
   {% if has-posts %}<a class="btn btn_grey" href="#posts">Posts</a>{% endif %}
-  <a class="btn btn_grey" href="#links">Links</a>
+  {% if has-links %}<a class="btn btn_grey" href="#resources">Resources</a>{% endif %}
 </div>
 {% include front/trailer.html %}
 
@@ -69,35 +71,35 @@ layout: base
 {{ posts-html }}
 {% endif %}
 
-{% assign online = 'http://docs.frootlab.org/projects/' | append: page.readthedocs %}
-{% assign root = 'https://readthedocs.org/projects/' | append: page.readthedocs %}
-{% assign pdf = root | append: '/downloads/pdf/latest/' %}
-{% assign epub = root | append: '/downloads/epub/latest/' %}
-{% assign zip = root | append: '/downloads/zip/latest/' %}
-<section class="subtitle" id="links">
-  <h3>Links</h3>
+{% if has-links %}
+<section class="subtitle" id="resources">
+  <h3>Resources</h3>
 </section>
 <section>
-  <div style="display: flex;">
-    <div style="flex: 48%; text-align: center;">
-      <div class="label" style="padding-bottom: 0.5rem; margin: 0 0.5rem; color: #999; ">Documentation</div>
-      <ul class="squared icons">
-        {% include links/create.html name='link' uid=online title="Online Documentation" icon="fas fa-link" %}
-        {% include links/create.html name='link' uid=pdf title="PDF printable documentation" icon="fas fa-print" %}
-        {% include links/create.html name='link' uid=epub title="PDF ebook documentation" icon="fas fa-tablet" %}
-        {% include links/create.html name='link' uid=zip title="ZIP compressed online documentation" icon="fas fa-file-archive" %}
-      </ul>
-    </div>
-    <div style="flex: 32%; text-align: center;">
-      <div class="label" style="padding-bottom: 0.5rem; margin: 0 0.5rem; color: #999;">Source Code</div>
-      <ul class="squared icons">
-        {% for item in page.social %}
+  <div style="display: flex; padding: 1rem 0;">
+    {% if page.docs %}
+    <div style="flex: 50%;">
+      <div class="label" style="color: #6E7080;">Documentation</div>
+      <ul class="icons">
+        {% for item in page.docs %}
           {% include links/create.html name=item.name uid=item.user type=item.type %}
         {% endfor %}
       </ul>
     </div>
+    {% endif %}
+    {% if page.docs %}
+    <div style="flex: 50%;">
+      <div class="label" style="color: #6E7080;">Source Code</div>
+      <ul class="icons">
+        {% for item in page.source %}
+          {% include links/create.html name=item.name uid=item.user type=item.type %}
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
   </div>
 </section>
+{% endif %}
 
 <section></section>
 
