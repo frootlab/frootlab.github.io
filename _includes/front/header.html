@@ -1,5 +1,7 @@
 {% assign title = page.title | markdownify | remove: "<p>" | remove: "</p>" %}
-{% capture image %}{% include site/background-image.html display="center" %}{% endcapture %}
+{% capture image %}
+  {% include site/background-image.html display="center" %}
+{% endcapture %}
 
 {% if page.logo %}
   {% if page.logo contains 'http://' or page.logo contains 'https://' %}

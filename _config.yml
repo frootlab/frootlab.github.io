@@ -15,7 +15,7 @@ future: true
 
 # Left Block Images
 background:
-  default: images/default.webp
+  default: images/bg/default.svg
 
 excerpt_separator: "<!--more-->"
 

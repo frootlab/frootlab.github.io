@@ -136,11 +136,11 @@ Get link parameters
     {% case include.type | downcase %}
       {% when "pdf" %}
         {% assign uri = uri | append: '/downloads/pdf/latest/' %}
-        {% assign icon = "fas fa-print"%}
+        {% assign icon = "fas fa-file-pdf"%}
         {% assign title = "PDF" %}
       {% when "epub" %}
         {% assign uri = uri | append: '/downloads/epub/latest/' %}
-        {% assign icon = "fas fa-tablet"%}
+        {% assign icon = "fas fa-file-alt"%}
         {% assign title = "EPUB" %}
       {% when "zip" %}
         {% assign uri = uri | append: '/downloads/zip/latest/' %}
@@ -154,7 +154,7 @@ Get link parameters
   {% when "docs" %}
     {% assign uri = "http://docs.frootlab.org/projects/" | append: include.uid %}
     {% assign title = "Online Documentation" %}
-    {% assign icon = "fas fa-link" %}
+    {% assign icon = "fas fa-bookmark" %}
   {% when "more" %}
     {% assign uri = include.uid %}
     {% assign title = "more" %}
