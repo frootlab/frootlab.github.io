@@ -42,10 +42,8 @@ catalog to allow the usage of abstract **currently best fitting** (CBF)
 algorithms, as required by the **Cloud-Assisted Meta Programming** (CAMP)
 paradigm.
 
-<a href="/images/svg/motley-figure.svg" title="Smart Algorithm Repository">
-  <img src="/images/svg/motley-figure.svg" style="width: 90%; max-width: 20rem;"
-    alt="Smart Algorithm Repository">
-</a>
+{% include article/figure.html url="/images/svg/motley-figure.svg"
+  description="Resolution of currently best fitting algorithms using a Motley cluster" %}
 
 Thereby Motley is required to host and deliver algorithms as well as to
 cyclically evaluate and index them with respect to their corresponding metrics,

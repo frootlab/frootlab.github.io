@@ -42,10 +42,8 @@ applications. Pandora is based on the [Python](https://www.python.org/)
 programming language and actively developed as part of the [Liquid
 Code](/liquid) framework.
 
-<a href="/images/svg/pandora-figure.svg" title="Universal Data Mapper">
-  <img src="/images/svg/pandora-figure.svg" style="width: 90%; max-width: 20rem;"
-    alt="Universal Data Mapper">
-</a>
+{% include article/figure.html url="/images/svg/pandora-figure.svg"
+  description="Pandora unifies various data sources into a common data interface" %}
 
 The primary goal of Pandora is to separate data integration and data analysis
 into independent tasks, by providing a universal data interface for machine

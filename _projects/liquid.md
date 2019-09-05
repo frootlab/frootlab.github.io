@@ -24,11 +24,8 @@ subprojects:
 analysis applications, that interconnects collaborative data science with
 automated machine learning.
 
-<a href="/images/svg/liquid-figure.svg"
-  title="Automated Collaborative Data Science">
-  <img src="/images/svg/liquid-figure.svg" style="width: 90%; max-width: 20rem;"
-    alt="Automated Collaborative Data Science">
-</a>
+{% include article/figure.html url="/images/svg/liquid-figure.svg"
+  description="Cloud-Assisted Meta programming in the Liquid Code framework" %}
 
 Based on the **Cloud-Assisted Meta programming** (CAMP) paradigm, the framework
 allows the usage of **Currently Best Fitting** (CBF) algorithms. Before code

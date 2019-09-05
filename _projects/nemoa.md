@@ -40,15 +40,11 @@ source:
 prototyping and cloud assisted building and deployment. Thereby individual
 code blocks are automatically retrieved from collaborative algorithm
 repositories, that provide the currently best fitting solutions for individual
-tasks.
+tasks. Nemoa is based on the [Python](https://www.python.org/) programming
+language and actively developed as part of the [Liquid Code](/liquid) framework.
 
-Nemoa is based on the [Python](https://www.python.org/) programming language and
-actively developed as part of the [Liquid Code](/liquid) framework.
-
-<a href="/images/svg/nemoa-figure.svg" title="High Performance Data Analysis">
-  <img src="/images/svg/nemoa-figure.svg" style="width: 90%; max-width: 20rem;"
-    alt="High Performance Data Analysis">
-</a>
+{% include article/figure.html url="/images/svg/nemoa-figure.svg"
+  description="Processing of data analysis flows using Nemoa" %}
 
 The key goal of nemoa is to provide a long-term data analysis framework, which
 seemingly integrates into existing enterprise data environments and thereby
