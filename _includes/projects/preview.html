@@ -2,7 +2,7 @@
 
 {% comment %}
 ================================================================================
-Filter Projects (by featured, category and limit)
+Filter Projects (by featured, category, list and limit)
 ================================================================================
 {% endcomment %}
 
@@ -12,6 +12,11 @@ Filter Projects (by featured, category and limit)
 
 {% if include.category %}
   {% assign items = items | where: "category", include.category %}
+{% endif %}
+
+{% if include.list %}
+  {% assign list = include.list | join: '|' %}
+  {% assign items = items | where_exp: "item", "list contains item.title" %}
 {% endif %}
 
 {% if include.limit %}
@@ -77,7 +82,7 @@ List / display Posts
       <a href="{{ site.url }}{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
     </strong>
   </p>
-  <p>{{ item.slogan }}</p>
+  <p>{{ item.subtitle }}</p>
 </div>
 
 {% endfor %}

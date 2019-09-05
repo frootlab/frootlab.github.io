@@ -1,9 +1,9 @@
 ---
-title: "Motley"
-subtitle: "Smart Algorithm Repository"
-slogan: "Discover a new approach for collaborative data science"
+title: Motley
+subtitle: "Autoevaluating Algorithm Repository"
+slogan: "Autoevaluating Algorithm Repository"
 featured: true
-category: "component"
+category: "main"
 popularity: 1
 image-meta:
   cloudinary: "pexels/990824"

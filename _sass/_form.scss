@@ -324,7 +324,7 @@
   box-sizing: border-box;
   height: 280px;
   position: relative;
-  border-radius: 2px;
+  border-radius: 0.1rem;
   box-shadow:
     0 2px 2px 0 rgba(45,54,65,.1),
     0 1px 5px 0 rgba(45,54,65,.09),
@@ -338,7 +338,7 @@
 
 .card .card-image {
   height: 60%;
-  border-radius: 2px 2px 0px 0px;
+  border-radius: calc(0.1rem + 2px) calc(0.1rem + 2px) 0px 0px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -350,16 +350,17 @@
   font-weight: 300;
   line-height: 1.5;
   color: $dark-grey;
-  border-radius: 0 0 2px 2px;
   position: absolute;
   z-index: 2;
   bottom: 0;
   width: 100%;
-  min-height: 100%;
   overflow: hidden;
   transition: all 0.3s ease;
   background-color: white;
   background: linear-gradient(-45deg, #f9f9fb, white 30%);
+
+  min-height: 100%;
+  border-radius: 0.1rem;
 
   .card-title {
     font-size: 1rem;
@@ -370,22 +371,28 @@
   .card-text {
     opacity: 1;
     padding-top: 1rem;
+
     color: $dark-grey;
     height: 0;
+    transition: all .4s ease;
   }
 }
 
 .card:hover {
 
   .card-content {
-    transition: all 0.4s ease;
     min-height: 40%;
+    border-radius: 0 0 0.1rem 0.1rem;
 
     .card-text {
-      padding-top: 0;
-      transition: all .4s ease;
       opacity: 0;
+      padding-top: 0;
     }
+  }
+
+  .card-image {
+    border-radius: 0.1rem 0.1rem 0px 0px;
+    transition: all .4s ease;
   }
 }
 

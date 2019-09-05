@@ -2,9 +2,23 @@
 layout: base
 ---
 
+{% comment %}
+================================================================================
+Get information about source code and documentation
+================================================================================
+{% endcomment %}
+
 {% if page.source %}
   {% assign pypi-pkg = page.source | where: "name", "pypi" | last | map:"user" %}
 {% endif %}
+
+{% assign has-links = page.docs or page.source %}
+
+{% comment %}
+================================================================================
+Get related posts
+================================================================================
+{% endcomment %}
 
 {% capture posts-html %}
   {% include blog/preview.html tag=page.title layout="magazine" %}
@@ -12,11 +26,10 @@ layout: base
 {% assign posts-html = posts-html | strip %}
 {% assign has-posts = posts-html != "" %}
 
-{% assign has-links = page.docs or page.source %}
-
 {% include front/header.html %}
 <div class="banderole">
   <a class="btn btn_grey" href="#about">About</a>
+  {% if page.subprojects %}<a class="btn btn_grey" href="#subprojects">Subprojects</a>{% endif %}
   {% if pypi-pkg %}<a class="btn btn_grey" href="#quickstart">Quickstart</a>{% endif %}
   {% if has-posts %}<a class="btn btn_grey" href="#posts">Posts</a>{% endif %}
   {% if has-links %}<a class="btn btn_grey" href="#resources">Resources</a>{% endif %}
@@ -32,7 +45,6 @@ layout: base
 </section>
 
 <hr>
-
 <section class="subtitle" id="about">
   <h3>About</h3>
 </section>
@@ -49,6 +61,15 @@ layout: base
   </p>
   {% endif %}
 </section>
+
+{% if page.subprojects %}
+<section class="subtitle" id="subprojects">
+  <h3>Subprojects</h3>
+</section>
+<section class="white">
+  {% include projects/preview.html display="cards" list=page.subprojects %}
+</section>
+{% endif %}
 
 {% if pypi-pkg %}
 <section class="subtitle" id="quickstart">

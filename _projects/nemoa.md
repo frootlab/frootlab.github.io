@@ -1,9 +1,9 @@
 ---
 title: Nemoa
-subtitle: High Performance Data Analysis
+subtitle: Rapid Prototyping System for Data Analysis
 slogan: High Performance Data Analysis Processor
 featured: true
-category: "component"
+category: "main"
 popularity: 2
 image-meta:
   cloudinary: pexels/101764

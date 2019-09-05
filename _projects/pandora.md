@@ -1,9 +1,9 @@
 ---
 title: Pandora
-subtitle: High Performance Data Proxy
-slogan: Universal data proxy for high interoperability
+subtitle: Universal high-performance Data Mapper
+slogan: Universal high-performance Data Mapper for high interoperability
 featured: true
-category: "component"
+category: "main"
 popularity: 3
 image-meta:
   cloudinary: pexels/366691
@@ -36,15 +36,15 @@ source:
     type: project
 ---
 
-**Pandora** is a universal data proxy and SQL-Database engine, that implements
-high-performance and security requirements for large-scale enterprise analytical
+**Pandora** is a universal data mapper and SQL-Database engine, that implements
+high-performance and security requirements for large-scale data analysis
 applications. Pandora is based on the [Python](https://www.python.org/)
 programming language and actively developed as part of the [Liquid
 Code](/liquid) framework.
 
-<a href="/images/svg/pandora-figure.svg" title="Universal Data Proxy">
+<a href="/images/svg/pandora-figure.svg" title="Universal Data Mapper">
   <img src="/images/svg/pandora-figure.svg" style="width: 90%; max-width: 20rem;"
-    alt="Universal Data Proxy">
+    alt="Universal Data Mapper">
 </a>
 
 The primary goal of Pandora is to separate data integration and data analysis

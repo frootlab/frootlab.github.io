@@ -1,9 +1,9 @@
 ---
-title: "Liquid Code"
-subtitle: "Framework for smart software"
-slogan: "Create smart data analysis applications"
+title: Liquid Code
+subtitle: "Automated collaborative data science"
+slogan: "Create smart software"
 featured: true
-category: "main"
+category: "super"
 popularity: 5
 image-meta:
   cloudinary: pexels/67843
@@ -14,6 +14,10 @@ backdrop: white
 form-logo: /images/svg/pandora.svg
 permalink: /projects/liquid.html
 redirect_from: /liquid.html
+subprojects:
+  - Nemoa
+  - Pandora
+  - Motley
 ---
 
 **Liquid Code** is a pioneering software framework for next generation data
