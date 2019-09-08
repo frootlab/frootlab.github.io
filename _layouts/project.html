@@ -52,11 +52,13 @@ Get related posts
   {{ content }}
   {% if page.license %}
   <p>
-    According to <a href="/about">our convictions</a> {{ page.title }} is
-    <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">free
-    and open-source software</a>. It is released under the
-    <a href="{{ page.license-url }}" title="{{ page.license }}">
-    {{ page.license }}</a> and can be downloaded from
+    According to <a href="/about#us">our convictions</a> {{ page.title }} is
+    <a href="https://fsfe.org/freesoftware/basics/summary.html"
+      title="Free Software" target="_blank" rel="noopener noreferrer">
+      Free Software</a>. It is released under the
+    <a href="{{ page.license-url }}"
+      title="{{ page.license }}" target="_blank" rel="noopener noreferrer">
+      {{ page.license }}</a> and can be downloaded from
     <a href="https://github.com/{{ page.github }}">GitHub</a>.
   </p>
   {% endif %}
