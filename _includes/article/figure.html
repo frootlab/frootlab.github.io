@@ -2,5 +2,9 @@
   <a href="{{ include.url }}" title="{{ include.description }}" style="margin-left: auto; margin-right: auto;">
     <img src="{{ include.url }}" alt="{{ include.description }}" style="width: 90%; max-width: 20rem;">
   </a>
-  <figcaption style="margin-top: 1rem;">{{ include.description }}</figcaption>
+  <figcaption style="margin-top: 1rem;">
+    <div style="width: 90%; max-width: 20rem; margin-left: auto; margin-right: auto; line-height: 1.7; text-align: left;">
+      {{ include.description }}
+    </div>
+  </figcaption>
 </figure>
