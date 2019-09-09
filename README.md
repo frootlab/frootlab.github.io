@@ -21,7 +21,7 @@ analysis framework, which on the basis of
 [TensorFlow®](https://www.tensorflow.org/) incorporates machine intelligence and
 collaborative data science into the whole software life cycle. The essential
 components of the framework comprise: The universal data interface
-[Pandora](https://www.frootlab.org/pandora.html), the smart algorithm repository
+[Deet](https://www.frootlab.org/deet.html), the smart algorithm repository
 [Motley](https://www.frootlab.org/motley.html) and the data analysis template
 system [Nemoa](https://www.frootlab.org/nemoa.html), which abstracts explicit
 algorithms to currently best fitting.

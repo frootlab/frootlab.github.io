@@ -1,5 +1,5 @@
 ---
-title: Pandora
+title: Deet
 subtitle: Universal high-performance Data Mapper
 slogan: Universal high-performance Data Mapper for high interoperability
 featured: true
@@ -9,55 +9,57 @@ image-meta:
   cloudinary: pexels/366691
   orientation: landscape
 figure:
-  uri: /images/fig/pandora.svg
+  uri: /images/fig/deet.svg
 backdrop: white
-form-logo: /images/svg/pandora.svg
-permalink: /projects/pandora.html
-redirect_from: /pandora.html
+form-logo: /images/svg/deet.svg
+permalink: /projects/deet.html
+redirect_from:
+  - /deet.html
+  - /pandora.html
+  - /projects/pandora.html
 stage: Pre-Alpha
-version: 0.1.10
+version: 0.1.11
 docs:
   - name: docs
-    user: pandora
+    user: deet
   - name: readthedocs
-    user: pandora
+    user: deet
     type: pdf
   - name: readthedocs
-    user: pandora
+    user: deet
     type: epub
   - name: readthedocs
-    user: pandora
+    user: deet
     type: zip
 source:
   - name: github
-    user: frootlab/pandora
+    user: frootlab/deet
   - name: pypi
-    user: pandb
+    user: deet
     type: project
 ---
 
-**Pandora** is a universal data mapper and SQL-Database engine, that implements
+**Deet** is a universal data mapper and SQL-Database engine, that implements
 high-performance and security requirements for large-scale data analysis
-applications. Pandora is based on the [Python](https://www.python.org/)
-programming language and actively developed as part of the [Liquid
-Code](/liquid) framework.
+applications. Deet is based on the [Python](https://www.python.org/) programming
+language and actively developed as part of the [Liquid Code](/liquid) framework.
 
-{% include article/figure.html url="/images/fig/pandora.svg"
-  description="Pandora unifies various data sources into a common data interface" %}
+{% include article/figure.html url="/images/fig/deet.svg"
+  description="Deet unifies various data sources into a common data interface" %}
 
-The primary goal of Pandora is to separate data integration and data analysis
+The primary goal of Deet is to separate data integration and data analysis
 into independent tasks, by providing a universal data interface for machine
-learning- and data analysis applications. To achieve this goal, Pandora
+learning- and data analysis applications. To achieve this goal, Deet
 implements the two fundamental layers of a data warehouse:
 
-The **integration layer** of Pandora utilizes
+The **integration layer** of Deet utilizes
 [SQLAlchemy](https://www.sqlalchemy.org) to allow it\'s connection to a variety
 of SQL-Databases (e.g. IBM DB2, Oracle, SAP, MS-SQL, MS-Access, Firebird,
 Sybase, MySQL, Postgresql, SQLite, etc.). Thereupon it provides native support
 for flat file databases (e.g. CSV-Tables, R-Table exports), laboratory
 measurements and data generators.
 
-The **staging layer** of Pandora is implemented as a native SQL-Database engine,
+The **staging layer** of Deet is implemented as a native SQL-Database engine,
 featuring a DB-API 2.0 interface with full SQL:2016 support, a vertical data
 storage manager and real-time encryption. This allows the data analysis
 application to integrate a variety of different data sources, by using a unified

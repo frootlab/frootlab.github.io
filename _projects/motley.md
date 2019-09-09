@@ -52,7 +52,7 @@ would be the average prediction accuracy within a fixed set of gold standard
 samples of the respective domain of application (e.g. latin handwriting samples,
 spoken word samples, TCGA gene expression data, etc.). Consequently Motley is
 also required to host or connect these samples by using
-[Pandora](https://github.com/frootlab/pandora).
+[Deet](https://github.com/frootlab/deet).
 
 Due to this approach motley allows the implementation of smart analytics
 projects, that are automatically kept up-to-date by a minimum of maintenance

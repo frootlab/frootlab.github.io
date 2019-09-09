@@ -11,12 +11,12 @@ image-meta:
 figure:
   uri: /images/fig/liquid.svg
 backdrop: white
-form-logo: /images/svg/pandora.svg
+form-logo: /images/svg/deet.svg
 permalink: /projects/liquid.html
 redirect_from: /liquid.html
 subprojects:
   - Nemoa
-  - Pandora
+  - Deet
   - Motley
 ---
 

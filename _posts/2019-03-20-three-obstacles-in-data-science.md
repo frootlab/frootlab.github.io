@@ -9,7 +9,7 @@ pdf: files/posts/2019-03-20-three-obstacles-in-data-science.pdf
 crumbs:
   - Blog
   - Three obstacles
-tags: [Motley, Nemoa, Pandora, Liquid Code]
+tags: [Motley, Nemoa, Deet, Liquid Code]
 ---
 
 **For the current development- and exploration process in data science three
@@ -39,11 +39,11 @@ this extra task may still be quite manageable, but for collaborations with
 different operational data landscapes, the additional efforts can occupy a lot
 of time and become a critical factor.
 
-We want to solve this issue with [Pandora](/pandora.html), a lightweight unified
+We want to solve this issue with [Deet](/deet.html), a lightweight unified
 data interface, that mediates between the data analysis application and the
-data-backends. On the analysis side, Pandora provides peace by offering data
+data-backends. On the analysis side, Deet provides peace by offering data
 scientist their favorite formats: [NumPy-Arrays](http://www.numpy.org/) and
-[R-Tables](https://www.r-project.org/). On the (dark) backend-side Pandora aims
+[R-Tables](https://www.r-project.org/). On the (dark) backend-side Deet aims
 to tame any important SQL-Databases ([IBM
 Db2](https://www.ibm.com/analytics/us/en/db2/), [Oracle
 Database](https://www.oracle.com/database/), [SAP
@@ -89,7 +89,7 @@ fundamental observation behind Nemoa is, that it is almost never required to use
 a specific algorithm but only one that does the job - so why not simply use the
 best one, that's currently available? This is the point, where Motley and it's
 CBF algorithms join the game. And finally to easily integrate the application
-into any existing operational data landscapes also Pandora joins the team. So
+into any existing operational data landscapes also Deet joins the team. So
 these three together constitute our *Liquid Code* framework.
 
 ## The Vision: Liquid Code
