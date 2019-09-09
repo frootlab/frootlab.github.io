@@ -70,8 +70,7 @@
   // Inset text shadow
   span.inset {
     color: white;
-    text-shadow:
-      rgba(97, 97, 97, .5) 1px 1px 0px;
+    text-shadow: $black-t50 1px 1px 0;
   }
 
   // Block text shadow
