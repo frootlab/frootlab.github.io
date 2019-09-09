@@ -9,7 +9,7 @@ image-meta:
   cloudinary: pexels/67843
   orientation: landscape
 figure:
-  uri: /images/svg/liquid-figure.svg
+  uri: /images/fig/liquid.svg
 backdrop: white
 form-logo: /images/svg/pandora.svg
 permalink: /projects/liquid.html
@@ -24,7 +24,7 @@ subprojects:
 analysis applications, that interconnects collaborative data science with
 automated machine learning.
 
-{% include article/figure.html url="/images/svg/liquid-figure.svg"
+{% include article/figure.html url="/images/fig/liquid.svg"
   description="Cloud-Assisted Meta programming in the Liquid Code framework" %}
 
 Based on the **Cloud-Assisted Meta programming** (CAMP) paradigm, the framework

@@ -9,7 +9,7 @@ image-meta:
   cloudinary: pexels/101764
   orientation: landscape
 figure:
-  uri: /images/svg/nemoa-figure.svg
+  uri: /images/fig/nemoa.svg
 backdrop: white
 form-logo: /images/svg/nemoa.svg
 permalink: /projects/nemoa.html
@@ -43,7 +43,7 @@ repositories, that provide the currently best fitting solutions for individual
 tasks. Nemoa is based on the [Python](https://www.python.org/) programming
 language and actively developed as part of the [Liquid Code](/liquid) framework.
 
-{% include article/figure.html url="/images/svg/nemoa-figure.svg"
+{% include article/figure.html url="/images/fig/nemoa.svg"
   description="Processing of data analysis flows using Nemoa" %}
 
 The key goal of nemoa is to provide a long-term data analysis framework, which

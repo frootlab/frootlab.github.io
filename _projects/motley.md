@@ -9,7 +9,7 @@ image-meta:
   cloudinary: "pexels/990824"
   orientation: "landscape"
 figure:
-  uri: /images/svg/motley-figure.svg
+  uri: /images/fig/motley.svg
 backdrop: white
 form-logo: "/images/svg/motley.svg"
 permalink: /projects/motley.html
@@ -42,7 +42,7 @@ catalog to allow the usage of abstract **currently best fitting** (CBF)
 algorithms, as required by the **Cloud-Assisted Meta Programming** (CAMP)
 paradigm.
 
-{% include article/figure.html url="/images/svg/motley-figure.svg"
+{% include article/figure.html url="/images/fig/motley.svg"
   description="Resolution of currently best fitting algorithms using a Motley cluster" %}
 
 Thereby Motley is required to host and deliver algorithms as well as to

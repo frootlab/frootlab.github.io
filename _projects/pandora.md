@@ -9,7 +9,7 @@ image-meta:
   cloudinary: pexels/366691
   orientation: landscape
 figure:
-  uri: /images/svg/pandora-figure.svg
+  uri: /images/fig/pandora.svg
 backdrop: white
 form-logo: /images/svg/pandora.svg
 permalink: /projects/pandora.html
@@ -42,7 +42,7 @@ applications. Pandora is based on the [Python](https://www.python.org/)
 programming language and actively developed as part of the [Liquid
 Code](/liquid) framework.
 
-{% include article/figure.html url="/images/svg/pandora-figure.svg"
+{% include article/figure.html url="/images/fig/pandora.svg"
   description="Pandora unifies various data sources into a common data interface" %}
 
 The primary goal of Pandora is to separate data integration and data analysis
