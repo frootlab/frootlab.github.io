@@ -17,7 +17,7 @@ redirect_from: /liquid.html
 subprojects:
   - Rian
   - Deet
-  - Motley
+  - Brea
 ---
 
 **Liquid Code** is a pioneering software framework for next generation data

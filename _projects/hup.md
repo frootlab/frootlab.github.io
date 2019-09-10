@@ -43,7 +43,7 @@ primarily aims to support the main [Frootlab projects](/projects) by serving as
 a common base library. It was originally created in 2019 for the
 [Liquid Code](/liquid) framework to separate the individual tasks into three
 components: [Deet](/deet), [Rian](/rian)
-and [Motley](/motley). The majority of the provided modules, however, are kept
+and [Brea](/brea). The majority of the provided modules, however, are kept
 generic to facilitate their application beyond Frootlab projects as well.
 
 **Generic Modules**
