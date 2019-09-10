@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/frootlab/corporate/blob/master/design/logo/frootlab/latest/png/Frootlab-128.png">
+  <img src="https://github.com/frootlab/design/blob/master/logo/frootlab/latest/png/Frootlab-128.png">
 </div>
 
 Frootlab
