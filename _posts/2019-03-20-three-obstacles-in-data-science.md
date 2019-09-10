@@ -9,7 +9,7 @@ pdf: files/posts/2019-03-20-three-obstacles-in-data-science.pdf
 crumbs:
   - Blog
   - Three obstacles
-tags: [Brea, Rian, Deet, Liquid Code]
+tags: [Brea, Rian, Deet, Vivid Code]
 ---
 
 **For the current development- and exploration process in data science three
@@ -28,7 +28,7 @@ during the last decade, NVIDIA and Google respectively stepped into
 the breach with [CUDA](https://developer.nvidia.com/cuda-zone) and TensorFlow.
 So the question arises "What are today's foremost technical obstacles in data
 science?". In the following I present our personally experienced proposal to
-this question and our vision: The *Liquid Code* framework.
+this question and our vision: The *Vivid Code* framework.
 
 ## \#1: The Plug Jumble
 
@@ -90,15 +90,15 @@ a specific algorithm but only one that does the job - so why not simply use the
 best one, that's currently available? This is the point, where Brea and it's
 CBF algorithms join the game. And finally to easily integrate the application
 into any existing operational data landscapes also Deet joins the team. So
-these three together constitute our *Liquid Code* framework.
+these three together constitute our *Vivid Code* framework.
 
-## The Vision: Liquid Code
+## The Vision: Vivid Code
 
 If you are a data scientist imagine the following situation: The new
 postgraduate in your workgroup just released a gradient descent that outperforms
 the one you wrote some years ago by far. The bad news, however, is that nearly
 any single application in your lab uses your old algorithm. So the basic
-benefits of the Liquid Code framework in this situation should be quite clear:
+benefits of the Vivid Code framework in this situation should be quite clear:
 All your application automatically use the new algorithm. But now, let's get one
 step beyond and imagine that your workgroup is interconnected with the algorithm
 catalogs of many other workgroups ... To be quite honest: Personally this
@@ -107,6 +107,6 @@ picture gives me the creeps.
 If you are part of an enterprise, you may know the following situation: Since
 the incorporation of customer and market information is getting more important,
 your enterprise extends its analytical tools in market research and decision
-support by business intelligence software. The *Liquid Code* framework provides
+support by business intelligence software. The *Vivid Code* framework provides
 you the best option, not only to minimize the TCO of this software, but also to
 maintain it state-of-the-art.

@@ -42,7 +42,8 @@ source:
 **Deet** is a universal data mapper and SQL-Database engine, that implements
 high-performance and security requirements for large-scale data analysis
 applications. Deet is based on the [Python](https://www.python.org/) programming
-language and actively developed as part of the [Liquid Code](/liquid) framework.
+language and actively developed as the database component of the [Vivid
+Code](/vivid) framework.
 
 {% include article/figure.html url="/images/fig/deet.svg"
   description="Deet unifies various data sources into a common data interface" %}

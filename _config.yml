@@ -9,8 +9,9 @@ locale: en_US
 language: en
 copyright: © 2019 Frootlab
 keywords:
-  Frootlab, Smart Analytics, Machine Learning, AutoML, AI, Liquid Code, Rian,
-  Deet, Brea, Hup, Cloud-Assisted Meta Programming, CAMP
+  Frootlab, Smart Analytics, Machine Learning, AutoML, AI, Vivid, Rian, Deet,
+  Brea, Hup, Cloud-Assisted Meta Programming, CAMP, Vivid Code, Vivid Server,
+  Vivid Client, Vivid Database
 future: true
 
 # Left Block Images
