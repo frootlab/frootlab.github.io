@@ -1,5 +1,5 @@
 ---
-title: Nemoa
+title: Rian
 subtitle: Rapid Prototyping System for Data Analysis
 slogan: High Performance Data Analysis Processor
 featured: true
@@ -9,46 +9,49 @@ image-meta:
   cloudinary: pexels/101764
   orientation: landscape
 figure:
-  uri: /images/fig/nemoa.svg
+  uri: /images/fig/rian.svg
 backdrop: white
-form-logo: /images/svg/nemoa.svg
-permalink: /projects/nemoa.html
-redirect_from: /nemoa.html
+form-logo: /images/svg/rian.svg
+permalink: /projects/rian.html
+redirect_from:
+  - /rian.html
+  - /nemoa.html
+  - /projects/nemoa.html
 stage: Alpha
-version: 0.5.582
+version: 0.5.583
 docs:
   - name: docs
-    user: nemoa
+    user: rian
   - name: readthedocs
-    user: nemoa
+    user: rian
     type: pdf
   - name: readthedocs
-    user: nemoa
+    user: rian
     type: epub
   - name: readthedocs
-    user: nemoa
+    user: rian
     type: zip
 source:
   - name: github
-    user: frootlab/nemoa
+    user: frootlab/rian
   - name: pypi
-    user: nemoa
+    user: rian
     type: project
 ---
 
-**Nemoa** is a machine learning and data analysis framework with rapid
+**Rian** is a machine learning and data analysis framework with rapid
 prototyping and cloud assisted building and deployment. Thereby individual
 code blocks are automatically retrieved from collaborative algorithm
 repositories, that provide the currently best fitting solutions for individual
-tasks. Nemoa is based on the [Python](https://www.python.org/) programming
+tasks. Rian is based on the [Python](https://www.python.org/) programming
 language and actively developed as part of the [Liquid Code](/liquid) framework.
 
-{% include article/figure.html url="/images/fig/nemoa.svg"
-  description="Processing of data analysis flows using Nemoa" %}
+{% include article/figure.html url="/images/fig/rian.svg"
+  description="Processing of data analysis flows using Rian" %}
 
-The key goal of nemoa is to provide a long-term data analysis framework, which
+The key goal of rian is to provide a long-term data analysis framework, which
 seemingly integrates into existing enterprise data environments and thereby
-supports collaborative data science. To achieve this goal nemoa orchestrates
+supports collaborative data science. To achieve this goal rian orchestrates
 established Python frameworks like [TensorFlow](https://www.tensorflow.org/)
 and [SQLAlchemy](https://www.sqlalchemy.org/) and dynamically extends their
 capabilities by community driven algorithms (e.g. for [probabilistic graphical

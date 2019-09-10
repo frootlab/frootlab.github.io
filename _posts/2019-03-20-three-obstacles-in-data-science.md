@@ -9,7 +9,7 @@ pdf: files/posts/2019-03-20-three-obstacles-in-data-science.pdf
 crumbs:
   - Blog
   - Three obstacles
-tags: [Motley, Nemoa, Deet, Liquid Code]
+tags: [Motley, Rian, Deet, Liquid Code]
 ---
 
 **For the current development- and exploration process in data science three
@@ -81,11 +81,11 @@ like in no other domain suffer of short code lifespans. Of course:
 So the question arises, how to keep the code alive. This issue can only be
 addressed by letting the code be dynamic!
 
-For this purpose we started to develop [Nemoa](/nemoa.html), a templating
-machine-learning framework, that orchestrates TensorFlow. However, Nemoa does
+For this purpose we started to develop [Rian](/rian.html), a templating
+machine-learning framework, that orchestrates TensorFlow. However, Rian does
 not simply provide a new interface, but abstracts the coding process by
 following our Cloud-Assisted Meta Programming ([CAMP](/tags#CAMP)) paradigm. The
-fundamental observation behind Nemoa is, that it is almost never required to use
+fundamental observation behind Rian is, that it is almost never required to use
 a specific algorithm but only one that does the job - so why not simply use the
 best one, that's currently available? This is the point, where Motley and it's
 CBF algorithms join the game. And finally to easily integrate the application
