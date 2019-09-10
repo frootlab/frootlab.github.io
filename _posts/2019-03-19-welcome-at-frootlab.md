@@ -21,10 +21,10 @@ well-being, social justice and social cohesion.**
 
 For us communication and cooperation are the key factors and driving force
 behind scientific and industrial progress. In order to realize our vision, we
-therefore started to identify [the foremost obstacles for collaborations in
-data science]({% post_url 2019-03-20-three-obstacles-in-data-science %}).
-in data science and started to develop comprehensive [solutions, based on an entirely new
-[programming paradigm](/blog/tags#CAMP).
+therefore started to identify [the foremost obstacles for collaborations in data
+science]({% post_url 2019-03-20-three-obstacles-in-data-science %}). in data
+science and started to develop comprehensive [solutions, based on an entirely
+new [programming paradigm](/blog/tags#CAMP).
 
 According to our fundamental convictions we release our products as [free
 software](https://en.wikipedia.org/wiki/Free_and_open-source_software) to

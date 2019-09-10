@@ -1,6 +1,6 @@
 ---
 title: Hup
-subtitle: Multi-purpose Python library
+subtitle: Frootlab Shared Library
 slogan: "Don't repeat yourself"
 featured: false
 category: "auxiliary"

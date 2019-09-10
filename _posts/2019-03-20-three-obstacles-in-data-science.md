@@ -63,9 +63,9 @@ online, it can take tremendous efforts to properly identify it's scope and adapt
 it to the underlying prerequisites - only to decide about it's suitability!
 
 We want to automate this process with [Brea](/brea.html). Brea is a smart
-algorithm repository server, that enforces unified data interfaces for different
+algorithm repository, that enforces a unified data interfaces for different
 algorithm categories. This allows Brea not only to automatically evaluate and
-compare the hosted algorithms with respect to given metrics but thereupon also
+compare the hosted algorithms with respect to given metrics, but thereupon also
 to determine, which algorithm of a given category and data domain is the
 currently best fitting ([CBF](/blog/tags#CBF)) algorithm with respect to the
 required metric.
@@ -82,15 +82,15 @@ So the question arises, how to keep the code alive. This issue can only be
 addressed by letting the code be dynamic!
 
 For this purpose we started to develop [Rian](/rian.html), a templating
-machine-learning framework, that orchestrates TensorFlow. However, Rian does
-not simply provide a new interface, but abstracts the coding process by
+machine-learning framework, that orchestrates TensorFlow. However, Rian
+does not simply provide a new interface, but abstracts the coding process by
 following our Cloud-Assisted Meta Programming ([CAMP](/tags#CAMP)) paradigm. The
-fundamental observation behind Rian is, that it is almost never required to use
-a specific algorithm but only one that does the job - so why not simply use the
-best one, that's currently available? This is the point, where Brea and it's
-CBF algorithms join the game. And finally to easily integrate the application
-into any existing operational data landscapes also Deet joins the team. So
-these three together constitute our *Vivid Code* framework.
+fundamental observation behind Rian is, that it is almost never required
+to use a specific algorithm but only one that does the job - so why not simply
+use the best one, that's currently available? This is the point, where the Vivid
+Server and it's CBF algorithms join the game. And finally to easily integrate
+the application into any existing operational data landscapes also Deet
+joins the team. So these three together constitute our *Vivid Code* framework.
 
 ## The Vision: Vivid Code
 

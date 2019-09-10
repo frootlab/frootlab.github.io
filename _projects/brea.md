@@ -1,5 +1,6 @@
 ---
 title: Brea
+alias: Vivid Server
 subtitle: "Autoevaluating Algorithm Repository"
 slogan: "Autoevaluating Algorithm Repository"
 featured: true

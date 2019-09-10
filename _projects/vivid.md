@@ -17,8 +17,8 @@ redirect_from:
   - /liquid.html
   - /projects/liquid.html
 subprojects:
-  - Rian
   - Deet
+  - Rian
   - Brea
 ---
 
