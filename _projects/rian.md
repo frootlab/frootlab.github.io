@@ -1,6 +1,5 @@
 ---
 title: Rian
-alias: Vivid Client
 subtitle: Rapid Prototyping System for Data Analysis
 slogan: High Performance Data Analysis Processor
 featured: true

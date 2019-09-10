@@ -1,6 +1,5 @@
 ---
 title: Deet
-alias: Vivid DB
 subtitle: Universal high-performance Data Mapper
 slogan: Universal high-performance Data Mapper for high interoperability
 featured: true

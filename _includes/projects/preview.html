@@ -50,13 +50,8 @@ List / display Posts
 {% if count > 0 %}
 <ul>
 {% for item in items limit: bound %}
-{% if include.alias and item.alias %}
-  {% assign title = item.alias%}
-{% else %}
-  {% assign title = item.title%}
-{% endif %}
 <li>
-  <a href="{{ site.url }}{{ item.url }}" title="{{ title }}">{{ title }}</a>
+  <a href="{{ site.url }}{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
 </li>
 {% endfor %}
 </ul>
@@ -66,12 +61,6 @@ List / display Posts
 <div class="grid">
 
 {% for item in items limit: bound %}
-
-{% if include.alias and item.alias %}
-  {% assign title = item.alias%}
-{% else %}
-  {% assign title = item.title%}
-{% endif %}
 
 {% if item.figure.cloudinary %}
   {% assign preview = "https://res.cloudinary.com/frootlab/image/upload/" | append: item.figure.cloudinary | append: ".svg" %}
@@ -85,12 +74,12 @@ List / display Posts
 <div class="cell" style="text-align: center; padding: 1rem;">
 {% endif %}
 
-  <a href="{{ site.url }}{{ item.url }}" title="{{ title }}">
+  <a href="{{ site.url }}{{ item.url }}" title="{{ item.title }}">
     <img style="height: 180px;" src="{{ preview }}">
   </a>
   <p>
     <strong>
-      <a href="{{ site.url }}{{ item.url }}" title="{{ title }}">{{ title }}</a>
+      <a href="{{ site.url }}{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
     </strong>
   </p>
   <p>{{ item.subtitle }}</p>
