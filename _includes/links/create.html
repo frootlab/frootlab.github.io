@@ -187,15 +187,36 @@ Set custom parameters
 
 {% comment %}
 ================================================================================
-Display Link
+Display Button
 ================================================================================
 {% endcomment %}
 
 {% if uri %}
-<li>
-  <a href="{{ uri }}" title="{{ title }}" class="{{ class }}"
-    target="_{{ target }}" rel="noopener noreferrer">
-    <i class="{{ icon }}"></i><span>{{ title }}</span>
-  </a>
-</li>
+  {% case include.display | downcase %}
+    {% when "text" %}
+      <a href="{{ uri }}" title="{{ title }}" class="{{ class }} text"
+        target="_{{ target }}" rel="noopener noreferrer">
+        <span>{{ title }}</span>
+      </a>
+    {% when "icon" %}
+      <a href="{{ uri }}" title="{{ title }}" class="{{ class }} icon"
+        target="_{{ target }}" rel="noopener noreferrer">
+        <i class="{{ icon }}"></i>
+      </a>
+    {% when "right" %}
+      <a href="{{ uri }}" title="{{ title }}" class="{{ class }} right"
+        target="_{{ target }}" rel="noopener noreferrer">
+        <span>{{ title }}</span><i class="{{ icon }}"></i>
+      </a>
+    {% when "left" %}
+      <a href="{{ uri }}" title="{{ title }}" class="{{ class }} left"
+        target="_{{ target }}" rel="noopener noreferrer">
+        <i class="{{ icon }}"></i><span>{{ title }}</span>
+      </a>
+    {% else %}
+      <a href="{{ uri }}" title="{{ title }}" class="{{ class }}"
+        target="_{{ target }}" rel="noopener noreferrer">
+        <i class="{{ icon }}"></i>
+      </a>
+  {% endcase %}
 {% endif %}

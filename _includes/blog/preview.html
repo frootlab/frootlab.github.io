@@ -65,6 +65,16 @@ Display Posts by using List Layout
       </section>
     {% endif %}
 
+    {% if include.more %}
+    <section class="white">
+    <ul class="small right inherent squared icons">
+      <li>
+        {% include links/create.html name="more" display="right" uid=include.more title="more" %}
+      </li>
+    </ul>
+    </section>
+    {% endif %}
+
 {% comment %}
 ================================================================================
 Display Posts by using Magazin Layout
@@ -105,7 +115,7 @@ Display Posts by using Magazin Layout
           <p>
             <b>{{ post.title }}</b>:
             {{ post.excerpt | strip_html }}
-            ...<a href="{{ post.url }}" title="Permalink to Micropost">[more]</a>
+            ...<a href="{{ post.url }}" title="Permalink to Micropost">more</a>
           </p>
           {% endcase %}
           <br>
@@ -113,6 +123,15 @@ Display Posts by using Magazin Layout
       {% endfor %}
       </ul>
       </section>
+      {% if include.more %}
+      <section class="white">
+      <ul class="small right inherent squared icons">
+        <li>
+          {% include links/create.html name="more" display="right" uid=include.more title="more" %}
+        </li>
+      </ul>
+      </section>
+      {% endif %}
     {% endif %}
 
 {% comment %}
@@ -178,6 +197,15 @@ Display Posts by using Card Layout
 
     </div>
     </section>
+    {% if include.more %}
+    <section class="grey">
+    <ul class="small right inherent squared icons">
+      <li>
+        {% include links/create.html name="more" display="right" uid=include.more title="more" %}
+      </li>
+    </ul>
+    </section>
+    {% endif %}
   {% else %}
     <b>The given layout '{{ include.layout }}' is not valid!</b>
 

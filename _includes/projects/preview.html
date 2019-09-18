@@ -22,7 +22,7 @@ Filter Projects (by featured, category, list and limit)
 {% if include.limit %}
   {% assign bound = include.limit %}
 {% else %}
-  {% assign bound = 9999 %}
+  {% assign bound = 99999 %}
 {% endif %}
 
 {% comment %}
@@ -44,51 +44,63 @@ List / display Posts
 ================================================================================
 {% endcomment %}
 
+<section class="white">
 {% case include.display | downcase %}
 {% when 'list' %}
-{% assign count = items | size %}
-{% if count > 0 %}
-<ul>
-{% for item in items limit: bound %}
-<li>
-  <a href="{{ site.url }}{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
-</li>
-{% endfor %}
-</ul>
-{% endif %}
-
-{% else %}
-<div class="grid">
-
-{% for item in items limit: bound %}
-
-{% if item.figure.cloudinary %}
-  {% assign preview = "https://res.cloudinary.com/frootlab/image/upload/" | append: item.figure.cloudinary | append: ".svg" %}
-{% elsif item.figure.uri %}
-  {% assign preview = item.figure.uri %}
-{% endif %}
-
-{% if include.bookmarks %}
-<div class="cell" style="text-align: center; padding: 1rem;" id="{{ item.title | downcase }}">
-{% else %}
-<div class="cell" style="text-align: center; padding: 1rem;">
-{% endif %}
-
-  <a href="{{ site.url }}{{ item.url }}" title="{{ item.title }}">
-    <img style="height: 180px;" src="{{ preview }}">
-  </a>
-  <p>
-    <strong>
+  {% assign count = items | size %}
+  {% if count > 0 %}
+  <ul>
+    {% for item in items limit: bound %}
+    <li>
       <a href="{{ site.url }}{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
-    </strong>
-  </p>
-  <p>{{ item.subtitle }}</p>
-</div>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
 
-{% endfor %}
+{% else %}
+  <div class="grid">
 
-<div class="cell"></div>
-<div class="cell"></div>
+  {% for item in items limit: bound %}
 
-</div>
+  {% if item.figure.cloudinary %}
+    {% assign preview = "https://res.cloudinary.com/frootlab/image/upload/" | append: item.figure.cloudinary | append: ".svg" %}
+  {% elsif item.figure.uri %}
+    {% assign preview = item.figure.uri %}
+  {% endif %}
+
+  {% if include.bookmarks %}
+  <div class="cell" style="text-align: center; padding: 1rem;" id="{{ item.title | downcase }}">
+  {% else %}
+  <div class="cell" style="text-align: center; padding: 1rem;">
+  {% endif %}
+
+    <a href="{{ site.url }}{{ item.url }}" title="{{ item.title }}">
+      <img style="height: 180px;" src="{{ preview }}">
+    </a>
+    <p>
+      <strong>
+        <a href="{{ site.url }}{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
+      </strong>
+    </p>
+    <p>{{ item.subtitle }}</p>
+  </div>
+
+  {% endfor %}
+
+  <div class="cell"></div>
+  <div class="cell"></div>
+
+  </div>
 {% endcase %}
+</section>
+
+{% if include.more %}
+<section class="white">
+<ul class="small right inherent squared icons">
+  <li>
+    {% include links/create.html name="more" display="right" uid=include.more title="more" %}
+  </li>
+</ul>
+</section>
+{% endif %}

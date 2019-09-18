@@ -26,11 +26,8 @@ links:
 <hr>
 <section class="subtitle">
   <div class="subtext">
-    <ul class="tiny squared inherent icons" style="float: right; margin-top: -0.3em;">
-      {% include links/create.html name="more" uid="/microblog/news" title="more posts" %}
-    </ul>
     Updates and announcements
   </div>
 </section>
 
-{% include blog/preview.html limit=10 type="microblog" layout="magazine" %}
+{% include blog/preview.html limit=10 type="microblog" layout="magazine" more="/microblog/news" %}

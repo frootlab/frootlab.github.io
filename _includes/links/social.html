@@ -6,7 +6,9 @@
   {% endif %}
   <ul class="{{ class }}">
   {% for item in page.social %}
-    {% include links/create.html name=item.name uid=item.user type=item.type %}
+    <li>
+      {% include links/create.html name=item.name uid=item.user type=item.type %}
+    </li>
   {% endfor %}
   </ul>
 {% endif %}

@@ -105,7 +105,9 @@ Get related posts
       <div class="label" style="color: #6E7080;">Documentation</div>
       <ul class="icons">
         {% for item in page.docs %}
+        <li>
           {% include links/create.html name=item.name uid=item.user type=item.type %}
+        </li>
         {% endfor %}
       </ul>
     </div>
@@ -115,7 +117,9 @@ Get related posts
       <div class="label" style="color: #6E7080;">Source Code</div>
       <ul class="icons">
         {% for item in page.source %}
+        <li>
           {% include links/create.html name=item.name uid=item.user type=item.type %}
+        </li>
         {% endfor %}
       </ul>
     </div>
