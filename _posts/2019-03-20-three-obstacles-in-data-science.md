@@ -9,7 +9,7 @@ pdf: files/posts/2019-03-20-three-obstacles-in-data-science.pdf
 crumbs:
   - Blog
   - Three obstacles
-tags: [Brea, Rian, Deet, Vivid Code]
+tags: [Vivid Store, Vivid Node, Vivid DB, Vivid Code]
 ---
 
 **For the current development- and exploration process in data science three

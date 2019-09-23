@@ -8,8 +8,8 @@ image-meta:
 pdf: files/posts/2019-03-25-brea.pdf
 crumbs:
   - Blog
-  - Brea
-tags: [Brea]
+  - Old wine
+tags: [Vivid Store]
 ---
 
 **Since almost 10 years the rate of data science publications has been growing
@@ -42,24 +42,24 @@ the original algorithm. But also if the original algorithm is provided online,
 it can be grueling to properly identify it's scope and adapt it to the
 underlying prerequisites - only to decide about it's suitability!
 
-## What is Brea?
+## What is Vivid Store?
 
 In a nutshell: The development- and exploration process in data science is
 currently heavily impaired by the detour experienced by publications in paper
 form. While it became easier and easier to publish, it became harder and harder
 to get an overview. This is why we want to provide a better solution!
 
-[Brea](/brea.html) is a smart algorithm repository server, that enforces
-unified data interfaces for different algorithm categories. This allows Vivid
-Server not only to automatically evaluate and compare the hosted algorithms with
-respect to given metrics but thereupon also to determine, which algorithm of a
-given category and data domain is the currently best fitting
+[Vivid Store](/brea.html) (alias *Brea*) is a smart algorithm repository server,
+that enforces unified data interfaces for different algorithm categories. This
+allows Vivid Server not only to automatically evaluate and compare the hosted
+algorithms with respect to given metrics but thereupon also to determine, which
+algorithm of a given category and data domain is the currently best fitting
 ([CBF](/blog/tags#CBF)) algorithm with respect to some metric. An example for
 such a metric would be the average prediction accuracy within a fixed set of
 gold standard samples of the respective domain of application (e.g. latin
 handwriting samples, spoken word samples, TCGA gene expression data, etc.).
 
-According to our [conviction](/about#us) Brea is [free and
+According to our [conviction](/about#us) Vivid Store is [free and
 open-source](https://en.wikipedia.org/wiki/Free_and_open-source_software), based
 on the [Python](https://www.python.org/) programming language and actively
 developed as part of our [Vivid Code](/vivid) framework.

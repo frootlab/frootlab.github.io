@@ -1,5 +1,5 @@
 ---
-title: Rian
+title: Vivid Node
 subtitle: Rapid Prototyping System for Data Analysis
 slogan: High Performance Data Analysis Processor
 featured: true
@@ -13,6 +13,7 @@ figure:
 backdrop: white
 permalink: /projects/rian.html
 redirect_from:
+  - /rian
   - /rian.html
   - /nemoa.html
   - /projects/nemoa.html
@@ -34,25 +35,25 @@ source:
   - name: github
     user: frootlab/rian
   - name: pypi
-    user: rian
+    user: vivid-node
     type: project
 ---
 
-**Rian** is a machine learning and data analysis framework with rapid
-prototyping and cloud assisted building and deployment.  Thereby individual code
-blocks are automatically retrieved from collaborative algorithm repositories,
-that provide the currently best fitting solutions for individual tasks. Rian is
-based on the [Python](https://www.python.org/) programming language and actively
-developed as the client component of the [Vivid Code](/vivid) framework.
+**Vivid Node** is a [Python](https://www.python.org/) based machine learning and
+data analysis framework with rapid prototyping and cloud assisted building and
+deployment. Thereby individual code blocks are automatically retrieved from
+collaborative algorithm repositories, that provide the currently best fitting
+solutions for individual tasks.
 
 {% include article/figure.html url="/images/fig/rian.svg"
-  description="Processing of data analysis flows using Rian" %}
+  description="Processing of data analysis flows using Vivid Node" %}
 
-The key goal of Rian is to provide a long-term data analysis framework, which
+The key goal of Vivid Node is to provide a long-term data analysis framework, which
 seemingly integrates into existing enterprise data environments and thereby
-supports collaborative data science. To achieve this goal Rian orchestrates
-established Python frameworks like [TensorFlow](https://www.tensorflow.org/)
-and [SQLAlchemy](https://www.sqlalchemy.org/) and dynamically extends their
+supports collaborative data science. To achieve this goal Vivid Node
+orchestrates established Python frameworks like
+[TensorFlow](https://www.tensorflow.org/) and
+[SQLAlchemy](https://www.sqlalchemy.org/) and dynamically extends their
 capabilities by community driven algorithms (e.g. for [probabilistic graphical
 modeling](https://en.wikipedia.org/wiki/Graphical_model), [machine
 learning](https://en.wikipedia.org/wiki/Machine_learning) and [structured

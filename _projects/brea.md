@@ -1,5 +1,5 @@
 ---
-title: Brea
+title: Vivid Store
 subtitle: "Autoevaluating Algorithm Repository"
 slogan: "Autoevaluating Algorithm Repository"
 featured: true
@@ -14,6 +14,7 @@ backdrop: white
 form-logo: "/images/svg/brea.svg"
 permalink: /projects/brea.html
 redirect_from:
+  - /brea
   - /brea.html
   - /motley.html
   - /projects/motley.html
@@ -35,31 +36,31 @@ source:
   - name: github
     user: frootlab/brea
   - name: pypi
-    user: brea
+    user: vivid-store
     type: project
 ---
 
-**Brea** is a code repository with integrated evaluation of algorithms. Brea is
-based on the [Python](https://www.python.org/) programming language and actively
-developed as the server component of the [Vivid Code](/vivid) framework.
+**Vivid Store** is a [Python](https://www.python.org/) based algorithm
+repository with integrated evaluation and ranking. This allows the resolution of
+abstract code requests by *Currently Best Fitting* algorithms, as required by
+the *Cloud-Assisted Meta Programming* paradigm.
 
 {% include article/figure.html url="/images/fig/brea.svg"
-  description="Resolution of currently best fitting algorithms using a Brea cluster" %}
+  description="Resolution of abstract code requests by currently best fitting
+  algorithms, using a self contained cluster of multiple Vivid Stores" %}
 
-The primary goal of Brea is to serve as an algorithm catalog to allow the usage
-of abstract **currently best fitting** (CBF) algorithms, as required by the
-**Cloud-Assisted Meta Programming** (CAMP) paradigm. Thereby Brea is required to
-host and deliver algorithms as well as to cyclically evaluate and index them
-with respect to their corresponding metrics, using
-[Rian](https://github.com/frootlab/rian). An example for such a metric would be
-the average prediction accuracy within a fixed set of gold standard samples of
-the respective domain of application (e.g. latin handwriting samples, spoken
-word samples, TCGA gene expression data, etc.). Consequently Brea is also
-required to host or connect these samples by using
-[Deet](https://github.com/frootlab/deet).
+The resolution mechanism of a Vivid Store is based on the comprehensive
+evaluation and ranking of all hosted algorithms. This evaluation, which uses
+[Vivid Node](/rian), is performed with respect to all evaluation metrices, that
+are known to the store. Important examples for such metrices are the prediction
+errors for fixed sets of gold standard samples of different data domain, like
+latin handwriting samples, spoken word samples, TCGA gene expression data, etc.
+Accordingly Vivid Stores use an universal data interface, implemented by [Vivid
+DB](/deet).
 
-Due to this approach Brea allows the implementation of smart analytics
-projects, that are automatically kept up-to-date by a minimum of maintenance
-costs. Also Brea supports scientific applications, by facilitating a local
-(workgroup, lab, institution) or global publication, application and evaluation
-of algorithms.
+This approach allows Vivid Stores to dynamically resolve abstract code requests
+(AC-request), which only comprise (1) an algorithm category, (2) a data type and
+(3) the applied evaluation metric. The response to an AC-Request is the offer of
+the currently best fitting algorithm (CBF-offer). This step is important, as it
+allows the client sided choice from multiply Vivid Stores and therefore
+recursive AC-Request within a cluster of self contained Vivid Stores.

@@ -13,8 +13,9 @@ figure:
 backdrop: white
 permalink: /projects/hup.html
 redirect_from:
-  - /flib.html
+  - /hup
   - /hup.html
+  - /flib.html
   - /projects/flib.html
 stage: Various
 version: 0.9.2
@@ -39,11 +40,11 @@ source:
 ---
 
 **Hup** is a multi-purpose [Python](https://www.python.org/) library, which
-primarily aims to support the main [Frootlab projects](/projects) by serving as
-a common base library. It was originally created in 2019 for  [Vivid
-Code](/vivid) and it's components [Deet](/deet), [Rian](/rian) and
-[Brea](/brea). The majority of the provided modules, however, are kept generic
-to facilitate their application beyond Frootlab projects as well.
+primarily aims to support our main [main projects](/projects#main) by serving as
+a common base library. It was originally created in 2019 for the [Vivid
+Code](/vivid) framework and it's components. The majority of the provided
+modules, however, are kept generic to facilitate their application beyond our
+projects as well.
 
 **Generic Modules**
 

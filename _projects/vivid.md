@@ -13,13 +13,14 @@ figure:
 backdrop: white
 permalink: /projects/vivid.html
 redirect_from:
+  - /vivid
   - /vivid.html
   - /liquid.html
   - /projects/liquid.html
 subprojects:
-  - Deet
-  - Rian
-  - Brea
+  - Vivid DB
+  - Vivid Node
+  - Vivid Store
 ---
 
 **Vivid Code** is a pioneering software framework for next generation data
