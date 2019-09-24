@@ -59,7 +59,6 @@ Display Posts by using List Layout
         <li>
           {{ post.date | date: '%d. %B, %y' }}:
           <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li>
       {% endfor %}
       </ul>
       </section>
@@ -84,20 +83,20 @@ Display Posts by using Magazin Layout
   {% when 'magazine' %}
     {% assign count = posts | size %}
     {% if count > 0 %}
-      <section class="white">
+    <section class="white">
       <ul>
       {% for post in posts limit: bound %}
+        {% assign author = site.authors | where: 'title', post.author | first %}
         <li>
           <small>
             <i class="far fa-user"></i>&nbsp;
-            {% assign author = site.authors | where: 'title', post.author | first %}
-            {% if author %}
             <author>
+        {% if author %}
               <a href="{{ author.url }}">{{ author.title }}</a>
+        {% else %}
+              Anonymous
+        {% endif %}
             </author>
-            {% else %}
-            Anonymous
-            {% endif %}
             &emsp;
             <a href="{{ post.url }}" title="Permalink to Micropost">
               <i class="far fa-calendar-alt"></i>&nbsp;
@@ -106,32 +105,32 @@ Display Posts by using Magazin Layout
               </time>
             </a>
           </small>
-          {% case include.type %}
+        {% case include.type %}
           {% when 'microblog' %}
           <p>
             {{ post.content }}
           </p>
-          {% else %}
+        {% else %}
           <p>
             <b>{{ post.title }}</b>:
             {{ post.excerpt | strip_html }}
-            ...<a href="{{ post.url }}" title="Permalink to Micropost">more</a>
+              <a href="{{ post.url }}" title="Permalink to Micropost">more</a>
           </p>
-          {% endcase %}
+        {% endcase %}
           <br>
         </li>
       {% endfor %}
       </ul>
-      </section>
+
       {% if include.more %}
-      <section class="white">
       <ul class="small right inherent squared icons">
         <li>
           {% include links/create.html name="more" display="right" uid=include.more title="more" %}
         </li>
       </ul>
-      </section>
       {% endif %}
+
+      </section>
     {% endif %}
 
 {% comment %}
@@ -196,16 +195,17 @@ Display Posts by using Card Layout
       <div class="cell"></div>
 
     </div>
-    </section>
+
     {% if include.more %}
-    <section class="grey">
     <ul class="small right inherent squared icons">
       <li>
         {% include links/create.html name="more" display="right" uid=include.more title="more" %}
       </li>
     </ul>
-    </section>
     {% endif %}
+
+    </section>
+
   {% else %}
     <b>The given layout '{{ include.layout }}' is not valid!</b>
 

@@ -44,10 +44,10 @@ Get related posts
   </h3>
 </section>
 
-<hr>
 <section class="subtitle" id="about">
   <h3>About</h3>
 </section>
+
 <section>
   {{ content }}
   {% if page.license %}
@@ -68,9 +68,7 @@ Get related posts
 <section class="subtitle" id="subprojects">
   <h3>Subprojects</h3>
 </section>
-<section class="white">
-  {% include projects/preview.html display="cards" list=page.subprojects %}
-</section>
+{% include projects/preview.html display="cards" list=page.subprojects %}
 {% endif %}
 
 {% if pypi-pkg %}

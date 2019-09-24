@@ -1,6 +1,7 @@
 article {
   padding: 3rem 5rem 7rem;
   font-family: 'Merriweather', serif;
+  counter-reset: h2;
 
   h1,
   h2,
@@ -23,15 +24,38 @@ article {
 
   h2 {
     font-size: 1.5rem;
+
+    &.enum {
+      counter-reset: h3;
+
+      &:before {
+        counter-increment: h2;
+        content: counter(h2) ". "
+      }
+    }
   }
 
   h3 {
     font-size: 1.3rem;
+
+    &.enum {
+      counter-reset: h4;
+
+      &:before {
+        counter-increment: h3;
+        content: counter(h2) "." counter(h3) ". "
+      }
+    }
   }
 
   h4 {
     font-size: 1rem;
     font-weight: bold;
+
+    &.enum:before {
+      counter-increment: h4;
+      content: counter(h2) "." counter(h3) "." counter(h4) ". "
+    }
   }
 
   h5 {
@@ -101,42 +125,22 @@ article {
   display: flex;
   align-items: center;
   font-size: 0.9em;
-}
 
-.separator-left {
-
-  &:before {
+  &.left:before,
+  &.right:after {
     content: '';
-    flex: 0.1;
     height: 2px;
     background: $black-t10;
+    flex: 0.1;
     margin-right: 10px;
   }
 
-  &:after {
+  &.left:after,
+  &.right:before {
     content: '';
-    flex: 1;
     height: 2px;
     background: $black-t10;
-    margin-left: 10px;
-  }
-}
-
-.separator-right {
-
-  &:before {
-    content: '';
     flex: 1;
-    height: 2px;
-    background: $black-t10;
-    margin-right: 10px;
-  }
-
-  &:after {
-    content: '';
-    flex: 0.1;
-    height: 2px;
-    background-color: $black-t10;
     margin-left: 10px;
   }
 }
@@ -269,21 +273,15 @@ article .share-article {
 
     .separator {
       margin: 0 0 1rem 0;
-    }
 
-    .separator-left,
-    .separator-right {
-
-      &:before {
-        content: '';
-        flex: 0;
-        margin: 0;
-      }
-
-      &:after {
-        content: '';
-        flex: 0;
-        margin: 0;
+      &.left,
+      &.right {
+          &:before,
+          &:after {
+            content: '';
+            flex: 0;
+            margin: 0;
+          }
       }
     }
 

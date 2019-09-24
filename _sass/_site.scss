@@ -1,250 +1,274 @@
-body {
-  counter-reset: h2
+
+a {
+  color: $blue-l10;
+  outline: none;
+  text-decoration: none
 }
 
-/*
-  Enumerations
-*/
-
-h2.enum {
-  counter-reset: h3
+a:hover,
+a:active,
+a:focus,
+a:visited {
+  color: $blue-l10;
 }
 
-h3.enum {
-  counter-reset: h4
+table {
+  border-collapse: collapse;
+  border-spacing: 0
 }
 
-h2.enum:before {
-  counter-increment: h2;
-  content: counter(h2) ". "
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle
 }
 
-h3.enum:before {
-  counter-increment: h3;
-  content: counter(h2) "." counter(h3) ". "
+q,
+blockquote {
+  quotes: none
 }
 
-h4.enum:before {
-  counter-increment: h4;
-  content: counter(h2) "." counter(h3) "." counter(h4) ". "
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+  content: none
 }
 
-.projects-menu {
-  font-size: 0;
-  height: 80%;
-  width: 100%;
-
-  > li {
-    display: inline-block;
-    width: calc(100% / 3);
-    height: 50%;
-    position: relative;
-    vertical-align: top;
-    float: left;
-    background-size: cover !important;
-
-    &:nth-child(8n + 1),
-    &:nth-child(8n + 2) {
-      width: 50%;
-      height: 70%;
-    }
-
-    &:nth-child(8n + 6) {
-      width: calc(200% / 3);
-      height: 100%;
-    }
-
-    a {
-      border: 30px solid transparent;
-      background: $black-t40;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      transition: background 0.2s linear;
-
-      &:hover:after,
-      &:hover:before {
-        transform: scale(1);
-        transition: all 1s;
-      }
-
-      span {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 30px;
-        color: $white;
-        padding-right: 10px;
-        white-space: nowrap;
-        text-align: center;
-
-        strong {
-          color: rgba($white, 0.7);
-        }
-
-        em {
-          font-size: 20px;
-          line-height: 33px;
-          color: darken($white, 40%);
-        }
-      }
-
-      &:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        border-top: 1px solid rgba($white, 0.3);
-        border-bottom: 1px solid rgba($white, 0.3);
-        display: block;
-        height: 100%;
-        width: 100%;
-        transform: scale(0, 1);
-        transition: all 0.5s;
-      }
-
-      &:before {
-        content: "";
-        border-right: 1px solid rgba($white, 0.3);
-        border-left: 1px solid rgba($white, 0.3);
-        display: block;
-        height: 100%;
-        transform: scale(1, 0);
-        transition: all 0.5s;
-      }
-    }
-  }
+a img {
+  border: none
 }
 
-/* Create columns in post title sections */
-.columns {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+// Headers
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 2rem 0 0.5rem;
+  font-family: $base-font;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: 0.9em;
+}
+
+h6 {
+  font-size: 0.8em;
+}
+
+// Figures and images
+figure {
   display: flex;
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .column {
-    flex: 50%;
-    padding: 1.1em;
-  }
-}
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 2em 0;
 
-/* Post groups aggregate posts */
-.hidden {
-  display: none;
+  figcaption {
+    margin-bottom: 0.5em;
+    color: lighten($black, 50%);
+    font-size: 0.85em;
+    width: 100%;
+    text-align: center;
+  }
 
-  &:target {
+  img {
+    margin-bottom: 10px;
+  }
+
+  > a {
     display: block;
-  }
-}
-
-/* Light Weight Text */
-p.light {
-  color: darken($white, 60);
-  b,
-  strong,
-  code {
-    color: $ocean !important;
-    background: none;
-  }
-}
-
-// #project {
-//   .right-page {
-//     display: block;
-//     .content {
-//       height: auto;
-//       display: block;
-//       max-width: 800px;
-//     }
-//   }
-// }
-
-.tags {
-  margin-top: 20px;
-  > li {
-    display: inline-block;
-    background: darken($white, 5%);
-    padding: 7px 10px;
-    color: lighten($black, 28%);
-    font-size: 11px;
-    text-transform: uppercase;
-    > a {
-      color: $white;
-    }
-  }
-}
-
-.social-btn {
-  width: 2em;
-}
-
-.share-buttons {
-  position: absolute;
-  top: 32px;
-  left: 40px;
-  > .btn {
-    margin-bottom: 0;
-  }
-}
-
-/* Adjustments for smaller screens */
-@media screen and (max-width: 960px) {
-  .projects-menu {
-    height: 100%;
+    border: none !important;
   }
 
-  .projects-menu li {
-    width: 50% !important;
-    height: 50% !important;
-    float: left;
-  }
-
-  .share-buttons span {
-    display: none;
-  }
-}
-
-/* Adjustments for small screens */
-@media screen and (max-width: 640px) {
-  .posts-list {
-    margin-top: 80px;
-    > li {
-      .title {
-        max-width: 100%;
-      }
-      h2 {
-        font-size: 20px;
-      }
-      .date {
+  &.half {
+    @media only screen and (min-width: $small) {
+      > a, > img {
+        width: calc(50% - 4px);
         float: left;
-        display: block;
-        width: 100%;
-        padding-bottom: 10px;
+        margin-left: 1px;
+        margin-right: 1px;
+      }
+      figcaption {
+        clear: left;
       }
     }
   }
-  .article {
-    h2 {
-      font-size: 20px;
-      margin-bottom: 20px;
-    }
 
-    p,
-    li {
-      font-size: 16px;
-      line-height: 24px;
+  &.third {
+    @media only screen and (min-width: $small) {
+      > a, > img {
+        width: calc(33.3% - 6px);
+        float: left;
+        margin-left: 1px;
+        margin-right: 1px;
+      }
+      figcaption {
+        clear: left;
+      }
     }
-    ul > li {
-      margin-bottom: 10px;
-    }
-  }
-
-  .projects-menu li {
-    width: 100% !important;
-    height: 50% !important;
   }
 }
+
+@media only screen and (max-width: $small - 1px) {
+  figure {
+    justify-content: center;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  image-rendering: optimizeQuality;
+  margin: 0 auto;
+}
+
+// Blockquotes and cites
+blockquote {
+  margin: 2em 1em 2em 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-style: italic;
+  border-left: 0.25em solid $grey;
+
+  cite {
+    font-style: italic;
+    font-size: 0.85em;
+    &:before {
+      content: "\2014";
+      padding-right: 5px;
+    }
+  }
+}
+
+cite {
+  font-style: italic;
+  font-size: 0.85em;
+}
+
+// Definition lists
+dt {
+  border: 1px solid darken($white, 7%);
+  padding: 0.5em;
+  background-color: darken($white, 5%);
+  font-weight: bold;
+}
+
+dd {
+  padding: 0.5em 1em;
+  margin-left: 0;
+  margin-bottom: 2em;
+  border: 1px solid darken($white, 7%);
+  border-top: 0;
+}
+
+// table
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid darken($white, 7%);
+  margin-bottom: 1em;
+}
+
+thead {
+  background-color: darken($white, 5%);
+  border-bottom: 1px solid darken($white, 7%);
+}
+
+tr,
+td {
+  border-bottom: 1px solid darken($white, 7%);
+}
+
+th,
+td {
+  text-align: center;
+  border-right: 1px solid darken($white, 7%);
+  padding: 0.5em;
+  a {
+    text-decoration: none !important;
+  }
+}
+
+th:first-child,
+td:first-child {
+  text-align: left;
+}
+
+th:last-child,
+td:last-child {
+  text-align: right;
+}
+
+.gist {
+  tr,
+  td {
+    border-bottom: 0;
+  }
+}
+
+// code
+pre {
+    overflow-x: auto; // add scrollbars to wide code blocks
+    padding: 1rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  p > code,
+  a > code,
+  li > code,
+  figcaption > code,
+  td > code {
+    padding: 0.1rem 0.2rem;
+    font-size: 0.9em;
+    border-radius: 2px;
+    background-color: darken($white, 5%);
+    font-family: $base-font;
+  }

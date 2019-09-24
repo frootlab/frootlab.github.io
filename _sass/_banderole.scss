@@ -31,13 +31,6 @@
   a:focus {
     color: $blue-l10;
   }
-
-  .tags > li {
-    background: none;
-    border: 1px solid $white-t40;
-    color: $white-t90;
-    font-size: 15px;
-  }
 }
 
 @media screen and (max-width: 960px) {
@@ -45,14 +38,10 @@
     background: linear-gradient(177deg,
       $black-t0 0%,
       $black-t0 5.1vw,
-      $black-t80 5.2vw,
+      $black-t80 calc(5.1vw + 1px),
       $black-t80 100%);
     padding: calc(5vw + 1rem) 1rem 1rem 1rem;
   }
-}
-
-@media screen and (max-width: 640px) {
-
 }
 
 @media print {

@@ -8,7 +8,7 @@
 }
 
 /* Icons */
-#front ul.icons {
+#left-page ul.icons {
   > li a {
     color: $white-t90;
 
@@ -89,7 +89,7 @@
 
 /* Adjustments for print */
 @media print {
-  #front .title-page {
+  #left-page .title-page {
     color: $ocean;
     display: block;
     position: static;

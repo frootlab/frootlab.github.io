@@ -11,7 +11,6 @@
   h3,
   p,
   section,
-  .panel,
   .info {
     box-sizing: border-box;
     font-family: "Roboto", Helvetica, Arial, sans-serif;
@@ -22,8 +21,10 @@
     padding: 1rem 5rem;
     width: 100%;
     margin: 0;
+    border-top: 1px solid white;
 
     &:first-of-type {
+      border-top: none;
       padding-top: 3rem;
       margin-top: auto;
     }
@@ -32,40 +33,46 @@
       padding-bottom: 7rem;
       margin-bottom: auto;
     }
-  }
 
-  section.ocean {
-    background: $ocean;
+    &.ocean {
+      background: $ocean;
 
-    * {
-      color: white;
+      * {
+        color: white;
+      }
     }
-  }
 
-  section.title {
-    background:
-      linear-gradient(-45deg, darken($grey, 15%), darken($grey, 10%) 30%);
-    box-shadow:
-      inset 0 -1px 5px 0 rgba(0,0,0,.013),
-      inset 0 -2px 2px 0 rgba(0,0,0,.009),
-      inset 0 -3px 1px -2px rgba(0,0,0,.013);
-  }
+    &.title {
+      background:
+        linear-gradient(-45deg, darken($grey, 15%), darken($grey, 10%) 30%);
+      box-shadow:
+        inset 0 -1px 5px 0 rgba(0,0,0,.013),
+        inset 0 -2px 2px 0 rgba(0,0,0,.009),
+        inset 0 -3px 1px -2px rgba(0,0,0,.013);
+    }
 
-  section.subtitle {
-    background:
-      linear-gradient(-45deg, darken($grey, 3%), lighten($grey, 2%) 30%);
-    box-shadow:
-      inset 0 -1px 5px 0 rgba(0,0,0,.013),
-      inset 0 -2px 2px 0 rgba(0,0,0,.009),
-      inset 0 -3px 1px -2px rgba(0,0,0,.013);
-  }
+    &.subtitle {
+      background:
+        linear-gradient(-45deg, darken($grey, 3%), lighten($grey, 2%) 30%);
+      box-shadow:
+        inset 0 -1px 5px 0 rgba(0,0,0,.013),
+        inset 0 -2px 2px 0 rgba(0,0,0,.009),
+        inset 0 -3px 1px -2px rgba(0,0,0,.013);
 
-  section.white {
-    background: white;
-  }
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-weight: 300;
+      color: #6E7080;
+    }
 
-  section.grey {
-    background: lighten($grey, 2%);
+    &.white {
+      background: white;
+    }
+
+    &.grey {
+      background: lighten($grey, 2%);
+    }
   }
 
   h1,
@@ -93,7 +100,7 @@
     color: $dark-grey;
     font-size: 1em;
     margin: 1em 0;
-    padding-top: 0;
+    padding: 0;
     line-height: 1.6;
   }
 
@@ -112,27 +119,13 @@
     font-weight: 400;
   }
 
-  .panel {
-    background: lighten($grey, 5%);
-    padding: 2rem;
-    margin: 0;
-    position: relative;
-    color: $ocean;
-    border-radius: 2px;
-    box-shadow:
-      0 3px 6px $black-t15,
-      0 3px 6px $black-t25;
+  /* Post groups aggregate posts */
+  .hidden {
+    display: none;
 
-    p {
-      color: $ocean;
-      font-size: 1em;
-      margin: 0;
-      padding: 0;
+    &:target {
+      display: block;
     }
-  }
-
-  .flat {
-    box-shadow: none !important;
   }
 
   .thin {
@@ -168,31 +161,6 @@
   padding-bottom: 0.8rem;
 }
 
-/* SubText */
-.subtext {
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 1em;
-  font-weight: thin;
-  padding: 0.7rem 0;
-  color: #333;
-  color: #6E7080;
-}
-
-.form .grey-box {
-  background: $black-t5;
-  padding: 2em;
-  padding: 1.5rem 1rem !important;
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  color: $ocean;
-
-  p {
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
-    font-weight: 300;
-    color: $ocean;
-  }
-}
-
 .contact-form-container {
   width: 100%;
   margin: 0 auto;
@@ -210,92 +178,70 @@
   color: #555;
 }
 
-#contact-form fieldset {
-  border: none !important;
-  margin: 0 0 10px;
-  min-width: 100%;
-  padding: 0;
-  width: 100%;
-}
+#contact-form {
 
-#contact-form input[type="text"],
-#contact-form input[type="email"],
-#contact-form input[type="tel"],
-#contact-form input[type="url"],
-#contact-form textarea,
-#contact-form button[type="submit"] {
-  font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
-}
+  fieldset {
+    border: none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+  }
 
-#contact-form h3 {
-  display: block;
-  font-size: 30px;
-  font-weight: 300;
-  margin-bottom: 10px;
-}
+  input,
+  button,
+  textarea {
+    font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+  }
 
-#contact-form h4 {
-  margin: 5px 0 15px;
-  display: block;
-  font-size: 13px;
-  font-weight: 400;
-}
+  input,
+  textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: $white;
+    margin: 0 0 5px;
+    padding: 10px;
 
-#contact-form input[type="text"],
-#contact-form input[type="email"],
-#contact-form input[type="tel"],
-#contact-form input[type="url"],
-#contact-form textarea {
-  width: 100%;
-  border: 1px solid #ccc;
-  background: $white;
-  margin: 0 0 5px;
-  padding: 10px;
-}
+    &:hover {
+      transition: border-color 0.3s ease-in-out;
+      border: 1px solid #AAA;
+    }
 
-#contact-form input[type="text"]:hover,
-#contact-form input[type="email"]:hover,
-#contact-form input[type="tel"]:hover,
-#contact-form input[type="url"]:hover,
-#contact-form textarea:hover {
-  transition: border-color 0.3s ease-in-out;
-  border: 1px solid #aaa;
-}
+    &:focus {
+      outline: 0;
+      border: 1px solid #AAA;
+    }
+  }
 
-#contact-form textarea {
-  height: 100px;
-  max-width: 100%;
-  resize: none;
-}
+  textarea {
+    height: 100px;
+    max-width: 100%;
+    resize: none;
+  }
 
-#contact-form button[type="submit"] {
-  cursor: pointer;
-  width: 100%;
-  border: none;
-  background: #4CAF50;
-  color: $white;
-  margin: 0 0 5px;
-  padding: 10px;
-  font-size: 15px;
-}
+  button {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #4CAF50;
+    color: $white;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
 
-#contact-form button[type="submit"]:hover {
-  background: #43A047;
-  transition: background-color 0.3s ease-in-out;
-}
+    &:hover {
+      background: #43A047;
+      transition: background-color 0.3s ease-in-out;
+    }
 
-#contact-form button[type="submit"]:active {
-  box-shadow: inset 0 1px 3px $black-t50;
+    &:active {
+      box-shadow: inset 0 1px 3px $black-t50;
+    }
+  }
 }
 
 .copyright {
   text-align: center;
-}
-
-#contact-form input:focus,
-#contact-form textarea:focus {
-  outline: 0;
-  border: 1px solid #aaa;
 }
 
 /* Grid Layout for cards */
@@ -305,13 +251,12 @@
   padding: 0;
   margin: 0;
   grid-gap: 1.4rem;
-}
 
-/* Cells in grid */
-.cell {
-  display: block;
-  margin: 0;
-  padding: 0;
+  .cell {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 /* Cards */
@@ -328,6 +273,22 @@
   &:active {
     transition: transform 50ms ease;
     transform: scale(0.98);
+  }
+
+  &:hover {
+    .card-content {
+      min-height: 40%;
+      border-radius: 0 0 0.1rem 0.1rem;
+
+      .card-text {
+        opacity: 0;
+        padding-top: 0;
+      }
+    }
+    .card-image {
+      border-radius: 0.1rem 0.1rem 0px 0px;
+      transition: all .4s ease;
+    }
   }
 }
 
@@ -369,24 +330,6 @@
 
     color: $dark-grey;
     height: 0;
-    transition: all .4s ease;
-  }
-}
-
-.card:hover {
-
-  .card-content {
-    min-height: 40%;
-    border-radius: 0 0 0.1rem 0.1rem;
-
-    .card-text {
-      opacity: 0;
-      padding-top: 0;
-    }
-  }
-
-  .card-image {
-    border-radius: 0.1rem 0.1rem 0px 0px;
     transition: all .4s ease;
   }
 }

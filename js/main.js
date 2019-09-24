@@ -31,12 +31,12 @@ window.onscroll = function() {
 
 // Fix title-page padding
 document.addEventListener("DOMContentLoaded", function() {
-    if (document.getElementById("front")) {
+    if (document.getElementById("left-page")) {
       var rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
-      var oCont = document.querySelector("#front .content");
+      var oCont = document.querySelector("#left-page .content");
       var oCrum = document.getElementById("crumbs");
       oCont.style.paddingTop = (oCrum.clientHeight + rem).toString() + "px";
-      var oBand = document.querySelector("#front .banderole");
+      var oBand = document.querySelector("#left-page .banderole");
       oCont.style.paddingBottom = (oBand.clientHeight + rem).toString() + "px";
   }
 });
