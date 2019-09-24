@@ -1,7 +1,7 @@
 ---
 title: Vivid Node
-subtitle: Rapid Prototyping System for Data Analysis
-slogan: High Performance Data Analysis Processor
+subtitle: Smart Data Analysis Processor
+slogan: Smart Data Analysis Processor
 featured: true
 category: "main"
 popularity: 2

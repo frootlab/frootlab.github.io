@@ -1,7 +1,7 @@
 ---
 title: Vivid Store
-subtitle: "Autoevaluating Algorithm Repository"
-slogan: "Autoevaluating Algorithm Repository"
+subtitle: "Smart Algorithm Repository"
+slogan: "Smart Algorithm Repository"
 featured: true
 category: "main"
 popularity: 1
