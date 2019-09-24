@@ -35,9 +35,9 @@ permalink: /blog/tags.html
 
 {% for tag in tags %}
 <div id="{{ tag }}" class="hidden">
-  <section class="title">
+  <header>
     <h3>{{ tag }}</h3>
-  </section>
+  </header>
   {% include blog/preview.html layout="cards" tag=tag type="blog" %}
 </div>
 {% endfor %}

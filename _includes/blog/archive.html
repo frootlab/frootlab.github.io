@@ -29,8 +29,8 @@ Display Post Preview using given Layout
 {% endcomment %}
 
 {% for year in years %}
-<section class="subtitle" style="text-align: center;">
-  <h3>{{ year }}</h3>
+<section class="paragraph" style="text-align: center;">
+  {{ year }}
 </section>
 
 {% include blog/preview.html year=year type=include.type category=include.category layout=include.layout %}

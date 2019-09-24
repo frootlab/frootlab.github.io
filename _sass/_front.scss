@@ -2,7 +2,7 @@
 
 @keyframes showup {
   0% {opacity:0;}
-  5% {opacity:0;}
+  1% {opacity:0;}
   100% {opacity:1;}
 }
 
@@ -23,7 +23,7 @@
   max-width: 26em;
   width: 100%;
   margin: 0 auto;
-  animation: showup 0.5s normal forwards ease-in-out;
+  animation: showup 0.3s normal forwards ease-in-out;
 
   h1 {
     font-size: 2.5em;

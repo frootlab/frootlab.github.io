@@ -37,17 +37,16 @@ Get related posts
 {% include front/trailer.html %}
 
 {% include form/header.html %}
-<section class="ocean">
-  <h3>
-    <b>{{ page.title }}</b>
+<header>
+  <h2>
+    {{ page.title }}
     {% if page.version %}<small>v{{ page.version }}</small>{% endif %}
-  </h3>
-</section>
+  </h2>
+</header>
 
-<section class="subtitle" id="about">
-  <h3>About</h3>
-</section>
-
+<header id="about">
+  <h4>About</h4>
+</header>
 <section>
   {{ content }}
   {% if page.license %}
@@ -65,16 +64,16 @@ Get related posts
 </section>
 
 {% if page.subprojects %}
-<section class="subtitle" id="subprojects">
-  <h3>Subprojects</h3>
-</section>
+<header id="subprojects">
+  <h4>Subprojects</h4>
+</header>
 {% include projects/preview.html display="cards" list=page.subprojects %}
 {% endif %}
 
 {% if pypi-pkg %}
-<section class="subtitle" id="quickstart">
-  <h3>Quickstart</h3>
-</section>
+<header id="quickstart">
+  <h4>Quickstart</h4>
+</header>
 <section>
   <p><b>Installation using PIP</b></p>
   <div class="language-shell highlighter-rouge">
@@ -86,17 +85,16 @@ Get related posts
 {% endif %}
 
 {% if has-posts %}
-<section class="subtitle" id="posts">
-  <h3>Posts</h3>
-</section>
+<header id="posts">
+  <h4>Posts</h4>
+</header>
 {{ posts-html }}
 {% endif %}
 
 {% if has-links %}
-<section class="subtitle" id="resources">
-  <h3>Resources</h3>
-</section>
-
+<header id="resources">
+  <h4>Resources</h4>
+</header>
 <section>
   <div style="display: flex; padding: 1rem 0;">
     {% if page.docs %}

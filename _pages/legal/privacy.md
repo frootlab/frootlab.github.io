@@ -10,9 +10,25 @@ permalink: /legal/privacy.html
 redirect_from: /privacy.html
 crumbs:
   - Privacy
+links:
+  - name: TOC
+    url: "#toc"
+    title: Table of Contents
+  - name: Overview
+    url: "#overview"
+    title: Overview
+  - name: Data Collection
+    url: "#details"
+    title: Data Collection
+  - name: Data Security
+    url: "#data-security"
+    title: Data Security
+  - name: Remarks
+    url: "#remarks"
+    title: Remarks
 ---
 
-## Table of contents
+## Table of contents <a name="toc" href="{{ site.url }}{{ page.url }}#toc" class="bookmark"><i class="fas fa-link"></i></a>
 1. [Data privacy](#overview)
     1. [Who is responsible for the data collection on this website?](#responsibility)
     1. [How is data collected on this website?](#data-collection)

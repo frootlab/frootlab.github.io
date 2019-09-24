@@ -36,10 +36,9 @@ permalink: /microblog/tags.html
 
 {% for tag in tags %}
 <div id="{{ tag }}" class="hidden">
-  <section class="title">
+  <header>
     <h3>{{ tag }}</h3>
-  </section>
-
+  </header>
   {% include blog/preview.html tag=tag type="microblog" layout="list" %}
 </div>
 {% endfor %}

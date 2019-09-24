@@ -16,9 +16,9 @@ navid: blog
 
 {% for cat in bag %}
 <div id="{{ cat.id }}" class="hidden">
-  <section class="title">
+  <header>
     <h3>{{ cat.name }}</h3>
-  </section>
+  </header>
   {% include blog/preview.html layout="cards" category=cat.id %}
 </div>
 {% endfor %}

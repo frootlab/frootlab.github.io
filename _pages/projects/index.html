@@ -28,32 +28,23 @@ links:
     title: Frootlab Shared Library
 ---
 
-<section class="title" id="super">
-  <h3><b>Superordinate</b></h3>
-</section>
+<header id="super">
+  <h3>Superordinate</h3>
+  <p>Projects that shape our <a href="/about#mission">Mission</a></p>
+</header>
+{% include projects/preview.html display="cards" category="super"
+  bookmarks=true %}
 
-<section class="subtitle">
-  Projects that shape our <a href="/about#mission">Mission</a>
-</section>
+<header id="main">
+  <h3>Main</h3>
+  <p>Projects that constitute our superordinate projects</p>
+</header>
+{% include projects/preview.html display="cards" category="main"
+  bookmarks=true %}
 
-{% include projects/preview.html display="cards" category="super" bookmarks=true %}
-
-<section class="title" id="main">
-  <h3><b>Main</b></h3>
-</section>
-
-<section class="subtitle">
-  Projects that constitute our superordinate projects
-</section>
-
-{% include projects/preview.html display="cards" category="main" bookmarks=true %}
-
-<section class="title" id="auxiliary">
-  <h3><b>Auxiliary</b></h3>
-</section>
-
-<section class="subtitle">
-  Projects that support our main projects
-</section>
-
-{% include projects/preview.html display="cards" category="auxiliary" bookmarks=true %}
+<header id="auxiliary">
+  <h3>Auxiliary</h3>
+  <p>Projects that support our main projects</p>
+</header>
+{% include projects/preview.html display="cards" category="auxiliary"
+  bookmarks=true %}

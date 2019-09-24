@@ -13,22 +13,14 @@ permalink: /blog/index.html
 redirect_from: /blog.html
 ---
 
-<section class="title">
-  <h3><b>Corporate Blog</b></h3>
-</section>
-
-<section class="subtitle">
-  Articles about us and our projects
-</section>
-
+<header>
+  <h3>Corporate Blog</h3>
+  <p>Articles about us and our projects</p>
+</header>
 {% include blog/preview.html layout="cards" limit=3 type="blog" category="corporate" more="/blog/corporate" %}
 
-<section class="title">
-  <h3><b>Science Blog</b></h3>
-</section>
-
-<section class="subtitle">
-  Articles about pure and applied data science
-</section>
-
+<header>
+  <h3>Science Blog</h3>
+  <p>Articles about pure and applied data science</p>
+</header>
 {% include blog/preview.html layout="cards" limit=3 type="blog" category="science" more="/blog/science" %}

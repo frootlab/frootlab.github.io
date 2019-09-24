@@ -12,15 +12,15 @@ description: "An archive of all science blog posts sorted by date"
 permalink: /blog/science/index.html
 ---
 
-<section class="ocean">
-  <h3>
+<header>
+  <h2>
     <ul class="tiny squared icons" style="float: right; margin-top: -0.3em;">
       <li>
         {% include links/create.html name="feed" uid="/feed/science.xml" %}
       </li>
     </ul>
-    <b>Science Blog</b>
-  </h3>
-</section>
+    Science Blog
+  </h2>
+</header>
 
 {% include blog/archive.html type="blog" category="science" layout="cards" %}

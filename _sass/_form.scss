@@ -17,24 +17,57 @@
     font-weight: 300;
   }
 
-  section {
-    padding: 1rem 5rem;
-    width: 100%;
+  header {
+    padding: 0;
     margin: 0;
-    border-top: 1px solid white;
 
-    &:first-of-type {
-      border-top: none;
+    h1, h2, h3, h4, p {
+      padding: 1rem 5rem;
+      width: 100%;
+      margin: 0;
+      border-top: 1px solid white;
+      box-shadow:
+        inset 0 -1px 5px 0 rgba(0,0,0,.013),
+        inset 0 -2px 2px 0 rgba(0,0,0,.009),
+        inset 0 -3px 1px -2px rgba(0,0,0,.013);
+    }
+
+    &:first-child {
+      h1, h2, h3, h4, p {
+        &:first-child {
+          border-top: none;
+          padding-top: 5rem;
+          margin-top: auto;
+        }
+      }
+    }
+
+    &:last-child {
+      h1, h2, h3, h4, p {
+        &:last-child {
+          padding-bottom: 7rem;
+          margin-bottom: auto;
+        }
+      }
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Roboto', Helvetica, Arial, sans-serif;
+      font-size: 1.5em;
       padding-top: 3rem;
-      margin-top: auto;
+      padding-bottom: 1.5rem;
     }
 
-    &:last-of-type {
-      padding-bottom: 7rem;
-      margin-bottom: auto;
+    p {
+      font-family: 'Roboto Condensed', sans-serif;
+      color: #6E7080;
+      background:
+        linear-gradient(-45deg, darken($grey, 3%), lighten($grey, 2%) 30%);
     }
 
-    &.ocean {
+    h2 {
+      font-weight: 400;
+      color: white;
       background: $ocean;
 
       * {
@@ -42,28 +75,36 @@
       }
     }
 
-    &.title {
+    h3 {
+      font-weight: 400;
+      color: $ocean;
       background:
         linear-gradient(-45deg, darken($grey, 15%), darken($grey, 10%) 30%);
-      box-shadow:
-        inset 0 -1px 5px 0 rgba(0,0,0,.013),
-        inset 0 -2px 2px 0 rgba(0,0,0,.009),
-        inset 0 -3px 1px -2px rgba(0,0,0,.013);
     }
 
-    &.subtitle {
+    h4 {
+      font-weight: 300;
+      color: $ocean;
       background:
         linear-gradient(-45deg, darken($grey, 3%), lighten($grey, 2%) 30%);
-      box-shadow:
-        inset 0 -1px 5px 0 rgba(0,0,0,.013),
-        inset 0 -2px 2px 0 rgba(0,0,0,.009),
-        inset 0 -3px 1px -2px rgba(0,0,0,.013);
+    }
+  }
 
-      padding-top: 1.5rem;
-      padding-bottom: 1.5rem;
-      font-family: 'Roboto Condensed', sans-serif;
-      font-weight: 300;
-      color: #6E7080;
+  section {
+    padding: 1rem 5rem;
+    width: 100%;
+    margin: 0;
+    border-top: 1px solid white;
+
+    &:first-child {
+      border-top: none;
+      padding-top: 3rem;
+      margin-top: auto;
+    }
+
+    &:last-child {
+      padding-bottom: 7rem;
+      margin-bottom: auto;
     }
 
     &.white {
@@ -73,26 +114,6 @@
     &.grey {
       background: lighten($grey, 2%);
     }
-  }
-
-  h1,
-  h2,
-  h3 {
-    color: $ocean;
-  }
-
-  h1,
-  h2 {
-    font-size: 2.2em;
-    padding: 1em 0 0.3em;
-
-    &:first-of-type {
-      padding-top: 0;
-    }
-  }
-
-  h3 {
-    font-size: 1.5em;
   }
 
   p,
@@ -119,21 +140,12 @@
     font-weight: 400;
   }
 
-  /* Post groups aggregate posts */
   .hidden {
     display: none;
 
     &:target {
       display: block;
     }
-  }
-
-  .thin {
-    padding: 1rem !important;
-  }
-
-  .borderless {
-    padding: 0 !important;
   }
 
   .info {
@@ -146,7 +158,7 @@
 
       &:before {
         content: "Note: ";
-        font-weight: bold;
+        font-weight: 400;
       }
     }
   }
@@ -156,7 +168,7 @@
 .label {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 0.8em;
-  font-weight: normal;
+  font-weight: 300;
   text-transform: uppercase;
   padding-bottom: 0.8rem;
 }

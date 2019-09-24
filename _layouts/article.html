@@ -3,6 +3,13 @@ layout: base
 ---
 
 {% include front/header.html %}
+{% if page.links %}
+<div class="banderole">
+  {% for item in page.links %}
+  <a class="btn btn_grey" href="{{ item.url }}" title="{{ item.title }}">{{ item.name }}</a>
+  {% endfor %}
+</div>
+{% endif %}
 {% include front/trailer.html %}
 
 {% include article/header.html %}

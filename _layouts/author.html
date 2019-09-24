@@ -11,25 +11,22 @@ layout: base
 {% include front/trailer.html %}
 
 {% include form/header.html %}
-<section class="title" id="about">
+<header id="about">
   <h3>About</h3>
-</section>
+</header>
 <section>
   {{ content }}
 </section>
-
-<section class="title" id="posts">
+<header id="posts">
   <h3>Posts</h3>
-</section>
+</header>
 {% include blog/preview.html layout="cards" author=page.title class="white" %}
-
-<section class="title" id="contact">
+<header id="contact">
   <h3>Contact</h3>
-</section>
+</header>
 <section>
   <div style="padding:1rem 0rem;">
     {% include links/social.html class="white" %}
   </div>
 </section>
-
 {% include form/trailer.html %}

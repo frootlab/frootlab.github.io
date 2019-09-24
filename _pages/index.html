@@ -21,22 +21,14 @@ links:
     title: About Us
 ---
 
-<section class="title" id="projects">
-  <h3><b>Projects</b></h3>
-</section>
-
-<section class="subtitle">
-  Next generation AutoML and Data-Warehousing
-</section>
-
+<header>
+  <h3 id="projects">Projects</h3>
+  <p>Next generation AutoML and Data-Warehousing</p>
+</header>
 {% include projects/preview.html featured=true limit=3 display="cards" more="/projects" %}
 
-<section class="title" id="blog">
-  <h3><b>Blog</b></h3>
-</section>
-
-<section class="subtitle">
-  Pure and applied Data Science
-</section>
-
+<header>
+  <h3 id="blog">Blog</h3>
+  <p>Pure and applied Data Science</p>
+</header>
 {% include blog/preview.html layout="cards" limit=3 type="blog" more="/blog" %}
