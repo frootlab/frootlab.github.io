@@ -349,15 +349,36 @@
 /* Small Screen Adjustments */
 
 @media screen and (max-width: 640px) {
+  .form header {
+    h1, h2, h3, h4, p {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    &:first-child {
+      h1, h2, h3, h4, p {
+        &:first-child {
+          padding-top: 3rem;
+        }
+      }
+    }
+    &:last-child {
+      h1, h2, h3, h4, p {
+        &:last-child {
+          padding-bottom: 7rem;
+        }
+      }
+    }
+  }
+
   .form section {
     padding-left: 1rem;
     padding-right: 1rem;
 
-    &:first-of-type {
+    &:first-child {
       padding-top: 3rem;
     }
 
-    &:last-of-type {
+    &:last-child {
       padding-bottom: 7rem;
     }
   }
