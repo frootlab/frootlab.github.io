@@ -2,10 +2,6 @@ html {
   height: 100%;
   overflow: hidden;
   background-color: $grey;
-
-  &.no-scroll {
-    overflow: hidden;
-  }
 }
 
 body {
