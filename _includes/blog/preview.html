@@ -177,27 +177,23 @@ Display Posts by using Card Layout
 
       <div class="cell">
         <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
-        <div class="card">
-          <div class="ribbon-box">
-            <div class="ribbon-wrapper">
-                <div class="{{ color }}-ribbon">{{ catid }}</div>
+          <div class="card">
+            <div class="ribbon-box">
+              <div class="ribbon-wrapper">
+                  <div class="{{ color }}-ribbon">{{ catid }}</div>
+              </div>
+            </div>
+            <div class="card-image" style="background-image: url({{ preview }});"></div>
+            <div class="card-content">
+              <div class="label">{{ post.date | date: '%d %b %Y' }} &nbsp;&bull;&nbsp; {{ readtime }} min</div>
+              <div class="card-title">{{ post.title | markdownify | strip_html }}</div>
+              <div class="card-text">{{ excerpt }}</div>
             </div>
           </div>
-          <div class="card-image" style="background-image: url({{ preview }});"></div>
-          <div class="card-content">
-            <div class="label">{{ post.date | date: '%d %b %Y' }} &nbsp;&bull;&nbsp; {{ readtime }} min</div>
-            <div class="card-title">{{ post.title | markdownify | strip_html }}</div>
-            <div class="card-text">{{ excerpt }}</div>
-          </div>
-        </div>
         </a>
       </div>
 
       {% endfor %}
-
-      <div class="cell"></div>
-      <div class="cell"></div>
-
     </div>
 
     {% if include.more %}

@@ -45,7 +45,7 @@ List / display Posts
 {% endcomment %}
 
 <section class="white">
-{% case include.display | downcase %}
+{% case include.layout | downcase %}
 {% when 'list' %}
   {% assign count = items | size %}
   {% if count > 0 %}
@@ -63,30 +63,26 @@ List / display Posts
 
   {% for item in items limit: bound %}
 
-  {% if item.figure.cloudinary %}
-    {% assign preview = "https://res.cloudinary.com/frootlab/image/upload/" | append: item.figure.cloudinary | append: ".svg" %}
-  {% elsif item.figure.uri %}
-    {% assign preview = item.figure.uri %}
-  {% endif %}
+    {% if item.figure.cloudinary %}
+      {% assign preview = "https://res.cloudinary.com/frootlab/image/upload/" | append: item.figure.cloudinary | append: ".svg" %}
+    {% elsif item.figure.uri %}
+      {% assign preview = item.figure.uri %}
+    {% endif %}
 
-  <div class="cell" id="{{ item.title | downcase | url_encode }}">
-    <a href="{{ site.url }}{{ item.url }}" title="{{ item.title }}">
-      <img style="height: 180px;" src="{{ preview }}">
-    </a>
-    <p>
-      <b>
-        <a href="{{ site.url }}{{ item.url }}" title="{{ item.title }}">
-          {{ item.title }}
-        </a>
-      </b>
-    </p>
-    <p>{{ item.subtitle }}</p>
-  </div>
-
+    <div class="cell" id="{{ item.title | downcase | url_encode }}">
+      <a href="{{ site.url }}{{ item.url }}" title="{{ item.title }}">
+        <img style="height: 180px;" src="{{ preview }}">
+      </a>
+      <p>
+        <b>
+          <a href="{{ site.url }}{{ item.url }}" title="{{ item.title }}">
+            {{ item.title }}
+          </a>
+        </b>
+      </p>
+      <p>{{ item.subtitle }}</p>
+    </div>
   {% endfor %}
-
-  <div class="cell"></div>
-  <div class="cell"></div>
 
   </div>
 {% endcase %}
