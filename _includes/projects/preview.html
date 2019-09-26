@@ -59,7 +59,7 @@ List / display Posts
   {% endif %}
 
 {% else %}
-  <div class="grid">
+  <div class="ample grid">
 
   {% for item in items limit: bound %}
 
@@ -69,19 +69,16 @@ List / display Posts
     {% assign preview = item.figure.uri %}
   {% endif %}
 
-  {% if include.bookmarks %}
-  <div class="cell" style="text-align: center; padding: 1rem;" id="{{ item.title | downcase }}">
-  {% else %}
-  <div class="cell" style="text-align: center; padding: 1rem;">
-  {% endif %}
-
+  <div class="cell" id="{{ item.title | downcase | url_encode }}">
     <a href="{{ site.url }}{{ item.url }}" title="{{ item.title }}">
       <img style="height: 180px;" src="{{ preview }}">
     </a>
     <p>
-      <strong>
-        <a href="{{ site.url }}{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
-      </strong>
+      <b>
+        <a href="{{ site.url }}{{ item.url }}" title="{{ item.title }}">
+          {{ item.title }}
+        </a>
+      </b>
     </p>
     <p>{{ item.subtitle }}</p>
   </div>

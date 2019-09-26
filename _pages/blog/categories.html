@@ -13,12 +13,11 @@ navid: blog
 ---
 
 {% assign bag = site.data.categories | where: "type", "blog" %}
-
-{% for cat in bag %}
-<div id="{{ cat.id }}" class="hidden">
+{% for item in bag %}
+<div class="hidden" id="{{ item.id | downcase | url_encode }}">
   <header>
     <h3>{{ cat.name }}</h3>
   </header>
-  {% include blog/preview.html layout="cards" category=cat.id %}
+  {% include blog/preview.html layout="cards" category=item.id %}
 </div>
 {% endfor %}

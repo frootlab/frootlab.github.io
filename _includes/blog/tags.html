@@ -64,7 +64,8 @@ Display Tags
 {% endif %}
 
 {% for tag in tags %}
-{% if tag != '' %}
-<a class="btn btn_grey" href="{{ path }}#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
-{% endif %}
+  {% if tag != '' %}
+    <a class="btn btn_grey" href="{{ path }}#{{ tag | downcase | url_encode }}"
+      title="{{ tag }}">{{ tag }}</a>
+  {% endif %}
 {% endfor %}

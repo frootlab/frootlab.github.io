@@ -21,33 +21,33 @@ links:
     url: "#details"
     title: Data Collection
   - name: Data Security
-    url: "#data-security"
+    url: "#data+security"
     title: Data Security
   - name: Remarks
     url: "#remarks"
     title: Remarks
 ---
 
-## Table of contents <a name="toc" href="{{ site.url }}{{ page.url }}#toc" class="bookmark"><i class="fas fa-link"></i></a>
+## Table of contents <a id="toc" href="{{ site.url }}{{ page.url }}#toc" class="bookmark"><i class="fas fa-link"></i></a>
 1. [Data privacy](#overview)
     1. [Who is responsible for the data collection on this website?](#responsibility)
-    1. [How is data collected on this website?](#data-collection)
-    1. [How is the collected data used for?](#data-usage)
-    1. [What are your rights on your personal data?](#your-rights)
+    1. [How is data collected on this website?](#data+collection)
+    1. [How is the collected data used for?](#data+usage)
+    1. [What are your rights on your personal data?](#your+rights)
 1. [Details on data collecting services](#details)
-    1. [Server log files](#server-log-files)
-    1. [Contact form](#contact-form)
+    1. [Server log files](#server+log+files)
+    1. [Contact form](#contact+form)
     1. [Newsletter](#newsletter)
-    1. [Google Analytics](#google-analytics)
-    1. [Google Webfonts](#google-webfont)
-    1. [Font Awesome](#font-awesome)
-1. [Data security](#data-security)
-    1. [SSL and TLS encryption](#ssl-and-tls-encryption)
+    1. [Google Analytics](#google+analytics)
+    1. [Google Webfonts](#google+webfont)
+    1. [Font Awesome](#font+awesome)
+1. [Data security](#data+security)
+    1. [SSL and TLS encryption](#ssl+and+tls+encryption)
 1. [Remarks on this privacy policy](#remarks)
     1. [Revision](#revision)
     1. [Questions?](#questions)
 
-## Overview of data privacy <a name="overview" href="{{ site.url }}{{ page.url }}#overview" class="bookmark"><i class="fas fa-link"></i></a>
+## Overview of data privacy <a id="overview" href="{{ site.url }}{{ page.url }}#overview" class="bookmark"><i class="fas fa-link"></i></a>
 {: .enum}
 
 The operators of this website take the protection of your personal data very
@@ -59,7 +59,7 @@ data with which you could be personally identified. This privacy policy explains
 what information we collect and what we use it for. It also explains how and for
 what purpose this happens.
 
-### Who is responsible for the data collection on this website? <a name="responsibility" href="{{ site.url }}{{ page.url }}#responsibility" class="bookmark"><i class="fas fa-link"></i></a>
+### Who is responsible for the data collection on this website?<a id="responsibility" href="{{ site.url }}{{ page.url }}#responsibility" class="bookmark"><i class="fas fa-link"></i></a>
 {: .enum}
 
 The data collected on this website are processed by the website operators, which
@@ -68,7 +68,7 @@ the EU General Data Protection Regulation (GDPR). The website  operator's
 contact details can be found in the website's required [legal notice]({{
 site.url }}/legal/notice).
 
-### Which data are collected on this website? <a name="data-collection" href="{{ site.url }}{{ page.url }}#data-collection" class="bookmark"><i class="fas fa-link"></i></a>
+### Which data are collected on this website?<a id="data+collection" href="{{ site.url }}{{ page.url }}#data+collection" class="bookmark"><i class="fas fa-link"></i></a>
 {: .enum}
 
 Some data are collected when you provide it to us. This could, for example, be
@@ -80,7 +80,7 @@ collected automatically as soon as you enter our website. Additionally this
 website uses anonymous analytics data, which comprises information about your
 surfing behavior. This data does not allow us to identify you.
 
-### How is the collected data used for? <a name="data-usage" href="{{ site.url }}{{ page.url }}#data-usage" class="bookmark"><i class="fas fa-link"></i></a>
+### How is the collected data used for?<a id="data+usage" href="{{ site.url }}{{ page.url }}#data+usage" class="bookmark"><i class="fas fa-link"></i></a>
 {: .enum}
 
 The technical data collected on this website is processed for ensuring an
@@ -91,7 +91,7 @@ such that we will not be able to draw conclusions about your person. The
 analytics data is used to analyze how visitors use the site, to improve the user
 experience. This allows us to understand if and how the website is used.
 
-### What are your rights on your personal data? <a name="your-rights" href="{{ site.url }}{{ page.url }}#your-rights" class="bookmark"><i class="fas fa-link"></i></a>
+### What are your rights on your personal data?<a id="your+rights" href="{{ site.url }}{{ page.url }}#your+rights" class="bookmark"><i class="fas fa-link"></i></a>
 {: .enum}
 
 This website is subjected to the data protection and privacy regulation standard
@@ -141,10 +141,10 @@ at the [BfDI
 website](https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html).
 
 
-## Details on data collecting services <a name="details" href="{{ site.url }}{{ page.url }}#details" class="bookmark"><i class="fas fa-link"></i></a>
+## Details on data collecting services<a id="details" href="{{ site.url }}{{ page.url }}#details" class="bookmark"><i class="fas fa-link"></i></a>
 {: .enum}
 
-### Server log files <a name="server-log-files" href="{{ site.url }}{{ page.url }}#server-log-files" class="bookmark"><i class="fas fa-link"></i></a>
+### Server log files<a id="server+log+files" href="{{ site.url }}{{ page.url }}#server+log+files" class="bookmark"><i class="fas fa-link"></i></a>
 {: .enum}
 
 #### Type and purpose
@@ -189,7 +189,7 @@ functionality of our website are not guaranteed. Furthermore, individual
 services can be unavailable or limited. For this reason, an objection is
 excluded.
 
-### Contact form <a name="contact-form" href="{{ site.url }}{{ page.url }}#contact-form" class="bookmark"><i class="fas fa-link"></i></a>
+### Contact form<a id="contact+form" href="{{ site.url }}{{ page.url }}#contact+form" class="bookmark"><i class="fas fa-link"></i></a>
 {: .enum}
 
 #### Type and purpose
@@ -225,7 +225,7 @@ The provision of your personal data is voluntary. However, we can only process
 your inquiry if you provide us with your name, email address and the reason for
 your inquiry.
 
-### Newsletter <a name="newsletter" href="{{ site.url }}{{ page.url }}#newsletter" class="bookmark"><i class="fas fa-link"></i></a>
+### Newsletter<a id="newsletter" href="{{ site.url }}{{ page.url }}#newsletter" class="bookmark"><i class="fas fa-link"></i></a>
 {: .enum}
 
 #### Type and purpose
@@ -271,7 +271,7 @@ has been given. The data will be deleted thereafter.
 The provision of your personal data is voluntary, based solely on your consent.
 Unfortunately, we cannot send you our newsletter without your consent.
 
-### Google Analytics <a name="google-analytics" href="{{ site.url }}{{ page.url }}#google-analytics" class="bookmark"><i class="fas fa-link"></i></a>
+### Google Analytics<a id="google+analytics" href="{{ site.url }}{{ page.url }}#google+analytics" class="bookmark"><i class="fas fa-link"></i></a>
 {: .enum}
 
 #### Type and purpose
@@ -350,7 +350,7 @@ behavior of the website visitors can be evaluated and their respective
 interests can be analyzed. For this analysis, we create a pseudonymous user
 profile.
 
-### Google Webfonts <a name="google-webfonts" href="{{ site.url }}{{ page.url }}#google-webfonts" class="bookmark"><i class="fas fa-link"></i></a>
+### Google Webfonts<a id="google+webfonts" href="{{ site.url }}{{ page.url }}#google+webfonts" class="bookmark"><i class="fas fa-link"></i></a>
 {: .enum}
 
 #### Type and purpose
@@ -397,7 +397,7 @@ you can opt out of the data processing by disabling JavaScript execution in your
 browser or by installing a JavaScript blocker. Please note that this may result
 in functional limitations on the website.
 
-### Font Awesome <a name="font-awesome" href="{{ site.url }}{{ page.url }}#font-awesome" class="bookmark"><i class="fas fa-link"></i></a>
+### Font Awesome<a id="font+awesome" href="{{ site.url }}{{ page.url }}#font+awesome" class="bookmark"><i class="fas fa-link"></i></a>
 {: .enum}
 
 #### Type and purpose
@@ -422,15 +422,14 @@ currently also unclear whether and to what end – that the operator, in this ca
 Fonticons, Inc. will collect data. For more information about the Privacy Policy
 of Fonticons, Inc.: https://fontawesome.com/privacy.
 
-## Data security <a name="data-security" href="{{ site.url }}{{ page.url }}#data-security" class="bookmark"><i class="fas fa-link"></i></a>
+## Data security<a id="data+security" href="{{ site.url }}{{ page.url }}#data+security" class="bookmark"><i class="fas fa-link"></i></a>
 {: .enum}
 
 Please note that data transmitted via the internet (e.g. via email
 communication) may be subject to security breaches. Complete protection of your
 data from third-party access is not possible.
 
-<a name="ssl-and-tls-encryption"></a>
-### SSL and TLS encryption <a name="ssl-and-tls-encryption" href="{{ site.url }}{{ page.url }}#ssl-and-tls-encryption" class="bookmark"><i class="fas fa-link"></i></a>
+### SSL and TLS encryption<a id="ssl+and+tls+encryption" href="{{ site.url }}{{ page.url }}#ssl+and+tls+encryption" class="bookmark"><i class="fas fa-link"></i></a>
 {: .enum}
 
 This site uses SSL or TLS encryption for security reasons and for the protection
@@ -440,10 +439,10 @@ browser's address line when it changes from "http://" to "https://" and the lock
 icon is displayed in your browser's address bar. If SSL or TLS encryption is
 activated, the data you transfer to us cannot be read by third parties.
 
-## Remarks on this privacy policy <a name="remarks" href="{{ site.url }}{{ page.url }}#remarks" class="bookmark"><i class="fas fa-link"></i></a>
+## Remarks on this privacy policy<a id="remarks" href="{{ site.url }}{{ page.url }}#remarks" class="bookmark"><i class="fas fa-link"></i></a>
 {: .enum}
 
-### Revision <a name="revision" href="{{ site.url }}{{ page.url }}#revision" class="bookmark"><i class="fas fa-link"></i></a>
+### Revision<a id="revision" href="{{ site.url }}{{ page.url }}#revision" class="bookmark"><i class="fas fa-link"></i></a>
 {: .enum}
 
 We reserve the right to amend this privacy policy so that it always complies
@@ -451,7 +450,7 @@ with current legal requirements or to implement changes to our services in the
 privacy policy, e.g. when introducing new services. Your next visit will be
 subject to the new privacy policy.
 
-### Questions? <a name="questions" href="{{ site.url }}{{ page.url }}#questions" class="bookmark"><i class="fas fa-link"></i></a>
+### Questions?<a id="questions" href="{{ site.url }}{{ page.url }}#questions" class="bookmark"><i class="fas fa-link"></i></a>
 {: .enum}
 
 If you have any questions pertaining to data protection, please send us an

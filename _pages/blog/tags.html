@@ -34,7 +34,7 @@ permalink: /blog/tags.html
 {% assign tags = tags | strip | split: '|' | compact | sort %}
 
 {% for tag in tags %}
-<div id="{{ tag }}" class="hidden">
+<div id="{{ tag | downcase | url_encode }}" class="hidden">
   <header>
     <h3>{{ tag }}</h3>
   </header>

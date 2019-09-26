@@ -269,6 +269,14 @@
     margin: 0;
     padding: 0;
   }
+
+  // Ample grids provide more space for each cell
+  &.ample {
+    .cell {
+      text-align: center;
+      padding: 1rem;
+    }
+  }
 }
 
 /* Cards */

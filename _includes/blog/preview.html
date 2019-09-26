@@ -145,8 +145,12 @@ Display Posts by using Card Layout
 
     {% for post in posts limit: bound %}
       {% assign readtime = post.content | number_of_words | divided_by: 180 | plus: 0.5 | round %}
-      {% assign offset = post.title | number_of_words | times: 2 %}
-      {% assign cutoff = 35 | minus: offset %}
+      {% assign title_lines = post.title | size | divided_by: 20 | plus: 1 | floor %}
+      {% assign offset = title_lines | times: 3 | divided_by: 2 %}
+      {% assign nol = 10 | minus: offset | round %}
+      {% assign trunc_chars = nol | times: 22 %}
+      {% assign trunc_words = post.excerpt | strip_html | truncate: trunc_chars | number_of_words %}
+      {% assign excerpt = post.excerpt | strip_html | truncatewords: trunc_words %}
 
       {% if post.image-meta.cloudinary %}
         {% assign preview = "https://res.cloudinary.com/frootlab/image/upload/c_thumb,w_300,g_face/" | append: post.image-meta.cloudinary | append: ".webp" %}
@@ -183,7 +187,7 @@ Display Posts by using Card Layout
           <div class="card-content">
             <div class="label">{{ post.date | date: '%d %b %Y' }} &nbsp;&bull;&nbsp; {{ readtime }} min</div>
             <div class="card-title">{{ post.title | markdownify | strip_html }}</div>
-            <div class="card-text">{{ post.excerpt | strip_html | truncatewords: cutoff}}</div>
+            <div class="card-text">{{ excerpt }}</div>
           </div>
         </div>
         </a>
