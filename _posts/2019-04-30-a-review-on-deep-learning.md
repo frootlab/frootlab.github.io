@@ -6,9 +6,6 @@ image-meta:
   cloudinary: pexels/101764
   orientation: landscape
 pdf: files/posts/2019-04-30-a-review-on-deep-learning.pdf
-crumbs:
-  - Blog
-  - Deep Learning
 tags: [Deep Learning, Machine Learning, AI]
 ---
 

@@ -26,22 +26,24 @@ collections:
     output: true
   projects:
     output: true
-  news:
+  posts:
     output: true
-    permalink: /microblog/:year/:month/:slug/
+    permalink: /blog/:categories/:short_year:y_day-:slug:output_ext
+  news:
+    output: false
 
 # Jekyll
-markdown:           kramdown
-highlighter:        rouge
+markdown: kramdown
+highlighter: rouge
 kramdown:
-  auto_ids:         true
-  footnote_nr:      1
-  entity_output:    as_char
-  toc_levels:       1..6
-  enable_coderay:   false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
 sass:
-  sass_dir:         _sass
-  style:            compressed
+  sass_dir: _sass
+  style: compressed
 
 # Google Analytics
 google-analytics: UA-136312456-1

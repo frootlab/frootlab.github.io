@@ -6,9 +6,6 @@ image-meta:
   cloudinary: pexels/990824
   orientation: landscape
 pdf: files/posts/2019-03-25-brea.pdf
-crumbs:
-  - Blog
-  - Old wine
 tags: [Vivid Store]
 ---
 

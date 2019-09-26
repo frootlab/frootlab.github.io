@@ -6,9 +6,6 @@ image-meta:
   cloudinary: pexels/67843
   orientation: landscape
 pdf: files/posts/2019-03-20-three-obstacles-in-data-science.pdf
-crumbs:
-  - Blog
-  - Three obstacles
 tags: [Vivid Store, Vivid Node, Vivid DB, Vivid Code]
 ---
 

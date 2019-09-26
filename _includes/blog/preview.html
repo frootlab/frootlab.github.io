@@ -146,7 +146,7 @@ Display Posts by using Card Layout
     {% for post in posts limit: bound %}
       {% assign readtime = post.content | number_of_words | divided_by: 180 | plus: 0.5 | round %}
       {% assign title_lines = post.title | size | divided_by: 20 | plus: 1 | floor %}
-      {% assign offset = title_lines | times: 3 | divided_by: 2 %}
+      {% assign offset = title_lines | plus: 1 %}
       {% assign nol = 10 | minus: offset | round %}
       {% assign trunc_chars = nol | times: 22 %}
       {% assign trunc_words = post.excerpt | strip_html | truncate: trunc_chars | number_of_words %}

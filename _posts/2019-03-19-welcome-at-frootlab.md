@@ -6,9 +6,6 @@ image-meta:
   cloudinary: unsplash/710800
   orientation: portrait
 pdf: files/posts/2019-03-19-welcome-at-frootlab.pdf
-crumbs:
-  - Blog
-  - Welcome
 tags: [Frootlab]
 ---
 

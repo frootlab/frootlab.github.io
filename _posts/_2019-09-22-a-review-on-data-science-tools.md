@@ -4,9 +4,6 @@ author: Patrick Michl
 category: science
 image-meta:
   cloudinary: pexels/323645
-crumbs:
-  - Blog
-  - Data Analysis Tools
 tags: [AutoML, CAMP]
 ---
 
