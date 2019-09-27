@@ -6,11 +6,7 @@ layout: base
 <div class="banderole">
   {% assign title = page.title | markdownify | remove: "<p>" | remove: "</p>" %}
   {% assign author = site.authors | where: 'title', page.author | first %}
-  {% if author %}
-  <h3 class="post-author">by <a href="{{ author.url }}">{{ author.title }}</a></h3>
-  {% else %}
-  <h3 class="post-author">Anonymous</h3>
-  {% endif %}
+  {% include links/author.html name=author.title url=author.url %}<br>
   {% include links/license.html name=page.license url=page.license-url %}
 </div>
 {% include front/trailer.html %}

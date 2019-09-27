@@ -1,0 +1,7 @@
+<span class="author">
+{% if include.name %}
+  by <a rel="author" href="{{ include.url }}">{{ author.title }}</a>
+{% else %}
+  Anonymous
+{% endif %}
+</span>
