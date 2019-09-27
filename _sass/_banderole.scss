@@ -31,6 +31,16 @@
   a:focus {
     color: $blue-l10;
   }
+
+  span.license {
+    font-size: 1.2rem;
+    font-weight: 300;
+
+    i {
+      font-size: 2.2rem;
+      margin-right: 5px;
+    }
+  }
 }
 
 @media screen and (max-width: 960px) {
