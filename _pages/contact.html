@@ -31,8 +31,10 @@ links:
   <p>Get engaged by connecting to us</p>
 </header>
 
-<section class="white">
-  <div style="padding: 1rem 0;">{% include links/social.html %}</div>
+<section class="paper">
+  <br>
+  {% include links/social.html %}
+  <br>
 </section>
 
 <header id="email">
@@ -41,9 +43,8 @@ links:
 </header>
 
 <section class="grey">
-  <div class="contact-form-container" style="padding: 1rem 0;">
-    <form id="contact-form" method="POST"
-      action="https://formspree.io/contact@frootlab.org">
+  <div class="mail-form-box">
+    <form id="mail-form" method="post" action="https://formspree.io/contact@frootlab.org">
       <fieldset>
         <input type="text" name="name" placeholder="Name (required)" tabindex="1" required>
       </fieldset>

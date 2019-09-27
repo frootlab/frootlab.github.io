@@ -108,48 +108,24 @@ figure {
   margin: 2em 0;
 
   figcaption {
-    margin-bottom: 0.5em;
+    margin: 1rem auto 0.5rem;
     color: lighten($black, 50%);
     font-size: 0.85em;
     width: 100%;
     text-align: center;
-  }
-
-  img {
-    margin-bottom: 10px;
+    max-width: 22rem;
+    line-height: 1.7;
   }
 
   > a {
     display: block;
-    border: none !important;
+    margin: 0 auto;
   }
 
-  &.half {
-    @media only screen and (min-width: $small) {
-      > a, > img {
-        width: calc(50% - 4px);
-        float: left;
-        margin-left: 1px;
-        margin-right: 1px;
-      }
-      figcaption {
-        clear: left;
-      }
-    }
-  }
-
-  &.third {
-    @media only screen and (min-width: $small) {
-      > a, > img {
-        width: calc(33.3% - 6px);
-        float: left;
-        margin-left: 1px;
-        margin-right: 1px;
-      }
-      figcaption {
-        clear: left;
-      }
-    }
+  img {
+    margin-bottom: 10px;
+    width: 90%;
+    max-width: 20rem;
   }
 }
 
@@ -164,7 +140,6 @@ img {
   max-width: 100%;
   width: auto;
   height: auto;
-  -ms-interpolation-mode: bicubic;
   image-rendering: optimizeQuality;
   margin: 0 auto;
 }

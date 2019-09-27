@@ -27,7 +27,7 @@ subprojects:
 analysis applications, that interconnects collaborative data science with
 automated machine learning.
 
-{% include article/figure.html url="/images/fig/vivid.svg"
+{% include site/figure.html url="/images/fig/vivid.svg"
   description="Cloud-Assisted Meta programming in the Vivid Code framework" %}
 
 Based on the **Cloud-Assisted Meta programming** (CAMP) paradigm, the framework

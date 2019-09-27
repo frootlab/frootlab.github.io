@@ -14,19 +14,24 @@ layout: base
 <header id="about">
   <h3>About</h3>
 </header>
+
 <section>
   {{ content }}
 </section>
+
 <header id="posts">
   <h3>Posts</h3>
 </header>
-{% include blog/preview.html layout="cards" author=page.title class="white" %}
+
+{% include blog/preview.html layout="cards" author=page.title %}
+
 <header id="contact">
   <h3>Contact</h3>
 </header>
+
 <section>
-  <div style="padding:1rem 0rem;">
-    {% include links/social.html class="white" %}
-  </div>
+  <br>
+  {% include links/social.html %}
+  <br>
 </section>
 {% include form/trailer.html %}

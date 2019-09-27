@@ -17,7 +17,8 @@
     font-weight: 300;
   }
 
-  header {
+  header,
+  hgroup {
     padding: 0;
     margin: 0;
 
@@ -107,7 +108,7 @@
       margin-bottom: auto;
     }
 
-    &.white {
+    &.paper {
       background: white;
     }
 
@@ -173,13 +174,14 @@
   padding-bottom: 0.8rem;
 }
 
-.contact-form-container {
+.mail-form-box {
+  padding: 1rem 0;
   width: 100%;
   margin: 0 auto;
   position: relative;
 }
 
-.contact-form-container * {
+.mail-form-box * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -190,7 +192,7 @@
   color: #555;
 }
 
-#contact-form {
+#mail-form {
   fieldset {
     border: none !important;
     margin: 0 0 10px;
@@ -357,7 +359,8 @@
 /* Small Screen Adjustments */
 
 @media screen and (max-width: 640px) {
-  .form header {
+  .form header,
+  .form hgroup {
     h1, h2, h3, h4, p {
       padding-left: 1rem;
       padding-right: 1rem;

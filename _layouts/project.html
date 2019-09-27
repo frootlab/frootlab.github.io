@@ -38,15 +38,13 @@ Get related posts
 
 {% include form/header.html %}
 <header>
-  <h2>
-    {{ page.title }}
-    {% if page.version %}<small>v{{ page.version }}</small>{% endif %}
-  </h2>
+  <h2>{{ page.title }}{% if page.version %}<small>v{{ page.version }}</small>{% endif %}</h2>
 </header>
 
 <header id="about">
   <h4>About</h4>
 </header>
+
 <section>
   {{ content }}
   {% if page.license %}
@@ -67,6 +65,7 @@ Get related posts
 <header id="subprojects">
   <h4>Subprojects</h4>
 </header>
+
 {% include projects/preview.html layout="cards" list=page.subprojects %}
 {% endif %}
 
@@ -74,6 +73,7 @@ Get related posts
 <header id="quickstart">
   <h4>Quickstart</h4>
 </header>
+
 <section>
   <p><b>Installation using PIP</b></p>
   <div class="language-shell highlighter-rouge">
@@ -88,6 +88,7 @@ Get related posts
 <header id="posts">
   <h4>Posts</h4>
 </header>
+
 {{ posts-html }}
 {% endif %}
 
@@ -95,6 +96,7 @@ Get related posts
 <header id="resources">
   <h4>Resources</h4>
 </header>
+
 <section>
   <div style="display: flex; padding: 1rem 0;">
     {% if page.docs %}
@@ -124,7 +126,5 @@ Get related posts
   </div>
 </section>
 {% endif %}
-
-<section></section>
 
 {% include form/trailer.html %}

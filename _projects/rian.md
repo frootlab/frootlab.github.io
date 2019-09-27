@@ -45,7 +45,7 @@ deployment. Thereby individual code blocks are automatically retrieved from
 collaborative algorithm repositories, that provide the currently best fitting
 solutions for individual tasks.
 
-{% include article/figure.html url="/images/fig/rian.svg"
+{% include site/figure.html url="/images/fig/rian.svg"
   description="Processing of data analysis flows using Vivid Node" %}
 
 The key goal of Vivid Node is to provide a long-term data analysis framework, which

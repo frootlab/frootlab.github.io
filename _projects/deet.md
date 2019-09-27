@@ -46,7 +46,7 @@ requirements for large-scale data analysis applications. The primary goal of
 Vivid DB is to separate data integration and data analysis into independent
 tasks.
 
-{% include article/figure.html url="/images/fig/deet.svg"
+{% include site/figure.html url="/images/fig/deet.svg"
   description="Vivid DB unifies various data sources into a common data
   interface" %}
 

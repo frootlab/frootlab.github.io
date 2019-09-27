@@ -7,26 +7,16 @@ layout: base
   {% assign title = page.title | markdownify | remove: "<p>" | remove: "</p>" %}
   {% assign author = site.authors | where: 'title', page.author | first %}
   {% if author %}
-  <h3 class="post-author">by <a href="{{ author.url }}">{{ author.title }}</a></h3>
+  <h3 class="post-author">by
+    <a href="{{ author.url }}" rel="author" title="{{ author.title }}">
+      {{ author.title }}
+    </a>
+  </h3>
   {% else %}
   <h3 class="post-author">Anonymous</h3>
   {% endif %}
-  {% if page.license %}
-  {% if page.license contains 'CC BY' %}
-  <h3 style="font-size: 2.2rem; margin-top: 1rem;">
-    <a href="{{ page.license-url }}" style="letter-spacing: -2px;">
-      <i class="fab fa-creative-commons"></i>
-      <i class="fab fa-creative-commons-by"></i>
-    </a>
-  </h3>
-  {% elsif page.license-url %}
-  <h3>License: <a href="{{ page.license-url }}" style="color: #0275d8;">{{ page.license }}</a></h3>
-  {% else %}
-  <h3>License: {{ page.license }}</h3>
-  {% endif %}
-  {% else %}
-  <h3>License: Unknown></h3>
-  {% endif %}
+
+  {% include links/license.html name=page.license url=page-licence-url%}
 </div>
 {% include front/trailer.html %}
 

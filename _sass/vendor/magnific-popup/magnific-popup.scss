@@ -289,16 +289,14 @@ button {
     padding: 0;
     width: 90px;
     height: 110px;
-
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
     &:active {
       margin-top: -54px;
     }
-
     &:hover,
     &:focus {
       opacity: 1;
     }
-
     &:before,
     &:after {
       content: '';
@@ -351,6 +349,8 @@ button {
     }
   }
 }
+
+
 
 // Iframe content type
 @if $mfp-include-iframe-type {
@@ -488,7 +488,7 @@ button {
           }
         }
         .mfp-bottom-bar {
-          background: $black-t60;
+          background: rgba(0,0,0,0.6);
           bottom: 0;
           margin: 0;
           top: auto;
@@ -509,7 +509,7 @@ button {
           width: 35px;
           height: 35px;
           line-height: 35px;
-          background: $black-t60;
+          background: rgba(0, 0, 0, 0.6);
           position: fixed;
           text-align: center;
           padding: 0;

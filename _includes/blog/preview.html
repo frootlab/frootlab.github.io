@@ -45,7 +45,7 @@ Filter Posts by Category, Tag, Author, Year and Limit
 
 {% comment %}
 ================================================================================
-Display Posts by using List Layout
+List Layout
 ================================================================================
 {% endcomment %}
 
@@ -53,37 +53,35 @@ Display Posts by using List Layout
   {% when 'list' %}
     {% assign count = posts | size %}
     {% if count > 0 %}
-      <section class="white">
-      <ul>
-      {% for post in posts limit: bound %}
-        <li>
-          {{ post.date | date: '%d. %B, %y' }}:
-          <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-      {% endfor %}
-      </ul>
-      </section>
-    {% endif %}
-
-    {% if include.more %}
-    <section class="white">
-    <ul class="small right inherent squared icons">
-      <li>
-        {% include links/create.html name="more" display="right" uid=include.more title="more" %}
-      </li>
-    </ul>
+      <section class="paper">
+        <ul>
+        {% for post in posts limit: bound %}
+          <li>
+            {{ post.date | date: '%d. %B, %y' }}:
+            <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+          </li>
+        {% endfor %}
+        </ul>
+      {% if include.more %}
+        <ul class="small right inherent squared icons">
+          <li>
+            {% include links/create.html name="more" display="right" uid=include.more title="more" %}
+          </li>
+        </ul>
+      {% endif %}
     </section>
     {% endif %}
 
 {% comment %}
 ================================================================================
-Display Posts by using Magazin Layout
+Magazin Layout
 ================================================================================
 {% endcomment %}
 
   {% when 'magazine' %}
     {% assign count = posts | size %}
     {% if count > 0 %}
-    <section class="white">
+    <section class="paper">
       <ul>
       {% for post in posts limit: bound %}
         {% assign author = site.authors | where: 'title', post.author | first %}
@@ -130,79 +128,81 @@ Display Posts by using Magazin Layout
       </ul>
       {% endif %}
 
-      </section>
+    </section>
     {% endif %}
 
 {% comment %}
 ================================================================================
-Display Posts by using Card Layout
+Card Layout
 ================================================================================
 {% endcomment %}
 
   {% when 'cards' %}
     <section class="grey">
-    <div class="grid" style="padding: 1rem 0;">
+      <br>
+      <div class="grid">
 
-    {% for post in posts limit: bound %}
-      {% assign readtime = post.content | number_of_words | divided_by: 180 | plus: 0.5 | round %}
-      {% assign title_lines = post.title | size | divided_by: 20 | plus: 1 | floor %}
-      {% assign offset = title_lines | plus: 1 %}
-      {% assign nol = 10 | minus: offset | round %}
-      {% assign trunc_chars = nol | times: 22 %}
-      {% assign trunc_words = post.excerpt | strip_html | truncate: trunc_chars | number_of_words %}
-      {% assign excerpt = post.excerpt | strip_html | truncatewords: trunc_words %}
+      {% for post in posts limit: bound %}
+        {% assign readtime = post.content | number_of_words | divided_by: 180 | plus: 0.5 | round %}
+        {% assign title_lines = post.title | size | divided_by: 20 | plus: 1 | floor %}
+        {% assign offset = title_lines | plus: 1 %}
+        {% assign nol = 10 | minus: offset | round %}
+        {% assign trunc_chars = nol | times: 22 %}
+        {% assign trunc_words = post.excerpt | strip_html | truncate: trunc_chars | number_of_words %}
+        {% assign excerpt = post.excerpt | strip_html | truncatewords: trunc_words %}
 
-      {% if post.image-meta.cloudinary %}
-        {% assign preview = "https://res.cloudinary.com/frootlab/image/upload/c_thumb,w_300,g_face/" | append: post.image-meta.cloudinary | append: ".webp" %}
-      {% elsif post.preview %}
-        {% assign preview = site.url | append: post.preview %}
-      {% elsif post.image-meta.url %}
-        {% assign preview = site.url | append: post.image-meta.url %}
-      {% else %}
-        {% assign preview = site.url | append: "/" | append: site.background.default %}
-      {% endif %}
-
-      {% assign catid = post.categories | first | downcase %}
-
-      {% case catid %}
-        {% when 'corporate' %}
-          {% assign color = 'blue' %}
-        {% when 'science' %}
-          {% assign color = 'green' %}
-        {% when 'technology' %}
-          {% assign color = 'red' %}
+        {% if post.image-meta.cloudinary %}
+          {% assign preview = "https://res.cloudinary.com/frootlab/image/upload/c_thumb,w_300,g_face/" | append: post.image-meta.cloudinary | append: ".webp" %}
+        {% elsif post.preview %}
+          {% assign preview = site.url | append: post.preview %}
+        {% elsif post.image-meta.url %}
+          {% assign preview = site.url | append: post.image-meta.url %}
         {% else %}
-          {% assign color = 'grey' %}
-      {% endcase %}
+          {% assign preview = site.url | append: "/" | append: site.background.default %}
+        {% endif %}
 
-      <div class="cell">
-        <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
-          <div class="card">
-            <div class="ribbon-box">
-              <div class="ribbon-wrapper">
-                  <div class="{{ color }}-ribbon">{{ catid }}</div>
+        {% assign catid = post.categories | first | downcase %}
+
+        {% case catid %}
+          {% when 'corporate' %}
+            {% assign color = 'blue' %}
+          {% when 'science' %}
+            {% assign color = 'green' %}
+          {% when 'technology' %}
+            {% assign color = 'red' %}
+          {% else %}
+            {% assign color = 'grey' %}
+        {% endcase %}
+
+        <div class="cell">
+          <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">
+            <div class="card">
+              <div class="ribbon-box">
+                <div class="ribbon-wrapper">
+                    <div class="{{ color }}-ribbon">{{ catid }}</div>
+                </div>
+              </div>
+              <div class="card-image" style="background-image: url({{ preview }});"></div>
+              <div class="card-content">
+                <div class="label">{{ post.date | date: '%d %b %Y' }} &nbsp;&bull;&nbsp; {{ readtime }} min</div>
+                <div class="card-title">{{ post.title | markdownify | strip_html }}</div>
+                <div class="card-text">{{ excerpt }}</div>
               </div>
             </div>
-            <div class="card-image" style="background-image: url({{ preview }});"></div>
-            <div class="card-content">
-              <div class="label">{{ post.date | date: '%d %b %Y' }} &nbsp;&bull;&nbsp; {{ readtime }} min</div>
-              <div class="card-title">{{ post.title | markdownify | strip_html }}</div>
-              <div class="card-text">{{ excerpt }}</div>
-            </div>
-          </div>
-        </a>
+          </a>
+        </div>
+
+        {% endfor %}
       </div>
+      <br>
 
-      {% endfor %}
-    </div>
-
-    {% if include.more %}
-    <ul class="small right inherent squared icons">
-      <li>
-        {% include links/create.html name="more" display="right" uid=include.more title="more" %}
-      </li>
-    </ul>
-    {% endif %}
+      {% if include.more %}
+      <ul class="small right inherent squared icons">
+        <li>
+          {% include links/create.html name="more" display="right" uid=include.more title="more" %}
+        </li>
+      </ul>
+      {% endif %}
 
     </section>
 

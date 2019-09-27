@@ -45,7 +45,7 @@ repository with integrated evaluation and ranking. This allows the resolution of
 abstract code requests by *Currently Best Fitting* algorithms, as required by
 the *Cloud-Assisted Meta Programming* paradigm.
 
-{% include article/figure.html url="/images/fig/brea.svg"
+{% include site/figure.html url="/images/fig/brea.svg"
   description="Resolution of abstract code requests by currently best fitting
   algorithms, using a self contained cluster of multiple Vivid Stores" %}
 

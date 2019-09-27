@@ -1,0 +1,158 @@
+{% comment %}
+================================================================================
+Initialize variables with default values
+================================================================================
+{% endcomment %}
+
+{% assign url = include.url %}
+{% assign id = include.name | strip | remove: " " | remove: "-" | downcase %}
+
+{% comment %}
+================================================================================
+Get license parameters
+================================================================================
+{% endcomment %}
+
+{% case id %}
+
+{% comment %}
+--------------------------------------------------------------------------------
+Creative Commons
+--------------------------------------------------------------------------------
+{% endcomment %}
+
+  {% when "ccby4.0" %}
+    {% assign url = "https://creativecommons.org/licenses/by/4.0/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-by" %}
+  {% when "ccby3.0" %}
+    {% assign url = "https://creativecommons.org/licenses/by/3.0/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-by" %}
+  {% when "ccby2.5" %}
+    {% assign url = "https://creativecommons.org/licenses/by/2.5/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-by" %}
+  {% when "ccby2.0" %}
+    {% assign url = "https://creativecommons.org/licenses/by/2.0/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-by" %}
+  {% when "ccby1.0" %}
+    {% assign url = "https://creativecommons.org/licenses/by/1.0/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-by" %}
+  {% when "ccbynd4.0" %}
+    {% assign url = "https://creativecommons.org/licenses/by-nd/4.0/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-by|fab fa-creative-commons-nd" %}
+  {% when "ccbynd3.0" %}
+    {% assign url = "https://creativecommons.org/licenses/by-nd/3.0/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-by|fab fa-creative-commons-nd" %}
+  {% when "ccbynd2.5" %}
+    {% assign url = "https://creativecommons.org/licenses/by-nd/2.5/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-by|fab fa-creative-commons-nd" %}
+  {% when "ccbynd2.0" %}
+    {% assign url = "https://creativecommons.org/licenses/by-nd/2.0/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-by|fab fa-creative-commons-nd" %}
+  {% when "ccbynd1.0" %}
+    {% assign url = "https://creativecommons.org/licenses/by-nd/1.0/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-by|fab fa-creative-commons-nd" %}
+  {% when "ccbyncnd4.0" %}
+    {% assign url = "https://creativecommons.org/licenses/by-nc-nd/4.0/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-by|fab fa-creative-commons-nc|fab fa-creative-commons-nd" %}
+  {% when "ccbyncnd3.0" %}
+    {% assign url = "https://creativecommons.org/licenses/by-nc-nd/3.0/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-by|fab fa-creative-commons-nc|fab fa-creative-commons-nd" %}
+  {% when "ccbyncnd2.5" %}
+    {% assign url = "https://creativecommons.org/licenses/by-nc-nd/2.5/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-by|fab fa-creative-commons-nc|fab fa-creative-commons-nd" %}
+  {% when "ccbyncnd2.0" %}
+    {% assign url = "https://creativecommons.org/licenses/by-nc-nd/2.0/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-by|fab fa-creative-commons-nc|fab fa-creative-commons-nd" %}
+  {% when "ccbyncnd1.0" %}
+    {% assign url = "https://creativecommons.org/licenses/by-nc-nd/1.0/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-by|fab fa-creative-commons-nc|fab fa-creative-commons-nd" %}
+  {% when "ccbysa4.0" %}
+    {% assign url = "https://creativecommons.org/licenses/by-sa/4.0/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-by|fab fa-creative-commons-sa" %}
+  {% when "ccbysa3.0" %}
+    {% assign url = "https://creativecommons.org/licenses/by-sa/3.0/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-by|fab fa-creative-commons-sa" %}
+  {% when "ccbysa2.5" %}
+    {% assign url = "https://creativecommons.org/licenses/by-sa/2.5/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-by|fab fa-creative-commons-sa" %}
+  {% when "ccbysa2.0" %}
+    {% assign url = "https://creativecommons.org/licenses/by-sa/2.0/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-by|fab fa-creative-commons-sa" %}
+  {% when "ccbysa1.0" %}
+    {% assign url = "https://creativecommons.org/licenses/by-sa/1.0/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-by|fab fa-creative-commons-sa" %}
+  {% when "ccbync4.0" %}
+    {% assign url = "https://creativecommons.org/licenses/by-nc/4.0/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-by|fab fa-creative-commons-nc" %}
+  {% when "ccbync3.0" %}
+    {% assign url = "https://creativecommons.org/licenses/by-nc/3.0/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-by|fab fa-creative-commons-nc" %}
+  {% when "ccbync2.5" %}
+    {% assign url = "https://creativecommons.org/licenses/by-nc/2.5/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-by|fab fa-creative-commons-nc" %}
+  {% when "ccbync2.0" %}
+    {% assign url = "https://creativecommons.org/licenses/by-nc/2.0/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-by|fab fa-creative-commons-nc" %}
+  {% when "ccbync1.0" %}
+    {% assign url = "https://creativecommons.org/licenses/by-nc/1.0/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-by|fab fa-creative-commons-nc" %}
+  {% when "cc01.0" %}
+    {% assign url = "https://creativecommons.org/publicdomain/zero/1.0/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-zero" %}
+  {% when "ccnd1.0" %}
+    {% assign url = "https://creativecommons.org/licenses/nd/1.0/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-nd" %}
+  {% when "ccsa1.0" %}
+    {% assign url = "https://creativecommons.org/licenses/sa/1.0/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-sa" %}
+  {% when "ccnc1.0" %}
+    {% assign url = "https://creativecommons.org/licenses/nc/1.0/" %}
+    {% assign icons = "fab fa-creative-commons|fab fa-creative-commons-nc" %}
+
+{% comment %}
+--------------------------------------------------------------------------------
+General Public License
+--------------------------------------------------------------------------------
+{% endcomment %}
+
+  {% when "gpl3.0" %}
+    {% assign url = "http://www.gnu.org/licenses/gpl-3.0.html" %}
+  {% when "gpl2.0" %}
+    {% assign url = "http://www.gnu.org/licenses/gpl-2.0.html" %}
+  {% when "gpl1.0" %}
+    {% assign url = "http://www.gnu.org/licenses/gpl-1.0.html" %}
+
+{% comment %}
+--------------------------------------------------------------------------------
+The Unlicense
+--------------------------------------------------------------------------------
+{% endcomment %}
+
+    {% when "unlicense" %}
+      {% assign url = "https://unlicense.org/" %}
+      {% assign icons = "fab fa-creative-commons-pd" %}
+
+{% endcase %}
+
+{% comment %}
+================================================================================
+Create License Links / Icons
+================================================================================
+{% endcomment %}
+
+{% if icons %}
+  <h3 style="font-size: 2.2rem; margin-top: 1rem;">
+    <a href="{{ url }}" style="letter-spacing: -2px;">
+    {% assign array = icons | split: "|" %}
+    {% for icon in array %}
+      <i class="{{ icon }}"></i>
+    {% endfor %}
+    </a>
+  </h3>
+{% elsif url %}
+  <h3>License: <a href="{{ url }}" style="color: #0275D8;">{{ include.name }}</a></h3>
+{% elsif include.name %}
+  <h3>License: {{ include.name }}</h3>
+{% else %}
+  <h3>License: Unknown></h3>
+{% endif %}
