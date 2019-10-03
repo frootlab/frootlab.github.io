@@ -25,26 +25,28 @@ subprojects:
 
 **Vivid Code** is a pioneering software framework for next generation data
 analysis applications, that interconnects collaborative data science with
-automated machine learning.
+automated machine learning. Thereby it separates data sources and algorithms
+from the program flow, which provides some significant advantages for
+collaborations: The program flow and the algorithms can be developed and
+maintained by different expert groups, e.g. by industrial developers and
+university research groups.
 
-{% include site/figure.html url="/images/fig/vivid.svg"
-  description="Cloud-Assisted Meta programming in the Vivid Code framework" %}
+{% include site/figure.html url="/images/fig/vivid-collaboration.svg"
+  description="Collaboration between researchers (green) and developers
+  (blue) using the Vivid Code framework" %}
 
-Based on the **Cloud-Assisted Meta programming** (CAMP) paradigm, the framework
-allows the usage of **Currently Best Fitting** (CBF) algorithms, that are
-specified by an algorithm category, a data domain and an evaluation metric.
-Examples for such metrices include average prediction accuracies for gold
-standard samples of the data domain (e.g. latin handwriting samples, spoken word
-samples, TCGA gene expression data, etc.).
+At the core of Vivid Code is **Cloud-Assisted Meta programming** (CAMP). The
+fundamental idea behind this new programming paradigm is to use machine
+learning to incorporate swarm intelligence by **Currently Best Fitting** (CBF)
+algorithms. Before code interpretation and compilation these CBF algorithms are
+requested from servers, which immediately involves two components: A requesting
+client and an answering server, respectively given by [Vivid
+Node](/projects/rian.html) and [Vivid Store](/projects/brea.html). Thereby any
+Vivid Node instance can be connected to one or many Vivid Store instances.
 
-Before code interpretation and compilation the CBF algorithms are respectively
-requested from servers which immediately involves two components: A
-requesting client and an answering server, respectively given by [Vivid
-Node](/projects/rian.html) and [Vivid Store](/projects/brea.html).
-Thereby a Vivid Node instance communicates with one or many connected Vivid
-Store instances. The communication is initiated with an `EVALUATION REQUEST` for
-any connected Vivid Store. This request comprises (R1) an Algorithm Category,
-(R2) the used Data Type and (R3) the applied Evaluation Metric. Thereupon the
+The communication is initiated with an `EVALUATION REQUEST` for
+any connected Vivid Store. This request comprises (E1) an Algorithm Category,
+(E2) the used Data Domain and (E3) the applied Evaluation Metric. Thereupon the
 connected Vivid Stores respectively use their evaluation lookup tables to
 respond to this request with an `CODE OFFER`. This includes the above given
 information, as well as (O1) an Evaluation Score and (O2) an Algorithm ID, which
@@ -52,17 +54,17 @@ identifies the algorithm within the Store. The collection of all offers received
 by Vivid Node within a pre-defined time window are ranked by their evaluation
 scores.
 
-Thereupon the highest ranked code offers are looked up in a local
-algorithm cache, by using the combination of the domain name of the store and
-the algorithm id. If this combination, however, could not be found, Vivid Node
-creates a `CODE REQUEST` to the respective store, which includes the algorithm
-id and a cryptographic token, that identifies the user. Finally, the transaction
-is finished, when the store responds to the code request with a `CODE ANSWER`.
-This answer depends on the authorization of the user: If the user is unknown or
-not allowed to receive the algorithm, the answer is constituted by (A1) the
-Algorithm ID and a respective (A2) Error Notification Flag. If the user, however
-is authorized the error flag is empty and the answer also comprises (A3) the
-encoded algorithm.
+Thereupon the highest ranked code offers are looked up in a local algorithm
+cache, by using the combination of the domain name of the store and the
+algorithm id. If this combination, however, could not be found, Vivid Node
+creates a `CODE REQUEST` to the respective store, which includes (C1) the
+Algorithm ID and (C2) a cryptographic token, that identifies the user. Finally,
+the transaction is finished, when the store responds to the code request with a
+`CODE ANSWER`. This answer depends on the authorization of the user: If the user
+is unknown or not allowed to receive the algorithm, the answer is constituted by
+(A1) the Algorithm ID and a respective (A2) Error Notification Flag. If the
+user, however is authorized the error flag is empty and the answer also
+comprises (A3) the encoded algorithm.
 
 The above description, however, conceals one essential detail that is necessary
 to share code between different organizations: For any instance and any
@@ -74,8 +76,9 @@ collaborating organizations to share (or to offer) algorithms and code without
 the need to share data! Together the three components constitute the
 **Vivid Code** framework.
 
-The Vivid Code framework allows the implementation of cutting edge enterprise
-analytical applications, that are automatically kept up-to-date and therefore
-**minimize their maintenance costs**. Also the Vivid Code framework facilitates
-the publication, application, sharing and comparison of algorithms, within and
-between workgroups.
+The Vivid Code framework allows collaborations in data science at an entirely
+new level! From a business perspective, Vivid Code allows the implementation of
+cutting edge enterprise analytical applications, that are automatically kept
+up-to-date and therefore minimize their TCO. From a social perspective Vivid
+Code facilitates collaborations between different workgroups and organizations,
+and therefore strengthens the position of individual advances.
