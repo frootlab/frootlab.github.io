@@ -58,10 +58,3 @@ use a universal data mapper, given by [Vivid DB](/projects/brea.html). This
 allows collaborating organizations to share or to offer algorithms without the
 need to share data! Together these three components constitute the Vivid Code
 framework.
-
-The Vivid Code framework allows collaborations in data science at an entirely
-new level! From a business perspective, Vivid Code allows the implementation of
-cutting edge enterprise analytical applications, that are automatically kept
-up-to-date and therefore minimize their TCO. From a social perspective Vivid
-Code facilitates collaborations between different workgroups and organizations,
-and therefore strengthens the position of individual advances.
