@@ -76,7 +76,7 @@ sidenav (less padding and a smaller font size) */
   #sidenav {
     padding-top: 15px;
   }
-  
+
   #sidenav a {
     font-size: 18px;
   }
@@ -87,6 +87,7 @@ sidenav (less padding and a smaller font size) */
   float: left;
   display: inline-block;
   position: absolute;
+  position: fixed;
   z-index: 3;
   top: 0;
   left: 0;
