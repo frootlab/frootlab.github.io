@@ -1,4 +1,4 @@
-{% assign title = page.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% assign title = page.title | strip_html %}
 {% capture image %}
   {% include site/background-image.html display="center" %}
 {% endcapture %}
@@ -21,6 +21,12 @@
 {% else %}
   {% assign title-class = "boxed" %}
 {% endif %}
+
+{% comment %}
+================================================================================
+Create Header of Cover Page
+================================================================================
+{% endcomment %}
 
 <div id="left-page" style="background-image: {{ image }};">
   <div class="content">

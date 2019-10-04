@@ -37,13 +37,16 @@
     {% for crumb in rcrumbs %}
     {% if crumb != '' %}
     {% if forloop.index == 1 %}
-    <li class="active"><a>{{ short-title }}</a></li>
+    <li class="active">
+      <a>{{ short-title }}</a>
     {% else %}
     {% assign crumb_limit = total | minus: forloop.index | plus: 1 %}
-    <li><a href="{{ site.url }}/{% for i in crumbs limit: crumb_limit %}{{ i | downcase | append: '/' }}{% endfor %}">{{ crumb }}</a></li>
+    <li>
+      <a href="{{ site.url }}/{% for i in crumbs limit: crumb_limit %}{{ i | downcase | append: '/' }}{% endfor %}">{{ crumb }}</a>
     {% endif %}
     {% endif %}
     {% endfor %}
-    <li class="{{ menu-class }}"><a onclick="openNav();" title="Menu"><i class="fas fa-bars"></i></a></li>
+    <li class="{{ menu-class }}">
+      <a onclick="openNav();" title="Menu"><img src="/images/ico/menu.svg"></a>
   </ul>
 </nav>

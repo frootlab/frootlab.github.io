@@ -91,6 +91,13 @@ main {
   overflow: hidden;
   transition: .2s;
 
+  img {
+    padding: 0;
+    margin: 0;
+    height: 0.9rem;
+    transform: scale(1.5);
+  }
+
   i {
     transform: scale(1.4);
   }
