@@ -236,14 +236,59 @@ pre {
     margin: 0;
   }
 
-  p > code,
-  a > code,
-  li > code,
-  figcaption > code,
-  td > code {
-    padding: 0.1rem 0.2rem;
-    font-size: 0.9em;
-    border-radius: 2px;
-    background-color: darken($white, 5%);
-    font-family: $base-font;
+p > code,
+a > code,
+li > code,
+figcaption > code,
+td > code {
+  padding: 0.1rem 0.2rem;
+  font-size: 0.9em;
+  border-radius: 2px;
+  background-color: darken($white, 5%);
+  font-family: $base-font;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+
+  &:not(.vstack):not(.hstack) {
+    padding-left: 1.5rem;
+
+    > li {
+      position: relative;
+      padding: 0 0 .5rem .5rem;
+
+      &:first-child {
+        padding-top: .5rem;
+      }
+
+      &:last-child {
+        padding-bottom: .5rem;
+      }
+    }
   }
+
+  &.vstack {
+    list-style-type: none;
+  }
+
+  &.hstack {
+    list-style-type: none;
+
+    > li {
+      display: inline-block;
+      margin: 0;
+      padding: 0 0.25rem;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}

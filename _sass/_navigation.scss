@@ -73,8 +73,13 @@ main {
 /* On smaller screens, where height is less than 450px, change the style of the
 sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-  #sidenav {padding-top: 15px;}
-  #sidenav a {font-size: 18px;}
+  #sidenav {
+    padding-top: 15px;
+  }
+  
+  #sidenav a {
+    font-size: 18px;
+  }
 }
 
 /* Breadcrumbs */
@@ -90,51 +95,49 @@ sidenav (less padding and a smaller font size) */
   line-height: 1em;
   overflow: hidden;
   transition: 0.2s;
-}
 
-/* Icons */
-#crumbs i {
-  transform: scale(1.4);
-}
+  i {
+    transform: scale(1.4);
+  }
 
-/* Breadcrumb Elements */
-#crumbs ul {
+  ul {
     display: flex;
     flex-direction: row-reverse;
-    list-style: none;
-    margin: 0;
+    list-style-type: none;
     padding: 0;
-}
-
-#crumbs ul li {
     margin: 0;
-}
 
-/* Menu items */
-#crumbs ul li a {
-  cursor: pointer;
-  display: inline-block;
-  font-family: sans-serif;
-  font-size: 0.9em;
-  font-weight: 600;
-  padding: 12px 30px 12px 45px;
-  margin-left: -20px;
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  border-radius: 0 100px 100px 0;
-  box-shadow: 0 0 20px $black-t40;
-  background: linear-gradient(
-    $ocean 0%,
-    darken($ocean, 3%) 95%,
-    lighten($ocean, 5%) 100%);
+    > li {
+      padding: 0;
+      margin: 0;
 
-  &:hover {
-    background-color: lighten($ocean, 10%);
-    background: linear-gradient(
-      lighten($ocean, 10%) 0%,
-      lighten($ocean, 7%) 95%,
-      lighten($ocean, 15%) 100%);
+      a {
+        cursor: pointer;
+        display: inline-block;
+        font-family: sans-serif;
+        font-size: 0.9em;
+        font-weight: 600;
+        padding: 12px 30px 12px 45px;
+        margin-left: -20px;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-radius: 0 100px 100px 0;
+        box-shadow: 0 0 20px $black-t40;
+        background: linear-gradient(
+          $ocean 0%,
+          darken($ocean, 3%) 95%,
+          lighten($ocean, 5%) 100%);
+
+        &:hover {
+          background-color: lighten($ocean, 10%);
+          background: linear-gradient(
+            lighten($ocean, 10%) 0%,
+            lighten($ocean, 7%) 95%,
+            lighten($ocean, 15%) 100%);
+        }
+      }
+    }
   }
 }
 

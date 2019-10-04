@@ -102,7 +102,7 @@ Get related posts
     {% if page.docs %}
     <div style="flex: 50%;">
       <div class="label" style="color: #6E7080;">Documentation</div>
-      <ul class="icons">
+      <ul class="hstack icons">
         {% for item in page.docs %}
         <li>
           {% include links/create.html name=item.name uid=item.user type=item.type %}
@@ -114,7 +114,7 @@ Get related posts
     {% if page.docs %}
     <div style="flex: 50%;">
       <div class="label" style="color: #6E7080;">Source Code</div>
-      <ul class="icons">
+      <ul class="hstack icons">
         {% for item in page.source %}
         <li>
           {% include links/create.html name=item.name uid=item.user type=item.type %}

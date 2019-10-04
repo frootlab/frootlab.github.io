@@ -1,8 +1,8 @@
 {% if page.social %}
   {% if include.class %}
-    {% assign class = "icons " | append: include.class %}
+    {% assign class = "hstack icons " | append: include.class %}
   {% else %}
-    {% assign class = "icons" %}
+    {% assign class = "hstack icons" %}
   {% endif %}
   <ul class="{{ class }}">
   {% for item in page.social %}

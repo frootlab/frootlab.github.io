@@ -17,8 +17,7 @@
     font-weight: 300;
   }
 
-  header,
-  hgroup {
+  header {
     padding: 0;
     margin: 0;
 
@@ -118,16 +117,13 @@
   }
 
   p,
-  ul {
+  ul,
+  ol {
     color: $dark-grey;
     font-size: 1em;
     margin: 1em 0;
     padding: 0;
     line-height: 1.6;
-  }
-
-  ul {
-    list-style-type: none;
   }
 
   a {
@@ -359,8 +355,7 @@
 /* Small Screen Adjustments */
 
 @media screen and (max-width: 640px) {
-  .form header,
-  .form hgroup {
+  .form header {
     h1, h2, h3, h4, p {
       padding-left: 1rem;
       padding-right: 1rem;

@@ -92,30 +92,10 @@ article {
     margin-bottom: 10px;
     display: block;
   }
-
-  ul,
-  ol {
-    padding: 0;
-    margin: 0;
-    padding-left: 1.5rem;
-
-    > li {
-      position: relative;
-      padding: 0 0 0.5rem 0.5rem;
-
-      &:first-child {
-        padding-top: 0.5rem;
-      }
-
-      &:last-child {
-        padding-bottom: 0.5rem;
-      }
-    }
-  }
 }
 
 /* Section Separators */
-.separator {
+div.separator {
   display: block;
   width: 100%;
   font-family: 'Merriweather', serif;
@@ -126,22 +106,29 @@ article {
   align-items: center;
   font-size: 0.9em;
 
+  &:before,
+  &:after {
+    content: '';
+    height: 1px;
+    background: $black-t10;
+  }
+
+  &:before {
+    margin-right: 10px;
+  }
+
+  &:after {
+    margin-left: 10px;
+  }
+
   &.left:before,
   &.right:after {
-    content: '';
-    height: 2px;
-    background: $black-t10;
-    flex: 0.1;
-    margin-right: 10px;
+    flex: 1;
   }
 
   &.left:after,
   &.right:before {
-    content: '';
-    height: 2px;
-    background: $black-t10;
-    flex: 1;
-    margin-left: 10px;
+    flex: 9;
   }
 }
 
@@ -162,19 +149,19 @@ article blockquote {
 
       &::before {
         content: open-quote;
-        margin-right: 0.1rem;
+        margin-right: .1rem;
       }
 
       &::after {
         content: close-quote;
-        margin-left: 0.1rem;
+        margin-left: .1rem;
       }
     }
 
     &:last-of-type {
-      font-size: 0.8em;
+      font-size: .8em;
       display: block;
-      margin-top: 0.5em;
+      margin-top: .5em;
       width: 100%;
       text-align: right;
       quotes: '\201C' '\201D' '\2018' '\2019';

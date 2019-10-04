@@ -1,80 +1,60 @@
 // Icons
 
 ul.icons {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
 
-  > li {
-    display: inline-block;
-    margin: 0 0.25rem;
+  > li a {
+    font-size: 1.35rem;
+    width: 3rem;
+    height: 3rem;
+    margin: 0;
     padding: 0;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    transition:
+      all .2s ease-in-out,
+      transform 50ms ease;
 
-    &:first-child {
-      margin-left: 0;
+    &:active {
+      transform: scale(.97);
     }
 
-    &:last-child {
-      margin-right: 0;
+    &.text {
+      width: auto !important;
+
+      span {
+        padding: 0 1rem;
+      }
     }
 
-    a {
-      font-size: 1.35rem;
-      width: 3rem;
-      height: 3rem;
-      margin: 0;
-      padding: 0;
-      vertical-align: middle;
-      cursor: pointer;
-      user-select: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      border: none;
-      transition:
-        all 0.2s ease-in-out,
-        transform 50ms ease;
+    &.left {
+      width: auto !important;
 
-      &:active {
-        transform: scale(0.97);
-      }
-
-      &.text {
-        width: auto !important;
-
-        span {
-          padding: 0 1rem;
-        }
-      }
-
-      &.left {
-        width: auto !important;
-
-        i {
-          padding: 0 0.1em 0 1rem;
-          transform: scale(0.7);
-        }
-
-        span {
-          padding: 0 1rem 0 0;
-        }
-      }
-
-      &.right {
-        width: auto !important;
-
-        span {
-          padding: 0 0.1em 0 1rem;
-        }
-
-        i {
-          padding: 0 1rem 0 0;
-          transform: scale(0.7);
-        }
+      i {
+        padding: 0 0.1em 0 1rem;
+        transform: scale(0.7);
       }
 
       span {
+        padding: 0 1rem 0 0;
+      }
+    }
+
+    &.right {
+      width: auto !important;
+
+      span {
+        padding: 0 .1em 0 1rem;
+      }
+
+      i {
+        padding: 0 1rem 0 0;
+        transform: scale(.7);
       }
     }
   }
@@ -98,7 +78,7 @@ ul.icons {
 
   &.header > li a,
   &.squared > li a {
-    border-radius: 0.3vw;
+    border-radius: .3vw;
   }
 
   &.squared:not(.inherent) > li a {
