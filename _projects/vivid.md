@@ -49,12 +49,22 @@ advantages, in particular for data science:
 
 ### How does it work?
 
-Before code interpretation at [Vivid Nodes](/projects/rian.html), the currently
-best fitting algorithms are requested from connected [Vivid
-Stores](/projects/brea.html). Thereby any node may be connected to one or many
-stores and stores may be interconnected to self maintained clusters. In order to
-share and automatically evaluate the algorithms, the stores as well as the nodes
-use a universal data mapper, given by [Vivid DB](/projects/brea.html). This
-allows collaborating organizations to share or to offer algorithms without the
-need to share data! Together these three components constitute the Vivid Code
-framework.
+[Vivid Node](/projects/rian.html) is a data analysis framework, that
+orchestrates standard libraries like TensorFlow / Keras. On their top Vivid Node
+allows the definition of program flows, that use explicit or abstract
+algorithms. Before code interpretation and compilation, the abstract algorithms
+are substituted by currently best fitting algorithms, that are automatically
+obtained from smart algorithm repositories.
+
+[Vivid Store](/projects/brea.html) is a smart algorithm repository with
+automatic algorithm evaluation and deployment to Nodes. Thereby any Node can be
+connected to one or many Stores and the access to the Stores can be restricted
+to authorized Users / Nodes. Also the Stores can be configured to exchange
+algorithms, either unidirectional or bidirectional, depending on the respective
+peering agreement between the collaboration partners.
+
+A fundamental requirement for such an automated algorithm management is the
+usage of unified data interfaces. For this reason Vivid Node and Vivid Store use
+a universal data mapper, given by [Vivid DB](/projects/brea.html). This allows
+collaboration partner to automatically share algorithms without the need to
+share data. Together these three components constitute Vivid Code.
