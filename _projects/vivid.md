@@ -32,14 +32,14 @@ automated machine learning.
   intelligence" %}
 
 The Vivid Code framework implements a new programming paradigm, that shapes it's
-design: **Cloud-Assisted Meta programming**. The rough idea behind this paradigm
+design: **cloud-assisted meta programming**. The rough idea behind this paradigm
 is to replace frequently used code elements by best practices, that are
 hosted within a federated cloud. Whereas the development and advance of these
 code elements is subject to collaborative achievements, their evaluation is
 automatically performed by using machine intelligence. This provides significant
 advantages, in particular for data science:
 
-* The dynamic replacement of code elements by **Currently Best Fitting**
+* The dynamic replacement of code elements by **currently best fitting**
   algorithms automatically keeps projects state-of-the-art while reducing their
   TCO
 * The separation of program flow and algorithms allows them to be developed and
@@ -66,6 +66,6 @@ partners.
 
 A fundamental requirement for such an automated algorithm management is the
 usage of a unified data interface. For this reason Vivid Node and Vivid Store
-use a universal data mapper, given by [Vivid DB](/projects/brea.html). This
+use a universal data mapper, given by [Vivid DB](/projects/deet.html). This
 allows collaboration partners to automatically share algorithms without the need
 to share data. Together these three components constitute Vivid Code.

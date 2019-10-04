@@ -1,7 +1,7 @@
-/* Overlay to greyout page when opening side navigation */
+/* Greyout page when opening side navigation */
 #overlay {
-  height: 100%;
   width: 0;
+  height: 100%;
   position: fixed;
   z-index: 9;
   top: 0;
@@ -9,12 +9,16 @@
   background: transparent;
   overflow-x: hidden;
   transition: background-color 0.5s;
+
+  @media print {
+    display: none;
+  }
 }
 
-/* The side navigation menu */
+/* Side navigation */
 #sidenav {
-  height: 100%;
   width: 0;
+  height: 100%;
   position: fixed;
   z-index: 10;
   top: 0;
@@ -22,41 +26,45 @@
   background-color: #111;
   overflow-x: hidden;
   padding-top: 60px;
-  transition: 0.5s;
+  transition: .5s;
   box-shadow: 3px 0 15px 0 $black-t50;
-}
 
+  /* The navigation menu links */
+  a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #818181;
+    display: block;
+    transition: .3s;
 
-/* The navigation menu links */
-#sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 1.5em;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
+    @media screen and (max-height: 450px) {
+      font-size: 1.2rem;
+    }
 
-/* Active Navigation Entry */
-#sidenav a.active {
-  background-color: $ocean;
-  color: #e0e0e0;
-  cursor: default;
-  pointer-events: none;
-}
+    &:hover {
+      color: #F1F1F1;
+    }
 
-/* When you mouse over the navigation links, change their color */
-#sidenav a:hover {
-  color: #f1f1f1;
-}
+    &.active {
+      background-color: $ocean;
+      color: #E0E0E0;
+      cursor: default;
+      pointer-events: none;
+    }
 
-/* Position and style the close button (top right corner) */
-#sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+    &.closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+  }
+
+  @media print {
+    display: none;
+  }
 }
 
 /* Style page content - use this if you want to push the page content to the
@@ -70,32 +78,18 @@ main {
   clear: both;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the
-sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  #sidenav {
-    padding-top: 15px;
-  }
-
-  #sidenav a {
-    font-size: 18px;
-  }
-}
-
 /* Breadcrumbs */
 #crumbs {
-  float: left;
-  display: inline-block;
-  position: absolute;
   position: fixed;
   z-index: 3;
   top: 0;
   left: 0;
   font-family: Helvetica, sans-serif;
-  font-size: 14px;
-  line-height: 1em;
+  font-weight: 300;
+  font-size: .9rem;
+  line-height: 1rem;
   overflow: hidden;
-  transition: 0.2s;
+  transition: .2s;
 
   i {
     transform: scale(1.4);
@@ -137,47 +131,50 @@ sidenav (less padding and a smaller font size) */
             lighten($ocean, 7%) 95%,
             lighten($ocean, 15%) 100%);
         }
+
+        background: linear-gradient(
+          $blue 0%,
+          darken($blue, 3%) 95%,
+          lighten($blue, 5%) 100%);
+
+        &:hover {
+          background: linear-gradient(
+            lighten($blue, 10%) 0%,
+            lighten($blue, 7%) 95%,
+            lighten($blue, 15%) 100%);
+        }
+      }
+
+      /* Remove the shadow of the right most Icon (reversed) */
+      &:first-child a {
+        box-shadow: none;
+      }
+
+      /* Menu Icon */
+      &.menu-button a,
+      &.menu-button-active a {
+        padding: 12px 30px;
+        margin-left: 0px;
+        border-radius: 0px 100px 100px 0px;
+
+        background: linear-gradient(
+          lighten($green, 10%) 0%,
+          lighten($green, 6%) 95%,
+          lighten($green, 15%) 100%);
+
+        &:hover {
+          background: linear-gradient(
+            lighten($green, 20%) 0%,
+            lighten($green, 16%) 95%,
+            lighten($green, 25%) 100%);
+        }
       }
     }
   }
-}
 
-/* Menu Icon */
-#crumbs ul li.menu-button a,
-#crumbs ul li.menu-button-active a {
-  padding: 12px 30px 12px 30px;
-  margin-left: 0px;
-  border-radius: 0px 100px 100px 0px;
-
-  background: linear-gradient(
-    $blue 0%,
-    darken($blue, 3%) 95%,
-    lighten($blue, 5%) 100%);
-
-  &:hover {
-    background: linear-gradient(
-      lighten($blue, 10%) 0%,
-      lighten($blue, 7%) 95%,
-      lighten($blue, 15%) 100%);
+  @media print {
+    display: none;
   }
-
-  background: linear-gradient(
-    lighten($green, 10%) 0%,
-    lighten($green, 6%) 95%,
-    lighten($green, 15%) 100%);
-
-  &:hover {
-    background: linear-gradient(
-      lighten($green, 20%) 0%,
-      lighten($green, 16%) 95%,
-      lighten($green, 25%) 100%);
-  }
-
-}
-
-/* Remove the shadow for first item, last in the right side when it gets reversed */
-#crumbs ul li:first-child a {
-  box-shadow: none;
 }
 
 /* Active item is a bit different */
@@ -192,13 +189,4 @@ sidenav (less padding and a smaller font size) */
 /* Remove the shadow for the active's next item, to match the design more accurately */
 #crumbs ul li.active + li a {
   box-shadow: none;
-}
-
-/* Print Adjustments */
-@media print {
-  #sidenav,
-  #overlay,
-  #crumbs {
-    display: none;
-  }
 }
