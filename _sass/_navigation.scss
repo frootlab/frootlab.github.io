@@ -84,8 +84,8 @@ main {
   z-index: 3;
   top: 0;
   left: 0;
-  font-family: Helvetica, sans-serif;
-  font-weight: 300;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 500;
   font-size: .9rem;
   line-height: 1rem;
   overflow: hidden;
@@ -95,7 +95,9 @@ main {
     padding: 0;
     margin: 0;
     height: 1rem;
-    transform: scale(1.5);
+    width: auto;
+    max-width: none;
+    max-height: none;
   }
 
   i {
@@ -108,6 +110,7 @@ main {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    height: 100px;
 
     > li {
       padding: 0;
@@ -116,29 +119,14 @@ main {
       a {
         cursor: pointer;
         display: inline-block;
-        font-family: sans-serif;
-        font-size: 0.9em;
-        font-weight: 600;
         padding: 12px 30px 12px 45px;
         margin-left: -20px;
         color: white;
         text-decoration: none;
         text-transform: uppercase;
         border-radius: 0 100px 100px 0;
-        box-shadow: 0 0 20px $black-t40;
-        background: linear-gradient(
-          $ocean 0%,
-          darken($ocean, 3%) 95%,
-          lighten($ocean, 5%) 100%);
-
-        &:hover {
-          background-color: lighten($ocean, 10%);
-          background: linear-gradient(
-            lighten($ocean, 10%) 0%,
-            lighten($ocean, 7%) 95%,
-            lighten($ocean, 15%) 100%);
-        }
-
+        box-shadow: 0 0 15px $black-t40;
+        white-space: nowrap;
         background: linear-gradient(
           $blue 0%,
           darken($blue, 3%) 95%,
@@ -160,10 +148,6 @@ main {
       /* Menu Icon */
       &.menu-button a,
       &.menu-button-active a {
-        padding: 12px 30px;
-        margin-left: 0px;
-        border-radius: 0px 100px 100px 0px;
-
         background: linear-gradient(
           lighten($green, 10%) 0%,
           lighten($green, 6%) 95%,
