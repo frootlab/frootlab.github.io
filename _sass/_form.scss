@@ -30,6 +30,10 @@
         inset 0 -1px 5px 0 rgba(0,0,0,.013),
         inset 0 -2px 2px 0 rgba(0,0,0,.009),
         inset 0 -3px 1px -2px rgba(0,0,0,.013);
+
+      @media print {
+        box-shadow: none;
+      }
     }
 
     &:first-child {
