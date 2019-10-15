@@ -1,5 +1,6 @@
 ---
 title: Vivid DB
+short-title: DB
 subtitle: Universal Data Mapper
 slogan: Universal high-performance Data Mapper for high interoperability
 featured: true
@@ -12,12 +13,14 @@ figure:
   uri: /images/fig/deet.svg
 backdrop: white
 form-logo: /images/svg/deet.svg
-permalink: /projects/deet.html
+permalink: /projects/vivid/db.html
 redirect_from:
-  - /deet
-  - /deet.html
+  - /pandora
   - /pandora.html
   - /projects/pandora.html
+  - /deet
+  - /deet.html
+  - /projects/deet.html
 stage: Pre-Alpha
 version: 0.1.11
 docs:

@@ -1,5 +1,6 @@
 ---
 title: Vivid Code
+short-title: Vivid
 subtitle: "Automated collaborative data science"
 slogan: "Create smart software"
 featured: true
@@ -13,14 +14,16 @@ figure:
 backdrop: white
 permalink: /projects/vivid.html
 redirect_from:
-  - /vivid
-  - /vivid.html
+  - /liquid
   - /liquid.html
   - /projects/liquid.html
+  - /vivid
+  - /vivid.html
 subprojects:
   - Vivid DB
   - Vivid Node
   - Vivid Store
+  - Vivid Root
 ---
 
 **Vivid Code** is a pioneering software framework for next generation data

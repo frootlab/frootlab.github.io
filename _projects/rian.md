@@ -1,5 +1,6 @@
 ---
 title: Vivid Node
+short-title: Node
 subtitle: Smart Data Analysis Processor
 slogan: Smart Data Analysis Processor
 featured: true
@@ -11,12 +12,14 @@ image-meta:
 figure:
   uri: /images/fig/rian.svg
 backdrop: white
-permalink: /projects/rian.html
+permalink: /projects/vivid/node.html
 redirect_from:
-  - /rian
-  - /rian.html
+  - /nemoa
   - /nemoa.html
   - /projects/nemoa.html
+  - /rian
+  - /rian.html
+  - /projects/rian.html
 stage: Alpha
 version: 0.5.583
 docs:

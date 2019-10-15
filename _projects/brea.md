@@ -1,5 +1,6 @@
 ---
 title: Vivid Store
+short-title: Store
 subtitle: "Smart Algorithm Repository"
 slogan: "Smart Algorithm Repository"
 featured: true
@@ -12,12 +13,14 @@ figure:
   uri: /images/fig/brea.svg
 backdrop: white
 form-logo: "/images/svg/brea.svg"
-permalink: /projects/brea.html
+permalink: /projects/vivid/store.html
 redirect_from:
-  - /brea
-  - /brea.html
+  - /motley
   - /motley.html
   - /projects/motley.html
+  - /brea
+  - /brea.html
+  - /projects/brea.html
 stage: Planning
 version: 0.0.1
 docs:

@@ -40,8 +40,8 @@ source:
 ---
 
 **Hup** is a multi-purpose [Python](https://www.python.org/) library, which
-primarily aims to support our main [main projects](/projects#main) by serving as
-a common base library. It was originally created in 2019 for the [Vivid
+primarily aims to support our [main projects](/projects#main) by serving as a
+common base library. It was originally created in 2019 for the [Vivid
 Code](/vivid) framework and it's components. The majority of the provided
 modules, however, are kept generic to facilitate their application beyond our
 projects as well.
