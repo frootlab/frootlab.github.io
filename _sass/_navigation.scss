@@ -86,7 +86,7 @@ main {
   left: 0;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-weight: 500;
-  font-size: .9rem;
+  font-size: 0.9rem;
   line-height: 1rem;
   overflow: hidden;
   transition: .2s;
@@ -110,7 +110,7 @@ main {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    height: 100px;
+    height: 2.6rem;
 
     > li {
       padding: 0;
@@ -119,13 +119,13 @@ main {
       a {
         cursor: pointer;
         display: inline-block;
-        padding: 12px 30px 12px 45px;
+        padding: .8rem 1.6rem .8rem 2.6rem;
         margin-left: -20px;
         color: white;
         text-decoration: none;
         text-transform: uppercase;
-        border-radius: 0 100px 100px 0;
-        box-shadow: 0 0 15px $black-t40;
+        border-radius: 0 1.3rem 1.3rem 0;
+        box-shadow: 0 0 1rem $black-t40;
         white-space: nowrap;
         background: linear-gradient(
           $blue 0%,
@@ -140,6 +140,20 @@ main {
         }
       }
 
+      /* Active item is a bit different */
+      &.active a {
+        pointer-events: none;
+        cursor: default;
+        color: white;
+        background-color: $black-t80;
+        background: $black-t80;
+      }
+
+      /* Remove the shadow for the active's next item */
+      &.active + li a {
+        box-shadow: none;
+      }
+
       /* Remove the shadow of the right most Icon (reversed) */
       &:first-child a {
         box-shadow: none;
@@ -148,6 +162,7 @@ main {
       /* Menu Icon */
       &.menu-button a,
       &.menu-button-active a {
+        padding-left: 2.8rem;
         background: linear-gradient(
           lighten($green, 10%) 0%,
           lighten($green, 6%) 95%,
@@ -166,18 +181,4 @@ main {
   @media print {
     display: none;
   }
-}
-
-/* Active item is a bit different */
-#crumbs ul li.active a {
-  pointer-events: none;
-  cursor: default;
-  color: white;
-  background-color: $black-t80;
-  background: $black-t80;
-}
-
-/* Remove the shadow for the active's next item, to match the design more accurately */
-#crumbs ul li.active + li a {
-  box-shadow: none;
 }

@@ -8,7 +8,6 @@ ul.icons {
     height: 3rem;
     margin: 0;
     padding: 0;
-    vertical-align: middle;
     cursor: pointer;
     user-select: none;
     display: flex;
@@ -19,6 +18,12 @@ ul.icons {
     transition:
       all .2s ease-in-out,
       transform 50ms ease;
+
+    @media (max-width: 640px) {
+      font-size: 1.125rem;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
 
     &:active {
       transform: scale(.97);
@@ -131,11 +136,3 @@ ul.icons {
 @include icon(feed, #F7991C, white);
 @include icon(link, #134459, white);
 @include icon(more, #134459, white);
-
-@media screen and (max-width: 640px) {
-  ul.icons > li a {
-    font-size: 1.125rem;
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-}
