@@ -30,7 +30,7 @@ collections:
     output: true
     permalink: /blog/:categories/:short_year:y_day-:slug:output_ext
   news:
-    output: false
+    output: true
 
 # Jekyll
 markdown: kramdown
