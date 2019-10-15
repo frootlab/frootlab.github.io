@@ -7,7 +7,7 @@ featured: false
 category: "auxiliary"
 popularity: 0
 image-meta:
-  cloudinary: "pexels/1770809"
+  cloudinary: "pexels/762679"
   orientation: "portrait"
 figure:
   cloudinary: undraw/connected_world
