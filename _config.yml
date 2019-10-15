@@ -31,6 +31,7 @@ collections:
     permalink: /blog/:categories/:short_year:y_day-:slug:output_ext
   news:
     output: true
+    permalink: /microblog/:categories/:short_year:y_day-:slug:output_ext
 
 # Jekyll
 markdown: kramdown
