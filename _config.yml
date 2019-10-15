@@ -93,6 +93,7 @@ defaults:
       sections: false
       license: "CC BY 4.0"
       navid: "blog"
+      scroll-indicator: true
   -
     scope:
       path: ""

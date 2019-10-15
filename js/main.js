@@ -24,8 +24,10 @@ function closeNav() {
 
 // On Scroll hide the Scroll Arrow (if shown)
 window.onscroll = function() {
-  if (window.pageYOffset > 10) {
-    document.getElementById("scroll").style.display = "none";
+  if (document.getElementById("scroll")) {
+    if (window.pageYOffset > 10) {
+      document.getElementById("scroll").style.display = "none";
+    }
   }
 }
 
