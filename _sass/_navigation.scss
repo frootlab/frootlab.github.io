@@ -117,22 +117,24 @@ main {
       margin: 0;
 
       a {
-        cursor: pointer;
         display: inline-block;
         padding: .8rem 1.6rem .8rem 2.6rem;
-        margin-left: -20px;
+        margin-left: -1.2rem;
         color: white;
         text-decoration: none;
         text-transform: uppercase;
         border-radius: 0 1.3rem 1.3rem 0;
-        box-shadow: 0 0 1rem $black-t40;
         white-space: nowrap;
+        cursor: pointer;
+
+        box-shadow: 0 0 1rem $black-t40;
         background: linear-gradient(
           $blue 0%,
           darken($blue, 3%) 95%,
           lighten($blue, 5%) 100%);
 
         &:hover {
+          box-shadow: 0 0 1rem $black-t60;
           background: linear-gradient(
             lighten($blue, 10%) 0%,
             lighten($blue, 7%) 95%,
@@ -149,12 +151,12 @@ main {
         background: $black-t80;
       }
 
-      /* Remove the shadow for the active's next item */
+      /* Remove shadow over active item */
       &.active + li a {
         box-shadow: none;
       }
 
-      /* Remove the shadow of the right most Icon (reversed) */
+      /* Remove shadow of the right most item */
       &:first-child a {
         box-shadow: none;
       }
@@ -175,6 +177,11 @@ main {
             lighten($green, 25%) 100%);
         }
       }
+    }
+
+    /* Reduce shadow over hovered items */
+    > li:hover + li a {
+      box-shadow: 0 0 .5rem $black-t20;
     }
   }
 
