@@ -41,5 +41,5 @@ source:
 
 **Vivid Root** is a [Python](https://www.python.org/) based planned root server
 for the administration and orchestration of [Vivid
-Store](/projects/vivid/store.html) Clusters. Vivid Root is currently in a early
+Store](/projects/vivid/store.html) Clusters. Vivid Root is currently in early
 planning stage. More information will follow soon.
