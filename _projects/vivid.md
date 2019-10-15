@@ -12,13 +12,14 @@ image-meta:
 figure:
   uri: /images/fig/vivid.svg
 backdrop: white
-permalink: /projects/vivid.html
+permalink: /projects/vivid/index.html
 redirect_from:
   - /liquid
   - /liquid.html
   - /projects/liquid.html
   - /vivid
   - /vivid.html
+  - /projects/vivid.html
 subprojects:
   - Vivid DB
   - Vivid Node
