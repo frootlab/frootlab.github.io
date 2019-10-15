@@ -11,6 +11,7 @@
   padding-top: 60px;
   transition: .5s;
   box-shadow: 3px 0 15px 0 $black-t50;
+  user-select: none;
 
   a {
     padding: 8px 8px 8px 32px;
@@ -60,6 +61,7 @@
   background: transparent;
   overflow-x: hidden;
   transition: background-color .5s;
+  user-select: none;
 
   @media print {
     display: none;
@@ -78,6 +80,7 @@
   line-height: 1rem;
   overflow: hidden;
   transition: .2s;
+  user-select: none;
 
   img {
     padding: 0;

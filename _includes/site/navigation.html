@@ -42,7 +42,7 @@
     {% else %}
     {% assign crumb_limit = total | minus: forloop.index | plus: 1 %}
     <li>
-      <a href="{{ site.url }}/{% for i in crumbs limit: crumb_limit %}{{ i | downcase | append: '/' }}{% endfor %}">{{ crumb }}</a>
+      <a href="{{ site.url }}{% for i in crumbs limit: crumb_limit %}{{ i | downcase | append: '/' }}{% endfor %}">{{ crumb }}</a>
     {% endif %}
     {% endif %}
     {% endfor %}

@@ -70,13 +70,13 @@ List / display Posts
     {% endif %}
 
     <div class="cell" id="{{ item.title | downcase | url_encode }}">
-      <a href="{{ site.url }}{{ item.url }}" title="{{ item.title }}" style="height: 12rem;">
+      <a href="{{ site.url }}{{ item.url }}" title="{{ item.title }}: {{ item.subtitle }}" style="height: 12rem;">
         <img style="width: 100%; max-width: 12rem; max-height: 12rem;"
           src="{{ preview }}" alt="{{ item.title }} Figure">
       </a>
       <p>
         <b>
-          <a href="{{ site.url }}{{ item.url }}" title="{{ item.title }}">
+          <a href="{{ site.url }}{{ item.url }}" title="{{ item.title }}: {{ item.subtitle }}">
             {{ item.title }}
           </a>
         </b>
