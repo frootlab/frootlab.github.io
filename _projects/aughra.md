@@ -39,7 +39,9 @@ source:
     type: project
 ---
 
-**Vivid Root** is a [Python](https://www.python.org/) based planned root server
-for the administration and orchestration of [Vivid
-Store](/projects/vivid/store.html) Clusters. Vivid Root is currently in early
-planning stage. More information will follow soon.
+**Vivid Root** (alias Aughra) is a planned directory service for the
+[Vivid Code](https://www.frootlab.org/projects/vivid.html) framework. Vivid Root
+is responsible to host and deploy information about algorithm categories and
+evaluation metrices to [Vivid Stores](https://www.frootlab.org/projects/vivid/store.html).
+Thereupon Vivid Root is aimed to provide information about public Vivid Stores, to allow an
+automatic configuration of [Vivid Nodes](https://www.frootlab.org/projects/vivid/node.html).
