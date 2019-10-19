@@ -49,20 +49,17 @@ tasks.
 
 {% include site/figure.html url="/images/fig/vivid-db.svg"
   description="Vivid DB unifies various data sources into a common data
-  interface" %}
+  interface to allow applications with high interoperability" %}
 
 To achieve this goal, Vivid DB implements the two fundamental layers of a data
-warehouse, the integration layer and the staging layer, as well as an
-intermediate smart cache.
+warehouse, the integration layer and the staging layer:
 
-The *integration layer* utilizes [SQLAlchemy](https://www.sqlalchemy.org) to
-allow it\'s connection to a variety of SQL-Databases (e.g. IBM DB2, Oracle, SAP,
-MS-SQL, MS-Access, Firebird, Sybase, MySQL, Postgresql, SQLite, etc.). Thereupon
-it provides native support for flat file databases (e.g. CSV-Tables, R-Table
-exports), laboratory measurements and data generators.
-
-The *staging layer* is implemented as a native SQL-Database engine, featuring a
-DB-API 2.0 interface with full SQL:2016 support, a vertical data storage manager
-and real-time encryption. This allows the data analysis application to integrate
-a variety of different data sources, by using a unified data interface (and SQL
-dialect).
+1. The **integration layer** utilizes [SQLAlchemy](https://www.sqlalchemy.org)
+   to allow it\'s connection to a variety of SQL-Databases (e.g. IBM DB2,
+   Oracle, SAP, MS-SQL, MS-Access, Firebird, Sybase, MySQL, Postgresql, SQLite,
+   etc.). Thereupon it provides native support for flat file databases (e.g.
+   CSV-Tables, R-Table exports), laboratory measurements and data generators.
+2. The **staging layer** is implemented as a native SQL-Database engine with
+   full SQL:2016 support, vertical data layout and real-time encryption. This
+   allows the data analysis application to integrate a variety of different data
+   sources, by using a unified data interface (and SQL dialect).

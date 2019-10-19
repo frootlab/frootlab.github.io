@@ -43,8 +43,8 @@ source:
 
 **Vivid Store** is a [Python](https://www.python.org/) based algorithm
 repository with integrated evaluation and ranking. This allows the resolution of
-abstract code requests by *Currently Best Fitting* algorithms, as required by
-the *Cloud-Assisted Meta Programming* paradigm.
+abstract code requests by **currently best fitting** algorithms, as required by
+the **cloud-assisted meta programming** paradigm.
 
 {% include site/figure.html url="/images/fig/vivid-store.svg"
   description="Resolution of abstract code requests by currently best fitting
@@ -75,6 +75,6 @@ respective Error Notification Flag. If the user, however is authorized the error
 flag is empty and the answer also comprises (A3) the encoded algorithm.
 
 This approach allows Vivid Stores to dynamically resolve requests for
-*Currently Best Fitting* algorithms. Thereupon the separation between evaluation
+currently best fitting algorithms. Thereupon the separation between evaluation
 requests and code requests using user authorizations allow collaborations at
 an entirely new level: Cluster of self contained Vivid Stores.
