@@ -1,8 +1,8 @@
 ---
 title: Hup
-subtitle: Frootlab Shared Library
+subtitle: Multi-purpose Python Library
 featured: false
-category: "auxiliary"
+category: auxiliary
 popularity: 0
 image-meta:
   cloudinary: unsplash/602632

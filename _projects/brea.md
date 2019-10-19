@@ -1,13 +1,13 @@
 ---
 title: Vivid Store
 short-title: Store
-subtitle: "Smart Algorithm Repository"
+subtitle: Smart Algorithm Repository
 featured: true
-category: "main"
+category: main
 popularity: 1
 image-meta:
-  cloudinary: "pexels/990824"
-  orientation: "landscape"
+  cloudinary: pexels/990824
+  orientation: landscape
 figure:
   uri: /images/fig/vivid-store.svg
 backdrop: white

@@ -3,7 +3,7 @@ title: Vivid DB
 short-title: DB
 subtitle: Universal Data Mapper
 featured: true
-category: "main"
+category: main
 popularity: 3
 image-meta:
   cloudinary: pexels/366691
