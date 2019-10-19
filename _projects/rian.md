@@ -2,7 +2,6 @@
 title: Vivid Node
 short-title: Node
 subtitle: Smart Data Analysis Processor
-slogan: Smart Data Analysis Processor
 featured: true
 category: "main"
 popularity: 2
@@ -10,7 +9,7 @@ image-meta:
   cloudinary: pexels/101764
   orientation: landscape
 figure:
-  uri: /images/fig/rian.svg
+  uri: /images/fig/vivid-node.svg
 backdrop: white
 permalink: /projects/vivid/node.html
 redirect_from:
@@ -48,7 +47,7 @@ deployment. Thereby individual code blocks are automatically retrieved from
 collaborative algorithm repositories, that provide the currently best fitting
 solutions for individual tasks.
 
-{% include site/figure.html url="/images/fig/rian.svg"
+{% include site/figure.html url="/images/fig/vivid-node.svg"
   description="Processing of data analysis flows using Vivid Node" %}
 
 The key goal of Vivid Node is to provide a long-term data analysis framework, which

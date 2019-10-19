@@ -2,7 +2,6 @@
 title: Vivid Store
 short-title: Store
 subtitle: "Smart Algorithm Repository"
-slogan: "Smart Algorithm Repository"
 featured: true
 category: "main"
 popularity: 1
@@ -10,9 +9,8 @@ image-meta:
   cloudinary: "pexels/990824"
   orientation: "landscape"
 figure:
-  uri: /images/fig/brea.svg
+  uri: /images/fig/vivid-store.svg
 backdrop: white
-form-logo: "/images/svg/brea.svg"
 permalink: /projects/vivid/store.html
 redirect_from:
   - /motley
@@ -48,7 +46,7 @@ repository with integrated evaluation and ranking. This allows the resolution of
 abstract code requests by *Currently Best Fitting* algorithms, as required by
 the *Cloud-Assisted Meta Programming* paradigm.
 
-{% include site/figure.html url="/images/fig/brea.svg"
+{% include site/figure.html url="/images/fig/vivid-store.svg"
   description="Resolution of abstract code requests by currently best fitting
   algorithms, using a self contained cluster of multiple Vivid Stores" %}
 

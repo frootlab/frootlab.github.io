@@ -37,7 +37,7 @@ collaborations with different or changing operational data landscapes, the
 additional efforts can become a permanent and critical factor, that impedes the
 advance of projects.
 
-{% include site/figure.html url="/images/fig/deet.svg"
+{% include site/figure.html url="/images/fig/vivid-db.svg"
   description="Vivid DB unifies various data sources into a common data
   interface" %}
 
@@ -67,7 +67,7 @@ over the original algorithm. But also if the original algorithm is provided
 online, it can take tremendous efforts to properly identify it's scope and adapt
 it to the underlying prerequisites - only to decide about it's suitability!
 
-{% include site/figure.html url="/images/fig/brea.svg"
+{% include site/figure.html url="/images/fig/vivid-store.svg"
   description="Resolution of abstract code requests by currently best fitting
   algorithms, using a self contained cluster of multiple Vivid Stores" %}
 
@@ -95,7 +95,7 @@ zenith has been reached, the law of happy hunting grounds applies:
 So the question arises, how data analysis projects can be kept competitive
 without the permanent binding of valuable resources!?
 
-{% include site/figure.html url="/images/fig/rian.svg"
+{% include site/figure.html url="/images/fig/vivid-node.svg"
   description="Processing of data analysis flows using Vivid Node" %}
 
 Our answer to this issue is the rapid prototyping system [Vivid
@@ -155,7 +155,7 @@ by minimizing the TCO through the synergy effects of automated collaborative
 data science. This allows to minimize the TCO of data analysis projects while
 keeping them state-of-the-art.
 
-{% include site/figure.html url="/images/fig/vivid-collaboration.svg"
+{% include site/figure.html url="/images/fig/vivid-code-collaboration.svg"
   description="Collaboration between different organizations using the Vivid
   Code framework" %}
 

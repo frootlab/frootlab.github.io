@@ -2,7 +2,6 @@
 title: Vivid Root
 short-title: Root
 subtitle: "Repository Overseer Server"
-slogan: "Repository Overseer Server"
 featured: false
 category: "auxiliary"
 popularity: 0
@@ -10,7 +9,7 @@ image-meta:
   cloudinary: "pexels/762679"
   orientation: "portrait"
 figure:
-  cloudinary: undraw/connected_world
+  uri: /images/fig/vivid-root.svg
 backdrop: white
 permalink: /projects/vivid/root.html
 redirect_from:
@@ -43,5 +42,10 @@ source:
 [Vivid Code](https://www.frootlab.org/projects/vivid.html) framework. Vivid Root
 is responsible to host and deploy information about algorithm categories and
 evaluation metrices to [Vivid Stores](https://www.frootlab.org/projects/vivid/store.html).
-Thereupon Vivid Root is aimed to provide information about public Vivid Stores, to allow an
-automatic configuration of [Vivid Nodes](https://www.frootlab.org/projects/vivid/node.html).
+
+{% include site/figure.html url="/images/fig/vivid-root.svg"
+  description="Central hosting and deployment of standardized algorithm types,
+  specifications and evaluation metrices by Vivid Root" %}
+
+Thereupon Vivid Root is aimed to provide information about public Vivid Stores,
+to allow an automatic configuration of [Vivid Nodes](https://www.frootlab.org/projects/vivid/node.html).

@@ -2,7 +2,6 @@
 title: Vivid DB
 short-title: DB
 subtitle: Universal Data Mapper
-slogan: Universal high-performance Data Mapper for high interoperability
 featured: true
 category: "main"
 popularity: 3
@@ -10,9 +9,8 @@ image-meta:
   cloudinary: pexels/366691
   orientation: landscape
 figure:
-  uri: /images/fig/deet.svg
+  uri: /images/fig/vivid-db.svg
 backdrop: white
-form-logo: /images/svg/deet.svg
 permalink: /projects/vivid/db.html
 redirect_from:
   - /pandora
@@ -49,7 +47,7 @@ requirements for large-scale data analysis applications. The primary goal of
 Vivid DB is to separate data integration and data analysis into independent
 tasks.
 
-{% include site/figure.html url="/images/fig/deet.svg"
+{% include site/figure.html url="/images/fig/vivid-db.svg"
   description="Vivid DB unifies various data sources into a common data
   interface" %}
 

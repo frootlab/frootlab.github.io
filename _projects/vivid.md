@@ -1,16 +1,15 @@
 ---
 title: Vivid Code
 short-title: Vivid
-subtitle: "Automated collaborative data science"
-slogan: "Create smart software"
+subtitle: Automated collaborative data science
 featured: true
-category: "super"
+category: super
 popularity: 5
 image-meta:
   cloudinary: pexels/67843
   orientation: landscape
 figure:
-  uri: /images/fig/vivid.svg
+  uri: /images/fig/vivid-code.svg
 backdrop: white
 permalink: /projects/vivid/index.html
 redirect_from:
@@ -31,7 +30,7 @@ subprojects:
 analysis applications, that interconnects collaborative data science with
 automated machine learning.
 
-{% include site/figure.html url="/images/fig/vivid-collaboration.svg"
+{% include site/figure.html url="/images/fig/vivid-code-collaboration.svg"
   description="Vivid Code facilitates collaborations by integrating machine
   intelligence" %}
 
