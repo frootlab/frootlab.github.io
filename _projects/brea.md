@@ -13,11 +13,11 @@ figure:
 backdrop: white
 permalink: /projects/vivid/store.html
 redirect_from:
-  - /motley
   - /motley.html
+  - /motley/index.html
   - /projects/motley.html
-  - /brea
   - /brea.html
+  - /brea/index.html
   - /projects/brea.html
 stage: Planning
 version: 0.0.1

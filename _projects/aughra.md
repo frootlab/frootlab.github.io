@@ -13,8 +13,8 @@ figure:
 backdrop: white
 permalink: /projects/vivid/root.html
 redirect_from:
-  - /aughra
   - /aughra.html
+  - /aughra/index.html
   - /projects/aughra.html
 stage: Planning
 version: 0.0.1

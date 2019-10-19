@@ -3,7 +3,7 @@ title: Vivid Node
 short-title: Node
 subtitle: Smart Data Analysis Processor
 featured: true
-category: "main"
+category: main
 popularity: 2
 image-meta:
   cloudinary: pexels/101764
@@ -13,11 +13,11 @@ figure:
 backdrop: white
 permalink: /projects/vivid/node.html
 redirect_from:
-  - /nemoa
   - /nemoa.html
+  - /nemoa/index.html
   - /projects/nemoa.html
-  - /rian
   - /rian.html
+  - /rian/index.html
   - /projects/rian.html
 stage: Alpha
 version: 0.5.583

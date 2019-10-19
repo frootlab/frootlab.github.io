@@ -13,11 +13,11 @@ figure:
 backdrop: white
 permalink: /projects/vivid/db.html
 redirect_from:
-  - /pandora
   - /pandora.html
+  - /pandora/index.html
   - /projects/pandora.html
-  - /deet
   - /deet.html
+  - /deet/index.html
   - /projects/deet.html
 stage: Pre-Alpha
 version: 0.1.11

@@ -12,8 +12,8 @@ figure:
 backdrop: white
 permalink: /projects/hup.html
 redirect_from:
-  - /hup
   - /hup.html
+  - /hup/index.html
   - /flib.html
   - /projects/flib.html
 stage: Various

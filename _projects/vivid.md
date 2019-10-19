@@ -13,11 +13,11 @@ figure:
 backdrop: white
 permalink: /projects/vivid/index.html
 redirect_from:
-  - /liquid
   - /liquid.html
+  - /liquid/index.html
   - /projects/liquid.html
-  - /vivid
   - /vivid.html
+  - /vivid/index.html
   - /projects/vivid.html
 subprojects:
   - Vivid DB
