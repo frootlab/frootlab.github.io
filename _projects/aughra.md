@@ -1,7 +1,7 @@
 ---
 title: Vivid Root
 short-title: Root
-subtitle: Algorithm Classification Catalog
+subtitle: Central Algorithm Taxonomy
 featured: false
 category: main
 popularity: 0
@@ -44,8 +44,8 @@ is responsible to host and deploy information for algorithm classification
 and accompanied evaluation metrices to [Vivid Stores](https://www.frootlab.org/projects/vivid/store.html).
 
 {% include site/figure.html url="/images/fig/vivid-root.svg"
-  description="Central hosting of standardized algorithm types, specifications
-  and evaluation metrices by Vivid Root" %}
+  description="Central organization of algorithm taxonomy with interface
+  specifications and evaluation metrices by Vivid Root" %}
 
 Thereupon Vivid Root is aimed to provide information about public Vivid Stores,
 to allow an automatic configuration of [Vivid Nodes](https://www.frootlab.org/projects/vivid/node.html).

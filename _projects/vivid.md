@@ -43,12 +43,12 @@ automatically performed by using machine intelligence. This provides significant
 advantages, in particular for data science:
 
 * The dynamic replacement of code elements by **currently best fitting**
-  algorithms automatically keeps projects state-of-the-art while reducing their
-  TCO
+  algorithms automatically keeps data analysis applications state-of-the-art
+  while reducing their TCO
 * The separation of program flow and algorithms allows them to be developed and
   maintained by different expert groups
-* The interconnection of algorithm servers to self maintained clusters allows
-  collaborations in data science at an entirely new level.
+* The interconnection of smart algorithm repositories to information clusters
+  allows data science collaborations at an entirely new level
 
 ### How does it work?
 
