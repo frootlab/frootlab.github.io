@@ -24,7 +24,11 @@ Get related posts
   {% include blog/preview.html tag=page.title layout="magazine" %}
 {% endcapture %}
 {% assign posts-html = posts-html | strip %}
-{% assign has-posts = posts-html != "" %}
+{% if posts-html == "" %}
+  {% assign has-posts = false %}
+{% else %}
+  {% assign has-posts = true %}
+{% endif %}
 
 {% include front/header.html %}
 <div class="banderole">
@@ -73,7 +77,6 @@ Get related posts
 <header id="quickstart">
   <h4>Quickstart</h4>
 </header>
-
 <section>
   <p><b>Installation using PIP</b></p>
   <div class="language-shell highlighter-rouge">
@@ -88,7 +91,6 @@ Get related posts
 <header id="posts">
   <h4>Posts</h4>
 </header>
-
 {{ posts-html }}
 {% endif %}
 
@@ -96,7 +98,6 @@ Get related posts
 <header id="resources">
   <h4>Resources</h4>
 </header>
-
 <section>
   <div style="display: flex; padding: 1rem 0;">
     {% if page.docs %}
