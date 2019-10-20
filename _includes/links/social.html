@@ -7,7 +7,12 @@
   <ul class="{{ class }}">
   {% for item in page.social %}
     <li>
-      {% include links/create.html name=item.name uid=item.user type=item.type %}
+      {% include links/create.html
+        name=item.name
+        uid=item.user
+        type=item.type
+        rel="me"
+      %}
     </li>
   {% endfor %}
   </ul>

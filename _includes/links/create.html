@@ -6,6 +6,7 @@ Assign default values
 
 {% assign target = "blank" %}
 {% assign class = include.name %}
+{% assign rel = "noopener noreferrer" %}
 
 {% comment %}
 ================================================================================
@@ -137,15 +138,15 @@ Get link parameters
       {% when "pdf" %}
         {% assign uri = uri | append: '/downloads/pdf/latest/' %}
         {% assign icon = "fas fa-file-pdf"%}
-        {% assign title = "PDF" %}
+        {% assign title = "ReadTheDocs (pdf)" %}
       {% when "epub" %}
         {% assign uri = uri | append: '/downloads/epub/latest/' %}
         {% assign icon = "fas fa-file-alt"%}
-        {% assign title = "EPUB" %}
+        {% assign title = "ReadTheDocs (epub)" %}
       {% when "zip" %}
         {% assign uri = uri | append: '/downloads/zip/latest/' %}
         {% assign icon = "fas fa-file-archive"%}
-        {% assign title = "ZIP" %}
+        {% assign title = "ReadTheDocs (zip)" %}
     {% endcase %}
   {% when "feed" %}
     {% assign uri = include.uid %}
@@ -160,15 +161,19 @@ Get link parameters
     {% assign title = "more" %}
     {% assign icon = "fas fa-chevron-right" %}
     {% assign target = "self" %}
+    {% assign rel = "" %}
   {% when "link" %}
     {% assign uri = include.uid %}
     {% assign title = include.title %}
     {% assign icon = include.icon %}
     {% assign target = "self" %}
+    {% assign rel = "" %}
   {% else %}
     {% assign uri = nil %}
     {% assign title = nil %}
     {% assign icon = nil %}
+    {% assign target = "self" %}
+    {% assign rel = "" %}
 {% endcase %}
 
 {% comment %}
@@ -181,8 +186,16 @@ Set custom parameters
   {% assign title = include.title %}
 {% endif %}
 
+{% unless title %}
+  {% assign title = include.name %}
+{% endunless %}
+
 {% if include.target %}
   {% assign target = include.target %}
+{% endif %}
+
+{% if include.rel %}
+  {% assign rel = include.rel | append: ' ' | append: rel %}
 {% endif %}
 
 {% comment %}
@@ -195,27 +208,27 @@ Create Links / Icons
   {% case include.display | downcase %}
     {% when "text" %}
       <a href="{{ uri }}" title="{{ title }}" class="{{ class }} text"
-        target="_{{ target }}" rel="noopener noreferrer">
+        target="_{{ target }}" rel="{{ rel }}">
         <span>{{ title }}</span>
       </a>
     {% when "icon" %}
       <a href="{{ uri }}" title="{{ title }}" class="{{ class }} icon"
-        target="_{{ target }}" rel="noopener noreferrer">
+        target="_{{ target }}" rel="{{ rel }}">
         <i class="{{ icon }}"></i>
       </a>
     {% when "right" %}
       <a href="{{ uri }}" title="{{ title }}" class="{{ class }} right"
-        target="_{{ target }}" rel="noopener noreferrer">
+        target="_{{ target }}" rel="{{ rel }}">
         <span>{{ title }}</span><i class="{{ icon }}"></i>
       </a>
     {% when "left" %}
       <a href="{{ uri }}" title="{{ title }}" class="{{ class }} left"
-        target="_{{ target }}" rel="noopener noreferrer">
+        target="_{{ target }}" rel="{{ rel }}">
         <i class="{{ icon }}"></i><span>{{ title }}</span>
       </a>
     {% else %}
       <a href="{{ uri }}" title="{{ title }}" class="{{ class }}"
-        target="_{{ target }}" rel="noopener noreferrer">
+        target="_{{ target }}" rel="{{ rel }}">
         <i class="{{ icon }}"></i>
       </a>
   {% endcase %}

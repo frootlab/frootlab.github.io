@@ -79,7 +79,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 2rem 0 0.5rem;
+  margin: 2rem 0 .5rem;
   font-family: $base-font;
 }
 
@@ -100,11 +100,11 @@ h4 {
 }
 
 h5 {
-  font-size: 0.9em;
+  font-size: .9em;
 }
 
 h6 {
-  font-size: 0.8em;
+  font-size: .8em;
 }
 
 // Figures and images
@@ -116,8 +116,8 @@ figure {
   margin: 2em 0;
 
   figcaption {
-    margin: 1rem auto 0.5rem;
-    font-size: 0.85em;
+    margin: 1rem auto .5rem;
+    font-size: .85em;
     width: 100%;
     text-align: center;
     max-width: 22rem;
@@ -157,11 +157,11 @@ blockquote {
   padding-left: 1em;
   padding-right: 1em;
   font-style: italic;
-  border-left: 0.25em solid $grey;
+  border-left: .25em solid $grey;
 
   cite {
     font-style: italic;
-    font-size: 0.85em;
+    font-size: .85em;
     &:before {
       content: "\2014";
       padding-right: 5px;
@@ -171,19 +171,19 @@ blockquote {
 
 cite {
   font-style: italic;
-  font-size: 0.85em;
+  font-size: .85em;
 }
 
 // Definition lists
 dt {
   border: 1px solid darken($white, 7%);
-  padding: 0.5em;
+  padding: .5em;
   background-color: darken($white, 5%);
   font-weight: bold;
 }
 
 dd {
-  padding: 0.5em 1em;
+  padding: .5em 1em;
   margin-left: 0;
   margin-bottom: 2em;
   border: 1px solid darken($white, 7%);
@@ -212,7 +212,7 @@ th,
 td {
   text-align: center;
   border-right: 1px solid darken($white, 7%);
-  padding: 0.5em;
+  padding: .5em;
   a {
     text-decoration: none !important;
   }
@@ -248,8 +248,8 @@ a > code,
 li > code,
 figcaption > code,
 td > code {
-  padding: 0.1rem 0.2rem;
-  font-size: 0.9em;
+  padding: .1rem .2rem;
+  font-size: .9em;
   border-radius: 2px;
   background-color: darken($white, 5%);
   font-family: $base-font;
@@ -287,7 +287,7 @@ ol {
     > li {
       display: inline-block;
       margin: 0;
-      padding: 0 0.25rem;
+      padding: 0 .25rem;
 
       &:first-child {
         padding-left: 0;

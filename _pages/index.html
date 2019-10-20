@@ -25,10 +25,18 @@ links:
   <h3 id="projects">Projects</h3>
   <p>Next generation AutoML and Data-Warehousing</p>
 </header>
-{% include projects/preview.html layout="cards" featured=true limit=3 more="/projects" %}
+{% include projects/display.html
+  layout="cards"
+  featured=true
+  limit=3
+  more="/projects" %}
 
 <header>
   <h3 id="blog">Blog</h3>
   <p>Pure and applied Data Science</p>
 </header>
-{% include blog/preview.html layout="cards" limit=3 type="blog" more="/blog" %}
+{% include blog/display.html
+  layout="cards"
+  limit=3
+  type="blog"
+  more="/blog" %}

@@ -24,7 +24,7 @@ Group Posts by Year
 
 {% comment %}
 ================================================================================
-Display Post Preview using given Layout
+Display Posts using given Layout
 ================================================================================
 {% endcomment %}
 
@@ -32,6 +32,10 @@ Display Post Preview using given Layout
 <header>
   <h4 style="text-align: center;">{{ year }}</h4>
 </header>
-{% include blog/preview.html year=year type=include.type category=include.category layout=include.layout %}
+{% include blog/display.html
+  year=year
+  type=include.type
+  category=include.category
+  layout=include.layout %}
 
 {% endfor %}

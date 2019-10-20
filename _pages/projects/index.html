@@ -35,18 +35,24 @@ links:
   <h3>Master</h3>
   <p>Projects that shape our <a href="/about#mission">Mission</a></p>
 </header>
-{% include projects/preview.html layout="cards" category="super" %}
+{% include projects/display.html
+  layout="cards"
+  category="super" %}
 
 <header id="main">
   <h3>Main</h3>
   <p>Essential constituents of our master projects</p>
 </header>
-{% include projects/preview.html layout="cards" category="main"
+{% include projects/display.html
+  layout="cards"
+  category="main"
   bookmarks=true %}
 
 <header id="auxiliary">
   <h3>Auxiliary</h3>
   <p>Projects that support our main projects</p>
 </header>
-{% include projects/preview.html layout="cards" category="auxiliary"
+{% include projects/display.html
+  layout="cards"
+  category="auxiliary"
   bookmarks=true %}

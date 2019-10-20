@@ -17,10 +17,20 @@ redirect_from: /blog.html
   <h3>Corporate Blog</h3>
   <p>Articles about us and our projects</p>
 </header>
-{% include blog/preview.html layout="cards" limit=3 type="blog" category="corporate" more="/blog/corporate" %}
+{% include blog/display.html
+  layout="cards"
+  limit=3
+  type="blog"
+  category="corporate"
+  more="/blog/corporate" %}
 
 <header>
   <h3>Science Blog</h3>
   <p>Articles about pure and applied data science</p>
 </header>
-{% include blog/preview.html layout="cards" limit=3 type="blog" category="science" more="/blog/science" %}
+{% include blog/display.html
+  layout="cards"
+  limit=3
+  type="blog"
+  category="science"
+  more="/blog/science" %}

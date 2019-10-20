@@ -21,7 +21,7 @@ Get related posts
 {% endcomment %}
 
 {% capture posts-html %}
-  {% include blog/preview.html tag=page.title layout="magazine" %}
+  {% include blog/display.html tag=page.title layout="magazine" %}
 {% endcapture %}
 {% assign posts-html = posts-html | strip %}
 {% if posts-html == "" %}
@@ -69,8 +69,9 @@ Get related posts
 <header id="subprojects">
   <h4>Subprojects</h4>
 </header>
-
-{% include projects/preview.html layout="cards" list=page.subprojects %}
+{% include projects/display.html
+  layout="cards"
+  list=page.subprojects %}
 {% endif %}
 
 {% if pypi-pkg %}

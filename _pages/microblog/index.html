@@ -24,4 +24,8 @@ links:
   <p>Updates and announcements</p>
 </header>
 
-{% include blog/preview.html limit=10 type="microblog" layout="magazine" more="/microblog/news" %}
+{% include blog/display.html
+  limit=10
+  type="microblog"
+  layout="magazine"
+  more="/microblog/news" %}

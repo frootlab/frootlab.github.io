@@ -58,14 +58,18 @@ List Layout
         {% for post in posts limit: bound %}
           <li>
             {{ post.date | date: '%d. %B, %y' }}:
-            <a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+            {{ post.title }}
           </li>
         {% endfor %}
         </ul>
       {% if include.more %}
         <ul class="small right inherent squared hstack icons">
-          <li>
-            {% include links/create.html name="more" display="right" uid=include.more title="more" %}
+          <li>{% include links/create.html
+            name="more"
+            display="right"
+            uid=include.more
+            title="more"
+            rel=include.more-rel %}
           </li>
         </ul>
       {% endif %}
@@ -86,23 +90,21 @@ Magazin Layout
       {% for post in posts limit: bound %}
         {% assign author = site.authors | where: 'title', post.author | first %}
         <li>
-          <small>
+          <div class="label">
+            <i class="far fa-calendar-alt"></i>&nbsp;
+            <time datetime="{{ post.date | date_to_xmlschema }}">
+              {{ post.date | date: "%A, %d.%m.%Y" }}
+            </time>
+            &emsp;
             <i class="far fa-user"></i>&nbsp;
             <author>
-        {% if author %}
-              <a href="{{ author.url }}">{{ author.title }}</a>
-        {% else %}
+            {% if author %}
+              <a href="{{ author.url }}" title="{{ author.title }}">{{ author.title }}</a>
+            {% else %}
               Anonymous
-        {% endif %}
+            {% endif %}
             </author>
-            &emsp;
-            <a href="{{ post.url }}" title="Permalink to Micropost">
-              <i class="far fa-calendar-alt"></i>&nbsp;
-              <time datetime="{{ post.date | date_to_xmlschema }}">
-                {{ post.date | date: "%A, %d.%m.%Y at %I:%M%P" }}
-              </time>
-            </a>
-          </small>
+          </div>
         {% case include.type %}
           {% when 'microblog' %}
           <p>
@@ -111,8 +113,8 @@ Magazin Layout
         {% else %}
           <p>
             <b>{{ post.title }}</b>:
-            {{ post.excerpt | strip_html }}
-              <a href="{{ post.url }}" title="Permalink to Micropost">more</a>
+            {{ post.excerpt | strip_html }}...
+              <a href="{{ post.url }}" title="Permalink to Micropost">read more</a>
           </p>
         {% endcase %}
           <br>
@@ -122,8 +124,12 @@ Magazin Layout
 
       {% if include.more %}
       <ul class="small right inherent squared hstack icons">
-        <li>
-          {% include links/create.html name="more" display="right" uid=include.more title="more" %}
+        <li>{% include links/create.html
+          name="more"
+          display="right"
+          uid=include.more
+          title="more"
+          rel=include.more-rel %}
         </li>
       </ul>
       {% endif %}
@@ -198,8 +204,12 @@ Card Layout
 
       {% if include.more %}
       <ul class="small right inherent squared hstack icons">
-        <li>
-          {% include links/create.html name="more" display="right" uid=include.more title="more" %}
+        <li>{% include links/create.html
+          name="more"
+          display="right"
+          uid=include.more
+          title="more"
+          rel=include.more-rel %}
         </li>
       </ul>
       {% endif %}
