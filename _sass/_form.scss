@@ -130,6 +130,12 @@
     line-height: 1.6;
   }
 
+  figure {
+    figcaption {
+      color: $dark-grey;
+    }
+  }
+
   a {
     color: $blue;
     font-weight: 400;

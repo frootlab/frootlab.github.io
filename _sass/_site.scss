@@ -12,11 +12,11 @@ a:visited {
   color: $blue-l10;
 }
 
-a[target="_blank"]:after {
+a[target="_blank"]:not(.icon):after {
   content: " \f35d";
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
-  font-size: 0.7em;
+  font-size: .75em;
   vertical-align: text-top;
 }
 
@@ -117,7 +117,6 @@ figure {
 
   figcaption {
     margin: 1rem auto 0.5rem;
-    color: lighten($black, 50%);
     font-size: 0.85em;
     width: 100%;
     text-align: center;

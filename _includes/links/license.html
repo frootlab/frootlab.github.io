@@ -143,12 +143,14 @@ Create License Links / Icons
 <span class="license">
 {% if icons %}
   {% assign array = icons | split: "|" %}
-  <a href="{{ url }}" rel="license" target="_blank" rel="noopener noreferrer">
+  <a href="{{ url }}" rel="license" class="icon" target="_blank"
+    rel="noopener noreferrer" title="{{ include.name }}">
     {% for icon in array %}<i class="{{ icon }}"></i>{% endfor %}
   </a>
 {% elsif url %}
   License:
-  <a href="{{ url }}" rel="license" target="_blank" rel="noopener noreferrer">
+  <a href="{{ url }}" rel="license" target="_blank" rel="noopener noreferrer"
+    title="{{ include.name }}">
     {{ include.name }}
   </a>
 {% elsif include.name %}
