@@ -64,6 +64,11 @@ ul.icons {
     }
   }
 
+  // Remove external link icon
+  > li a[target="_blank"]:after {
+    content: none;
+  }
+
   &:not(.inherent) > li a {
     background: $grey;
   }

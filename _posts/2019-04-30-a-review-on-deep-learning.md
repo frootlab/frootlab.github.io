@@ -26,9 +26,10 @@ some of the most important milestones and remaining challenges.
 ## Big-Bang!
 
 The advent of deep learning can be traced back to Geoffrey Hinton's  daredevil
-science article "[Reducing the dimensionality of data with neural
-networks](https://www.cs.toronto.edu/~hinton/science.pdf)" (Hinton et al. 2006).
-It's contents may kindly be summarized in two essential observations:
+science article ["Reducing the dimensionality of data with neural
+networks"](https://www.cs.toronto.edu/~hinton/science.pdf){:target='_blank'}
+(Hinton et al. 2006). It's contents may kindly be summarized in two essential
+observations:
 
 1. Certain undirected graphical models, termed Restricted Boltzmann Machines
 (RBM), can efficiently[^1] be trained to represent data by maximizing their
@@ -51,13 +52,13 @@ mathematical framework to describe it. Undeterred of these shortcomings, a group
 about Guillaume Desjardins greatly improved Hinton's approach by welding the
 stack of RBMs into a single Deep Boltzmann Machine (DBM).
 
-Their article "[On Training Deep Boltzmann
-Machines](https://arxiv.org/abs/1203.4416)" (Desjardins, Courville, Bengio 2012)
-provides a gradient based update rule for the simultaneous effective[^3]
-training of stacked RBMs and therefore avoids losses, caused by their stacking.
-Thereby the stacked RBMs - the DBM - is trained to generate a latent
-representation of the training data, by preserving it's dependency structure.
-This strategy endows it with high generalizability.
+Their article ["On Training Deep Boltzmann
+Machines"](https://arxiv.org/abs/1203.4416){:target='_blank'} (Desjardins,
+Courville, Bengio 2012) provides a gradient based update rule for the
+simultaneous effective[^3] training of stacked RBMs and therefore avoids losses,
+caused by their stacking. Thereby the stacked RBMs - the DBM - is trained to
+generate a latent representation of the training data, by preserving it's
+dependency structure. This strategy endows it with high generalizability.
 
 Apart of these improvements, however, DBMs provide an important hint about the
 very nature of pre-training: DBMs generate the sample distribution of the
@@ -80,21 +81,22 @@ distributions, they generate. But how to solve this problem? Imagine two kids
 sharing toys: No wonder they always quarrel! A group about Ian Goodfellow
 provided a fairly straight solution: Every model get's it's own parameter space!
 
-The article "[Generative Adversarial Nets](https://arxiv.org/pdf/1406.2661.pdf)"
-(Goodfellow et al. 2014) proposes a model, where one ANN is trained to generate
-the sample distribution, while another is trained to discriminate the
-artificially generated samples from truly observed data. Thereby the generative
-network tries to fool the discriminative network by increasing it's proportion
-of misclassifications, while the latter tries to decrease it, which is a
-zero-sum game.
+The article ["Generative Adversarial
+Nets"](https://arxiv.org/pdf/1406.2661.pdf){:target='_blank'} (Goodfellow et al.
+2014) proposes a model, where one ANN is trained to generate the sample
+distribution, while another is trained to discriminate the artificially
+generated samples from truly observed data. Thereby the generative network tries
+to fool the discriminative network by increasing it's proportion of
+misclassifications, while the latter tries to decrease it, which is a zero-sum
+game.
 
 Due to this approach GANs by the way solved a further problem of DBMs: Since the
 likelihood gradient of DBMs usually is not tractable it has to be estimated,
 either by a Markov chain or variational inference. GANs, however, do not require
 such estimations. The results are impressive! In particular, the photorelistic
 images and videos received much attention with artificially generated
-[faces](https://thispersondoesnotexist.com/) and
-[lip sync](https://www.youtube.com/watch?v=cQ54GDm1eL0).
+[faces](https://thispersondoesnotexist.com/){:target='_blank'} and
+[lip sync](https://www.youtube.com/watch?v=cQ54GDm1eL0){:target='_blank'}.
 
 ## What will come next?
 
@@ -106,12 +108,12 @@ Bayesians and the Frequentists.
 
 At this point one could draw parallels to Romeo & Juliet, which raises the idea
 to put them together and see what happens. Lo and behold, some people already
-did this! First steps in this direction, e.g. "[Boltzmann Encoded Adversarial
-Machines](http://physics.bu.edu/~pankajm/PY895/BEAM.pdf)" (Fisher et al. 2018)
-impressively demonstrate, that there is a lot of potential in this fusion! This
-is not by chance, as both approaches show distinctive strengths, in structure
-and representation. So I'll take the bet: The next big thing in deep learning is
-the fusion of GANs and DBMs.
+did this! First steps in this direction, e.g. ["Boltzmann Encoded Adversarial
+Machines"](http://physics.bu.edu/~pankajm/PY895/BEAM.pdf){:target='_blank'}
+(Fisher et al. 2018) impressively demonstrate, that there is a lot of potential
+in this fusion! This is not by chance, as both approaches show distinctive
+strengths, in structure and representation. So I'll take the bet: The next big
+thing in deep learning is the fusion of GANs and DBMs.
 
 But let's extend the projection further into the future. There is one thing that
 only received very little attention in deep learning so far: Undirected
@@ -131,4 +133,4 @@ long succession of incredible advances, that await us.
 [^1]: Due to the bipartite graph structure of RBMs, repeated Gibbs sampling is rapidly mixing, which allows an efficient approximation of the log-likelihood gradient.
 [^2]: The observables are required to trace out sufficiently smooth and Lipschitz-continuous trajectories.
 [^3]: If you stack bipartite graphs together, you still get a bipartite graph. Of course, it's a little more complicated, but under the hood that's the reason, why DBMs can efficiently be trained.
-[^4]: I started the journey, to merge statistics with differential geometry and topology and would be glad, if I could inspire you with my ideas: &#091;[1](https://drive.google.com/open?id=1RnRLM7WlSw63zuftRassTI18ohMjr0vE), [2](https://drive.google.com/open?id=1nkNFPLXrAigD3MsETqt5hN9VI94nLvN0), [3](https://drive.google.com/open?id=16gl2GCT5taeH9oo86SHkFKZdeTyRRwTs), [4](https://drive.google.com/open?id=1jssUKKcUFw4LfDiWqjneMKRvVFUmZffP)&#093;, but be warned: You could get mad (or bored)!
+[^4]: I started the journey, to merge statistics with differential geometry and topology and would be glad, if I could inspire you with my ideas: &#091;[](https://drive.google.com/open?id=1RnRLM7WlSw63zuftRassTI18ohMjr0vE){:target='_blank'}, [](https://drive.google.com/open?id=1nkNFPLXrAigD3MsETqt5hN9VI94nLvN0){:target='_blank'}, [](https://drive.google.com/open?id=16gl2GCT5taeH9oo86SHkFKZdeTyRRwTs){:target='_blank'}, [](https://drive.google.com/open?id=1jssUKKcUFw4LfDiWqjneMKRvVFUmZffP){:target='_blank'}&#093;

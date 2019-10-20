@@ -1,7 +1,9 @@
-{% if page.navid == 'contact' %}{% assign state_contact = 'active' %}{% endif %}
-{% if page.navid == 'privacy' %}{% assign state_privacy = 'active' %}{% endif %}
-{% if page.navid == 'imprint' %}{% assign state_imprint = 'active' %}{% endif %}
-{% if page.navid == 'copyright' %}{% assign state_copyright = 'active' %}{% endif %}
+{% case page.navid %}
+  {% when 'contact'%}{% assign state_contact = 'active' %}
+  {% when 'privacy'%}{% assign state_privacy = 'active' %}
+  {% when 'imprint'%}{% assign state_imprint = 'active' %}
+  {% when 'copyright'%}{% assign state_copyright = 'active' %}
+{% endcase %}
 
 <footer id="footer">
   <a href="{{ site.url }}/contact" title="Contact" class="{{ state_contact }}">Contact</a>

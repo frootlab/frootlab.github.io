@@ -25,8 +25,8 @@ move through the thicket and get some orientation.
 
 Since the beginning of the programming age, the data science sector utilized
 classical statistics software like
-[SAS](https://www.sas.com/en_us/software/platform.html) and
-[SPSS](https://www.ibm.com/analytics/spss-statistics-software). Nevertheless,
+[SAS](https://www.sas.com/en_us/software/platform.html){:target='_blank'} and
+[SPSS](https://www.ibm.com/analytics/spss-statistics-software){:target='_blank'}. Nevertheless,
 these "first generation" tools, provided some serious drawbacks that are deeply
 rooted in their structure.
 
@@ -44,22 +44,22 @@ The gap between willing contributors and actual developers led to a
 counter-movement within the universities and the education sector towards
 democratization and open structures. One of the first projects, that may be
 regarded as a "second generation" data science tool, is the statistics
-programming language [R](https://www.r-project.org), which is released as [free
+programming language [R](https://www.r-project.org){:target='_blank'}, which is released as [free
 and open-source
-software](https://en.wikipedia.org/wiki/Free_and_open-source_software). Another
+software](https://en.wikipedia.org/wiki/Free_and_open-source_software){:target='_blank'}. Another
 project, that heavily benefited from this movement was
-[Python](https://www.python.org/). Also Python is a multi-purpose programming
+[Python](https://www.python.org/){:target='_blank'}. Also Python is a multi-purpose programming
 language, it owes it's incredible popularity to a large portion to the libraries
-that have emerged within this movement, comprising [SciPy](https://scipy.org/),
-[Pandas](https://pandas.pydata.org/) and
-[Tensorflow](https://www.tensorflow.org/).
+that have emerged within this movement, comprising [SciPy](https://scipy.org/){:target='_blank'},
+[Pandas](https://pandas.pydata.org/){:target='_blank'} and
+[Tensorflow](https://www.tensorflow.org/){:target='_blank'}.
 
 The AI revolution was accompanied by an increasing demand of data scientists.
 Thereby a further issue came apparent. The usage of statistics software, as well
 as R and Python, requires a strong mathematical background and high programming
 skills. On the other side a lot of people got interested in getting into this
-"[sexiest job of the 21st
-century](https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century)",
+[sexiest job of the 21st
+century](https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century){:target='_blank'},
 that never learned coding in school. So the question arose, if and how data
 science tools could be used by specialists of different domains.
 
@@ -72,8 +72,8 @@ problems, you will realize that the specialists knowledge is getting more
 important, the closer you get. So in order to close this gap, a further movement
 in data science evolved, that emphasizes user-friendly interfaces and visual
 programming. Tools like [KXEN (now
-SAP)](https://www.sap.com/germany/products/predictive-analytics.html) and
-[RapidMiner](https://rapidminer.com/) aim to open the area to non-programmers by
+SAP)](https://www.sap.com/germany/products/predictive-analytics.html){:target='_blank'} and
+[RapidMiner](https://rapidminer.com/){:target='_blank'} aim to open the area to non-programmers by
 obviating the code aspect and providing a user-friendly GUI.
 
 This approach is awesome, since it purifies the workflow from any technical

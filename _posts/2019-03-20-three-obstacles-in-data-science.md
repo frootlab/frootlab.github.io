@@ -16,13 +16,13 @@ realize projects - and even more, when it comes up to venture collaborations.**
 <!--more-->
 
 Some years ago - in the early 2010s - when Google's
-[TensorFlow](https://www.tensorflow.org/) still was only an idea and Geoffrey
+[TensorFlow](https://www.tensorflow.org/){:target='_blank'} still was only an idea and Geoffrey
 Hinton's daredevil [Science
-Article](https://www.cs.toronto.edu/~hinton/science.pdf) still only received a
+Article](https://www.cs.toronto.edu/~hinton/science.pdf){:target='_blank'} still only received a
 bunch of citations, the undisputed technical issues in data science were the
 absence of computing power and the absence of a common play ground. Of course,
 during the last decade, NVIDIA and Google respectively stepped into the breach
-with [CUDA](https://developer.nvidia.com/cuda-zone) and TensorFlow / Keras. So
+with [CUDA](https://developer.nvidia.com/cuda-zone){:target='_blank'} and TensorFlow / Keras. So
 the question arises "What are today's foremost technical obstacles in data
 science?".
 
@@ -44,16 +44,16 @@ advance of projects.
 We want to solve this issue with [Vivid DB](/projects/deet.html), a universal
 data mapper, that mediates between data analysis and data sources. On the data
 analysis side, Vivid DB supports many de-facto standards like
-[NumPy-Arrays](http://www.numpy.org/) and
-[R-Tables](https://www.r-project.org/). On the backend-side Vivid DB aims
+[NumPy-Arrays](http://www.numpy.org/){:target='_blank'} and
+[R-Tables](https://www.r-project.org/){:target='_blank'}. On the backend-side Vivid DB aims
 to support a large variety of different data sources that appear in the wild.
 This comprises a broad selection of SQL-Databases
-([IBM Db2](https://www.ibm.com/analytics/us/en/db2/),
-[Oracle Database](https://www.oracle.com/database/),
-[SAP HANA](https://www.sap.com/products/hana.html),
-[Microsoft SQL](https://www.microsoft.com/sql-server),
-[MySQL](https://www.mysql.com),
-[Postgresql](https://www.postgresql.org/), ...), assorted NoSQL Databases,
+([IBM Db2](https://www.ibm.com/analytics/us/en/db2/){:target='_blank'},
+[Oracle Database](https://www.oracle.com/database/){:target='_blank'},
+[SAP HANA](https://www.sap.com/products/hana.html){:target='_blank'},
+[Microsoft SQL](https://www.microsoft.com/sql-server){:target='_blank'},
+[MySQL](https://www.mysql.com){:target='_blank'},
+[Postgresql](https://www.postgresql.org/){:target='_blank'}, ...), assorted NoSQL Databases,
 flat-file-Databases like CSV and R-Table exports, as well as assorted laboratory
 measurement devices.
 

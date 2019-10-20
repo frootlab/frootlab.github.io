@@ -25,12 +25,12 @@ in the numbers of partially overlapping domains!
 So it should be quite clear, what the issue is. But what are the current tools,
 to address it? Corresponding to their individual data domains, the research
 papers in data science are distributed among different platforms. A typical
-example, that I would like to pick is [arXiv](https://arxiv.org/) (pronounced
-*archive*). Since the early days of the web, this 'Grande Dame' essentially
-serves as a plain repository for PDF pre-prints. And since data science papers
-usually deal with algorithms, these PDFs are quite often endowed with pseudo
-code, which basically allows their implementation in any programming language of
-choice.
+example, that I would like to pick is
+[arXiv](https://arxiv.org/){:target='_blank'} (pronounced *archive*). Since the
+early days of the web, this 'Grande Dame' essentially serves as a plain
+repository for PDF pre-prints. And since data science papers usually deal with
+algorithms, these PDFs are quite often endowed with pseudo code, which basically
+allows their implementation in any programming language of choice.
 
 It is quite obvious, that this organically grown [paper bottleneck]({% post_url
 2019-03-20-three-obstacles-in-data-science %}) has substantial drawbacks: Due to
@@ -57,6 +57,6 @@ gold standard samples of the respective domain of application (e.g. latin
 handwriting samples, spoken word samples, TCGA gene expression data, etc.).
 
 According to our [conviction](/about#us) Vivid Store is [free and
-open-source](https://en.wikipedia.org/wiki/Free_and_open-source_software), based
-on the [Python](https://www.python.org/) programming language and actively
-developed as part of our [Vivid Code](/vivid) framework.
+open-source](https://en.wikipedia.org/wiki/Free_and_open-source_software){:target='_blank'},
+based on the [Python](https://www.python.org/){:target='_blank'} programming
+language and actively developed as part of our [Vivid Code](/vivid) framework.
