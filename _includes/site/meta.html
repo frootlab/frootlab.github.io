@@ -92,9 +92,9 @@ Create HTML
 ================================================================================
 {% endcomment %}
 
-<title>{{ title }}</title>
-<link rel="canonical" href="{{ canonical }}">
 <meta charset="UTF-8">
+<link rel="canonical" href="{{ canonical }}">
+<title>{{ title }}</title>
 <meta name="description" content="{{ description }}">
 <meta name="keywords" content="{{ keywords }}">
 
@@ -115,14 +115,14 @@ Create HTML
 <link rel="manifest" href="/site.webmanifest">
 
 <!-- Dublin Core -->
-<meta name="dc.language" content="{{ site.language }}">
-<meta name="dc.source" content="{{ site.url }}">
-<meta name="dc.relation" content="{{ site.relation }}">
-<meta name="dc.title" content="{{ title }}">
-<meta name="dc.keywords" content="{{ keywords }}">
-<meta name="dc.subject" content="{{ description }}">
-<meta name="dc.description" content="{{ description }}">
-<meta name="dcterms.rights" content="{{ site.copyright }}">
+<meta name="DC.language" content="{{ site.language }}">
+<meta name="DC.source" content="{{ site.url }}">
+<meta name="DC.relation" content="{{ site.relation }}">
+<meta name="DC.title" content="{{ title }}">
+<meta name="DC.keywords" content="{{ keywords }}">
+<meta name="DC.subject" content="{{ description }}">
+<meta name="DC.description" content="{{ description }}">
+<meta name="DCTERMS.rights" content="{{ site.copyright }}">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="{{ site.locale }}">
@@ -144,8 +144,8 @@ Create HTML
 <!-- Try to use Chrome on IE -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-<!-- Atom 1.0 Feed -->
-<link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+<!-- Atom 1.0 Feeds -->
+<link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml">
 
 <!-- Feed -->
 {% feed_meta %}

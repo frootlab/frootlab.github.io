@@ -72,7 +72,7 @@ List / display Posts
   {% for item in items limit: bound %}
 
     {% if item.figure.cloudinary %}
-      {% assign preview = "https://res.cloudinary.com"
+      {% assign preview = "https://res.cloudinary.com/"
         | append: site.cloudinary
         | append: "/image/upload/"
         | append: item.figure.cloudinary

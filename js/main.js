@@ -4,6 +4,10 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', '{{ site.google-analytics }}', { 'anonymize_ip': true });
 
+/*
+  Navigation Sidebar
+*/
+
 // Open Navigation Sidebar
 function openNav() {
   var oOverlay = document.getElementById("overlay");
@@ -12,15 +16,28 @@ function openNav() {
   oOverlay.style.width = "100%";
   oOverlay.style.backgroundColor = "#00000066";
   oSideNav.style.width = "250px";
+
+  setTimeout(function() { document.addEventListener('click', fClick); }, 500);
 }
 
 // Close Navigation Sidebar
 function closeNav() {
-  setTimeout(function() {document.getElementById("overlay").style.width = "0";}, 500);
+  var oOverlay = document.getElementById("overlay");
+  var oSideNav = document.getElementById("sidenav");
 
-  document.getElementById("overlay").style.backgroundColor = "#00000000";
-  document.getElementById("sidenav").style.width = "0";
+  setTimeout(function() { oOverlay.style.width = "0"; }, 500);
+  oOverlay.style.backgroundColor = "#00000000";
+  oSideNav.style.width = "0";
+
+  document.removeEventListener('click', fClick);
 }
+
+// Close Navigation Sidebar on click outside
+var fClick = function(event) {
+  var oSideNav = document.getElementById("sidenav");
+  var isClickInside = oSideNav.contains(event.target);
+  if (!isClickInside) { closeNav(); }
+};
 
 // On Scroll hide the Scroll Arrow (if shown)
 window.onscroll = function() {
@@ -32,13 +49,15 @@ window.onscroll = function() {
 }
 
 // Fix title-page padding
-document.addEventListener("DOMContentLoaded", function() {
-    if (document.getElementById("left-page")) {
-      var rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
-      var oCont = document.querySelector("#left-page .content");
-      var oCrum = document.getElementById("crumbs");
-      oCont.style.paddingTop = (oCrum.clientHeight + rem).toString() + "px";
-      var oBand = document.querySelector("#left-page .banderole");
-      oCont.style.paddingBottom = (oBand.clientHeight + rem).toString() + "px";
+var fFixTitlePadding = function() {
+  if (document.getElementById("left-page")) {
+    var rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
+    var oCont = document.querySelector("#left-page .content");
+    var oCrum = document.getElementById("crumbs");
+    oCont.style.paddingTop = (oCrum.clientHeight + rem).toString() + "px";
+    var oBand = document.querySelector("#left-page .banderole");
+    oCont.style.paddingBottom = (oBand.clientHeight + rem).toString() + "px";
   }
-});
+}
+
+document.addEventListener("DOMContentLoaded", fFixTitlePadding);
