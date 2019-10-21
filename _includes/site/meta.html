@@ -48,7 +48,7 @@ Get description
 
 {% comment %}
 ================================================================================
-Get keywords by including page.tags
+Get keywords by site.keywords, project titles, project aliases and page.tags
 ================================================================================
 {% endcomment %}
 
@@ -56,12 +56,35 @@ Get keywords by including page.tags
   | replace: ', ',','
   | strip_newlines
   | strip %}
+
+{% assign keywords = site.projects
+  | sort: "popularity"
+  | reverse
+  | map: 'title'
+  | join: ','
+  | prepend: ','
+  | prepend: keywords %}
+
+{% assign keywords = site.projects
+  | sort: "popularity"
+  | reverse
+  | map: 'alias'
+  | compact
+  | join: ','
+  | prepend: ','
+  | prepend: keywords %}
+
 {% if page.tags %}
-  {% assign keywords = page.tags
+  {% assign tags = page.tags
     | join: ','
     | prepend: ','
     | prepend: keywords %}
 {% endif %}
+
+{% assign keywords = keywords
+  | split: ","
+  | uniq
+  | join: "," %}
 
 {% comment %}
 ================================================================================

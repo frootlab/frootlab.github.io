@@ -63,10 +63,7 @@ List Layout
       <section class="paper">
         <ul class="vstack">
         {% for post in posts limit: bound %}
-          <li>
-            {{ post.date | date: '%d. %B, %y' }}:
-            {{ post.title }}
-          </li>
+          <li>{{ post.date | date: '%d. %B, %y' }}: {{ post.title }}</li>
         {% endfor %}
         </ul>
       {% if include.more %}
@@ -160,13 +157,30 @@ Card Layout
       <div class="grid">
 
       {% for post in posts limit: bound %}
-        {% assign readtime = post.content | number_of_words | divided_by: 180 | plus: 0.5 | round %}
-        {% assign title_lines = post.title | size | divided_by: 20 | plus: 1 | floor %}
-        {% assign offset = title_lines | plus: 1 %}
-        {% assign nol = 10 | minus: offset | round %}
-        {% assign trunc_chars = nol | times: 22 %}
-        {% assign trunc_words = post.excerpt | strip_html | truncate: trunc_chars | number_of_words %}
-        {% assign excerpt = post.excerpt | strip_html | truncatewords: trunc_words %}
+        {% assign readtime = post.content
+          | number_of_words
+          | divided_by: 180
+          | plus: 0.5
+          | round %}
+        {% assign title_lines = post.title
+          | size
+          | divided_by: 20
+          | plus: 1
+          | floor %}
+        {% assign offset = title_lines
+          | plus: 1 %}
+        {% assign nol = 10
+          | minus: offset
+          | round %}
+        {% assign trunc_chars = nol
+          | times: 22 %}
+        {% assign trunc_words = post.excerpt
+          | strip_html
+          | truncate: trunc_chars
+          | number_of_words %}
+        {% assign excerpt = post.excerpt
+          | strip_html
+          | truncatewords: trunc_words %}
 
         {% if post.image-meta.cloudinary %}
           {% assign preview = "https://res.cloudinary.com/"

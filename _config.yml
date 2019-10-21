@@ -15,9 +15,8 @@ description:
   Learn more about automated collaborative data science at the homepage and
   corporate blog of the Frootlab Organization and the Vivid Code framework
 keywords:
-  Frootlab, Smart Analytics, Machine Learning, AutoML, AI, ANN,
-  Vivid Code, Vivid Node, Vivid DB, Vivid Store, Vivid Root,
-  Deet, Rian, Brea, Aughra, Hup, Cloud-Assisted Meta Programming, CAMP
+  Frootlab, Smart Analytics, Machine Learning, Collaborative Data Science,
+  AutoML, AI, ANN, Cloud-Assisted Meta Programming
 
 # Jekyll Configuration
 markdown: kramdown

@@ -1,5 +1,6 @@
 ---
 title: Vivid DB
+alias: Deet
 short-title: DB
 subtitle: Universal Data Mapper
 featured: true

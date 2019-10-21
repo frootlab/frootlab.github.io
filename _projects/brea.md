@@ -1,5 +1,6 @@
 ---
 title: Vivid Store
+alias: Brea
 short-title: Store
 subtitle: Smart Algorithm Repository
 featured: true

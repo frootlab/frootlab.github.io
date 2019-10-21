@@ -1,5 +1,6 @@
 ---
 title: Vivid Root
+alias: Aughra
 short-title: Root
 subtitle: Central Algorithm Taxonomy
 featured: false

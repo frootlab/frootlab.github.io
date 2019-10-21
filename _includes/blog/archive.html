@@ -19,8 +19,13 @@ Group Posts by Year
 ================================================================================
 {% endcomment %}
 
-{% assign groups = posts | group_by_exp: "post", "post.date | date: '%Y'" %}
-{% assign years = groups | map: "name" | sort | reverse %}
+{% assign groups = posts
+  | group_by_exp: "post", "post.date
+  | date: '%Y'" %}
+{% assign years = groups
+  | map: "name"
+  | sort
+  | reverse %}
 
 {% comment %}
 ================================================================================
@@ -37,5 +42,4 @@ Display Posts using given Layout
   type=include.type
   category=include.category
   layout=include.layout %}
-
 {% endfor %}

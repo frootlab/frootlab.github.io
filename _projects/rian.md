@@ -1,5 +1,6 @@
 ---
 title: Vivid Node
+alias: Rian
 short-title: Node
 subtitle: Smart Data Analysis Processor
 featured: true
