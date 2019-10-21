@@ -1,41 +1,27 @@
-# Site Variables
+# Site Configuration
 title: Frootlab
 subtitle: Smart Analytics
-description: Frootlab Smart Analytics Homepage and Corporate Blog
 url: https://www.frootlab.org
 relation: https://frootlab.github.io
 logo: frootlab.png
 locale: en_US
 language: en
 copyright: © 2019 Frootlab
-keywords:
-  Frootlab, Smart Analytics, Machine Learning, AutoML, AI, Vivid Code,
-  Vivid Node, Vivid DB, Vivid Store, Deet, Rian, Brea, Hup, Cloud-Assisted Meta
-  Programming, CAMP
-future: true
-
-# Left Block Images
+google-analytics: UA-136312456-1
 background:
   default: images/bg/default.svg
+description:
+  Learn more about automated collaborative data science at the homepage and
+  corporate blog of the Frootlab Organization and the Vivid Code framework
+keywords:
+  Frootlab, Smart Analytics, Machine Learning, AutoML, AI, ANN,
+  Vivid Code, Vivid Node, Vivid DB, Vivid Store, Vivid Root,
+  Deet, Rian, Brea, Aughra, Hup, Cloud-Assisted Meta Programming, CAMP
 
-excerpt_separator: "<!--more-->"
-
-# Collections
-collections:
-  authors:
-    output: true
-  projects:
-    output: true
-  posts:
-    output: true
-    permalink: /blog/:categories/:short_year:y_day-:slug:output_ext
-  news:
-    output: true
-    permalink: /microblog/:categories/:slug
-
-# Jekyll
+# Jekyll Configuration
 markdown: kramdown
 highlighter: rouge
+excerpt_separator: "<!--more-->"
 kramdown:
   auto_ids: true
   footnote_nr: 1
@@ -45,48 +31,34 @@ kramdown:
 sass:
   sass_dir: _sass
   style: compressed
-
-# Google Analytics
-google-analytics: UA-136312456-1
-
-# Gems
+include: [_pages]
+exclude:
+  [README.md, Gemfile, Gemfile.lock, _site, src, vendor, CNAME, LICENSE,
+  Rakefile, .sass-cache, .DS_Store]
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-redirect-from
-
 whitelist:
   - jekyll-redirect-from
 
-# Jekyll-Feed Settings
-# see: https://github.com/jekyll/jekyll-feed
-feed:
-  categories:
-    - corporate
-    - science
-  collections:
-    - news
-
-# HTML Compression
-# see: https://github.com/penibelst/jekyll-compress-html
-compress_html:
-  clippings: all
-  comments: ["<!-- ", " -->"]
-  endings: all
-  profile: false
-  blanklines: false
-  ignore:
-    envs: []
-
-# Exclude list
-include: [_pages]
-exclude: [README.md, Gemfile, Gemfile.lock, _site, src, vendor, CNAME, LICENSE, Rakefile, .sass-cache, .DS_Store]
+# Collections
+collections:
+  authors:
+    output: true
+  news:
+    output: true
+    permalink: /microblog/:categories/:slug
+  posts:
+    output: true
+    permalink: /blog/:categories/:short_year:y_day-:slug:output_ext
+  projects:
+    output: true
 
 # Front Matter Defaults
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
@@ -95,8 +67,7 @@ defaults:
       license: "CC BY 4.0"
       navid: "blog"
       scroll-indicator: true
-  -
-    scope:
+  - scope:
       path: ""
       type: "news"
     values:
@@ -106,8 +77,7 @@ defaults:
       navid: "microblog"
       image-meta:
         cloudinary: pexels/323645
-  -
-    scope:
+  - scope:
       path: ""
       type: "projects"
     values:
@@ -117,12 +87,30 @@ defaults:
       layout: "project"
       navid: "projects"
       license: "GPL-3.0"
-      license-url: "https://www.gnu.org/licenses/gpl-3.0"
-  -
-    scope:
+  - scope:
       path: ""
       type: "authors"
     values:
       layout: "author"
       sections: true
       backdrop: "white"
+
+# Jekyll-Feed Configuration
+# see: https://github.com/jekyll/jekyll-feed
+feed:
+  categories:
+    - corporate
+    - science
+  collections:
+    - news
+
+# Jekyll-Compress-HTML Configuration
+# see: https://github.com/penibelst/jekyll-compress-html
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: []
