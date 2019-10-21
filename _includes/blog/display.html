@@ -8,7 +8,8 @@ Get Posts of given Type
   {% when 'blog' %}
     {% assign posts = site.posts %}
   {% when 'microblog' %}
-    {% assign posts = site.news | reverse %}
+    {% assign posts = site.news
+      | reverse %}
   {% else %}
     {% assign posts = site.posts %}
 {% endcase %}
@@ -20,20 +21,26 @@ Filter Posts by Category, Tag, Author, Year and Limit
 {% endcomment %}
 
 {% if include.category %}
-  {% assign posts = posts | where: "category", include.category %}
+  {% assign posts = posts
+    | where: "category", include.category %}
 {% endif %}
 
 {% if include.tag %}
-  {% assign posts = posts | where: "tags", include.tag %}
+  {% assign posts = posts
+    | where: "tags", include.tag %}
 {% endif %}
 
 {% if include.author %}
-  {% assign posts = posts | where: "tags", include.tag %}
+  {% assign posts = posts
+    | where: "tags", include.tag %}
 {% endif %}
 
 {% if include.year %}
-  {% assign groups = posts | group_by_exp: "post", "post.date | date: '%Y'" %}
-  {% assign groups = groups | where: "name", include.year %}
+  {% assign groups = posts
+    | group_by_exp: "post", "post.date
+    | date: '%Y'" %}
+  {% assign groups = groups
+    | where: "name", include.year %}
   {% assign posts = groups[0].items %}
 {% endif %}
 
@@ -68,11 +75,12 @@ List Layout
             name="more"
             display="right"
             uid=include.more
-            title="more"
+            title=include.more-title
             rel=include.more-rel %}
           </li>
         </ul>
       {% endif %}
+
     </section>
     {% endif %}
 
@@ -83,12 +91,15 @@ Magazin Layout
 {% endcomment %}
 
   {% when 'magazine' %}
-    {% assign count = posts | size %}
+    {% assign count = posts
+      | size %}
     {% if count > 0 %}
     <section class="paper">
       <ul class="vstack">
       {% for post in posts limit: bound %}
-        {% assign author = site.authors | where: 'title', post.author | first %}
+        {% assign author = site.authors
+          | where: 'title', post.author
+          | first %}
         <li>
           <div class="label">
             <i class="far fa-calendar-alt"></i>&nbsp;
@@ -128,7 +139,7 @@ Magazin Layout
           name="more"
           display="right"
           uid=include.more
-          title="more"
+          title=include.more-title
           rel=include.more-rel %}
         </li>
       </ul>
@@ -158,16 +169,26 @@ Card Layout
         {% assign excerpt = post.excerpt | strip_html | truncatewords: trunc_words %}
 
         {% if post.image-meta.cloudinary %}
-          {% assign preview = "https://res.cloudinary.com/frootlab/image/upload/c_thumb,w_300,g_face/" | append: post.image-meta.cloudinary | append: ".webp" %}
+          {% assign preview = "https://res.cloudinary.com/"
+            | append: site.cloudinary
+            | append: "/image/upload/c_thumb,w_300,g_face/"
+            | append: post.image-meta.cloudinary
+            | append: ".webp" %}
         {% elsif post.preview %}
-          {% assign preview = site.url | append: post.preview %}
+          {% assign preview = site.url
+            | append: post.preview %}
         {% elsif post.image-meta.url %}
-          {% assign preview = site.url | append: post.image-meta.url %}
+          {% assign preview = site.url
+            | append: post.image-meta.url %}
         {% else %}
-          {% assign preview = site.url | append: "/" | append: site.background.default %}
+          {% assign preview = site.url
+            | append: "/"
+            | append: site.background.default %}
         {% endif %}
 
-        {% assign catid = post.categories | first | downcase %}
+        {% assign catid = post.categories
+          | first
+          | downcase %}
 
         {% case catid %}
           {% when 'corporate' %}
@@ -208,7 +229,7 @@ Card Layout
           name="more"
           display="right"
           uid=include.more
-          title="more"
+          title=include.more-title
           rel=include.more-rel %}
         </li>
       </ul>

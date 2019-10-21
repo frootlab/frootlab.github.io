@@ -8,6 +8,7 @@ locale: en_US
 language: en
 copyright: © 2019 Frootlab
 google-analytics: UA-136312456-1
+cloudinary: frootlab
 background:
   default: images/bg/default.svg
 description:

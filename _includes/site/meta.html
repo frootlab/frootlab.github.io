@@ -1,38 +1,79 @@
+{% comment %}
+================================================================================
+Determine canonical url
+================================================================================
+{% endcomment %}
+
+{% assign canonical = page.url
+  | replace: 'index.html', ''
+  | prepend: site.baseurl
+  | prepend: site.url
+  | replace: 'http:', 'https:' %}
+
+{% comment %}
+================================================================================
+Get title
+================================================================================
+{% endcomment %}
+
 {% if page.title %}
-  {% assign title = page.title | markdownify | strip_html | strip_newlines | escape_once %}
+  {% assign title = page.title
+    | strip_html
+    | strip_newlines
+    | escape_once %}
 {% else %}
-  {% assign title = site.title | append: " " | append: site.subtitle %}
+  {% assign title = site.title
+    | append: " "
+    | append: site.subtitle %}
 {% endif %}
 
-{% assign canonical = page.url | replace: 'index.html','' | prepend: site.baseurl | prepend: site.url | replace: 'http:','https:' %}
+{% comment %}
+================================================================================
+Get description
+================================================================================
+{% endcomment %}
+
 {% if page.excerpt %}
-  {% assign description = page.excerpt | markdownify | strip_html | strip_newlines | escape_once %}
+  {% assign description = page.excerpt
+    | markdownify
+    | strip_html %}
 {% else %}
   {% assign description = site.description %}
 {% endif %}
 
+{% assign description = description
+  | strip
+  | strip_newlines
+  | escape_once %}
+
+{% comment %}
+================================================================================
+Get keywords by including page.tags
+================================================================================
+{% endcomment %}
+
+{% assign keywords = site.keywords
+  | replace: ', ',','
+  | strip_newlines
+  | strip %}
 {% if page.tags %}
-  {% assign keywords = page.tags | join: ', ' %}
-{% else %}
-  {% assign keywords = site.keywords %}
+  {% assign keywords = page.tags
+    | join: ','
+    | prepend: ','
+    | prepend: keywords %}
 {% endif %}
 
-{% if page.image-meta.url %}
-  {% capture image %}{{ page.image-meta.url }}{% endcapture %}
-  {% unless image contains 'http://' or image contains 'https://' %}
-    {% capture image %}{{ site.url }}/{{ image }}{% endcapture %}
-  {% endunless %}
-  {% assign cur_image = image %}
-{% else %}
-  {% assign cur_image = site.logo %}
-{% endif %}
+{% comment %}
+================================================================================
+Create HTML
+================================================================================
+{% endcomment %}
 
 <title>{{ title }}</title>
 <link rel="canonical" href="{{ canonical }}">
 <meta charset="UTF-8">
 <meta name="description" content="{{ description }}">
 <meta name="keywords" content="{{ keywords }}">
-<meta name="robots" content="index,follow">
 
 <!-- Theme Color -->
 <meta name="theme-color" content="#043846">
@@ -74,26 +115,14 @@
 
 <!-- Mobile -->
 <meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
+<meta name="MobileOptimized" content="480">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <!-- Try to use Chrome on IE -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-<!-- Atom Feed -->
+<!-- Atom 1.0 Feed -->
 <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
-
-<!-- Twitter Cards -->
-{% if page.image-meta %}
-<meta name="twitter:card" content="summary_large_image">
-{% else %}
-<meta name="twitter:card" content="summary">
-{% endif %}
-<meta name="twitter:image" content="{{ cur_image }}">
-<meta name="twitter:title" content="{{ title }}">
-<meta name="twitter:description" content="{{ description }}">
-<meta name="twitter:site" content="@{{ site.twitter }}">
-<meta name="twitter:creator" content="@{{ site.twitter }}">
 
 <!-- Feed -->
 {% feed_meta %}

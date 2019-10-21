@@ -1,5 +1,0 @@
-{% if page.excerpt %}
-  {{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}
-{% else %}
-  {{ site.description }}
-{% endif %}

@@ -7,16 +7,20 @@ Filter Projects (by featured, category, list and limit)
 {% endcomment %}
 
 {% if include.featured or include.featured == false %}
-  {% assign items = items | where: "featured", include.featured %}
+  {% assign items = items
+    | where: "featured", include.featured %}
 {% endif %}
 
 {% if include.category %}
-  {% assign items = items | where: "category", include.category %}
+  {% assign items = items
+    | where: "category", include.category %}
 {% endif %}
 
 {% if include.list %}
-  {% assign list = include.list | join: '|' %}
-  {% assign items = items | where_exp: "item", "list contains item.title" %}
+  {% assign list = include.list
+    | join: '|' %}
+  {% assign items = items
+    | where_exp: "item", "list contains item.title" %}
 {% endif %}
 
 {% if include.limit %}
@@ -35,7 +39,9 @@ Sort Projects (by name or popularity)
   {% when 'name' %}
     {% assign items = items %}
   {% else %}
-    {% assign items = items | sort:"popularity" | reverse %}
+    {% assign items = items
+      | sort:"popularity"
+      | reverse %}
 {% endcase %}
 
 {% comment %}
@@ -47,12 +53,14 @@ List / display Posts
 <section class="paper">
 {% case include.layout | downcase %}
 {% when 'list' %}
-  {% assign count = items | size %}
+  {% assign count = items
+    | size %}
   {% if count > 0 %}
   <ul>
     {% for item in items limit: bound %}
     <li>
-      <a href="{{ site.url }}{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
+      <a href="{{ site.url }}{{ item.url }}"
+        title="{{ item.title }}">{{ item.title }}</a>
     </li>
     {% endfor %}
   </ul>
@@ -64,19 +72,25 @@ List / display Posts
   {% for item in items limit: bound %}
 
     {% if item.figure.cloudinary %}
-      {% assign preview = "https://res.cloudinary.com/frootlab/image/upload/" | append: item.figure.cloudinary | append: ".svg" %}
+      {% assign preview = "https://res.cloudinary.com"
+        | append: site.cloudinary
+        | append: "/image/upload/"
+        | append: item.figure.cloudinary
+        | append: ".svg" %}
     {% elsif item.figure.uri %}
       {% assign preview = item.figure.uri %}
     {% endif %}
 
     <div class="cell" id="{{ item.title | downcase | url_encode }}">
-      <a href="{{ site.url }}{{ item.url }}" title="{{ item.title }}: {{ item.subtitle }}" style="height: 12rem;">
+      <a href="{{ site.url }}{{ item.url }}"
+        title="{{ item.title }}: {{ item.subtitle }}" style="height: 12rem;">
         <img style="width: 100%; max-width: 12rem; max-height: 12rem;"
           src="{{ preview }}" alt="{{ item.title }} Figure">
       </a>
       <p>
         <b>
-          <a href="{{ site.url }}{{ item.url }}" title="{{ item.title }}: {{ item.subtitle }}">
+          <a href="{{ site.url }}{{ item.url }}"
+            title="{{ item.title }}: {{ item.subtitle }}">
             {{ item.title }}
           </a>
         </b>
@@ -91,7 +105,11 @@ List / display Posts
 {% if include.more %}
 <ul class="small right inherent squared hstack icons">
   <li>
-    {% include links/create.html name="more" display="right" uid=include.more title="more" %}
+    {% include links/create.html
+      name="more"
+      display="right"
+      uid=include.more
+      title=include.more-title %}
   </li>
 </ul>
 {% endif %}
