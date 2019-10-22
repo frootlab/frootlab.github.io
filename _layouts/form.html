@@ -4,21 +4,41 @@ sections: true
 backdrop: white
 ---
 
+{% comment %}
+================================================================================
+Get navigation links from page.links or layout.links
+================================================================================
+{% endcomment %}
+
 {% if page.links %}
   {% assign links = page.links %}
 {% elsif layout.links %}
   {% assign links = layout.links %}
 {% endif %}
 
+{% comment %}
+================================================================================
+Display front page
+================================================================================
+{% endcomment %}
+
 {% include front/header.html %}
 {% if links %}
 <div class="banderole">
   {% for link in links %}
-  <a class="btn btn_grey" href="{{ link.url }}" title="{{ link.title }}">{{ item.name }}</a>
+  <a class="btn btn_grey" href="{{ link.url }}" title="{{ link.title }}">
+    {{ link.name }}
+  </a>
   {% endfor %}
 </div>
 {% endif %}
 {% include front/trailer.html %}
+
+{% comment %}
+================================================================================
+Display content page
+================================================================================
+{% endcomment %}
 
 {% include form/header.html %}
 {{ content }}
