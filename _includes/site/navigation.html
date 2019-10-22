@@ -1,7 +1,11 @@
 {% if page.crumbs %}
-  {% assign crumbs = page.crumbs | offset: 1 %}
+  {% assign crumbs = page.crumbs
+    | offset: 1 %}
 {% else %}
-  {% assign crumbs = page.url | remove: '/index.html' | split: '/' | offset: 1 %}
+  {% assign crumbs = page.url
+    | remove: '/index.html'
+    | split: '/'
+    | offset: 1 %}
 {% endif %}
 
 {% assign total = crumbs | size %}
@@ -11,13 +15,18 @@
   {% assign menu-class = "menu-button-active" %}
 {% endif %}
 
-{% assign title = page.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% assign title = page.title
+  | markdownify
+  | remove: "<p>"
+  | remove: "</p>" %}
 {% if page.short-title %}
   {% assign short-title = page.short-title %}
 {% elsif page.crumbs %}
   {% assign short-title = page.crumbs | last %}
 {% else %}
-  {% assign short-title = title | remove: ":" | truncatewords: 3 %}
+  {% assign short-title = title
+    | remove: ":"
+    | truncatewords: 3 %}
 {% endif %}
 
 <div id="overlay"></div>

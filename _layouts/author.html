@@ -1,22 +1,20 @@
 ---
-layout: base
-sections: true
-backdrop: white
+layout: form
+links:
+  - name: About
+    url: "#about"
+    title: About the author
+  - name: Posts
+    url: "#posts"
+    title: Posts written by the author
+  - name: Contact
+    url: "#contact"
+    title: Contact information
 ---
 
-{% include front/header.html %}
-<div class="banderole">
-  <a class="btn btn_grey" href="#about" title="About the author">About</a>
-  <a class="btn btn_grey" href="#posts" title="Posts written by the author">Posts</a>
-  <a class="btn btn_grey" href="#contact" title="Personal contact information">Contact</a>
-</div>
-{% include front/trailer.html %}
-
-{% include form/header.html %}
 <header id="about">
   <h3>About</h3>
 </header>
-
 <section>
   {{ content }}
 </section>
@@ -24,7 +22,6 @@ backdrop: white
 <header id="posts">
   <h3>Posts</h3>
 </header>
-
 {% include blog/display.html
   layout="magazine"
   author=page.title %}
@@ -32,8 +29,6 @@ backdrop: white
 <header id="contact">
   <h3>Contact</h3>
 </header>
-
 <section>
   {% include links/social.html %}
 </section>
-{% include form/trailer.html %}
