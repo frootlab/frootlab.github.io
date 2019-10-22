@@ -90,7 +90,7 @@ defaults:
   - scope:
       type: "tags"
     values:
-      layout: "tag-archive"
+      layout: "tags"
 
 # jekyll-archives Configuration
 # https://github.com/jekyll/jekyll-archives
@@ -98,7 +98,7 @@ jekyll-archives:
   enabled:
     - tags
   layouts:
-    tag: tag-archive
+    tag: tags
   permalinks:
     tag: '/blog/tag/:name/'
 

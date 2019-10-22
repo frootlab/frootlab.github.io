@@ -1,0 +1,73 @@
+{% comment %}
+================================================================================
+Get Posts of given Type
+================================================================================
+{% endcomment %}
+
+{% case include.type %}
+  {% when 'blog' %}
+    {% assign posts = site.posts %}
+  {% when 'microblog' %}
+    {% assign posts = site.news | reverse %}
+  {% else %}
+    {% assign posts = site.posts %}
+{% endcase %}
+
+{% comment %}
+================================================================================
+Filter Posts by Category
+================================================================================
+{% endcomment %}
+
+{% if include.category %}
+  {% assign posts = posts
+    | where: "category", include.category %}
+{% endif %}
+
+{% comment %}
+================================================================================
+Collect Tags from Posts
+================================================================================
+{% endcomment %}
+
+{% capture tags %}
+  {% for post in posts %}
+    {% for tag in post.tags %}{{ tag }}|{% endfor %}
+  {% endfor %}
+{% endcapture %}
+
+{% comment %}
+================================================================================
+Filter Duplicates
+================================================================================
+{% endcomment %}
+
+{% assign array = tags | split: '|' %}
+{% assign tags = array[1] | strip %}
+{% for item in array %}
+  {% assign token = item | strip %}
+  {% unless tags contains token %}
+    {% capture tags %}{{ tags }}|{{ token }}{% endcapture %}
+  {% endunless %}
+{% endfor %}
+{% assign tags = tags | strip | split: '|' | compact | sort %}
+
+{% comment %}
+================================================================================
+Display Tags
+================================================================================
+{% endcomment %}
+
+{% if include.type %}
+  {% assign path = '/'
+    | append: include.type
+    | append: '/tag' %}
+{% else %}
+  {% assign path = '/blog/tag' %}
+{% endif %}
+
+{% for tag in tags %}
+  {% if tag != '' %}
+<a class="btn btn_grey" rel="tag" title="{{ tag }}" href="{{ path }}/{{ tag | downcase | replace: ' ', '-' }}">{{ tag }}</a>
+  {% endif %}
+{% endfor %}

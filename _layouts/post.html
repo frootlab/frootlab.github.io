@@ -5,7 +5,7 @@ sections: false
 
 {% include front/header.html %}
 <div class="banderole">
-  {% assign title = page.title | markdownify | remove: "<p>" | remove: "</p>" %}
+  {% assign title = page.title | markdownify | strip_html %}
   {% assign author = site.authors | where: 'title', page.author | first %}
   {% include links/author.html name=author.title url=author.url %}<br>
   {% include links/license.html name=page.license url=page.license-url %}

@@ -17,7 +17,11 @@ Get information about source code and documentation
     | map:"user" %}
 {% endif %}
 
-{% assign has-links = page.docs or page.source %}
+{% if page.docs or page.source %}
+  {% assign has-links = true %}
+{% else %}
+  {% assign has-links = false %}
+{% endif %}
 
 {% comment %}
 ================================================================================
@@ -122,7 +126,10 @@ Get related posts
       <ul class="hstack icons">
         {% for item in page.docs %}
         <li>
-          {% include links/create.html name=item.name uid=item.user type=item.type %}
+          {% include links/create.html
+            name=item.name
+            uid=item.user
+            type=item.type %}
         </li>
         {% endfor %}
       </ul>
@@ -134,7 +141,10 @@ Get related posts
       <ul class="hstack icons">
         {% for item in page.source %}
         <li>
-          {% include links/create.html name=item.name uid=item.user type=item.type %}
+          {% include links/create.html
+            name=item.name
+            uid=item.user
+            type=item.type %}
         </li>
         {% endfor %}
       </ul>

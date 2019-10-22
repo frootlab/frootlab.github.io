@@ -6,37 +6,53 @@ backdrop: white
 
 {% comment %}
 ================================================================================
-Get navigation links from page.links or layout.links
+Get navigation links from link-generator or static link array
 ================================================================================
 {% endcomment %}
 
-{% if page.links %}
-  {% assign links = page.links %}
-{% elsif layout.links %}
-  {% assign links = layout.links %}
+{% if page.links-generator %}
+  {% assign generator = page.links-generator %}
+{% elsif layout.links-generator %}
+  {% assign generator = layout.links-generator %}
+{% else %}
+  {% assign generator = "array" %}
 {% endif %}
+
+{% case generator %}
+  {% when "array" %}
+    {% if page.links %}
+      {% assign array = page.links %}
+    {% elsif layout.links %}
+      {% assign array = layout.links %}
+    {% endif %}
+    {% if array %}
+      {% capture links-html %}
+        {% include links/generate/from-array array=array %}
+      {% endcapture %}
+    {% endif %}
+  {% when "tags" %}
+    {% capture links-html %}
+      {% include links/generate/from-tags type=page.navid %}
+    {% endcapture %}
+{% endcase %}
 
 {% comment %}
 ================================================================================
-Display front page
+Display front cover
 ================================================================================
 {% endcomment %}
 
 {% include front/header.html %}
-{% if links %}
+{% if links-html %}
 <div class="banderole">
-  {% for link in links %}
-  <a class="btn btn_grey" href="{{ link.url }}" title="{{ link.title }}">
-    {{ link.name }}
-  </a>
-  {% endfor %}
+  {{ links-html }}
 </div>
 {% endif %}
 {% include front/trailer.html %}
 
 {% comment %}
 ================================================================================
-Display content page
+Display contents
 ================================================================================
 {% endcomment %}
 
