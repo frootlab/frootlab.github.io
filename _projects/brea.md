@@ -11,7 +11,6 @@ image-meta:
   orientation: landscape
 figure:
   uri: /images/fig/vivid-store.svg
-backdrop: white
 permalink: /projects/vivid/store.html
 redirect_from:
   - /motley.html

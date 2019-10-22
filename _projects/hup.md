@@ -9,7 +9,6 @@ image-meta:
   orientation: landscape
 figure:
   cloudinary: undraw/upload
-backdrop: white
 permalink: /projects/hup.html
 redirect_from:
   - /hup.html

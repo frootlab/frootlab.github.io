@@ -11,7 +11,6 @@ image-meta:
   orientation: portrait
 figure:
   uri: /images/fig/vivid-root.svg
-backdrop: white
 permalink: /projects/vivid/root.html
 redirect_from:
   - /aughra.html

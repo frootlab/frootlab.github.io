@@ -11,7 +11,6 @@ image-meta:
   orientation: landscape
 figure:
   uri: /images/fig/vivid-db.svg
-backdrop: white
 permalink: /projects/vivid/db.html
 redirect_from:
   - /pandora.html

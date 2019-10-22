@@ -10,7 +10,6 @@ image-meta:
   orientation: landscape
 figure:
   uri: /images/fig/vivid-code.svg
-backdrop: white
 permalink: /projects/vivid/index.html
 redirect_from:
   - /liquid.html

@@ -11,7 +11,6 @@ image-meta:
   orientation: landscape
 figure:
   uri: /images/fig/vivid-node.svg
-backdrop: white
 permalink: /projects/vivid/node.html
 redirect_from:
   - /nemoa.html
