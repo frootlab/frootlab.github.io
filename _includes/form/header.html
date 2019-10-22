@@ -4,17 +4,23 @@
   {% assign content-class = "form" %}
 {% endif %}
 
+{% if page.backdrop %}
+  {% assign backdrop = page.backdrop %}
+{% elsif layout.backdrop %}
+  {% assign backdrop = layout.backdrop  %}
+{% endif %}
+
 <div id="right-page">
   <div id="overflow">
-    {% if page.backdrop %}
-    <div class="content {{ content-class }}" style="background: {{ page.backdrop }};">
-    {% else %}
+  {% if backdrop %}
+    <div class="content {{ content-class }}" style="background: {{ backdrop }};">
+  {% else %}
     <div class="content {{ content-class }}">
-    {% endif %}
-      {% unless layout.sections %}
-      {% if page.form-style %}
-      <section style="{{ page.form-style }}">
-      {% else %}
+  {% endif %}
+  {% unless layout.sections %}
+    {% if page.form-style %}
+      <section style="{{ page.form-style }};">
+    {% else %}
       <section>
-      {% endif %}
-      {% endunless %}
+    {% endif %}
+  {% endunless %}

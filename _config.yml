@@ -55,11 +55,13 @@ collections:
     permalink: /blog/:categories/:short_year:y_day-:slug:output_ext
   projects:
     output: true
+  tags: # Remove when GitHub Pages supports jekyll-archives
+    output: true
+    permalink: /blog/tag/:title:output_ext
 
 # Front Matter Defaults
 defaults:
   - scope:
-      path: ""
       type: "posts"
     values:
       layout: "post"
@@ -67,7 +69,6 @@ defaults:
       navid: "blog"
       scroll-indicator: true
   - scope:
-      path: ""
       type: "news"
     values:
       layout: "post"
@@ -77,20 +78,19 @@ defaults:
       image-meta:
         cloudinary: "pexels/323645"
   - scope:
-      path: ""
       type: "projects"
     values:
-      layout: "project"
-      backdrop: "white"
       layout: "project"
       navid: "projects"
       license: "GPL-3.0"
   - scope:
-      path: ""
       type: "authors"
     values:
       layout: "author"
-      backdrop: "white"
+  - scope:
+      type: "tags"
+    values:
+      layout: "tag-archive"
 
 # jekyll-archives Configuration
 # https://github.com/jekyll/jekyll-archives
