@@ -63,7 +63,6 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      sections: false
       license: "CC BY 4.0"
       navid: "blog"
       scroll-indicator: true
@@ -71,18 +70,17 @@ defaults:
       path: ""
       type: "news"
     values:
-      layout: "micropost"
+      layout: "post"
       sections: false
       license: "CC0 1.0"
       navid: "microblog"
       image-meta:
-        cloudinary: pexels/323645
+        cloudinary: "pexels/323645"
   - scope:
       path: ""
       type: "projects"
     values:
       layout: "project"
-      sections: true
       backdrop: "white"
       layout: "project"
       navid: "projects"
@@ -92,11 +90,20 @@ defaults:
       type: "authors"
     values:
       layout: "author"
-      sections: true
       backdrop: "white"
 
-# Jekyll-Feed Configuration
-# see: https://github.com/jekyll/jekyll-feed
+# jekyll-archives Configuration
+# https://github.com/jekyll/jekyll-archives
+jekyll-archives:
+  enabled:
+    - tags
+  layouts:
+    tag: tag-archive
+  permalinks:
+    tag: '/blog/tag/:name/'
+
+# jekyll-feed Configuration
+# https://github.com/jekyll/jekyll-feed
 feed:
   categories:
     - corporate
@@ -104,8 +111,8 @@ feed:
   collections:
     - news
 
-# Jekyll-Compress-HTML Configuration
-# see: https://github.com/penibelst/jekyll-compress-html
+# jekyll-compress-html Configuration
+# https://github.com/penibelst/jekyll-compress-html
 compress_html:
   clippings: all
   comments: ["<!-- ", " -->"]

@@ -11,7 +11,7 @@
     {% else %}
     <div class="content {{ content-class }}">
     {% endif %}
-      {% unless page.sections %}
+      {% unless layout.sections %}
       {% if page.form-style %}
       <section style="{{ page.form-style }}">
       {% else %}

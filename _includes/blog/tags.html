@@ -20,7 +20,8 @@ Filter Posts by Category
 {% endcomment %}
 
 {% if include.category %}
-  {% assign posts = posts | where: "category", include.category %}
+  {% assign posts = posts
+    | where: "category", include.category %}
 {% endif %}
 
 {% comment %}
@@ -58,14 +59,16 @@ Display Tags
 {% endcomment %}
 
 {% if include.type %}
-  {% assign path = '/' | append: include.type | append: '/tags' %}
+  {% assign path = '/'
+    | append: include.type
+    | append: '/tag' %}
 {% else %}
-  {% assign path = '/blog/tags' %}
+  {% assign path = '/blog/tag' %}
 {% endif %}
 
 {% for tag in tags %}
   {% if tag != '' %}
     <a class="btn btn_grey" rel="tag" title="{{ tag }}"
-      href="{{ path }}#{{ tag | downcase | url_encode }}">{{ tag }}</a>
+      href="{{ path }}/{{ tag | downcase | replace: ' ', '-' }}">{{ tag }}</a>
   {% endif %}
 {% endfor %}
