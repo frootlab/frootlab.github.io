@@ -36,10 +36,10 @@ exclude:
   [README.md, Gemfile, Gemfile.lock, _site, src, vendor, CNAME, LICENSE,
   Rakefile, .sass-cache, .DS_Store]
 plugins:
+  - jekyll-archives
   - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-gist
   - jekyll-redirect-from
+  - jekyll-sitemap
 whitelist:
   - jekyll-redirect-from
 
