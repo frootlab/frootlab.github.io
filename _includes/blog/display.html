@@ -103,6 +103,7 @@ Magazin Layout
             <time datetime="{{ post.date | date_to_xmlschema }}">
               {{ post.date | date: "%A, %d.%m.%Y" }}
             </time>
+            {% unless include.author %}
             &emsp;
             <i class="far fa-user"></i>&nbsp;
             <author>
@@ -112,6 +113,7 @@ Magazin Layout
               Anonymous
             {% endif %}
             </author>
+            {% endunless %}
           </div>
         {% case include.type %}
           {% when 'microblog' %}
@@ -119,10 +121,10 @@ Magazin Layout
             {{ post.content }}
           </p>
         {% else %}
-          <p>
-            <b>{{ post.title }}</b>:
+          <strong>{{ post.title }}</strong>
+          <p style="margin-top: .3rem;">
             {{ post.excerpt | strip_html }}...
-              <a href="{{ post.url }}" title="Permalink to Micropost">read more</a>
+            <a href="{{ post.url }}" title="Permalink to Micropost">read more</a>
           </p>
         {% endcase %}
           <br>

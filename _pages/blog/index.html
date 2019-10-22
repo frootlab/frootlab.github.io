@@ -7,7 +7,6 @@ short-title: Blog
 image-meta:
   cloudinary: bg/default
   format: svg
-sections: true
 description: An archive of all blog posts sorted by date
 permalink: /blog/index.html
 redirect_from: /blog.html
@@ -18,8 +17,8 @@ redirect_from: /blog.html
   <p>Articles about us and our projects</p>
 </header>
 {% include blog/display.html
-  layout="cards"
-  limit=3
+  layout="magazine"
+  limit=5
   type="blog"
   category="corporate"
   more="/blog/corporate" %}
@@ -29,8 +28,8 @@ redirect_from: /blog.html
   <p>Articles about pure and applied data science</p>
 </header>
 {% include blog/display.html
-  layout="cards"
-  limit=3
+  layout="magazine"
+  limit=5
   type="blog"
   category="science"
   more="/blog/science" %}
