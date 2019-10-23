@@ -27,12 +27,12 @@ Get navigation links from link-generator or static link array
     {% endif %}
     {% if array %}
       {% capture links-html %}
-        {% include links/generate/from-array array=array %}
+        {% include links/generate/from-array.html array=array %}
       {% endcapture %}
     {% endif %}
   {% when "tags" %}
     {% capture links-html %}
-      {% include links/generate/from-tags type=page.navid %}
+      {% include links/generate/from-tags.html type=page.navid %}
     {% endcapture %}
 {% endcase %}
 

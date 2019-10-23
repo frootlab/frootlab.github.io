@@ -178,17 +178,17 @@ Get link parameters
 
 {% comment %}
 ================================================================================
-Set custom parameters
+Assign include parameters
 ================================================================================
 {% endcomment %}
+
+{% if include.text %}
+  {% assign text = include.text %}
+{% endif %}
 
 {% if include.title %}
   {% assign title = include.title %}
 {% endif %}
-
-{% unless title %}
-  {% assign title = include.name %}
-{% endunless %}
 
 {% if include.target %}
   {% assign target = include.target %}
@@ -197,6 +197,20 @@ Set custom parameters
 {% if include.rel %}
   {% assign rel = include.rel | append: ' ' | append: rel %}
 {% endif %}
+
+{% comment %}
+================================================================================
+Assign fallback values
+================================================================================
+{% endcomment %}
+
+{% unless title %}
+  {% assign title = include.name %}
+{% endunless %}
+
+{% unless text %}
+  {% assign text = title %}
+{% endunless %}
 
 {% comment %}
 ================================================================================
@@ -209,7 +223,7 @@ Create Links / Icons
     {% when "text" %}
       <a href="{{ uri }}" title="{{ title }}" class="{{ class }} text"
         target="_{{ target }}" rel="{{ rel }}">
-        <span>{{ title }}</span>
+        <span>{{ text }}</span>
       </a>
     {% when "icon" %}
       <a href="{{ uri }}" title="{{ title }}" class="{{ class }} icon"
@@ -219,12 +233,12 @@ Create Links / Icons
     {% when "right" %}
       <a href="{{ uri }}" title="{{ title }}" class="{{ class }} right"
         target="_{{ target }}" rel="{{ rel }}">
-        <span>{{ title }}</span><i class="{{ icon }}"></i>
+        <span>{{ text }}</span><i class="{{ icon }}"></i>
       </a>
     {% when "left" %}
       <a href="{{ uri }}" title="{{ title }}" class="{{ class }} left"
         target="_{{ target }}" rel="{{ rel }}">
-        <i class="{{ icon }}"></i><span>{{ title }}</span>
+        <i class="{{ icon }}"></i><span>{{ text }}</span>
       </a>
     {% else %}
       <a href="{{ uri }}" title="{{ title }}" class="{{ class }}"

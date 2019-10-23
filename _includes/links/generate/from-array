@@ -1,3 +1,0 @@
-{% for link in include.array %}
-<a class="btn btn_grey" href="{{ link.url }}" title="{{ link.title }}">{{ link.name }}</a>
-{% endfor %}

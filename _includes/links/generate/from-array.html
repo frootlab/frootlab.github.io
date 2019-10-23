@@ -1,0 +1,23 @@
+{% for link in include.array %}
+<a class="btn btn_grey" href="{{ link.url }}" title="{{ link.title }}">{{ link.name }}</a>
+{% endfor %}
+
+
+{% comment %}
+{% if include.class %}
+  {% assign class = "hstack icons " | append: include.class %}
+{% else %}
+  {% assign class = "hstack icons" %}
+{% endif %}
+<ul class="{{ class }}">
+{% for link in include.array %}
+  <li>
+    {% include links/create.html
+      name="link"
+      title=link.name
+      uid=link.url
+      type=item.type %}
+  </li>
+{% endfor %}
+</ul>
+{% endcomment %}
