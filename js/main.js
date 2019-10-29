@@ -17,7 +17,10 @@ function openNav() {
   oOverlay.style.backgroundColor = "#00000066";
   oSideNav.style.width = "250px";
 
-  setTimeout(function() { document.addEventListener('click', fClick); }, 500);
+  setTimeout(
+    function() {
+      document.addEventListener('click', outClick);
+    }, 500);
 }
 
 // Close Navigation Sidebar
@@ -29,15 +32,17 @@ function closeNav() {
   oOverlay.style.backgroundColor = "#00000000";
   oSideNav.style.width = "0";
 
-  document.removeEventListener('click', fClick);
+  document.removeEventListener('click', outClick);
 }
 
 // Close Navigation Sidebar on click outside
-var fClick = function(event) {
+function outClick(event) {
   var oSideNav = document.getElementById("sidenav");
   var isClickInside = oSideNav.contains(event.target);
-  if (!isClickInside) { closeNav(); }
-};
+  if (!isClickInside) {
+    closeNav();
+  }
+}
 
 // On Scroll hide the Scroll Arrow (if shown)
 window.onscroll = function() {
@@ -54,8 +59,8 @@ var fFixTitlePadding = function() {
     var rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
     var oCont = document.querySelector("#left-page .content");
     var oCrum = document.getElementById("crumbs");
-    oCont.style.paddingTop = (oCrum.clientHeight + rem).toString() + "px";
     var oBand = document.querySelector("#left-page .banderole");
+    oCont.style.paddingTop = (oCrum.clientHeight + rem).toString() + "px";
     oCont.style.paddingBottom = (oBand.clientHeight + rem).toString() + "px";
   }
 }

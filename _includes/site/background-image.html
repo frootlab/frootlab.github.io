@@ -16,20 +16,21 @@
     {% elsif page.image-meta.orientation == "portrait" %}
       {% assign transform = pcrop
         | append: '/'
-        | append: scale %}
+        | append: scale
+        | append: '/ '%}
     {% elsif page.image-meta.orientation == "landscape" %}
       {% assign transform = lcrop
         | append: '/'
-        | append: scale %}
+        | append: scale
+        | append: '/' %}
     {% else %}
-      {% assign transform = "c_scale,q_auto:good,w_960" %}
+      {% assign transform = "/c_scale,q_auto:good,w_960/" %}
     {% endif %}
 
     {% assign url = "https://res.cloudinary.com/"
       | append: site.cloudinary
       | append: "/image/upload/"
       | append: transform
-      | append: "/"
       | append: page.image-meta.cloudinary %}
 
     {% if page.image-meta.format == "svg" %}
@@ -55,5 +56,5 @@
 
 {% assign url = url | strip %}
 {% if url != "" %}
-linear-gradient(#0000004D, #00000000 20%), url({{ url }})
+url({{ url }})
 {% endif %}
