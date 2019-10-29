@@ -14,7 +14,7 @@ function openNav() {
   var oSideNav = document.getElementById("sidenav");
 
   oOverlay.style.width = "100%";
-  oOverlay.style.backgroundColor = "#00000066";
+  oOverlay.style.backgroundColor = "rgba(0,0,0,.4)";
   oSideNav.style.width = "250px";
 
   setTimeout(
@@ -29,7 +29,7 @@ function closeNav() {
   var oSideNav = document.getElementById("sidenav");
 
   setTimeout(function() { oOverlay.style.width = "0"; }, 500);
-  oOverlay.style.backgroundColor = "#00000000";
+  oOverlay.style.backgroundColor = "rgba(0,0,0,.0)";
   oSideNav.style.width = "0";
 
   document.removeEventListener('click', outClick);

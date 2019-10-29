@@ -50,7 +50,7 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-color: black;
+  background-color: $ocean;
 
   @media screen and (max-width: 960px) {
     width: 100%;
