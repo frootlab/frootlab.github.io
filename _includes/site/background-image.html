@@ -10,14 +10,13 @@
         {% assign pcrop = "c_crop,w_1.0,h_0.5" %}
         {% assign lcrop = "" %}
     {% endcase %}
-
     {% if page.image-meta.format == "svg" %}
       {% assign transform = "" %}
     {% elsif page.image-meta.orientation == "portrait" %}
       {% assign transform = pcrop
         | append: '/'
         | append: scale
-        | append: '/'%}
+        | append: '/' %}
     {% elsif page.image-meta.orientation == "landscape" %}
       {% assign transform = lcrop
         | append: '/'
@@ -26,16 +25,14 @@
     {% else %}
       {% assign transform = "c_scale,q_auto:good,w_960/" %}
     {% endif %}
-
+    {% assign transform = transform | lstrip: '/' %}
     {% assign basename = page.image-meta.cloudinary | strip %}
-
     {% case page.image-meta.format | downcase %}
       {% when 'svg' %}
         {% assign fileext = '.svg' %}
       {% else %}
         {% assign fileext = '.webp' %}
     {% endcase %}
-
     {% assign url = "https://res.cloudinary.com/"
       | append: site.cloudinary
       | append: "/image/upload/"
