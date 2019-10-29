@@ -2,12 +2,12 @@
 
 .btn {
   display: inline-block;
-  padding: 0.4rem 0.75rem 0.5rem;
-  margin-bottom: 0.25rem;
+  padding: .4rem .75rem .5rem;
+  margin-bottom: .25rem;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
-  font-size: 0.85em;
+  font-size: .85em;
   font-weight: 300;
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
   color: $white-t90 !important;
   text-align: center;
   white-space: nowrap;
@@ -16,15 +16,24 @@
   border-radius: 2px;
   user-select: none;
   background: linear-gradient(
-    $ocean 0%,
-    darken($ocean, 3%) 95%,
-    lighten($ocean, 5%) 100%);
+    $black-l10 0%,
+    darken($black-l10, 3%) 95%,
+    lighten($black-l10, 5%) 100%);
   transition:
     all 0.2s ease,
     transform 0ms ease;
 
   &:hover {
     color: white !important;
+    background: linear-gradient(
+      lighten($black-l10, 10%) 0%,
+      lighten($black-l10, 7%) 95%,
+      lighten($black-l10, 15%) 100%);
+    background: linear-gradient(
+      $blue 0%,
+      darken($blue, 3%) 50%,
+      darken($blue, 3%) 95%,
+      lighten($blue, 5%) 100%);
   }
 
   &:active {
@@ -70,20 +79,6 @@
         lighten($red, 10%) 0%,
         lighten($red, 7%) 95%,
         lighten($red, 15%) 100%);
-    }
-  }
-
-  &_grey {
-    background: linear-gradient(
-      $ocean 0%,
-      darken($ocean, 3%) 95%,
-      lighten($ocean, 5%) 100%);
-
-    &:hover {
-      background: linear-gradient(
-        lighten($ocean, 10%) 0%,
-        lighten($ocean, 7%) 95%,
-        lighten($ocean, 15%) 100%);
     }
   }
 }

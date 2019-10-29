@@ -43,18 +43,18 @@ Get related posts
 
 {% include front/header.html %}
 <div class="banderole">
-  <a class="btn btn_grey" href="#about">About</a>
+  <a class="btn" href="#about">About</a>
   {% if page.subprojects %}
-    <a class="btn btn_grey" href="#subprojects">Subprojects</a>
+    <a class="btn" href="#subprojects">Subprojects</a>
   {% endif %}
   {% if pypi-pkg %}
-    <a class="btn btn_grey" href="#quickstart">Quickstart</a>
+    <a class="btn" href="#quickstart">Quickstart</a>
   {% endif %}
   {% if has-posts %}
-    <a class="btn btn_grey" href="#posts">Posts</a>
+    <a class="btn" href="#posts">Posts</a>
   {% endif %}
   {% if has-links %}
-    <a class="btn btn_grey" href="#resources">Resources</a>
+    <a class="btn" href="#resources">Resources</a>
   {% endif %}
 </div>
 {% include front/trailer.html %}

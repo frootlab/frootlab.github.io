@@ -35,6 +35,8 @@ $orange: #EBB134;
 $yellow: #F89406;
 $aqua: #7FDBFF;
 $grey: mix(#F7F7F7, $blue, 93%);
+$grey: #F0F0F0;
+$grey2: mix($grey, $blue, 80%);
 $ocean: darken($grey, 80%);
 
 $base-font: "weblysleek_uilight", sans-serif;

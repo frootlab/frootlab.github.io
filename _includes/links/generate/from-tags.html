@@ -68,6 +68,6 @@ Display Tags
 
 {% for tag in tags %}
   {% if tag != '' %}
-<a class="btn btn_grey" rel="tag" title="{{ tag }}" href="{{ path }}/{{ tag | downcase | replace: ' ', '-' }}">{{ tag }}</a>
+<a class="btn" rel="tag" title="{{ tag }}" href="{{ path }}/{{ tag | downcase | replace: ' ', '-' }}">{{ tag }}</a>
   {% endif %}
 {% endfor %}
