@@ -1,43 +1,47 @@
-{% case include.display | downcase %}
-  {% when 'center' %}
-    {% assign scale = "c_scale,q_auto:good,w_960" %}
-    {% assign pcrop = "" %}
-    {% assign lcrop = "c_crop,w_0.5,h_1.0" %}
-  {% when 'both' %}
-    {% assign scale = "c_scale,q_auto:good,w_1920" %}
-    {% assign pcrop = "c_crop,w_1.0,h_0.5" %}
-    {% assign lcrop = "" %}
-{% endcase %}
-
 {% if page.image-meta %}
   {% if page.image-meta.cloudinary %}
+    {% case include.display | downcase %}
+      {% when 'center' %}
+        {% assign scale = "c_scale,q_auto:good,w_960" %}
+        {% assign pcrop = "" %}
+        {% assign lcrop = "c_crop,w_0.5,h_1.0" %}
+      {% when 'both' %}
+        {% assign scale = "c_scale,q_auto:good,w_1920" %}
+        {% assign pcrop = "c_crop,w_1.0,h_0.5" %}
+        {% assign lcrop = "" %}
+    {% endcase %}
+
     {% if page.image-meta.format == "svg" %}
       {% assign transform = "" %}
     {% elsif page.image-meta.orientation == "portrait" %}
       {% assign transform = pcrop
         | append: '/'
         | append: scale
-        | append: '/ '%}
+        | append: '/'%}
     {% elsif page.image-meta.orientation == "landscape" %}
       {% assign transform = lcrop
         | append: '/'
         | append: scale
         | append: '/' %}
     {% else %}
-      {% assign transform = "/c_scale,q_auto:good,w_960/" %}
+      {% assign transform = "c_scale,q_auto:good,w_960/" %}
     {% endif %}
+
+    {% assign basename = page.image-meta.cloudinary | strip %}
+
+    {% case page.image-meta.format | downcase %}
+      {% when 'svg' %}
+        {% assign fileext = '.svg' %}
+      {% else %}
+        {% assign fileext = '.webp' %}
+    {% endcase %}
 
     {% assign url = "https://res.cloudinary.com/"
       | append: site.cloudinary
       | append: "/image/upload/"
       | append: transform
-      | append: page.image-meta.cloudinary %}
-
-    {% if page.image-meta.format == "svg" %}
-      {% assign url = url | append: ".svg" %}
-    {% else %}
-      {% assign url = url | append: ".webp" %}
-    {% endif %}
+      | append: basename
+      | append: fileext %}
 
   {% elsif page.image-meta.url %}
     {% if page.image-meta.url contains 'http://' or page.image-meta.url contains 'https://' %}
