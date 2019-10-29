@@ -25,7 +25,6 @@
     {% else %}
       {% assign transform = "c_scale,q_auto:good,w_960/" %}
     {% endif %}
-    {% assign transform = transform | lstrip: '/' %}
     {% assign basename = page.image-meta.cloudinary | strip %}
     {% case page.image-meta.format | downcase %}
       {% when 'svg' %}
