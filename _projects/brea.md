@@ -41,10 +41,10 @@ source:
     type: project
 ---
 
-**Vivid Store** is a [Python](https://www.python.org/) based algorithm
-repository with integrated evaluation and ranking. This allows the resolution of
-abstract code requests by **currently best fitting** algorithms, as required by
-the **cloud-assisted meta programming** paradigm.
+**Vivid Store** is a <a href="https://www.python.org" target="_blank">Python</a>
+based algorithm repository with integrated evaluation and ranking. This allows
+the resolution of abstract code requests by **currently best fitting**
+algorithms, as required by the **cloud-assisted meta programming** paradigm.
 
 {% include site/figure.html url="/images/fig/vivid-store.svg"
   description="Resolution of abstract code requests by currently best fitting

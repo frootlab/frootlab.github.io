@@ -41,11 +41,11 @@ source:
     type: project
 ---
 
-**Vivid DB** is a [Python](https://www.python.org/) based universal data mapper
-and SQL-Database engine, that implements high-performance and security
-requirements for large-scale data analysis applications. The primary goal of
-Vivid DB is to separate data integration and data analysis into independent
-tasks.
+**Vivid DB** is a <a href="https://www.python.org" target="_blank">Python</a>
+based universal data mapper and SQL-Database engine, that implements
+high-performance and security requirements for large-scale data analysis
+applications. The primary goal of Vivid DB is to separate data integration and
+data analysis into independent tasks.
 
 {% include site/figure.html url="/images/fig/vivid-db.svg"
   description="Vivid DB unifies various data sources into a common data

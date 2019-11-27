@@ -38,7 +38,7 @@ source:
     type: project
 ---
 
-**Vivid Root** (alias Aughra) is a planned directory service for the
+**Vivid Root** is a planned directory service for the
 [Vivid Code](https://www.frootlab.org/projects/vivid.html) framework. Vivid Root
 is responsible to host and deploy information for algorithm classification
 and accompanied evaluation metrices to [Vivid Stores](https://www.frootlab.org/projects/vivid/store.html).

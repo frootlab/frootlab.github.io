@@ -37,7 +37,7 @@ source:
     type: project
 ---
 
-**Hup** is a multi-purpose [Python](https://www.python.org/) library, which
+**Hup** is a multi-purpose <a href="https://www.python.org" target="_blank">Python</a> library, which
 primarily aims to support our [main projects](/projects#main) by serving as a
 common base library. It was originally created in 2019 for the [Vivid
 Code](/vivid) framework and it's components. The majority of the provided

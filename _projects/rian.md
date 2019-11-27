@@ -41,22 +41,19 @@ source:
     type: project
 ---
 
-**Vivid Node** is a [Python](https://www.python.org/) based machine learning and
-data analysis framework with rapid prototyping and cloud assisted building and
-deployment. Thereby individual code blocks are automatically retrieved from
-collaborative algorithm repositories, that provide the currently best fitting
-solutions for individual tasks.
+**Vivid Node** is a <a href="https://www.python.org" target="_blank">Python</a>
+based machine learning and data analysis framework with rapid prototyping and
+cloud assisted building and deployment. Thereby individual code blocks are
+automatically retrieved from collaborative algorithm repositories, that provide
+the currently best fitting solutions for individual tasks.
 
 {% include site/figure.html url="/images/fig/vivid-node.svg"
   description="Processing of data analysis flows using Vivid Node" %}
 
-The key goal of Vivid Node is to provide a long-term data analysis framework, which
-seemingly integrates into existing enterprise data environments and thereby
-supports collaborative data science. To achieve this goal Vivid Node
-orchestrates established Python frameworks like
-[TensorFlow](https://www.tensorflow.org/) and
-[SQLAlchemy](https://www.sqlalchemy.org/) and dynamically extends their
-capabilities by community driven algorithms (e.g. for [probabilistic graphical
-modeling](https://en.wikipedia.org/wiki/Graphical_model), [machine
-learning](https://en.wikipedia.org/wiki/Machine_learning) and [structured
-data-analysis](https://en.wikipedia.org/wiki/Structured_data_analysis_(statistics))).
+The key goal of Vivid Node is to provide a long-term data analysis framework,
+which seemingly integrates into existing enterprise data environments and
+thereby supports collaborative data science. To achieve this goal Vivid Node
+orchestrates established frameworks like <a href="https://www.tensorflow.org"
+target="_blank">TensorFlow</a> and dynamically extends their capabilities
+by community driven algorithms (e.g. for probabilistic graphical modeling,
+machine learning and structured data-analysis).

@@ -74,12 +74,14 @@ Get related posts
   <p>
     According to <a href="/about#us">our convictions</a> {{ page.title }} is
     <a href="https://fsfe.org/freesoftware/basics/summary.html"
-      title="free software" target="_blank" rel="noopener noreferrer">
+      title="Definition of Free Software" target="_blank" rel="noopener noreferrer">
       free software</a>. It is released under the
     <a href="{{ page.license-url }}"
       title="{{ page.license }}" target="_blank" rel="noopener noreferrer">
       {{ page.license }}</a> and can be downloaded from
-    <a href="https://github.com/{{ page.github }}">GitHub</a>.
+    <a href="https://github.com/{{ page.github }}"
+      title="{{ page.title }} on GitHub" target="_blank"
+      rel="noopener noreferrer">GitHub</a>.
   </p>
   {% endif %}
 </section>
