@@ -72,7 +72,9 @@ article {
     font-size: 1rem;
     line-height: 1.6;
     color: $ocean;
+    text-align: justify;
     margin: 0 0 1rem;
+    hyphens: auto;
   }
 
   a.bookmark {
@@ -99,9 +101,11 @@ div.separator {
   display: block;
   width: 100%;
   font-family: 'Merriweather', serif;
+  font-size: 14px !important;
+  text-transform: uppercase;
   text-align: left;
   margin: 2.5em 0;
-  color: darken($white, 50);
+  color: $ocean;
   display: flex;
   align-items: center;
   font-size: 0.9em;
@@ -110,7 +114,7 @@ div.separator {
   &:after {
     content: '';
     height: 1px;
-    background: $black-t10;
+    background: $black-t20;
   }
 
   &:before {
@@ -211,9 +215,9 @@ article .footnotes {
   &:before {
     content: "";
     display: block;
-    height: 2px;
+    height: 1px;
     width: 40%;
-    background-color: $black-t10;
+    background-color: $black-t20;
     margin: 3rem 0 0 0;
   }
 }

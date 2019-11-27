@@ -5,7 +5,7 @@
   padding: .4rem .75rem .5rem;
   margin-bottom: .25rem;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
-  font-size: .85em;
+  font-size: .85rem;
   font-weight: 300;
   letter-spacing: .5px;
   color: $white-t90 !important;
@@ -16,9 +16,9 @@
   border-radius: 2px;
   user-select: none;
   background: linear-gradient(
-    $black-l10 0%,
-    darken($black-l10, 3%) 95%,
-    lighten($black-l10, 5%) 100%);
+    lighten(black, 5%) 0%,
+    black 95%,
+    lighten(black, 10%) 100%);
   transition:
     all 0.2s ease,
     transform 0ms ease;
@@ -26,14 +26,10 @@
   &:hover {
     color: white !important;
     background: linear-gradient(
-      lighten($black-l10, 10%) 0%,
-      lighten($black-l10, 7%) 95%,
-      lighten($black-l10, 15%) 100%);
-    background: linear-gradient(
-      $blue 0%,
-      darken($blue, 3%) 50%,
-      darken($blue, 3%) 95%,
-      lighten($blue, 5%) 100%);
+      lighten($blue, 5%) 0%,
+      lighten($blue, 5%) 50%,
+      $blue 95%,
+      lighten($blue, 10%) 100%);
   }
 
   &:active {
