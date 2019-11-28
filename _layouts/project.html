@@ -6,15 +6,19 @@ backdrop: white
 
 {% comment %}
 ================================================================================
-Get information about source code and documentation
+Get information about source and documentation
 ================================================================================
 {% endcomment %}
 
 {% if page.source %}
-  {% assign pypi-pkg = page.source
+  {% assign github = page.source
+    | where: "name", "github"
+    | map: "user"
+    | last %}
+  {% assign pypi = page.source
     | where: "name", "pypi"
-    | last
-    | map:"user" %}
+    | map: "user"
+    | last %}
 {% endif %}
 
 {% if page.docs or page.source %}
@@ -47,7 +51,7 @@ Get related posts
   {% if page.subprojects %}
     <a class="btn" href="#subprojects">Subprojects</a>
   {% endif %}
-  {% if pypi-pkg %}
+  {% if pypi %}
     <a class="btn" href="#quickstart">Quickstart</a>
   {% endif %}
   {% if has-posts %}
@@ -73,15 +77,22 @@ Get related posts
   {% if page.license %}
   <p>
     According to <a href="/about#us">our convictions</a> {{ page.title }} is
-    <a href="https://fsfe.org/freesoftware/basics/summary.html"
-      title="Definition of Free Software" target="_blank" rel="noopener noreferrer">
-      free software</a>. It is released under the
-    <a href="{{ page.license-url }}"
-      title="{{ page.license }}" target="_blank" rel="noopener noreferrer">
-      {{ page.license }}</a> and can be downloaded from
-    <a href="https://github.com/{{ page.github }}"
-      title="{{ page.title }} on GitHub" target="_blank"
-      rel="noopener noreferrer">GitHub</a>.
+    {% include links/create.html
+      name="link"
+      uid="https://fsfe.org/freesoftware/basics/summary.html"
+      text="free software"
+      title="Definition of Free Software"
+      display="text" %}
+    and licensed under the terms and conditions of the
+    {% include links/license.html name=page.license %}.
+    {% if github %}
+      The source code is available on
+      {% include links/create.html
+        name="github"
+        text="GitHub"
+        uid=github
+        display="text" %}.
+    {% endif %}
   </p>
   {% endif %}
 </section>
@@ -95,7 +106,7 @@ Get related posts
   list=page.subprojects %}
 {% endif %}
 
-{% if pypi-pkg %}
+{% if pypi %}
 <header id="quickstart">
   <h4>Quickstart</h4>
 </header>
@@ -103,7 +114,7 @@ Get related posts
   <p><b>Installation using PIP</b></p>
   <div class="language-shell highlighter-rouge">
     <div class="highlight">
-      <pre class="highlight"><code><span class="nv">$ </span>pip install {{ pypi-pkg }}</code></pre>
+      <pre class="highlight"><code><span class="nv">$ </span>pip install {{ pypi }}</code></pre>
     </div>
   </div>
 </section>
