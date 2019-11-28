@@ -14,19 +14,8 @@ redirect_from: /blog.html
 ---
 
 <header>
-  <h3>Corporate Blog</h3>
-  <p>Articles about us and our projects</p>
-</header>
-{% include blog/display.html
-  layout="magazine"
-  limit=5
-  type="blog"
-  category="corporate"
-  more="/blog/corporate" %}
-
-<header>
-  <h3>Science Blog</h3>
-  <p>Articles about pure and applied data science</p>
+  <h3>Science</h3>
+  <p>Recent posts about pure and applied data science</p>
 </header>
 {% include blog/display.html
   layout="magazine"
@@ -34,3 +23,14 @@ redirect_from: /blog.html
   type="blog"
   category="science"
   more="/blog/science" %}
+
+<header>
+  <h3>Corporate</h3>
+  <p>Recent Posts about us and our projects</p>
+</header>
+{% include blog/display.html
+  layout="magazine"
+  limit=5
+  type="blog"
+  category="corporate"
+  more="/blog/corporate" %}
