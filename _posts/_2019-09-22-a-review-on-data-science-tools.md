@@ -44,10 +44,9 @@ The gap between willing contributors and actual developers led to a
 counter-movement within the universities and the education sector towards
 democratization and open structures. One of the first projects, that may be
 regarded as a "second generation" data science tool, is the statistics
-programming language [R](https://www.r-project.org){:target='_blank'}, which is released as [free
-and open-source
-software](https://en.wikipedia.org/wiki/Free_and_open-source_software){:target='_blank'}. Another
-project, that heavily benefited from this movement was
+programming language [R](https://www.r-project.org){:target='_blank'}, which is released as
+[free software](https://fsfe.org/freesoftware/basics/summary.html){:target='_blank'}.
+Another project, that heavily benefited from this movement was
 [Python](https://www.python.org/){:target='_blank'}. Also Python is a multi-purpose programming
 language, it owes it's incredible popularity to a large portion to the libraries
 that have emerged within this movement, comprising [SciPy](https://scipy.org/){:target='_blank'},

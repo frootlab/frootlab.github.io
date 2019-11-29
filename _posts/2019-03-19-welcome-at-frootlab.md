@@ -24,7 +24,7 @@ to develop comprehensive [solutions, based on an entirely new [programming
 paradigm](/blog/tags#CAMP).
 
 According to our fundamental convictions we release our products as [free
-software](https://en.wikipedia.org/wiki/Free_and_open-source_software){:target='_blank'}
+software](https://fsfe.org/freesoftware/basics/summary.html){:target='_blank'}
 to provide universal access to research and education. Since the application of
 our projects in industrial environments requires stable development and
 compliance with industrial standards, it currently is important to us to

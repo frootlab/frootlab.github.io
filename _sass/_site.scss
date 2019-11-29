@@ -1,23 +1,32 @@
-// Links
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
 a {
   color: $blue-l10;
   outline: none;
-  text-decoration: none
+  text-decoration: none;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    color: $blue-l10;
+  }
+
+  img {
+    border: none;
+  }
 }
 
-a:hover,
-a:active,
-a:focus,
-a:visited {
-  color: $blue-l10;
-}
-
-a[target="_blank"]:not(.icon):after {
-  content: " \f35d";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: .75em;
-  vertical-align: text-top;
+a,
+span {
+  &.nobr {
+    white-space: nowrap !important;
+    hyphens: none !important;
+  }
 }
 
 table {
@@ -30,7 +39,7 @@ th,
 td {
   text-align: left;
   font-weight: normal;
-  vertical-align: middle
+  vertical-align: middle;
 }
 
 q,
@@ -43,11 +52,7 @@ q:after,
 blockquote:before,
 blockquote:after {
   content: "";
-  content: none
-}
-
-a img {
-  border: none
+  content: none;
 }
 
 article,
@@ -64,12 +69,6 @@ nav,
 section,
 summary {
   display: block;
-}
-
-*,
-*:after,
-*:before {
-  box-sizing: border-box;
 }
 
 // Headers
@@ -107,7 +106,7 @@ h6 {
   font-size: .8em;
 }
 
-// Figures and images
+/* Figures and Images */
 figure {
   display: flex;
   justify-content: space-between;
@@ -151,7 +150,7 @@ img {
   margin: 0 auto;
 }
 
-// Blockquotes and cites
+/* Blockquotes and cites */
 blockquote {
   margin: 2em 1em 2em 0;
   padding-left: 1em;
@@ -174,7 +173,73 @@ cite {
   font-size: .85em;
 }
 
-// Definition lists
+/* Code */
+pre {
+  overflow-x: auto; // add scrollbars to wide code blocks
+  padding: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+p > code,
+a > code,
+li > code,
+figcaption > code,
+td > code {
+  padding: .1rem .2rem;
+  font-size: .9em;
+  border-radius: 2px;
+  background-color: darken($white, 5%);
+  font-family: $base-font;
+}
+
+/* Lists */
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+
+  &:not(.vstack):not(.hstack) {
+    padding-left: 1.5rem;
+
+    > li {
+      position: relative;
+      padding: 0 0 .5rem .5rem;
+
+      &:first-child {
+        padding-top: .5rem;
+      }
+
+      &:last-child {
+        padding-bottom: .5rem;
+      }
+    }
+  }
+
+  &.vstack {
+    list-style-type: none;
+  }
+
+  &.hstack {
+    list-style-type: none;
+
+    > li {
+      display: inline-block;
+      margin: 0;
+      padding: 0 .25rem;
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+/* Definition lists */
 dt {
   border: 1px solid darken($white, 7%);
   padding: .5em;
@@ -190,7 +255,7 @@ dd {
   border-top: 0;
 }
 
-// table
+/* Tables */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -235,67 +300,11 @@ td:last-child {
   }
 }
 
-// code
-pre {
-    overflow-x: auto; // add scrollbars to wide code blocks
-    padding: 1rem;
-    line-height: 1.5;
-    margin: 0;
-  }
-
-p > code,
-a > code,
-li > code,
-figcaption > code,
-td > code {
-  padding: .1rem .2rem;
-  font-size: .9em;
-  border-radius: 2px;
-  background-color: darken($white, 5%);
-  font-family: $base-font;
-}
-
-ul,
-ol {
-  padding: 0;
-  margin: 0;
-
-  &:not(.vstack):not(.hstack) {
-    padding-left: 1.5rem;
-
-    > li {
-      position: relative;
-      padding: 0 0 .5rem .5rem;
-
-      &:first-child {
-        padding-top: .5rem;
-      }
-
-      &:last-child {
-        padding-bottom: .5rem;
-      }
-    }
-  }
-
-  &.vstack {
-    list-style-type: none;
-  }
-
-  &.hstack {
-    list-style-type: none;
-
-    > li {
-      display: inline-block;
-      margin: 0;
-      padding: 0 .25rem;
-
-      &:first-child {
-        padding-left: 0;
-      }
-
-      &:last-child {
-        padding-right: 0;
-      }
-    }
-  }
+/* External Links */
+a[target="_blank"]:not(.icon):after {
+  content: " \f35d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: .75em;
+  vertical-align: text-top;
 }

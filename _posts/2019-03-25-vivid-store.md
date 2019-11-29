@@ -56,7 +56,7 @@ such a metric would be the average prediction accuracy within a fixed set of
 gold standard samples of the respective domain of application (e.g. latin
 handwriting samples, spoken word samples, TCGA gene expression data, etc.).
 
-According to our [conviction](/about#us) Vivid Store is [free and
-open-source](https://en.wikipedia.org/wiki/Free_and_open-source_software){:target='_blank'},
+According to our [convictions](/about#us) Vivid Store is
+[free software](https://fsfe.org/freesoftware/basics/summary.html){:target='_blank'},
 based on the [Python](https://www.python.org/){:target='_blank'} programming
 language and actively developed as part of our [Vivid Code](/vivid) framework.
