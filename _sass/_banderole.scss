@@ -51,7 +51,9 @@
   }
 }
 
-@media screen and (max-width: 960px) {
+@media
+  screen and (max-width: 960px),
+  screen and (orientation: portrait) {
   .banderole {
     background: linear-gradient(177deg,
       $black-t0 0%,

@@ -42,7 +42,9 @@
   100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
 }
 
-@media screen and (max-width: 960px) {
+@media
+  screen and (max-width: 960px),
+  screen and (orientation: portrait) {
   .scroll-down {
     display: block;
   }
